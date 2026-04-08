@@ -1,0 +1,187 @@
+14:17:50 [INFO] ============================================================
+14:17:50 [INFO] AI 日报 V3 生成开始 - 2026-04-08 14:17:50
+14:17:50 [INFO] ============================================================
+14:17:50 [INFO] 
+>>> 阶段 1: 数据采集
+14:17:50 [INFO] [RSS] 开始采集 40 个 RSS 源...
+14:17:50 [INFO] [HackerNews] 开始采集, 关键词: 17 个
+14:17:50 [INFO] [Reddit] 开始采集 5 个 subreddit
+14:17:51 [INFO] [GitHub] 开始采集, topics: ['artificial-intelligence', 'large-language-model', 'machine-learning', 'generative-ai', 'llm']
+14:17:51 [INFO] [HuggingFace] 开始采集趋势模型
+14:17:51 [INFO] [ProductHunt] 开始采集今日 AI 产品
+14:17:51 [INFO] [YouTube] 开始采集 5 个频道 (RSS 模式)
+14:17:52 [INFO] HTTP Request: GET https://lilianweng.github.io/index.xml "HTTP/1.1 200 OK"
+14:17:52 [INFO] [RSS] [Lilian Weng (OpenAI)] 获取 0 篇（共 51 条）
+14:17:52 [INFO] HTTP Request: GET https://openai.com/blog/rss.xml "HTTP/1.1 307 Temporary Redirect"
+14:17:52 [INFO] HTTP Request: GET https://cohere.com/blog/rss.xml "HTTP/1.1 307 Temporary Redirect"
+14:17:52 [INFO] HTTP Request: GET https://www.wired.com/feed/tag/ai/latest/rss "HTTP/1.1 200 OK"
+14:17:52 [INFO] [RSS] [Wired AI] 获取 2 篇（共 10 条）
+14:17:52 [INFO] HTTP Request: GET https://www.theinformation.com/feed "HTTP/1.1 403 Forbidden"
+14:17:52 [WARNING] [RSS] 抓取失败 [The Information AI]: Client error '403 Forbidden' for url 'https://www.theinformation.com/feed'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+14:17:52 [INFO] HTTP Request: GET https://huggingface.co/api/models?sort=likes7d&direction=-1&limit=20 "HTTP/1.1 200 OK"
+14:17:52 [INFO] [HuggingFace] 采集完成: 10 个模型
+14:17:52 [INFO] HTTP Request: GET https://www.infoq.cn/feed "HTTP/1.1 200 OK"
+14:17:52 [INFO] [RSS] [InfoQ AI] 获取 18 篇（共 20 条）
+14:17:52 [INFO] HTTP Request: GET https://blog.google/technology/ai/rss/ "HTTP/1.1 301 Moved Permanently"
+14:17:52 [INFO] HTTP Request: GET https://www.qbitai.com/feed "HTTP/1.1 200 OK"
+14:17:52 [INFO] [RSS] [量子位] 获取 10 篇（共 10 条）
+14:17:52 [INFO] HTTP Request: GET https://www.jiqizhixin.com/rss "HTTP/1.1 302 Found"
+14:17:52 [INFO] HTTP Request: GET https://venturebeat.com/category/ai/feed/ "HTTP/1.1 308 Permanent Redirect"
+14:17:52 [INFO] HTTP Request: GET https://jalammar.github.io/feed.xml "HTTP/1.1 200 OK"
+14:17:52 [INFO] [RSS] [Jay Alammar] 获取 0 篇（共 10 条）
+14:17:52 [INFO] HTTP Request: GET https://36kr.com/feed "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: GET https://huggingface.co/blog/feed.xml "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: GET https://rss.arxiv.org/rss/cs.CL "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: GET https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg "HTTP/1.1 404 Not Found"
+14:17:52 [INFO] HTTP Request: GET https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew "HTTP/1.1 404 Not Found"
+14:17:52 [INFO] HTTP Request: GET https://www.theverge.com/rss/ai-artificial-intelligence/index.xml "HTTP/1.1 200 OK"
+14:17:52 [WARNING] [YouTube] [Two Minute Papers] RSS 抓取失败: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+14:17:52 [WARNING] [YouTube] [Yannic Kilcher] RSS 抓取失败: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+14:17:52 [INFO] HTTP Request: GET https://api.github.com/search/repositories?q=stars%3A%3E50+created%3A%3E2026-04-01+topic%3Aartificial-intelligence+topic%3Alarge-language-model&sort=stars&order=desc&per_page=30 "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: GET https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA "HTTP/1.1 404 Not Found"
+14:17:52 [INFO] [GitHub] 采集完成: 0 个仓库
+14:17:52 [WARNING] [YouTube] [Fireship] RSS 抓取失败: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?channel_id=UCsBjURrPoezykLs9EqgamOA'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+14:17:52 [INFO] HTTP Request: GET https://www.youtube.com/feeds/videos.xml?channel_id=UCLkd2MjubGEn1fJqMZlNnHQ "HTTP/1.1 404 Not Found"
+14:17:52 [WARNING] [YouTube] [Matthew Berman] RSS 抓取失败: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?channel_id=UCLkd2MjubGEn1fJqMZlNnHQ'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+14:17:52 [INFO] HTTP Request: GET https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw "HTTP/1.1 404 Not Found"
+14:17:52 [INFO] [RSS] [36kr AI] 获取 30 篇（共 30 条）
+14:17:52 [WARNING] [YouTube] [AI Explained] RSS 抓取失败: Client error '404 Not Found' for url 'https://www.youtube.com/feeds/videos.xml?channel_id=UCNJ1Ymd5yFuUPtn21xtRbbw'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+14:17:52 [INFO] HTTP Request: GET https://rss.arxiv.org/rss/cs.AI "HTTP/1.1 200 OK"
+14:17:52 [INFO] [RSS] [Hugging Face Blog] 获取 0 篇（共 757 条）
+14:17:52 [INFO] [RSS] [The Verge AI] 获取 7 篇（共 10 条）
+14:17:52 [INFO] HTTP Request: GET https://blog.langchain.dev/rss/ "HTTP/1.1 308 Permanent Redirect"
+14:17:52 [INFO] HTTP Request: GET https://www.deeplearning.ai/the-batch/feed/ "HTTP/1.1 404 Not Found"
+14:17:52 [INFO] HTTP Request: GET https://deepmind.google/blog/rss.xml "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: GET https://magazine.sebastianraschka.com/feed "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: GET https://magazine.sebastianraschka.com/feed "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: GET https://blog.google/innovation-and-ai/technology/ai/rss/ "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: GET https://www.jiqizhixin.com/data-service "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: GET https://www.technologyreview.com/topic/artificial-intelligence/feed "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: GET https://techcrunch.com/category/artificial-intelligence/feed/ "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: POST https://www.producthunt.com/frontend/graphql "HTTP/1.1 403 Forbidden"
+14:17:52 [INFO] [YouTube] 采集完成: 0 个视频
+14:17:52 [INFO] HTTP Request: GET https://rss.arxiv.org/rss/cs.LG "HTTP/1.1 200 OK"
+14:17:52 [INFO] [RSS] [机器之心] 获取 0 篇（共 0 条）
+14:17:52 [WARNING] [RSS] 抓取失败 [The Batch (Andrew Ng)]: Client error '404 Not Found' for url 'https://www.deeplearning.ai/the-batch/feed/'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+14:17:52 [INFO] [RSS] [Google AI Blog] 获取 0 篇（共 20 条）
+14:17:52 [INFO] [RSS] [TechCrunch AI] 获取 18 篇（共 20 条）
+14:17:52 [WARNING] [ProductHunt] Product Hunt API 调用失败: Client error '403 Forbidden' for url 'https://www.producthunt.com/frontend/graphql'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+14:17:52 [INFO] [ProductHunt] 降级使用 RSS 采集
+14:17:52 [INFO] HTTP Request: GET https://openai.com/news/rss.xml "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: GET https://venturebeat.com/category/ai/feed "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: GET https://simonwillison.net/atom/everything/ "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: GET https://blogs.nvidia.com/feed/ "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: GET https://www.latent.space/feed "HTTP/1.1 200 OK"
+14:17:52 [INFO] HTTP Request: GET https://www.anthropic.com/rss.xml "HTTP/1.1 404 Not Found"
+14:17:52 [INFO] [RSS] [MIT Technology Review AI] 获取 3 篇（共 10 条）
+14:17:52 [INFO] [RSS] [VentureBeat AI] 获取 0 篇（共 7 条）
+14:17:53 [INFO] [RSS] [DeepMind Blog] 获取 0 篇（共 100 条）
+14:17:53 [INFO] HTTP Request: GET https://www.buzzing.cc/feed.xml "HTTP/1.1 200 OK"
+14:17:53 [INFO] HTTP Request: GET https://reddit.buzzing.cc/feed.xml "HTTP/1.1 200 OK"
+14:17:53 [WARNING] [RSS] 抓取失败 [Anthropic Blog]: Client error '404 Not Found' for url 'https://www.anthropic.com/rss.xml'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+14:17:53 [INFO] [RSS] [Simon Willison] 获取 3 篇（共 30 条）
+14:17:53 [INFO] [RSS] [Sebastian Raschka] 获取 0 篇（共 20 条）
+14:17:53 [INFO] HTTP Request: GET https://cohere.com/blog "HTTP/1.1 200 OK"
+14:17:54 [INFO] [RSS] [Ahead of AI (Sebastian Raschka)] 获取 0 篇（共 20 条）
+14:17:54 [INFO] HTTP Request: GET https://blogs.microsoft.com/ai/feed/ "HTTP/1.1 200 OK"
+14:17:54 [INFO] HTTP Request: GET https://huyenchip.com/feed.xml "HTTP/1.1 200 OK"
+14:17:54 [INFO] HTTP Request: GET https://machinelearning.apple.com/rss.xml "HTTP/1.1 200 OK"
+14:17:54 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=OpenAI&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:54 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=diffusion&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:54 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=Gemini&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:54 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=neural+network&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:54 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=AGI&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:54 [INFO] HTTP Request: GET https://replicate.com/blog/rss.xml "HTTP/1.1 404 Not Found"
+14:17:54 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=Llama&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:54 [INFO] [RSS] [Cohere Blog] 获取 0 篇（共 0 条）
+14:17:54 [INFO] [RSS] [arXiv cs.CL] 获取 206 篇（共 206 条）
+14:17:54 [INFO] [RSS] [NVIDIA AI Blog] 获取 1 篇（共 18 条）
+14:17:54 [INFO] [RSS] [Apple Machine Learning] 获取 0 篇（共 10 条）
+14:17:54 [INFO] [RSS] [Microsoft AI Blog] 获取 0 篇（共 10 条）
+14:17:54 [INFO] [RSS] [OpenAI Blog] 获取 1 篇（共 905 条）
+14:17:54 [INFO] [RSS] [Buzzing Reddit 精选] 获取 0 篇（共 300 条）
+14:17:54 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=transformer&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:54 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=artificial+intelligence&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:54 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=Claude&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:54 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=Mistral&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:54 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=LLM&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:54 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=Anthropic&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:54 [WARNING] [RSS] 抓取失败 [Semafor Tech]: All connection attempts failed
+14:17:55 [INFO] [RSS] [Buzzing AI 热门] 获取 661 篇（共 768 条）
+14:17:55 [INFO] [RSS] [Chip Huyen] 获取 0 篇（共 10 条）
+14:17:55 [WARNING] [RSS] 抓取失败 [Replicate Blog]: Client error '404 Not Found' for url 'https://replicate.com/blog/rss.xml'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+14:17:55 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=GPT&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:55 [INFO] HTTP Request: GET https://arstechnica.com/ai/feed/ "HTTP/1.1 200 OK"
+14:17:55 [INFO] HTTP Request: GET https://ph.buzzing.cc/feed.xml "HTTP/1.1 200 OK"
+14:17:55 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=deep+learning&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:55 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=AI&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:55 [INFO] [RSS] [Latent Space] 获取 3 篇（共 20 条）
+14:17:55 [INFO] [RSS] [arXiv cs.LG] 获取 254 篇（共 254 条）
+14:17:55 [INFO] HTTP Request: GET https://blog.langchain.dev/rss "HTTP/1.1 308 Permanent Redirect"
+14:17:55 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=DeepMind&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:56 [INFO] [RSS] [Buzzing Product Hunt] 获取 16 篇（共 297 条）
+14:17:56 [INFO] [RSS] [Ars Technica AI] 获取 6 篇（共 20 条）
+14:17:56 [INFO] HTTP Request: GET https://hn.algolia.com/api/v1/search?query=machine+learning&tags=story&numericFilters=created_at_i%3E1775456271&hitsPerPage=30 "HTTP/1.1 200 OK"
+14:17:56 [INFO] [HackerNews] 采集完成: 20 条（去重后从 226 条中筛选）
+14:17:56 [INFO] HTTP Request: GET https://www.producthunt.com/feed "HTTP/1.1 200 OK"
+14:17:56 [INFO] [ProductHunt] RSS 降级采集: 11 个 AI 产品
+14:17:56 [INFO] HTTP Request: GET https://blog.langchain.com/rss "HTTP/1.1 301 Moved Permanently"
+14:17:56 [INFO] HTTP Request: GET https://blog.langchain.com/rss/ "HTTP/1.1 200 OK"
+14:17:57 [INFO] [RSS] [LangChain Blog] 获取 2 篇（共 15 条）
+14:18:07 [INFO] [RSS] [arXiv cs.AI] 获取 330 篇（共 330 条）
+14:18:11 [WARNING] [Reddit] 抓取 r/artificial 失败: 
+14:18:12 [WARNING] [Reddit] 抓取 r/ChatGPT 失败: 
+14:18:12 [WARNING] [Reddit] 抓取 r/MachineLearning 失败: 
+14:18:12 [WARNING] [Reddit] 抓取 r/LocalLLaMA 失败: 
+14:18:12 [WARNING] [RSS] 抓取失败 [Mistral AI Blog]: All connection attempts failed
+14:18:13 [WARNING] [RSS] 抓取失败 [Weights & Biases Blog]: All connection attempts failed
+14:18:19 [WARNING] [Reddit] 抓取 r/singularity 失败: 
+14:18:19 [INFO] [Reddit] 采集完成: 0 条（共 0 条）
+14:18:26 [WARNING] [RSS] 抓取失败 [Meta AI Blog]: 
+14:18:26 [INFO] [RSS] 采集完成: 40/40 源成功, 共 1571 篇文章
+14:18:26 [INFO] 采集完成: 1611 篇原始文章, 来自 41+ 个源
+14:18:26 [INFO] 
+>>> 阶段 2: 去重
+14:18:27 [INFO] 去重完成: 1611 → 1327 篇
+14:18:27 [INFO] 
+>>> 阶段 3: 规则分类
+14:18:28 [INFO] 移除无关内容: 1327 → 1259 篇
+14:18:28 [INFO] arXiv 筛选: 1259 → 914 篇
+14:18:28 [INFO] 
+>>> 阶段 4: 跳过 LLM 评分（调试模式）
+14:18:28 [INFO] 评分筛选: 914 → 914 篇（阈值 >= 6）
+14:18:28 [INFO]   开发者相关: 914 篇
+14:18:28 [INFO]   产品经理相关: 914 篇
+14:18:28 [INFO]   美术相关: 388 篇
+14:18:28 [INFO] 
+>>> 阶段 5: 按角色生成结构化内容
+14:18:28 [INFO]   开发者 最重要: Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled
+14:18:28 [INFO]   开发者 风险: 无
+14:18:28 [INFO]   开发者 工具: 无
+14:18:28 [INFO]   产品经理 最重要: Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled
+14:18:28 [INFO]   产品经理 风险: 无
+14:18:28 [INFO]   产品经理 工具: 无
+14:18:28 [INFO]   美术 最重要: Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled
+14:18:28 [INFO]   美术 风险: 无
+14:18:28 [INFO]   美术 工具: 无
+14:18:28 [INFO] 
+>>> 阶段 6: 渲染 HTML 报告
+14:18:28 [INFO] 报告已生成: C:\Users\Administrator\Desktop\agent\ai-daily-report\output\daily\ai-daily-2026-04-08-pm.html
+14:18:28 [INFO] 首页索引已更新: C:\Users\Administrator\Desktop\agent\ai-daily-report\output\index.html
+14:18:28 [INFO] [发布] 已提交: update: 2026-04-08 daily report
+14:18:30 [INFO] [发布] 已推送到 GitHub，GitHub Pages 将在 1-2 分钟内更新
+14:18:30 [INFO] ============================================================
+14:18:30 [INFO] AI 日报 V3 生成完成! 耗时 40.1s
+14:18:30 [INFO] 输出文件: C:\Users\Administrator\Desktop\agent\ai-daily-report\output\daily\ai-daily-2026-04-08-pm.html
+14:18:30 [INFO] ============================================================
+14:18:30 [INFO] 跳过推送（--no-push）
