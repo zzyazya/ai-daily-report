@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 日报 · 2026-04-10</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; }
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .chevron { transform: rotate(90deg); }
+    .chevron { transition: transform 0.15s ease; }
+    .tab-btn { transition: all 0.15s ease; }
+    .tab-btn.active { border-bottom-width: 3px; }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <nav class="bg-gray-900 text-white text-sm">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2 hover:text-blue-300 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        日报中心 · 周历 / 月历
+      </a>
+      <span class="text-gray-400">2026-04-10</span>
+    </div>
+  </nav>
+
+  <header class="bg-white border-b shadow-sm sticky top-0 z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4">
+      <div class="flex items-center justify-between mb-3">
+        <div>
+          <div class="flex items-center gap-3">
+            <h1 class="text-2xl font-bold text-gray-900">AI 日报</h1>
+            <span class="px-2 py-0.5 text-xs font-semibold rounded-full bg-amber-100 text-amber-700">早报</span>
+          </div>
+          <div class="flex items-center gap-3 text-xs text-gray-500 mt-1">
+            <span class="flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              预计阅读 5 分钟
+            </span>
+            <span class="text-gray-400">采集 29+ 源 · 原始 961 篇 · 精选 125 篇</span>
+          </div>
+        </div>
+        <span class="text-sm text-gray-600">2026-04-10</span>
+      </div>
+
+      
+      <div class="flex gap-0 border-b border-gray-200 -mb-px" id="tab-nav">
+        
+        <button
+          class="tab-btn px-5 py-2.5 text-sm font-semibold border-b-3 active border-blue-600 text-blue-700"
+          data-tab="dev"
+          onclick="switchTab('dev')"
+        >
+          
+          <svg class="w-4 h-4 inline-block mr-1 -mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          
+          开发者
+        </button>
+        
+        <button
+          class="tab-btn px-5 py-2.5 text-sm font-semibold border-b-3 border-transparent text-gray-500 hover:text-gray-700"
+          data-tab="pm"
+          onclick="switchTab('pm')"
+        >
+          
+          <svg class="w-4 h-4 inline-block mr-1 -mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          
+          产品经理
+        </button>
+        
+        <button
+          class="tab-btn px-5 py-2.5 text-sm font-semibold border-b-3 border-transparent text-gray-500 hover:text-gray-700"
+          data-tab="art"
+          onclick="switchTab('art')"
+        >
+          
+          <svg class="w-4 h-4 inline-block mr-1 -mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+          
+          美术
+        </button>
+        
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+
+    
+    
+
+    <div class="tab-pane active" id="pane-dev">
+
+      
+      
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-xl p-6 mb-6">
+        <div class="flex items-start gap-3 mb-4">
+          <div class="p-2 bg-amber-500 rounded-lg flex-shrink-0">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <h2 class="text-sm font-bold text-amber-900 uppercase tracking-wide">今日最重要</h2>
+              <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">开发者视角</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">Claude Managed Agents发布托管Agent能力</h3>
+          </div>
+        </div>
+
+        <div class="space-y-2 text-sm mb-4">
+          
+          <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — Claude Managed Agents推出托管式Agent运行与管理能力。</p>
+          
+          
+          <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 降低Agent上线运维成本，加速产品化。</p>
+          
+        </div>
+
+        
+        <div class="bg-white/60 border border-blue-200 rounded-lg p-3 mb-4">
+          <div class="flex items-center gap-2 mb-1.5">
+            <span class="text-xs font-semibold text-blue-900">对开发者的影响</span>
+          </div>
+          <p class="text-sm text-gray-700">开发者可直接托管Agent执行、状态与工具调用，减少自建编排与监控。更快将多步骤工作流集成到应用与服务中。</p>
+        </div>
+        
+
+        
+        <div class="flex items-center gap-2 bg-green-600 text-white rounded-lg px-4 py-2.5">
+          <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          <span class="text-sm font-medium">建议动作：评估接入并做PoC</span>
+        </div>
+        
+
+        
+        <a href="https://zhuanlan.zhihu.com/p/2025217468885387198" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-900 mt-3">
+          查看原文 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+        
+      </div>
+      
+
+      
+      
+      <div class="mb-6">
+        <h2 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+          <span class="w-6 h-6 bg-gray-800 text-white rounded flex items-center justify-center text-xs font-bold">📡</span>
+          高价值更新
+        </h2>
+        <div class="space-y-3">
+          
+          <details class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+            <summary class="p-4 flex items-start gap-3">
+              <svg class="w-4 h-4 text-gray-400 mt-1 flex-shrink-0 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">模型能力</span>
+                  <span class="text-xs text-gray-400">HuggingFace (google)</span>
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-1">google/gemma-4-31B-it模型上架HuggingFace</h3>
+                <p class="text-xs text-gray-500">google发布google/gemma-4-31B-it，任务为image-text-to-text。</p>
+              </div>
+              <div class="flex-shrink-0 mt-1">
+                
+                
+                <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap">跑多模态评测</span>
+                
+              </div>
+            </summary>
+            <div class="px-4 pb-4 pt-0 ml-7 border-t border-gray-100">
+              <div class="mt-3 space-y-2">
+                
+                <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">为什么重要：</span>提供31B级多模态指令模型新选择。</p>
+                
+                
+                
+                <div class="bg-blue-50 rounded-lg p-3">
+                  <span class="text-xs font-semibold text-blue-900 block mb-1">对开发者的影响</span>
+                  <p class="text-xs text-gray-700">可用于多模态问答/图文理解，评估推理成本与部署方案。</p>
+                </div>
+                
+                
+                <a href="https://huggingface.co/google/gemma-4-31B-it" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 mt-1">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+              </div>
+            </div>
+          </details>
+          
+          <details class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+            <summary class="p-4 flex items-start gap-3">
+              <svg class="w-4 h-4 text-gray-400 mt-1 flex-shrink-0 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">模型能力</span>
+                  <span class="text-xs text-gray-400">Hacker News</span>
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-1">MegaTrain实现单GPU训练100B+全精度LLM</h3>
+                <p class="text-xs text-gray-500">MegaTrain宣称单GPU可全精度训练100B+参数LLM。</p>
+              </div>
+              <div class="flex-shrink-0 mt-1">
+                
+                
+                <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap">复现与压测</span>
+                
+              </div>
+            </summary>
+            <div class="px-4 pb-4 pt-0 ml-7 border-t border-gray-100">
+              <div class="mt-3 space-y-2">
+                
+                <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">为什么重要：</span>可能显著降低大模型训练门槛与成本。</p>
+                
+                
+                
+                <div class="bg-blue-50 rounded-lg p-3">
+                  <span class="text-xs font-semibold text-blue-900 block mb-1">对开发者的影响</span>
+                  <p class="text-xs text-gray-700">关注其显存/通信/检查点方案，评估可复现性与适配硬件。</p>
+                </div>
+                
+                
+                <a href="https://arxiv.org/abs/2604.05091" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 mt-1">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+              </div>
+            </div>
+          </details>
+          
+          <details class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+            <summary class="p-4 flex items-start gap-3">
+              <svg class="w-4 h-4 text-gray-400 mt-1 flex-shrink-0 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">框架更新</span>
+                  <span class="text-xs text-gray-400">Hacker News</span>
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-1">Claude Managed Agents发布与托管Agent能力</h3>
+                <p class="text-xs text-gray-500">Claude Managed Agents提供托管式Agent运行与管理能力。</p>
+              </div>
+              <div class="flex-shrink-0 mt-1">
+                
+                
+                <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap">做PoC接入</span>
+                
+              </div>
+            </summary>
+            <div class="px-4 pb-4 pt-0 ml-7 border-t border-gray-100">
+              <div class="mt-3 space-y-2">
+                
+                <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">为什么重要：</span>降低Agent上线运维成本并加速产品化。</p>
+                
+                
+                
+                <div class="bg-blue-50 rounded-lg p-3">
+                  <span class="text-xs font-semibold text-blue-900 block mb-1">对开发者的影响</span>
+                  <p class="text-xs text-gray-700">可减少自建调度/状态/工具调用运维，提升交付速度。</p>
+                </div>
+                
+                
+                <a href="https://claude.com/blog/claude-managed-agents" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 mt-1">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+              </div>
+            </div>
+          </details>
+          
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-5 mb-6">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-blue-600 rounded-lg">
+            
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            
+          </div>
+          <h3 class="text-base font-bold text-gray-900">开发者速览</h3>
+        </div>
+        <ul class="space-y-2">
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">可用于自动化Kernel调优与性能回归，降低专家依赖。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">可用于多模态问答/图文理解，评估推理成本与部署方案。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">可用于图文理解与多模态对话，评估替换现有LLM栈。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">可探索统一多模态接口，减少多模型拼装复杂度。</span>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-5 mb-6">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-green-600 rounded-lg">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          </div>
+          <h3 class="text-base font-bold text-gray-900">今天值得试的工具</h3>
+        </div>
+        <h4 class="text-lg font-bold text-gray-900 mb-1">Mozilla 0DIN AI Scanner 0.1</h4>
+        <p class="text-sm text-gray-700 mb-3">自动扫描LLM聊天机器人安全漏洞</p>
+        <div class="flex flex-wrap gap-4 text-xs mb-3">
+          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">红队测试、提示注入与越权风险排查</span></div>
+          <div><span class="font-semibold text-red-700">不适合</span><span class="text-gray-600 ml-1">非LLM应用安全扫描</span></div>
+        </div>
+        
+        <a href="https://www.producthunt.com/products/0din-ai-scanner" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-800">
+          立即体验 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+        
+      </div>
+      
+
+      
+      
+      <div class="bg-red-50 border border-red-200 rounded-xl p-5 mb-6">
+        <div class="flex items-start gap-3">
+          <div class="p-1.5 bg-red-500 rounded-lg flex-shrink-0">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-sm font-bold text-red-900 mb-2">风险提醒</h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">把“MegaTrain宣称单GPU可全精度训练100B+参数LLM”误读为在常规单卡环境中可直接复现、且成本与工程复杂度可控。</span></div>
+              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">该表述是“宣称”，可能依赖非常规硬件/显存配置、特定并行与内存交换策略、训练配方与实现细节，未必等同于你手头单GPU即可稳定训练100B+全精度LLM。即便可行，也可能在吞吐、收敛稳定性、checkpoint/IO、故障恢复等工程面付出显著代价。</span></div>
+              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">在投入前先核对MegaTrain的硬件前提、代码与复现实验（含loss曲线、吞吐、显存峰值、失败恢复），用小规模模型做端到端验证再评估是否迁移到100B+。</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-indigo-50 to-blue-50 border border-indigo-200 rounded-xl p-5">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-indigo-600 rounded-lg">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3 class="text-base font-bold text-gray-900">今天该做什么</h3>
+        </div>
+        <div class="bg-white/60 rounded-lg p-4">
+          <p class="text-sm text-gray-700 font-medium">评估接入并做PoC</p>
+          
+          <ul class="mt-2 space-y-1">
+            
+            <li class="text-xs text-gray-500 flex items-start gap-1.5">
+              <span class="text-blue-500 mt-0.5">→</span>可用于自动化Kernel调优与性能回归，降低专家依赖。
+            </li>
+            
+            <li class="text-xs text-gray-500 flex items-start gap-1.5">
+              <span class="text-blue-500 mt-0.5">→</span>可用于多模态问答/图文理解，评估推理成本与部署方案。
+            </li>
+            
+          </ul>
+          
+        </div>
+      </div>
+      
+
+    </div>
+    
+    
+
+    <div class="tab-pane " id="pane-pm">
+
+      
+      
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-xl p-6 mb-6">
+        <div class="flex items-start gap-3 mb-4">
+          <div class="p-2 bg-amber-500 rounded-lg flex-shrink-0">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <h2 class="text-sm font-bold text-amber-900 uppercase tracking-wide">今日最重要</h2>
+              <span class="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full font-medium">产品经理视角</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">ChatGPT Pro订阅上线：每月$100含Codex 5x</h3>
+          </div>
+        </div>
+
+        <div class="space-y-2 text-sm mb-4">
+          
+          <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — OpenAI发布ChatGPT Pro，定价$100/月，Codex用量为Plus的5x。</p>
+          
+          
+          <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — AI能力开始按用量分层定价，影响产品成本与套餐设计。</p>
+          
+        </div>
+
+        
+        <div class="bg-white/60 border border-purple-200 rounded-lg p-3 mb-4">
+          <div class="flex items-center gap-2 mb-1.5">
+            <span class="text-xs font-semibold text-purple-900">对产品经理的影响</span>
+          </div>
+          <p class="text-sm text-gray-700">产品经理需重新评估AI功能的边际成本与付费转化路径。可用Pro级配额支撑更重度的编码/Agent场景并设计差异化权益。</p>
+        </div>
+        
+
+        
+        <div class="flex items-center gap-2 bg-green-600 text-white rounded-lg px-4 py-2.5">
+          <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          <span class="text-sm font-medium">建议动作：梳理AI用量与分层定价</span>
+        </div>
+        
+
+        
+        <a href="https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-900 mt-3">
+          查看原文 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+        
+      </div>
+      
+
+      
+      
+      <div class="mb-6">
+        <h2 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+          <span class="w-6 h-6 bg-gray-800 text-white rounded flex items-center justify-center text-xs font-bold">📡</span>
+          高价值更新
+        </h2>
+        <div class="space-y-3">
+          
+          <details class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+            <summary class="p-4 flex items-start gap-3">
+              <svg class="w-4 h-4 text-gray-400 mt-1 flex-shrink-0 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">成本变化</span>
+                  <span class="text-xs text-gray-400">The Verge AI</span>
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-1">ChatGPT Pro订阅上线：每月$100含Codex 5x</h3>
+                <p class="text-xs text-gray-500">OpenAI发布ChatGPT Pro，定价$100/月，Codex用量为Plus的5x。</p>
+              </div>
+              <div class="flex-shrink-0 mt-1">
+                
+                
+                <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap">更新定价分层</span>
+                
+              </div>
+            </summary>
+            <div class="px-4 pb-4 pt-0 ml-7 border-t border-gray-100">
+              <div class="mt-3 space-y-2">
+                
+                <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">为什么重要：</span>高阶定价与配额将影响团队成本与分层。</p>
+                
+                
+                
+                <div class="bg-purple-50 rounded-lg p-3">
+                  <span class="text-xs font-semibold text-purple-900 block mb-1">对产品经理的影响</span>
+                  <p class="text-xs text-gray-700">可用于企业/重度用户分层与ARPU提升测算。</p>
+                </div>
+                
+                
+                <a href="https://www.theverge.com/ai-artificial-intelligence/909599/chatgpt-pro-subscription-new" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 mt-1">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+              </div>
+            </div>
+          </details>
+          
+          <details class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+            <summary class="p-4 flex items-start gap-3">
+              <svg class="w-4 h-4 text-gray-400 mt-1 flex-shrink-0 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">风险合规</span>
+                  <span class="text-xs text-gray-400">Hacker News</span>
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-1">Anthropic账单问题超一月未回复引争议</h3>
+                <p class="text-xs text-gray-500">用户称等待Anthropic处理billing issue已超1个月。</p>
+              </div>
+              <div class="flex-shrink-0 mt-1">
+                
+                
+                <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap">补齐SLA条款</span>
+                
+              </div>
+            </summary>
+            <div class="px-4 pb-4 pt-0 ml-7 border-t border-gray-100">
+              <div class="mt-3 space-y-2">
+                
+                <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">为什么重要：</span>暴露供应商支持能力风险，影响B2B采购信心。</p>
+                
+                
+                
+                <div class="bg-purple-50 rounded-lg p-3">
+                  <span class="text-xs font-semibold text-purple-900 block mb-1">对产品经理的影响</span>
+                  <p class="text-xs text-gray-700">采购与上线需评估SLA与支持响应，降低账单纠纷风险。</p>
+                </div>
+                
+                
+                <a href="https://nickvecchioni.github.io/thoughts/2026/04/08/anthropic-support-doesnt-exist/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 mt-1">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+              </div>
+            </div>
+          </details>
+          
+          <details class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+            <summary class="p-4 flex items-start gap-3">
+              <svg class="w-4 h-4 text-gray-400 mt-1 flex-shrink-0 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">风险合规</span>
+                  <span class="text-xs text-gray-400">Hacker News</span>
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-1">Claude Code的Vercel插件被曝读取提示词</h3>
+                <p class="text-xs text-gray-500">Claude Code的Vercel插件被指会读取用户提示词。</p>
+              </div>
+              <div class="flex-shrink-0 mt-1">
+                
+                
+                <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap">补齐隐私说明</span>
+                
+              </div>
+            </summary>
+            <div class="px-4 pb-4 pt-0 ml-7 border-t border-gray-100">
+              <div class="mt-3 space-y-2">
+                
+                <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">为什么重要：</span>涉及数据权限、隐私与企业合规风险。</p>
+                
+                
+                
+                <div class="bg-purple-50 rounded-lg p-3">
+                  <span class="text-xs font-semibold text-purple-900 block mb-1">对产品经理的影响</span>
+                  <p class="text-xs text-gray-700">可能触发合规审计与信任危机，需明确告知与开关。</p>
+                </div>
+                
+                
+                <a href="https://akshaychugh.xyz/writings/png/vercel-plugin-telemetry" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 mt-1">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+              </div>
+            </div>
+          </details>
+          
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-xl p-5 mb-6">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-purple-600 rounded-lg">
+            
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            
+          </div>
+          <h3 class="text-base font-bold text-gray-900">产品经理速览</h3>
+        </div>
+        <ul class="space-y-2">
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">新增$100档位利于分层定价与转化提升。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">可用于企业/重度用户分层与ARPU提升测算。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">采购与上线需评估SLA与支持响应，降低账单纠纷风险。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">可能触发合规审计与信任危机，需明确告知与开关。</span>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-5 mb-6">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-green-600 rounded-lg">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          </div>
+          <h3 class="text-base font-bold text-gray-900">今天值得试的工具</h3>
+        </div>
+        <h4 class="text-lg font-bold text-gray-900 mb-1">Google Gemini Notebooks</h4>
+        <p class="text-sm text-gray-700 mb-3">汇总文件与对话，生成可复用项目笔记</p>
+        <div class="flex flex-wrap gap-4 text-xs mb-3">
+          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">PRD调研、需求梳理、会议纪要与资料沉淀</span></div>
+          <div><span class="font-semibold text-red-700">不适合</span><span class="text-gray-600 ml-1">强隐私或合规敏感数据</span></div>
+        </div>
+        
+        <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-800">
+          立即体验 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+        
+      </div>
+      
+
+      
+      
+      <div class="bg-red-50 border border-red-200 rounded-xl p-5 mb-6">
+        <div class="flex items-start gap-3">
+          <div class="p-1.5 bg-red-500 rounded-lg flex-shrink-0">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-sm font-bold text-red-900 mb-2">风险提醒</h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">看到“ChatGPT Pro $100/月含Codex 5x”就误以为升级到ChatGPT Pro能直接解决企业级合规、数据隔离与SLA需求。</span></div>
+              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">ChatGPT Pro是面向个人/团队的更高用量与能力档位（如Codex用量为Plus的5x），并不等同于ChatGPT Enterprise的合规承诺、管理控制、数据治理与企业合同保障；同时，插件/集成生态（如Claude Code的Vercel插件被曝读取提示词）也提示“更强能力/更高用量”不自动带来更安全的数据边界。</span></div>
+              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">在评估升级或接入前，分别对ChatGPT Pro与ChatGPT Enterprise做权限/数据流/日志留存/第三方插件访问范围的差异清单与安全评审，避免用订阅档位替代企业合规方案。</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-indigo-50 to-blue-50 border border-indigo-200 rounded-xl p-5">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-indigo-600 rounded-lg">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3 class="text-base font-bold text-gray-900">今天该做什么</h3>
+        </div>
+        <div class="bg-white/60 rounded-lg p-4">
+          <p class="text-sm text-gray-700 font-medium">梳理AI用量与分层定价</p>
+          
+          <ul class="mt-2 space-y-1">
+            
+            <li class="text-xs text-gray-500 flex items-start gap-1.5">
+              <span class="text-purple-500 mt-0.5">→</span>新增$100档位利于分层定价与转化提升。
+            </li>
+            
+            <li class="text-xs text-gray-500 flex items-start gap-1.5">
+              <span class="text-purple-500 mt-0.5">→</span>可用于企业/重度用户分层与ARPU提升测算。
+            </li>
+            
+          </ul>
+          
+        </div>
+      </div>
+      
+
+    </div>
+    
+    
+
+    <div class="tab-pane " id="pane-art">
+
+      
+      
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-xl p-6 mb-6">
+        <div class="flex items-start gap-3 mb-4">
+          <div class="p-2 bg-amber-500 rounded-lg flex-shrink-0">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <h2 class="text-sm font-bold text-amber-900 uppercase tracking-wide">今日最重要</h2>
+              <span class="text-xs bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full font-medium">美术视角</span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900">PhysGM单图1分钟生成高物理4D视频</h3>
+          </div>
+        </div>
+
+        <div class="space-y-2 text-sm mb-4">
+          
+          <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — PhysGM可输入单张图片，1分钟生成高物理真实性4D动态视频。</p>
+          
+          
+          <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 把静帧概念图快速变成可信运动镜头，显著提速动效与预演。</p>
+          
+        </div>
+
+        
+        <div class="bg-white/60 border border-pink-200 rounded-lg p-3 mb-4">
+          <div class="flex items-center gap-2 mb-1.5">
+            <span class="text-xs font-semibold text-pink-900">对美术的影响</span>
+          </div>
+          <p class="text-sm text-gray-700">美术可用单张设定图直接产出带物理感的动态素材，用于分镜、气氛测试与镜头提案。也会提高对材质、光照与运动一致性的美术规范要求。</p>
+        </div>
+        
+
+        
+        <div class="flex items-center gap-2 bg-green-600 text-white rounded-lg px-4 py-2.5">
+          <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          <span class="text-sm font-medium">建议动作：纳入分镜预演流程</span>
+        </div>
+        
+
+        
+        <a href="https://zhuanlan.zhihu.com/p/2025178847717376367" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-900 mt-3">
+          查看原文 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+        
+      </div>
+      
+
+      
+      
+      <div class="mb-6">
+        <h2 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+          <span class="w-6 h-6 bg-gray-800 text-white rounded flex items-center justify-center text-xs font-bold">📡</span>
+          高价值更新
+        </h2>
+        <div class="space-y-3">
+          
+          <details class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+            <summary class="p-4 flex items-start gap-3">
+              <svg class="w-4 h-4 text-gray-400 mt-1 flex-shrink-0 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">视觉生成</span>
+                  <span class="text-xs text-gray-400">The Verge AI</span>
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-1">YouTube Shorts上线逼真自我克隆深伪功能</h3>
+                <p class="text-xs text-gray-500">YouTube Shorts推出AI功能，让创作者更易逼真克隆自己出镜。</p>
+              </div>
+              <div class="flex-shrink-0 mt-1">
+                
+                
+                <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap">测试分身拍摄</span>
+                
+              </div>
+            </summary>
+            <div class="px-4 pb-4 pt-0 ml-7 border-t border-gray-100">
+              <div class="mt-3 space-y-2">
+                
+                <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">为什么重要：</span>降低视频生成门槛同时放大深伪风险。</p>
+                
+                
+                
+                <div class="bg-pink-50 rounded-lg p-3">
+                  <span class="text-xs font-semibold text-pink-900 block mb-1">对美术的影响</span>
+                  <p class="text-xs text-gray-700">可用于短视频分身出镜与批量内容制作。</p>
+                </div>
+                
+                
+                <a href="https://www.theverge.com/ai-artificial-intelligence/909104/youtube-shorts-make-ai-avatar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 mt-1">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+              </div>
+            </div>
+          </details>
+          
+          <details class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+            <summary class="p-4 flex items-start gap-3">
+              <svg class="w-4 h-4 text-gray-400 mt-1 flex-shrink-0 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">视觉生成</span>
+                  <span class="text-xs text-gray-400">HuggingFace (netflix)</span>
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-1">netflix/void-model视频到视频模型上架</h3>
+                <p class="text-xs text-gray-500">HuggingFace发布netflix/void-model，任务video-to-video。</p>
+              </div>
+              <div class="flex-shrink-0 mt-1">
+                
+                
+                <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap">测试风格工作流</span>
+                
+              </div>
+            </summary>
+            <div class="px-4 pb-4 pt-0 ml-7 border-t border-gray-100">
+              <div class="mt-3 space-y-2">
+                
+                <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">为什么重要：</span>可用于视频风格迁移与剪辑自动化。</p>
+                
+                
+                
+                <div class="bg-pink-50 rounded-lg p-3">
+                  <span class="text-xs font-semibold text-pink-900 block mb-1">对美术的影响</span>
+                  <p class="text-xs text-gray-700">可用于视频风格统一与镜头改造，提升产出效率。</p>
+                </div>
+                
+                
+                <a href="https://huggingface.co/netflix/void-model" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 mt-1">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+              </div>
+            </div>
+          </details>
+          
+          <details class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+            <summary class="p-4 flex items-start gap-3">
+              <svg class="w-4 h-4 text-gray-400 mt-1 flex-shrink-0 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">设计工具</span>
+                  <span class="text-xs text-gray-400">Product Hunt</span>
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-1">Motn AI：同画布vibe-code动效图形工具</h3>
+                <p class="text-xs text-gray-500">Motn AI上线，支持在同一画布vibe-code制作motion graphics。</p>
+              </div>
+              <div class="flex-shrink-0 mt-1">
+                
+                
+                <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap">试做一套动效模板</span>
+                
+              </div>
+            </summary>
+            <div class="px-4 pb-4 pt-0 ml-7 border-t border-gray-100">
+              <div class="mt-3 space-y-2">
+                
+                <p class="text-xs text-gray-600"><span class="font-semibold text-gray-800">为什么重要：</span>可能改变动效制作流程，提升产出效率。</p>
+                
+                
+                
+                <div class="bg-pink-50 rounded-lg p-3">
+                  <span class="text-xs font-semibold text-pink-900 block mb-1">对美术的影响</span>
+                  <p class="text-xs text-gray-700">可用自然语言/代码式方式做动效，适合快速出片与迭代。</p>
+                </div>
+                
+                
+                <a href="https://www.producthunt.com/products/motn-ai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800 mt-1">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+              </div>
+            </div>
+          </details>
+          
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-pink-50 to-pink-100 border border-pink-200 rounded-xl p-5 mb-6">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-pink-600 rounded-lg">
+            
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
+            
+          </div>
+          <h3 class="text-base font-bold text-gray-900">美术速览</h3>
+        </div>
+        <ul class="space-y-2">
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">可快速把静帧变成遵循材质物理的动态镜头与特效预演。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">可用于短视频分身出镜与批量内容制作。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">可用于视频风格统一与镜头改造，提升产出效率。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">可用自然语言/代码式方式做动效，适合快速出片与迭代。</span>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-5 mb-6">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-green-600 rounded-lg">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          </div>
+          <h3 class="text-base font-bold text-gray-900">今天值得试的工具</h3>
+        </div>
+        <h4 class="text-lg font-bold text-gray-900 mb-1">None</h4>
+        <p class="text-sm text-gray-700 mb-3">None</p>
+        <div class="flex flex-wrap gap-4 text-xs mb-3">
+          
+          
+        </div>
+        
+      </div>
+      
+
+      
+      
+      <div class="bg-red-50 border border-red-200 rounded-xl p-5 mb-6">
+        <div class="flex items-start gap-3">
+          <div class="p-1.5 bg-red-500 rounded-lg flex-shrink-0">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-sm font-bold text-red-900 mb-2">风险提醒</h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">看到YouTube Shorts上线逼真自我克隆深伪功能，就误以为“克隆自己出镜”属于安全可用、不会引发版权/肖像权风险的常规美术素材生产方式。</span></div>
+              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">深伪/自我克隆即使由本人发起，也可能涉及平台政策限制、授权链条不完整（音乐/他人形象/商标/背景素材）、以及被二次传播后造成误导性内容的合规风险。对外发布时通常需要明确标注、留存授权与素材来源，且避免让观众误以为是真人实时出演或真实背书。</span></div>
+              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">美术侧在使用此类“自我克隆”视频资产前，建立强制检查清单：肖像/声音/场景/品牌元素授权与可追溯来源齐全，并按平台要求做深伪标注与用途边界说明。</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-indigo-50 to-blue-50 border border-indigo-200 rounded-xl p-5">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-indigo-600 rounded-lg">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3 class="text-base font-bold text-gray-900">今天该做什么</h3>
+        </div>
+        <div class="bg-white/60 rounded-lg p-4">
+          <p class="text-sm text-gray-700 font-medium">纳入分镜预演流程</p>
+          
+          <ul class="mt-2 space-y-1">
+            
+            <li class="text-xs text-gray-500 flex items-start gap-1.5">
+              <span class="text-pink-500 mt-0.5">→</span>可快速把静帧变成遵循材质物理的动态镜头与特效预演。
+            </li>
+            
+            <li class="text-xs text-gray-500 flex items-start gap-1.5">
+              <span class="text-pink-500 mt-0.5">→</span>可用于短视频分身出镜与批量内容制作。
+            </li>
+            
+          </ul>
+          
+        </div>
+      </div>
+      
+
+    </div>
+    
+
+    <div class="mt-8 pt-6 border-t border-gray-200">
+      <div class="text-center text-xs text-gray-500 space-y-1">
+        <p>AI 日报 · 2026-04-10 10:10 自动生成</p>
+        <p>开发者 · 产品经理 · 美术 — 三种角色，三份精准日报</p>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function switchTab(role) {
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.classList.remove('active', 'border-blue-600', 'border-purple-600', 'border-pink-600',
+          'text-blue-700', 'text-purple-700', 'text-pink-700');
+        b.classList.add('border-transparent', 'text-gray-500');
+      });
+
+      const pane = document.getElementById('pane-' + role);
+      if (pane) pane.classList.add('active');
+
+      const btn = document.querySelector('[data-tab="' + role + '"]');
+      if (btn) {
+        const colorMap = {dev: 'blue', pm: 'purple', art: 'pink'};
+        const c = colorMap[role];
+        btn.classList.remove('border-transparent', 'text-gray-500');
+        btn.classList.add('active', 'border-' + c + '-600', 'text-' + c + '-700');
+      }
+    }
+  </script>
+</body>
+</html>
