@@ -110,16 +110,16 @@
                   <h2 class="text-sm font-bold text-amber-900 uppercase tracking-wide">今日最重要</h2>
                   <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">开发者视角</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900">google/gemma-4-31B-it开源上线</h3>
+                <h3 class="text-xl font-bold text-gray-900">google/gemma-4-31B-it上架</h3>
               </div>
             </div>
 
             <div class="space-y-2 text-sm mb-4">
               
-              <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — HuggingFace发布google/gemma-4-31B-it，下载1,333,678。</p>
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — HuggingFace发布google/gemma-4-31B-it，下载1,589,761。</p>
               
               
-              <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 高热度开源大模型可直接集成与微调。</p>
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 多模态指令模型可直接用于应用集成。</p>
               
             </div>
 
@@ -128,14 +128,14 @@
               <div class="flex items-center gap-2 mb-1.5">
                 <span class="text-xs font-semibold text-blue-900">对开发者的影响</span>
               </div>
-              <p class="text-sm text-gray-700">开发者可用google/gemma-4-31B-it快速搭建推理与应用。也可基于其权重做领域微调与评测对比。</p>
+              <p class="text-sm text-gray-700">开发者可用google/gemma-4-31B-it快速搭建图文理解与对话能力。高下载量意味着生态与复现资源更丰富。</p>
             </div>
             
 
             
             <div class="flex items-center gap-2 bg-green-600 text-white rounded-lg px-4 py-2.5">
               <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              <span class="text-sm font-medium">建议动作：拉取模型并跑基准</span>
+              <span class="text-sm font-medium">建议动作：拉取并做基准评测</span>
             </div>
             
 
@@ -155,31 +155,19 @@
             <div class="space-y-2.5">
               
               <div class="text-xs">
-                <p class="text-gray-700 leading-relaxed">作者观察到Gemma 4 31B在体量仅31B的情况下，表现被描述为可“越级”对标甚至压过更大参数模型，并且在一台Mac mini上即可本地跑起来；这直接把高质量大模型从“必须上云/上大卡”变成“个人电脑可离线试用与迭代”，降低团队验证与部署门槛。</p>
+                
+                <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：有开发者/社区对比称：Gemma 4 31B 在数学与视觉相关能力上更占优，但在 MMLU Pro、GPQA Diamond 等知识/推理基准上略逊于 Qwen3.5 27B，整体体验接近、差距不大。</p>
+                
+                
+                <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：选型上更像“按任务偏好”取舍：偏数学/视觉多模态任务可优先试 Gemma 4 31B，通用知识问答/推理则需要与 Qwen 同台实测再定。</p>
+                
+                
+                <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：如果你的核心指标是 MMLU Pro、GPQA Diamond 等，Gemma 4 31B 可能不是最优解。</p>
+                
                 <div class="flex items-center gap-1 mt-1">
                   <span class="text-gray-400">—</span>
                   
-                  <a href="https://zhuanlan.zhihu.com/p/2023337266920058993" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">知乎博主文章《谷歌Gemma 4深夜突降，31B爆杀20倍巨头！手机跑全血「龙虾」》</a>
-                  
-                </div>
-              </div>
-              
-              <div class="text-xs">
-                <p class="text-gray-700 leading-relaxed">作者提到已有用户在手机端使用，并强调端侧型号经与Pixel团队及高通/联发科联合优化，可在手机、树莓派、Jetson Orin Nano离线运行且“延迟接近零”；这对需要本地隐私、弱网/无网、低时延交互的应用（现场巡检、车载、随身助手）意味着可直接落地端侧推理工作流，而非依赖云端API。</p>
-                <div class="flex items-center gap-1 mt-1">
-                  <span class="text-gray-400">—</span>
-                  
-                  <a href="https://zhuanlan.zhihu.com/p/2023337266920058993" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">知乎博主文章《谷歌Gemma 4深夜突降，31B爆杀20倍巨头！手机跑全血「龙虾」》</a>
-                  
-                </div>
-              </div>
-              
-              <div class="text-xs">
-                <p class="text-gray-700 leading-relaxed">第三方部署攻略文章引用榜单对比称Gemma 4 31B与Qwen3.5 27B在人类偏好评分上体验接近，但在数学与视觉上更占优、而对方在MMLU Pro/GPQA略高；这让选型从“谁绝对最强”变成“按任务取舍”，例如多模态/数学更偏向Gemma 4 31B，通识问答/知识测评可能优先Qwen。</p>
-                <div class="flex items-center gap-1 mt-1">
-                  <span class="text-gray-400">—</span>
-                  
-                  <a href="https://gitcode.csdn.net/69d732e30a2f6a37c59dfcdc.html" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">AtomGit开源社区（CSDN镜像）《谷歌开源 Gemma 4，31B 太强了，本地就能跑多模态，部署全攻略来了》</a>
+                  <a href="https://gitcode.csdn.net/69d732e30a2f6a37c59dfcdc.html" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">AtomGit开源社区（CSDN转载）</a>
                   
                 </div>
               </div>
@@ -187,7 +175,7 @@
             </div>
             
             <div class="mt-3 pt-2.5 border-t border-gray-200">
-                  <p class="text-xs text-gray-500 italic">💡 共识：31B可本地/端侧跑；分歧：与Qwen同级任务强项不同。</p>
+                  <p class="text-xs text-gray-500 italic">💡 性能与Qwen接近，但长上下文单卡落地受限。</p>
             </div>
             
           </div>
@@ -218,16 +206,16 @@
                   <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">做基准评测</span>
                   
                 </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled发布</h3>
-                <p class="text-xs text-gray-600 mb-2">发布Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled，下载564,664。</p>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled模型发布</h3>
+                <p class="text-xs text-gray-600 mb-2">发布Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled，下载567,166。</p>
                 
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>推理蒸馏模型或提升性价比与可部署性。</p>
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>蒸馏推理模型或提升性价比与可部署性。</p>
                 
                 
                 
                 <div class="bg-blue-50 rounded-lg p-2.5 mb-3">
                   <span class="text-xs font-semibold text-blue-900">对开发者的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">可作为推理型替代模型评测质量与延迟。关注蒸馏带来的能力边界。</p>
+                  <p class="text-xs text-gray-700 mt-0.5">可作为推理能力替代方案，适合本地/私有化部署评测。</p>
                 </div>
                 
                 
@@ -242,28 +230,28 @@
           </div>
           
           
-          <div class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+          <div class="bg-white border border-gray-200 rounded-xl  hover:shadow-md transition-shadow">
             <div class="flex flex-col md:flex-row">
               
-              <div class="flex-1 p-5 md:border-r border-gray-100">
+              <div class="flex-1 p-5 ">
                 <div class="flex items-center gap-2 mb-2">
                   <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">模型能力</span>
                   <span class="text-xs text-gray-400">HuggingFace (baidu)</span>
                   
                   
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">做OCR精度测</span>
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">跑OCR集评</span>
                   
                 </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">baidu/Qianfan-OCR模型在HuggingFace发布</h3>
-                <p class="text-xs text-gray-600 mb-2">发布baidu/Qianfan-OCR，下载42,622，获赞1130。</p>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">baidu/Qianfan-OCR开源OCR模型发布</h3>
+                <p class="text-xs text-gray-600 mb-2">发布baidu/Qianfan-OCR，下载43,619。</p>
                 
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>OCR能力可直接提升文档与票据类AI流程。</p>
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>OCR能力可直接提升文档与票据类产品体验。</p>
                 
                 
                 
                 <div class="bg-blue-50 rounded-lg p-2.5 mb-3">
                   <span class="text-xs font-semibold text-blue-900">对开发者的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">可用于文档解析、RAG入库前清洗与结构化抽取。需验证精度与吞吐。</p>
+                  <p class="text-xs text-gray-700 mt-0.5">可用于图像转文本管线，替换第三方OCR或做私有化部署。</p>
                 </div>
                 
                 
@@ -274,51 +262,6 @@
               </div>
               
               
-              <div class="md:w-[340px] bg-gradient-to-br from-slate-50 to-gray-50 p-5">
-                <div class="flex items-center gap-1.5 mb-3">
-                  <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"></path></svg>
-                  <span class="text-xs font-bold text-indigo-700">外部测评 / 使用反馈</span>
-                </div>
-                <div class="space-y-2.5">
-                  
-                  <div class="text-xs">
-                    <p class="text-gray-700 leading-relaxed">知乎作者在官方 Demo 上手测试多项任务与更高难度样例后，主观感受是识别“非常准/太准”，并认为模型确实强；对用户的真实改变是：在复杂样例上可减少人工校对与规则兜底的比例，更适合直接接入生产 OCR 流程做端到端识别。</p>
-                    <div class="flex items-center gap-1 mt-1">
-                      <span class="text-gray-400">—</span>
-                      
-                      <a href="https://zhuanlan.zhihu.com/p/1962632059248961418" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">知乎（个人博主）</a>
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="text-xs">
-                    <p class="text-gray-700 leading-relaxed">第三方分析文章汇总基准对比称 Qianfan-OCR 在 OmniDocBench v1.5 得到 93.12、端到端模型第一，且 OCRBench 表现高于同尺寸通用 VL 与专用 OCR；对用户的真实改变是：在文档理解/抽取任务上更可能用单一端到端模型替代“OCR+后处理/多模型拼接”，降低工程复杂度与维护成本。</p>
-                    <div class="flex items-center gap-1 mt-1">
-                      <span class="text-gray-400">—</span>
-                      
-                      <a href="https://developer.aliyun.com/article/1719998" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">阿里云开发者社区（第三方技术分析/转载聚合）</a>
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="text-xs">
-                    <p class="text-gray-700 leading-relaxed">技术栈文章整理的评测对比显示其在 OmniDocBench v1.5 领先，并在 ChartQA/ChartBench 等图表理解 6 项评测中拿下 5 项最佳；对用户的真实改变是：处理含表格/图表的文档时，图表问答与结构化理解能力更强，可减少专门的图表解析模块与人工标注修补。</p>
-                    <div class="flex items-center gap-1 mt-1">
-                      <span class="text-gray-400">—</span>
-                      
-                      <a href="https://jishuzhan.net/article/2036610970479558658" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">技术栈（第三方技术媒体/博客）</a>
-                      
-                    </div>
-                  </div>
-                  
-                </div>
-                
-                <div class="mt-3 pt-2.5 border-t border-gray-200">
-                  <p class="text-xs text-gray-500 italic">💡 共识：准确率与图表/文档基准领先，可减少后处理与人工校对</p>
-                </div>
-                
-              </div>
-              
             </div>
           </div>
           
@@ -328,27 +271,27 @@
               
               <div class="flex-1 p-5 ">
                 <div class="flex items-center gap-2 mb-2">
-                  <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">框架更新</span>
-                  <span class="text-xs text-gray-400">Hacker News</span>
+                  <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">模型能力</span>
+                  <span class="text-xs text-gray-400">HuggingFace (zai-org)</span>
                   
                   
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">做PoC接RAG</span>
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">纳入基准集</span>
                   
                 </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">Research-Driven Agents提出先读后写编码</h3>
-                <p class="text-xs text-gray-600 mb-2">文章介绍Research-Driven Agents先检索阅读再编码流程。</p>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">zai-org/GLM-5.1文本生成模型发布</h3>
+                <p class="text-xs text-gray-600 mb-2">发布zai-org/GLM-5.1，下载15,930。</p>
                 
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>提升Agent编码可靠性与可解释性。</p>
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>新增可选开源底座，利于替换与降本。</p>
                 
                 
                 
                 <div class="bg-blue-50 rounded-lg p-2.5 mb-3">
                   <span class="text-xs font-semibold text-blue-900">对开发者的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">可用于RAG+代码生成，降低幻觉与返工。</p>
+                  <p class="text-xs text-gray-700 mt-0.5">可纳入文本生成基准，对比现有LLM在成本与效果差异。</p>
                 </div>
                 
                 
-                <a href="https://blog.skypilot.co/research-driven-agents/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                <a href="https://huggingface.co/zai-org/GLM-5.1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
                   查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
                 
@@ -377,22 +320,22 @@
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">适合做自建推理与微调底座对比。可验证多模态image-text-to-text链路。</span>
+            <span class="text-gray-700">可用于图文理解/问答等多模态能力落地与对标测试。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">可作为推理型替代模型评测质量与延迟。关注蒸馏带来的能力边界。</span>
+            <span class="text-gray-700">可作为推理能力替代方案，适合本地/私有化部署评测。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">可用于文档解析、RAG入库前清洗与结构化抽取。需验证精度与吞吐。</span>
+            <span class="text-gray-700">可用于图像转文本管线，替换第三方OCR或做私有化部署。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">可用于图文问答、OCR后处理与多模态Agent。</span>
+            <span class="text-gray-700">可纳入文本生成基准，对比现有LLM在成本与效果差异。</span>
           </li>
           
         </ul>
@@ -409,10 +352,10 @@
           <h3 class="text-base font-bold text-gray-900">今天值得试的工具</h3>
         </div>
         <h4 class="text-lg font-bold text-gray-900 mb-1">Scion（实验性）</h4>
-        <p class="text-sm text-gray-700 mb-3">谷歌开源多智能体编排与测试平台</p>
+        <p class="text-sm text-gray-700 mb-3">谷歌开源多智能体编排测试平台</p>
         <div class="flex flex-wrap gap-4 text-xs mb-3">
-          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">开发与评测多Agent工作流、路由与回归测试</span></div>
-          <div><span class="font-semibold text-red-700">不适合</span><span class="text-gray-600 ml-1">生产级稳定性要求高场景</span></div>
+          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">多Agent编排、评测与回归测试</span></div>
+          <div><span class="font-semibold text-red-700">不适合</span><span class="text-gray-600 ml-1">追求生产级稳定性</span></div>
         </div>
         
         <a href="https://github.com/google/scion" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-800">
@@ -432,9 +375,9 @@
           <div class="flex-1">
             <h3 class="text-sm font-bold text-red-900 mb-2">风险提醒</h3>
             <div class="space-y-2 text-sm">
-              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">看到“开源/上线/下载量高”的模型（如 google/gemma-4-31B-it、Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled）就默认可直接用于商业产品且许可与训练来源无风险。</span></div>
-              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">HuggingFace 上的“开源”常仅代表权重可获取，不等于商业可用或无合规/版权/数据来源争议；尤其是带“Distilled/Claude”字样的衍生模型，可能存在与上游模型条款不兼容、再分发限制或训练数据授权不清等风险，下载量也不能替代法务与安全评估。</span></div>
-              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">在集成前强制做一遍许可证与来源链路核查（模型卡/License文件/训练与蒸馏声明/再分发条款），并在CI中加入依赖清单与合规门禁，未通过则禁止进入生产。</span></div>
+              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">看到“HuggingFace上架/下载量高/走红”就默认模型（如 google/gemma-4-31B-it、google/gemma-4-26B-A4B-it、google/gemma-4-E4B-it、Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled）可直接用于生产且许可与数据合规无风险。</span></div>
+              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">上架与下载量只代表热度，不代表许可条款、训练数据来源、商用限制、再分发要求或安全合规已满足；尤其是“Distilled/Claude”命名的第三方蒸馏模型（Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled）可能涉及上游模型条款兼容性与可商用性不确定，需要单独核验模型卡与许可证。</span></div>
+              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">在接入前对每个模型逐一做license/模型卡/数据与商用条款审计，并在CI中加入自动化合规检查与可替换回退方案。</span></div>
             </div>
           </div>
         </div>
@@ -451,16 +394,16 @@
           <h3 class="text-base font-bold text-gray-900">今天该做什么</h3>
         </div>
         <div class="bg-white/60 rounded-lg p-4">
-          <p class="text-sm text-gray-700 font-medium">拉取模型并跑基准</p>
+          <p class="text-sm text-gray-700 font-medium">拉取并做基准评测</p>
           
           <ul class="mt-2 space-y-1">
             
             <li class="text-xs text-gray-500 flex items-start gap-1.5">
-              <span class="text-blue-500 mt-0.5">→</span>适合做自建推理与微调底座对比。可验证多模态image-text-to-text链路。
+              <span class="text-blue-500 mt-0.5">→</span>可用于图文理解/问答等多模态能力落地与对标测试。
             </li>
             
             <li class="text-xs text-gray-500 flex items-start gap-1.5">
-              <span class="text-blue-500 mt-0.5">→</span>可作为推理型替代模型评测质量与延迟。关注蒸馏带来的能力边界。
+              <span class="text-blue-500 mt-0.5">→</span>可作为推理能力替代方案，适合本地/私有化部署评测。
             </li>
             
           </ul>
@@ -490,16 +433,16 @@
                   <h2 class="text-sm font-bold text-amber-900 uppercase tracking-wide">今日最重要</h2>
                   <span class="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full font-medium">产品经理视角</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900">ChatGPT推出100美元/月Pro订阅计划</h3>
+                <h3 class="text-xl font-bold text-gray-900">ChatGPT新增100美元/月Pro计划</h3>
               </div>
             </div>
 
             <div class="space-y-2 text-sm mb-4">
               
-              <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — ChatGPT新增100美元/月Pro计划，介于20与200之间。</p>
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — ChatGPT推出100美元/月Pro计划，填补20与200美元档位。</p>
               
               
-              <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 定价分层变化将重塑付费转化与ARPU策略。</p>
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 为AI产品定价与分层提供新锚点。</p>
               
             </div>
 
@@ -508,14 +451,14 @@
               <div class="flex items-center gap-2 mb-1.5">
                 <span class="text-xs font-semibold text-purple-900">对产品经理的影响</span>
               </div>
-              <p class="text-sm text-gray-700">产品经理需重新评估功能分层、限额与权益包，避免高端用户流失或低端用户被迫升级。也会影响竞品对标与企业采购的预算锚点。</p>
+              <p class="text-sm text-gray-700">可参考其三档结构设计功能/额度/支持差异化。也会抬高用户对中高端AI订阅价值预期与竞品对标压力。</p>
             </div>
             
 
             
             <div class="flex items-center gap-2 bg-green-600 text-white rounded-lg px-4 py-2.5">
               <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              <span class="text-sm font-medium">建议动作：立刻复盘订阅分层</span>
+              <span class="text-sm font-medium">建议动作：梳理分层与权益定价</span>
             </div>
             
 
@@ -546,27 +489,27 @@
               
               <div class="flex-1 p-5 ">
                 <div class="flex items-center gap-2 mb-2">
-                  <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">风险合规</span>
-                  <span class="text-xs text-gray-400">Hacker News</span>
+                  <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">成本变化</span>
+                  <span class="text-xs text-gray-400">TechCrunch AI</span>
                   
                   
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">更新合规说明</span>
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">更新定价方案</span>
                   
                 </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">Claude Code的Vercel插件被曝读提示词</h3>
-                <p class="text-xs text-gray-600 mb-2">Hacker News称Claude Code的Vercel plugin会读取用户prompts。</p>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">ChatGPT新增100美元/月Pro计划介于20与200之间</h3>
+                <p class="text-xs text-gray-600 mb-2">ChatGPT推出100美元/月Pro计划，填补20与200美元档位。</p>
                 
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>涉及提示词与代码数据的隐私与合规风险。</p>
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>定价分层更细，影响团队采购与用户转化策略。</p>
                 
                 
                 
                 <div class="bg-purple-50 rounded-lg p-2.5 mb-3">
                   <span class="text-xs font-semibold text-purple-900">对产品经理的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">需更新隐私披露与企业客户安全评估。</p>
+                  <p class="text-xs text-gray-700 mt-0.5">可调整付费梯度与席位策略，优化转化与ARPU。</p>
                 </div>
                 
                 
-                <a href="https://akshaychugh.xyz/writings/png/vercel-plugin-telemetry" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                <a href="https://techcrunch.com/2026/04/09/chatgpt-pro-plan-100-month-codex/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
                   查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
                 
@@ -583,26 +526,26 @@
               <div class="flex-1 p-5 ">
                 <div class="flex items-center gap-2 mb-2">
                   <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">风险合规</span>
-                  <span class="text-xs text-gray-400">TechCrunch AI</span>
+                  <span class="text-xs text-gray-400">Wired AI</span>
                   
                   
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">更新合规预案</span>
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">跟进法案进展</span>
                   
                 </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">佛州总检察长调查OpenAI涉ChatGPT案件</h3>
-                <p class="text-xs text-gray-600 mb-2">佛州AG调查OpenAI，称ChatGPT或被用于策划枪击。</p>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">OpenAI支持伊利诺伊法案限制AI致命与金融灾害责任</h3>
+                <p class="text-xs text-gray-600 mb-2">OpenAI作证支持伊利诺伊法案，限制AI致“critical harm”责任。</p>
                 
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>提升合规与安全要求，或引发更严监管。</p>
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>责任边界变化将影响AI产品风控、合同与合规成本。</p>
                 
                 
                 
                 <div class="bg-purple-50 rounded-lg p-2.5 mb-3">
                   <span class="text-xs font-semibold text-purple-900">对产品经理的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">更新风控与合规预案，评估法律与公关风险。</p>
+                  <p class="text-xs text-gray-700 mt-0.5">可能改变法务条款与上线门槛，需提前做合规预案。</p>
                 </div>
                 
                 
-                <a href="https://techcrunch.com/2026/04/09/florida-ag-investigation-openai-chatgpt-shooting/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                <a href="https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
                   查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
                 
@@ -619,26 +562,26 @@
               <div class="flex-1 p-5 ">
                 <div class="flex items-center gap-2 mb-2">
                   <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">产品动态</span>
-                  <span class="text-xs text-gray-400">TechCrunch AI</span>
+                  <span class="text-xs text-gray-400">InfoQ AI</span>
                   
                   
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">复盘增长打法</span>
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">更新竞品分析</span>
                   
                 </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">Meta AI应用因Muse Spark上线升至App Store第5</h3>
-                <p class="text-xs text-gray-600 mb-2">Meta AI新模型Muse Spark发布后，排名从第57升至第5。</p>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">Meta发布闭源模型重注AI赛道143亿美金</h3>
+                <p class="text-xs text-gray-600 mb-2">Meta发布闭源AI产品并投入143亿美金。</p>
                 
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>模型发布可显著拉动分发与用户增长指标。</p>
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>开源策略变化影响生态与供应选择。</p>
                 
                 
                 
                 <div class="bg-purple-50 rounded-lg p-2.5 mb-3">
                   <span class="text-xs font-semibold text-purple-900">对产品经理的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">可复盘“模型发布+分发”打法，优化增长节奏。</p>
+                  <p class="text-xs text-gray-700 mt-0.5">影响竞品格局与供应商议价，需重估路线与成本。</p>
                 </div>
                 
                 
-                <a href="https://techcrunch.com/2026/04/09/meta-ai-app-climbs-to-no-5-on-the-app-store-after-muse-spark-launch/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                <a href="https://www.infoq.cn/article/I71O7o2pufO4WFbpyTFT?utm_source=rss&utm_medium=article" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
                   查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
                 
@@ -667,22 +610,22 @@
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">可对标$100档位设计自家套餐与权益分层。</span>
+            <span class="text-gray-700">适合文档/表单/票据场景，评估上线可降低外采成本。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">需更新隐私披露与企业客户安全评估。</span>
+            <span class="text-gray-700">可调整付费梯度与席位策略，优化转化与ARPU。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">更新风控与合规预案，评估法律与公关风险。</span>
+            <span class="text-gray-700">可能改变法务条款与上线门槛，需提前做合规预案。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">可复盘“模型发布+分发”打法，优化增长节奏。</span>
+            <span class="text-gray-700">影响竞品格局与供应商议价，需重估路线与成本。</span>
           </li>
           
         </ul>
@@ -698,14 +641,14 @@
           </div>
           <h3 class="text-base font-bold text-gray-900">今天值得试的工具</h3>
         </div>
-        <h4 class="text-lg font-bold text-gray-900 mb-1">ChatGPT Pro 100美元/月</h4>
-        <p class="text-sm text-gray-700 mb-3">更高配额与能力的ChatGPT订阅档位</p>
+        <h4 class="text-lg font-bold text-gray-900 mb-1">Convert or Not 1.0</h4>
+        <p class="text-sm text-gray-700 mb-3">用新用户模拟定位注册/激活流失原因</p>
         <div class="flex flex-wrap gap-4 text-xs mb-3">
-          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">高频PRD/竞品分析/原型文案产出</span></div>
-          <div><span class="font-semibold text-red-700">不适合</span><span class="text-gray-600 ml-1">低频使用或预算紧张</span></div>
+          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">新功能上线前后漏斗诊断与文案/流程优化</span></div>
+          <div><span class="font-semibold text-red-700">不适合</span><span class="text-gray-600 ml-1">不适合后端性能排障</span></div>
         </div>
         
-        <a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-800">
+        <a href="https://www.producthunt.com/products/convert-or-not" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-800">
           立即体验 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
         </a>
         
@@ -722,9 +665,9 @@
           <div class="flex-1">
             <h3 class="text-sm font-bold text-red-900 mb-2">风险提醒</h3>
             <div class="space-y-2 text-sm">
-              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">以为“接入第三方插件/托管平台（如Claude Code的Vercel plugin）”只是部署形态变化，不会触及提示词与业务数据的隐私边界。</span></div>
-              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">Hacker News曝出Claude Code的Vercel plugin会读取用户prompts，意味着一旦把提示词、系统提示、代码片段或用户数据放进插件链路，就可能被第三方组件访问、记录或用于调试/分析，从而带来合规与商业机密泄露风险。对产品经理而言，这类风险往往不在模型本身，而在“插件/集成/日志”这条工程链路上。</span></div>
-              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">立刻梳理产品内所有LLM插件与托管集成的数据流（prompts/日志/回传），默认最小化上传与留存，并在上线前做一次第三方组件的隐私与安全评审（含可读字段、存储位置、保留期限与开关）。</span></div>
+              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">把“基准/榜单上的分数提升（如TDM-R1将GenEval从61%升至92%）或排名（HappyHorse-1.0超Seedance 2.0）”直接等同于产品端体验与可落地能力的全面提升。</span></div>
+              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">GenEval等基准通常覆盖特定任务与评测设定，分数提升可能来自采样策略、提示或评测偏置（例如LLM-as-a-judge存在Self-Preference Bias），不必然迁移到你的真实用户场景、成本/时延约束与安全要求。榜单结果也可能受数据集、评测协议与复现条件影响，需用自家数据与端到端指标验证。</span></div>
+              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">在引入TDM-R1、HappyHorse-1.0或Seedance 2.0等方案前，先做可复现的离线回放+小流量A/B，用自家任务集同时评估质量、时延、成本与风险（幻觉/误导/妄想强化）再决策。</span></div>
             </div>
           </div>
         </div>
@@ -741,16 +684,16 @@
           <h3 class="text-base font-bold text-gray-900">今天该做什么</h3>
         </div>
         <div class="bg-white/60 rounded-lg p-4">
-          <p class="text-sm text-gray-700 font-medium">立刻复盘订阅分层</p>
+          <p class="text-sm text-gray-700 font-medium">梳理分层与权益定价</p>
           
           <ul class="mt-2 space-y-1">
             
             <li class="text-xs text-gray-500 flex items-start gap-1.5">
-              <span class="text-purple-500 mt-0.5">→</span>可对标$100档位设计自家套餐与权益分层。
+              <span class="text-purple-500 mt-0.5">→</span>适合文档/表单/票据场景，评估上线可降低外采成本。
             </li>
             
             <li class="text-xs text-gray-500 flex items-start gap-1.5">
-              <span class="text-purple-500 mt-0.5">→</span>需更新隐私披露与企业客户安全评估。
+              <span class="text-purple-500 mt-0.5">→</span>可调整付费梯度与席位策略，优化转化与ARPU。
             </li>
             
           </ul>
@@ -780,16 +723,16 @@
                   <h2 class="text-sm font-bold text-amber-900 uppercase tracking-wide">今日最重要</h2>
                   <span class="text-xs bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full font-medium">美术视角</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900">netflix/void-model视频到视频模型发布</h3>
+                <h3 class="text-xl font-bold text-gray-900">HappyHorse-1.0登顶视频榜超Seedance 2.0</h3>
               </div>
             </div>
 
             <div class="space-y-2 text-sm mb-4">
               
-              <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — HuggingFace发布netflix/void-model视频到视频模型。</p>
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — HappyHorse-1.0登顶Artificial Analysis视频榜，超Seedance 2.0。</p>
               
               
-              <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 可直接改造镜头风格与质感，提升制作效率。</p>
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 更强视频生成将提升分镜、动效与质感表现。</p>
               
             </div>
 
@@ -798,19 +741,19 @@
               <div class="flex items-center gap-2 mb-1.5">
                 <span class="text-xs font-semibold text-pink-900">对美术的影响</span>
               </div>
-              <p class="text-sm text-gray-700">美术可用参考视频一键做风格迁移与统一调色。适合预演、分镜动效与短片迭代，降低后期返工。</p>
+              <p class="text-sm text-gray-700">美术可用更高质量模型做概念预演、镜头测试与风格探索。也会加速视频制作从手工动效向AI驱动迭代转变。</p>
             </div>
             
 
             
             <div class="flex items-center gap-2 bg-green-600 text-white rounded-lg px-4 py-2.5">
               <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              <span class="text-sm font-medium">建议动作：建立风格测试流程</span>
+              <span class="text-sm font-medium">建议动作：立刻做风格与镜头测试</span>
             </div>
             
 
             
-            <a href="https://huggingface.co/netflix/void-model" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-900 mt-3">
+            <a href="https://zhuanlan.zhihu.com/p/2025939930514235964" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-900 mt-3">
               查看原文 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
             </a>
             
@@ -836,59 +779,23 @@
               
               <div class="flex-1 p-5 ">
                 <div class="flex items-center gap-2 mb-2">
-                  <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">视觉生成</span>
-                  <span class="text-xs text-gray-400">知乎·机器之心</span>
-                  
-                  
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">关注分镜流程</span>
-                  
-                </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">CVPR 2026多镜头电影级视频生成进展</h3>
-                <p class="text-xs text-gray-600 mb-2">CVPR 2026研究实现一分钟十镜头且剧情稳定的视频生成。</p>
-                
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>多镜头叙事是视频生成走向可用的关键。</p>
-                
-                
-                
-                <div class="bg-pink-50 rounded-lg p-2.5 mb-3">
-                  <span class="text-xs font-semibold text-pink-900">对美术的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">多镜头叙事更接近影视制作，可显著改变分镜工作流。</p>
-                </div>
-                
-                
-                <a href="https://zhuanlan.zhihu.com/p/2025904106309436294" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
-                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
-                
-              </div>
-              
-              
-            </div>
-          </div>
-          
-          
-          <div class="bg-white border border-gray-200 rounded-xl  hover:shadow-md transition-shadow">
-            <div class="flex flex-col md:flex-row">
-              
-              <div class="flex-1 p-5 ">
-                <div class="flex items-center gap-2 mb-2">
                   <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">设计工具</span>
                   <span class="text-xs text-gray-400">Product Hunt</span>
                   
                   
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">纳入工作流</span>
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">试做动效模板</span>
                   
                 </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">Motn AI一画布动效Vibe编码工具</h3>
-                <p class="text-xs text-gray-600 mb-2">Motn AI提供单画布Vibe-code动效制作。</p>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">Motn AI上线一画布vibe-code动效制作</h3>
+                <p class="text-xs text-gray-600 mb-2">Motn AI支持在单画布vibe-code制作motion graphics。</p>
                 
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>降低动效制作门槛与迭代成本。</p>
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>降低动效制作门槛并改变设计工作流。</p>
                 
                 
                 
                 <div class="bg-pink-50 rounded-lg p-2.5 mb-3">
                   <span class="text-xs font-semibold text-pink-900">对美术的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">一画布完成动效编排，适合快速出片与迭代。</p>
+                  <p class="text-xs text-gray-700 mt-0.5">可用自然语言/代码式方式快速出动效草案与迭代。</p>
                 </div>
                 
                 
@@ -908,27 +815,63 @@
               
               <div class="flex-1 p-5 ">
                 <div class="flex items-center gap-2 mb-2">
-                  <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">模型能力</span>
-                  <span class="text-xs text-gray-400">知乎·机器之心</span>
+                  <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">视觉生成</span>
+                  <span class="text-xs text-gray-400">HuggingFace (netflix)</span>
                   
                   
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">试用对比出图</span>
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">做工作流测试</span>
                   
                 </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">TDM-R1模型4步采样GenEval升至92%</h3>
-                <p class="text-xs text-gray-600 mb-2">TDM-R1仅4步采样将GenEval从61%提升到92%。</p>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">netflix/void-model视频到视频模型发布</h3>
+                <p class="text-xs text-gray-600 mb-2">发布netflix/void-model，任务为video-to-video。</p>
                 
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>显著降低生图推理成本并提升指令遵循。</p>
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>视频生成/编辑能力可能改变内容制作流程。</p>
                 
                 
                 
                 <div class="bg-pink-50 rounded-lg p-2.5 mb-3">
                   <span class="text-xs font-semibold text-pink-900">对美术的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">更快出图且更懂指令，适合高频迭代与批量产出。</p>
+                  <p class="text-xs text-gray-700 mt-0.5">可用于视频风格迁移与镜头改造，提升迭代效率。</p>
                 </div>
                 
                 
-                <a href="https://zhuanlan.zhihu.com/p/2025878588574934567" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                <a href="https://huggingface.co/netflix/void-model" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+              </div>
+              
+              
+            </div>
+          </div>
+          
+          
+          <div class="bg-white border border-gray-200 rounded-xl  hover:shadow-md transition-shadow">
+            <div class="flex flex-col md:flex-row">
+              
+              <div class="flex-1 p-5 ">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">视觉生成</span>
+                  <span class="text-xs text-gray-400">知乎·机器之心</span>
+                  
+                  
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">试用多镜头流程</span>
+                  
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">CVPR 2026多镜头视频生成：一分钟十镜头叙事</h3>
+                <p class="text-xs text-gray-600 mb-2">CVPR 2026提出多镜头视频生成方法，实现一分钟十镜头叙事。</p>
+                
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>多镜头一致性是视频生成走向影视级应用关键。</p>
+                
+                
+                
+                <div class="bg-pink-50 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-pink-900">对美术的影响</span>
+                  <p class="text-xs text-gray-700 mt-0.5">多镜头叙事更可控，利于分镜与短片工作流升级。</p>
+                </div>
+                
+                
+                <a href="https://zhuanlan.zhihu.com/p/2025904106309436294" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
                   查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
                 
@@ -957,22 +900,22 @@
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">可用于镜头风格迁移、调色与特效迭代。适合快速出多版视频方案。</span>
+            <span class="text-gray-700">文字生视频与图像生视频表现领先，值得纳入制作流程测试。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">多镜头叙事更接近影视制作，可显著改变分镜工作流。</span>
+            <span class="text-gray-700">可用自然语言/代码式方式快速出动效草案与迭代。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">一画布完成动效编排，适合快速出片与迭代。</span>
+            <span class="text-gray-700">可用于视频风格迁移与镜头改造，提升迭代效率。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">更快出图且更懂指令，适合高频迭代与批量产出。</span>
+            <span class="text-gray-700">多镜头叙事更可控，利于分镜与短片工作流升级。</span>
           </li>
           
         </ul>
@@ -988,14 +931,14 @@
           </div>
           <h3 class="text-base font-bold text-gray-900">今天值得试的工具</h3>
         </div>
-        <h4 class="text-lg font-bold text-gray-900 mb-1">netflix/void-model</h4>
-        <p class="text-sm text-gray-700 mb-3">视频到视频模型，快速风格化与重绘镜头</p>
+        <h4 class="text-lg font-bold text-gray-900 mb-1">Motn AI 1.0</h4>
+        <p class="text-sm text-gray-700 mb-3">单画布vibe-code生成动效与MG</p>
         <div class="flex flex-wrap gap-4 text-xs mb-3">
-          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">把实拍/动画镜头转成统一美术风格</span></div>
-          <div><span class="font-semibold text-red-700">不适合</span><span class="text-gray-600 ml-1">纯文本生成视频</span></div>
+          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">快速做品牌动效、短视频片头与转场</span></div>
+          <div><span class="font-semibold text-red-700">不适合</span><span class="text-gray-600 ml-1">写实长片级VFX</span></div>
         </div>
         
-        <a href="https://huggingface.co/netflix/void-model" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-800">
+        <a href="https://www.producthunt.com/products/motn-ai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-800">
           立即体验 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
         </a>
         
@@ -1012,9 +955,9 @@
           <div class="flex-1">
             <h3 class="text-sm font-bold text-red-900 mb-2">风险提醒</h3>
             <div class="space-y-2 text-sm">
-              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">看到“用100+AI工具造假裸照并被定罪”这类新闻后，容易误以为只要不发布就没事或把“AI生成/二创”当作合规护身符。</span></div>
-              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">该案例指向的是对女性与未成年人进行伪造裸照/性化内容本身就具有高法律与平台合规风险，且“AI生成”“换脸”“二创”不改变其可能构成违法与侵权的性质。对美术而言，涉及未成年人、真实人物相似度高的肖像、以及任何性化/裸露导向的设计与素材处理都属于高危红线。</span></div>
-              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">建立并执行“未成年人零性化+真实人物肖像高相似度禁用/需授权+敏感内容分级与审核”流程，所有疑似擦边稿件在出图前强制走法务/合规复核。</span></div>
+              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">看到“HappyHorse-1.0登顶Artificial Analysis视频榜，超Seedance 2.0”就误以为它在所有美术关键维度（风格一致性、角色稳定、镜头可控、商用安全）都全面领先、可直接替代现有工作流。</span></div>
+              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">榜单排名通常基于特定评测集与指标，更多反映综合生成质量或某些偏好的表现，不等同于在长镜头角色一致性、分镜叙事可控性、特定风格复现、以及版权/合规可商用性上都更强。对美术落地而言，模型能力差异往往会在“多镜头叙事”“视频到视频一致性”“动效可控”这些环节被放大。</span></div>
+              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">在正式导入前，用同一套美术基准用例（角色设定+多镜头分镜+风格参考+视频到视频一致性）对HappyHorse-1.0与Seedance 2.0做A/B测试并同步做商用合规评估，再决定替换与否。</span></div>
             </div>
           </div>
         </div>
@@ -1031,16 +974,16 @@
           <h3 class="text-base font-bold text-gray-900">今天该做什么</h3>
         </div>
         <div class="bg-white/60 rounded-lg p-4">
-          <p class="text-sm text-gray-700 font-medium">建立风格测试流程</p>
+          <p class="text-sm text-gray-700 font-medium">立刻做风格与镜头测试</p>
           
           <ul class="mt-2 space-y-1">
             
             <li class="text-xs text-gray-500 flex items-start gap-1.5">
-              <span class="text-pink-500 mt-0.5">→</span>可用于镜头风格迁移、调色与特效迭代。适合快速出多版视频方案。
+              <span class="text-pink-500 mt-0.5">→</span>文字生视频与图像生视频表现领先，值得纳入制作流程测试。
             </li>
             
             <li class="text-xs text-gray-500 flex items-start gap-1.5">
-              <span class="text-pink-500 mt-0.5">→</span>多镜头叙事更接近影视制作，可显著改变分镜工作流。
+              <span class="text-pink-500 mt-0.5">→</span>可用自然语言/代码式方式快速出动效草案与迭代。
             </li>
             
           </ul>
@@ -1054,7 +997,7 @@
 
     <div class="mt-8 pt-6 border-t border-gray-200">
       <div class="text-center text-xs text-gray-500 space-y-1">
-        <p>AI 日报 · 2026-04-10 14:07 自动生成</p>
+        <p>AI 日报 · 2026-04-10 17:03 自动生成</p>
         <p>开发者 · 产品经理 · 美术 — 三种角色，三份精准日报</p>
       </div>
     </div>
