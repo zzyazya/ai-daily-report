@@ -42,7 +42,7 @@
               <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
               预计阅读 5 分钟
             </span>
-            <span class="text-gray-400">采集 37+ 源 · 原始 991 篇 · 精选 120 篇</span>
+            <span class="text-gray-400">采集 37+ 源 · 原始 990 篇 · 精选 115 篇</span>
           </div>
         </div>
         <span class="text-sm text-gray-600">2026-04-10</span>
@@ -110,16 +110,16 @@
                   <h2 class="text-sm font-bold text-amber-900 uppercase tracking-wide">今日最重要</h2>
                   <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">开发者视角</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900">Defense Trilemma论文揭示封装失效</h3>
+                <h3 class="text-xl font-bold text-gray-900">google/gemma-4-31B-it开源权重上线</h3>
               </div>
             </div>
 
             <div class="space-y-2 text-sm mb-4">
               
-              <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — arXiv:2604.06436v2证明连续封装防御无法全安全。</p>
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — google/gemma-4-31B-it多模态指令模型开源权重发布。</p>
               
               
-              <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 提示注入防护需重构，不能依赖封装。</p>
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 开发者可本地部署与微调，降低多模态成本。</p>
               
             </div>
 
@@ -128,14 +128,14 @@
               <div class="flex items-center gap-2 mb-1.5">
                 <span class="text-xs font-semibold text-blue-900">对开发者的影响</span>
               </div>
-              <p class="text-sm text-gray-700">开发者应假设封装可被绕过，改用最小权限、工具隔离与可审计策略。对Agent与插件系统需加强权限边界与输出校验。</p>
+              <p class="text-sm text-gray-700">可直接用于多模态对话、图文理解与工具调用场景。也便于在私有数据上做LoRA/全参微调并自建推理服务。</p>
             </div>
             
 
             
             <div class="flex items-center gap-2 bg-green-600 text-white rounded-lg px-4 py-2.5">
               <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              <span class="text-sm font-medium">建议动作：审计并加固提示注入防线</span>
+              <span class="text-sm font-medium">建议动作：下载权重并评测</span>
             </div>
             
 
@@ -150,24 +150,24 @@
           <div class="md:w-[340px] bg-gradient-to-br from-slate-50 to-gray-50 p-5">
             <div class="flex items-center gap-1.5 mb-3">
               <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"></path></svg>
-              <span class="text-xs font-bold text-indigo-700">站内综合反馈</span>
+              <span class="text-xs font-bold text-indigo-700">google/gemma-4-31B-it开源权重上线</span>
             </div>
             <div class="space-y-2.5">
               
               <div class="text-xs">
                 
-                <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：站内材料共同指向“多模态生成/理解（image-text-to-text、T2AV）正在成为主流接口，但评估仍偏碎片化、难以覆盖细粒度跨模态一致性”。</p>
+                <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：给定材料为SWE代理研究论文摘要，未出现对google/gemma-4-31B-it的上手体验、基准测试结果或与其他模型的对比观察。</p>
                 
                 
-                <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：团队在选型与上线时需要把“跨模态一致性/联合正确性”的验收前置，不能只用单模态指标或粗粒度相似度来决定是否可用。</p>
+                <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：由于缺少对Gemma-4-31B-it的实测或工作流案例，无法提炼对用户/团队流程的真实改变。</p>
                 
                 
-                <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：现有材料未给出对gemma-4-31B-it的具体实测结论，且T2AV评测框架与image-text-to-text模型的可直接迁移性仍不明确。</p>
+                <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：该论文讨论的是SWE代理中的“oracle信息信号”贡献，并未评测/对比Gemma-4-31B-it；无法据此推断该模型在多模态指令、推理或工程任务上的实际表现。</p>
                 
                 <div class="flex items-center gap-1 mt-1">
                   <span class="text-gray-400">—</span>
                   
-                  <a href="https://arxiv.org/abs/2604.08540" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">HuggingFace同主题模型页汇总 + arXiv AVGen-Bench</a>
+                  <a href="https://arxiv.org/abs/2604.07789" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">arXiv（ORACLE-SWE: Quantifying the Contribution of Oracle Information Signals on SWE Agents）</a>
                   
                 </div>
               </div>
@@ -175,7 +175,7 @@
             </div>
             
             <div class="mt-3 pt-2.5 border-t border-gray-200">
-                  <p class="text-xs text-gray-500 italic">💡 多模态走向主流，但细粒度联合评估仍是落地瓶颈</p>
+                  <p class="text-xs text-gray-500 italic">💡 现有片段不含对Gemma-4-31B-it的第三方实测结论</p>
             </div>
             
           </div>
@@ -203,19 +203,19 @@
                   <span class="text-xs text-gray-400">arXiv cs.AI</span>
                   
                   
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">改做系统级防护</span>
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">重构安全架构</span>
                   
                 </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">Defense Trilemma论文：提示注入防御封装失效</h3>
-                <p class="text-xs text-gray-600 mb-2">arXiv:2604.06436v2证明连续封装防御无法全安全。</p>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">Defense Trilemma：提示注入防护封装必败证明</h3>
+                <p class="text-xs text-gray-600 mb-2">证明连续且保效用的防护封装无法全安全。</p>
                 
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>提示注入防护需转向系统级与权限隔离。</p>
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>提示注入需系统性防护，非简单wrapper。</p>
                 
                 
                 
                 <div class="bg-blue-50 rounded-lg p-2.5 mb-3">
                   <span class="text-xs font-semibold text-blue-900">对开发者的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">仅靠输入预处理“防御wrapper”不可完备；需结合沙箱、最小权限与监控。</p>
+                  <p class="text-xs text-gray-700 mt-0.5">直接否定“输入预处理wrapper即可防注入”的安全方案。需转向权限隔离、工具最小化与监控审计。</p>
                 </div>
                 
                 
@@ -235,36 +235,36 @@
                   
                   <div class="text-xs">
                     
-                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：多篇材料共同指向：LLM/VLM/Agent在真实应用中仍普遍易受提示注入/越狱（含多模态）影响，且“封装式/输入变换式”防御难以提供稳定的全局安全保证。</p>
+                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：多篇材料反复指出：提示注入/越狱在LLM与VLM场景中普遍存在，且当前防护缺乏可统一对比的评测与复现框架，导致“防住了什么”不清晰。</p>
                     
                     
-                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：团队需要把“提示注入评估+持续红队”纳入上线门槛与回归流程，并将安全策略从单一封装转为可测、可对比的多层防护与监控（含多模态与工具调用链路）。</p>
+                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：团队需要把“是否抗注入”从口头宣称改为可复现的评测流程（固定攻击集/指标/对比基线），否则上线风险无法量化与回归。</p>
                     
                     
-                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：现有防御常伴随性能/效率损耗或对攻击覆盖不全，且缺少统一评测口径导致不同方案的鲁棒性难以直接横向比较。</p>
+                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：不同平台/任务/模态下攻击面差异大，缺少统一基准会导致“看起来有效”的防护难以外推到真实场景。</p>
                     
                     <div class="flex items-center gap-1 mt-1">
                       <span class="text-gray-400">—</span>
                       
-                      <a href="https://arxiv.org/abs/2604.08499" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">PIArena / SALLIE / VLMShield（提示注入与多模态越狱防御与评测）</a>
+                      <a href="https://arxiv.org/abs/2604.08499" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">PIArena + SALLIE + VLMShield</a>
                       
                     </div>
                   </div>
                   
                   <div class="text-xs">
                     
-                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：多篇材料共同强调：需要更贴近真实工作流的长时程、跨场景、异构轨迹与生产力工作区评测来暴露Agent在安全与能力上的失效点，而非依赖单一静态基准。</p>
+                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：材料共同提到：现有防御常以复杂输入变换或额外模块换取安全，但往往带来性能/效率损失，且多模态威胁不能按“文本/图像各自处理”简单拆分。</p>
                     
                     
-                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：做Agent落地时应采用“任务轨迹级”验收（长链路、多步骤、跨工具/跨场景），把安全失败（注入导致的越权/误操作）作为与任务成功率同等的指标纳入测试集与发布门禁。</p>
+                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：在产品/代理工作流中需要把“安全-效用-成本”作为联动指标做权衡与验收（例如同一套任务上同时看成功率、误拒率、延迟/吞吐），避免只追安全导致任务不可用。</p>
                     
                     
-                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：仿真环境与基准对真实组织流程的覆盖仍有限，评测结论对具体业务的可迁移性需要结合自建场景与数据再验证。</p>
+                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：输入变换/过滤类方案可能引入误杀与可用性下降；多模态防护的计算与工程成本也可能上升。</p>
                     
                     <div class="flex items-center gap-1 mt-1">
                       <span class="text-gray-400">—</span>
                       
-                      <a href="https://arxiv.org/abs/2604.05172" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">ClawsBench / 长时程行为轨迹基准（真实工作流评测趋势）</a>
+                      <a href="https://arxiv.org/abs/2604.06247" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">SALLIE + VLMShield</a>
                       
                     </div>
                   </div>
@@ -272,76 +272,7 @@
                 </div>
                 
                 <div class="mt-3 pt-2.5 border-t border-gray-200">
-                  <p class="text-xs text-gray-500 italic">💡 站内共识：封装防注入不够，需可测的多层防护与真实轨迹评测。</p>
-                </div>
-                
-              </div>
-              
-            </div>
-          </div>
-          
-          
-          <div class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
-            <div class="flex flex-col md:flex-row">
-              
-              <div class="flex-1 p-5 md:border-r border-gray-100">
-                <div class="flex items-center gap-2 mb-2">
-                  <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">风险合规</span>
-                  <span class="text-xs text-gray-400">arXiv cs.AI</span>
-                  
-                  
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">引入技能审计流</span>
-                  
-                </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">SkillSieve框架：检测恶意AI Agent技能</h3>
-                <p class="text-xs text-gray-600 mb-2">arXiv:2604.06550v1提出SkillSieve分层分诊检测恶意技能。</p>
-                
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>Agent技能市场扩大后安全审计成刚需。</p>
-                
-                
-                
-                <div class="bg-blue-50 rounded-lg p-2.5 mb-3">
-                  <span class="text-xs font-semibold text-blue-900">对开发者的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">对接技能/插件生态时可做自动化安全分流，降低供应链风险。</p>
-                </div>
-                
-                
-                <a href="https://arxiv.org/abs/2604.06550" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
-                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
-                
-              </div>
-              
-              
-              <div class="md:w-[340px] bg-gradient-to-br from-slate-50 to-gray-50 p-5">
-                <div class="flex items-center gap-1.5 mb-3">
-                  <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"></path></svg>
-                  <span class="text-xs font-bold text-indigo-700">站内综合反馈</span>
-                </div>
-                <div class="space-y-2.5">
-                  
-                  <div class="text-xs">
-                    
-                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：多篇材料都在把“Agent能力”拆成可复用的技能/步骤，并用分层或任务级评测去定位能力与风险（如Web任务、SWE任务、日常在线任务）。</p>
-                    
-                    
-                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：团队可以从“看总体成功率”转为“按技能/步骤做诊断与回归”，更快定位是哪个技能拖累交付或引入风险，从而更可控地迭代Agent。</p>
-                    
-                    
-                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：不同基准与分层口径不统一时，跨任务/跨框架的对齐与迁移结论仍不稳。</p>
-                    
-                    <div class="flex items-center gap-1 mt-1">
-                      <span class="text-gray-400">—</span>
-                      
-                      <a href="https://arxiv.org/abs/2604.06367" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">WebSP-Eval + ClawBench + ORACLE-SWE（站内同主题汇总）</a>
-                      
-                    </div>
-                  </div>
-                  
-                </div>
-                
-                <div class="mt-3 pt-2.5 border-t border-gray-200">
-                  <p class="text-xs text-gray-500 italic">💡 站内共识：Agent需按技能分层诊断，并把安全隐私设为独立评测门槛。</p>
+                  <p class="text-xs text-gray-500 italic">💡 注入普遍且难比对，防护需可复现评测并权衡效用成本。</p>
                 </div>
                 
               </div>
@@ -359,19 +290,19 @@
                   <span class="text-xs text-gray-400">HuggingFace (Jackrong)</span>
                   
                   
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">拉取跑基准</span>
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">跑基准与对齐测试</span>
                   
                 </div>
                 <h3 class="text-sm font-bold text-gray-900 mb-2">Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled发布</h3>
-                <p class="text-xs text-gray-600 mb-2">发布蒸馏模型，下载567,166、赞2556。</p>
+                <p class="text-xs text-gray-600 mb-2">发布Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled模型。</p>
                 
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>可低成本复用Claude推理风格。</p>
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>推理蒸馏模型或提升性价比与可部署性。</p>
                 
                 
                 
                 <div class="bg-blue-50 rounded-lg p-2.5 mb-3">
                   <span class="text-xs font-semibold text-blue-900">对开发者的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">可用于本地推理与推理链路对齐评测。适合做推理蒸馏对比与微调底座。</p>
+                  <p class="text-xs text-gray-700 mt-0.5">可用于评估蒸馏推理质量与延迟/显存占用。适合做本地或私有化推理对比。</p>
                 </div>
                 
                 
@@ -385,42 +316,24 @@
               <div class="md:w-[340px] bg-gradient-to-br from-slate-50 to-gray-50 p-5">
                 <div class="flex items-center gap-1.5 mb-3">
                   <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"></path></svg>
-                  <span class="text-xs font-bold text-indigo-700">站内综合反馈</span>
+                  <span class="text-xs font-bold text-indigo-700">Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled 外部测评提炼</span>
                 </div>
                 <div class="space-y-2.5">
                   
                   <div class="text-xs">
                     
-                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：站内材料反复指向：模型/代理效果高度依赖“额外信息信号/结构化上下文”（如测试信号、结构化摘要证据、跨输入的响应性），而不仅是更大参数或更长推理链。</p>
+                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：给定外部材料仅为一篇关于SWE代理“oracle信息信号”贡献量化的学术论文摘要，未出现对Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled的上手体验、基准对比或工作流分析。</p>
                     
                     
-                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：团队在落地蒸馏推理模型或SWE/科研类代理时，需要把“可注入的结构化证据与验证信号”（测试、证据字段、输入差异校验）纳入工作流设计，否则同等模型能力下产出波动会更大。</p>
+                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：由于材料未提供对目标模型的第三方实测或使用反馈，无法提炼出对用户/团队工作流的真实改变。</p>
                     
                     
-                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：不同任务可获得的信号类型与成本差异很大，且材料未给出统一的最小信号集与可迁移性结论。</p>
-                    
-                    <div class="flex items-center gap-1 mt-1">
-                      <span class="text-gray-400">—</span>
-                      
-                      <a href="https://arxiv.org/abs/2604.07789" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">ORACLE-SWE + MedConclusion</a>
-                      
-                    </div>
-                  </div>
-                  
-                  <div class="text-xs">
-                    
-                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：多篇材料共同强调：多轮代理训练/使用存在稳定性风险，可能出现“看似稳定但对不同输入不敏感”的推理退化，单靠常见稳定性指标（如熵）不足以发现问题。</p>
-                    
-                    
-                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：在评估与上线推理/代理系统时，应增加“跨输入一致性/敏感性”与任务级回归检查（而非只看单输入指标或平均分），以更早发现推理塌缩与泛化失效。</p>
-                    
-                    
-                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：材料主要讨论现象与指标缺陷，未提供可直接复用的统一检测阈值或一键式修复方案。</p>
+                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：该论文讨论的是SWE代理中“oracle信息信号”的贡献，并未评测或提及该蒸馏模型；无法据此推断其在SWE任务上的实际效果。</p>
                     
                     <div class="flex items-center gap-1 mt-1">
                       <span class="text-gray-400">—</span>
                       
-                      <a href="https://arxiv.org/abs/2604.06268" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">RAGEN-2 + ORACLE-SWE</a>
+                      <a href="https://arxiv.org/abs/2604.07789" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">arXiv（ORACLE-SWE: Quantifying the Contribution of Oracle Information Signals on SWE Agents）</a>
                       
                     </div>
                   </div>
@@ -428,7 +341,76 @@
                 </div>
                 
                 <div class="mt-3 pt-2.5 border-t border-gray-200">
-                  <p class="text-xs text-gray-500 italic">💡 结构化信号与跨输入校验，决定推理代理可用性</p>
+                  <p class="text-xs text-gray-500 italic">💡 现有外部片段未包含对该模型的第三方测评信息</p>
+                </div>
+                
+              </div>
+              
+            </div>
+          </div>
+          
+          
+          <div class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+            <div class="flex flex-col md:flex-row">
+              
+              <div class="flex-1 p-5 md:border-r border-gray-100">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">模型能力</span>
+                  <span class="text-xs text-gray-400">HuggingFace (zai-org)</span>
+                  
+                  
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">对齐与长文评测</span>
+                  
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">zai-org/GLM-5.1文本生成模型发布</h3>
+                <p class="text-xs text-gray-600 mb-2">发布zai-org/GLM-5.1的text-generation模型。</p>
+                
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>新增可选开源底座，影响推理与成本。</p>
+                
+                
+                
+                <div class="bg-blue-50 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-blue-900">对开发者的影响</span>
+                  <p class="text-xs text-gray-700 mt-0.5">可用于替换/补充现有LLM，评估指令跟随与长文本能力。适合做量化、推理框架兼容性验证。</p>
+                </div>
+                
+                
+                <a href="https://huggingface.co/zai-org/GLM-5.1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+              </div>
+              
+              
+              <div class="md:w-[340px] bg-gradient-to-br from-slate-50 to-gray-50 p-5">
+                <div class="flex items-center gap-1.5 mb-3">
+                  <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"></path></svg>
+                  <span class="text-xs font-bold text-indigo-700">zai-org/GLM-5.1文本生成模型发布｜外部测评/上手体验提炼</span>
+                </div>
+                <div class="space-y-2.5">
+                  
+                  <div class="text-xs">
+                    
+                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：该外部材料为SWE代理研究论文摘要，未出现对zai-org/GLM-5.1 text-generation模型的上手体验、基准测试结果或与其他模型的对比观察。</p>
+                    
+                    
+                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：由于缺少对GLM-5.1的实测与工作流案例，用户无法从该材料获得选型、迁移或流程改造的可操作结论。</p>
+                    
+                    
+                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：该论文讨论的是SWE代理中的“oracle信息信号”贡献，并未评测或对比GLM-5.1；无法据此推断GLM-5.1在SWE/文本生成上的实际表现。</p>
+                    
+                    <div class="flex items-center gap-1 mt-1">
+                      <span class="text-gray-400">—</span>
+                      
+                      <a href="https://arxiv.org/abs/2604.07789" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">arXiv（ORACLE-SWE: Quantifying the Contribution of Oracle Information Signals on SWE Agents）</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                
+                <div class="mt-3 pt-2.5 border-t border-gray-200">
+                  <p class="text-xs text-gray-500 italic">💡 现有外部片段未提供GLM-5.1的第三方实测结论</p>
                 </div>
                 
               </div>
@@ -455,22 +437,22 @@
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">适合做图文理解/问答与多模态RAG。可对比现有31B级模型的推理与成本。</span>
+            <span class="text-gray-700">可直接用于image-text-to-text任务与多模态Agent/RAG。适合做推理吞吐、量化与部署评估。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">仅靠输入预处理“防御wrapper”不可完备；需结合沙箱、最小权限与监控。</span>
+            <span class="text-gray-700">直接否定“输入预处理wrapper即可防注入”的安全方案。需转向权限隔离、工具最小化与监控审计。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">对接技能/插件生态时可做自动化安全分流，降低供应链风险。</span>
+            <span class="text-gray-700">可用于评估蒸馏推理质量与延迟/显存占用。适合做本地或私有化推理对比。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">可用于本地推理与推理链路对齐评测。适合做推理蒸馏对比与微调底座。</span>
+            <span class="text-gray-700">可用于替换/补充现有LLM，评估指令跟随与长文本能力。适合做量化、推理框架兼容性验证。</span>
           </li>
           
         </ul>
@@ -487,9 +469,9 @@
           <h3 class="text-base font-bold text-gray-900">今天值得试的工具</h3>
         </div>
         <h4 class="text-lg font-bold text-gray-900 mb-1">Scion（实验性）</h4>
-        <p class="text-sm text-gray-700 mb-3">谷歌开源多智能体编排测试平台</p>
+        <p class="text-sm text-gray-700 mb-3">谷歌开源多智能体编排与测试平台</p>
         <div class="flex flex-wrap gap-4 text-xs mb-3">
-          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">评测与回归测试多Agent编排流程</span></div>
+          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">多Agent工作流编排、评测与回归测试</span></div>
           <div><span class="font-semibold text-red-700">不适合</span><span class="text-gray-600 ml-1">生产级稳定性要求高</span></div>
         </div>
         
@@ -510,9 +492,9 @@
           <div class="flex-1">
             <h3 class="text-sm font-bold text-red-900 mb-2">风险提醒</h3>
             <div class="space-y-2 text-sm">
-              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">以为“提示注入防御封装”（如连续封装/多层 wrapper）叠加后就能对提示注入实现全安全，从而把安全边界外包给框架或中间件。</span></div>
-              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">arXiv:2604.06436v2（Defense Trilemma）指出连续封装类防御无法做到全安全：在现实约束下总会存在可绕过或失效的情形。开发者需要把提示注入视为“可降低但不可消除”的风险，并在系统层面设计可承受失败的机制。</span></div>
-              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">将防注入从“提示层技巧”升级为“端到端安全工程”：最小权限工具调用、强隔离的系统/数据边界、可审计策略与回退/熔断，并对关键链路做红队与自动化对抗测试。</span></div>
+              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">看到“Defense Trilemma：提示注入防护封装必败证明”和“Claude疑似角色混淆Bug”就误以为只要加一层提示注入防护 wrapper/系统提示就能把 Agent/工具调用做成“完全安全”。</span></div>
+              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">该结论指向的是：在“连续且保效用”的防护封装设定下，无法同时保证对提示注入的全安全，因此单靠提示过滤、系统提示加固或外层 wrapper 不能作为安全性的充分条件。开发者需要把安全边界放在权限、数据流与工具调用层面（最小权限、隔离、可审计、可回滚），并接受“有残余风险”的现实。</span></div>
+              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">将提示注入视为必然存在的威胁：对工具/数据访问做最小权限与隔离（allowlist、沙箱、分级密钥、出站网络限制），并加入可观测与红队测试，而不是仅依赖提示层防护。</span></div>
             </div>
           </div>
         </div>
@@ -529,16 +511,16 @@
           <h3 class="text-base font-bold text-gray-900">今天该做什么</h3>
         </div>
         <div class="bg-white/60 rounded-lg p-4">
-          <p class="text-sm text-gray-700 font-medium">审计并加固提示注入防线</p>
+          <p class="text-sm text-gray-700 font-medium">下载权重并评测</p>
           
           <ul class="mt-2 space-y-1">
             
             <li class="text-xs text-gray-500 flex items-start gap-1.5">
-              <span class="text-blue-500 mt-0.5">→</span>适合做图文理解/问答与多模态RAG。可对比现有31B级模型的推理与成本。
+              <span class="text-blue-500 mt-0.5">→</span>可直接用于image-text-to-text任务与多模态Agent/RAG。适合做推理吞吐、量化与部署评估。
             </li>
             
             <li class="text-xs text-gray-500 flex items-start gap-1.5">
-              <span class="text-blue-500 mt-0.5">→</span>仅靠输入预处理“防御wrapper”不可完备；需结合沙箱、最小权限与监控。
+              <span class="text-blue-500 mt-0.5">→</span>直接否定“输入预处理wrapper即可防注入”的安全方案。需转向权限隔离、工具最小化与监控审计。
             </li>
             
           </ul>
@@ -556,9 +538,9 @@
       
       
       
-      <div class="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-xl  mb-6">
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-xl overflow-hidden mb-6">
         <div class="flex flex-col md:flex-row">
-          <div class="flex-1 p-6 ">
+          <div class="flex-1 p-6 md:border-r border-amber-200">
             <div class="flex items-start gap-3 mb-4">
               <div class="p-2 bg-amber-500 rounded-lg flex-shrink-0">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
@@ -568,16 +550,16 @@
                   <h2 class="text-sm font-bold text-amber-900 uppercase tracking-wide">今日最重要</h2>
                   <span class="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full font-medium">产品经理视角</span>
                 </div>
-                <h3 class="text-xl font-bold text-gray-900">Meta Muse Spark索要原始健康数据</h3>
+                <h3 class="text-xl font-bold text-gray-900">OpenAI支持AI致死责任法案</h3>
               </div>
             </div>
 
             <div class="space-y-2 text-sm mb-4">
               
-              <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — Meta的Muse Spark请求化验单等健康数据并给出糟糕建议。</p>
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — OpenAI表态支持限制AI致大规模死亡的法律责任。</p>
               
               
-              <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 健康类AI产品易触发隐私与安全合规风险。</p>
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — AI高风险产品合规与责任边界将被立法明确。</p>
               
             </div>
 
@@ -586,24 +568,57 @@
               <div class="flex items-center gap-2 mb-1.5">
                 <span class="text-xs font-semibold text-purple-900">对产品经理的影响</span>
               </div>
-              <p class="text-sm text-gray-700">PM需重新评估健康数据采集最小化与用途边界。必须加入风险提示、人工复核与拒答策略以降低伤害。</p>
+              <p class="text-sm text-gray-700">产品从“能力优先”转向“风险可证据化”交付。需建立高风险场景识别、红队评估、审计留痕与事故响应机制。</p>
             </div>
             
 
             
             <div class="flex items-center gap-2 bg-green-600 text-white rounded-lg px-4 py-2.5">
               <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              <span class="text-sm font-medium">建议动作：立刻做隐私与安全审计</span>
+              <span class="text-sm font-medium">建议动作：启动合规与责任评估</span>
             </div>
             
 
             
-            <a href="https://arxiv.org/abs/2604.06188" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-900 mt-3">
+            <a href="https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-900 mt-3">
               查看原文 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
             </a>
             
           </div>
 
+          
+          <div class="md:w-[340px] bg-gradient-to-br from-slate-50 to-gray-50 p-5">
+            <div class="flex items-center gap-1.5 mb-3">
+              <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"></path></svg>
+              <span class="text-xs font-bold text-indigo-700">OpenAI支持限制AI致大规模死亡责任法案</span>
+            </div>
+            <div class="space-y-2.5">
+              
+              <div class="text-xs">
+                
+                <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：给定外部材料仅为arXiv论文条目聚合摘要（与“OpenAI支持限制AI致大规模死亡责任法案”无直接关联），未包含任何第三方对该法案的测评、上手体验或对用户影响的实证观察。</p>
+                
+                
+                <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：无法从该材料推导出对用户/团队/工作流的真实改变。</p>
+                
+                
+                <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：该材料为站内/论文聚合摘要，未涉及法案本身的执行细则、合规成本或对产品/工作流的具体影响。</p>
+                
+                <div class="flex items-center gap-1 mt-1">
+                  <span class="text-gray-400">—</span>
+                  
+                  <a href="https://arxiv.org/abs/2504.10284" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">arXiv（站内同主题汇总条目）</a>
+                  
+                </div>
+              </div>
+              
+            </div>
+            
+            <div class="mt-3 pt-2.5 border-t border-gray-200">
+                  <p class="text-xs text-gray-500 italic">💡 现有片段不含与新闻直接相关的外部测评</p>
+            </div>
+            
+          </div>
           
         </div>
       </div>
@@ -619,75 +634,6 @@
         <div class="space-y-4">
           
           
-          <div class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
-            <div class="flex flex-col md:flex-row">
-              
-              <div class="flex-1 p-5 md:border-r border-gray-100">
-                <div class="flex items-center gap-2 mb-2">
-                  <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">风险合规</span>
-                  <span class="text-xs text-gray-400">arXiv cs.AI</span>
-                  
-                  
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">建立上架规则</span>
-                  
-                </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">SkillSieve框架：检测恶意AI Agent技能</h3>
-                <p class="text-xs text-gray-600 mb-2">arXiv:2604.06550v1提出SkillSieve分层分诊检测恶意技能。</p>
-                
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>Agent技能市场扩大后安全审计成刚需。</p>
-                
-                
-                
-                <div class="bg-purple-50 rounded-lg p-2.5 mb-3">
-                  <span class="text-xs font-semibold text-purple-900">对产品经理的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">可作为平台治理与上架审核机制，减少安全事故与责任风险。</p>
-                </div>
-                
-                
-                <a href="https://arxiv.org/abs/2604.06550" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
-                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
-                
-              </div>
-              
-              
-              <div class="md:w-[340px] bg-gradient-to-br from-slate-50 to-gray-50 p-5">
-                <div class="flex items-center gap-1.5 mb-3">
-                  <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"></path></svg>
-                  <span class="text-xs font-bold text-indigo-700">站内综合反馈</span>
-                </div>
-                <div class="space-y-2.5">
-                  
-                  <div class="text-xs">
-                    
-                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：多篇材料都在把“Agent能力”拆成可复用的技能/步骤，并用分层或任务级评测去定位能力与风险（如Web任务、SWE任务、日常在线任务）。</p>
-                    
-                    
-                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：团队可以从“看总体成功率”转为“按技能/步骤做诊断与回归”，更快定位是哪个技能拖累交付或引入风险，从而更可控地迭代Agent。</p>
-                    
-                    
-                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：不同基准与分层口径不统一时，跨任务/跨框架的对齐与迁移结论仍不稳。</p>
-                    
-                    <div class="flex items-center gap-1 mt-1">
-                      <span class="text-gray-400">—</span>
-                      
-                      <a href="https://arxiv.org/abs/2604.06367" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">WebSP-Eval + ClawBench + ORACLE-SWE（站内同主题汇总）</a>
-                      
-                    </div>
-                  </div>
-                  
-                </div>
-                
-                <div class="mt-3 pt-2.5 border-t border-gray-200">
-                  <p class="text-xs text-gray-500 italic">💡 站内共识：Agent需按技能分层诊断，并把安全隐私设为独立评测门槛。</p>
-                </div>
-                
-              </div>
-              
-            </div>
-          </div>
-          
-          
           <div class="bg-white border border-gray-200 rounded-xl  hover:shadow-md transition-shadow">
             <div class="flex flex-col md:flex-row">
               
@@ -697,19 +643,19 @@
                   <span class="text-xs text-gray-400">Wired AI</span>
                   
                   
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">设定合规边界</span>
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">审视合规与定位</span>
                   
                 </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">Meta Muse Spark健康分析索要原始数据</h3>
-                <p class="text-xs text-gray-600 mb-2">Meta的Muse Spark请求化验单等健康数据并给出糟糕建议。</p>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">Meta Muse Spark索要健康数据并误导建议</h3>
+                <p class="text-xs text-gray-600 mb-2">Meta Muse Spark分析化验单等健康数据但建议糟糕。</p>
                 
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>暴露健康AI的隐私与医疗合规高风险。</p>
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>医疗AI涉及隐私与误导风险，需强合规。</p>
                 
                 
                 
                 <div class="bg-purple-50 rounded-lg p-2.5 mb-3">
                   <span class="text-xs font-semibold text-purple-900">对产品经理的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">医疗健康功能需明确免责声明与合规边界。</p>
+                  <p class="text-xs text-gray-700 mt-0.5">健康产品需明确非诊断定位与隐私合规方案。</p>
                 </div>
                 
                 
@@ -733,23 +679,59 @@
                   <span class="text-xs text-gray-400">arXiv cs.AI</span>
                   
                   
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">更新安全策略</span>
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">重审聊天交互策略</span>
                   
                 </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">人类实测评估LLM生成虚假信息风险</h3>
-                <p class="text-xs text-gray-600 mb-2">提出基于人类接受度的LLM虚假信息风险评估。</p>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">LLM Spirals of Delusion聊天界面审计基准研究</h3>
+                <p class="text-xs text-gray-600 mb-2">提出审计基准评测聊天界面诱发妄想螺旋风险。</p>
                 
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>更贴近真实传播效果，指导安全治理。</p>
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>界面设计会放大安全风险与合规压力。</p>
                 
                 
                 
                 <div class="bg-purple-50 rounded-lg p-2.5 mb-3">
                   <span class="text-xs font-semibold text-purple-900">对产品经理的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">可直接用于制定内容安全策略、审核阈值与合规证明材料。</p>
+                  <p class="text-xs text-gray-700 mt-0.5">影响聊天产品的安全策略、提示与交互流程设计。可降低舆情与监管风险。</p>
                 </div>
                 
                 
-                <a href="https://arxiv.org/abs/2604.06820" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                <a href="https://arxiv.org/abs/2604.06188" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+              </div>
+              
+              
+            </div>
+          </div>
+          
+          
+          <div class="bg-white border border-gray-200 rounded-xl  hover:shadow-md transition-shadow">
+            <div class="flex flex-col md:flex-row">
+              
+              <div class="flex-1 p-5 ">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">风险合规</span>
+                  <span class="text-xs text-gray-400">arXiv cs.AI</span>
+                  
+                  
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">完善同意与告知流程</span>
+                  
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">传感器融合健康对话Agent前端伦理设计空间研究</h3>
+                <p class="text-xs text-gray-600 mb-2">提出传感器融合健康对话Agent的前端伦理设计框架。</p>
+                
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>涉及生物特征数据，直接影响合规与信任。</p>
+                
+                
+                
+                <div class="bg-purple-50 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-purple-900">对产品经理的影响</span>
+                  <p class="text-xs text-gray-700 mt-0.5">健康类产品需据此设计同意流程、告知与风险提示。影响上线合规、责任边界与留存。</p>
+                </div>
+                
+                
+                <a href="https://arxiv.org/abs/2604.06203" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
                   查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
                 
@@ -778,22 +760,22 @@
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">需更新安全政策、红队测试与高风险人群保护机制。</span>
+            <span class="text-gray-700">影响合规策略、条款设计与高风险功能上线节奏。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">可作为平台治理与上架审核机制，减少安全事故与责任风险。</span>
+            <span class="text-gray-700">健康产品需明确非诊断定位与隐私合规方案。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">医疗健康功能需明确免责声明与合规边界。</span>
+            <span class="text-gray-700">影响聊天产品的安全策略、提示与交互流程设计。可降低舆情与监管风险。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">可直接用于制定内容安全策略、审核阈值与合规证明材料。</span>
+            <span class="text-gray-700">健康类产品需据此设计同意流程、告知与风险提示。影响上线合规、责任边界与留存。</span>
           </li>
           
         </ul>
@@ -809,14 +791,14 @@
           </div>
           <h3 class="text-base font-bold text-gray-900">今天值得试的工具</h3>
         </div>
-        <h4 class="text-lg font-bold text-gray-900 mb-1">baidu/Qianfan-OCR</h4>
-        <p class="text-sm text-gray-700 mb-3">开源图文OCR模型，快速提取图片文字</p>
+        <h4 class="text-lg font-bold text-gray-900 mb-1">google/gemma-4-31B-it</h4>
+        <p class="text-sm text-gray-700 mb-3">开源31B多模态指令模型，可本地部署</p>
         <div class="flex flex-wrap gap-4 text-xs mb-3">
-          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">竞品截图/用户反馈图片转文本做分析</span></div>
-          <div><span class="font-semibold text-red-700">不适合</span><span class="text-gray-600 ml-1">强隐私医疗数据处理</span></div>
+          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">原型验证、私有化对话/多模态功能评估</span></div>
+          <div><span class="font-semibold text-red-700">不适合</span><span class="text-gray-600 ml-1">医疗健康建议产品</span></div>
         </div>
         
-        <a href="https://huggingface.co/baidu/Qianfan-OCR" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-800">
+        <a href="https://huggingface.co/google/gemma-4-31B-it" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-800">
           立即体验 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
         </a>
         
@@ -833,9 +815,9 @@
           <div class="flex-1">
             <h3 class="text-sm font-bold text-red-900 mb-2">风险提醒</h3>
             <div class="space-y-2 text-sm">
-              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">以为通过“连续封装/多层提示”就能彻底防住提示注入，从而放心把高权限工具调用交给 LLM Agent。</span></div>
-              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">arXiv:2604.06436v2（Defense Trilemma）指出连续封装类提示注入防御无法实现全安全，攻击者仍可能在真实多轮交互中绕过；再叠加 Claude 被曝“角色混淆”bug，说明仅靠提示层面的角色/边界约束并不可靠。</span></div>
-              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">对所有高风险工具调用做强制的权限最小化、参数白名单/结构化校验与人类审批（或可回滚的沙箱执行），不要把安全性押注在提示封装上。 </span></div>
+              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">以为给 LLM/Agent 加一层“提示注入防护封装”就能在不明显牺牲体验的情况下彻底解决注入与越权风险。</span></div>
+              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">arXiv cs.AI 的 Defense Trilemma 证明：对“连续且保效用”的防护封装，无法同时做到全安全，意味着只靠提示/封装层做通用防注入在理论上就存在必败边界。结合 Claude 疑似角色混淆 Bug 与 SkillTrojan 等工作，现实中还会出现角色边界被绕过、工具/技能被后门化等链路级风险。</span></div>
+              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">把安全设计从“提示层”前移到“系统与权限层”：最小权限工具调用、强隔离的系统/用户指令边界、可审计的策略与日志、以及对技能/工具供应链做签名与回归测试。</span></div>
             </div>
           </div>
         </div>
@@ -852,16 +834,16 @@
           <h3 class="text-base font-bold text-gray-900">今天该做什么</h3>
         </div>
         <div class="bg-white/60 rounded-lg p-4">
-          <p class="text-sm text-gray-700 font-medium">立刻做隐私与安全审计</p>
+          <p class="text-sm text-gray-700 font-medium">启动合规与责任评估</p>
           
           <ul class="mt-2 space-y-1">
             
             <li class="text-xs text-gray-500 flex items-start gap-1.5">
-              <span class="text-purple-500 mt-0.5">→</span>需更新安全政策、红队测试与高风险人群保护机制。
+              <span class="text-purple-500 mt-0.5">→</span>影响合规策略、条款设计与高风险功能上线节奏。
             </li>
             
             <li class="text-xs text-gray-500 flex items-start gap-1.5">
-              <span class="text-purple-500 mt-0.5">→</span>可作为平台治理与上架审核机制，减少安全事故与责任风险。
+              <span class="text-purple-500 mt-0.5">→</span>健康产品需明确非诊断定位与隐私合规方案。
             </li>
             
           </ul>
@@ -879,9 +861,9 @@
       
       
       
-      <div class="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-xl  mb-6">
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-xl overflow-hidden mb-6">
         <div class="flex flex-col md:flex-row">
-          <div class="flex-1 p-6 ">
+          <div class="flex-1 p-6 md:border-r border-amber-200">
             <div class="flex items-start gap-3 mb-4">
               <div class="p-2 bg-amber-500 rounded-lg flex-shrink-0">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
@@ -897,10 +879,10 @@
 
             <div class="space-y-2 text-sm mb-4">
               
-              <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — 阿里视频生成大模型Wan2.7以1334Elo登顶DesignArena。</p>
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — 阿里视频生成大模型Wan2.7以1334Elo登顶DesignArena榜单。</p>
               
               
-              <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 更强视频生成能力提升分镜与动效产出。</p>
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 榜单领先意味着更稳的画面与风格可控性。</p>
               
             </div>
 
@@ -909,24 +891,57 @@
               <div class="flex items-center gap-2 mb-1.5">
                 <span class="text-xs font-semibold text-pink-900">对美术的影响</span>
               </div>
-              <p class="text-sm text-gray-700">美术可用Wan2.7更快做概念动效、镜头预演与风格探索。也会抬高视频生成质量基线，促使流程向AI预可视化迁移。</p>
+              <p class="text-sm text-gray-700">美术可用更高质量的视频生成做分镜、动效与风格探索。也更适合在同一项目中保持角色与镜头一致性。</p>
             </div>
             
 
             
             <div class="flex items-center gap-2 bg-green-600 text-white rounded-lg px-4 py-2.5">
               <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              <span class="text-sm font-medium">建议动作：立刻做风格测试集</span>
+              <span class="text-sm font-medium">建议动作：立刻做风格测试</span>
             </div>
             
 
             
-            <a href="https://www.qbitai.com/2026/04/399370.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-900 mt-3">
+            <a href="https://www.producthunt.com/products/motn-ai" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-900 mt-3">
               查看原文 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
             </a>
             
           </div>
 
+          
+          <div class="md:w-[340px] bg-gradient-to-br from-slate-50 to-gray-50 p-5">
+            <div class="flex items-center gap-1.5 mb-3">
+              <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"></path></svg>
+              <span class="text-xs font-bold text-indigo-700">Motn AI：一画布vibe-code动效图形工具</span>
+            </div>
+            <div class="space-y-2.5">
+              
+              <div class="text-xs">
+                
+                <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：给定外部片段为arXiv论文A-MBER，讨论AI助手的情绪识别与长期记忆评测基准，并未涉及Motn AI或motion graphics单画布vibe-code工作流。</p>
+                
+                
+                <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：未提供任何关于Motn AI的实际使用观察，因此无法提炼对用户/团队工作流的真实改变。</p>
+                
+                
+                <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：该材料与Motn AI动效图形工具无直接关联，无法据此推断其上手体验或工作流影响。</p>
+                
+                <div class="flex items-center gap-1 mt-1">
+                  <span class="text-gray-400">—</span>
+                  
+                  <a href="https://arxiv.org/abs/2604.07017" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">arXiv（A-MBER: 2604.07017v1）</a>
+                  
+                </div>
+              </div>
+              
+            </div>
+            
+            <div class="mt-3 pt-2.5 border-t border-gray-200">
+                  <p class="text-xs text-gray-500 italic">💡 现有外部材料与Motn AI无关，无法形成有效测评结论。</p>
+            </div>
+            
+          </div>
           
         </div>
       </div>
@@ -948,26 +963,26 @@
               <div class="flex-1 p-5 md:border-r border-gray-100">
                 <div class="flex items-center gap-2 mb-2">
                   <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">视觉生成</span>
-                  <span class="text-xs text-gray-400">HuggingFace (netflix)</span>
+                  <span class="text-xs text-gray-400">知乎·机器之心</span>
                   
                   
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">试做风格化流程</span>
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">用作分镜预演</span>
                   
                 </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">netflix/void-model开源video-to-video模型</h3>
-                <p class="text-xs text-gray-600 mb-2">发布netflix/void-model，任务video-to-video，赞727。</p>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">CVPR 2026多镜头视频生成：一分钟十镜头</h3>
+                <p class="text-xs text-gray-600 mb-2">论文展示一分钟十镜头多镜头视频生成且剧情稳定。</p>
                 
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>可用于视频风格迁移/编辑类工作流探索。</p>
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>推进叙事级视频生成，提升可用性。</p>
                 
                 
                 
                 <div class="bg-pink-50 rounded-lg p-2.5 mb-3">
                   <span class="text-xs font-semibold text-pink-900">对美术的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">可用于视频风格化与镜头一致性探索，提升后期效率。</p>
+                  <p class="text-xs text-gray-700 mt-0.5">多镜头不崩剧情，显著改变分镜与预演工作流。</p>
                 </div>
                 
                 
-                <a href="https://huggingface.co/netflix/void-model" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                <a href="https://zhuanlan.zhihu.com/p/2025904106309436294" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
                   查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 </a>
                 
@@ -977,42 +992,42 @@
               <div class="md:w-[340px] bg-gradient-to-br from-slate-50 to-gray-50 p-5">
                 <div class="flex items-center gap-1.5 mb-3">
                   <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"></path></svg>
-                  <span class="text-xs font-bold text-indigo-700">站内综合反馈</span>
+                  <span class="text-xs font-bold text-indigo-700">CVPR 2026多镜头视频生成：一分钟十镜头</span>
                 </div>
                 <div class="space-y-2.5">
                   
                   <div class="text-xs">
                     
-                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：多篇材料都在强调“推理/结论质量”是核心指标，但现有训练或评估信号（如熵、各类测试/上下文信号）可能无法真实反映模型是否对不同输入做出有效响应，存在推理不稳定或失真风险。</p>
+                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：评测文章观察到：AI自动生成分镜对新手“0门槛”，且生成画面中人物面部细节较好、整体画质在对比测评中表现不错。</p>
                     
                     
-                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：团队在引入新模型/新任务（含video-to-video这类生成任务）时，需要把评估从单一分数/单一信号升级为“多输入一致性+任务相关验证信号”的组合，否则上线后容易出现看似稳定但实际不可靠的输出。</p>
+                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：对个人创作者/小团队而言，可把“分镜设计+部分画面质量把关”从专业环节下放为快速试错流程，减少前期分镜与素材准备时间。</p>
                     
                     
-                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：材料主要来自SWE代理与生物医学结论生成等场景，如何直接迁移到video-to-video的质量度量与失效模式仍需额外验证。</p>
+                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：该片段未提供对“分钟级十镜头、剧情稳定”的长时序一致性验证，也未说明失败案例与可控性成本。</p>
                     
                     <div class="flex items-center gap-1 mt-1">
                       <span class="text-gray-400">—</span>
                       
-                      <a href="https://arxiv.org/abs/2604.06268" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">RAGEN-2 / ORACLE-SWE / MedConclusion</a>
+                      <a href="https://www.53ai.com/news/neirongchuangzuo/2024081898530.html" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">53AI（内容创作测评文章）</a>
                       
                     </div>
                   </div>
                   
                   <div class="text-xs">
                     
-                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：站内材料反复出现“需要结构化数据/结构化信号来支撑可评估的推理与结论生成”，包括用大规模结构化摘要构建基准、以及用可分解的信息信号量化对代理表现的贡献。</p>
+                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：第三方对比分析指出：Seedance 2.0 以“多镜头叙事能力”作为差异点保持竞争力，而Happy Horse 1.0在文本/图生视频Elo排名更靠前。</p>
                     
                     
-                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：用户在落地模型时更可行的路径是先把业务输入/输出与验证信号结构化（例如结论字段、测试信号、可复现检查点），再做训练/微调/评测，能显著降低‘生成看起来对但无法验证’的返工成本。</p>
+                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：对需要多镜头叙事的团队，选型会从单镜头画质/胜率转向“跨镜头叙事能力”优先，可能牺牲部分通用基准排名来换取分镜连贯性。</p>
                     
                     
-                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：结构化改造会引入数据标注/管线改造成本，且不同任务可获得的“可验证信号”强弱不一。</p>
+                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：该对比为站点分析口径，未给出可复现的多镜头一致性指标/样例细节；且并非直接针对CVPR论文方案。</p>
                     
                     <div class="flex items-center gap-1 mt-1">
                       <span class="text-gray-400">—</span>
                       
-                      <a href="https://arxiv.org/abs/2604.06505" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">MedConclusion / ORACLE-SWE</a>
+                      <a href="https://seedance20.co/zh/seedance-vs-happy-horse" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">Seedance20.co（第三方对比分析页）</a>
                       
                     </div>
                   </div>
@@ -1020,7 +1035,7 @@
                 </div>
                 
                 <div class="mt-3 pt-2.5 border-t border-gray-200">
-                  <p class="text-xs text-gray-500 italic">💡 共同信号：推理评估需多信号与结构化验证</p>
+                  <p class="text-xs text-gray-500 italic">💡 外部观点更认可“易上手+多镜头叙事”，但缺少分钟级稳定性实测。</p>
                 </div>
                 
               </div>
@@ -1038,88 +1053,19 @@
                   <span class="text-xs text-gray-400">知乎·机器之心</span>
                   
                   
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">试用出片评估</span>
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">建立提示词模板库</span>
                   
                 </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">阿里HappyHorse-1.0登顶Artificial Analysis榜</h3>
-                <p class="text-xs text-gray-600 mb-2">HappyHorse-1.0视频生成登顶并超Seedance 2.0。</p>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">TDM-R1四步采样GenEval 92%超GPT-4o</h3>
+                <p class="text-xs text-gray-600 mb-2">TDM-R1仅4步采样将GenEval从61%提升到92%。</p>
                 
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>头部视频模型格局与选型将被改写。</p>
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>超快生图兼顾指令遵循与成本优势。</p>
                 
                 
                 
                 <div class="bg-pink-50 rounded-lg p-2.5 mb-3">
                   <span class="text-xs font-semibold text-pink-900">对美术的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">新SOTA视频生成可提升镜头质量与一致性。</p>
-                </div>
-                
-                
-                <a href="https://zhuanlan.zhihu.com/p/2025939930514235964" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
-                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                </a>
-                
-              </div>
-              
-              
-              <div class="md:w-[340px] bg-gradient-to-br from-slate-50 to-gray-50 p-5">
-                <div class="flex items-center gap-1.5 mb-3">
-                  <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"></path></svg>
-                  <span class="text-xs font-bold text-indigo-700">外部测评 / 使用反馈</span>
-                </div>
-                <div class="space-y-2.5">
-                  
-                  <div class="text-xs">
-                    
-                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：外部评测文章指出，HappyHorse-1.0在Artificial Analysis Video Arena的排名来自“盲测A/B对比”：真实用户并排观看两段生成视频、在不知道模型来源的情况下投票，HappyHorse在这种偏好投票机制下拿到#1。</p>
-                    
-                    
-                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：对选型团队而言，这意味着它的领先不是单一指标自报分，而是在“人眼主观偏好”场景下更容易赢过对手，可直接用于以观感为核心的内容生产/投放模型筛选。</p>
-                    
-                    
-                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：该结论反映的是特定测试集与投票人群的主观偏好结果，未覆盖成本、时延、可控性、长视频一致性等生产级约束。</p>
-                    
-                    <div class="flex items-center gap-1 mt-1">
-                      <span class="text-gray-400">—</span>
-                      
-                      <a href="https://aiimagetovideo.pro/blog/happyhorse/" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">aiimagetovideo.pro（HappyHorse1.0Review）</a>
-                      
-                    </div>
-                  </div>
-                  
-                </div>
-                
-                <div class="mt-3 pt-2.5 border-t border-gray-200">
-                  <p class="text-xs text-gray-500 italic">💡 现有第三方信息仅能确认其在盲测人类偏好榜单上占优。</p>
-                </div>
-                
-              </div>
-              
-            </div>
-          </div>
-          
-          
-          <div class="bg-white border border-gray-200 rounded-xl  hover:shadow-md transition-shadow">
-            <div class="flex flex-col md:flex-row">
-              
-              <div class="flex-1 p-5 ">
-                <div class="flex items-center gap-2 mb-2">
-                  <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">模型能力</span>
-                  <span class="text-xs text-gray-400">知乎·机器之心</span>
-                  
-                  
-                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">对比指令跟随</span>
-                  
-                </div>
-                <h3 class="text-sm font-bold text-gray-900 mb-2">TDM-R1四步采样GenEval从61%升至92%</h3>
-                <p class="text-xs text-gray-600 mb-2">TDM-R1用4 NFE将GenEval从61%提升到92%。</p>
-                
-                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>显著降低生图延迟与成本并提升可控性。</p>
-                
-                
-                
-                <div class="bg-pink-50 rounded-lg p-2.5 mb-3">
-                  <span class="text-xs font-semibold text-pink-900">对美术的影响</span>
-                  <p class="text-xs text-gray-700 mt-0.5">更快出图且更贴合指令，提升迭代效率。</p>
+                  <p class="text-xs text-gray-700 mt-0.5">更快且更听指令，适合高频迭代与批量出图。</p>
                 </div>
                 
                 
@@ -1129,6 +1075,108 @@
                 
               </div>
               
+              
+              <div class="md:w-[340px] bg-gradient-to-br from-slate-50 to-gray-50 p-5">
+                <div class="flex items-center gap-1.5 mb-3">
+                  <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"></path></svg>
+                  <span class="text-xs font-bold text-indigo-700">TDM-R1四步采样GenEval 92%超GPT-4o｜外部测评/上手体验提炼</span>
+                </div>
+                <div class="space-y-2.5">
+                  
+                  <div class="text-xs">
+                    
+                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：机器之心在知乎专栏解读中指出：TDM-R1在仅4步采样（4 NFE）下，将组合式生成指标GenEval从61%提升到92%，并对比称其高于80步基础模型的63%与GPT-4o的84%。</p>
+                    
+                    
+                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：如果该对比成立，用户在“极少采样步数”的超快生图场景下可同时获得更高的指令遵循/组合生成准确率与更低推理成本，从而把高质量生图从“慢且贵”变为“快且可规模化”。</p>
+                    
+                    
+                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：该片段未提供复现实验细节、失败案例或适用/不适用场景，无法判断在非GenEval任务、不同提示词分布或真实生产工作流中的稳定性与代价。</p>
+                    
+                    <div class="flex items-center gap-1 mt-1">
+                      <span class="text-gray-400">—</span>
+                      
+                      <a href="https://zhuanlan.zhihu.com/p/2025878588574934567" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">知乎·机器之心（专栏解读）</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                
+                <div class="mt-3 pt-2.5 border-t border-gray-200">
+                  <p class="text-xs text-gray-500 italic">💡 现有外部材料仅有单篇解读复述指标，缺少独立上手验证。</p>
+                </div>
+                
+              </div>
+              
+            </div>
+          </div>
+          
+          
+          <div class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+            <div class="flex flex-col md:flex-row">
+              
+              <div class="flex-1 p-5 md:border-r border-gray-100">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">视觉生成</span>
+                  <span class="text-xs text-gray-400">量子位</span>
+                  
+                  
+                  <span class="text-xs bg-green-50 text-green-700 border border-green-200 rounded px-2 py-0.5 font-medium whitespace-nowrap ml-auto">试用做分镜</span>
+                  
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">阿里Wan2.7登顶DesignArena榜单1334Elo</h3>
+                <p class="text-xs text-gray-600 mb-2">阿里视频生成大模型Wan2.7以1334Elo居首。</p>
+                
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>视频生成能力排名提升，影响选型与对标。</p>
+                
+                
+                
+                <div class="bg-pink-50 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-pink-900">对美术的影响</span>
+                  <p class="text-xs text-gray-700 mt-0.5">可用于分镜/动效草案与风格探索提效。</p>
+                </div>
+                
+                
+                <a href="https://www.qbitai.com/2026/04/399370.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+              </div>
+              
+              
+              <div class="md:w-[340px] bg-gradient-to-br from-slate-50 to-gray-50 p-5">
+                <div class="flex items-center gap-1.5 mb-3">
+                  <svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z"></path></svg>
+                  <span class="text-xs font-bold text-indigo-700">阿里Wan2.7登顶DesignArena榜单1334Elo</span>
+                </div>
+                <div class="space-y-2.5">
+                  
+                  <div class="text-xs">
+                    
+                    <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：第三方对DesignArena的描述显示：其排名来自同一创意提示下的模型结果并排展示、由用户进行头对头投票，再用Bradley‑Terry模型计算胜率与Elo分数以形成“统计上更稳健”的榜单。</p>
+                    
+                    
+                    <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：对用户而言，1334 Elo更像是“在众包偏好投票下的相对胜率指标”，可用于快速筛选/对比候选模型，但不能直接等同于自己业务场景的产出效果。</p>
+                    
+                    
+                    <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：该信息仅说明榜单采用Elo/Bradley‑Terry与众包对比投票机制，无法替代对Wan2.7在具体视频生成任务中的质量、成本、稳定性等上手评测；也不直接覆盖企业工作流集成、版权/合规等维度。</p>
+                    
+                    <div class="flex items-center gap-1 mt-1">
+                      <span class="text-gray-400">—</span>
+                      
+                      <a href="https://www.everydev.ai/tools/design-arena" target="_blank" rel="noopener noreferrer" class="text-indigo-500 hover:text-indigo-700 font-medium">EveryDev.ai（DesignArena工具页）</a>
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                
+                <div class="mt-3 pt-2.5 border-t border-gray-200">
+                  <p class="text-xs text-gray-500 italic">💡 现有外部材料只解释榜单机制，缺少Wan2.7上手与工作流影响证据。</p>
+                </div>
+                
+              </div>
               
             </div>
           </div>
@@ -1152,22 +1200,22 @@
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">可显著提升分镜、动效与短视频产出效率。</span>
+            <span class="text-gray-700">可快速生成动效草案与迭代，降低AE门槛。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">可用于视频风格化与镜头一致性探索，提升后期效率。</span>
+            <span class="text-gray-700">多镜头不崩剧情，显著改变分镜与预演工作流。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">新SOTA视频生成可提升镜头质量与一致性。</span>
+            <span class="text-gray-700">更快且更听指令，适合高频迭代与批量出图。</span>
           </li>
           
           <li class="flex items-start gap-2 text-sm">
             <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
-            <span class="text-gray-700">更快出图且更贴合指令，提升迭代效率。</span>
+            <span class="text-gray-700">可用于分镜/动效草案与风格探索提效。</span>
           </li>
           
         </ul>
@@ -1184,10 +1232,10 @@
           <h3 class="text-base font-bold text-gray-900">今天值得试的工具</h3>
         </div>
         <h4 class="text-lg font-bold text-gray-900 mb-1">netflix/void-model</h4>
-        <p class="text-sm text-gray-700 mb-3">开源video-to-video模型，便于风格化与重绘</p>
+        <p class="text-sm text-gray-700 mb-3">视频到视频风格化与重绘模型</p>
         <div class="flex flex-wrap gap-4 text-xs mb-3">
-          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">把实拍/动画视频转成统一画风与质感</span></div>
-          <div><span class="font-semibold text-red-700">不适合</span><span class="text-gray-600 ml-1">纯文生视频需求</span></div>
+          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">把实拍转动画风、统一镜头质感</span></div>
+          <div><span class="font-semibold text-red-700">不适合</span><span class="text-gray-600 ml-1">纯文本生成视频</span></div>
         </div>
         
         <a href="https://huggingface.co/netflix/void-model" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-800">
@@ -1207,9 +1255,9 @@
           <div class="flex-1">
             <h3 class="text-sm font-bold text-red-900 mb-2">风险提醒</h3>
             <div class="space-y-2 text-sm">
-              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">把“登顶榜单/1334Elo/GenEval从61%到92%/20步推理仍稳画质”等指标直接等同于“出图/出视频就一定更好、更稳、更适合生产”。</span></div>
-              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">这些分数与结论往往来自特定基准、特定提示词与评测设置（如DesignArena、GenEval、推理步数/NFE），不必然覆盖美术生产中最关键的风格一致性、角色连续性、镜头可控性与可复现性；同一模型在不同题材、分辨率、镜头长度下表现可能差异很大。</span></div>
-              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">在把Wan2.7、HappyHorse-1.0、TDM-R1或“20步推理仍稳画质”类方法纳入工作流前，先用本项目的典型素材与镜头脚本做小规模A/B测试并记录失败案例与复现条件。</span></div>
+              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">看到“阿里Wan2.7登顶DesignArena榜单1334Elo”“HappyHorse-1.0登顶并超Seedance 2.0”等信息，就误以为这些视频模型已可稳定产出可商用、无争议的多镜头剧情成片。</span></div>
+              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">榜单与Elo主要反映特定评测集/偏好下的相对效果，不等同于在真实项目中对角色一致性、镜头连续性、品牌风格、版权与合规的稳定交付能力。尤其多镜头生成（如“CVPR 2026多镜头视频生成：一分钟十镜头”）在叙事稳定之外仍可能出现人物细节漂移、logo/素材误生成、以及训练数据来源不明带来的版权风险。</span></div>
+              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">美术侧将这些模型输出定位为“概念草案/预演素材”，上线前强制走风格校对+版权来源核验+Deepfake/政治讽刺敏感性检查（必要时用蚂蚁集团AI鉴真做二次鉴别）。</span></div>
             </div>
           </div>
         </div>
@@ -1226,16 +1274,16 @@
           <h3 class="text-base font-bold text-gray-900">今天该做什么</h3>
         </div>
         <div class="bg-white/60 rounded-lg p-4">
-          <p class="text-sm text-gray-700 font-medium">立刻做风格测试集</p>
+          <p class="text-sm text-gray-700 font-medium">立刻做风格测试</p>
           
           <ul class="mt-2 space-y-1">
             
             <li class="text-xs text-gray-500 flex items-start gap-1.5">
-              <span class="text-pink-500 mt-0.5">→</span>可显著提升分镜、动效与短视频产出效率。
+              <span class="text-pink-500 mt-0.5">→</span>可快速生成动效草案与迭代，降低AE门槛。
             </li>
             
             <li class="text-xs text-gray-500 flex items-start gap-1.5">
-              <span class="text-pink-500 mt-0.5">→</span>可用于视频风格化与镜头一致性探索，提升后期效率。
+              <span class="text-pink-500 mt-0.5">→</span>多镜头不崩剧情，显著改变分镜与预演工作流。
             </li>
             
           </ul>
@@ -1249,7 +1297,7 @@
 
     <div class="mt-8 pt-6 border-t border-gray-200">
       <div class="text-center text-xs text-gray-500 space-y-1">
-        <p>AI 日报 · 2026-04-10 21:56 自动生成</p>
+        <p>AI 日报 · 2026-04-10 22:11 自动生成</p>
         <p>开发者 · 产品经理 · 美术 — 三种角色，三份精准日报</p>
       </div>
     </div>
