@@ -1,0 +1,241 @@
+{
+  "generated_at": "2026-04-14T11:34:09.129439",
+  "stats": {
+    "raw_articles": 50,
+    "deduped_articles": 49,
+    "review_candidates": 4,
+    "with_expert_commentary": 1
+  },
+  "candidates": [
+    {
+      "title": "Gemma 4 audio with MLX",
+      "url": "https://simonwillison.net/2026/Apr/12/mlx-audio/#atom-everything",
+      "source": "Simon Willison",
+      "published": "2026-04-12T15:57:53+00:00",
+      "summary": "Thanks to a tip from Rahim Nathwani, here's a uv run recipe for transcribing an audio file on macOS using the 10.28 GB Gemma 4 E2B model with MLX and mlx-vlm: uv run --python 3.13 --with mlx_vlm --with torchvision --with gradio \\ mlx_vlm.generate \\ --model google/gemma-4-e2b-it \\ --audio file.wav \\ --prompt \"Transcribe this audio\" \\ --max-tokens 500 \\ --temperature 1.0 Your browser does not support the audio element. I tried it on this 14 second .wav file and it output the following: This front ",
+      "ai_category": "model_overseas",
+      "source_type": "rss",
+      "source_role": "review_source",
+      "content_type": "workflow_demo",
+      "content_depth": "description_level",
+      "evidence_level": "weak",
+      "review_candidate": {
+        "passed": true,
+        "score": 86,
+        "reasons": [
+          "llm_candidate",
+          "focus:Gemma 4 audio with MLX"
+        ],
+        "signals": {
+          "recall_mode": "llm",
+          "llm_confidence": 78,
+          "ranking_score": 86,
+          "llm_candidate_type": "workflow_demo",
+          "llm_focus_product": "Gemma 4 audio with MLX",
+          "llm_focus_entities": [
+            "Google Gemma 4 E2B",
+            "MLX",
+            "mlx-vlm",
+            "macOS audio transcription"
+          ],
+          "llm_recommended_queries": [
+            "Gemma 4 MLX audio transcription review",
+            "google gemma-4-e2b mlx-vlm hands-on",
+            "Gemma 4 audio transcription macOS MLX benchmark",
+            "Simon Willison Gemma 4 MLX third-party test"
+          ],
+          "llm_rationale": "这条材料虽不是完整长测评，但属于明确的真实上手工作流演示：作者给出可复现命令，基于 MLX/mlx-vlm 在 macOS 上实际跑 Gemma 4 E2B 做音频转写，并展示了样例输出。主题聚焦 AI 模型 + 推理工具链的实际使用，不是纯新闻或泛评论。证据强度偏弱、内容深度较浅，更接近 workflow demo / hands-on note，而非系统性评测，因此保留但置信度不宜过高。",
+          "llm_reject_reason": "",
+          "rule_passed": false,
+          "rule_score": 0
+        }
+      },
+      "expert_commentary": {
+        "card_type": "external_review",
+        "card_label": "Gemma 4 audio with MLX",
+        "expert_opinions": [
+          {
+            "observation": "FakeRocket543 在 MLX 量化实测中指出，Hugging Face 上现有的 Gemma 4 MLX 量化版很多是坏的，而他提供的是首个经过文本、图像、音频三模态完整验证的可用量化版本。",
+            "user_change": "对想在 macOS 上用 MLX 跑 Gemma 4 E2B 做音频转写的用户来说，这直接减少了下载到不可用权重、反复排查环境与模型问题的时间成本。",
+            "boundary": "它解决的是“模型能不能正常跑”的可用性问题，不等于已经证明转写精度、速度或长音频吞吐在所有机器上都足够好。",
+            "source_name": "FakeRocket543",
+            "source_url": "https://github.com/FakeRocket543/mlx-gemma4"
+          },
+          {
+            "observation": "MindStudio 对 Gemma 4 E2B/E4B 音频编码器的拆解指出，其音频编码器比 Gemma 3N 小约 50%，并采用 40ms 帧长以提升转写响应性。",
+            "user_change": "这意味着用户在本地或端侧做语音转写时，更可能获得更快的首响应和更轻的资源占用，尤其适合 MLX 这类本地推理工作流。",
+            "boundary": "这类收益主要成立于 E2B/E4B 边缘型号，材料没有给出在 macOS+MLX 实际转写准确率或不同硬件延迟的完整对比。",
+            "source_name": "MindStudio",
+            "source_url": "https://www.mindstudio.ai/blog/gemma-4-audio-encoder-e2b-e4b-speech-recognition"
+          }
+        ],
+        "synthesis": "共识是可本地跑通，但真正价值更偏可用性与响应速度。"
+      }
+    },
+    {
+      "title": "效率狂飙！Pencil AI 测评：Figma 一键转代码，无缝接入 Cursor / VSCode",
+      "url": "http://www.bilibili.com/video/av116384084264107",
+      "source": "B站·向阳的花code1",
+      "published": "2026-04-11T04:06:16+00:00",
+      "summary": "Length: 03:43<br />AuthorID: 521616026<br />Play: 133 Favorite: 3<br />Danmaku: 0 Comment: 0<br /><br />还在苦苦对照 Figma 标注写样式吗？前端还原极简现代 UI 细节太耗时？<br />今天给大家硬核评测一款堪称“王炸”的 AI 驱动原型工具——Pencil (pencil.dev)。它不仅是一个无限画板，更是直接连接设计与代码的桥梁。不管你是想快速验证想法，还是构建",
+      "ai_category": "tech_framework",
+      "source_type": "bilibili",
+      "source_role": "workflow_source",
+      "content_type": "review",
+      "content_depth": "description_level",
+      "evidence_level": "weak",
+      "review_candidate": {
+        "passed": true,
+        "score": 86,
+        "reasons": [
+          "llm_candidate",
+          "focus:Pencil AI (pencil.dev)",
+          "rule_support"
+        ],
+        "signals": {
+          "title_hint": true,
+          "text_hint": false,
+          "target_topic": true,
+          "non_target_topic": false,
+          "category_supported": true,
+          "first_hand": false,
+          "review_dimensions": [
+            "workflow_fit",
+            "speed"
+          ],
+          "content_type": "review",
+          "content_depth": "description_level",
+          "evidence_level": "weak",
+          "source_type": "bilibili",
+          "source_role": "workflow_source",
+          "recall_mode": "llm",
+          "llm_confidence": 74,
+          "ranking_score": 86,
+          "llm_candidate_type": "review",
+          "llm_focus_product": "Pencil AI (pencil.dev)",
+          "llm_focus_entities": [
+            "Pencil AI",
+            "pencil.dev",
+            "Figma",
+            "Cursor",
+            "VSCode"
+          ],
+          "llm_recommended_queries": [
+            "Pencil AI pencil.dev review Figma to code",
+            "Pencil AI Cursor VSCode 测评",
+            "pencil.dev Figma 一键转代码 体验",
+            "Pencil AI frontend workflow review"
+          ],
+          "llm_rationale": "该材料主题明确聚焦 AI 设计转代码工具 Pencil AI，并强调与 Figma、Cursor、VSCode 的衔接，属于 AI 工具/AI 编程工作流范畴，不是泛新闻或行业评论。标题和摘要带有明显的上手测评导向，涉及效率、工作流适配、生成代码等实用维度，符合“AI 工具真实体验/工作流分析”的候选范围。虽然当前证据较弱、摘要更像视频简介，且未能确认强一手实测细节，因此适合保留进入候选池，但应降低置信度。",
+          "llm_reject_reason": "",
+          "rule_passed": true,
+          "rule_score": 18
+        }
+      },
+      "expert_commentary": null
+    },
+    {
+      "title": "极大提升！ltx2.3 1.1 更新，对比VBVR",
+      "url": "http://www.bilibili.com/video/av116400895036083",
+      "source": "B站·AIEveryThing",
+      "published": "2026-04-14T03:21:33+00:00",
+      "summary": "Length: 00:16<br />AuthorID: 1111099225<br />Play: 8 Favorite: 1<br />Danmaku: 0 Comment: 0<br /><br />极大提升！ltx2.3 1.1 更新，对比VBVR，效果好很多<br /><img src=\"http://i0.hdslb.com/bfs/archive/c8b5de3bc0287c19728252d7851ac7d9ab2769bd.jpg\" /><br />Matc",
+      "ai_category": "product",
+      "source_type": "bilibili",
+      "source_role": "workflow_source",
+      "content_type": "review",
+      "content_depth": "description_level",
+      "evidence_level": "weak",
+      "review_candidate": {
+        "passed": true,
+        "score": 84,
+        "reasons": [
+          "llm_candidate",
+          "focus:LTX 2.3/1.1"
+        ],
+        "signals": {
+          "title_hint": true,
+          "text_hint": false,
+          "target_topic": false,
+          "non_target_topic": false,
+          "category_supported": true,
+          "first_hand": false,
+          "review_dimensions": [
+            "quality"
+          ],
+          "content_type": "review",
+          "content_depth": "description_level",
+          "evidence_level": "weak",
+          "source_type": "bilibili",
+          "source_role": "workflow_source",
+          "recall_mode": "llm",
+          "llm_confidence": 74,
+          "ranking_score": 84,
+          "llm_candidate_type": "review",
+          "llm_focus_product": "LTX 2.3/1.1",
+          "llm_focus_entities": [
+            "LTX",
+            "VBVR",
+            "AI视频生成"
+          ],
+          "llm_recommended_queries": [
+            "LTX 2.3 1.1 VBVR 对比 测评",
+            "LTX 视频生成 模型 实测",
+            "VBVR LTX workflow review",
+            "LTX 2.3 update video generation comparison"
+          ],
+          "llm_rationale": "材料主题明显指向一次 AI 生成工具/模型更新后的效果对比，且标题与简介都强调“更新”“对比”“效果好很多”，符合模型/工具测评候选的核心特征。虽然证据较弱、仅有标题和简介、且不是明确一手深度实测，但内容仍更接近 AI 视频生成相关产品的对比体验，而非纯新闻或泛评论，因此应保留进入候选池并降低置信度处理。",
+          "llm_reject_reason": "",
+          "rule_passed": false,
+          "rule_score": 17
+        }
+      },
+      "expert_commentary": null
+    },
+    {
+      "title": "好用！我发现了教材自动生成一堆全景图方法 没想到即梦也能接入智能体了，是所有的！智能体里配置下CLI就可以用",
+      "url": "http://www.bilibili.com/video/av116400878256707",
+      "source": "B站·优料老师的教学日记",
+      "published": "2026-04-14T03:18:06+00:00",
+      "summary": "Length: 02:03<br />AuthorID: 1189612316<br />Play: 1 Favorite: 0<br />Danmaku: 0 Comment: 0<br /><br />超实用！没想到即梦也能接入智能体了，是所有的！智能体里配置下CLI就可以用（给它学习文档直接阅读）<br />我尝试了丢入一本四年级下的译林英语教材 ，PDF格式，最后就得到了一堆全景图，我都没有编辑提示词，也没有说复杂的要求，没想到智能体就能自动生图了。<br />其实就",
+      "ai_category": "worth_watching",
+      "source_type": "bilibili",
+      "source_role": "workflow_source",
+      "content_type": "workflow_demo",
+      "content_depth": "description_level",
+      "evidence_level": "weak",
+      "review_candidate": {
+        "passed": true,
+        "score": 79,
+        "reasons": [
+          "llm_candidate",
+          "focus:即梦智能体接入CLI的自动生图工作流"
+        ],
+        "signals": {
+          "recall_mode": "llm",
+          "llm_confidence": 74,
+          "ranking_score": 79,
+          "llm_candidate_type": "workflow_demo",
+          "llm_focus_product": "即梦智能体接入CLI的自动生图工作流",
+          "llm_focus_entities": [
+            "即梦",
+            "智能体",
+            "CLI",
+            "PDF教材生成全景图工作流"
+          ],
+          "llm_recommended_queries": [
+            "即梦 智能体 CLI 教材 PDF 自动生图 评测",
+            "即梦 接入 智能体 CLI 工作流 实测",
+            "PDF 教材 自动生成 全景图 AI 工作流 即梦",
+            "即梦 AI 生图 智能体 第三方 上手 体验"
+          ],
+          "llm_rationale": "这条内容虽然证据较弱、只有标题和简介级信息，但主题相当明确：作者基于即梦+智能体+CLI做了一个从PDF教材到自动生成多张全景图的真实上手工作流演示，属于AI工具/工作流类的一手体验，而不是纯新闻或泛评论。它涉及具体接入方式、文档喂给智能体、自动生图结果等，符合“工作流/Agent/CLI/图像生成工具”候选范围。由于缺少更完整的实测细节、对比和失败案例，置信度不宜过高。",
+          "llm_reject_reason": "",
+          "rule_passed": false,
+          "rule_score": 0
+        }
+      },
+      "expert_commentary": null
+    }
+  ]
+}
