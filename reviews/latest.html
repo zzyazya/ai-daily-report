@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-04-15 17:28</title>
+  <title>独立测评 · 2026-04-15 18:17</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">~/adi</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
+                    <span class="source-label">DGT Store 深度评测与实用指南 / xxchan&#x27;s blog</span>
                   </div>
-                  <h3>Local-Splitter研究七法降低Coding Agent成本</h3>
-                  <p class="synthesis">外部观点普遍支持“本地处理轻任务、云端处理重任务”的分流思路。</p>
+                  <h3>Local-Splitter研究七种Coding Agent降费策略</h3>
+                  <p class="synthesis">外部体验更强调流程改造，而非单点模型省钱。</p>
                   <a class="article-link" href="https://arxiv.org/abs/2604.12301" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>博主在用 LM Studio 搭本地 coding agent 时，明确提到本地模型存在“更大参数/显存占用换更强能力、较小配置换更快推理”的实际取舍。</p><p><strong>改变：</strong>这意味着团队若把一部分编码补全或简单修改下放到本地 agent，可用本机算力替代部分云端调用，把云端 token 留给更难的规划和执行任务。</p><p><strong>边界：</strong>代价是需要足够本地硬件，且想要能力更强通常要接受更高内存占用；硬件不足时，本地方案的质量或速度会明显受限。</p><p class="source">来源：<a href="https://adim.in/p/local-coding-agent/" target="_blank" rel="noopener noreferrer">~/adi</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>DGT Store 的实战手册给出 OpenClaw 接入 Codex 的完整配置、Prompt 模板、Git 自动化流程，并明确记录了真实 Token 消耗，说明 Coding Agent 的成本控制需要结合具体工作流而不是只看模型定价。</p><p><strong>改变：</strong>对实际使用者来说，这意味着要想压低云端 Token 开销，不能只换模型，还要把任务拆分、提示模板和自动化提交流程一起设计，成本才可预估、可复用。</p><p><strong>边界：</strong>这类做法依赖较重的本地配置和 Git 自动化基础，更适合愿意搭建 Agent 工作流的个人/团队，不适合只想开箱即用的轻度用户。</p><p class="source">来源：<a href="https://dgtsell.com/articles/openclaw-codex-coding-agent-handbook" target="_blank" rel="noopener noreferrer">DGT Store 深度评测与实用指南</a></p></div><div class="opinion"><p><strong>观察：</strong>xxchan 的本地 Coding Agent 经验文指出，当使用者已经能让 Agent 端到端完成开发后，真正的提升来自并发化和可扩展协作，而不是继续细抠单次交互。</p><p><strong>改变：</strong>这对用户和团队的直接影响是，采用本地/分流式 Agent 的价值不只在省钱，还在于把多个任务并行推进，从“一个助手”变成“多工位协作”，提升整体吞吐。</p><p><strong>边界：</strong>作者明确说这种方式不适合希望精细控制 Agent 每一步行为的人，也不适合尚未建立成熟 Agent 开发习惯的用户。</p><p class="source">来源：<a href="https://xxchan.me/zh/blog/2025-11-14-concurrent-local-coding-agents/" target="_blank" rel="noopener noreferrer">xxchan&#x27;s blog</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Crawl4AI 外部测评与上手影响</span>
-                    <span class="source-label">知乎专栏《Crawl4AI 实战指南：面向大模型的智能爬虫工具》 / CSDN 博客《Crawl4ai 框架的学习与使用》 / DICloak《Crawl4AI完整指南：高效抓取网页数据的AI级开源工具》</span>
+                    <span class="badge badge-blue">Crawl4AI 外部测评</span>
+                    <span class="source-label">Thunderbit</span>
                   </div>
-                  <h3>Crawl4AI网页爬取与结构化抽取实战</h3>
-                  <p class="synthesis">共识是它更像面向LLM工作流的开发者型爬虫，而非零门槛采集工具。</p>
+                  <h3>Crawl4AI 网页抓取与结构化提取实战教程</h3>
+                  <p class="synthesis">共识是功能强，但真实门槛主要在工程接入。</p>
                   <a class="article-link" href="https://www.marktechpost.com/2026/04/14/a-coding-implementation-of-crawl4ai-for-web-crawling-markdown-generation-javascript-execution-and-llm-based-structured-extraction/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方教程指出，Crawl4AI把网页内容转成更干净、结构化的 Markdown，明显是按 RAG 和智能代理的下游使用来设计，而不是停留在原始 HTML 抓取层。</p><p><strong>改变：</strong>这会把团队后处理清洗、分块和喂给大模型的步骤前移并简化，减少从网页源码到可用知识数据之间的人工整理成本。</p><p><strong>边界：</strong>这类收益更适合已经有 LLM/RAG 数据链路的团队；如果只是做传统规则型爬虫，优势不一定明显。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1960357131271274721" target="_blank" rel="noopener noreferrer">知乎专栏《Crawl4AI 实战指南：面向大模型的智能爬虫工具》</a></p></div><div class="opinion"><p><strong>观察：</strong>CSDN 上手文章把 Crawl4AI概括为“AI增强+动态渲染”的 Python 爬取框架，强调它对 SPA 等现代动态网页比传统静态抓取更友好。</p><p><strong>改变：</strong>对开发者来说，这意味着原本要额外处理前端渲染和复杂页面加载的工作，可以更多收敛到同一套采集与抽取流程里，降低复杂网页采集门槛。</p><p><strong>边界：</strong>它仍然是面向 Python 和代码配置的框架，不是零门槛工具；非技术用户或只需简单静态页面抓取的场景未必划算。</p><p class="source">来源：<a href="https://blog.csdn.net/m0_61970162/article/details/154835813" target="_blank" rel="noopener noreferrer">CSDN 博客《Crawl4ai 框架的学习与使用》</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Thunderbit 的第三方评测明确指出，Crawl4AI 更适合有编程能力的技术用户，实际导入和运维都依赖代码能力，而不是开箱即用型工具。</p><p><strong>改变：</strong>这意味着团队若采用教程中的完整抓取与结构化提取工作流，往往需要开发者参与搭建与维护，适合作为工程化采集链路而非直接交给业务同学自助使用。</p><p><strong>边界：</strong>对销售、市场、房产等非技术岗位不友好，缺少编程经验的团队会在上手、部署和长期运营上承担较高门槛。</p><p class="source">来源：<a href="https://thunderbit.com/ja/blog/crawl4ai-review-and-alternative" target="_blank" rel="noopener noreferrer">Thunderbit</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">DeepSeek OCR 3B本地可跑实测</span>
-                    <span class="source-label">CSDN博客《消费级的DeepSeek-OCR本地部署实战来了！》 / 知乎《DeepSeek-OCR 详解》</span>
+                    <span class="badge badge-blue">DeepSeek OCR 3B本地实测解读</span>
+                    <span class="source-label">知乎博主《消费级的DeepSeek-OCR模型本地部署实战来了！赶紧行动起来吧~》 / 知乎博主《10分钟带你上手 DeepSeek 最新 OCR模型 DeepSeek-OCR》 / CSDN博客《CV之OCR/ImageT2T：DeepSeek-OCR的简介、安装和使用方法、案例应用之详细攻略》</span>
                   </div>
-                  <h3>DeepSeek OCR 3B本地可跑实测</h3>
-                  <p class="synthesis">外部实测共识是能本地跑，但更适合开发测试而非所有OCR需求。</p>
+                  <h3>DeepSeek OCR 3B本地实测解读</h3>
+                  <p class="synthesis">共识是能在本地低门槛跑通，但部署与生产化成本仍在。</p>
                   <a class="article-link" href="http://www.bilibili.com/video/av116407052272855" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方部署实战称，DeepSeek-OCR 3B可在消费级 `RTX 4060 8G` 显存设备本地跑通，单页 PDF 处理时间为“数秒”级。</p><p><strong>改变：</strong>这意味着中小团队不必先上高端服务器，就能先在现有开发机验证文档识别流程，把 OCR 原型测试门槛降到消费级显卡。</p><p><strong>边界：</strong>代价是处理速度仍以“单页数秒”为主，更适合原型验证和中低吞吐场景，不适合追求大批量离线处理的团队。</p><p class="source">来源：<a href="https://blog.csdn.net/weixin_42485090/article/details/153735299" target="_blank" rel="noopener noreferrer">CSDN博客《消费级的DeepSeek-OCR本地部署实战来了！》</a></p></div><div class="opinion"><p><strong>观察：</strong>有开发者在 Windows 11 Pro + WSL2 本地完成部署，并做了基础识别效果测试，说明“能否本地跑起来”不只停留在官方口径。</p><p><strong>改变：</strong>对开发者来说，价值在于可以直接把模型接入本地 Linux/WSL 工作流，先做真实文档调试，再决定是否投入到正式业务链路。</p><p><strong>边界：</strong>作者同时提醒这“不是传统意义的 OCR”，而且“也是大部分人自己用不上的东西”，说明它更偏文档理解型能力，不一定适合只想要轻量文字提取的普通个人用户。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/81845230473" target="_blank" rel="noopener noreferrer">知乎《DeepSeek-OCR 详解》</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有博主实机在 `RTX 4060 8GB` 上完成本地推理，反馈 DeepSeek-OCR 3B 可正常运行，单页 PDF 处理耗时为“几秒钟”，主观上速度可接受。</p><p><strong>改变：</strong>这意味着个人开发者或小团队不必上高端显卡，也能把 OCR 放到本地电脑离线跑通，用于日常 PDF 提取或轻量文档处理。</p><p><strong>边界：</strong>该结论主要证明“能跑起来”，未给出更系统的准确率、长文档吞吐或复杂版面稳定性测试，因此更适合轻量本地试用而非直接代表生产级表现。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1964721853709943031" target="_blank" rel="noopener noreferrer">知乎博主《消费级的DeepSeek-OCR模型本地部署实战来了！赶紧行动起来吧~》</a></p></div><div class="opinion"><p><strong>观察：</strong>有上手文章指出 DeepSeek-OCR 目前不提供在线 API，必须本地推理；同时单卡 `&gt;=7GB` 显存即可运行，并给出 `vLLM` 与 `Transformers` 两条推理路径的实际部署选择。</p><p><strong>改变：</strong>对用户的真实影响是，采用门槛从“买 API 即用”变成“自己配环境和显卡”，但换来的是可离线部署、可按吞吐或兼容性选择不同推理工作流。</p><p><strong>边界：</strong>文章也明确提到 `NVIDIA 50` 系显卡当前暂不适配 `vLLM`，且本地部署本身更依赖环境配置能力，不适合想直接开箱即用的非技术用户。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1964739506629490036" target="_blank" rel="noopener noreferrer">知乎博主《10分钟带你上手 DeepSeek 最新 OCR模型 DeepSeek-OCR》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Code 接入智谱模型外部体验</span>
-                    <span class="source-label">cholf5/random Issue #23 / 腾讯云开发者社区 / 智谱 GLM Coding Plan 深度测评</span>
+                    <span class="badge badge-blue">Kimi K2.5视觉推理外部观察</span>
+                    <span class="source-label">腾讯新闻 / Clore.ai</span>
                   </div>
-                  <h3>Claude Code加智谱模型零门槛教程</h3>
-                  <p class="synthesis">共识是门槛和成本明显下降，且在真实编码链路里已具备可用性。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116407505262058" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>开发者在 GitHub 教程中给出可落地的接入路径：智谱国服可用 GLM-4.5 代码编程专享计划，国际服 z.ai 可用约 3 美元/月订阅，并通过创建 API Key 接入 Claude Code。</p><p><strong>改变：</strong>这直接把原本依赖 Anthropic 官方模型的使用门槛，变成了国内开发者可支付、可注册、可自行配置的低成本替代方案。</p><p><strong>边界：</strong>仍需要用户自己完成账号注册、订阅开通和 API Key 配置，适合愿意折腾环境的用户。</p><p class="source">来源：<a href="https://github.com/cholf5/random/issues/23" target="_blank" rel="noopener noreferrer">cholf5/random Issue #23</a></p></div><div class="opinion"><p><strong>观察：</strong>腾讯云开发者社区的实战文记录了从 CLI 安装、IDE 集成到用 Claude Code 零手写代码搭出可运行 AI 后端工程的完整体验，说明智谱 BigModel 方案能跑通 Claude Code 的核心开发链路。</p><p><strong>改变：</strong>对团队和个人用户来说，这意味着接入后不只是能聊天或补全，而是可以继续沿用 Claude Code 的命令行加 IDE 工作流去完成真实项目搭建。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2620125" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div></div>
+                  <h3>Kimi K2.5视觉推理实测能力观察</h3>
+                  <p class="synthesis">外部观察认为它在轻量视觉推理上好用，但部署门槛仍明显。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116407589142777" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>腾讯新闻作者用国际象棋局面做上手测试时观察到，Kimi K2.5识别棋子位置较准、反应也快，没有把关键落子关系看错。</p><p><strong>改变：</strong>这意味着普通用户在棋盘、截图、图中规则关系这类轻量视觉推理任务上，更可能直接拿到可用答案，减少先手动标注图片信息的步骤。</p><p><strong>边界：</strong>材料只证明其在该类结构化视觉场景里“够用”，并不能外推出复杂长链视觉理解或高风险专业判断场景同样稳定。</p><p class="source">来源：<a href="https://news.qq.com/rain/a/20260127A07UWV00" target="_blank" rel="noopener noreferrer">腾讯新闻</a></p></div><div class="opinion"><p><strong>观察：</strong>Clore.ai 的部署指南指出，Kimi K2.5本地量化方案在GGUF/llama.cpp下暂不支持视觉，多模态能力需要改用vLLM，且全精度推理硬件成本较高。</p><p><strong>改变：</strong>这会直接影响团队落地方式：如果要真正用到视觉推理，不能只靠常见轻量本地推理栈，往往需要更重的服务化部署和更高显存预算。</p><p><strong>边界：</strong>对想在单卡消费级环境里低成本离线体验视觉能力的用户并不友好，本地可跑不等于本地可用多模态。</p><p class="source">来源：<a href="https://docs.clore.ai/guides/guides_v2-zh/yu-yan-mo-xing/kimi-k2" target="_blank" rel="noopener noreferrer">Clore.ai</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -93,34 +93,23 @@
                 <section class="card">
                   <div class="meta">
                     <span class="badge badge-pink">Flux2Klein 5.5外部测评</span>
-                    <span class="source-label">RunComfy / CSDN博客</span>
+                    <span class="source-label">嘟嘟AI绘画趣味学 / AI Study Now</span>
                   </div>
-                  <h3>Flux2Klein 5.5整合包局部替换工作流</h3>
-                  <p class="synthesis">外部体验共识是：局部替换更快、更统一，但仍要手动控 seed 与画布条件。</p>
+                  <h3>Flux2Klein 5.5整合包换装迁移工作流</h3>
+                  <p class="synthesis">共识是它能显著降低迁移修图门槛，但高质量人像仍依赖节点调优。</p>
                   <a class="article-link" href="http://www.bilibili.com/video/av116383698521202" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>RunComfy 的工作流说明显示，FLUX Klein 可在同一套 ComfyUI 流程里完成局部重绘、擦除和外扩，且通过 selector 区分原图构图内修补与扩边后的外绘，强调的是“统一流程+精确控制”。</p><p><strong>改变：</strong>这意味着用户做局部替换时不必在多套节点流之间来回切换，一套整合流就能覆盖修补、删除和补边，明显降低了图像编辑工作流的搭建和切换成本。</p><p><strong>边界：</strong>外扩模式依赖先对画布做缩放或 padding，这类流程更适合定向编辑而不是从零生成整张图。</p><p class="source">来源：<a href="https://www.runcomfy.com/comfyui-workflows/flux-klein-unified-image-editing-inpaint-remove-outpaint-in-comfyui-advanced-image-restoration" target="_blank" rel="noopener noreferrer">RunComfy</a></p></div><div class="opinion"><p><strong>观察：</strong>CSDN 博主把 FLUX.2 [klein] 接入自己的 ComfyUI 流程后，实际感受是“速度快到基本没有任何等待焦虑”，并认为它比预期更适合本地生成式工作流。</p><p><strong>改变：</strong>这对局部替换场景的直接价值是迭代速度更快，用户在调蒙版、提示词和替换细节时能更高频地回看结果，本地工作流的可用性更强。</p><p><strong>边界：</strong>片段主要强调速度与轻量体验，没有给出画质、一致性或复杂编辑场景下的系统性对比。</p><p class="source">来源：<a href="https://blog.csdn.net/yihuaixu/article/details/157069249" target="_blank" rel="noopener noreferrer">CSDN博客</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>YouTube博主“嘟嘟AI绘画趣味学”在人物场景迁移演示中，直接观察到Flux2-Klein能较完整复刻人物姿势，并把人物与新场景的光影关系自动融合。</p><p><strong>改变：</strong>这意味着做旅游照换景、人物迁移这类工作流时，用户不必再手动大量修姿态和补光，单次出图更接近可交付结果。</p><p class="source">来源：<a href="https://m.youtube.com/watch?v=xnpg4nnz0l4" target="_blank" rel="noopener noreferrer">嘟嘟AI绘画趣味学</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方教程作者AI Study Now在Flux2Klein 9B的换脸/编辑工作流里实测发现，如果把合成图先送入“Crop Face”节点再做最终生成，模型会把分辨率集中到面部身份细节，明显减少背景占用带来的脸部失真。</p><p><strong>改变：</strong>对做换装迁移、人物合成的用户来说，这说明整合包虽然能跑，但要想稳定保住人脸一致性，仍需要按节点拆分注意力，而不是完全依赖一键工作流。</p><p><strong>边界：</strong>代价是工作流更复杂，额外裁脸步骤更适合人像主体任务，不适合主要关注全身服装细节或大场景统一性的场景。</p><p class="source">来源：<a href="https://aistudynow.com/how-i-fixed-face-swaps-the-ultimate-flux-2-klein-9b-comfyui-workflow/" target="_blank" rel="noopener noreferrer">AI Study Now</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
                     <span class="badge badge-pink">Gemini 3.1 SVG外部测评</span>
-                    <span class="source-label">计育韬（知乎）</span>
+                    <span class="source-label">Postorganica / 计育韬 / gemini-3.shop</span>
                   </div>
-                  <h3>Gemini 3.1实测SVG图像生成惊艳</h3>
-                  <p class="synthesis">共识是适合做初稿，不足以直接生产。</p>
+                  <h3>Gemini 3.1实测SVG图像生成表现观察</h3>
+                  <p class="synthesis">共识是已能产出可运行SVG，但更适合轻量原型而非专业成片。</p>
                   <a class="article-link" href="http://www.bilibili.com/video/av116407337486177" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者计育韬在实测中认为，Gemini 3.1 生成的 SVG 动画已经达到“能看”的程度，说明其从纯演示走向可用草稿，但整体质量距离专业 SVG 交互设计仍有明显差距。</p><p><strong>改变：</strong>这意味着前端、设计和内容团队可以先用它快速产出简单 SVG 动效原型或初稿，缩短从想法到可预览代码的时间，但正式项目仍需人工重做与细修。</p><p><strong>边界：</strong>在专业级、复杂叙事或高规范要求的 SVG 场景里，它还不适合作为最终生产方案，尤其难替代有经验的交互设计与前端实现。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2009641076806410378" target="_blank" rel="noopener noreferrer">计育韬（知乎）</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">Kimi K2.5 外部测评</span>
-                    <span class="source-label">ofox.ai</span>
-                  </div>
-                  <h3>Kimi K2.5视觉推理实测表现亮眼</h3>
-                  <p class="synthesis">外部实测价值集中在图像理解直接接入结构化工作流。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116407589142777" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实战文章提到，Kimi K2.5 在文档照片/发票/合同场景里不只做 OCR，还能结合上下文理解表格与字段关系，直接输出结构化 JSON；对柱状图截图也能还原底层数据。</p><p><strong>改变：</strong>这意味着用户在票据录入、合同结构化、竞品图表抄数这类工作流里，可以把“识别+理解+整理”合并成一步，减少人工校对和二次录入。</p><p><strong>边界：</strong>文章也明确指出 K2.5 当前只支持图片输入，不适合音频、视频流处理；如果任务依赖语音或视频理解，需要换用别的模型。</p><p class="source">来源：<a href="https://ofox.ai/zh/blog/kimi-k2-5-agent-swarm-multimodal-api-guide-2026/" target="_blank" rel="noopener noreferrer">ofox.ai</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Postorganica实测认为，Gemini 3.1已经能直接生成可运行的SVG动画代码，至少在简单加载器这类小动画上不再只是“画个样子”。</p><p><strong>改变：</strong>这让前端、设计或内容团队可以把一些基础动效从手工逐帧制作改成“提示词-&gt;代码-&gt;直接嵌入”的流程，明显缩短简单SVG动效的出稿时间。</p><p><strong>边界：</strong>作者明确把适用范围限定在“简单加载器”等轻量场景，意味着它还不能替代复杂动画的专业制作流程。</p><p class="source">来源：<a href="https://postorganica.space/gemini-31-i-svg-animatsija/" target="_blank" rel="noopener noreferrer">Postorganica</a></p></div><div class="opinion"><p><strong>观察：</strong>计育韬在垂直领域实测后的结论是“能看了，但依然远远不够看”，说明Gemini 3.1的SVG动画质量较以往已有提升，但离专业SVG交互设计的要求仍有明显差距。</p><p><strong>改变：</strong>对普通用户和团队来说，它更像是一个可用于快速草图、概念验证和初版演示的工具，而不是能直接替代成熟设计师产出的生产级方案。</p><p><strong>边界：</strong>在高标准的融媒体SVG、复杂交互叙事或专业视觉表达场景中，作者认为它仍然不够用。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2009641076806410378" target="_blank" rel="noopener noreferrer">计育韬</a></p></div></div>
                 </section>
                 </div>
             </section>
