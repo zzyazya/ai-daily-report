@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-04-15 20:06</title>
+  <title>独立测评 · 2026-04-15 22:17</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -44,45 +44,72 @@
                 <section class="card">
                   <div class="meta">
                     <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">SmartScope Blog</span>
+                    <span class="source-label">Sperix Labs</span>
                   </div>
-                  <h3>Local-Splitter研究七种Coding Agent省Token策略</h3>
-                  <p class="synthesis">省Token有效，但要靠分流、提示治理和本地配置成本</p>
+                  <h3>Local-Splitter研究七种Coding-Agent降Token策略</h3>
+                  <p class="synthesis">共识是先压缩探索成本，比单纯换便宜模型更能省 Token。</p>
                   <a class="article-link" href="https://arxiv.org/abs/2604.12301" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>SmartScope 的实操文章指出，`AGENTS.md` 本身就可能显著拖慢 Claude Code、Cursor 等 Coding Agent，优化这类指令文件可以明显减少 token 浪费并提升响应速度。</p><p><strong>改变：</strong>对团队来说，这意味着省 token 不一定先靠换模型，先精简和重写代理指令文件，就能直接改善日常编码助手的延迟与上下文利用率。</p><p class="source">来源：<a href="https://smartscope.blog/en/generative-ai/claude/agents-md-token-optimization-guide-2026/" target="_blank" rel="noopener noreferrer">SmartScope Blog</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Sperix Labs 观察到，Local-Splitter 把一个本地 3B 小模型放在 Coding Agent 前面后，简单请求可直接本地处理、复杂请求再压缩后转发云端，相当于把“是否值得上云”先做了一次分流。</p><p><strong>改变：</strong>这会直接改变团队的 Agent 成本结构：日常大量浏览、检索、确认类小请求可以变成零云端 Token，只有真正复杂的推理步骤才消耗大模型预算。</p><p><strong>边界：</strong>它并不是完全替代云模型的方案，复杂任务仍要上云，只是减少无效上下文和前置探索带来的 Token 浪费。</p><p class="source">来源：<a href="https://sperixlabs.org/post/2026/04/local-splitter-cutting-cloud-llm-costs-by-putting-a-small-model-in-front/" target="_blank" rel="noopener noreferrer">Sperix Labs</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">DeepSeek OCR 3B 外部上手影响</span>
-                    <span class="source-label">Unsloth Documentation / Hyperstack</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验</span>
+                    <span class="source-label">WaveSpeed 博客</span>
                   </div>
-                  <h3>DeepSeek 3B参数OCR模型本地实测受关注</h3>
-                  <p class="synthesis">外部材料更能证实“可自建可接入”，量化优势仍待实测。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116407052272855" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Unsloth 的上手文档将 DeepSeek-OCR 作为一个可直接运行并微调的 3B 视觉 OCR 模型来处理表格、论文和手写内容，说明第三方开发者已把它当成可落地的文档理解工具而非只停留在发布层面。</p><p><strong>改变：</strong>对用户和团队来说，这意味着它不只是“能识字”，而是有机会在本地或自有环境里统一接管多类型文档解析，并继续按自己的数据做微调，减少在不同 OCR/版面工具间切换。</p><p><strong>边界：</strong>片段没有给出具体精度、速度、显存占用或与其他 OCR 的量化对比，因此更能证明“可跑、可调”，还不足以证明它在高吞吐生产场景里一定更优。</p><p class="source">来源：<a href="https://unsloth.ai/docs/models/tutorials/deepseek-ocr-how-to-run-and-fine-tune" target="_blank" rel="noopener noreferrer">Unsloth Documentation</a></p></div><div class="opinion"><p><strong>观察：</strong>Hyperstack 发布了把 DeepSeek OCR 3B 部署到第三方算力平台并接入自定义 UI 的分步教程，反映出外部开发者观察到该模型已经可以脱离官方演示，进入可自行搭建界面的实际工作流。</p><p><strong>改变：</strong>这对团队的真实改变是，可以把 OCR 能力嵌进自己的内部工具或标注台，而不是只能调用封闭成品服务，更适合做私有化试用和流程集成。</p><p><strong>边界：</strong>这类工作流仍依赖算力环境、部署步骤和工程接入成本；而且该材料讨论的是云端自建流程，不等同于普通消费级设备上的轻量本地即开即用。</p><p class="source">来源：<a href="https://www.hyperstack.cloud/technical-resources/tutorials/deploying-and-using-deepseek-ocr-on-hyperstack-a-step-by-step-guide" target="_blank" rel="noopener noreferrer">Hyperstack</a></p></div></div>
+                  <h3>DeepSeek v4对比Claude Opus编程实测</h3>
+                  <p class="synthesis">共识是两者强项不同：一个偏大上下文改动，一个偏稳健小补丁。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116407857645155" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>WaveSpeed 的编程对比文提到，在需要跨多个模块处理大规模 diff 时，DeepSeek V4 在长上下文下表现更稳；而 Claude Opus 4.5 的优势是补丁更克制、按要求给最小修改，并且在要求先做三步计划和 dry-run 时更少“编造步骤”。</p><p><strong>改变：</strong>这意味着团队若经常处理跨文件重构、长代码上下文任务，DeepSeek V4 可能更适合做大范围改动；但如果工作流强调小步提交、可审查补丁和先规划后执行，Claude Opus 更贴近日常工程协作习惯。</p><p><strong>边界：</strong>这篇材料聚焦作者主观上手与编程工作流体验，且对比对象是 Claude Opus 4.5 而非新闻中的 Opus 新版本，因此更适合当作真实使用倾向参考，不足以单独证明绝对性能胜负。</p><p class="source">来源：<a href="https://wavespeed.ai/blog/zh-tw/posts/blog-deepseek-v4-vs-claude-opus-coding/" target="_blank" rel="noopener noreferrer">WaveSpeed 博客</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">胸部肿瘤委员会Multi-Agent System部署评测</span>
-                    <span class="source-label">ML6 Blog</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
+                    <span class="source-label">ClaudeSkills.ru / Habr</span>
                   </div>
-                  <h3>胸部肿瘤委员会Multi-Agent System部署评测</h3>
-                  <p class="synthesis">外部观点共识是：价值首先体现在会前准备提效，而非替代专家决策。</p>
-                  <a class="article-link" href="https://arxiv.org/abs/2604.12161" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>ML6 在解读 AI TumorBoard 时指出，这类系统的核心是把肿瘤委员会拆成多个“虚拟专科医生”代理协同工作，并嵌入现有 iLTB 工作流，而不是单一模型一次性给结论。</p><p><strong>改变：</strong>对临床团队的真实改变是，病例准备和方案检索可以更像真实 MDT 分工那样并行展开，减少会前由人工独自整合信息的负担。</p><p><strong>边界：</strong>文中表述仍是“could offer”式工作流增益判断，说明它更适合做会前辅助和流程编排，不等于可以替代真实肿瘤委员会决策。</p><p class="source">来源：<a href="https://blog.ml6.eu/the-ai-based-tumor-board-a-multi-agent-approach-to-finding-cancer-treatments-with-ai-20c23608ed93" target="_blank" rel="noopener noreferrer">ML6 Blog</a></p></div></div>
+                  <h3>AIDesigner借MCP与Claude Desktop复刻UI</h3>
+                  <p class="synthesis">共识是：MCP 让 Claude 真能接外部工具，但前提仍是先把服务配通。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116407253599921" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>俄语技术博主基于半年实操指出，MCP 服务器接入 Claude Code/Claude Desktop 属于可在约 15 分钟内完成的实用配置，而不是只停留在规范层面的概念。</p><p><strong>改变：</strong>这意味着像 AIDesigner 这类通过 MCP 接入 Claude Desktop 的网页改版工作流，真实门槛主要变成一次性接入配置，接好后可直接并入现有 AI 编码/改版流程。</p><p><strong>边界：</strong>它仍然不是零配置体验，首次接入依然需要用户自己理解并完成服务器连接，更适合有一定开发环境操作能力的人。</p><p class="source">来源：<a href="https://claudeskills.ru/blog/mcp-server-chto-eto" target="_blank" rel="noopener noreferrer">ClaudeSkills.ru</a></p></div><div class="opinion"><p><strong>观察：</strong>Habr 作者实测到，Claude Desktop 在启动 MCP 服务后会在 Local MCP Servers 中显示数据源，并以 running 状态确认连通，随后可以直接用自然语言对接入资源发起操作。</p><p><strong>改变：</strong>对用户来说，AIDesigner 借 MCP 复刻 UI 的价值不只是“能改版”，而是把外部网页/数据源能力拉进 Claude Desktop，同一界面里完成调用与修改，减少来回切工具。</p><p><strong>边界：</strong>前提是 MCP 服务必须正确启动并保持连通；若服务未正常运行，这类一键式改版工作流就无法成立。</p><p class="source">来源：<a href="https://habr.com/ru/articles/947818/" target="_blank" rel="noopener noreferrer">Habr</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Crawl4AI外部测评/上手体验</span>
-                    <span class="source-label">Study with GPT / Wenkil的开发笔记 / 知乎专栏</span>
+                    <span class="badge badge-blue">Claude Code Routines 外部测评</span>
+                    <span class="source-label">创业邦</span>
                   </div>
-                  <h3>Crawl4AI网页抓取与结构化提取实战</h3>
-                  <p class="synthesis">共识是它更像面向LLM流程的抓取与清洗一体化工具，而非零门槛通用爬虫。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/04/14/a-coding-implementation-of-crawl4ai-for-web-crawling-markdown-generation-javascript-execution-and-llm-based-structured-extraction/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Study with GPT 的教程实操表明，`AsyncWebCrawler` 不只是抓静态 HTML，还能在抓取前执行 JavaScript、配合 CSS 选择器过滤页面元素，并在异步流程里直接做结构化数据提取。</p><p><strong>改变：</strong>这让开发者可以把“动态页交互→定点抽取→结构化输出”合并进一条抓取流水线，减少额外用浏览器自动化和后处理脚本拼接的工作。</p><p><strong>边界：</strong>这类用法依赖手写 JS、CSS 规则和会话逻辑，更适合有一定前端/爬虫经验的团队，不是完全零配置方案。</p><p class="source">来源：<a href="https://www.studywithgpt.com/zh-cn/tutorial/em37k0" target="_blank" rel="noopener noreferrer">Study with GPT</a></p></div><div class="opinion"><p><strong>观察：</strong>Wenkil 的开发笔记提到，Crawl4AI 可在爬取前执行自定义 JavaScript，并用 CSS 选择器精确定位目标元素，明显面向需要和动态页面交互的抓取场景。</p><p><strong>改变：</strong>对做知识库、RAG 或页面结构化抽取的用户来说，这意味着可以少抓无关内容，直接围绕目标区块提取，降低清洗成本。</p><p><strong>边界：</strong>作者同时提醒要遵守 `robots.txt` 和网站服务条款，因此它并不适合无视站点规则的批量抓取场景。</p><p class="source">来源：<a href="https://wenkil.github.io/2025/04/12/Langgraph学习5：尝试AI爬取工具crawl4ai/" target="_blank" rel="noopener noreferrer">Wenkil的开发笔记</a></p></div></div>
+                  <h3>Claude Code Routines智能例程自动化</h3>
+                  <p class="synthesis">共识是它降低了固定流程自动触发门槛，但工程化保障仍待验证。</p>
+                  <a class="article-link" href="https://www.producthunt.com/r/C2HEOHKNZ3RKQM" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>创业邦在对 Claude Code Routines 的功能拆解中观察到：用户只要携带 Token 向指定端点发起 POST，请求就会拉起一个新会话，并把 body 里的 `text` 作为额外提示词拼接进 Routine 原始 prompt。</p><p><strong>改变：</strong>这意味着团队可以把固定提示词流程封装成可被外部系统直接触发的自动任务，用脚本、定时器或其他工作流工具批量启动 Claude Code，而不必每次手动进终端开会话。</p><p><strong>边界：</strong>从片段看它更像是“可编排触发入口”而不是完整自动化平台，调度、重试、权限隔离和成本控制没有被验证，因此更适合结构化重复任务，不适合高风险长链自治流程。</p><p class="source">来源：<a href="https://www.cyzone.cn/article/830433.html" target="_blank" rel="noopener noreferrer">创业邦</a></p></div></div>
+                </section>
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>产品经理视角测评</h2>
+              <div class="role-cards">
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-purple">华为小艺Claw在鸿蒙6的外部测评/上手体验</span>
+                    <span class="source-label">中关村在线｜小艺Claw体验上手：部署门槛低，skill丰富，干啥都能自动化</span>
+                  </div>
+                  <h3>华为小艺Claw在鸿蒙6的养虾实测体验</h3>
+                  <p class="synthesis">共识是更像系统助手，但受鸿蒙版本与资格限制。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116408495113994" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>中关村在线上手文提到，小艺Claw 的开通门槛并不高：HarmonyOS 6 设备在满足小艺版本要求后，可直接申请，审核通过后通过 OTA 安装并启用。</p><p><strong>改变：</strong>这意味着用户不需要复杂折腾或手动部署环境，体验成本主要变成“设备版本是否满足”和“是否拿到资格”。</p><p><strong>边界：</strong>使用前提很明确：需要 HarmonyOS 6、指定版本的小艺 App，且还要先申请并通过审核，不适合想立即无门槛体验的人。</p><p class="source">来源：<a href="https://mobile.zol.com.cn/1162/11621156_all.html" target="_blank" rel="noopener noreferrer">中关村在线｜小艺Claw体验上手：部署门槛低，skill丰富，干啥都能自动化</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-purple">外部测评 / 上手体验</span>
+                    <span class="source-label">CSDN博客《测评了10几个国产AI工具，差点崩溃...》</span>
+                  </div>
+                  <h3>“免米ai工具”短视频展示低门槛变现工作流</h3>
+                  <p class="synthesis">外部观点更支持“能降门槛”，不支持“轻松变现”。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116408813882268" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>CSDN博主在连续测评10多款国产AI工具后，直接给出的结论是“良莠不齐，能用的不多，好用的更是屈指可数”。</p><p><strong>改变：</strong>这意味着短视频里那种“快速上手就能跑通变现”的工作流，对普通用户未必是拿来即用，真实落地前通常还要先筛工具、试错和替换。</p><p><strong>边界：</strong>该观察是多工具横评后的总体体验，不是对“免米ai工具”单一产品的定向实测，因此只能用来校正“低门槛”宣传预期，不能直接证明其效果。</p><p class="source">来源：<a href="https://blog.csdn.net/yellowzf3/article/details/137096847" target="_blank" rel="noopener noreferrer">CSDN博客《测评了10几个国产AI工具，差点崩溃...》</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -93,34 +120,34 @@
                 <section class="card">
                   <div class="meta">
                     <span class="badge badge-pink">Gemini 3.1 SVG图像生成外部测评</span>
-                    <span class="source-label">Serezha Ris / Postorganica</span>
+                    <span class="source-label">计育韬｜知乎《实测 Gemini 3.1 SVG 动画真实水平——能看了，但依然远远不够看》 / 知乎《Gemini 3.1 Pro 真实体验，到底变好用了还是变难用了？》</span>
                   </div>
-                  <h3>Gemini 3.1 SVG图像生成实测效果受关注</h3>
-                  <p class="synthesis">共识是能显著缩短轻量SVG动效制作链路。</p>
+                  <h3>Gemini 3.1的SVG图像生成实测观察</h3>
+                  <p class="synthesis">共识是可直接产出可用SVG动画，但质量与响应速度都还不足以无缝进入高要求生产。</p>
                   <a class="article-link" href="http://www.bilibili.com/video/av116407337486177" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>博主实测称，Gemini 3.1 Pro 能在单次提示下直接生成带视差、分层和过渡效果的原生 SVG 动画，而且不依赖外部库。</p><p><strong>改变：</strong>这意味着设计师或前端可以把一些原本要拆成多步制作的轻量动画，直接改成“文本提示到可用 SVG 代码”的工作流，减少手工搭建和库依赖。</p><p><strong>边界：</strong>材料只强调了原生 SVG 动画生成能力，没有证明它适合复杂交互、长流程代理任务或大型工程级动画场景。</p><p class="source">来源：<a href="https://sereja.tech/blog/gemini-3-1-pro-svg-animations/" target="_blank" rel="noopener noreferrer">Serezha Ris</a></p></div><div class="opinion"><p><strong>观察：</strong>Postorganica 的上手文章认为，Gemini 3.1 已经能生成可运行的 SVG 动画代码，足以覆盖简单 loader 这类常见小型动效。</p><p><strong>改变：</strong>对内容团队、独立开发者或产品前端来说，简单动效不必再先去 After Effects 逐帧制作，可以更快从需求描述进入可嵌入页面的代码产物。</p><p><strong>边界：</strong>作者给出的受益场景主要是“简单 loader”等轻量动画，未表明其在高复杂度视觉设计、精细调参或专业动画制作中可以替代传统工具。</p><p class="source">来源：<a href="https://postorganica.space/gemini-31-i-svg-animatsija/" target="_blank" rel="noopener noreferrer">Postorganica</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者计育韬实测后认为，Gemini 3.1 已经能直接产出“可看”的纯代码 SVG 动画，且延续了可落地到网站的矢量动画工作流，不再只是像素图演示。</p><p><strong>改变：</strong>这意味着前端、设计与内容团队可以把部分宣传动效从“先出图再手写动画”改成“先用提示词生成可嵌入网页的 SVG 代码”，缩短从概念到可交付原型的时间。</p><p><strong>边界：</strong>作者同时明确评价为“能看了，但依然远远不够看”，说明它离稳定的高质量商业成片仍有差距，更适合原型、快闪页和轻量网页动效，不适合直接替代高要求设计制作。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2009641076806410378" target="_blank" rel="noopener noreferrer">计育韬｜知乎《实测 Gemini 3.1 SVG 动画真实水平——能看了，但依然远远不够看》</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇知乎上手体验提到，Gemini 3.1 Pro 虽然能一次生成可用 SVG，成功率尚可，但速度明显变慢：网页版 Canvas 实时预览约 7 分钟才看到动态效果，AI Studio 生成可用 SVG 约耗时 354.7 秒。</p><p><strong>改变：</strong>对个人开发者和小团队来说，它更像一个“能产出代码的慢速创意助手”，适合离线尝试和方案探索，而不适合高频迭代、多人协作时的即时反馈工作流。</p><p><strong>边界：</strong>代价主要是生成等待时间长，交互节奏被拖慢；如果场景要求快速试错、现场改稿或高密度批量出图，这种时延会直接削弱可用性。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2009044311006798535" target="_blank" rel="noopener noreferrer">知乎《Gemini 3.1 Pro 真实体验，到底变好用了还是变难用了？》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">Flux2Klein 5.5外部测评</span>
-                    <span class="source-label">lilys.ai教程整理 / CSDN博客 / 知乎专栏 closerAI ComfyUI</span>
+                    <span class="badge badge-pink">Flux2Klein 5.5局部替换外部测评</span>
+                    <span class="source-label">MyAIForce / lilys.ai 教程笔记 / CSDN 博客</span>
                   </div>
-                  <h3>Flux2Klein 5.5整合包局部替换工作流实操</h3>
-                  <p class="synthesis">外部体验共识是：门槛和等待时间下降，但精细质量仍需实测验证。</p>
+                  <h3>Flux2Klein 5.5局部替换整合包工作流实测</h3>
+                  <p class="synthesis">外部体验共识是：局部替换更快更易部署，但仍依赖遮罩、姿态和修复技巧。</p>
                   <a class="article-link" href="http://www.bilibili.com/video/av116383698521202" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方教程实测称，FLUX.2[klein]可在ComfyUI里以8GB显存完成本地实时图像编辑，并跑通换背景、换服装、人物场景合成和人脸替换等双链路编辑任务。</p><p><strong>改变：</strong>这意味着普通消费级显卡用户也能把局部替换和换装流程放到本地执行，减少对高显存云端环境的依赖，工作流门槛更低。</p><p><strong>边界：</strong>材料只证明其能跑通多类编辑任务，没有给出复杂场景下的稳定性、细节保真率或长批量生产成本。</p><p class="source">来源：<a href="https://lilys.ai/zh/notes/d5-render-20260219/flux-2-klein-realtime-comfyui-image-edit-tutorial" target="_blank" rel="noopener noreferrer">lilys.ai教程整理</a></p></div><div class="opinion"><p><strong>观察：</strong>有上手文章把FLUX.2-Klein-9B-NVFP4描述为“为图像编辑任务量身优化的轻快工作流”，对比传统ComfyUI部署中“配置久、生成慢、衣服边缘发虚、文字易糊”的痛点，强调其5分钟可快速上手图片转换。</p><p><strong>改变：</strong>对做换装和局部替换的创作者来说，实际价值在于把前期搭环境和调节点的时间压缩掉，更快验证服装边缘、局部修改是否可用。</p><p><strong>边界：</strong>这类快上手优势主要指向图片转换/编辑流程，不等于所有高复杂度细节都已解决，尤其文字与边缘质量仍是用户应重点验证的环节。</p><p class="source">来源：<a href="https://blog.csdn.net/weixin_30598047/article/details/158104901" target="_blank" rel="noopener noreferrer">CSDN博客</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方教程作者实测认为，Flux 2 Klein 在 ComfyUI 里做换装时，出图速度更快、成像更锐利，并点名效果优于 Qwen Edit 一类流程。</p><p><strong>改变：</strong>这意味着做局部替换、换装的用户可以用更短等待时间拿到更清晰的结果，适合高频试错和批量微调工作流。</p><p><strong>边界：</strong>作者同时强调要配合遮罩、姿态匹配和高分辨率修复技巧，否则局部替换的一致性和最终细节仍可能不稳。</p><p class="source">来源：<a href="https://myaiforce.com/flux-2-klein-clothes-swap/" target="_blank" rel="noopener noreferrer">MyAIForce</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方上手教程展示了 FLUX.2[klein] 在 ComfyUI 中可进行本地实时图像编辑，并明确提到 4B 版本可在 8GB 显存下流畅运行，覆盖换背景、换服装、人物场景合成和人脸替换测试。</p><p><strong>改变：</strong>这直接降低了本地部署门槛，让只有中低显存设备的个人用户或小团队也能把局部替换和换装流程放到本地执行，减少对云端算力的依赖。</p><p><strong>边界：</strong>材料只明确强调了 4B 版本的低显存可运行性，对更高规格模型的硬件代价和复杂场景下的质量上限没有给出同样具体的验证。</p><p class="source">来源：<a href="https://lilys.ai/zh/notes/d5-render-20260219/flux-2-klein-realtime-comfyui-image-edit-tutorial" target="_blank" rel="noopener noreferrer">lilys.ai 教程笔记</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">AI内参</span>
+                    <span class="badge badge-pink">外部测评提炼</span>
+                    <span class="source-label">综合现有外部片段判断</span>
                   </div>
-                  <h3>Updream对比即梦小云雀，暴露Seedance 2.0多人问题</h3>
-                  <p class="synthesis">外部共识是入口差异真实存在：即梦偏控制，小云雀偏效率与额度。</p>
+                  <h3>Updream对比即梦小云雀定价展示评测</h3>
+                  <p class="synthesis">现有外部片段不足以形成有效测评结论</p>
                   <a class="article-link" href="http://www.bilibili.com/video/av116408377743411" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>AI内参实测认为，Seedance 2.0在原生音画同步和角色一致性上表现突出，物理规律理解也较强，但生成效率和文本指令准确度仍有待优化。</p><p><strong>改变：</strong>这意味着短视频和动漫创作者能更容易做出同步感更强、人物更稳的成片，但团队在批量生产时仍要为返工和多轮提示调参预留时间。</p><p><strong>边界：</strong>如果工作流更看重稳定出片速度或严格按文案执行，Seedance 2.0现阶段仍不算低摩擦方案。</p><p class="source">来源：<a href="https://www.neican.ai/insights/-seedance-20--20260210084006141-0/" target="_blank" rel="noopener noreferrer">AI内参</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>现有片段里仅有对Updream内测口碑的笼统描述，缺少对定价、出片效果、速度、可控性等可验证维度的具体实测结论，也没有形成与即梦小云雀的直接对比。</p><p><strong>改变：</strong>这些信息不足以支撑用户判断两者谁更省钱、谁更适合现有视频工作流，无法转化为可执行的选型依据。</p><p><strong>边界：</strong>材料[1]偏体验印象，材料[2]是邀请码/申请信息，材料[3]虽是横评标题但给出的片段未包含Updream与即梦小云雀的具体对比结果，因此不满足可提炼标准。</p><p class="source">来源：综合现有外部片段判断</p></div></div>
                 </section>
                 </div>
             </section>
