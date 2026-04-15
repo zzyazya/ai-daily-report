@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-04-15 15:13</title>
+  <title>独立测评 · 2026-04-15 17:28</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,62 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">Medium / Michael Hannecke / DEV Community</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验</span>
+                    <span class="source-label">~/adi</span>
                   </div>
-                  <h3>Local-Splitter编码Agent降Token测量研究</h3>
-                  <p class="synthesis">外部观点基本一致：降 Token 靠任务分层、本地首轮处理与重复请求缓存最有效。</p>
+                  <h3>Local-Splitter研究七法降低Coding Agent成本</h3>
+                  <p class="synthesis">外部观点普遍支持“本地处理轻任务、云端处理重任务”的分流思路。</p>
                   <a class="article-link" href="https://arxiv.org/abs/2604.12301" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>《Running AI Coding Assistants Locally — Lessons Learned》指出，小模型本地运行时，对“手动粘贴代码、做聊天式编码辅助”通常够用，但一旦进入 Agent 框架常见的结构化输出和工具调用流程，能力短板会明显暴露。</p><p><strong>改变：</strong>对用户的真实影响是，可以把低风险问答式编码帮助迁到本地以减少云调用，但完整自动化编码 Agent 仍往往需要更强模型兜底，不能把本地化直接等同于全流程替代。</p><p><strong>边界：</strong>边界在于依赖 JSON/XML 结构化输出、函数调用和多步工具编排的工作流，本地小模型未必稳，节省 Token 可能以流程可靠性下降为代价。</p><p class="source">来源：<a href="https://medium.com/@michael.hannecke/running-ai-coding-assistants-locally-lessons-learned-5d4d08f1203a" target="_blank" rel="noopener noreferrer">Medium / Michael Hannecke</a></p></div><div class="opinion"><p><strong>观察：</strong>DEV Community 的生产实践分析提到，语义缓存会先比较新请求与缓存索引的语义相似度，只要命中足够相近的问题，就直接返回缓存结果而无需再次发起模型调用。</p><p><strong>改变：</strong>这会直接改变团队的 Agent 成本结构：对重复修复、相似脚手架生成、反复出现的代码问答，云端 Token 可以被整批削减，而不是只靠单次 Prompt 精简。</p><p><strong>边界：</strong>只在重复度高或语义相近请求足够多的工作流里收益明显；若任务高度一次性、差异大，缓存命中率低，降本效果就有限。</p><p class="source">来源：<a href="https://dev.to/ailoitte_sk/token-cost-optimization-in-production-llms3-approaches-with-real-numbers-40hm" target="_blank" rel="noopener noreferrer">DEV Community</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>博主在用 LM Studio 搭本地 coding agent 时，明确提到本地模型存在“更大参数/显存占用换更强能力、较小配置换更快推理”的实际取舍。</p><p><strong>改变：</strong>这意味着团队若把一部分编码补全或简单修改下放到本地 agent，可用本机算力替代部分云端调用，把云端 token 留给更难的规划和执行任务。</p><p><strong>边界：</strong>代价是需要足够本地硬件，且想要能力更强通常要接受更高内存占用；硬件不足时，本地方案的质量或速度会明显受限。</p><p class="source">来源：<a href="https://adim.in/p/local-coding-agent/" target="_blank" rel="noopener noreferrer">~/adi</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Crawl4AI外部测评</span>
-                    <span class="source-label">腾讯云开发者社区 / CSDN博客（m0_37899908） / 知乎专栏</span>
+                    <span class="badge badge-blue">Crawl4AI 外部测评与上手影响</span>
+                    <span class="source-label">知乎专栏《Crawl4AI 实战指南：面向大模型的智能爬虫工具》 / CSDN 博客《Crawl4ai 框架的学习与使用》 / DICloak《Crawl4AI完整指南：高效抓取网页数据的AI级开源工具》</span>
                   </div>
-                  <h3>Crawl4AI网页抓取与结构抽取实作</h3>
-                  <p class="synthesis">外部体验普遍认为它把动态抓取、Markdown清洗和结构抽取明显串联起来。</p>
+                  <h3>Crawl4AI网页爬取与结构化抽取实战</h3>
+                  <p class="synthesis">共识是它更像面向LLM工作流的开发者型爬虫，而非零门槛采集工具。</p>
                   <a class="article-link" href="https://www.marktechpost.com/2026/04/14/a-coding-implementation-of-crawl4ai-for-web-crawling-markdown-generation-javascript-execution-and-llm-based-structured-extraction/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>腾讯云开发者社区的实测文章提到，Crawl4AI不只抓网页文本，还能接入 OpenAI 等 LLM，把页面内容直接整理成结构化数据，尤其适合动态数据采集。</p><p><strong>改变：</strong>这会把“先抓网页、再清洗、再手写抽取逻辑”的流程压缩成更接近一体化的数据接入步骤，团队可更快把网页接进 Agent、LangChain 或外部数据工具。</p><p><strong>边界：</strong>它的优势主要体现在外部数据连接和动态页面采集这类场景，是否接入 LLM 也会影响成本与流程复杂度。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2472861" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div><div class="opinion"><p><strong>观察：</strong>CSDN实战文展示了用 Crawl4AI 模拟点击“Load More”、保持 session 做分页抓取，并在抓取后直接产出 Markdown 或进一步做结构化抽取。</p><p><strong>改变：</strong>对需要处理前端动态加载、连续翻页和站内链接筛选的用户来说，它把原本分散的浏览器自动化、正文整理和抽取步骤串成了一条可复用工作流。</p><p><strong>边界：</strong>遇到动态内容和反爬场景时，仍可能需要自定义 hook 或浏览器行为，不能完全替代针对站点的调试。</p><p class="source">来源：<a href="https://blog.csdn.net/m0_37899908/article/details/144519806" target="_blank" rel="noopener noreferrer">CSDN博客（m0_37899908）</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方教程指出，Crawl4AI把网页内容转成更干净、结构化的 Markdown，明显是按 RAG 和智能代理的下游使用来设计，而不是停留在原始 HTML 抓取层。</p><p><strong>改变：</strong>这会把团队后处理清洗、分块和喂给大模型的步骤前移并简化，减少从网页源码到可用知识数据之间的人工整理成本。</p><p><strong>边界：</strong>这类收益更适合已经有 LLM/RAG 数据链路的团队；如果只是做传统规则型爬虫，优势不一定明显。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1960357131271274721" target="_blank" rel="noopener noreferrer">知乎专栏《Crawl4AI 实战指南：面向大模型的智能爬虫工具》</a></p></div><div class="opinion"><p><strong>观察：</strong>CSDN 上手文章把 Crawl4AI概括为“AI增强+动态渲染”的 Python 爬取框架，强调它对 SPA 等现代动态网页比传统静态抓取更友好。</p><p><strong>改变：</strong>对开发者来说，这意味着原本要额外处理前端渲染和复杂页面加载的工作，可以更多收敛到同一套采集与抽取流程里，降低复杂网页采集门槛。</p><p><strong>边界：</strong>它仍然是面向 Python 和代码配置的框架，不是零门槛工具；非技术用户或只需简单静态页面抓取的场景未必划算。</p><p class="source">来源：<a href="https://blog.csdn.net/m0_61970162/article/details/154835813" target="_blank" rel="noopener noreferrer">CSDN 博客《Crawl4ai 框架的学习与使用》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">CSDN博客《DeepSeek刚刚开源了一个3B的 OCR模型：什么是DeepSeek-OCR？》</span>
+                    <span class="badge badge-blue">DeepSeek OCR 3B本地可跑实测</span>
+                    <span class="source-label">CSDN博客《消费级的DeepSeek-OCR本地部署实战来了！》 / 知乎《DeepSeek-OCR 详解》</span>
                   </div>
-                  <h3>海外实测DeepSeek OCR称97%精度</h3>
-                  <p class="synthesis">外部实测分歧在于：纯文本可用，复杂文档仍有明显短板。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116406817457262" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测对比认为，DeepSeek-OCR在机打纯文本识别上与PaddleOCR-VL接近，但在手写体、形近字、数学公式、表格解析和竖排内容上明显落后，尤其表格结构错误更突出。</p><p><strong>改变：</strong>这意味着用户若只是批量抽取清晰印刷文本，DeepSeek-OCR可作为可用选项；但涉及发票、报表、试卷、含公式文档等复杂场景时，团队仍需额外人工校对或继续采用更稳的OCR方案，否则后续结构化入库和自动化流程容易出错。</p><p><strong>边界：</strong>作者同时质疑其高压缩路线可能带来信息丢失，因此它并不适合对版面结构、公式和复杂字段完整性要求高的工作流。</p><p class="source">来源：<a href="https://blog.csdn.net/qq_44866828/article/details/153705342" target="_blank" rel="noopener noreferrer">CSDN博客《DeepSeek刚刚开源了一个3B的 OCR模型：什么是DeepSeek-OCR？》</a></p></div></div>
+                  <h3>DeepSeek OCR 3B本地可跑实测</h3>
+                  <p class="synthesis">外部实测共识是能本地跑，但更适合开发测试而非所有OCR需求。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116407052272855" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方部署实战称，DeepSeek-OCR 3B可在消费级 `RTX 4060 8G` 显存设备本地跑通，单页 PDF 处理时间为“数秒”级。</p><p><strong>改变：</strong>这意味着中小团队不必先上高端服务器，就能先在现有开发机验证文档识别流程，把 OCR 原型测试门槛降到消费级显卡。</p><p><strong>边界：</strong>代价是处理速度仍以“单页数秒”为主，更适合原型验证和中低吞吐场景，不适合追求大批量离线处理的团队。</p><p class="source">来源：<a href="https://blog.csdn.net/weixin_42485090/article/details/153735299" target="_blank" rel="noopener noreferrer">CSDN博客《消费级的DeepSeek-OCR本地部署实战来了！》</a></p></div><div class="opinion"><p><strong>观察：</strong>有开发者在 Windows 11 Pro + WSL2 本地完成部署，并做了基础识别效果测试，说明“能否本地跑起来”不只停留在官方口径。</p><p><strong>改变：</strong>对开发者来说，价值在于可以直接把模型接入本地 Linux/WSL 工作流，先做真实文档调试，再决定是否投入到正式业务链路。</p><p><strong>边界：</strong>作者同时提醒这“不是传统意义的 OCR”，而且“也是大部分人自己用不上的东西”，说明它更偏文档理解型能力，不一定适合只想要轻量文字提取的普通个人用户。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/81845230473" target="_blank" rel="noopener noreferrer">知乎《DeepSeek-OCR 详解》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Code外部测评</span>
-                    <span class="source-label">掘金 / 高效码农 / 80AJ</span>
+                    <span class="badge badge-blue">Claude Code 接入智谱模型外部体验</span>
+                    <span class="source-label">cholf5/random Issue #23 / 腾讯云开发者社区 / 智谱 GLM Coding Plan 深度测评</span>
                   </div>
-                  <h3>Claude Code高效编程工作流上手教程</h3>
-                  <p class="synthesis">共识是它能显著提效，但模式切换与异常兜底同样关键。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116407119386109" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>掘金作者实测认为，Claude Code把终端当成统一入口，能直接在开发者原有工作环境里执行任务，不必额外学习新IDE或切换工具。</p><p><strong>改变：</strong>这会把上手成本从“学一套新工作台”降到“在现有命令行里插入AI步骤”，更适合把它快速接进个人或团队日常开发流。</p><p><strong>边界：</strong>这种优势主要建立在开发者本来就熟悉终端的前提下；对强依赖可视化IDE操作的人，收益未必同样明显。</p><p class="source">来源：<a href="https://juejin.cn/post/7513873810698665984" target="_blank" rel="noopener noreferrer">掘金</a></p></div><div class="opinion"><p><strong>观察：</strong>《高效码农》对`/fast`模式的拆解指出，它不是换了模型，而是把同一套系统重配为“优先速度而非成本效率”，属于明确的模式切换策略。</p><p><strong>改变：</strong>这意味着用户可以按任务阶段切换节奏：探索、试错、赶进度时更快出结果，把Claude Code从“单一助手”变成可调度的工作流部件。</p><p><strong>边界：</strong>代价是成本效率让位于响应速度，因此不适合长时间、无节制地作为默认模式常开。</p><p class="source">来源：<a href="https://www.xugj520.cn/archives/claude-code-fast-mode-guide.html" target="_blank" rel="noopener noreferrer">高效码农</a></p></div></div>
-                </section>
-                </div>
-            </section>
-            
-            <section class="role-block">
-              <h2>产品经理视角测评</h2>
-              <div class="role-cards">
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-purple">OmniSide外部测评</span>
-                    <span class="source-label">什么值得买</span>
-                  </div>
-                  <h3>OmniSide聚合GPT-5与Claude 4.5</h3>
-                  <p class="synthesis">现有外部体验更能证明接入方便，而非模型能力优势。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116406783843020" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>什么值得买的上手文实际测试到，OmniSide可在国内网络环境下通过 Edge 扩展直接安装使用，约5秒完成安装，支持微信登录，并以浏览器侧边栏常驻方式接入。</p><p><strong>改变：</strong>这意味着用户不用单独折腾网络环境、账号体系或频繁切换网页，就能在现有浏览器工作流里更低门槛地调用聚合后的 GPT-5、Claude 4.5 等模型。</p><p><strong>边界：</strong>这篇体验主要验证的是接入便捷性与使用形态，没有对 GPT-5、Claude 4.5 的回答质量、稳定性差异、调用成本或高负载场景表现做对比，不适合据此判断模型能力本身。</p><p class="source">来源：<a href="https://post.smzdm.com/p/a26weeqq/" target="_blank" rel="noopener noreferrer">什么值得买</a></p></div></div>
+                  <h3>Claude Code加智谱模型零门槛教程</h3>
+                  <p class="synthesis">共识是门槛和成本明显下降，且在真实编码链路里已具备可用性。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116407505262058" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>开发者在 GitHub 教程中给出可落地的接入路径：智谱国服可用 GLM-4.5 代码编程专享计划，国际服 z.ai 可用约 3 美元/月订阅，并通过创建 API Key 接入 Claude Code。</p><p><strong>改变：</strong>这直接把原本依赖 Anthropic 官方模型的使用门槛，变成了国内开发者可支付、可注册、可自行配置的低成本替代方案。</p><p><strong>边界：</strong>仍需要用户自己完成账号注册、订阅开通和 API Key 配置，适合愿意折腾环境的用户。</p><p class="source">来源：<a href="https://github.com/cholf5/random/issues/23" target="_blank" rel="noopener noreferrer">cholf5/random Issue #23</a></p></div><div class="opinion"><p><strong>观察：</strong>腾讯云开发者社区的实战文记录了从 CLI 安装、IDE 集成到用 Claude Code 零手写代码搭出可运行 AI 后端工程的完整体验，说明智谱 BigModel 方案能跑通 Claude Code 的核心开发链路。</p><p><strong>改变：</strong>对团队和个人用户来说，这意味着接入后不只是能聊天或补全，而是可以继续沿用 Claude Code 的命令行加 IDE 工作流去完成真实项目搭建。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2620125" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -108,24 +92,35 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">外部测评 / 上手体验</span>
-                    <span class="source-label">closerAI（知乎） / 知乎博主《主打快准稳？！黑森林开源FLUX.2 [klein] 四个模型！》</span>
+                    <span class="badge badge-pink">Flux2Klein 5.5外部测评</span>
+                    <span class="source-label">RunComfy / CSDN博客</span>
                   </div>
                   <h3>Flux2Klein 5.5整合包局部替换工作流</h3>
-                  <p class="synthesis">外部体验普遍认为它把局部替换提速降门槛，但仍依赖合适节点设计与算力条件。</p>
+                  <p class="synthesis">外部体验共识是：局部替换更快、更统一，但仍要手动控 seed 与画布条件。</p>
                   <a class="article-link" href="http://www.bilibili.com/video/av116383698521202" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>closerAI在ComfyUI实测中提到，FLUX.2 klein 9B-KV借助KV缓存做多参考图像编辑时，速度可提升约2.5倍，且已给出“人物迁移精准替换”的体验入口。</p><p><strong>改变：</strong>这意味着做局部替换、换装或多参考迁移时，用户能更快完成多轮试错，工作流更适合需要频繁微调的人像编辑场景。</p><p><strong>边界：</strong>作者同时提醒，本地算力不足时更适合改用线上ComfyUI，说明这类工作流虽更快，但仍受本地硬件条件约束。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2015893346632090412" target="_blank" rel="noopener noreferrer">closerAI（知乎）</a></p></div><div class="opinion"><p><strong>观察：</strong>有第三方上手文指出，FLUX.2 klein可直接通过文本指令完成物体替换或移除而无需手工重绘遮罩，并能同时接收人物图与风格图，在不到一秒内完成融合。</p><p><strong>改变：</strong>对用户的直接改变是局部替换和印花/风格迁移的门槛明显下降，很多原本要画mask和反复调节点的操作可以改成更轻的指令式编辑。</p><p><strong>边界：</strong>这套体验依赖ComfyUI原生节点流且需更新到较新的ComfyUI版本，更适合已在节点流中工作的用户。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1995478409447481370" target="_blank" rel="noopener noreferrer">知乎博主《主打快准稳？！黑森林开源FLUX.2 [klein] 四个模型！》</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>RunComfy 的工作流说明显示，FLUX Klein 可在同一套 ComfyUI 流程里完成局部重绘、擦除和外扩，且通过 selector 区分原图构图内修补与扩边后的外绘，强调的是“统一流程+精确控制”。</p><p><strong>改变：</strong>这意味着用户做局部替换时不必在多套节点流之间来回切换，一套整合流就能覆盖修补、删除和补边，明显降低了图像编辑工作流的搭建和切换成本。</p><p><strong>边界：</strong>外扩模式依赖先对画布做缩放或 padding，这类流程更适合定向编辑而不是从零生成整张图。</p><p class="source">来源：<a href="https://www.runcomfy.com/comfyui-workflows/flux-klein-unified-image-editing-inpaint-remove-outpaint-in-comfyui-advanced-image-restoration" target="_blank" rel="noopener noreferrer">RunComfy</a></p></div><div class="opinion"><p><strong>观察：</strong>CSDN 博主把 FLUX.2 [klein] 接入自己的 ComfyUI 流程后，实际感受是“速度快到基本没有任何等待焦虑”，并认为它比预期更适合本地生成式工作流。</p><p><strong>改变：</strong>这对局部替换场景的直接价值是迭代速度更快，用户在调蒙版、提示词和替换细节时能更高频地回看结果，本地工作流的可用性更强。</p><p><strong>边界：</strong>片段主要强调速度与轻量体验，没有给出画质、一致性或复杂编辑场景下的系统性对比。</p><p class="source">来源：<a href="https://blog.csdn.net/yihuaixu/article/details/157069249" target="_blank" rel="noopener noreferrer">CSDN博客</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">Tacotron2外部体验</span>
-                    <span class="source-label">Rohan Kotwani / Medium / deterministic-algorithms-lab / GitHub</span>
+                    <span class="badge badge-pink">Gemini 3.1 SVG外部测评</span>
+                    <span class="source-label">计育韬（知乎）</span>
                   </div>
-                  <h3>TachoTron2五秒克隆声音实测</h3>
-                  <p class="synthesis">外部材料更像工程训练方案，而非5秒即用成品。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116407001944523" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Medium作者实际用Tacotron2配合HiFi-GAN克隆了多位具体人物声音，并把重点放在训练策略与落地步骤，而不是“5秒录音后直接可用”的即时效果。</p><p><strong>改变：</strong>这说明对普通用户或团队而言，真正可复现的Tacotron2语音克隆更像一套训练流程，需要准备数据、调参和声码器配合，工作量明显高于短视频里展示的“一键克隆”。</p><p><strong>边界：</strong>材料没有显示只靠5秒样本就能稳定产出高质量结果，反而暗示其更适合有训练能力的开发者，不适合追求即开即用的轻量场景。</p><p class="source">来源：<a href="https://medium.com/init-deep-dive/voice-cloning-with-tacotron2-and-hifi-gan-30193180be32" target="_blank" rel="noopener noreferrer">Rohan Kotwani / Medium</a></p></div><div class="opinion"><p><strong>观察：</strong>Cross-Lingual-Voice-Cloning项目把Tacotron2改造成跨语种克隆方案，但从片段看实际使用前要拉取NVIDIA仓库、初始化子模块并手动改数据与mel路径，属于明显的工程化部署流程。</p><p><strong>改变：</strong>这对团队的真实意义是：Tacotron2系方案可以扩展到跨语种和较快推理，但接入成本落在环境搭建、数据整理和训练链路维护上，不是单靠几秒音频就能完成的消费级体验。</p><p><strong>边界：</strong>它更适合研究或工程团队验证语音克隆/跨语种能力，不适合希望零配置、低门槛快速出样的个人用户。</p><p class="source">来源：<a href="https://github.com/deterministic-algorithms-lab/Cross-Lingual-Voice-Cloning" target="_blank" rel="noopener noreferrer">deterministic-algorithms-lab / GitHub</a></p></div></div>
+                  <h3>Gemini 3.1实测SVG图像生成惊艳</h3>
+                  <p class="synthesis">共识是适合做初稿，不足以直接生产。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116407337486177" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者计育韬在实测中认为，Gemini 3.1 生成的 SVG 动画已经达到“能看”的程度，说明其从纯演示走向可用草稿，但整体质量距离专业 SVG 交互设计仍有明显差距。</p><p><strong>改变：</strong>这意味着前端、设计和内容团队可以先用它快速产出简单 SVG 动效原型或初稿，缩短从想法到可预览代码的时间，但正式项目仍需人工重做与细修。</p><p><strong>边界：</strong>在专业级、复杂叙事或高规范要求的 SVG 场景里，它还不适合作为最终生产方案，尤其难替代有经验的交互设计与前端实现。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2009641076806410378" target="_blank" rel="noopener noreferrer">计育韬（知乎）</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">Kimi K2.5 外部测评</span>
+                    <span class="source-label">ofox.ai</span>
+                  </div>
+                  <h3>Kimi K2.5视觉推理实测表现亮眼</h3>
+                  <p class="synthesis">外部实测价值集中在图像理解直接接入结构化工作流。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116407589142777" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实战文章提到，Kimi K2.5 在文档照片/发票/合同场景里不只做 OCR，还能结合上下文理解表格与字段关系，直接输出结构化 JSON；对柱状图截图也能还原底层数据。</p><p><strong>改变：</strong>这意味着用户在票据录入、合同结构化、竞品图表抄数这类工作流里，可以把“识别+理解+整理”合并成一步，减少人工校对和二次录入。</p><p><strong>边界：</strong>文章也明确指出 K2.5 当前只支持图片输入，不适合音频、视频流处理；如果任务依赖语音或视频理解，需要换用别的模型。</p><p class="source">来源：<a href="https://ofox.ai/zh/blog/kimi-k2-5-agent-swarm-multimodal-api-guide-2026/" target="_blank" rel="noopener noreferrer">ofox.ai</a></p></div></div>
                 </section>
                 </div>
             </section>
