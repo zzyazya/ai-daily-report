@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-04-14 17:01</title>
+  <title>独立测评 · 2026-04-15 10:19</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,35 +43,62 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
+                    <span class="badge badge-blue">Claude Mythos Preview 外部测评</span>
+                    <span class="source-label">BlockTempo（援引英国AI安全研究所评测）</span>
+                  </div>
+                  <h3>Claude Mythos Preview可端到端攻破企业网络</h3>
+                  <p class="synthesis">共识是其已具备攻击链自动化能力，但真实落地仍受环境约束与可审计性限制。</p>
+                  <a class="article-link" href="https://the-decoder.com/claude-mythos-can-autonomously-compromise-weakly-defended-enterprise-networks-end-to-end/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>BlockTempo援引英国AI安全研究所（AISI）评测称，Claude Mythos Preview在受控环境中可自主完成一套32步企业内网攻击链，并在专家级CTF任务中达到73%成功率，说明它已不只是单点利用，而是能把侦察、横向移动和利用串成完整流程。</p><p><strong>改变：</strong>这意味着企业安全团队面对的已不是“会写利用代码”的模型，而是可能把整套红队流程自动化的代理，蓝队需要把防护重点前移到凭证管理、分段隔离、会话监控和高风险操作审计。</p><p><strong>边界：</strong>该结果来自受控评测环境而非真实生产网络，不能直接等同于对任意企业环境都可稳定复现；同时材料未给出成本、耗时和对抗防御下的成功率细节。</p><p class="source">来源：<a href="https://www.blocktempo.com/aisi-claude-mythos-first-autonomous-cyberattack-enterprise-network-simulation-evaluation/" target="_blank" rel="noopener noreferrer">BlockTempo（援引英国AI安全研究所评测）</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
                     <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">GitHub - DeepInsight-SQL</span>
+                    <span class="source-label">知乎《Crawl4AI 实战指南：面向大模型的智能爬虫工具》 / 技术栈《Crawl4AI精准提取结构化数据》 / Study with GPT《使用Crawl4AI进行JS执行与CSS过滤》</span>
                   </div>
-                  <h3>Google ADK多智能体数据分析流水线教程</h3>
-                  <p class="synthesis">共识是ADK的价值在把多步分析流程工程化并可逐步生产化。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/04/13/google-adk-multi-agent-pipeline-tutorial-data-loading-statistical-testing-visualization-and-report-generation-in-python/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方项目 DeepInsight-SQL 的作者实际把 Google ADK 用在自然语言查 MySQL 的多智能体流水线里，把 SQL 生成、校验、执行和结果分析拆成独立智能体协作完成。</p><p><strong>改变：</strong>这意味着做数据分析的团队可以把原本依赖人工串联的“提问-写SQL-校验-执行-解读”流程改成模块化自动流水线，分工更清晰，也更容易扩展和并行处理。</p><p><strong>边界：</strong>它的适用边界目前主要是数据库查询与数据洞察场景，且示例明确围绕 MySQL，不等于通用型任意数据分析系统。</p><p class="source">来源：<a href="https://github.com/abc89757/DeepInsight-SQL" target="_blank" rel="noopener noreferrer">GitHub - DeepInsight-SQL</a></p></div></div>
+                  <h3>Crawl4AI教程实现爬取执行JS与结构化提取</h3>
+                  <p class="synthesis">共识是它把动态抓取与结构化提取压缩到同一流程。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/04/14/a-coding-implementation-of-crawl4ai-for-web-crawling-markdown-generation-javascript-execution-and-llm-based-structured-extraction/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者在实战指南中强调，Crawl4AI最直观的能力是把网页内容快速转成干净、结构化的 Markdown，而不是停留在原始 HTML 抓取。</p><p><strong>改变：</strong>这会直接减少团队为 RAG、智能代理和知识入库额外编写清洗脚本的工作量，让“抓取→清洗→喂给 LLM”的链路更短。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1960357131271274721" target="_blank" rel="noopener noreferrer">知乎《Crawl4AI 实战指南：面向大模型的智能爬虫工具》</a></p></div><div class="opinion"><p><strong>观察：</strong>技术栈文章把 JsonCssExtractionStrategy 具体拆开后发现，它是用 JSON Schema 配合 CSS 选择器去抽取字段，适合从复杂 HTML 页面里做定向、结构化提取。</p><p><strong>改变：</strong>对需要稳定抽取标题、价格、正文、元数据等固定字段的团队来说，这意味着可以把网页采集结果更直接接入数据库或下游 LLM 流程，而不是依赖脆弱的自由文本解析。</p><p class="source">来源：<a href="https://jishuzhan.net/article/1966355426696019970" target="_blank" rel="noopener noreferrer">技术栈《Crawl4AI精准提取结构化数据》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Code外部上手与工作流观察</span>
-                    <span class="source-label">WenHaoFree / 果叔AI世界 / 阿里云开发者社区</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
+                    <span class="source-label">Gank Interview / Hongkiat</span>
                   </div>
-                  <h3>Claude Code理想项目结构与8个现成模板指南</h3>
-                  <p class="synthesis">外部经验普遍认为，项目结构越清晰，Claude Code 越能从补全工具升级为可委派的工程代理。</p>
-                  <a class="article-link" href="https://sidsaladi.substack.com/p/the-ideal-project-structure-for-claude" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>WenHaoFree 在半年深度使用后认为，Claude Code 真正决定效果的不是单次生成能力，而是“上下文治理”、`Skills` 与 `Hooks` 这套工程化组织方式是否设计到位。</p><p><strong>改变：</strong>这意味着团队要把项目结构、上下文边界和可复用技能流一起设计，Claude Code 才更像稳定的项目协作者，而不是一次性代码生成器。</p><p><strong>边界：</strong>作者为摸清这套机制付出了半年试用和双账号月费成本，说明这类结构化用法有学习门槛，也更适合持续开发而非偶发小改。</p><p class="source">来源：<a href="https://blog.wenhaofree.com/posts/technology/claude-code-architecture-guide/" target="_blank" rel="noopener noreferrer">WenHaoFree</a></p></div><div class="opinion"><p><strong>观察：</strong>果叔AI世界的实操文章展示，Claude Code 可以在约 10 分钟内从零搭出包含前端、后端 API、数据库、测试和部署配置的完整任务管理项目。</p><p><strong>改变：</strong>对个人开发者或小团队来说，这直接把“先把项目骨架和基础模块铺全”这件事压缩到一次连续工作流里，更适合快速验证想法或建立统一模板。</p><p class="source">来源：<a href="https://mrzhangguoguo.github.io/posts/claude-code-first-steps-10min-full-project/" target="_blank" rel="noopener noreferrer">果叔AI世界</a></p></div></div>
+                  <h3>hermes与openclaw三agent部署实测视频</h3>
+                  <p class="synthesis">外部体验共识是多agent更可管，但成本和编排复杂度会上升。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116405424881743" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Gank Interview在部署OpenClaw教程中明确提到，OpenClaw在执行任务时需要调用Claude 3.5 Sonnet或GPT-4o这类大模型来完成“思考”，实际使用不是纯本地零成本代理。</p><p><strong>改变：</strong>这意味着团队把OpenClaw接入真实工作流时，除了部署本体，还必须把模型API额度、令牌消耗和持续运行成本一起纳入预算与运维。</p><p><strong>边界：</strong>如果任务频繁、链路长或多人共用，API令牌消耗会快速放大，因此不适合对成本极敏感或希望完全离线运行的场景。</p><p class="source">来源：<a href="https://www.gankinterview.cn/blog/stop-just-chatting-with-ai-step-by-step-guide-to-deploying-openclaw-let-ai-truly" target="_blank" rel="noopener noreferrer">Gank Interview</a></p></div><div class="opinion"><p><strong>观察：</strong>Hongkiat在“How to Set Up Hermes to Supervise OpenClaw”中把Hermes描述为补上OpenClaw所缺少的监督层，并给出把Hermes与OpenClaw放进同一Telegram、Discord或私有控制频道协同工作的做法。</p><p><strong>改变：</strong>对用户来说，Hermes+OpenClaw更像“监督者+执行者”的双层工作流，能把单一agent执行改成可监控、可接管、可分工的部署方式，更接近新闻里展示的多agent架构思路。</p><p><strong>边界：</strong>这类组合部署会引入额外的通信与编排复杂度，更适合需要监督和分工的持续任务，不一定适合一次性简单指令。</p><p class="source">来源：<a href="https://www.hongkiat.com/blog/hermes-oversee-openclaw-bot/" target="_blank" rel="noopener noreferrer">Hongkiat</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">OpenClaw外部测评</span>
-                    <span class="source-label">阿里云开发者社区 / 腾讯新闻 / 知乎专栏《一文读懂：openClaw 分析与教程+免费大模型》</span>
+                    <span class="badge badge-blue">Seedance 2.0 外部测评/上手体验</span>
+                    <span class="source-label">LaoZhang AI Blog / Apiyi.com Blog</span>
                   </div>
-                  <h3>OpenClaw实测智牛套壳API使用表现</h3>
-                  <p class="synthesis">外部实测共识是能跑通自动化，但接入门槛、报错与API成本都很现实。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116401633231934" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>阿里云开发者社区作者连续实测约2小时后发现，OpenClaw并非“10分钟装好”，实际在安装Node.js、配置API Key和处理429报错时都有明显门槛，且文档要求改动的参数较多。</p><p><strong>改变：</strong>这意味着用户把OpenClaw接到智牛这类套壳API时，真正节省的是后续自动化执行时间，而不是前期接入成本；团队若没有基本排障能力，首次落地会被环境配置和接口稳定性拖慢。</p><p><strong>边界：</strong>作者明确指出它不适合普通用户快速上手，而且API调用成本可能一天从几十元到几百上千元不等，花费高时也未必稳定达到预期效果。</p><p class="source">来源：<a href="https://developer.aliyun.com/article/1724266" target="_blank" rel="noopener noreferrer">阿里云开发者社区</a></p></div><div class="opinion"><p><strong>观察：</strong>腾讯新闻测评中，作者实际跑通了“自动注册邮箱→注册X账号→生成并发布推文”的整套流程，观察到OpenClaw可以把多步网页操作串成一个近乎无人值守的自动化任务。</p><p><strong>改变：</strong>对用户和运营团队来说，这类能力的真实价值不是单轮问答更强，而是把原本要人工点选、切换页面、复制粘贴的重复工作压缩成可连续执行的工作流。</p><p><strong>边界：</strong>这类收益更适合规则清晰、步骤固定的任务；涉及平台风控、账号安全或流程中断时，仍需要人工兜底。</p><p class="source">来源：<a href="https://news.qq.com/rain/a/20260207A02L6000" target="_blank" rel="noopener noreferrer">腾讯新闻</a></p></div></div>
+                  <h3>【全面开放】火山引擎Seedance 2.0全系实测：三种调用方法对比（控制台/MCP/API），成本分析与避坑指南。1-3分钟生成AI视频！</h3>
+                  <p class="synthesis">外部观点更关注接入路径与流程成本，而不只看生成效果。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116403629726673" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方开发者博客指出，现阶段如果团队要用代码接入 Seedance 2.0，真正可行的重点不是“马上全量 GA”，而是先按当前能跑通的接入路径去设计任务排队、轮询取回和结果存储。</p><p><strong>改变：</strong>这意味着研发团队在接入时不能只看单次生成效果，还要把异步任务流当成正式工作流的一部分，否则后续 API 形态变化时容易整套重写。</p><p><strong>边界：</strong>作者明确强调这是“今天实际可行”的阶段性方案，官方能力和开放方式仍在变化，不适合把当前接法当成长期稳定接口来硬编码。</p><p class="source">来源：<a href="https://blog.laozhang.ai/en/posts/seedance-2-api" target="_blank" rel="noopener noreferrer">LaoZhang AI Blog</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方教程总结了 Seedance 2.0 至少存在吉梦、飞书、豆包、火山引擎等多种入口，并且 API 接入时间线与价格预估需要单独评估，不同入口并不是同一种可用性和成本结构。</p><p><strong>改变：</strong>对普通创作者和团队来说，最直接的改变是可以按目标拆路由：想快速试玩可走现成入口，想接入生产流程则要提前核算 API 开放节奏和预算，而不是默认“全面开放=马上可大规模接入”。</p><p><strong>边界：</strong>这种多入口策略的代价是学习和迁移成本更高，尤其对需要统一素材管线的团队，不同入口的能力、价格和上线时点不一致会增加选型复杂度。</p><p class="source">来源：<a href="https://help.apiyi.com/en/seedance-2-how-to-use-guide-en.html" target="_blank" rel="noopener noreferrer">Apiyi.com Blog</a></p></div></div>
+                </section>
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>产品经理视角测评</h2>
+              <div class="role-cards">
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-purple">Claude Cowork x Apify SEO工作流外部观察</span>
+                    <span class="source-label">Bit Rebels / Artificial Corner / Heymaibao</span>
+                  </div>
+                  <h3>Claude Cowork与Apify搭建SEO内容机器</h3>
+                  <p class="synthesis">共识是它能压缩抓取与SEO分析时间，但仍强依赖连接器、额度与人工复核。</p>
+                  <a class="article-link" href="https://aimaker.substack.com/p/claude-cowork-apify-seo-content-machine" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方作者观察到，Claude Cowork会按自然语言任务调用Apify actors抓取网页级数据，并在有额度时结合额外连接器做线索补充，而不是只停留在聊天生成。</p><p><strong>改变：</strong>这让内容团队能把找站点信息、抽取页面数据、喂给后续SEO内容流程的步骤串成一个半自动管线，减少手工复制与多工具切换。</p><p><strong>边界：</strong>它依赖可用连接器与额度，适合结构化抓取和批量整理，不等于能自动解决内容质量判断或策略取舍。</p><p class="source">来源：<a href="https://bitrebels.com/technology/how-to-scrape-any-website-with-claude-cowork-and-apify/" target="_blank" rel="noopener noreferrer">Bit Rebels</a></p></div><div class="opinion"><p><strong>观察：</strong>外部上手文提到，Claude Cowork可通过Apify抓取竞品在投广告，再自动分析CTA、信息表达与情绪倾向，几分钟内生成一份情报报告。</p><p><strong>改变：</strong>对做SEO/增长内容的人来说，这把原本分散的竞品监测、素材归纳和洞察提炼压缩成一次提示词驱动的流程，更适合快速产出选题和内容角度。</p><p><strong>边界：</strong>这类流程更偏竞品情报与模式归纳，适合前期研究，不代表生成出的内容本身就能直接上线或稳定拿到搜索结果。</p><p class="source">来源：<a href="https://artificialcorner.com/p/claude-web-scraping" target="_blank" rel="noopener noreferrer">Artificial Corner</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -81,13 +108,35 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">Cursor IDE 博客</span>
+                    <span class="badge badge-pink">外部测评</span>
+                    <span class="source-label">302.AI 基准实验室 / 百度贴吧用户上手帖</span>
                   </div>
-                  <h3>用户用ChatGPT把爆款AI照片改得更离谱引发热议</h3>
-                  <p class="synthesis">共识是多轮单点修改，比一口气重写更适合夸张改图。</p>
-                  <a class="article-link" href="https://i.redd.it/qkg609dxv0vg1.jpeg" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Cursor IDE 博客在 ChatGPT 图片生成/编辑指南中给出的实操结论是：先用第一轮拿到可接受方向，后续每轮只改一个变量（如背景、视线、材质），比一次性塞入很多要求更容易得到稳定结果。</p><p><strong>改变：</strong>这意味着用户把一张已经出圈的 AI 图再交给 ChatGPT 做“二次夸张改造”时，最有效的工作流不是重做，而是按轮次逐步加码，能更可控地放大戏剧效果并减少主体跑偏。</p><p><strong>边界：</strong>代价是需要多轮反复调整，若一开始就要求同时大改构图、风格和局部细节，结果仍容易失控，不适合追求一键出最终图的场景。</p><p class="source">来源：<a href="https://www.cursor-ide.com/blog/chatgpt-image-generator-guide-2025" target="_blank" rel="noopener noreferrer">Cursor IDE 博客</a></p></div></div>
+                  <h3>百度ernie image 对比 Z image超写实大PK</h3>
+                  <p class="synthesis">外部体验更认可Z-Image的可控商业写实，但稳定性依赖参数约束。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116406213543803" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>302.AI 基准实验室在多流派美学测试中观察到，Z-Image的画面风格更偏稳健的商业美学，且对提示词的执行更精准。</p><p><strong>改变：</strong>这意味着需要可控出图、适合营销物料或商业视觉的团队，更容易把Z-Image纳入标准化出图流程，减少反复改提示词和返工。</p><p><strong>边界：</strong>它在强调强烈视觉冲击和动感张力的场景里不一定占优，追求更激进风格表达时仍可能被其他模型替代。</p><p class="source">来源：<a href="https://302.ai/blog/302-ai-benchmark-lab-review-on-z-image-vs-grok-imagine-vs-midjourney/" target="_blank" rel="noopener noreferrer">302.AI 基准实验室</a></p></div><div class="opinion"><p><strong>观察：</strong>百度贴吧用户实测Z-Image时提到，分辨率设到2048×2048以上更容易“崩图”，尺寸最好保持16的倍数，采样步数也需要按官方推荐区间控制。</p><p><strong>改变：</strong>这对个人创作者和设计团队的真实影响是，Z-Image并不是随手拉高参数就能稳定提升质量，实际工作流里需要先按尺寸和步数做约束，避免浪费算力和出图时间。</p><p><strong>边界：</strong>它不适合一开始就追求超高分辨率或非规则尺寸的粗放式工作流，错误参数设置会直接带来稳定性问题。</p><p class="source">来源：<a href="https://tieba.baidu.com/p/10330386645" target="_blank" rel="noopener noreferrer">百度贴吧用户上手帖</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">DeepSeek专家模式外部测评</span>
+                    <span class="source-label">腾讯云开发者社区</span>
+                  </div>
+                  <h3>DeepSeek专家模式，业务实测，判断力与opus 4.6相同</h3>
+                  <p class="synthesis">外部体验共识是：专家模式更适合高要求专业任务，但功能完整性仍有限。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116398009359719" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方测试称，DeepSeek“专家模式”相较“快速模式”在编程、法律等专业任务上推理更深，代码生成更精准，创意写作也更有层次。</p><p><strong>改变：</strong>对用户和团队的实际意义是，可把日常问答留给快速模式，把代码、专业分析、复杂内容生成切到专家模式，减少来回补充提示词和返工。</p><p><strong>边界：</strong>代价是当前不支持文件上传，因此不适合依赖文档、附件或批量材料一起分析的工作流。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2651390" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">外部测评 / 上手体验 / 真实影响</span>
+                    <span class="source-label">Android Authority</span>
+                  </div>
+                  <h3>How to Use Google Chrome’s New AI-Powered ‘Skills’</h3>
+                  <p class="synthesis">共识是它主要提升重复性浏览任务的操作效率。</p>
+                  <a class="article-link" href="https://www.wired.com/story/how-to-use-google-chrome-ai-powered-skills/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Android Authority指出，Chrome 桌面端 Gemini 侧边栏新增的“Skills”本质上是把高频重复提示词保存成可复用模板，用户不必每次重新完整输入，也能直接浏览现成 Skills。</p><p><strong>改变：</strong>对经常做固定型浏览任务的人来说，这会把“想提示词—手动输入—反复改写”的过程缩短成一键调用，更适合把 Chrome 内的总结、提炼、改写类操作做成稳定工作流。</p><p><strong>边界：</strong>它更适合重复性强、提示词相对固定的任务；如果问题每次都高度变化，Skills 只能省输入时间，不能替代用户判断输出是否真的可用。</p><p class="source">来源：<a href="https://www.androidauthority.com/google-chrome-gemini-sidebar-time-saving-skills-3657303/" target="_blank" rel="noopener noreferrer">Android Authority</a></p></div></div>
                 </section>
                 </div>
             </section>
