@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-04-16 17:50</title>
+  <title>独立测评 · 2026-04-17 08:47</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,35 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Kimi K2.6 外部测评摘录</span>
-                    <span class="source-label">知乎答主上手体验</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验 / 对用户真实影响</span>
+                    <span class="source-label">LaoZhang AI Blog / 阿里云开发者社区 / ccino.org</span>
                   </div>
-                  <h3>Kimi K2.6对比Claude Code编码实测</h3>
-                  <p class="synthesis">外部体验更偏向“用Kimi做规划，不单独包办执行”。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116412890943806" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎答主的实操反馈是，Kimi K2.6 Code Preview更适合先做代码规划，再通过`codex exec`这类外部执行链路落地，而不是单靠它在超长上下文里一路写到底。</p><p><strong>改变：</strong>这意味着对开发者更现实的用法是把Kimi K2.6放在“规划/拆解/给方案”环节，执行层仍需配合CLI代理或其他代码工具，工作流会从单模型直写转向“规划+执行”分工。</p><p><strong>边界：</strong>答主明确提到100K级上下文仍会碰到“大模型死亡线”，且这不是Kimi独有问题，因此它不适合指望靠超长上下文一次性稳定处理大型连续工程任务。</p><p class="source">来源：<a href="https://www.zhihu.com/question/2027296175632528913" target="_blank" rel="noopener noreferrer">知乎答主上手体验</a></p></div></div>
+                  <h3>pi-mono与Claude Code工程能力评测</h3>
+                  <p class="synthesis">共识是Claude Code强在云端长上下文工程流，但成本与本地替代性有限。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116414384051550" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>LaoZhang在对比Claude Code与Cursor时指出，`Cursor Pro（$20）+ ClaudeCode Pro（$20）` 的组合月成本约为40美元，已经接近一个Cursor Teams席位的价格。</p><p><strong>改变：</strong>这意味着个人开发者或小团队如果把Claude Code当作主力工程代理，再叠加编辑器型AI工具，实际采购会从“单工具订阅”变成“组合式工作流成本”评估。</p><p><strong>边界：</strong>这条观察主要回答成本与工具组合问题，不直接证明Claude Code在所有工程任务上的代码质量或成功率更高。</p><p class="source">来源：<a href="https://blog.laozhang.ai/zh/posts/claude-code-vs-cursor" target="_blank" rel="noopener noreferrer">LaoZhang AI Blog</a></p></div><div class="opinion"><p><strong>观察：</strong>阿里云开发者社区的实测文章提到，Claude Code从产品设计上就深度依赖云端超长上下文，单系统提示就接近3万Token，现阶段26B级本地模型难以优雅承载这一工作方式。</p><p><strong>改变：</strong>对用户的真实影响是：Claude Code更适合需要大仓库理解、长链路修改和跨文件代理式编程的云端工作流，本地小模型目前很难完整复刻它的工程能力体验。</p><p><strong>边界：</strong>它不适合强离线、强隐私隔离或希望用本地中小模型低成本替代Claude Code的场景，至少在当前本地模型上下文和推理速度下如此。</p><p class="source">来源：<a href="https://developer.aliyun.com/article/1724611" target="_blank" rel="noopener noreferrer">阿里云开发者社区</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Hermes-Agent vs OpenClaw 外部测评摘录</span>
-                    <span class="source-label">Kanaries Docs</span>
+                    <span class="badge badge-blue">飞书AI Agent 2026最新版中文搭建手册</span>
+                    <span class="source-label">知乎</span>
                   </div>
-                  <h3>21-Hermes-Agent对比OpenClaw真实任务实测</h3>
-                  <p class="synthesis">现有外部信息更像场景分流，而非谁全面碾压谁。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116413511568228" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Kanaries 的对比文章把 RunCell、HermesAgent 和 OpenClaw 放进真实工作流里比较后指出：当实际任务主要发生在 Jupyter Notebook 中时，RunCell 比 HermesAgent 或 OpenClaw 更合适。</p><p><strong>改变：</strong>这意味着以 Notebook 为核心的个人或团队，不必把通用 Agent 硬套进数据分析/实验工作流，选型时应优先考虑对 Notebook 原生支持更强的工具。</p><p><strong>边界：</strong>这个结论只明确覆盖 Notebook 主导的工作场景，不能据此推出 HermesAgent 或 OpenClaw 在网页、桌面协作或通用多步骤任务中同样落后。</p><p class="source">来源：<a href="https://docs.kanaries.net/zh/articles/hermes-agent-vs-openclaw" target="_blank" rel="noopener noreferrer">Kanaries Docs</a></p></div></div>
+                  <h3>飞书AI Agent 2026最新版中文搭建手册</h3>
+                  <p class="synthesis">共识是它最能改变企业内部工具与群聊协作流程，但复杂场景仍有集成和工程化门槛。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116413847046047" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者拆解飞书CLI后给出的结论是：这个官方开源工具提供200+命令和19个AI Agent Skills，可让Claude Code、Cursor等助手直接操作飞书的日历、文档、多维表格和消息等核心能力。</p><p><strong>改变：</strong>对用户和团队的直接变化是，AI不再只是“给建议”，而是能在办公协作场景里直接执行读写和流转动作，减少人工复制粘贴与多应用切换。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2021337273094947061" target="_blank" rel="noopener noreferrer">知乎</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">CSDN博客《SmolAgents快速上手：最优雅的Agent构建工具》 / 腾讯云开发者社区</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验 / 工作流影响</span>
+                    <span class="source-label">掘金文章《用ClaudeCode接入GLM-5，直接在熟悉的工作流里测试》 / LINUX DO 话题《关于gpt5.4、sonnet4.6、glm5调用skills...》 / OpenAI Community《Introducing Codex Plugin for Claude Code》</span>
                   </div>
-                  <h3>SmolAgents多Agent动态编排实战方案</h3>
-                  <p class="synthesis">共识是上手快、编排轻，但生产级稳定性证据不足。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/04/15/a-coding-implementation-to-build-multi-agent-ai-systems-with-smolagents-using-code-execution-tool-calling-and-dynamic-orchestration/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>CSDN 上手文章实际演示了用 `CodeAgent + ManagedAgent` 把网页搜索子代理封装进主代理流程，并引用了 Hugging Face 多智能体方案在 GAIA 排行榜中的案例，说明 SmolAgents 的多 Agent 编排不是停留在概念层，而是已有可复用的实现路径。</p><p><strong>改变：</strong>对想做多 Agent 工作流的团队来说，原本需要手写大量调度胶水代码的搜索、执行、委派链路，可以先用框架自带的代理管理方式快速搭出原型，缩短验证多角色协作流程的时间。</p><p><strong>边界：</strong>材料只展示了可行性和接线方式，没有给出复杂生产场景下的稳定性、成本控制或长链路调度失败率数据。</p><p class="source">来源：<a href="https://blog.csdn.net/SoulmateY/article/details/145356782" target="_blank" rel="noopener noreferrer">CSDN博客《SmolAgents快速上手：最优雅的Agent构建工具》</a></p></div><div class="opinion"><p><strong>观察：</strong>腾讯云开发者社区的体验文强调 smolagents 可以“3 行代码”起步，同时保留传统工具调用，并支持 E2B 沙盒执行，这表明它把代码执行型 Agent 和工具型 Agent 放在同一开发范式里，降低了多步骤工作流的搭建门槛。</p><p><strong>改变：</strong>对个人开发者和小团队而言，这会直接改变原型开发节奏：先用极少代码把可执行 Agent 跑通，再按需要接入工具或沙盒安全层，而不是一开始就搭复杂框架。</p><p><strong>边界：</strong>这种低门槛更适合快速验证和轻量自动化；材料没有证明它在强约束企业环境或高可靠生产编排里一定优于更重型框架。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2485785" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div></div>
+                  <h3>智谱Glm5对比Claude Code与Codex工作流评测观察</h3>
+                  <p class="synthesis">共识是关键不只模型强弱，而是谁更容易嵌入现有代码工作流。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116415726092843" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>掘金作者实际把 GLM-5 接入 Claude Code，在不更换主工具的前提下直接沿用原有编码代理工作流做测试。</p><p><strong>改变：</strong>对已经依赖 Claude Code 的个人或团队来说，这意味着评估 GLM-5 不必先迁移整套工具链，能把模型差异和工作流差异分开看。</p><p><strong>边界：</strong>这类结论主要说明“可接入、可试用”，并不等于 GLM-5 在所有编码任务上都优于原生 Claude Code。</p><p class="source">来源：<a href="https://juejin.cn/post/7605529884823420991" target="_blank" rel="noopener noreferrer">掘金文章《用ClaudeCode接入GLM-5，直接在熟悉的工作流里测试》</a></p></div><div class="opinion"><p><strong>观察：</strong>LINUX DO 开发者把 gpt-5.4、sonnet-4.6、glm-5 放在同一个 Claude Code + skills 环境里写单元测试，属于尽量控制变量的同工作流对比。</p><p><strong>改变：</strong>这对用户的真实意义是，团队可以在同一套 agent、skills 和本地环境下比较不同模型的产出质量，减少“换工具导致体验变化”带来的误判。</p><p><strong>边界：</strong>结果会明显受本地 superpowers 套件和额外 skills 配置影响，不适合被直接当成模型裸能力排名。</p><p class="source">来源：<a href="https://linux.do/t/topic/1935773" target="_blank" rel="noopener noreferrer">LINUX DO 话题《关于gpt5.4、sonnet4.6、glm5调用skills...》</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Gemma 4 微调与部署外部观察</span>
+                    <span class="source-label">Medium（Google Cloud 工作流实操文）</span>
+                  </div>
+                  <h3>Oxen.ai演示Gemma 4微调与部署流水线</h3>
+                  <p class="synthesis">共识是：Gemma 4 流水线化可落地，但仍依赖云环境准备。</p>
+                  <a class="article-link" href="https://ghost.oxen.ai/writing-a-fine-tuning-and-deployment-pipeline-isnt-as-easy-as-it-looks-gemma-4-version/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Medium 的实操文章把 Gemma 4 微调整理成一条可执行的 Cloud Run Jobs 流水线，并明确展示了用 `gcloud beta run jobs execute gemma4-finetuning-job --region $REGION --async` 触发任务，说明这不是停留在概念层的演示，而是可复用的作业化流程。</p><p><strong>改变：</strong>这对团队的真实改变是：Gemma 4 微调可以从一次性 notebook 试验，转成可重复提交、异步执行、便于接入现有云端部署流程的标准作业，减少手工运维和环境漂移。</p><p><strong>边界：</strong>代价是前置环境要求并不低，文章明确要求先准备好 GCP 软件与环境配置，而且流程建立在 Cloud Run Jobs 与云 GPU 资源之上，不适合想完全本地、零云依赖完成微调部署的小团队。</p><p class="source">来源：<a href="https://medium.com/google-cloud/fine-tuning-gemma-4-with-cloud-run-jobs-serverless-gpus-nvidia-rtx-6000-pro-for-pet-breed-d408c7e24be2" target="_blank" rel="noopener noreferrer">Medium（Google Cloud 工作流实操文）</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -81,13 +92,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">Flux2Klein 5.5外部测评摘录</span>
-                    <span class="source-label">AI Study Now / Stable Diffusion Tutorials / kombitz</span>
+                    <span class="badge badge-pink">Seedance 2.0外部测评</span>
+                    <span class="source-label">爱范儿</span>
                   </div>
-                  <h3>Flux2Klein 5.5局部替换与换装实测</h3>
-                  <p class="synthesis">共识是效果可做强，但要靠更重工作流和更高硬件成本换取。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116383715165240" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方上手文指出，做人脸替换/局部编辑时，把合成后的画面先送入 `Crop Face` 再最终生成，能让模型把分辨率集中在人脸身份上，而不是浪费在背景区域。</p><p><strong>改变：</strong>这意味着用户在用 Flux2Klein 做局部替换、换装并保留原人脸时，往往需要加入额外的人脸裁切与精修步骤，才能提高身份一致性、减少返工。</p><p><strong>边界：</strong>代价是工作流更复杂，且这个办法主要解决人脸一致性，不等于整张图或服装细节都会同步提升。</p><p class="source">来源：<a href="https://aistudynow.com/how-i-fixed-face-swaps-the-ultimate-flux-2-klein-9b-comfyui-workflow/" target="_blank" rel="noopener noreferrer">AI Study Now</a></p></div><div class="opinion"><p><strong>观察：</strong>有安装与实测教程提到，Flux2Klein 想要接近高质量生成/编辑效果时，通常要接受较高延迟和较重的硬件占用。</p><p><strong>改变：</strong>对实际用户而言，Flux2Klein 更像是能换来更好局部替换与编辑质量的重型工作流，适合离线出图和精修，不适合追求快速迭代的轻量场景。</p><p><strong>边界：</strong>边界在于推理速度和显存/算力成本，硬件一般的个人用户很难无痛使用高质量配置。</p><p class="source">来源：<a href="https://www.stablediffusiontutorials.com/2026/01/flux2-klein.html" target="_blank" rel="noopener noreferrer">Stable Diffusion Tutorials</a></p></div></div>
+                  <h3>Seedance 2.0原生1080P涨价实测</h3>
+                  <p class="synthesis">外部实测更认可生成上限，但未替高成本给出充分性价比背书。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116415742876482" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>爱范儿实测认为，Seedance 2.0在没有参考视频、也未给出具体动作提示的情况下，仍能生成动作复杂度接近双人花样滑冰表演的舞蹈视频，说明其运动编排与画面完成度明显提升。</p><p><strong>改变：</strong>这意味着普通用户或内容团队仅靠较粗的文本提示就更容易做出高复杂度表演视频，前期分镜、动作设计和素材准备的门槛被压低。</p><p><strong>边界：</strong>该体验片段只证明其在舞蹈类高动态场景下的生成能力，未提供成本、稳定性、长时长一致性或1080P输出性价比的完整对比，因此不适合据此单独判断其是否值得为单次高价生成买单。</p><p class="source">来源：<a href="https://www.ifanr.com/1654856" target="_blank" rel="noopener noreferrer">爱范儿</a></p></div></div>
                 </section>
                 </div>
             </section>
