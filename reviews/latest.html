@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-04-17 17:52</title>
+  <title>独立测评 · 2026-04-18 08:39</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -37,7 +37,72 @@
       <h1>独立测评正式页</h1>
       <p>本页按角色对象整理最终测评结果。每张卡片尽量回答三个问题：观察到了什么、这意味着什么、边界在哪。</p>
     </section>
-    <section class="role-block"><h2>今日测评</h2><p class="empty">暂无可展示的角色化测评结果。</p></section>
+    
+            <section class="role-block">
+              <h2>开发者视角测评</h2>
+              <div class="role-cards">
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Claude Opus 4.7外部测评</span>
+                    <span class="source-label">KLab / Claude Opus 4.7 全面解析 / 网易订阅（汇总 Cognition、CodeRabbit、Bolt 等外部反馈） / 知乎 / Claude Opus 4.7完整评测</span>
+                  </div>
+                  <h3>Claude Opus 4.7评测聚焦编码与长上下文</h3>
+                  <p class="synthesis">外部共识是长任务编码更稳，但提效高度依赖任务类型与接入方式。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116418779546844" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>KLab 的第三方解析指出，Claude Opus 4.7 在编程相关基准上较 4.6 有明显跃升，例如 CursorBench 从 58% 提到 70%，Rakuten-SWE-Bench 的解题量达到 4.6 的 3 倍，说明它在代码理解、跨文件修复和长上下文任务上更稳定。</p><p><strong>改变：</strong>这会直接改变开发者把模型用于真实仓库重构、长链路修 bug 和多文件协同修改的信心，减少中途换模型或人工接管的频率。</p><p><strong>边界：</strong>文章同时把价格、上下文和新功能与 4.6 并列比较，意味着升级判断不能只看榜单，成本与具体工作流匹配度仍是取舍点。</p><p class="source">来源：<a href="https://klab.tw/2026/04/claude-opus-4-7/" target="_blank" rel="noopener noreferrer">KLab / Claude Opus 4.7 全面解析</a></p></div><div class="opinion"><p><strong>观察：</strong>网易转载的外部测评汇总里，多家工具方给出相近反馈：Cognition 认为它能连续工作数小时不掉线，CodeRabbit 说代码召回率提升超 10%，Bolt 提到在较长应用构建任务里最好情况下比 4.6 提升 10%，且减少了过去那种中途退步。</p><p><strong>改变：</strong>对团队而言，这意味着 Claude Opus 4.7 更适合放进无人值守或半自动开发流程里跑长任务，尤其是持续编码、审查和大仓库迭代这类需要稳定性的环节。</p><p><strong>边界：</strong>这些收益主要集中在长任务和复杂工作流，Bolt 的表述也说明提升并非所有场景都大幅增加，短任务或简单补全未必同样明显。</p><p class="source">来源：<a href="https://www.163.com/dy/article/KQNAFA1F0511N33R.html" target="_blank" rel="noopener noreferrer">网易订阅（汇总 Cognition、CodeRabbit、Bolt 等外部反馈）</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Claude Opus 4.7外部测评</span>
+                    <span class="source-label">知乎专栏《Claude Opus 4.7 实测：对比 GPT-5.4》 / Toolin.ai《Claude Opus 4.7 上线实测：编程第一、视觉翻3倍，但这些坑别踩》 / ChooseAI《Claude Opus 4.7 深度实测：性能狂飙但“不说人话”》</span>
+                  </div>
+                  <h3>Claude Opus 4.7编程实测与对比表现</h3>
+                  <p class="synthesis">共识是编程更强，但成本、长上下文和表达体验有明显取舍。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116421178692971" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎实测作者在首轮对比中重点观察Claude Opus 4.7相较4.6的编程评分变化，并把它与GPT-5.4放在同一轮基准里直接比较，结论指向其代码能力有明显提升。</p><p><strong>改变：</strong>对需要在同一任务里比较多模型产出的开发者来说，这意味着Claude Opus 4.7更可能进入主力编程模型候选，尤其适合代码生成、修复与综合评分导向的选型流程。</p><p><strong>边界：</strong>片段只说明做了基准与代际对比，未给出具体失败样例、成本和稳定性细节，团队若要替换现有主模型仍需自行补测速率与费用。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2028628910833682248" target="_blank" rel="noopener noreferrer">知乎专栏《Claude Opus 4.7 实测：对比 GPT-5.4》</a></p></div><div class="opinion"><p><strong>观察：</strong>Toolin评测称Claude Opus 4.7在编程项上以SWE-bench Pro 64.3%超过GPT-5.4，视觉分辨率提升约3倍，但同时出现token消耗上涨35%和长上下文能力明显下滑。</p><p><strong>改变：</strong>这对真实工作流的意义是，做高价值编码任务、视觉读图或复杂工程问题时可能更强，但团队在长仓库分析、超长会话排障和预算敏感场景下要重新设计上下文切分与成本控制策略。</p><p><strong>边界：</strong>它不适合默认套用到一切任务；如果任务高度依赖超长上下文持续记忆，或对token成本极敏感，升级收益可能被代价抵消。</p><p class="source">来源：<a href="https://toolin.ai/blog/claude-opus-4-7-guide" target="_blank" rel="noopener noreferrer">Toolin.ai《Claude Opus 4.7 上线实测：编程第一、视觉翻3倍，但这些坑别踩》</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Claude Opus 4.7 外部测评</span>
+                    <span class="source-label">YouTube 博主测评《开发者神器！Anthropic编程新王Claude Opus 4.7全方位实测！》 / 袁慎建的博客 / 知乎专栏《Claude Opus 4.7 来了，编程能力又炸了》</span>
+                  </div>
+                  <h3>Claude Opus 4.7编程实测视频观察</h3>
+                  <p class="synthesis">外部测评共识是复杂编程更稳，但升级要看兼容与任务类型。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116420457332792" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>YouTube测评者实测称，Claude Opus 4.7在前端开发、iOS原生应用、开源项目PR和“读论文后自动实现”这类复杂编程任务里，配合1M上下文与xhigh思考模式，能把多步骤任务一次性推进得更完整。</p><p><strong>改变：</strong>这意味着开发者在长上下文、跨技术栈的任务中，来回补提示和拆分子任务的次数可能减少，更适合把需求、代码修改和提交串成一次工作流。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=bAp4zCzhcsE" target="_blank" rel="noopener noreferrer">YouTube 博主测评《开发者神器！Anthropic编程新王Claude Opus 4.7全方位实测！》</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方深度解析认为，Claude Opus 4.7相较4.6不只是基准分更高（文中提到SWE-bench Pro 64.3%），还加入了xhigh努力等级、自适应推理和自我验证，并把视觉分辨率提升到3倍。</p><p><strong>改变：</strong>对需要同时处理代码、界面截图或设计稿的团队来说，模型更适合承担“先分析再生成并自查”的编程辅助工作，减少多模态输入下的漏看和返工。</p><p><strong>边界：</strong>文章同时提醒存在API破坏性变更，说明升级不是无成本切换，已有集成需要先评估兼容性和迁移代价。</p><p class="source">来源：<a href="https://yuanshenjian.cn/articles/2026/04/17/claude-opus-4-7-model-deep-dive" target="_blank" rel="noopener noreferrer">袁慎建的博客</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Claude Opus 4.7与Claude Code外部观察</span>
+                    <span class="source-label">高效码农 / 阿里云开发者社区</span>
+                  </div>
+                  <h3>Claude Opus 4.7实测与Claude Code认证观察</h3>
+                  <p class="synthesis">共识是能力提升体现在更完整交付，但代理式用法伴随更高上手成本。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116419903626234" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>高效码农在一篇针对Claude Opus 4.7的深度测评中，直接给出“视觉能力暴涨三倍、生产任务完成量翻三番”的结论，说明其把模型能力提升落到了具体任务产出上。</p><p><strong>改变：</strong>这意味着对要用模型直接完成网页、PPT、小游戏这类交付物的用户来说，可用初稿的完整度更高，能把AI从“给思路”推进到“先做出一版成品”。</p><p class="source">来源：<a href="https://www.xugj520.cn/archives/claude-opus-4-7-update-visual-capacity-production-tasks.html" target="_blank" rel="noopener noreferrer">高效码农</a></p></div><div class="opinion"><p><strong>观察：</strong>阿里云开发者社区的实战复盘作者在连续一周深度体验Claude Code后，认为它不像Copilot这类“打字快的助手”，而更像“能独立干活的初级开发者”，核心差异是CLI原生代理而非IDE插件。</p><p><strong>改变：</strong>对团队工作流的真实改变是，Claude Code更适合串起环境搭建、插件配置到真实项目验证的整段流程，让AI承担连续执行型任务，而不只是补全几行代码。</p><p><strong>边界：</strong>但这种CLI原生代理形态也带来更高的上手和配置成本，作者明确提到过程包含环境搭建、插件配置与踩坑记录，不适合只想零配置即插即用的用户。</p><p class="source">来源：<a href="https://developer.aliyun.com/article/1716384" target="_blank" rel="noopener noreferrer">阿里云开发者社区</a></p></div></div>
+                </section>
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>美术视角测评</h2>
+              <div class="role-cards">
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">GPT-Image2外部测评</span>
+                    <span class="source-label">知乎专栏《我被灰度到了，实测 GPT-imagev2,中文直接封神!》 / DotAI / Polo API Blog</span>
+                  </div>
+                  <h3>GPT-Image2首发实测关注人物文字与氛围</h3>
+                  <p class="synthesis">外部实测共识是中文文字可用性大涨，海报与人物场景图更接近直接交付。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116420222390543" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎博主实测认为，GPT-Image2在中文文字生成上明显强于上一代，前代常见的缺笔画、字体变形和“类汉字”问题在新模型上显著缓解。</p><p><strong>改变：</strong>这意味着做中文海报、封面图和带字配图时，用户直接出图可用率更高，后期补字和返工次数会减少。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2028211274605970012" target="_blank" rel="noopener noreferrer">知乎专栏《我被灰度到了，实测 GPT-imagev2,中文直接封神!》</a></p></div><div class="opinion"><p><strong>观察：</strong>DotAI团队的上手拆解认为，GPT-Image-2的提升集中在密集文字渲染、空间推理、黄色滤镜校正和相片级写实，说明它不只是把画面做“漂亮”，而是在文字与场景关系上更稳。</p><p><strong>改变：</strong>对营销设计、商品物料和视觉自动化团队来说，这会提升一张图同时承载人物、文字和场景氛围的完成度，减少多轮提示词试错。</p><p class="source">来源：<a href="https://dotai.hk/blog/gpt-image-2-ai-image-generation-test" target="_blank" rel="noopener noreferrer">DotAI</a></p></div></div>
+                </section>
+                </div>
+            </section>
+            
   </main>
 </body>
 </html>
