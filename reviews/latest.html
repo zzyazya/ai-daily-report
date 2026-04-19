@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-04-19 08:40</title>
+  <title>独立测评 · 2026-04-19 17:36</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">知乎｜LangChain 结构化输出：Pydantic+OpenAI 案例演示 / CSDN｜LangChain 结构化输出：用 Pydantic + PydanticOutputParser 驯服 LLM 的“自由发挥” / 知乎｜LangGraph 源码分析｜结构化输出</span>
-                  </div>
-                  <h3>Issue #128解析Pydantic结构化LLM输出</h3>
-                  <p class="synthesis">共识是它显著降低了解析成本，但前提是 schema 和版本兼容要先管好。</p>
-                  <a class="article-link" href="https://mlpills.substack.com/p/issue-128-structured-llm-outputs" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者在 LangChain 演示中观察到，`PydanticOutputParser` 能把 LLM 原本的自然语言回复按 `BaseModel` 约束解析成字段明确的结构化结果，而不是再手动从长文本里拆值。</p><p><strong>改变：</strong>这会直接减少应用层清洗和字段映射代码，让抽取、表单填充、数据库入库这类流程更容易接到生产工作流里。</p><p><strong>边界：</strong>前提是团队要先把目标输出字段和类型定义清楚；如果任务本身高度开放、结构经常变化，建模成本会变高。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/717120883" target="_blank" rel="noopener noreferrer">知乎｜LangChain 结构化输出：Pydantic+OpenAI 案例演示</a></p></div><div class="opinion"><p><strong>观察：</strong>CSDN 的上手文章对比了不用 parser 与使用 `PydanticOutputParser` 的流程，指出前者往往需要开发者自己处理数据类型和访问方式，而后者把这部分规范化了。</p><p><strong>改变：</strong>对团队而言，结构化输出从“每个调用点各写各的解析逻辑”变成统一 schema 驱动，能降低多人协作时的解析分歧和维护成本。</p><p><strong>边界：</strong>代价是输出会被更强地约束在预设模型内，若模型经常漏字段或返回不合规内容，仍需要补充重试、容错或回退逻辑。</p><p class="source">来源：<a href="https://blog.csdn.net/qq_36451127/article/details/146601532" target="_blank" rel="noopener noreferrer">CSDN｜LangChain 结构化输出：用 Pydantic + PydanticOutputParser 驯服 LLM 的“自由发挥”</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Claude Opus 4.7 外部测评</span>
-                    <span class="source-label">Vellum AI</span>
-                  </div>
-                  <h3>Claude Opus 4.7智能性能与价格分析</h3>
-                  <p class="synthesis">共识是质量更强，但真实成本要按任务重算。</p>
-                  <a class="article-link" href="https://artificialanalysis.ai/models/claude-opus-4-7" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Vellum AI指出，Claude Opus 4.7已在多平台上线，单价仍是每百万输入5美元、输出25美元，但基准分数提升需要结合具体任务看，不能只把“价格不变”理解为总体成本不变。</p><p><strong>改变：</strong>对团队来说，这意味着迁移到4.7时不能只看API标价，而要按自己的真实任务重新评估质量提升是否足以覆盖调用开销。</p><p><strong>边界：</strong>这类结论主要基于公开基准与成本拆解，不等于你的业务场景一定同步受益。</p><p class="source">来源：<a href="https://www.vellum.ai/blog/claude-opus-4-7-benchmarks-explained" target="_blank" rel="noopener noreferrer">Vellum AI</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
                     <span class="badge badge-blue">外部测评</span>
-                    <span class="source-label">YouTube 视频简介</span>
+                    <span class="source-label">iWeaver / ClaudeFast</span>
                   </div>
-                  <h3>Opus 4.7对比GPT-5.4与Kimi K2.6实测</h3>
-                  <p class="synthesis">材料不足，无法提炼可靠外部实测结论</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116425222065066" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>现有片段里唯一直接对应该对比视频的第三方来源只说明其会比较 Opus 4.7、GPT-5.4 与 Kimi K2.6 在后端、前端和整体编码任务中的表现，但未提供任何具体实测结果、胜负结论或工作流表现细节。</p><p><strong>改变：</strong>由于缺少实际测试现象、耗时、成本、稳定性或代码质量等信息，用户无法据此判断三者在真实开发流程中的替代关系。</p><p><strong>边界：</strong>其余材料主要讨论相邻版本或不同对比对象，不能严格外推到这条新闻中的 4.7/5.4/K2.6 实测结论。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=NF615dSc6e4" target="_blank" rel="noopener noreferrer">YouTube 视频简介</a></p></div></div>
+                  <h3>Claude Opus 4.7、GPT-5.4与Kimmy K256 Code实测对比</h3>
+                  <p class="synthesis">共识是：真实修库看 Claude，合成题看 GPT。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116428795548769" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方对比指出，GPT-5.4在合成类 Python 谜题上更强，但 Claude Opus 4.7 在 SWE-bench 这类真实 GitHub 问题修复基准上领先，更接近实际工程修 bug 的表现。</p><p><strong>改变：</strong>这意味着团队如果主要把模型用于仓库排错、提交修复和代理式 coding 工作流，选 Claude Opus 4.7 更可能减少反复改提示和人工返工；如果是刷算法题、做小型代码推理题，GPT-5.4 可能更顺手。</p><p><strong>边界：</strong>这个结论的边界是不同基准测到的是不同能力：合成题优势不等于真实项目优势，因此不适合直接拿单一跑分替代你自己的代码库验证。</p><p class="source">来源：<a href="https://www.iweaver.ai/ja/blog/claude-opus-4-7-vs-gpt-5-comparison/" target="_blank" rel="noopener noreferrer">iWeaver</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇第三方分析给出更具体的代理式编码基准结果：在被作者视为更能预测真实 agentic coding 表现的 SWE-bench Pro 上，Claude Opus 4.7 为 64.3%，GPT-5.4 为 57.7%。</p><p><strong>改变：</strong>对已经把模型接入代码代理、自动修复和多步工具调用流程的用户来说，这代表 Claude Opus 4.7 在真实仓库任务里更可能一次跑通，尤其适合重视修复成功率而不是单次回答观感的团队。</p><p><strong>边界：</strong>边界是这类优势主要体现在代理式编码与真实仓库修复场景，不能直接外推到前端审美、通用问答或成本敏感场景。</p><p class="source">来源：<a href="https://claudefa.st/blog/models/claude-opus-4-7-vs-gpt-5-4" target="_blank" rel="noopener noreferrer">ClaudeFast</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Cursor额度与“无限续杯”外部体验</span>
-                    <span class="source-label">腾讯新闻（第三方体验文） / 火山引擎开发者社区 / CSDN 博客（用户反馈整理）</span>
+                    <span class="badge badge-blue">Claude Code 开源 Skills 外部测评</span>
+                    <span class="source-label">EvoMap Blog / LINUX DO</span>
                   </div>
-                  <h3>Cursor额度焦虑视频谈无限续杯开发体验</h3>
-                  <p class="synthesis">外部体验共识是：用户怕的不是次数少，而是高质量调用不稳定。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116425825976541" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有开发者连续体验 Cursor 三周后提到，在 OpenAI o1 preview 出现前，Cursor 的可用上限实际受 Claude Sonnet 3.5 配额牵制，而切到 `cursor-small` 后代码质量明显下滑，难以替代主力模型。</p><p><strong>改变：</strong>这意味着用户的“额度焦虑”不只是次数问题，而是会直接影响是否敢继续用高质量模型完成核心编码任务，超额后工作流往往被迫在质量和成本之间切换。</p><p><strong>边界：</strong>这条体验建立在 2024 年当时的模型供给与配额结构上，结论更适用于重度依赖 Sonnet 3.5 产出的开发场景。</p><p class="source">来源：<a href="https://news.qq.com/rain/a/20240920A09YTM00" target="_blank" rel="noopener noreferrer">腾讯新闻（第三方体验文）</a></p></div><div class="opinion"><p><strong>观察：</strong>有第三方作者描述，自己开通 Cursor Pro 后约 80% 的代码由 Cursor 完成，效率提升很明显，但此前最纠结的仍是 500 次额度限制，甚至需要每天去官网查看剩余额度。</p><p><strong>改变：</strong>对个人开发者和小团队来说，所谓“无限续杯”的核心价值不是噱头，而是减少频繁查额度和临近用尽时的行为收缩，让 AI 从“偶尔敢用”变成可持续嵌入日常开发。</p><p><strong>边界：</strong>这类收益主要出现在高频 AI 编程用户身上；如果本来调用不重，取消次数焦虑带来的边际提升会小很多。</p><p class="source">来源：<a href="https://developer.volcengine.com/articles/7538285645421101097" target="_blank" rel="noopener noreferrer">火山引擎开发者社区</a></p></div></div>
+                  <h3>Claude Code九款开源技能实测拆解</h3>
+                  <p class="synthesis">共识是 Skills 更像可复用工作流，而非万能自动化。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116424232212592" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>EvoMap 在设计类 Skill 实操中发现，Claude Code 对可文字化、可执行的设计规则遵循很稳定，例如统一引用 CSS 变量、固定按钮类名等约束能持续执行。</p><p><strong>改变：</strong>这意味着团队可以把 UI/UX 规范写成 Skill，让 Claude Code 在多次生成和修改中按同一套前端约束工作，减少反复口头纠偏。</p><p><strong>边界：</strong>它不适合依赖模糊审美判断的场景，像“做得更高级一点”这类抽象要求，Skill 文件本身无法让模型自动推断品味。</p><p class="source">来源：<a href="https://evomap.ai/blog/claude-code-design-skill-ui-ux-workflow-guide" target="_blank" rel="noopener noreferrer">EvoMap Blog</a></p></div><div class="opinion"><p><strong>观察：</strong>LINUX DO 的开源上手帖展示了用 `commands` 和 `skills` 组装 deep research agent 的做法，并指出 Claude Code 会在项目里生成 `.claude` 目录来承载整套 agent 结构。</p><p><strong>改变：</strong>这让用户不必从零手写完整代理逻辑，而是能基于开源 Skills 快速搭建可落地的研究型工作流，便于在本地项目内直接组织和复用。</p><p class="source">来源：<a href="https://linux.do/t/topic/1375693" target="_blank" rel="noopener noreferrer">LINUX DO</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">外部测评 / 上手体验</span>
+                    <span class="source-label">r/LocalLLaMA</span>
+                  </div>
+                  <h3>PrismML Bonsai-1.7B一位模型CUDA实战</h3>
+                  <p class="synthesis">共识是能低成本跑通，但强依赖CUDA且生态兼容性一般。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/04/18/a-coding-tutorial-for-running-prismml-bonsai-1-bit-llm-on-cuda-with-gguf-benchmarking-chat-json-and-rag/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Reddit 上的实测反馈称，Bonsai-1.7B 和 8B 在 GPU 上“能正常工作”，但模型本身“不算很聪明/知识性不强”，而 CPU 端加载很慢且输出混乱。</p><p><strong>改变：</strong>对实际用户来说，这直接把可用场景限定为 CUDA/GPU 本地推理：如果只是想要一个便宜、能跑的轻量模型，GPU 路线可行，但不能把它当成高质量知识助手。</p><p><strong>边界：</strong>x86 CPU 体验很差，且讨论提到相关实现主要围绕 CUDA/部分 ARM 测试，说明它并不适合通用 CPU 部署场景。</p><p class="source">来源：<a href="https://www.reddit.com/r/LocalLLaMA/comments/1s90wo4/prismml_announcing_1bit_bonsai_the_first/" target="_blank" rel="noopener noreferrer">r/LocalLLaMA</a></p></div><div class="opinion"><p><strong>观察：</strong>另一则 Reddit 上手反馈指出，虽然 Bonsai 提供 GGUF，但当前不能直接用主线 llama.cpp 加载，必须改用 PrismML 的 fork 才能支持 1-bit 所需操作。</p><p><strong>改变：</strong>这对团队工作流的真实影响是：现有基于原版 llama.cpp 的部署、封装脚本和兼容链路不能无缝复用，接入成本不在模型文件本身，而在运行时兼容性。</p><p><strong>边界：</strong>它暂时不适合追求“即插即用”或依赖标准 llama.cpp 生态的用户，迁移时需要接受工具链分叉。</p><p class="source">来源：<a href="https://www.reddit.com/r/LocalLLaMA/comments/1s9zumi/the_bonsai_1bit_models_are_very_good/" target="_blank" rel="noopener noreferrer">r/LocalLLaMA</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Claude Opus 4.7外部测评/工作流影响</span>
+                    <span class="source-label">VentureBeat / 知乎·机器之心 专栏解读</span>
+                  </div>
+                  <h3>Claude Opus 4.7升级实测与工作流观察</h3>
+                  <p class="synthesis">共识是强项在复杂工作流，但放权自动化仍有边界。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116430070679231" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>VentureBeat认为，Claude Opus 4.7相对前代的提升并不平均，最明显的增益集中在软件工程代理流程和复杂文档推理这两类高难任务上。</p><p><strong>改变：</strong>对开发者和知识工作团队来说，这意味着升级后的收益更可能体现在长链路编码、跨文档归纳和需要持续推理的工作流里，而不是所有日常问答都会出现同等幅度提升。</p><p><strong>边界：</strong>它更像是对高复杂度任务的定向增强，普通轻量对话或简单生成场景未必能明显感知差距。</p><p class="source">来源：<a href="https://venturebeat.com/technology/anthropic-releases-claude-opus-4-7-narrowly-retaking-lead-for-most-powerful-generally-available-llm" target="_blank" rel="noopener noreferrer">VentureBeat</a></p></div><div class="opinion"><p><strong>观察：</strong>机器之心转载解读的研究压力测试指出，Claude Code的Auto Mode试图用自动分类减少人工审核打断，但在用户指令权限存在歧义时，自动审核能否稳定替代人工仍然需要被严格检验。</p><p><strong>改变：</strong>这对想把Opus 4.7接入真实开发/运维流的团队是个直接提醒：自动化能提升连续执行效率，但不能默认等于可放心放权，实际落地仍要保留权限边界和人工兜底。</p><p><strong>边界：</strong>涉及改代码、部署服务等高权限操作时，审核歧义会放大风险，因此并不适合完全取消人工确认的敏感场景。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2029204361557878730" target="_blank" rel="noopener noreferrer">知乎·机器之心 专栏解读</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -92,35 +92,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">Claude Design外部测评</span>
-                    <span class="source-label">UX Design / YouTube博主实测视频</span>
+                    <span class="badge badge-pink">GPT-Image-2外部测评</span>
+                    <span class="source-label">优设网 / 知乎 / YouTube测评视频</span>
                   </div>
-                  <h3>Claude Design用Opus 4.7生成UI原型</h3>
-                  <p class="synthesis">共识是能显著提速出稿，但效果仍依赖既有设计系统与场景约束。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116425775717167" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>UX Design文章作者实测后认为，设计师配合Claude Code、Codex CLI与Figma MCP，能把粗线框继续推进为贴近真实代码库的原型，而不只是通用型效果图。</p><p><strong>改变：</strong>这意味着产品设计阶段可以更早进入“可落地原型”工作流，设计与工程交接不再只停留在静态稿，团队能更快验证真实界面方案。</p><p><strong>边界：</strong>作者同时指出，这类流程要建立在较完整的设计系统之上，否则很难稳定产出符合既有产品规范的结果。</p><p class="source">来源：<a href="https://uxdesign.cc/designing-with-claude-code-and-codex-cli-building-ai-driven-workflows-powered-by-code-connect-ui-f10c136ec11f" target="_blank" rel="noopener noreferrer">UX Design</a></p></div><div class="opinion"><p><strong>观察：</strong>YouTube上手视频给出的直接结论是，Claude Design在Opus 4.7驱动下，可以通过一句话快速生成较完整的UI原型和PPT初稿。</p><p><strong>改变：</strong>对没有设计背景的个人或小团队来说，它把“先做出能看的方案”这一步大幅前置，适合快速出提案稿、演示稿和低门槛界面草图。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=1bq02gzU9uA" target="_blank" rel="noopener noreferrer">YouTube博主实测视频</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">Claude Design外部测评</span>
-                    <span class="source-label">VibeCoding.app / Thoughtbot</span>
-                  </div>
-                  <h3>Claude Design自然语言生成UI原型实测</h3>
-                  <p class="synthesis">共识是它最强在加速可运行原型，而非替代完整设计流程。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116424165033077" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>VibeCoding.app 的评测认为，Claude Design 能读取代码仓库并提取设计系统，用对话式迭代生成原型，再把较干净的前端包交给 Claude Code 落地，这比 Figma、Canva、v0 更像一条从想法到可交付 UI 的连续链路。</p><p><strong>改变：</strong>对已经在用“提示词-原型-上线”流程的团队，原型不再停留在设计稿，设计和实现之间的交接成本会明显下降。</p><p><strong>边界：</strong>它的优势主要建立在已有代码仓库和设计系统的团队环境里，材料没有显示它适合从零开始、无设计规范的场景。</p><p class="source">来源：<a href="https://vibecoding.app/blog/claude-design-review" target="_blank" rel="noopener noreferrer">VibeCoding.app</a></p></div><div class="opinion"><p><strong>观察：</strong>Thoughtbot 在设计冲刺实测中发现，让 Claude 复刻品牌“审美而非内容”后，几分钟内就能生成看起来成熟、贴近品牌的落地页原型，而不是花数小时手工推进像素级设计。</p><p><strong>改变：</strong>对需要在 discovery sprint、用户测试或投资人演示里快速拿出“足够真实”界面的团队，Claude Design 类工作流能显著压缩首版原型时间。</p><p><strong>边界：</strong>作者明确强调这不是替代设计师，团队仍需自己做创意决策、反馈和后续打磨，不适合把输出直接当成最终设计成品。</p><p class="source">来源：<a href="https://thoughtbot.com/blog/rapid-prototyping-with-claude-code-how-we-transformed-our-design-sprint-process" target="_blank" rel="noopener noreferrer">Thoughtbot</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">Claude Design外部测评</span>
-                    <span class="source-label">宝玉的分享 / AI Insight / Futureweb</span>
-                  </div>
-                  <h3>Claude Design实测展示高保真UI生成工作流</h3>
-                  <p class="synthesis">共识是它更像可直接进工作流的高保真首稿生成器。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116424181815252" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>宝玉在首发后第一时间上手，直接把Claude Design的体验强度类比为“设计领域的Claude Code时刻”，并点名其生成UI/设计结果的完成度明显压过Google Stitch。</p><p><strong>改变：</strong>这意味着团队做落地页、原型等高保真界面时，可能从“先画线框再细化”转向“先让AI直接出可讨论版本”，显著缩短首稿产出时间。</p><p class="source">来源：<a href="https://baoyu.io/blog/2026-04-17/claude-design" target="_blank" rel="noopener noreferrer">宝玉的分享</a></p></div><div class="opinion"><p><strong>观察：</strong>AI Insight的分析指出，Claude Design不是生成一张视觉图片，而是直接产出原型、线框图、营销物料、仪表盘等结构化设计结果。</p><p><strong>改变：</strong>对用户和团队的真实改变是，AI输出更接近可进入设计评审和协作流程的中间件，而不只是灵感图，适合更快推进页面方案验证。</p><p><strong>边界：</strong>它的定位不是插画或纯图像生成，因此不适合把它当成Midjourney一类的视觉风格图工具来用。</p><p class="source">来源：<a href="https://www.ai-insight.org/reports/claude-design-2026" target="_blank" rel="noopener noreferrer">AI Insight</a></p></div></div>
+                  <h3>GPT-Image-2生图实测与Nano banana对比</h3>
+                  <p class="synthesis">共识是GPT-Image-2更适合带字海报和复杂视觉成图。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116429030426189" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>优设网援引X网友@grmchn4ai的高信息量手办海报对比称，NanoBanana2的文字版式表现相对一般，而GPT-Image-2在细节锐利度、文字清晰度，以及版式和色彩美感上更强。</p><p><strong>改变：</strong>这意味着做海报、宣传图、带字视觉稿的用户，直接出可用图的概率更高，后期补字、调版和二次修图的工作量会下降。</p><p class="source">来源：<a href="https://www.uisdc.com/gpt-image-2" target="_blank" rel="noopener noreferrer">优设网</a></p></div><div class="opinion"><p><strong>观察：</strong>知乎上汇总近48小时网友实测反馈认为，GPT-Image-2这次最明显的提升之一是文字生成能力，且体感提升非常明显。</p><p><strong>改变：</strong>对中文海报、封面图、截图风界面等需求来说，用户可以把更多信息一次性交给模型生成，而不是先出图再手工补字。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2028623641948997464" target="_blank" rel="noopener noreferrer">知乎</a></p></div></div>
                 </section>
                 </div>
             </section>
