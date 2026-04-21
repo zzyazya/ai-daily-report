@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-04-21 08:44</title>
+  <title>独立测评 · 2026-04-21 17:56</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,73 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评</span>
-                    <span class="source-label">Verdent Guides / devblogs.co</span>
-                  </div>
-                  <h3>Claude Opus 4.7与Qwen3.6-35B-A3B工具调用横评</h3>
-                  <p class="synthesis">外部观察显示：Opus 4.7更稳于代理工具链，Qwen更突出本地轻量实验。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116437788202964" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Verdent Guides在Claude Opus 4.7与4.6的agentic coding对比中观察到，Opus 4.7在SWE-bench提升6.8分、CursorBench提升12分，且工具调用错误降到原来的约1/3。</p><p><strong>改变：</strong>这意味着把Opus 4.7接入编程代理或多步工具调用流程时，团队更可能减少重试、报错修复和人工兜底，长链路任务的稳定性更高。</p><p><strong>边界：</strong>代价是其tokenizer会让账单最高增加约35%，因此高频、大上下文、对成本敏感的自动化流程未必划算。</p><p class="source">来源：<a href="https://www.verdent.ai/guides/claude-opus-4-7-vs-4-6-coding-agents" target="_blank" rel="noopener noreferrer">Verdent Guides</a></p></div><div class="opinion"><p><strong>观察：</strong>开发者在本地运行Qwen3.6-35B-A3B（20.9GB量化GGUF，经LM Studio）并与Claude Opus 4.7做SVG生成对比时，实际观察到Qwen在“鹈鹕骑车、火烈鸟独轮车”等测试里画得更好。</p><p><strong>改变：</strong>这对用户的现实意义是，部分需要结构化文本/代码式输出的轻量创作或本地实验场景，Qwen3.6-35B-A3B可能提供一个可离线、可本地部署且效果不差的替代选项。</p><p><strong>边界：</strong>但这只是幽默SVG小样本对比，不等于其在工具调用、复杂代理编排或通用任务上整体强于Opus 4.7。</p><p class="source">来源：<a href="https://devblogs.co/posts/qwen36-35b-a3b-on-my-laptop-drew-me-a-better-pelican-than-claude-opus-47" target="_blank" rel="noopener noreferrer">devblogs.co</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">dev.to 开发者测评《Copilot, Cursor, and Tongyi Lingma: Who&#x27;s Your Ultimate Coding Assistant?》 / VibeCodingHub《Qoder vs Cursor: Which AI Coding Tool Wins?》</span>
-                  </div>
-                  <h3>Cursor、通义灵码、Qoder编程工具横评</h3>
-                  <p class="synthesis">分歧集中在能力层级：灵码偏中文插件助手，Qoder更偏大仓库自动化。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116435775000946" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>开发者测评认为，通义灵码在 VS Code 里的突出点主要是中文理解更好，但作为插件级产品，未观察到像 Cursor 那样更完整的高级能力，且当时不支持上传文件做理解或复用。</p><p><strong>改变：</strong>这意味着中文场景下它更适合做本地补全和中文问答，但如果团队工作流依赖跨文件理解、把现有文件直接喂给助手处理，Cursor 一类工具更容易接入完整开发流程。</p><p><strong>边界：</strong>该结论基于作者当时的 VS Code 上手观察，优势集中在中文理解；对需要文件级上下文处理的任务不够合适。</p><p class="source">来源：<a href="https://dev.to/zeron_zxjia2002/copilot-cursor-and-tongyi-lingma-whos-your-ultimate-coding-assistant-4fmp" target="_blank" rel="noopener noreferrer">dev.to 开发者测评《Copilot, Cursor, and Tongyi Lingma: Who&#x27;s Your Ultimate Coding Assistant?》</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方对比文章认为，Qoder 在大规模代码库处理上更激进，能覆盖 10 万级文件，并提供自动构建功能的 Quest Mode 与 GitHub 同步；在同为 15 美元/月时，作者判断其在 IDE + Agentic Coding 场景下比 Cursor 更强。</p><p><strong>改变：</strong>这会直接改变大型仓库团队的工作流：从单点补全转向让工具批量理解仓库、联动代码托管并自动推进功能实现，减少人工拆任务和跨文件来回切换。</p><p><strong>边界：</strong>文章同时提示它的适用面更偏 IDE 与 Agentic Coding，价值建立在大仓库和自动化流程需求上，小项目或只要轻量补全的用户未必能体现同等收益。</p><p class="source">来源：<a href="https://vibecodinghub.org/blog/qoder" target="_blank" rel="noopener noreferrer">VibeCodingHub《Qoder vs Cursor: Which AI Coding Tool Wins?》</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
                     <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">Medium</span>
+                    <span class="source-label">知乎专栏《2025年RAG已死？2026年做Agentic 和上下文工程？》 / 客园《Agentic RAG 系统的崛起》 / 知乎专栏《七大Agentic RAG框架技术解析》</span>
                   </div>
-                  <h3>Qwen3.6-35B-A3B APEX量化部署价值观察</h3>
-                  <p class="synthesis">外部观点聚焦低激活开销下的部署可行性。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116437670693843" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Medium分析认为，`Qwen3.6-35B-A3B` 的关键点不在总参数规模，而在“仅 3B active parameters”下仍瞄准更大模型级别的代码与 Agent 表现，这使它更像一类可本地化部署的高效推理模型。</p><p><strong>改变：</strong>这对用户和团队的实际意义是：在做本地部署、量化压缩或边缘侧推理时，能把关注点从“能不能跑”转向“在较低激活开销下是否还能保住编码/代理类任务能力”，因此更适合成本敏感的试验和工作流接入。</p><p class="source">来源：<a href="https://medium.com/data-science-in-your-pocket/qwen3-6-35b-a3b-the-tiny-active-open-model-that-thinks-codes-and-agents-like-a-much-bigger-one-486d535e372e" target="_blank" rel="noopener noreferrer">Medium</a></p></div></div>
+                  <h3>Agentic RAG实验比较评估是否值得采用</h3>
+                  <p class="synthesis">共识是复杂任务更值，但成本、时延与稳定性是采用门槛。</p>
+                  <a class="article-link" href="https://arxiv.org/abs/2601.07711" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者在比较Agentic思路与传统RAG时指出，Agentic RAG每次决策都要额外调用LLM，实际成本通常是传统RAG的3-5倍，而且检索策略选择并不稳定，容易出现错误判断。</p><p><strong>改变：</strong>这意味着团队若直接上Agentic RAG，预算、时延和调试成本都会明显上升，更适合先用于高复杂度问答或多步任务，而不是默认替换全部RAG链路。</p><p><strong>边界：</strong>作者明确建议复杂任务可借鉴Agentic思路，但更现实的落地方式是预定义几种检索策略并用轻量分类器路由，不适合让LLM在每轮都深度决策。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1991575034779694948" target="_blank" rel="noopener noreferrer">知乎专栏《2025年RAG已死？2026年做Agentic 和上下文工程？》</a></p></div><div class="opinion"><p><strong>观察：</strong>客园文章在同一PDF问答场景下对比发现，Agentic RAG系统给出的复杂信息检索结果比直接把PDF丢给ChatGPT更准确，后者出现了错误和幻觉。</p><p><strong>改变：</strong>对需要基于长文档做严肃问答的用户和团队来说，Agentic RAG的价值主要体现在降低幻觉、提高复杂资料查询的命中率，而不是单纯追求模型‘更聪明’。</p><p><strong>边界：</strong>文章也指出代价是智能体交互变复杂、响应时间变长，系统上线后还必须补上持续评估与可观测性，不适合对实时性要求极高但问题又较简单的场景。</p><p class="source">来源：<a href="https://www.cnblogs.com/tunancbq/p/18672796" target="_blank" rel="noopener noreferrer">客园《Agentic RAG 系统的崛起》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">WentuoAI API / 狂师（博客园）</span>
+                    <span class="badge badge-blue">Qwen 3.6-35B-A3B 外部测评</span>
+                    <span class="source-label">DataLearner / 编程码农 / OnlyThinking / Chew Loong Nian / Towards AI</span>
                   </div>
-                  <h3>GLM 5.1对比Claude Opus 4.7本地实测</h3>
-                  <p class="synthesis">共识是 GLM-5.1 更像低成本可用替代，而非全面超越 Opus。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116435036675335" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>WentuoAI 的编程能力对比认为，Claude Opus 4.7 整体编码实力更强，但 GLM-5.1 在长周期任务和 SWE-Bench 风格任务里有自身优势，且多数常见编程任务已达到“够用”水平。</p><p><strong>改变：</strong>对开发者团队来说，这意味着如果日常以常规写码、修 bug、SWE-Bench 类工程任务为主，GLM-5.1 可能以更低成本替代一部分 Opus 用量，把高价模型留给更难的核心任务。</p><p><strong>边界：</strong>边界是高难度编程场景下 Opus 4.7 仍被认为更强，因此对复杂架构设计、要求更高一次成功率的任务，GLM-5.1 不是无代价平替。</p><p class="source">来源：<a href="https://blog.wentuo.ai/en/claude-opus-4-7-vs-glm-5-1-coding-comparison-guide-en.html" target="_blank" rel="noopener noreferrer">WentuoAI API</a></p></div><div class="opinion"><p><strong>观察：</strong>博客园博主“狂师”在第一手实测中提到，GLM-5.1 在 Claude Code 评测里达到接近 Opus 的编码能力，剩余差距在多数日常开发场景中体感不明显。</p><p><strong>改变：</strong>这对个人开发者和中小团队的真实意义是，很多日常编码、补全、改小功能和常规调试工作，可以先用更便宜的 GLM-5.1 完成，而不必默认上更贵的 Opus。</p><p><strong>边界：</strong>边界在于这类结论主要成立于“日常开发场景”，并不等于在所有高复杂度任务、极限稳定性或顶级代码质量要求下都能完全替代 Opus。</p><p class="source">来源：<a href="https://www.cnblogs.com/jinjiangongzuoshi/p/19809596" target="_blank" rel="noopener noreferrer">狂师（博客园）</a></p></div></div>
+                  <h3>Qwen 3.6-35B-A3B工作流实战教程</h3>
+                  <p class="synthesis">共识是它更像低成本、可落地的本地代码 Agent 模型。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/04/21/a-coding-implementation-on-qwen-3-6-35b-a3b-covering-multimodal-inference-thinking-control-tool-calling-moe-routing-rag-and-session-persistence/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方评测指出，Qwen3.6-35B-A3B 在更接近真实 Agent 工作流的 Terminal-Bench 2.0 上拿到 51.5，超过 Qwen3.5-27B 的 41.6 和 Gemma4-31B 的 42.9，说明它在真实终端任务串联中的执行能力明显增强。</p><p><strong>改变：</strong>这意味着团队把它接入代码 Agent、终端自动化或仓库修复流程时，更有机会在较低激活参数成本下完成多步任务，而不只是停留在单轮代码补全。</p><p><strong>边界：</strong>在 SWE-bench Verified 上其 73.4 仍未追平 Qwen3.5-27B 的 75.0，说明真实仓库缺陷修复场景虽进步明显，但还不一定是同体量开源模型里的绝对最优解。</p><p class="source">来源：<a href="https://www.datalearner.com/blog/1051776350386571" target="_blank" rel="noopener noreferrer">DataLearner</a></p></div><div class="opinion"><p><strong>观察：</strong>本地编程实测认为，Qwen3.6-35B-A3B 对中文开发者的日常编程已具备较高可用性，尤其是中文技术语境理解、本地代码补全与通过 Continue.dev、Cursor、Cline 等工具接入工作流的体验较顺。</p><p><strong>改变：</strong>对中文团队而言，真实变化是可以把模型放进私有开发环境里做代码生成、补全和协作，而不必在中文理解与数据隐私之间做过多取舍。</p><p><strong>边界：</strong>更适合中文开发与隐私敏感环境，材料没有证明它在跨语言复杂工程或非本地部署场景下同样占优。</p><p class="source">来源：<a href="https://www.onlythinking.com/post/2026-04-17-ai-qwen3-6-35b-a3b-local-coding-agent/" target="_blank" rel="noopener noreferrer">编程码农 / OnlyThinking</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Qoder外部测评</span>
+                    <span class="source-label">掘金作者《阿里Qoder实战体验：被吐槽的AI...》</span>
+                  </div>
+                  <h3>Qoder编程智能体评测含赠金300体验</h3>
+                  <p class="synthesis">外部体验聚焦长期记忆对连续开发效率的提升。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116441663675074" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>掘金作者在实战体验中提到，Qoder的Memory系统会在持续交互里学习个人编码风格、项目规范和历史解法，并把关键信息自动沉淀进后续生成上下文。</p><p><strong>改变：</strong>这会减少开发者反复补充团队约定和历史背景的次数，让后续补全与改代码更贴近现有项目习惯，尤其适合长期维护同一代码库的工作流。</p><p><strong>边界：</strong>材料片段未给出失败案例、额外配置成本或不适用场景，暂时无法判断其在短期一次性任务中的收益。</p><p class="source">来源：<a href="https://juejin.cn/post/7541226780642066441" target="_blank" rel="noopener noreferrer">掘金作者《阿里Qoder实战体验：被吐槽的AI...》</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Kimi K2.6 外部测评</span>
+                    <span class="source-label">知乎博主（Hermes 接入实测）</span>
+                  </div>
+                  <h3>Kimi K2.6编码多模态与10+Agent实测</h3>
+                  <p class="synthesis">外部实测共识偏向：强在多步 Agent 稳定输出。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116440992582898" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Hermes 接入 Kimi K2.6 后连续跑了 26 个 session，作者称未遇到乱码、工具调用失败或输出结构崩坏，在写 PRD、做 SEO 规划等复杂多步 Agent 任务里，结构清晰且前后一致，整体稳定性和规划质量都优于其对比的 GLM 5.1。</p><p><strong>改变：</strong>对需要长期跑多步骤 Agent 工作流的团队来说，这意味着返工、重试和人工整理输出的成本会下降，PRD、SEO 规划这类任务更容易直接进入后续执行环节。</p><p><strong>边界：</strong>材料虽在标题中提到“两个真实痛点”，但片段未展开具体代价；且这组结论主要来自 Hermes 的 Agent 任务实测，对其他场景的效果不能直接外推。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2027522051460605577" target="_blank" rel="noopener noreferrer">知乎博主（Hermes 接入实测）</a></p></div></div>
+                </section>
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>美术视角测评</h2>
+              <div class="role-cards">
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">Claude Design与Lovable对比外部测评</span>
+                    <span class="source-label">eigent.ai / DEV Community / YouTube 博主视频</span>
+                  </div>
+                  <h3>Claude Design与Lovable同简报对比</h3>
+                  <p class="synthesis">共识是两者分工不同：Claude偏设计控制，Lovable偏成品搭建。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116441294571260" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>eigent.ai将Claude Design与Lovable区分为两条路线：前者更偏“理解设计系统的视觉生成”，后者更偏“直接生成全栈代码”的产品搭建。</p><p><strong>改变：</strong>对团队来说，这意味着选型不再只是比谁生成得更快，而是先判断需求是要高保真设计探索，还是要尽快把可运行产品搭起来。</p><p><strong>边界：</strong>如果团队希望一个工具同时兼顾成熟设计语言约束与完整工程落地，这种能力分化会带来切换成本，单一工具未必全覆盖。</p><p class="source">来源：<a href="https://www.eigent.ai/blog/claude-design-vs-lovable" target="_blank" rel="noopener noreferrer">eigent.ai</a></p></div><div class="opinion"><p><strong>观察：</strong>DEV Community的上手评测认为，Claude Design与Replit、Lovable这类“提示词到产品”工具不同，它更强调精修、准确性和强控制，而不是一句话直接帮你把产品做完。</p><p><strong>改变：</strong>这会改变用户预期：更适合品牌套件、落地页这类需要反复校准细节的工作流，而不是把它当作零介入的全自动建站器。</p><p><strong>边界：</strong>不适合追求“描述需求后立刻得到完整可运行产品”的场景，因为它的定位本身就不是最低交互成本的一键成品。</p><p class="source">来源：<a href="https://dev.to/launchwithben/claude-design-review-hands-on-brand-kit-and-landing-page-test-38l1" target="_blank" rel="noopener noreferrer">DEV Community</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">外部测评</span>
+                    <span class="source-label">QubitTool / 101.dev / FluxAI / 掘金</span>
+                  </div>
+                  <h3>CLIP微调中Attention Drift与迁移保持分析</h3>
+                  <p class="synthesis">相关外部实测材料不足，无法形成有效交叉验证。</p>
+                  <a class="article-link" href="https://arxiv.org/abs/2604.16410" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>未找到与CLIP微调中的Attention Drift、迁移保持或学习率对比直接相关的第三方测评/上手观察。</p><p><strong>改变：</strong>现有片段不足以支持对该论文结论在用户工作流中的真实影响做可靠外部归纳。</p><p><strong>边界：</strong>现有材料主要是LoRA通用原理、Stable Diffusion实践或其他架构介绍，和目标论文讨论对象不一致。</p><p class="source">来源：<a href="https://qubittool.com/zh/blog/lora-fine-tuning-complete-guide" target="_blank" rel="noopener noreferrer">QubitTool / 101.dev / FluxAI / 掘金</a></p></div></div>
                 </section>
                 </div>
             </section>
