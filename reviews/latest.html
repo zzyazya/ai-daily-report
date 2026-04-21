@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-04-20 17:36</title>
+  <title>独立测评 · 2026-04-21 08:44</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,29 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">AtCyrus / VibeTools</span>
+                    <span class="badge badge-blue">外部测评</span>
+                    <span class="source-label">Verdent Guides / devblogs.co</span>
                   </div>
-                  <h3>Claude Code插件Ralph Wiggum自动开发工作流实测</h3>
-                  <p class="synthesis">共识是它能显著减少人工续命，但成本与迭代失控风险必须先管住。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116433996483479" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方工作流分析指出，Ralph Wiggum是借助Claude Code的Stop hook拦截“准备结束会话”的时刻，再把后续任务回灌给模型，从而形成可连续推进的自动开发循环。</p><p><strong>改变：</strong>对用户而言，开发流程从“每轮都要人盯着继续”变成“让AI自己接着改、接着跑、接着收敛”，更适合整应用这类需要多轮调试的任务。</p><p class="source">来源：<a href="https://www.atcyrus.com/stories/ralph-wiggum-technique-claude-code-autonomous-loops" target="_blank" rel="noopener noreferrer">AtCyrus</a></p></div><div class="opinion"><p><strong>观察：</strong>实战攻略类文章明确提醒，Ralph Wiggum的核心是多轮连续对话，Token消耗非常大，已有开发者一次夜间无人值守运行就烧掉上百美元额度。</p><p><strong>改变：</strong>这意味着团队若想把它当自动开发流水线用，必须先加上`--max-iterations`这类上限和小任务试跑机制，否则省下的盯盘时间可能直接换成失控的API成本。</p><p><strong>边界：</strong>不适合预算敏感、任务范围模糊、又没有成本护栏的场景。</p><p class="source">来源：<a href="https://vibetools.net/zh/posts/say-goodbye-to-babysitting-ai-the-ultimate-guide-to-the-ralph-wiggum-plugin-for-claude-code" target="_blank" rel="noopener noreferrer">VibeTools</a></p></div></div>
+                  <h3>Claude Opus 4.7与Qwen3.6-35B-A3B工具调用横评</h3>
+                  <p class="synthesis">外部观察显示：Opus 4.7更稳于代理工具链，Qwen更突出本地轻量实验。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116437788202964" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Verdent Guides在Claude Opus 4.7与4.6的agentic coding对比中观察到，Opus 4.7在SWE-bench提升6.8分、CursorBench提升12分，且工具调用错误降到原来的约1/3。</p><p><strong>改变：</strong>这意味着把Opus 4.7接入编程代理或多步工具调用流程时，团队更可能减少重试、报错修复和人工兜底，长链路任务的稳定性更高。</p><p><strong>边界：</strong>代价是其tokenizer会让账单最高增加约35%，因此高频、大上下文、对成本敏感的自动化流程未必划算。</p><p class="source">来源：<a href="https://www.verdent.ai/guides/claude-opus-4-7-vs-4-6-coding-agents" target="_blank" rel="noopener noreferrer">Verdent Guides</a></p></div><div class="opinion"><p><strong>观察：</strong>开发者在本地运行Qwen3.6-35B-A3B（20.9GB量化GGUF，经LM Studio）并与Claude Opus 4.7做SVG生成对比时，实际观察到Qwen在“鹈鹕骑车、火烈鸟独轮车”等测试里画得更好。</p><p><strong>改变：</strong>这对用户的现实意义是，部分需要结构化文本/代码式输出的轻量创作或本地实验场景，Qwen3.6-35B-A3B可能提供一个可离线、可本地部署且效果不差的替代选项。</p><p><strong>边界：</strong>但这只是幽默SVG小样本对比，不等于其在工具调用、复杂代理编排或通用任务上整体强于Opus 4.7。</p><p class="source">来源：<a href="https://devblogs.co/posts/qwen36-35b-a3b-on-my-laptop-drew-me-a-better-pelican-than-claude-opus-47" target="_blank" rel="noopener noreferrer">devblogs.co</a></p></div></div>
                 </section>
-                </div>
-            </section>
-            
-            <section class="role-block">
-              <h2>美术视角测评</h2>
-              <div class="role-cards">
+                
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">外部测评</span>
-                    <span class="source-label">Hacker News（Show HN 开发者实测）</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
+                    <span class="source-label">dev.to 开发者测评《Copilot, Cursor, and Tongyi Lingma: Who&#x27;s Your Ultimate Coding Assistant?》 / VibeCodingHub《Qoder vs Cursor: Which AI Coding Tool Wins?》</span>
                   </div>
-                  <h3>TRELLIS.2在Apple Silicon原生跑图生3D</h3>
-                  <p class="synthesis">核心用户价值是把图生3D本地化到Mac工作流中。</p>
-                  <a class="article-link" href="https://github.com/shivampkumar/trellis-mac" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>在 Hacker News 的开发者实测中，微软的 TRELLIS.2（4B 参数图生3D模型）已被移植到 Apple Silicon，并可通过 PyTorch MPS 在 Mac 上原生运行。</p><p><strong>改变：</strong>这意味着使用 Mac 的个人开发者和小团队可以直接在本机做图生3D验证与原型迭代，不再被 NVIDIA/CUDA 环境前置卡住。</p><p class="source">来源：<a href="https://news.ycombinator.com/item?id=47828896" target="_blank" rel="noopener noreferrer">Hacker News（Show HN 开发者实测）</a></p></div></div>
+                  <h3>Cursor、通义灵码、Qoder编程工具横评</h3>
+                  <p class="synthesis">分歧集中在能力层级：灵码偏中文插件助手，Qoder更偏大仓库自动化。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116435775000946" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>开发者测评认为，通义灵码在 VS Code 里的突出点主要是中文理解更好，但作为插件级产品，未观察到像 Cursor 那样更完整的高级能力，且当时不支持上传文件做理解或复用。</p><p><strong>改变：</strong>这意味着中文场景下它更适合做本地补全和中文问答，但如果团队工作流依赖跨文件理解、把现有文件直接喂给助手处理，Cursor 一类工具更容易接入完整开发流程。</p><p><strong>边界：</strong>该结论基于作者当时的 VS Code 上手观察，优势集中在中文理解；对需要文件级上下文处理的任务不够合适。</p><p class="source">来源：<a href="https://dev.to/zeron_zxjia2002/copilot-cursor-and-tongyi-lingma-whos-your-ultimate-coding-assistant-4fmp" target="_blank" rel="noopener noreferrer">dev.to 开发者测评《Copilot, Cursor, and Tongyi Lingma: Who&#x27;s Your Ultimate Coding Assistant?》</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方对比文章认为，Qoder 在大规模代码库处理上更激进，能覆盖 10 万级文件，并提供自动构建功能的 Quest Mode 与 GitHub 同步；在同为 15 美元/月时，作者判断其在 IDE + Agentic Coding 场景下比 Cursor 更强。</p><p><strong>改变：</strong>这会直接改变大型仓库团队的工作流：从单点补全转向让工具批量理解仓库、联动代码托管并自动推进功能实现，减少人工拆任务和跨文件来回切换。</p><p><strong>边界：</strong>文章同时提示它的适用面更偏 IDE 与 Agentic Coding，价值建立在大仓库和自动化流程需求上，小项目或只要轻量补全的用户未必能体现同等收益。</p><p class="source">来源：<a href="https://vibecodinghub.org/blog/qoder" target="_blank" rel="noopener noreferrer">VibeCodingHub《Qoder vs Cursor: Which AI Coding Tool Wins?》</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">外部测评 / 上手体验</span>
+                    <span class="source-label">Medium</span>
+                  </div>
+                  <h3>Qwen3.6-35B-A3B APEX量化部署价值观察</h3>
+                  <p class="synthesis">外部观点聚焦低激活开销下的部署可行性。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116437670693843" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Medium分析认为，`Qwen3.6-35B-A3B` 的关键点不在总参数规模，而在“仅 3B active parameters”下仍瞄准更大模型级别的代码与 Agent 表现，这使它更像一类可本地化部署的高效推理模型。</p><p><strong>改变：</strong>这对用户和团队的实际意义是：在做本地部署、量化压缩或边缘侧推理时，能把关注点从“能不能跑”转向“在较低激活开销下是否还能保住编码/代理类任务能力”，因此更适合成本敏感的试验和工作流接入。</p><p class="source">来源：<a href="https://medium.com/data-science-in-your-pocket/qwen3-6-35b-a3b-the-tiny-active-open-model-that-thinks-codes-and-agents-like-a-much-bigger-one-486d535e372e" target="_blank" rel="noopener noreferrer">Medium</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">外部测评 / 上手体验</span>
+                    <span class="source-label">WentuoAI API / 狂师（博客园）</span>
+                  </div>
+                  <h3>GLM 5.1对比Claude Opus 4.7本地实测</h3>
+                  <p class="synthesis">共识是 GLM-5.1 更像低成本可用替代，而非全面超越 Opus。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116435036675335" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>WentuoAI 的编程能力对比认为，Claude Opus 4.7 整体编码实力更强，但 GLM-5.1 在长周期任务和 SWE-Bench 风格任务里有自身优势，且多数常见编程任务已达到“够用”水平。</p><p><strong>改变：</strong>对开发者团队来说，这意味着如果日常以常规写码、修 bug、SWE-Bench 类工程任务为主，GLM-5.1 可能以更低成本替代一部分 Opus 用量，把高价模型留给更难的核心任务。</p><p><strong>边界：</strong>边界是高难度编程场景下 Opus 4.7 仍被认为更强，因此对复杂架构设计、要求更高一次成功率的任务，GLM-5.1 不是无代价平替。</p><p class="source">来源：<a href="https://blog.wentuo.ai/en/claude-opus-4-7-vs-glm-5-1-coding-comparison-guide-en.html" target="_blank" rel="noopener noreferrer">WentuoAI API</a></p></div><div class="opinion"><p><strong>观察：</strong>博客园博主“狂师”在第一手实测中提到，GLM-5.1 在 Claude Code 评测里达到接近 Opus 的编码能力，剩余差距在多数日常开发场景中体感不明显。</p><p><strong>改变：</strong>这对个人开发者和中小团队的真实意义是，很多日常编码、补全、改小功能和常规调试工作，可以先用更便宜的 GLM-5.1 完成，而不必默认上更贵的 Opus。</p><p><strong>边界：</strong>边界在于这类结论主要成立于“日常开发场景”，并不等于在所有高复杂度任务、极限稳定性或顶级代码质量要求下都能完全替代 Opus。</p><p class="source">来源：<a href="https://www.cnblogs.com/jinjiangongzuoshi/p/19809596" target="_blank" rel="noopener noreferrer">狂师（博客园）</a></p></div></div>
                 </section>
                 </div>
             </section>
