@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-04-23 08:47</title>
+  <title>独立测评 · 2026-04-23 18:42</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,35 +43,62 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
+                    <span class="badge badge-blue">外部测评 / 上手体验</span>
+                    <span class="source-label">知乎《Claude Code 源码蒸馏 - Harness Engineering 实践记录》 / DEV Community《A Claude Code Skills Stack: How to Combine Superpowers, gstack, and GSD Without the Chaos》 / Medium《Superpowers, GSD, and gstack: What Each Claude Code Framework Actually Constrains》</span>
+                  </div>
+                  <h3>Claude Code配套4套Agent Harness横评</h3>
+                  <p class="synthesis">外部体验普遍指向：Harness 胜负主要取决于约束设计、上下文隔离与集成成本。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116451998436479" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者在拆解 Claude Code Harness 实践时观察到，给 Agent 过大的可行动作空间会明显增加失败率，反而需要先人工把任务方向和基础约束铺好，Agent 后续执行才更稳定。</p><p><strong>改变：</strong>这意味着团队在横评不同 Harness 时，不能只看“自动化程度”，还要看谁更能收缩 action space、把任务拆解和前置约束做扎实，否则同一真实任务下结果波动会很大。</p><p><strong>边界：</strong>代价是前期要人工设计流程和边界，不适合希望“零配置直接放手跑”的使用场景。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2023168552018921120" target="_blank" rel="noopener noreferrer">知乎《Claude Code 源码蒸馏 - Harness Engineering 实践记录》</a></p></div><div class="opinion"><p><strong>观察：</strong>DEV Community 的第三方工作流分析认为，Superpowers、gstack、GSD 三者并不是简单替代关系：gstack 更偏思考与评审，GSD 更偏上下文/规格稳定，Superpowers 更偏构建阶段能力增强。</p><p><strong>改变：</strong>对用户的真实影响是，选 Harness 不再只是比“谁更强”，而是要按任务阶段搭配：长周期项目更看重上下文稳态，评审密集任务更依赖 review 流程，编码期再考虑 TDD/技能增强。</p><p><strong>边界：</strong>这种分层组合会增加工作流复杂度，若只是小修小改，收益未必覆盖配置和切换成本。</p><p class="source">来源：<a href="https://dev.to/imaginex/a-claude-code-skills-stack-how-to-combine-superpowers-gstack-and-gsd-without-the-chaos-44b3" target="_blank" rel="noopener noreferrer">DEV Community《A Claude Code Skills Stack: How to Combine Superpowers, gstack, and GSD Without the Chaos》</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Gemini CLI子代理并行工作流机制</span>
+                    <span class="source-label">青蛙小白</span>
+                  </div>
+                  <h3>Gemini CLI子代理并行工作流机制</h3>
+                  <p class="synthesis">外部观察共识是：子代理提升复杂任务拆解效率，但仍受早期实现成熟度限制。</p>
+                  <a class="article-link" href="https://www.infoq.cn/article/50eZYcehCtQuxKoTcLhS?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>青蛙小白在讨论SubAgent时明确指出，Gemini CLI把复杂任务拆给专门子代理处理，形成分层协作而不是单代理串行硬做。</p><p><strong>改变：</strong>这意味着用户或团队在处理多步骤工程任务时，可以把不同子任务交给不同代理并行推进，减少主代理上下文负担，也更适合组织复杂工作流。</p><p><strong>边界：</strong>该文同时提到v0.9.0只是引入了SubAgent的基础支持，说明现阶段更像能力起步版，适合尝试任务委派，不代表所有并行协作场景都已成熟可用。</p><p class="source">来源：<a href="https://blog.frognew.com/2025/10/gemini-cli-subagent.html" target="_blank" rel="noopener noreferrer">青蛙小白</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">外部测评 / 上手体验 / 对用户真实影响</span>
+                    <span class="source-label">Claude 中文知识站</span>
+                  </div>
+                  <h3>Claude Code十分钟上手MCP协议教程解析</h3>
+                  <p class="synthesis">共识是 MCP 真正提升的是跨系统执行力，但配置和上下文成本不可忽视。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116451193128454" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方开发者实测接入 Postgres、GitHub、Playwright、Slack 等常用 MCP 服务器后，Claude Code 可以跨多个外部系统自主排查问题、截图并发通知，明显减少人工在不同窗口间切换。</p><p><strong>改变：</strong>对个人开发者和团队来说，这把 Claude Code 从只会改本地代码的助手，变成能串起查询、验证、反馈的一站式协作代理，日常排障和联调流程被压缩成一句话指令。</p><p><strong>边界：</strong>代价是 MCP 工具定义本身会占用大量上下文，作者特别提到要规避“tool 定义吃 20K context”的问题，因此在上下文敏感或配置粗糙的场景下体验会明显打折。</p><p class="source">来源：<a href="https://claude.cocoloop.cn/posts/claude-code-mcp-integration/" target="_blank" rel="noopener noreferrer">Claude 中文知识站</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
                     <span class="badge badge-blue">外部测评</span>
-                    <span class="source-label">zimage.run</span>
+                    <span class="source-label">当前检索片段</span>
                   </div>
-                  <h3>Qwen3.6-27B主打27B密集模型代码能力</h3>
-                  <p class="synthesis">外部观点聚焦其更偏真实工程流代码代理价值。</p>
-                  <a class="article-link" href="https://simonwillison.net/2026/Apr/22/qwen36-27b/#atom-everything" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析文章指出，Qwen3.6-27B与常见只看短代码补全分数的模型不同，强调用SWE-bench、Terminal-Bench、SkillsBench、NL2Repo这类更贴近真实工程流程的基准来体现代码代理能力。</p><p><strong>改变：</strong>这意味着用户和团队在评估它时，更应把它当成能参与修Bug、走终端流程、理解仓库任务的工程助手，而不是只看单段代码补全的模型。</p><p><strong>边界：</strong>这类结论主要建立在工程向基准而非具体IDE实测之上，因此对纯短补全、轻量问答或非仓库型开发场景的收益，材料里没有直接证明。</p><p class="source">来源：<a href="https://zimage.run/ru/blog/qwen3-6-27b-dense-coding-agent-en-20260423" target="_blank" rel="noopener noreferrer">zimage.run</a></p></div></div>
+                  <h3>Kimi K2.6实测对比Opus 4.6与Gemini 3.1 Pro</h3>
+                  <p class="synthesis">现有外部片段与目标新闻关联不足，无法形成可靠测评结论。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116452971643447" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>外部材料里只有一篇标题涉及 Kimi K2，但给出的片段实际只谈到 Claude/Opus 的使用额度限制，没有提供 Kimi K2.6 对比 Opus 4.6 或 Gemini 3.1 Pro 的具体实测结论。</p><p><strong>改变：</strong>现有片段不足以支撑“谁更强”或“对用户工作流有何实际改善”的外部测评判断。</p><p><strong>边界：</strong>其余材料主要是 Gemini 3.1 Pro 与 Claude Opus 4.6 的参数或基准对比，未直接覆盖目标新闻中的 Kimi K2.6。</p><p class="source">来源：当前检索片段</p></div></div>
                 </section>
-                
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>产品经理视角测评</h2>
+              <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">Ross McNeely / Entechlog / Monte Carlo</span>
+                    <span class="badge badge-purple">Claude Skill重写LinkedIn档案教程</span>
+                    <span class="source-label">The Interview Guys</span>
                   </div>
-                  <h3>Snowflake Cortex Agents金融编排实践</h3>
-                  <p class="synthesis">外部观点集中在统一入口、工程落地与上线可观测性。</p>
-                  <a class="article-link" href="https://www.infoq.cn/article/LIb7POBCMo8213s9lk0T?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方开发者观察到，Snowflake Cortex Agents采用三层路由架构，会把问题自动分发给Cortex Analyst、Cortex Search和网页搜索，分别处理结构化查询、语义检索和外部信息补充。</p><p><strong>改变：</strong>这会把原本分散在SQL、文档检索和外部搜索之间的分析流程收拢到一个问答入口，降低团队同时处理表数据与文本资料时的切换成本。</p><p><strong>边界：</strong>这类编排更适合同时依赖数据库与文档语料的分析场景；如果问题只涉及单一数据源，其多层路由价值会下降。</p><p class="source">来源：<a href="https://rossmcneely.com/2025/11/25/snowflake-cortex-agents-structured-and-unstructured-data/" target="_blank" rel="noopener noreferrer">Ross McNeely</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇实操文章把Snowflake Cortex Agents落到工程实现层，指出可用dbt自定义物化或Cortex Code两种方式围绕semantic views构建Agent。</p><p><strong>改变：</strong>对数据团队来说，这意味着Agent不只是聊天入口，而是可以纳入现有dbt与工程化流程，便于把AI分析能力接到已有建模、发布和维护体系里。</p><p><strong>边界：</strong>这套做法明显偏向已有semantic views和dbt工程基础的团队；缺少这些前置建模能力时，上手门槛会更高。</p><p class="source">来源：<a href="https://www.entechlog.com/blog/data/snowflake-cortex-agents-with-dbt/" target="_blank" rel="noopener noreferrer">Entechlog</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">ACE-Step 1.5 XL 外部测评/上手体验</span>
-                    <span class="source-label">RunComfy</span>
-                  </div>
-                  <h3>ACE-Step 1.5 XL本地音乐AI工作流上手</h3>
-                  <p class="synthesis">外部信息更强调可复现工作流，而非一键即用。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116448609441174" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>RunComfy 的 ComfyUI 工作流拆解指出，ACE-Step 1.5 XL Base 在本地生成时需要同时配套 Base 扩散检查点、专用 VAE，以及两个 Qwen ACE15 文本编码器联合工作，文本条件才能较完整地转成音乐控制信号。</p><p><strong>改变：</strong>这意味着用户照着“单模型加载”思路部署往往不够，用对成套资产和节点连接方式，才更可能稳定复现教程里的文本到音乐效果，也更适合纳入可复用的本地工作流。</p><p><strong>边界：</strong>代价是依赖项和节点配置更复杂，部署门槛高于一键网页工具；如果只是想快速试听，不适合缺少 ComfyUI 经验或不愿维护本地推理链路的用户。</p><p class="source">来源：<a href="https://www.runcomfy.com/zh-CN/comfyui-workflows/ace-step-1-5xl-base-text-to-music-in-comfyui-ai-audio-workflow" target="_blank" rel="noopener noreferrer">RunComfy</a></p></div></div>
+                  <h3>Claude Skill重写LinkedIn档案教程</h3>
+                  <p class="synthesis">外部观察集中在：更像定向改写工具，而非无输入自动优化。</p>
+                  <a class="article-link" href="https://sidsaladi.substack.com/p/ai-linkedin-optimizer-101-a-claude" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>The Interview Guys给出的LinkedIn提示词示例显示，Claude更适合基于“现有岗位描述+目标岗位”来定向改写个人经历，而不是从零自动生成通用简介。</p><p><strong>改变：</strong>这会把用户改LinkedIn档案的流程，从反复手写润色，变成先贴原文再按求职目标做多轮改写，更适合面向特定岗位快速迭代。</p><p><strong>边界：</strong>它依赖用户先提供当前描述和明确的目标岗位，因此不适合没有素材、也没有清晰求职方向的人直接一键产出高质量档案。</p><p class="source">来源：<a href="https://blog.theinterviewguys.com/claude-linkedin-profile-prompts/" target="_blank" rel="noopener noreferrer">The Interview Guys</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -81,35 +108,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
+                    <span class="badge badge-pink">GPT Image 2 外部测评与真实影响</span>
+                    <span class="source-label">知乎专栏 / Tenten / 爱范儿</span>
+                  </div>
+                  <h3>GPT Image 2实测强调中文渲染与思考模式</h3>
+                  <p class="synthesis">共识是中文可用性显著提升，但批量工作流仍受限速约束。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116453005202456" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎实测文基于 50+ 案例称，GPT-Image-2 在中文文字渲染、复杂版式排版、风格迁移和 UI 还原上相较前代有明显跃升，中文排版准确率从约 90%-95% 提升到 99%+。</p><p><strong>改变：</strong>这意味着做海报、长图、界面稿和带中文文案的宣传图时，用户能更少依赖后期修字和重排，直接出图可用率更高。</p><p><strong>边界：</strong>该结论来自作者案例集与自测口径，片段未给出统一基准和失败样本分布，准确率数字更适合视为经验值而非通用保证。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2030266928116261423" target="_blank" rel="noopener noreferrer">知乎专栏</a></p></div><div class="opinion"><p><strong>观察：</strong>Tenten 的全面评测称，GPT-Image-2 中文字渲染准确率达 99%，生成速度约为前代 GPT-Image-1.5 的两倍，并可覆盖从 iOS UI 草稿到工程三视图等更偏生产用途的输出。</p><p><strong>改变：</strong>对设计师和营销团队来说，AI 出图不再只是概念草图工具，而更接近可进入批量制作流程的中文视觉生产工具，尤其适合需要文字、结构和版式同时正确的任务。</p><p><strong>边界：</strong>片段同时指出标准输出与 API beta 的分辨率能力存在区分，且“可量产”更偏向设计、营销和结构化图稿，不等于所有创意场景都能稳定替代人工。</p><p class="source">来源：<a href="https://tenten.co/learning/gpt-image2/" target="_blank" rel="noopener noreferrer">Tenten</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">GPT Image 2 外部测评</span>
+                    <span class="source-label">腾讯云开发者社区 / YouMind</span>
+                  </div>
+                  <h3>GPT Image 2实测展示高质感绘图效果</h3>
+                  <p class="synthesis">共识是图文生成更可用，但专业严谨场景仍需人工兜底。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116451411230864" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测称，GPT-Image-2在中文文字渲染、复杂排版和风格迁移上有明显提升，支持4096×4096输出，中文排版准确率达到99%+。</p><p><strong>改变：</strong>这意味着做攻略长图、杂志封面、信息海报这类高密度图文内容时，用户可直接把生图结果用于初稿甚至成稿，明显减少后期重新排字和修图时间。</p><p><strong>边界：</strong>该优势主要体现在高密度排版和图文结合场景，片段未显示其在非排版类创作中的稳定性同样达到这一水平。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2658403" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div><div class="opinion"><p><strong>观察：</strong>外部对比文章称，GPT Image 2在Arena盲测相关实测里，文字渲染和世界知识表现都明显领先Nano Banana Pro。</p><p><strong>改变：</strong>对需要生成带文字、带常识元素的营销图、科普图或概念图的用户来说，提示词可以更直接，反复纠错和补画的轮次会减少。</p><p><strong>边界：</strong>该结论基于对比实测与社区截图，片段没有提供成本、速度或更复杂生产环境下的完整数据。</p><p class="source">来源：<a href="https://youmind.com/zh-CN/blog/gpt-image-2-vs-nano-banana-pro" target="_blank" rel="noopener noreferrer">YouMind</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">ComfyUI资产库重写新增预览对比与导出</span>
+                    <span class="source-label">dg《ComfyUI 试玩指南》 / 优设网《效率翻倍！ComfyUI 必装的工作流+模型管理插件 Workspace Manager》 / 知乎《【2025版】喂饭级教程！ComfyUI工作界面全解析》</span>
+                  </div>
+                  <h3>ComfyUI资产库重写新增预览对比与导出</h3>
+                  <p class="synthesis">外部体验普遍指向：价值在工作流浏览、复用与跨环境流转效率。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116451981662269" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>独立博主在试玩中提到，ComfyUI 相关增强脚本已能把工作流嵌进截图导出，并支持把别人分享的截图直接拖回界面导入，实际形成了“看图-还原工作流”的闭环。</p><p><strong>改变：</strong>这让用户分享素材和工作流时不必再单独传 JSON，团队交流、教程复现和案例学习都更直观，工作流导出的价值会直接落到传播和复用效率上。</p><p><strong>边界：</strong>这类收益更偏向分享和教学场景，对只在本地单人迭代、很少交换工作流的用户提升相对有限。</p><p class="source">来源：<a href="https://myst729.github.io/posts/2024/comfyui/" target="_blank" rel="noopener noreferrer">dg《ComfyUI 试玩指南》</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方教程总结旧版 ComfyUI 一次只能打开一个工作流很不方便，而工作流管理插件通过左侧列表实现多工作流导入、切换查看、历史版本保存和分类管理。</p><p><strong>改变：</strong>这说明资产库若原生补上预览浏览、差异对比和导出，真正改善的是多工作流并行筛选、回看和整理的效率，尤其适合模型实验多、版本迭代快的团队。</p><p><strong>边界：</strong>这类管理能力主要解决“资产多、版本多”的场景；如果用户只维护少量简单工作流，收益不会像重度使用者那样明显。</p><p class="source">来源：<a href="https://www.uisdc.com/workspace-manager" target="_blank" rel="noopener noreferrer">优设网《效率翻倍！ComfyUI 必装的工作流+模型管理插件 Workspace Manager》</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
                     <span class="badge badge-pink">外部测评 / 上手体验</span>
-                    <span class="source-label">茉莉花新闻网</span>
+                    <span class="source-label">CSDN博客 / AtomGit | GitCode博客</span>
                   </div>
-                  <h3>GPT Image 2正式版实测与提示词价值观察</h3>
-                  <p class="synthesis">共识是短提示词也能较快产出版式结果</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116448206917976" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>茉莉花新闻网的实测提到，GPT Image 2 用一两句简单画面描述就能出图，甚至可直接生成“广州市小学数学试卷”这类带明确版式诉求的内容。</p><p><strong>改变：</strong>这意味着普通用户或内容团队不必先写很长提示词，就能快速尝试海报、试卷、图文排版等任务，降低了首轮出图和版式草图制作门槛。</p><p class="source">来源：<a href="https://molihua.org/等等，这些图是gpt-image-2出的？！/" target="_blank" rel="noopener noreferrer">茉莉花新闻网</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">Claude Design 外部测评</span>
-                    <span class="source-label">爱范儿</span>
-                  </div>
-                  <h3>Claude Design实测高保真原型与PPT导出</h3>
-                  <p class="synthesis">共识是原型和PPT出稿更快，但前置规范仍重要。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116449028873477" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>爱范儿实测中，Claude Design 能根据具体场景提示直接生成演讲用 PPT，并且在原型环节迭代速度很快，快到设计师与工程师可以在一次会议里边讨论约束边看方案成形。</p><p><strong>改变：</strong>这会把做高保真原型和汇报稿的流程，从先写需求再排队出稿，改成会中即时共创，减少设计往返和演示材料制作时间。</p><p><strong>边界：</strong>要想稳定产出可用结果，仍需先花时间搭建设计系统和核心界面，不太适合完全没有样式基线、希望零准备直接出最终稿的场景。</p><p class="source">来源：<a href="https://www.ifanr.com/1662860" target="_blank" rel="noopener noreferrer">爱范儿</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">GPT-image2外部测评</span>
-                    <span class="source-label">知乎专栏《GPT Image 2 正式发布：从「能生成」到「能商用」的跨越，GPT Image 2 使用教程》 / 腾讯云开发者社区《GPT-Image-2 实测：中文排版准确率 99%，50+ 案例拆解十大生图方向》 / 知乎问答《如何评价最新发布的 GPT-Image-2，有哪些亮点值得关注？》</span>
-                  </div>
-                  <h3>GPT-image2短测生成表现与工作流参考</h3>
-                  <p class="synthesis">外部实测共识是：它最先改变的是可编辑、多图一致和中文成片工作流。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116449532255658" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方教程作者提到，GPT Image 2 支持局部化编辑，可以只修改画面中的特定区域而不必整张重生成。</p><p><strong>改变：</strong>这会把反复修细节的流程从“整图重抽卡”变成“定点返工”，更适合海报、电商图、角色图这类需要多轮微调的工作。</p><p><strong>边界：</strong>目前可用额度与订阅等级挂钩，免费用户能用但连续试错和高频迭代会更受限。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2030081511958036487" target="_blank" rel="noopener noreferrer">知乎专栏《GPT Image 2 正式发布：从「能生成」到「能商用」的跨越，GPT Image 2 使用教程》</a></p></div><div class="opinion"><p><strong>观察：</strong>腾讯云开发者社区的实测文章称，GPT-Image-2 在 50 多个案例里中文文字排版准确率可达 99% 以上，且可输出 4096×4096 分辨率图片。</p><p><strong>改变：</strong>这意味着做攻略长图、杂志封面、社交截图等过去最怕“中文字崩坏”的任务时，用户可以更直接把它接入成品级内容生产，而不只是拿来出草图。</p><p><strong>边界：</strong>该结论主要来自作者自选案例，优势集中在带文字版式的视觉内容，不等于所有题材和复杂排版都能稳定免修。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2658403" target="_blank" rel="noopener noreferrer">腾讯云开发者社区《GPT-Image-2 实测：中文排版准确率 99%，50+ 案例拆解十大生图方向》</a></p></div></div>
+                  <h3>ComfyUI管理大师支持视频差异对比</h3>
+                  <p class="synthesis">外部观点集中认为，工作流导出的核心价值是提升复现、协作与迁移效率。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116451914551569" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>CSDN教程作者指出，单靠截图分享ComfyUI作品会让协作者反复追问采样器和提示词权重，而导出整套工作流才能把完整参数链路精确传递出去。</p><p><strong>改变：</strong>这意味着“工作流导出”对用户的真实价值不在于多一个保存按钮，而是在复现作品、远程协作和社区分享时明显减少口头解释与手工还原成本。</p><p class="source">来源：<a href="https://blog.csdn.net/weixin_42575505/article/details/155875379" target="_blank" rel="noopener noreferrer">CSDN博客</a></p></div><div class="opinion"><p><strong>观察：</strong>GitCode博客将ComfyUI工作流导入导出定义为项目迁移、团队协作和社区分享的核心环节，强调节点式流程只有被完整保存和加载时才具备可复用性。</p><p><strong>改变：</strong>对应到这次新闻里的“工作流导出”，它真正改变的是团队可以把可运行流程当作交付物，而不是只交付结果图或零散参数，从而提升复用和迁移效率。</p><p><strong>边界：</strong>这类价值主要成立于本来就依赖节点化流程复用的场景；如果只是一次性出图或不需要迁移分享，导出能力的收益会明显变小。</p><p class="source">来源：<a href="https://blog.gitcode.com/10f5fb3e8e7f92a6c3c5b216175e71cf.html" target="_blank" rel="noopener noreferrer">AtomGit | GitCode博客</a></p></div></div>
                 </section>
                 </div>
             </section>
