@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-04-23 18:42</title>
+  <title>独立测评 · 2026-04-24 08:47</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -44,61 +44,45 @@
                 <section class="card">
                   <div class="meta">
                     <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">知乎《Claude Code 源码蒸馏 - Harness Engineering 实践记录》 / DEV Community《A Claude Code Skills Stack: How to Combine Superpowers, gstack, and GSD Without the Chaos》 / Medium《Superpowers, GSD, and gstack: What Each Claude Code Framework Actually Constrains》</span>
+                    <span class="source-label">BartMode+ClaudeCode: NEW Spec Toolkit Ends Vibe... - YouTube / 张子阳的博客</span>
                   </div>
-                  <h3>Claude Code配套4套Agent Harness横评</h3>
-                  <p class="synthesis">外部体验普遍指向：Harness 胜负主要取决于约束设计、上下文隔离与集成成本。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116451998436479" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者在拆解 Claude Code Harness 实践时观察到，给 Agent 过大的可行动作空间会明显增加失败率，反而需要先人工把任务方向和基础约束铺好，Agent 后续执行才更稳定。</p><p><strong>改变：</strong>这意味着团队在横评不同 Harness 时，不能只看“自动化程度”，还要看谁更能收缩 action space、把任务拆解和前置约束做扎实，否则同一真实任务下结果波动会很大。</p><p><strong>边界：</strong>代价是前期要人工设计流程和边界，不适合希望“零配置直接放手跑”的使用场景。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2023168552018921120" target="_blank" rel="noopener noreferrer">知乎《Claude Code 源码蒸馏 - Harness Engineering 实践记录》</a></p></div><div class="opinion"><p><strong>观察：</strong>DEV Community 的第三方工作流分析认为，Superpowers、gstack、GSD 三者并不是简单替代关系：gstack 更偏思考与评审，GSD 更偏上下文/规格稳定，Superpowers 更偏构建阶段能力增强。</p><p><strong>改变：</strong>对用户的真实影响是，选 Harness 不再只是比“谁更强”，而是要按任务阶段搭配：长周期项目更看重上下文稳态，评审密集任务更依赖 review 流程，编码期再考虑 TDD/技能增强。</p><p><strong>边界：</strong>这种分层组合会增加工作流复杂度，若只是小修小改，收益未必覆盖配置和切换成本。</p><p class="source">来源：<a href="https://dev.to/imaginex/a-claude-code-skills-stack-how-to-combine-superpowers-gstack-and-gsd-without-the-chaos-44b3" target="_blank" rel="noopener noreferrer">DEV Community《A Claude Code Skills Stack: How to Combine Superpowers, gstack, and GSD Without the Chaos》</a></p></div></div>
+                  <h3>BartMode结合Claude Code实测规范驱动开发</h3>
+                  <p class="synthesis">外部观点共识是：它更像重构开发流程，而非单纯提升写码速度。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116452887696886" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>YouTube博主演示 BartMode（片段中提到的 spec toolkit）配合 Claude Code 时，核心结论是它试图用“先写规范、再让代理执行”的流程，替代容易失控的 vibe coding。</p><p><strong>改变：</strong>这对用户的真实改变是，把一次性提示词驱动的写代码方式改成可复查的规范驱动流程，更适合多人协作、返工较多或需要降低 AI 跑偏风险的开发任务。</p><p><strong>边界：</strong>它的代价是前置规范编写更重，对只想快速试验想法、做一次性脚本或低风险原型的场景，未必比直接对话式编码更省事。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=nD24henxjT8" target="_blank" rel="noopener noreferrer">BartMode+ClaudeCode: NEW Spec Toolkit Ends Vibe... - YouTube</a></p></div><div class="opinion"><p><strong>观察：</strong>张子阳在博客里把这类工具与 Cursor、Trae、Claude Code、Gemini CLI 区分开来，认为其最突出的地方不是补全或对话，而是把“规范驱动编程”内置成核心工作方式。</p><p><strong>改变：</strong>这意味着用户和团队的关注点会从“如何把提示词说清楚”转向“如何把需求、约束和验收标准写成规范”，从而让 AI 生成和后续迭代更可控。</p><p><strong>边界：</strong>片段没有给出性能或产出质量对比，因此更适合把它理解为工作流变化，而不是已经证明在所有项目上都更高效。</p><p class="source">来源：<a href="https://tracefact.net/tech/142.html" target="_blank" rel="noopener noreferrer">张子阳的博客</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Gemini CLI子代理并行工作流机制</span>
-                    <span class="source-label">青蛙小白</span>
+                    <span class="badge badge-blue">GPT-5.5 / Codex 外部测评</span>
+                    <span class="source-label">Zack Proser</span>
                   </div>
-                  <h3>Gemini CLI子代理并行工作流机制</h3>
-                  <p class="synthesis">外部观察共识是：子代理提升复杂任务拆解效率，但仍受早期实现成熟度限制。</p>
-                  <a class="article-link" href="https://www.infoq.cn/article/50eZYcehCtQuxKoTcLhS?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>青蛙小白在讨论SubAgent时明确指出，Gemini CLI把复杂任务拆给专门子代理处理，形成分层协作而不是单代理串行硬做。</p><p><strong>改变：</strong>这意味着用户或团队在处理多步骤工程任务时，可以把不同子任务交给不同代理并行推进，减少主代理上下文负担，也更适合组织复杂工作流。</p><p><strong>边界：</strong>该文同时提到v0.9.0只是引入了SubAgent的基础支持，说明现阶段更像能力起步版，适合尝试任务委派，不代表所有并行协作场景都已成熟可用。</p><p class="source">来源：<a href="https://blog.frognew.com/2025/10/gemini-cli-subagent.html" target="_blank" rel="noopener noreferrer">青蛙小白</a></p></div></div>
+                  <h3>GPT-5.5经Codex半官方接口曝光评测</h3>
+                  <p class="synthesis">外部体验共识是入口已成形，但可靠交付仍未成熟。</p>
+                  <a class="article-link" href="https://simonwillison.net/2026/Apr/23/gpt-5-5/#atom-everything" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>开发者 Zack Proser 在上手 OpenAI Codex 研究预览约 3 天后认为，Codex 的产品交互方向很对，但当前实际性能还没达到他期待，尤其会卡在代码质量和一次性交付完整任务这两点。</p><p><strong>改变：</strong>这意味着对已开通 ChatGPT 付费订阅、能接触到 Codex/GPT-5.5 的用户来说，它更像一个可提前接入的代理式编程工作台，适合尝试拆解和委派任务，但还不能稳定替代人工做高要求的一次性开发交付。</p><p><strong>边界：</strong>边界在于作者明确提到“界面已到位、性能还要再等”，因此不适合要求高正确率、低返工率的一步到位编码场景。</p><p class="source">来源：<a href="https://zackproser.com/blog/openai-codex-review" target="_blank" rel="noopener noreferrer">Zack Proser</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验 / 对用户真实影响</span>
-                    <span class="source-label">Claude 中文知识站</span>
+                    <span class="badge badge-blue">OpenMythos外部测评</span>
+                    <span class="source-label">Firethering / GitHub Issue #23 · kyegomez/OpenMythos</span>
                   </div>
-                  <h3>Claude Code十分钟上手MCP协议教程解析</h3>
-                  <p class="synthesis">共识是 MCP 真正提升的是跨系统执行力，但配置和上下文成本不可忽视。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116451193128454" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方开发者实测接入 Postgres、GitHub、Playwright、Slack 等常用 MCP 服务器后，Claude Code 可以跨多个外部系统自主排查问题、截图并发通知，明显减少人工在不同窗口间切换。</p><p><strong>改变：</strong>对个人开发者和团队来说，这把 Claude Code 从只会改本地代码的助手，变成能串起查询、验证、反馈的一站式协作代理，日常排障和联调流程被压缩成一句话指令。</p><p><strong>边界：</strong>代价是 MCP 工具定义本身会占用大量上下文，作者特别提到要规避“tool 定义吃 20K context”的问题，因此在上下文敏感或配置粗糙的场景下体验会明显打折。</p><p class="source">来源：<a href="https://claude.cocoloop.cn/posts/claude-code-mcp-integration/" target="_blank" rel="noopener noreferrer">Claude 中文知识站</a></p></div></div>
+                  <h3>OpenMythos教程拆解递归深度Transformer</h3>
+                  <p class="synthesis">教学与架构启发价值高，但训练效率仍是实际落地短板。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/04/23/a-coding-tutorial-on-openmythos-on-recurrent-depth-transformers-with-depth-extrapolation-adaptive-computation-and-mixture-of-experts-routing/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Firethering在拆解中指出，OpenMythos针对“循环深度/looped transformer”常见的状态发散问题，引入了带约束的实现思路，把原本靠训练运气的稳定性变成了架构层面的显式控制。</p><p><strong>改变：</strong>这意味着想复现或教学讲解 Mythos 思路的开发者，能把精力更多放在理解递归深度Transformer本身，而不是反复排查训练时内部状态失控的问题。</p><p><strong>边界：</strong>这类设计首先改善的是可解释性和训练稳定性，不等于已经解决了吞吐、训练成本或工程效率，真要落到生产训练仍有额外门槛。</p><p class="source">来源：<a href="https://firethering.com/openmythos-open-source-claude-mythos-reconstruction/" target="_blank" rel="noopener noreferrer">Firethering</a></p></div><div class="opinion"><p><strong>观察：</strong>GitHub上有开发者直接反馈“没有可行的训练方式/效率太低”，说明项目即便概念上可复现，实际跑训练时仍存在明显的效率瓶颈。</p><p><strong>改变：</strong>对个人开发者和小团队来说，这会把OpenMythos从“可直接上手训练的模型工程”变成更偏研究演示或教程拆解的材料，决策时要预留更多算力和调参成本。</p><p><strong>边界：</strong>如果目标是低成本复现、快速迭代或稳定产出训练结果，这个项目当前并不适合作为即插即用方案。</p><p class="source">来源：<a href="https://github.com/kyegomez/OpenMythos/issues/23" target="_blank" rel="noopener noreferrer">GitHub Issue #23 · kyegomez/OpenMythos</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评</span>
-                    <span class="source-label">当前检索片段</span>
+                    <span class="badge badge-blue">GPT5.5与Claude Opus 4.7外部测评</span>
+                    <span class="source-label">Digital Applied / LLM Stats / Lushbinary</span>
                   </div>
-                  <h3>Kimi K2.6实测对比Opus 4.6与Gemini 3.1 Pro</h3>
-                  <p class="synthesis">现有外部片段与目标新闻关联不足，无法形成可靠测评结论。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116452971643447" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>外部材料里只有一篇标题涉及 Kimi K2，但给出的片段实际只谈到 Claude/Opus 的使用额度限制，没有提供 Kimi K2.6 对比 Opus 4.6 或 Gemini 3.1 Pro 的具体实测结论。</p><p><strong>改变：</strong>现有片段不足以支撑“谁更强”或“对用户工作流有何实际改善”的外部测评判断。</p><p><strong>边界：</strong>其余材料主要是 Gemini 3.1 Pro 与 Claude Opus 4.6 的参数或基准对比，未直接覆盖目标新闻中的 Kimi K2.6。</p><p class="source">来源：当前检索片段</p></div></div>
-                </section>
-                </div>
-            </section>
-            
-            <section class="role-block">
-              <h2>产品经理视角测评</h2>
-              <div class="role-cards">
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-purple">Claude Skill重写LinkedIn档案教程</span>
-                    <span class="source-label">The Interview Guys</span>
-                  </div>
-                  <h3>Claude Skill重写LinkedIn档案教程</h3>
-                  <p class="synthesis">外部观察集中在：更像定向改写工具，而非无输入自动优化。</p>
-                  <a class="article-link" href="https://sidsaladi.substack.com/p/ai-linkedin-optimizer-101-a-claude" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>The Interview Guys给出的LinkedIn提示词示例显示，Claude更适合基于“现有岗位描述+目标岗位”来定向改写个人经历，而不是从零自动生成通用简介。</p><p><strong>改变：</strong>这会把用户改LinkedIn档案的流程，从反复手写润色，变成先贴原文再按求职目标做多轮改写，更适合面向特定岗位快速迭代。</p><p><strong>边界：</strong>它依赖用户先提供当前描述和明确的目标岗位，因此不适合没有素材、也没有清晰求职方向的人直接一键产出高质量档案。</p><p class="source">来源：<a href="https://blog.theinterviewguys.com/claude-linkedin-profile-prompts/" target="_blank" rel="noopener noreferrer">The Interview Guys</a></p></div></div>
+                  <h3>GPT5.5与Claude Opus 4.7实测对比</h3>
+                  <p class="synthesis">外部观点分歧在于：Opus偏精确编码，GPT-5.5偏多模态与流程自动化。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116456595398039" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Digital Applied 对比价格后指出，Claude Opus 4.7 的输出价格低于 GPT-5.5（$25 vs $30 / 百万输出 token），但其新版 tokenizer 可能让同一输入任务的 token 消耗升到 4.6 的 1.0-1.35 倍。</p><p><strong>改变：</strong>对高输出占比的长文生成、批量客服或报告工作流，Opus 4.7 账面单价更有吸引力，但团队不能只看价目表，必须按真实任务重算总 token 成本。</p><p><strong>边界：</strong>如果你的任务以长上下文输入、复杂提示词为主，tokenizer 带来的额外输入消耗会吞掉部分价格优势，不适合只按每百万 token 标价做采购判断。</p><p class="source">来源：<a href="https://www.digitalapplied.com/blog/gpt-5-5-vs-claude-opus-4-7-frontier-comparison" target="_blank" rel="noopener noreferrer">Digital Applied</a></p></div><div class="opinion"><p><strong>观察：</strong>LLM Stats 汇总基准时提到，Claude Opus 4.7 在 CharXiv-R 上有较强表现，而 GPT-5.5 保留 GPT-5.4 级别的多模态能力，并给出 MMMU Pro 81.2%（无工具）/83.2%（有工具）的成绩。</p><p><strong>改变：</strong>这意味着需要读图、做多模态理解或把视觉输入接入现有流程的团队，更容易直接把 GPT-5.5 放进工作流；而偏文本推理、文档问答的场景，Opus 4.7 仍可能更有竞争力。</p><p><strong>边界：</strong>这类判断主要来自榜单和工具开关条件下的分项成绩，不能直接等同于你自己的业务任务表现，尤其不适合替代真实场景试跑。</p><p class="source">来源：<a href="https://llm-stats.com/blog/research/gpt-5-5-vs-claude-opus-4-7" target="_blank" rel="noopener noreferrer">LLM Stats</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -108,46 +92,24 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">GPT Image 2 外部测评与真实影响</span>
-                    <span class="source-label">知乎专栏 / Tenten / 爱范儿</span>
+                    <span class="badge badge-pink">外部测评</span>
+                    <span class="source-label">Pollo AI / 302.AI 基准实验室</span>
                   </div>
-                  <h3>GPT Image 2实测强调中文渲染与思考模式</h3>
-                  <p class="synthesis">共识是中文可用性显著提升，但批量工作流仍受限速约束。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116453005202456" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎实测文基于 50+ 案例称，GPT-Image-2 在中文文字渲染、复杂版式排版、风格迁移和 UI 还原上相较前代有明显跃升，中文排版准确率从约 90%-95% 提升到 99%+。</p><p><strong>改变：</strong>这意味着做海报、长图、界面稿和带中文文案的宣传图时，用户能更少依赖后期修字和重排，直接出图可用率更高。</p><p><strong>边界：</strong>该结论来自作者案例集与自测口径，片段未给出统一基准和失败样本分布，准确率数字更适合视为经验值而非通用保证。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2030266928116261423" target="_blank" rel="noopener noreferrer">知乎专栏</a></p></div><div class="opinion"><p><strong>观察：</strong>Tenten 的全面评测称，GPT-Image-2 中文字渲染准确率达 99%，生成速度约为前代 GPT-Image-1.5 的两倍，并可覆盖从 iOS UI 草稿到工程三视图等更偏生产用途的输出。</p><p><strong>改变：</strong>对设计师和营销团队来说，AI 出图不再只是概念草图工具，而更接近可进入批量制作流程的中文视觉生产工具，尤其适合需要文字、结构和版式同时正确的任务。</p><p><strong>边界：</strong>片段同时指出标准输出与 API beta 的分辨率能力存在区分，且“可量产”更偏向设计、营销和结构化图稿，不等于所有创意场景都能稳定替代人工。</p><p class="source">来源：<a href="https://tenten.co/learning/gpt-image2/" target="_blank" rel="noopener noreferrer">Tenten</a></p></div></div>
+                  <h3>GPT-Image 2.0对比Nano Banana 2实测</h3>
+                  <p class="synthesis">分歧在画面质感，共识在GPT更适合商用排版。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116455135906787" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Pollo AI在同一组“宠物拟人化”提示词实测中观察到，Nano Banana 2把毛发纹理和衣物垂坠感做得更自然，而GPT-Image 2结构更稳、颜色更中性准确，但触感真实度略弱。</p><p><strong>改变：</strong>这意味着做角色化宠物、毛发细节、服装质感类内容时，用户更可能直接选Nano Banana 2出首稿；而对品牌色、物体结构稳定性更敏感的图像任务，GPT-Image 2更省后期校色和修形时间。</p><p><strong>边界：</strong>该结论来自特定“宠物拟人化”场景，不足以直接外推到排版、文字渲染或电商主图等全部任务。</p><p class="source">来源：<a href="https://pollo.ai/hub/gpt-image-2-vs-nano-banana-2" target="_blank" rel="noopener noreferrer">Pollo AI</a></p></div><div class="opinion"><p><strong>观察：</strong>302.AI基准实验室在多场景案例实测里认为，GPT-Image 2在文字准确性、排版设计和商业交付能力上明显强于包括Nano Banana 2在内的竞品。</p><p><strong>改变：</strong>这对电商海报、带字视觉稿、营销物料团队的真实价值是，生成结果更接近可直接交付版本，能减少文字修错、版式返工和人工重排。</p><p><strong>边界：</strong>材料片段没有给出对应短板或成本细节，且来源带有平台评测属性，结论更适合参考为商用设计向优势而非全场景通吃。</p><p class="source">来源：<a href="https://302.ai/blog/302-ai-benchmark-lab-review-on-gpt-image-2/" target="_blank" rel="noopener noreferrer">302.AI 基准实验室</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">GPT Image 2 外部测评</span>
-                    <span class="source-label">腾讯云开发者社区 / YouMind</span>
+                    <span class="badge badge-pink">外部测评 / 上手体验 / 对用户真实影响</span>
+                    <span class="source-label">GitHub - lceric/comfyui-gpt-image / AIX 插件站 - ComfyUI插件GPT-Image超详细使用教程</span>
                   </div>
-                  <h3>GPT Image 2实测展示高质感绘图效果</h3>
-                  <p class="synthesis">共识是图文生成更可用，但专业严谨场景仍需人工兜底。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116451411230864" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测称，GPT-Image-2在中文文字渲染、复杂排版和风格迁移上有明显提升，支持4096×4096输出，中文排版准确率达到99%+。</p><p><strong>改变：</strong>这意味着做攻略长图、杂志封面、信息海报这类高密度图文内容时，用户可直接把生图结果用于初稿甚至成稿，明显减少后期重新排字和修图时间。</p><p><strong>边界：</strong>该优势主要体现在高密度排版和图文结合场景，片段未显示其在非排版类创作中的稳定性同样达到这一水平。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2658403" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div><div class="opinion"><p><strong>观察：</strong>外部对比文章称，GPT Image 2在Arena盲测相关实测里，文字渲染和世界知识表现都明显领先Nano Banana Pro。</p><p><strong>改变：</strong>对需要生成带文字、带常识元素的营销图、科普图或概念图的用户来说，提示词可以更直接，反复纠错和补画的轮次会减少。</p><p><strong>边界：</strong>该结论基于对比实测与社区截图，片段没有提供成本、速度或更复杂生产环境下的完整数据。</p><p class="source">来源：<a href="https://youmind.com/zh-CN/blog/gpt-image-2-vs-nano-banana-pro" target="_blank" rel="noopener noreferrer">YouMind</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">ComfyUI资产库重写新增预览对比与导出</span>
-                    <span class="source-label">dg《ComfyUI 试玩指南》 / 优设网《效率翻倍！ComfyUI 必装的工作流+模型管理插件 Workspace Manager》 / 知乎《【2025版】喂饭级教程！ComfyUI工作界面全解析》</span>
-                  </div>
-                  <h3>ComfyUI资产库重写新增预览对比与导出</h3>
-                  <p class="synthesis">外部体验普遍指向：价值在工作流浏览、复用与跨环境流转效率。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116451981662269" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>独立博主在试玩中提到，ComfyUI 相关增强脚本已能把工作流嵌进截图导出，并支持把别人分享的截图直接拖回界面导入，实际形成了“看图-还原工作流”的闭环。</p><p><strong>改变：</strong>这让用户分享素材和工作流时不必再单独传 JSON，团队交流、教程复现和案例学习都更直观，工作流导出的价值会直接落到传播和复用效率上。</p><p><strong>边界：</strong>这类收益更偏向分享和教学场景，对只在本地单人迭代、很少交换工作流的用户提升相对有限。</p><p class="source">来源：<a href="https://myst729.github.io/posts/2024/comfyui/" target="_blank" rel="noopener noreferrer">dg《ComfyUI 试玩指南》</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方教程总结旧版 ComfyUI 一次只能打开一个工作流很不方便，而工作流管理插件通过左侧列表实现多工作流导入、切换查看、历史版本保存和分类管理。</p><p><strong>改变：</strong>这说明资产库若原生补上预览浏览、差异对比和导出，真正改善的是多工作流并行筛选、回看和整理的效率，尤其适合模型实验多、版本迭代快的团队。</p><p><strong>边界：</strong>这类管理能力主要解决“资产多、版本多”的场景；如果用户只维护少量简单工作流，收益不会像重度使用者那样明显。</p><p class="source">来源：<a href="https://www.uisdc.com/workspace-manager" target="_blank" rel="noopener noreferrer">优设网《效率翻倍！ComfyUI 必装的工作流+模型管理插件 Workspace Manager》</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">外部测评 / 上手体验</span>
-                    <span class="source-label">CSDN博客 / AtomGit | GitCode博客</span>
-                  </div>
-                  <h3>ComfyUI管理大师支持视频差异对比</h3>
-                  <p class="synthesis">外部观点集中认为，工作流导出的核心价值是提升复现、协作与迁移效率。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116451914551569" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>CSDN教程作者指出，单靠截图分享ComfyUI作品会让协作者反复追问采样器和提示词权重，而导出整套工作流才能把完整参数链路精确传递出去。</p><p><strong>改变：</strong>这意味着“工作流导出”对用户的真实价值不在于多一个保存按钮，而是在复现作品、远程协作和社区分享时明显减少口头解释与手工还原成本。</p><p class="source">来源：<a href="https://blog.csdn.net/weixin_42575505/article/details/155875379" target="_blank" rel="noopener noreferrer">CSDN博客</a></p></div><div class="opinion"><p><strong>观察：</strong>GitCode博客将ComfyUI工作流导入导出定义为项目迁移、团队协作和社区分享的核心环节，强调节点式流程只有被完整保存和加载时才具备可复用性。</p><p><strong>改变：</strong>对应到这次新闻里的“工作流导出”，它真正改变的是团队可以把可运行流程当作交付物，而不是只交付结果图或零散参数，从而提升复用和迁移效率。</p><p><strong>边界：</strong>这类价值主要成立于本来就依赖节点化流程复用的场景；如果只是一次性出图或不需要迁移分享，导出能力的收益会明显变小。</p><p class="source">来源：<a href="https://blog.gitcode.com/10f5fb3e8e7f92a6c3c5b216175e71cf.html" target="_blank" rel="noopener noreferrer">AtomGit | GitCode博客</a></p></div></div>
+                  <h3>ComfyUI接入gpt image2.0批量主图工作流</h3>
+                  <p class="synthesis">外部信息共识是：批量工作流价值明确，但部署门槛不低。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116455521721329" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方开发者在 `comfyui-gpt-image` 节点里把官方 ComfyUI GPT 接口做了移植，并额外开放了 `api_base`、`auth_token` 和 `model` 等可配置项，说明 GPT-Image 接入 ComfyUI 后不只是能调用，还能按不同接入环境做参数化部署。</p><p><strong>改变：</strong>对做批量主图、详情图或团队化生产的人来说，这意味着 GPT-Image 可以被塞进现有 ComfyUI 流程里统一跑，而不是只能在单一默认端点里手工生成。</p><p><strong>边界：</strong>这类能力依赖额外插件节点，适合已有 ComfyUI 工作流和多端点接入需求的用户，不适合只想零配置即开即用的人。</p><p class="source">来源：<a href="https://github.com/lceric/comfyui-gpt-image" target="_blank" rel="noopener noreferrer">GitHub - lceric/comfyui-gpt-image</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方教程把 ComfyUI 插件 GPT-Image 的使用拆成进入插件目录、安装依赖等步骤，侧面说明这套能力当前更像“需要动手配置的工作流扩展”，而不是 ComfyUI 原生无门槛功能。</p><p><strong>改变：</strong>对用户的真实改变是，一旦装好插件，GPT-Image 就能被纳入节点式流程做批处理和复用；但上手方式更接近搭建生产工具链，而不是普通聊天式出图。</p><p><strong>边界：</strong>需要本地插件安装和 Python 依赖处理，对非技术用户、小白团队或只偶尔出几张图的场景并不友好。</p><p class="source">来源：<a href="https://plugin.aix.ink/archives/comfyui-gpt-image712" target="_blank" rel="noopener noreferrer">AIX 插件站 - ComfyUI插件GPT-Image超详细使用教程</a></p></div></div>
                 </section>
                 </div>
             </section>
