@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-04-25 17:51</title>
+  <title>独立测评 · 2026-04-26 08:38</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,51 +43,73 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
+                    <span class="badge badge-blue">DeepSeek V4、Claude Code、Codex 外部测评摘录</span>
+                    <span class="source-label">腾讯云开发者社区 / YingTu</span>
+                  </div>
+                  <h3>DeepSeek V4、Claude Code、Codex编码实测对比</h3>
+                  <p class="synthesis">共识是实战接入价值高，但最终胜负取决于具体工作流与约束。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116464094806605" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有开发者把 Claude Code 接到 DeepSeek V4-Pro 后，实测了 Skills 自动化查询和 AI 建表场景，认为有“惊喜”，但同时踩到一个与“1M 超长上下文”相关的实际坑点。</p><p><strong>改变：</strong>这说明团队把 Claude Code 底层模型切到 DeepSeek V4 后，确实能直接进入真实业务流测试，而不是只看跑分。</p><p><strong>边界：</strong>长上下文卖点不等于所有复杂任务都稳定，接入前仍需按具体工作流做回归验证。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2659935" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方评测在 OA 审批、BI 大屏、报表生成等 5 类场景里，认为 Claude Code + DeepSeek V4-Pro 组合的工具调用稳定、推理表现强，甚至可替代 Claude 原生模型。</p><p><strong>改变：</strong>对已经在用 Claude Code 的团队，这意味着可以把模型层替换为 DeepSeek V4-Pro，在不改主工作流的前提下尝试提升复杂业务任务表现。</p><p><strong>边界：</strong>代价是价格偏高，且不支持图片输入，因此不适合强依赖多模态输入的编码/自动化场景。</p><p class="source">来源：<a href="https://cloud.tencent.com.cn/developer/article/2660262" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">外部测评/上手体验</span>
+                    <span class="source-label">CatchAdmin</span>
+                  </div>
+                  <h3>GPT-5.5与Codex自动化实战评测</h3>
+                  <p class="synthesis">共识是它更像端到端开发代理，但真实稳定性仍待实战验证。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116465235924968" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方整理文提到，GPT-5.5 在 Terminal-Bench 2.0 上取得 82.7% 准确率，说明它在需要规划、反复迭代和协调多种工具的复杂命令行任务中，表现优于以往模型。</p><p><strong>改变：</strong>对用户而言，这意味着在 Codex 一类终端代理场景里，模型更可能独立完成“理解任务-调用工具-修复问题-继续执行”的整段链路，减少人工频繁接管。</p><p><strong>边界：</strong>这是一项基准成绩而非具体上手案例，不能直接等同于真实项目中的稳定交付效果，尤其无法反映代码质量、成本和长任务容错。</p><p class="source">来源：<a href="https://catchadmin.com/post/2026-04/gpt-55-agentic-ai-release" target="_blank" rel="noopener noreferrer">CatchAdmin</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">DeepSeek V4 Pro 适配 Claude Code 外部体验</span>
+                    <span class="source-label">掘金作者文章 / SegmentFault 思否</span>
+                  </div>
+                  <h3>DeepSeek V4 Pro适配Claude Code的Agent实战体验</h3>
+                  <p class="synthesis">共识是接入门槛低、成本低，但原生能力仍有缺口。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116464816226427" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>掘金作者实测将 DeepSeek-V4-Pro 通过 API 接入 Claude Code 使用，完成一轮高阶 Agent 工作后实际扣费 15.75 元，并明确提到该模型当前没有 CodingPlan。</p><p><strong>改变：</strong>这说明开发者可以不改动 Claude Code 主工作流就直接换用 DeepSeek 做 Agent 任务，并且能较低成本先跑通真实项目级实验。</p><p><strong>边界：</strong>现阶段需要自行通过 API 接入，且缺少 CodingPlan 能力，任务规划与流程完整性可能不如原生深度适配方案。</p><p class="source">来源：<a href="https://juejin.cn/post/7632230684447211554" target="_blank" rel="noopener noreferrer">掘金作者文章</a></p></div><div class="opinion"><p><strong>观察：</strong>SegmentFault 文章给出的上手结论是，把 Claude Code 对接 DeepSeekV4-Pro 的配置成本很低，大约三分钟即可完成，并能继续使用 ClaudeCode 的完整工具链。</p><p><strong>改变：</strong>对个人开发者或团队来说，这意味着切换底层模型的迁移门槛很低，可以在保留现有 Agent 工具习惯的同时压低 API 成本。</p><p class="source">来源：<a href="https://segmentfault.com/a/1190000047727977" target="_blank" rel="noopener noreferrer">SegmentFault 思否</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
                     <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">TMDM / 技术栈 / Toolin AI</span>
+                    <span class="source-label">腾讯云开发者 / tools.caca01</span>
                   </div>
-                  <h3>DeepSeek V4 Pro百万上下文多Agent实测</h3>
-                  <p class="synthesis">外部共识是：长上下文 Agent 更实用，但要靠工作流编排才能发挥。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116464212319501" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测认为 DeepSeek V4 Pro 把“百万上下文、响应速度、输出稳定性、低价格”同时做到可用于真实生产环境，不再只是参数层面的卖点。</p><p><strong>改变：</strong>对开发者团队的直接改变是，可以把长文档解析、长链路 Agent 和在线服务放到同一模型上跑，减少为上下文长度、时延和成本分别拆模型的必要。</p><p class="source">来源：<a href="https://tmdm.cn/deepseek-v4-pro-production-agent/" target="_blank" rel="noopener noreferrer">TMDM</a></p></div><div class="opinion"><p><strong>观察：</strong>开发者上手文章认为 deepseek-v4-pro 的 Function Calling 相比 V3 有“质的飞跃”，并且原生支持并行工具调用，能搭出更可靠的多步骤工作流。</p><p><strong>改变：</strong>这意味着需要多 Agent/多工具协作的团队，可以把串行调用改成并行+循环编排，缩短自动化流程时间，并提升复杂任务一次跑通的概率。</p><p><strong>边界：</strong>它的效果建立在“并行工具调用+循环编排”之上，更适合愿意自己设计工作流的团队，不是零配置就能稳定替代人工。</p><p class="source">来源：<a href="https://jishuzhan.net/article/2047596705835712514" target="_blank" rel="noopener noreferrer">技术栈</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">DeepSeek-V4 外部测评</span>
-                    <span class="source-label">Jdon / YingTu / 翔宇工作流</span>
-                  </div>
-                  <h3>DeepSeek-V4上手评测与编程Agent解析</h3>
-                  <p class="synthesis">共识是它更适合接入真实编程Agent流。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116459531405050" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析认为，DeepSeek-V4 在世界知识层面已逼近顶级闭源模型，仅次于 Gemini-3.1-Pro，差距更像细节而非代差。</p><p><strong>改变：</strong>这意味着做长上下文整合、知识密集型问答或 Agent 规划时，团队可以把它当成一线候选，而不只是低价备选。</p><p><strong>边界：</strong>材料同时指出它仍略落后于最强闭源模型，因此在极高精度知识型任务上不一定是绝对首选。</p><p class="source">来源：<a href="https://www.jdon.com/91580-deepseek-v4-open-source-moe-agent-model.html" target="_blank" rel="noopener noreferrer">Jdon</a></p></div><div class="opinion"><p><strong>观察：</strong>YingTu 的路线分析建议优先把 DeepSeek-V4-Pro 用在失败代价更高的任务，如代码修改、工具链协作、长上下文综合、复杂推理和 Agent 步骤规划。</p><p><strong>改变：</strong>对开发团队来说，实际改变不是“全量替换”，而是先把它放进关键编程链路做双跑或灰度，验证高风险任务收益。</p><p><strong>边界：</strong>这类建议本身默认了分层使用策略，不适合一上来就无差别替换所有低风险、低复杂度调用。</p><p class="source">来源：<a href="https://yingtu.ai/zh/blog/gpt-5-5-vs-deepseek-v4" target="_blank" rel="noopener noreferrer">YingTu</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">外部测评</span>
-                    <span class="source-label">YingTu</span>
-                  </div>
-                  <h3>DeepSeek V4对比GPT-5.5多场景测评</h3>
-                  <p class="synthesis">外部信息更强调并行试跑选型，缺少场景实测细节。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116463172061929" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方开发者文章把 GPT-5.5/5.4 API 与 DeepSeek-V4 放在同一迁移流程里做“双跑”评估，说明两条路线在接入层面已进入可直接并行试跑、按业务结果筛选的比较阶段。</p><p><strong>改变：</strong>对团队的真实改变是，选型不必先押单一路线，而是可以先做并行压测与灰度迁移，用同一业务链路比较产出、稳定性和接入成本后再决定主模型。</p><p><strong>边界：</strong>材料片段没有给出知识问答、动画生成、3D 生成等具体场景下的质量、速度或成本实测结果，因此不足以支持更细的能力优劣判断。</p><p class="source">来源：<a href="https://yingtu.ai/zh/blog/gpt-5-5-vs-deepseek-v4" target="_blank" rel="noopener noreferrer">YingTu</a></p></div></div>
+                  <h3>Repo Prompt联动Claude Code与ChatGPT省tokens实测</h3>
+                  <p class="synthesis">外部观察更支持“分工协作”，但未直接量化省 tokens 幅度。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116466074519466" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>腾讯云开发者文章在接入 OpenAI 的 Codex MCP 后实测到：Claude Code 更适合做规划和主构建，GPT/Codex 更擅长代码审查和 UI 优化，对抗式复审还能补出隐藏 bug。</p><p><strong>改变：</strong>这意味着用户把 Claude Code 和 ChatGPT/Codex 串起来时，不只是“多一个模型”，而是能把生成、复查、润色拆成分工流程，减少主模型反复改稿带来的上下文消耗。</p><p><strong>边界：</strong>文段没有给出量化的 token 节省数据，更多证明的是协作分工有效；如果团队只做一次性小改动，这种双模型串联的收益未必明显。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2654895" target="_blank" rel="noopener noreferrer">腾讯云开发者</a></p></div><div class="opinion"><p><strong>观察：</strong>一篇第三方编程实测在 React 18 + TypeScript 拖拽排序任务中观察到：Claude 的代码质量略胜 ChatGPT（4.5 vs 3.5），但两者正确性都较高（5 vs 4）。</p><p><strong>改变：</strong>对实际工作流的启发是，团队可以优先让 Claude 产出首版，再把 ChatGPT 放在复核、补全或替代思路阶段，从而避免两个模型都完整吃一遍同样的大上下文。</p><p><strong>边界：</strong>这条结论来自特定前端任务，不等于所有语言、后端场景或复杂仓库协作都保持同样优势。</p><p class="source">来源：<a href="https://tools.caca01.com/articles/claude-vs-chatgpt-ai-code-2026" target="_blank" rel="noopener noreferrer">tools.caca01</a></p></div></div>
                 </section>
                 </div>
             </section>
             
             <section class="role-block">
-              <h2>产品经理视角测评</h2>
+              <h2>美术视角测评</h2>
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-purple">Claude求职工作流外部观察</span>
-                    <span class="source-label">CSDN 博主《10个Claude工作流 | 把 Claude 用成了工作流机器》</span>
+                    <span class="badge badge-pink">GPT-image-2动漫平面海报设计实测</span>
+                    <span class="source-label">YingTu</span>
                   </div>
-                  <h3>The AI Job Search Toolkit 101谈Claude求职工作流</h3>
-                  <p class="synthesis">外部体验更认可 Claude 在求职重复流程中的提效价值。</p>
-                  <a class="article-link" href="https://sidsaladi.substack.com/p/the-ai-job-search-toolkit-101-5-claude" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方作者连续两周记录 Claude 工作流使用后，观察到把重复任务固化为固定提示词加固定输出结构后，结果更稳定且每周可节省约 11.4 小时。</p><p><strong>改变：</strong>这说明把 Claude 用在求职材料整理、岗位信息归纳、投递跟进这类高重复环节时，用户真正获得的不是单次回答更好，而是能把整套流程变成可重复执行的半自动工作流。</p><p><strong>边界：</strong>这类收益依赖任务本身足够重复、输入输出格式可标准化；对高度开放、一次一变的求职判断题，工作流化价值会明显下降。</p><p class="source">来源：<a href="https://blog.csdn.net/weixin_52299264/article/details/159548548" target="_blank" rel="noopener noreferrer">CSDN 博主《10个Claude工作流 | 把 Claude 用成了工作流机器》</a></p></div></div>
+                  <h3>GPT-image-2动漫平面海报设计实测</h3>
+                  <p class="synthesis">现有第三方更强调选型与接入成本，不足以单独证明动漫海报成片优势。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116466678500040" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>YingTu把GPTImage2与Nano Banana 2/Pro当成三条图像生成路线来比较，实际关注点放在API入口、工作负载、价格边界和上线前测试矩阵，说明它更像是在评估整条出图工作流而不只是单次海报效果。</p><p><strong>改变：</strong>这会让做动漫海报二创的个人或团队在选型时，把接入难度、批量测试成本和上线前验证流程一起纳入判断，而不是只看一张样图好不好看。</p><p><strong>边界：</strong>这类比较更适合做生产路线筛选，不适合直接判断GPT-image-2在动漫海报上的画风上限、角色一致性或单张成片质量。</p><p class="source">来源：<a href="https://yingtu.ai/zh/blog/gpt-image-2-vs-nano-banana-pro" target="_blank" rel="noopener noreferrer">YingTu</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">ComfyUI LoRA工作流外部观察</span>
+                    <span class="source-label">CSDN博客《ComfyUI 使用 LoRA 极简工作流》 / 知乎《使用 ComfyUI 进行本地 FLUX.1 LoRA 的训练》</span>
+                  </div>
+                  <h3>ComfyUI冷调Melancholy氛围LoRA工作流实测</h3>
+                  <p class="synthesis">共识是LoRA工作流易验证效果，但显存与节点配置决定可复现性。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116465587984214" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>CSDN作者在ComfyUI极简LoRA工作流里实际对两个LoRA分别调权重后出图，能直接从笑容和脸型变化看出LoRA已生效，说明风格/特征注入在工作流中是可见且可验证的。</p><p><strong>改变：</strong>这对想复现“冷调Melancholy氛围LoRA”工作流的用户，意味着不必重搭复杂链路，只要把LoRA节点接在底模后并调权重，就能快速验证氛围迁移是否成立。</p><p><strong>边界：</strong>这类验证主要证明LoRA确实介入生成过程，但片段没有给出画质稳定性、不同底模兼容性或多LoRA叠加后的副作用。</p><p class="source">来源：<a href="https://blog.csdn.net/z099164/article/details/138845784" target="_blank" rel="noopener noreferrer">CSDN博客《ComfyUI 使用 LoRA 极简工作流》</a></p></div><div class="opinion"><p><strong>观察：</strong>知乎作者在本地FLUX.1 LoRA训练/工作流实操中观察到，16GB显存打开验证节点会频繁爆显存；RTX4080 16GB训练2000步约需50-60分钟，若用split_mode可把显存压到约8GB，但耗时会拉长到3个多小时。</p><p><strong>改变：</strong>这说明围绕LoRA的ComfyUI工作流不只是“能不能出图”，还直接受显存和节点配置约束；普通用户若要复现或微调类似Melancholy风格LoRA，需要提前按硬件能力裁剪验证/保存节点，否则很容易中断流程。</p><p><strong>边界：</strong>代价是硬件门槛和时间成本都不低，尤其不适合低显存机器直接照搬完整训练/验证工作流。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/716770443" target="_blank" rel="noopener noreferrer">知乎《使用 ComfyUI 进行本地 FLUX.1 LoRA 的训练》</a></p></div></div>
                 </section>
                 </div>
             </section>
