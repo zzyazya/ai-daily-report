@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-04-28 08:43</title>
+  <title>独立测评 · 2026-04-28 17:50</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,24 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">VibeVoice-ASR 外部测评/上手体验</span>
-                    <span class="source-label">腾讯云开发者 / jimo.studio</span>
+                    <span class="badge badge-blue">MiMo V2.5 Pro 外部测评提炼</span>
+                    <span class="source-label">UI中国设计网 / SolanaFlow</span>
                   </div>
-                  <h3>Microsoft VibeVoice开源语音转写模型</h3>
-                  <p class="synthesis">共识是它主要改进长音频转写流程，而非已被证明显著领先精度。</p>
-                  <a class="article-link" href="https://simonwillison.net/2026/Apr/27/vibevoice/#atom-everything" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>腾讯云开发者文章的上手信息显示，装好 `ffmpeg` 后可直接运行 `python demo/vibevoice_asr_gradio_demo.py --model_path microsoft/VibeVoice-ASR --share`，并把 60 分钟长音频转成同时带说话人识别和时间戳的结果。</p><p><strong>改变：</strong>这意味着做会议纪要、访谈整理、播客转写的团队，不必再先切音频、再分别跑转写和分轨，单次处理就能拿到更接近可交付的结构化文本。</p><p><strong>边界：</strong>材料没有给出速度、显存占用、长音频下的准确率波动等实测，因此更适合判断它是否省流程，不足以判断它是否已经优于现有生产方案。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2627275" target="_blank" rel="noopener noreferrer">腾讯云开发者</a></p></div><div class="opinion"><p><strong>观察：</strong>jimo.studio 的第三方分析提到，VibeVoiceASR 已接入 Hugging Face Transformers，并可从 Microsoft Foundry 模型目录直接检索，说明它不是孤立 demo，而是能进入现有推理与评测工具链。</p><p><strong>改变：</strong>对已经用 Transformers 做实验、评测或部署的团队，接入成本会明显低于单独维护一套专用推理脚本，便于把长音频转写和说话人分离快速纳入现有流水线。</p><p><strong>边界：</strong>这类生态集成降低的是工程接入门槛，不等于自动解决精度、延迟、成本或多语种泛化问题；材料里也没有给出与其他 ASR 模型的对比。</p><p class="source">来源：<a href="https://jimo.studio/blog/vibevoice-asr-a-breakthrough-in-long-audio-transcription/" target="_blank" rel="noopener noreferrer">jimo.studio</a></p></div></div>
+                  <h3>小米 MiMo V2.5 Pro实测宣称击败DeepSeek V4</h3>
+                  <p class="synthesis">共识是它更像低成本高可用的实战替代品</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116481408893972" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>UI中国设计网的上手文称，作者在实际使用中认为 `Claude Code + MiMo-V2.5-Pro` 是“目前效果最好的组合”，直接把它当作代码代理工作流里的优先模型。</p><p><strong>改变：</strong>对依赖 Claude Code 一类代理式编程工具的用户来说，这意味着可直接把 MiMo-V2.5-Pro 纳入日常编码/改代码流程，作为偏实战可用而非只看榜单的替代选择。</p><p class="source">来源：<a href="https://www.uisdc.com/mimo-v2-5-pro" target="_blank" rel="noopener noreferrer">UI中国设计网</a></p></div><div class="opinion"><p><strong>观察：</strong>SolanaFlow 的评测认为，MiMo-V2-Pro 在代码、创意写作和 agentic 任务上表现强，同时价格明显低于 Claude，甚至一度被误认成“DeepSeek V4”级别表现。</p><p><strong>改变：</strong>这对团队采购和模型选型的直接影响是：如果核心任务覆盖编码与代理执行，MiMo 可能提供更低成本的可用替代，降低高端闭源模型的使用预算。</p><p class="source">来源：<a href="https://solanaflow.net/news/xiaomi-mimo-v2-pro-review-the-ai-model-so-good-it-was-mistaken-for-deepseek-v4" target="_blank" rel="noopener noreferrer">SolanaFlow</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">DeepSeek V4 外部测评与真实影响</span>
-                    <span class="source-label">阿里云开发者社区 / 网易科技</span>
+                    <span class="badge badge-blue">小米 MiMo V2.5 Pro 外部测评</span>
+                    <span class="source-label">UI中国</span>
                   </div>
-                  <h3>改用DeepSeek V4后月账单降90%且效果更好</h3>
-                  <p class="synthesis">外部评价共识是：编码推理性价比高，但高端场景仍有边界。</p>
-                  <a class="article-link" href="https://www.infoq.cn/article/e4UXTsCToLXsRVEWNUqW?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>阿里云开发者社区的实测中，DeepSeek V4-Pro虽然不识别图片，但在修复大屏问题时能仅靠读取配置文件和领域知识准确定位问题，作者给出的结论是“除了贵，没别的毛病”。</p><p><strong>改变：</strong>这说明它在代码排障、配置分析这类纯文本工程任务上，能减少人工来回定位与试错时间，团队即使不依赖最贵闭源模型也可能拿到足够好的交付效果。</p><p><strong>边界：</strong>边界是多模态能力明显不足，遇到必须看图、看截图、看视觉布局的问题会掉链子，而且Pro版本本身并不便宜。</p><p class="source">来源：<a href="https://developer.aliyun.com/article/1731062" target="_blank" rel="noopener noreferrer">阿里云开发者社区</a></p></div><div class="opinion"><p><strong>观察：</strong>网易科技汇总首批实测时提到，DeepSeek V4-Pro在编码、数学和STEM问题上明显强于其他开源模型，整体性能被评价为接近Claude Opus 4.6、GPT-5.4和Gemini 3.1这一档。</p><p><strong>改变：</strong>对用户和团队的真实意义是，很多原本要上更贵闭源旗舰模型的开发、推理类工作流，有机会迁到V4上，以更低模型成本完成大部分高价值任务。</p><p><strong>边界：</strong>但第三方汇总测评也指出它与头部闭源模型仍有差距，一些高难度任务或对稳定上限要求极高的场景未必适合完全替代。</p><p class="source">来源：<a href="https://www.163.com/tech/article/KRHHU3CL00097U7T.html" target="_blank" rel="noopener noreferrer">网易科技</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Claude Design 与 Claude Code 外部测评</span>
-                    <span class="source-label">53AI / DEV Community / 知乎博主《聊聊 Claude Code》</span>
-                  </div>
-                  <h3>Claude Design与Claude Code对比实测解析</h3>
-                  <p class="synthesis">共识是前者提方案，后者强在可控落地。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116475822152670" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>53AI 的 Claude Design 实测提到，工具在生成原型前会先连续追问关键设计选项，用户也可用“Decide for me”交给模型决定，因此首版结果通常就更贴近预期、减少来回修改。</p><p><strong>改变：</strong>这意味着做低保真到可交互原型时，用户把大量前置澄清和首版搭建交给 Claude Design，原本要在 Figma 里反复拉扯的沟通轮次被压缩。</p><p><strong>边界：</strong>它更像把需求澄清前置，而不是完全免思考；如果用户自己对信息架构、交互细节没有判断，仍要承担模型替你做默认决策的偏差。</p><p class="source">来源：<a href="https://www.53ai.com/news/LargeLanguageModel/2026042061809.html" target="_blank" rel="noopener noreferrer">53AI</a></p></div><div class="opinion"><p><strong>观察：</strong>DEV Community 的上手评测直接把两者定位为“在 Claude Design 里设计，在 Claude Code 里交付”，认为它适合从品牌套件、落地页一路衔接到上线，核心观察是设计稿与代码实现之间的断点被明显缩短。</p><p><strong>改变：</strong>对小团队或独立开发者来说，工作流从“设计工具一套、开发工具一套”变成连续链路，能更快把页面想法推进到可运行版本。</p><p><strong>边界：</strong>这类收益主要出现在网页、落地页、轻应用等可快速实现的场景；复杂产品仍未证明能替代完整设计评审、组件治理和工程验证流程。</p><p class="source">来源：<a href="https://dev.to/launchwithben/claude-design-review-hands-on-brand-kit-and-landing-page-test-38l1" target="_blank" rel="noopener noreferrer">DEV Community</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">DEV Community / llamadart 开发者</span>
-                  </div>
-                  <h3>十小时航班离线运行本地LLMs实战记录</h3>
-                  <p class="synthesis">共识是离线本地LLM真能用，但部署与定位仍有限。</p>
-                  <a class="article-link" href="https://deploy.live/blog/running-local-llms-offline-on-a-ten-hour-flight/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>DEV Community 的开发者在做离线推理工具时，明确验证了本地推理配合 `llama.cpp` 与 GGUF 模型可以覆盖航班、弱网和受限网络环境，真正可在无外网条件下运行。</p><p><strong>改变：</strong>这意味着用户在十小时航班这类彻底断网场景里，仍能继续写作、问答或做原型，不必依赖云端 API 的可用性。</p><p><strong>边界：</strong>作者也提到最大摩擦来自原生打包，说明离线可用不等于开箱即用，部署和分发对普通用户或跨平台团队仍有门槛。</p><p class="source">来源：<a href="https://dev.to/gde/why-i-built-llamadart-offline-local-llm-inference-for-dartflutter-38pf" target="_blank" rel="noopener noreferrer">DEV Community / llamadart 开发者</a></p></div></div>
+                  <h3>小米 MiMo V2.5 Pro实测对比DeepSeek V4</h3>
+                  <p class="synthesis">现有第三方信息更支持其编码接入顺滑，尚不足以独立证明全面胜过 DeepSeek V4。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116481341855946" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>UI中国的上手文章提到，作者把 MiMo-V2.5-Pro 接入 Claude Code 后，实际体验“非常丝滑”，并直接称它“可能是目前国内最适合 Claude Code”的模型组合。</p><p><strong>改变：</strong>这意味着对已经在用 Claude Code 的开发者或团队来说，MiMo-V2.5-Pro 更像是一个可直接落地的国内替代选项，能减少接入和日常编码协作中的卡顿感。</p><p><strong>边界：</strong>该观察只覆盖 Claude Code 编码工作流下的上手体验，片段里没有给出与 DeepSeek V4 的量化基准、复杂任务胜负或非编程场景表现。</p><p class="source">来源：<a href="https://www.uisdc.com/mimo-v2-5-pro" target="_blank" rel="noopener noreferrer">UI中国</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -92,35 +70,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">外部测评</span>
-                    <span class="source-label">智趣AI甄选（转引机器之心）</span>
+                    <span class="badge badge-pink">HappyHorse与Seedance 2.0外部测评摘录</span>
+                    <span class="source-label">YouTube 创作者评测：How to FIX the Face Upload Error in Seedance</span>
                   </div>
-                  <h3>ChatGPT Images 2.0与即梦5.0横评</h3>
-                  <p class="synthesis">现有外部实测更偏向认可其综合生成能力更强。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116477214661353" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>智趣AI甄选转引的第三方体验认为，ChatGPT Images 2.0整体生成体验明显强于 Nano Banana 2，结论是“确实比目前的 Nano Banana 2 强大不少”。</p><p><strong>改变：</strong>这意味着对需要直接比较不同文生图模型的一线用户来说，ChatGPT Images 2.0在首选模型排序上可能前移，减少来回切换多个工具试错的成本。</p><p class="source">来源：<a href="https://www.aifun.cc/chatgpt-images-20-is-released-with-a-bang.html" target="_blank" rel="noopener noreferrer">智趣AI甄选（转引机器之心）</a></p></div></div>
+                  <h3>HappyHorse与Seedance 2.0视频横评</h3>
+                  <p class="synthesis">外部体验更强调工作流门槛，而不只是成片效果。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116481190792146" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方上手视频指出，Seedance 2.0虽然成片能力强，但在实际使用中会直接拦截自定义人脸上传，导致人脸参考工作流无法正常启动。</p><p><strong>改变：</strong>这意味着需要做真人定制、角色一致性或IP形象复用的用户，不能把Seedance 2.0直接接入现有的人脸驱动视频流程，选型时要把“能不能传人脸参考”单独当成门槛条件。</p><p><strong>边界：</strong>这条观察聚焦的是上传与工作流可用性，不等于对整体画质或运动表现的全面结论；如果任务本身不依赖自定义人脸，影响会明显变小。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=O66xDqOn384" target="_blank" rel="noopener noreferrer">YouTube 创作者评测：How to FIX the Face Upload Error in Seedance</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
                     <span class="badge badge-pink">外部测评</span>
-                    <span class="source-label">How to FIX the Face Upload Error in Seedance... - YouTube</span>
+                    <span class="source-label">ChatGPT Chinese Blog</span>
                   </div>
-                  <h3>快乐马对比可灵3.0与Seedance 2.0</h3>
-                  <p class="synthesis">现有外部信息更指向 Seedance 的工作流限制，而非画面表现定论。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116476090717343" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>YouTube 博主在上手 Seedance 2.0 时实际遇到“无法上传自定义人脸”的拦截问题，认为这是该模型在实操里一个很大的可用性缺口。</p><p><strong>改变：</strong>这会直接改变创作者的选型：凡是需要指定人物脸、做真人分身或保持角色身份一致的工作流，团队就不能把 Seedance 2.0 当成可直接落地的主力方案。</p><p><strong>边界：</strong>这一观察主要指向角色定制与人物一致性场景，不足以单独说明 Seedance 2.0 在故事板镜头设计、画质或运动表现上一定弱于可灵 3.0。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=O66xDqOn384" target="_blank" rel="noopener noreferrer">How to FIX the Face Upload Error in Seedance... - YouTube</a></p></div></div>
+                  <h3>GPT-Image-2对比Nano-banana Pro实测</h3>
+                  <p class="synthesis">共识是GPT-Image-2偏重准字与结构，Nano路线偏重速度与成本。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116480066716414" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方横评给出的结论是，GPT-Image-2在文字渲染和结构化理解上明显强于Nano Banana系，而Nano Banana一侧更突出生成速度和成本优势。</p><p><strong>改变：</strong>这意味着做中文海报、信息图、流程图等高文字密度任务的团队，更可能减少返工与后期修字；追求批量出图和预算控制的团队则更可能偏向Nano Banana路线。</p><p><strong>边界：</strong>该材料指向的是“Nano Banana 2”而非新闻中的“Nano-banana Pro”，且片段未展示具体测试样张与方法，结论可作方向性参考但不宜直接等同于同型号实测。</p><p class="source">来源：<a href="https://www.chatgpt-chinese.com/blog/guides/chatgpt/gpt-image-2-vs-nano-banana-2-comparison-2026.html" target="_blank" rel="noopener noreferrer">ChatGPT Chinese Blog</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">快乐马与Seedance视频模型测评</span>
-                    <span class="source-label">知乎专栏：字节跳动即梦Seedance 2.0 评测 / 知乎问答：如何评价即梦新发布的视频模型 Seedance 2.0？ / Apidog Blog</span>
+                    <span class="badge badge-pink">GPT-Image2外部测评</span>
+                    <span class="source-label">火山引擎开发者社区 / 优设网</span>
                   </div>
-                  <h3>快乐马与Seedance视频模型测评</h3>
-                  <p class="synthesis">共识是Seedance更偏可控落地，快乐马更像质量上限选手。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116477248146280" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方上手认为，Seedance 2.0 的核心优势是“混合参考”的强控制力：可用图片定风格、视频定运镜、音频定节奏，生成时更强调连贯性与可控性。</p><p><strong>改变：</strong>这会把用户工作流从“反复抽卡碰运气”改成“先准备参考素材、再锁定风格/镜头/节奏”的可控生产流程，更适合连续镜头和系列化内容。</p><p><strong>边界：</strong>如果用户更想要模型像“AI导演”一样直接给出完整分镜与场景流，而不是自己提供多模态参考，文中认为 Kling 3.0 更对路。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2004492570311549878" target="_blank" rel="noopener noreferrer">知乎专栏：字节跳动即梦Seedance 2.0 评测</a></p></div><div class="opinion"><p><strong>观察：</strong>有对比体验指出，把 Seedance 与其他主流视频模型放在一起看时，它在镜头运动、物理一致性、配乐、语音与口型同步上明显更强，演员表演与音乐审美也更成熟。</p><p><strong>改变：</strong>对做对白、表演、MV 或带配乐短片的用户来说，这意味着后期修口型、补节奏、重做镜头的次数会减少，成片更接近可直接交付。</p><p><strong>边界：</strong>这条结论是基于与 Kling 的直接对比，不等于对 HappyHorse 的一对一胜负判断。</p><p class="source">来源：<a href="https://www.zhihu.com/question/2003476733446349730" target="_blank" rel="noopener noreferrer">知乎问答：如何评价即梦新发布的视频模型 Seedance 2.0？</a></p></div></div>
+                  <h3>GPT-Image2多场景实测与AI生图工作流观察</h3>
+                  <p class="synthesis">共识是其强项在中文排版与多场景一体化出图。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116481509561548" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>外部实测认为，GPT-Image-2把中文文字渲染准确率提升到99%以上，长图里大量汉字的字号、间距、对齐和色彩层级都能较稳定地一次成图。</p><p><strong>改变：</strong>这直接改变了中文海报、长图信息卡、电商详情页等场景的工作流：过去要靠设计师后期逐字修字，现在更可能先用模型直接出接近可交付的版式草图甚至成品。</p><p class="source">来源：<a href="https://developer.volcengine.com/articles/7631418358185295891" target="_blank" rel="noopener noreferrer">火山引擎开发者社区</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方案例测评覆盖电商素材、平台截图、复杂UI、长文字海报、多人复杂场景、手写笔记、游戏界面等，给出的结论是GPT-Image-2在多类型任务里表现出较强的泛化和可控生成能力。</p><p><strong>改变：</strong>这意味着内容团队、设计团队和产品团队可以把同一个模型同时用于营销素材、原型示意、界面概念图和复杂场景草图，减少在多模型之间来回切换和反复试错。</p><p class="source">来源：<a href="https://www.uisdc.com/gpt-image-2-2" target="_blank" rel="noopener noreferrer">优设网</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">OpenAI GPT 5.5 / GPT Image 2 外部测评提炼</span>
+                    <span class="source-label">火山引擎开发者社区 / 优设网 / Felo Search Blog</span>
+                  </div>
+                  <h3>OpenAI GPT 5.5与GPT Image 2深度解读实测</h3>
+                  <p class="synthesis">共识是 GPT-Image-2 的价值在于中文可用性和正式工作流落地。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116480788142193" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>火山引擎开发者文章实测认为，GPT-Image-2 的中文文字渲染准确率已超过 99%，在竖版长图中承载大量汉字时，字号、间距、对齐和色彩层级都能稳定复现。</p><p><strong>改变：</strong>这直接降低了中文海报、长图、信息卡片等设计物料反复修字和返工的成本，让内容团队更容易把图片生成纳入正式生产流程。</p><p><strong>边界：</strong>该结论主要指向中文排版与长文本画面稳定性，未体现生成速度、成本或复杂风格控制等维度。</p><p class="source">来源：<a href="https://developer.volcengine.com/articles/7631418358185295891" target="_blank" rel="noopener noreferrer">火山引擎开发者社区</a></p></div><div class="opinion"><p><strong>观察：</strong>优设文章把 GPT-Image-2 放进 8 组贴近真实需求的题目中测试，覆盖电商素材、平台截图、复杂 UI、长文字海报、多人复杂场景、手写笔记和游戏界面等。</p><p><strong>改变：</strong>这说明它对实际商业出图场景的覆盖更广，不再只适合做概念图，而是开始接近可直接用于运营、产品演示和内容包装的多类型素材生成。</p><p><strong>边界：</strong>材料片段只说明测试题覆盖面广，未给出各场景下的失败率、耗时或哪些题型仍需人工修图。</p><p class="source">来源：<a href="https://www.uisdc.com/gpt-image-2-2" target="_blank" rel="noopener noreferrer">优设网</a></p></div></div>
                 </section>
                 </div>
             </section>
