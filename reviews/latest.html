@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-05-02 17:51</title>
+  <title>独立测评 · 2026-05-03 08:32</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
+                    <span class="badge badge-blue">Qwen本地离线开发外部观察</span>
+                    <span class="source-label">Advanced Stack</span>
+                  </div>
+                  <h3>Qwen3.6离线长途飞行本地开发实测</h3>
+                  <p class="synthesis">共识是Qwen已能离线进真实开发流，但规模越大越脱离单机场景。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116493975161825" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Advanced Stack 的实测显示，作者在一台 6 年前的 M1 Mac 上，用 LM Studio 本地跑 `Qwen3.5-9B-GGUF` 完成了一次 agentic coding，会话里先生成了可工作的 Telegram 机器人，再继续改造成可转发消息到本地 OpenAI 兼容服务。</p><p><strong>改变：</strong>这说明对开发者而言，Qwen 系列在本地离线环境里不只是“能聊天”，而是能直接接入真实开发工作流，适合在无网、隐私敏感或旅途中做连续编码和调试。</p><p><strong>边界：</strong>但该案例使用的是 9B 量化版而非更大模型，结论更能证明“本地可用性”而不是顶级代码能力，复杂工程任务、长上下文稳定性和吞吐表现仍不能直接类比到新闻里的 `Qwen3.6` 长时高负载场景。</p><p class="source">来源：<a href="https://advanced-stack.com/fields-notes/qwen35-opencode-lm-studio-agentic-coding-on-m1.html" target="_blank" rel="noopener noreferrer">Advanced Stack</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Grok 4.3 第三方观察</span>
+                    <span class="source-label">Artificial Analysis</span>
+                  </div>
+                  <h3>Grok 4.3 Imagine Agent Mode工作流实测</h3>
+                  <p class="synthesis">现有第三方材料更能证明其代理能力与成本变化，尚不足以说明 Imagine 工作流实测价值。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116505937189786" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Artificial Analysis 观察到，Grok 4.3 的 Intelligence Index 达到 53，并强调其 agentic performance 提升，同时输入价格约比 Grok 4.20 低 40%、输出价格低约 60%。</p><p><strong>改变：</strong>这意味着对已经在做代理式工作流的团队，Grok 4.3 更适合拿来跑更高频的自动化任务与 A/B 测试，因为同类调用成本明显下降。</p><p class="source">来源：<a href="https://artificialanalysis.ai/articles/xai-launches-grok-4-3-with-improved-agentic-performance-and-lower-pricing" target="_blank" rel="noopener noreferrer">Artificial Analysis</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Claude Code for web 外部工作流观察</span>
+                    <span class="source-label">psantanna.com（My Claude Code Setup） / Medium（How I Got Claude Code to Stop Making Ugly Websites）</span>
+                  </div>
+                  <h3>Claude Code for web驱动Sightings博客流</h3>
+                  <p class="synthesis">外部体验更强调“先设规则再用”，而非直接裸用。</p>
+                  <a class="article-link" href="https://simonwillison.net/2026/May/2/sightings/#atom-everything" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>博主在其 Claude Code 工作流中观察到，要让 Claude 真正可用于交付，通常需要额外配置“质量门”和“验证协议”，要求它在宣告完成前先编译、渲染或实际验证输出。</p><p><strong>改变：</strong>这意味着像用 Claude Code for web 在手机上搭建图片发布流这类场景，用户获得的真实价值不只是“能生成代码”，而是把发布链路变成可检查、可复核的半自动流程，降低把未验证页面直接上线的风险。</p><p><strong>边界：</strong>该作者也明确指出这些阈值并非仓库级强制机制，直接 git commit 仍可能绕过审查，因此更适合愿意维护规则文件和验证步骤的团队，而不是追求零配置即用的场景。</p><p class="source">来源：<a href="https://psantanna.com/claude-code-my-workflow/workflow-guide.html" target="_blank" rel="noopener noreferrer">psantanna.com（My Claude Code Setup）</a></p></div><div class="opinion"><p><strong>观察：</strong>另一位开发者在做网页产出时的实际体验是，若不给 Claude Code 预置“站内规则/standing orders”，它每次会像从零开始一样工作，容易持续产出不符合预期的网页；把规则文件固化后，输出会明显更稳定。</p><p><strong>改变：</strong>对想在 Web 端甚至手机端连续迭代博客流、发布页或图片流的人来说，这类长期记忆式约束能减少反复重述设计规范和工作流，提升跨会话修改同一产品时的一致性。</p><p><strong>边界：</strong>边界是这套收益依赖前期把规则、参考文件和流程写清楚；如果没有这层配置，Claude Code 在前端体验上的可控性会明显下降。</p><p class="source">来源：<a href="https://medium.com/vibe-coders/how-i-got-claude-code-to-stop-making-ugly-websites-391140fbed5e" target="_blank" rel="noopener noreferrer">Medium（How I Got Claude Code to Stop Making Ugly Websites）</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
                     <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">Medium（The Advanced School of AI） / Plain English / Google Colab（context_engineering）</span>
+                    <span class="source-label">PageAI</span>
                   </div>
-                  <h3>In-Context Prompting替代Agent编排v1</h3>
-                  <p class="synthesis">外部观点普遍认为，编排框架的价值主要体现在可控性、状态管理与人工介入。</p>
-                  <a class="article-link" href="https://arxiv.org/abs/2604.27891" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Medium作者指出，LangGraph 的“Review Tool Calls”模式允许人在工具调用执行前拦截、审查并修改调用，从而避免高成本或尴尬的自动化失误。</p><p><strong>改变：</strong>这意味着团队若采用 LangGraph 编排，不只是把提示词写长，而是能把人工审批直接嵌进工作流，在高风险调用场景下显著提升可控性与审计能力。</p><p><strong>边界：</strong>代价是流程会变慢、人工介入增加，不适合追求纯自动化吞吐或低摩擦交互的简单任务。</p><p class="source">来源：<a href="https://medium.com/the-advanced-school-of-ai/human-in-the-loop-in-langgraph-from-tool-call-reviews-to-input-validation-3-3-da2e9f69a962" target="_blank" rel="noopener noreferrer">Medium（The Advanced School of AI）</a></p></div><div class="opinion"><p><strong>观察：</strong>Plain English 的对比文章认为，LangChain 里调用 `create_react_agent()` 本质上已经在运行 LangGraph 状态机，真正的选择不是“要不要 Agent”，而是“是否需要直接控制图式执行流”。</p><p><strong>改变：</strong>对用户和团队的真实影响是：如果任务只需高层抽象，未必需要显式编排框架；但一旦需要节点级状态、分支和执行控制，图式编排会比单纯 In-Context Prompting 更适合复杂工作流。</p><p><strong>边界：</strong>这也说明 LangGraph 的价值主要出现在需要精细控制的场景；若只是常规 ReAct 或单轮任务，引入显式编排会增加系统复杂度。</p><p class="source">来源：<a href="https://ai.plainenglish.io/langgraph-vs-langchain-which-should-you-use-in-2026-da974ddd6693" target="_blank" rel="noopener noreferrer">Plain English</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Claude Code外部上手与工作流观察</span>
-                    <span class="source-label">Builder.io / Darrell TW</span>
-                  </div>
-                  <h3>Claude Code教学框架论文发布</h3>
-                  <p class="synthesis">外部体验共识是：Claude Code的价值在于可被“教成”稳定工作流。</p>
-                  <a class="article-link" href="https://arxiv.org/abs/2604.17460" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Builder.io作者实际使用Claude Code做PR审查时发现，工具会自动生成`claude-code-review.yml`审查配置，但他改用更聚焦“只报bug和安全问题”的自定义提示词后，输出更符合团队需求。</p><p><strong>改变：</strong>这说明Claude Code的真实价值不只是“会审代码”，而是可以被团队通过配置文件和提示词持续教学、收敛成固定审查流程，减少人工反复解释标准。</p><p><strong>边界：</strong>前提是团队自己有明确的审查准则并愿意调提示词；如果直接用默认配置，结果可能过宽、噪声偏多。</p><p class="source">来源：<a href="https://www.builder.io/blog/claude-code" target="_blank" rel="noopener noreferrer">Builder.io</a></p></div><div class="opinion"><p><strong>观察：</strong>Darrell TW在ClaudeCodeAgent实测中观察到，Claude Code可以结合n8n等外部工作流，用自然语言指令直接生成模板并自动上传，表现出可被封装成“专属开发助理”的能力。</p><p><strong>改变：</strong>这意味着“教会Claude Code怎么做事”可以沉淀为可复用代理或工作流，个人和团队都能把常见开发操作标准化，而不是每次从零提示。</p><p><strong>边界：</strong>这类收益更适合已有自动化基础、愿意接入外部工具链的团队；对一次性小任务或未搭建工作流的用户，配置成本可能高于直接聊天。</p><p class="source">来源：<a href="https://www.darrelltw.com/claude-code-agent/" target="_blank" rel="noopener noreferrer">Darrell TW</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Cursor外部测评/上手体验</span>
-                    <span class="source-label">CSDN博客《轻松上手Cursor，体验丝滑编程》 / 博客园《ai编程助手cursor初步使用体验》 / 知乎《Cursor AI 编程让我的编码效率提升了 10 倍》</span>
-                  </div>
-                  <h3>Cursor小工具实测分享指向编码工作流</h3>
-                  <p class="synthesis">共识是Cursor真正价值在于融入代码编辑链路，但效果高度依赖项目上下文。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116503554825749" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有开发者实测认为，Cursor在给出简单指令后可以直接改完整个类或函数，并结合预测式补全让连续编码基本不离开键盘。</p><p><strong>改变：</strong>这会把很多原本要手动跳转、逐段修改的操作压缩成一轮指令加确认，更适合高频的小步迭代编码工作流。</p><p><strong>边界：</strong>这类流畅体验更偏向已有明确修改目标的场景，材料里没有证明它适合需求模糊或需大量人工设计判断的任务。</p><p class="source">来源：<a href="https://blog.csdn.net/shoufei403/article/details/142308819" target="_blank" rel="noopener noreferrer">CSDN博客《轻松上手Cursor，体验丝滑编程》</a></p></div><div class="opinion"><p><strong>观察：</strong>博客园的上手记录显示，Cursor可通过对话框生成代码，再用 apply/accept 直接写入文件，形成“提需求-预览修改-接受落盘”的实际操作链路。</p><p><strong>改变：</strong>对个人开发者来说，这把AI建议从“聊天参考”变成了可直接并入代码库的编辑动作，减少了复制粘贴和上下文切换。</p><p><strong>边界：</strong>作者也展示了仍需手动保存和运行验证，说明它更像加速编辑环节，而不是替代调试、执行和结果确认。</p><p class="source">来源：<a href="https://www.cnblogs.com/MyRecords/p/18644262" target="_blank" rel="noopener noreferrer">博客园《ai编程助手cursor初步使用体验》</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">外部测评</span>
-                    <span class="source-label">2025最值得推荐的AI编程工具 - 知乎</span>
-                  </div>
-                  <h3>AI编程神器功能测评与实战观察</h3>
-                  <p class="synthesis">外部测评更看重工作流闭环与审查安全分工。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116501843543594" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎开发者测评文章提到，Aider 可接入多种主流大模型，并能把生成、类型检查、Lint、测试和自动修复串成一条连续工作流，还支持多实例并行执行。</p><p><strong>改变：</strong>对个人开发者或小团队来说，这会把原本分散在编辑器、命令行和测试环节里的重复操作收拢为一条自动化闭环，明显减少来回切换和人工回归验证。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1908188324016952000" target="_blank" rel="noopener noreferrer">2025最值得推荐的AI编程工具 - 知乎</a></p></div></div>
+                  <h3>Open Design: Use Your Coding Agent as a Design Engine工作流讨论</h3>
+                  <p class="synthesis">共识是可提速落地，但仍需多 Agent 验证闭环。</p>
+                  <a class="article-link" href="https://github.com/nexu-io/open-design" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>PageAI 在落地页 agentic workflow 分析里观察到，设计型 Agent 更擅长先产出视觉方向，而真正可上线的页面代码通常仍要交给 Cursor、Claude Code、Codex 这类 Coding Agent，再配合 Playwright 等验证工具做截图比对。</p><p><strong>改变：</strong>这意味着把 Coding Agent 当“设计引擎”用时，团队可以把设计稿、实现、验收串成同一条自动化链路，减少设计到前端落地之间的来回翻译成本。</p><p><strong>边界：</strong>它并不是单个 Agent 一步到位的工作流，仍依赖额外的验证环节和多工具协作，因此更适合页面生产与迭代，不适合追求极简工具链的小团队。</p><p class="source">来源：<a href="https://pageai.pro/blog/agentic-workflow-landing-pages" target="_blank" rel="noopener noreferrer">PageAI</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -92,13 +92,24 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">VideoOS by Jupitrr AI 外部测评</span>
-                    <span class="source-label">Digen AI / Showeblogin</span>
+                    <span class="badge badge-pink">Seedance 2.0与WAN 2.7外部测评</span>
+                    <span class="source-label">Atlas Cloud Blog / LaoZhang AI Blog</span>
                   </div>
-                  <h3>VideoOS by Jupitrr AI主打一体化视频流</h3>
-                  <p class="synthesis">共识是提效明显，但工作流仍偏桌面端。</p>
-                  <a class="article-link" href="https://www.producthunt.com/products/jupitrr" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方评测认为，VideoOS by Jupitrr AI 的核心价值在于用生成式 AI 把“做成可发社媒的短视频”这一步高度自动化，而不是只提供单点剪辑功能。</p><p><strong>改变：</strong>对内容团队和个人创作者来说，这意味着从素材到社媒成片的链路更短，能更快批量产出适合发布的视频。</p><p class="source">来源：<a href="https://resource.digen.ai/videoos-by-jupitrr-ai-review-2026/" target="_blank" rel="noopener noreferrer">Digen AI</a></p></div><div class="opinion"><p><strong>观察：</strong>上手文章指出，VideoOS 目前本质上是桌面浏览器工作流，虽然可访问，但精细控制时更适合在电脑端使用。</p><p><strong>改变：</strong>这对缺少剪辑时间或技能的用户更友好，能把视频制作门槛降到“有内容可说就能做”，但也意味着它更偏向桌面化生产而非随手移动端快编。</p><p><strong>边界：</strong>不太适合强依赖手机端完成精细编辑、希望在移动场景下完成完整视频工作流的用户。</p><p class="source">来源：<a href="https://www.superwebtricks.com/jupitrr-com/" target="_blank" rel="noopener noreferrer">Showeblogin</a></p></div></div>
+                  <h3>Seedance 2.0与WAN 2.7视频实测</h3>
+                  <p class="synthesis">共识是两者应按工作流分工，而非单看榜单定输赢。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116505182281439" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Atlas Cloud 的开发者向对比认为，没有单一视频模型通吃全部场景；在他们的实测结论里，Seedance 2.0 更强的是多模态控制和人脸保真度，而 Kling 3.0 更偏电影化叙事与基准分数表现。</p><p><strong>改变：</strong>这意味着做角色一致性、参考图/参考素材驱动生成的团队，更可能把 Seedance 2.0 放进正式生产流；如果目标是更强的镜头叙事感，则需要接受按项目目标分模型选型。</p><p><strong>边界：</strong>文章明确指出不存在“最优通用模型”，所以它不适合想用一个 API 覆盖所有视频需求的团队。</p><p class="source">来源：<a href="https://www.atlascloud.ai/blog/guides/wan-2.7-vs-seedance-2.0-vs-kling-3.0-which-video-api-should-developers-choose" target="_blank" rel="noopener noreferrer">Atlas Cloud Blog</a></p></div><div class="opinion"><p><strong>观察：</strong>LaoZhang AI Blog 的工作流分析认为，如果任务是产品构图、视觉身份锁定、排版测试，或先生成静帧参考再去驱动后续视频，Wan 2.7 比 Seedance 2.0 更合适。</p><p><strong>改变：</strong>对设计团队和内容团队来说，Wan 2.7 更像前期预演与风格定版工具，能先把静态视觉决策做稳，再把结果交给后续视频生成环节。</p><p><strong>边界：</strong>这篇文章的核心判断是“按工作流而不是按热度选型”，因此 Wan 2.7 并不等于在所有视频生成环节都优于 Seedance 2.0。</p><p class="source">来源：<a href="https://blog.laozhang.ai/en/posts/wan-2-7-vs-seedance-2-0" target="_blank" rel="noopener noreferrer">LaoZhang AI Blog</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">Claude MCP连接器创意软件实测</span>
+                    <span class="source-label">《手把手教你用MCP连接Claude3.7 与Blender...》</span>
+                  </div>
+                  <h3>Claude MCP连接器实测创意软件自动化</h3>
+                  <p class="synthesis">现有外部体验更证明“能接通能起稿”，未充分证明可稳定用于复杂制作。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116504376903472" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方教程作者实际复刻了 Claude 3.7 连接 Blender 的流程，并声称可通过启用 `BlenderMCP` 插件后实现“用一句话生成 3D 场景”的操作链路。</p><p><strong>改变：</strong>这意味着 3D 创作者能把部分场景搭建从手动点选改成自然语言驱动，适合快速起稿、做概念验证和降低 Blender 命令操作门槛。</p><p><strong>边界：</strong>前提是用户要先完成插件安装与启用，材料也未展示复杂场景精度、稳定性或长流程制作表现，因此更像入门自动化而非成熟生产替代。</p><p class="source">来源：<a href="https://news.qq.com/rain/a/20250319A03FYJ00" target="_blank" rel="noopener noreferrer">《手把手教你用MCP连接Claude3.7 与Blender...》</a></p></div></div>
                 </section>
                 </div>
             </section>
