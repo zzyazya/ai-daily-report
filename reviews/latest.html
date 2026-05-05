@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-05-04 17:51</title>
+  <title>独立测评 · 2026-05-05 08:38</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,51 +43,62 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">DeepClaude接入DeepSeek V4 Pro代码代理循环</span>
-                    <span class="source-label">Codersera / MindStudio</span>
+                    <span class="badge badge-blue">DeepSeek v4接入Claude Code外部测评</span>
+                    <span class="source-label">SegmentFault 思否 / Jdon / 鏈新聞 ABMedia</span>
                   </div>
-                  <h3>DeepClaude接入DeepSeek V4 Pro代码代理循环</h3>
-                  <p class="synthesis">共识是更便宜且足够能打，但复杂代理稳定性仍未全面超过 Claude。</p>
-                  <a class="article-link" href="https://github.com/aattaran/deepclaude" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Codersera 在对 DeepSeek V4 的第三方整理中提到：在更偏“长流程、重工具调用”的 agentic loop 场景里，Claude 仍更稳，而 V4 Pro 更突出的优势是大规模代码产出的速度与价格效率。</p><p><strong>改变：</strong>这意味着团队若把 DeepSeek V4 Pro 接进 Claude Code 式代理循环，最直接的变化是能用更低成本跑更多实现与修复任务，适合把高频编码执行层下放给更便宜的模型。</p><p><strong>边界：</strong>边界是长链路决策、复杂工具编排和稳定性要求高的任务，仍可能需要 Claude 这类更可靠的模型兜底，不适合完全无监督替换。</p><p class="source">来源：<a href="https://codersera.com/blog/deepseek-v4-complete-guide-2026/" target="_blank" rel="noopener noreferrer">Codersera</a></p></div><div class="opinion"><p><strong>观察：</strong>MindStudio 的评测文章提到，DeepSeek V4 Pro 在 SWE-Bench Verified 上约为 91.2%，已进入与 Claude Opus 4.7（93.9%）接近的同一梯队，说明它在真实 GitHub 问题修复这类代理编码代理能力上并非只停留在宣传层面。</p><p><strong>改变：</strong>对用户来说，这提升了把 DeepSeek V4 Pro 放进代码代理循环中的可行性：它不是只能做便宜补全，而是有机会承担真实 issue 修复、代码修改和回归迭代等更接近生产的环节。</p><p><strong>边界：</strong>但它仍略低于 Claude Opus 4.7，说明在最难的代码代理任务上成功率未必占优；若团队最看重一次通过率而非成本，收益可能没有价格差那么明显。</p><p class="source">来源：<a href="https://www.mindstudio.ai/blog/deepseek-v4-open-source-frontier-model-review" target="_blank" rel="noopener noreferrer">MindStudio</a></p></div></div>
+                  <h3>DeepSeek v4接入Claude Code省token实测</h3>
+                  <p class="synthesis">共识是省钱明显，但需兼容接入且速度稳定性有代价。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116515735078545" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>SegmentFault作者连续一周高频实测后称，Claude Code接入DeepSeekV4-Pro后，写代码、改Bug、跑Skills、生成BI大屏和自动化部署等日常开发任务都能顺畅完成，基本可替代原生Claude。</p><p><strong>改变：</strong>对高token消耗的个人开发者和团队来说，意味着可以继续沿用Claude Code工作流，但把月度AI编码成本从高额美元账单压到更低的人民币级别。</p><p><strong>边界：</strong>该结论主要基于“日常开发”与特定任务链路的作者自测，材料没有给出复杂推理、极端长任务或稳定性波动下的系统对比。</p><p class="source">来源：<a href="https://segmentfault.com/a/1190000047739845" target="_blank" rel="noopener noreferrer">SegmentFault 思否</a></p></div><div class="opinion"><p><strong>观察：</strong>Jdon转述的实测重点是，Claude Code本身默认绑死Anthropic接口，接入DeepSeekV4-Pro要靠兼容层替换调用链，而替换后单价可降到输入约0.27美元/百万token、输出约0.87美元/百万token。</p><p><strong>改变：</strong>这让原本因Claude Code原生API成本过高而不敢长时间开启Agent式编码的用户，有机会把高频试错、长会话重构和批量生成任务转成可承受成本。</p><p><strong>边界：</strong>代价是不能原生直连DeepSeek，必须额外做接口兼容或中转配置；对不愿折腾环境变量、代理层或兼容服务的用户并不友好。</p><p class="source">来源：<a href="https://www.jdon.com/91777-deepclaude-claude-code-deepseek-v4-pro.html" target="_blank" rel="noopener noreferrer">Jdon</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">GPT-5.5 Codex工作流外部观察</span>
-                    <span class="source-label">奇诺分享 / YingTu / ChatPRD Blog</span>
+                    <span class="badge badge-blue">AI Agent检索API外部测评</span>
+                    <span class="source-label">Tech Stackups / Skiln / OpenClaw Launch</span>
                   </div>
-                  <h3>GPT-5.5 Codex深度整合编程工作流实测</h3>
-                  <p class="synthesis">共识是价值在可执行闭环，不只在回答质量。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116514795687117" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>奇诺分享认为，GPT-5.5进入Codex后，评估重点不再是“会不会写代码”，而是能否在带运行验证的交付链路里把代码真正跑起来。</p><p><strong>改变：</strong>这会把用户和团队的使用方式从聊天问答转向“生成-运行-修正”的闭环，编程场景里更容易直接衡量产出是否可交付。</p><p><strong>边界：</strong>这种优势最适合有可执行反馈的开发任务，对纯聊天、纯构思类场景的提升没有代码闭环里那么直接。</p><p class="source">来源：<a href="https://blog.ccino.org/p/gpt-5-5-from-chat-to-delivery/" target="_blank" rel="noopener noreferrer">奇诺分享</a></p></div><div class="opinion"><p><strong>观察：</strong>YingTu指出，GPT-5.5的效果需要连同Codex、ChatGPT、账号体系、编辑器/终端工作流和review loop一起看，模型表现是被整套产品链路放大的。</p><p><strong>改变：</strong>对开发者来说，选型不再只是比单次答题能力，而是要看它能否嵌进现有编辑器、终端和审查流程，减少在多工具之间来回切换。</p><p><strong>边界：</strong>如果团队更看重低Token价格、1M上下文、开放权重或自托管，DeepSeek-V4这类路线仍可能更合适。</p><p class="source">来源：<a href="https://yingtu.ai/ko/blog/gpt-5-5-vs-deepseek-v4" target="_blank" rel="noopener noreferrer">YingTu</a></p></div></div>
+                  <h3>AI Agent搜索抓取API选型对比含TinyFish与Tavily</h3>
+                  <p class="synthesis">共识是 Tavily 偏发现，Firecrawl 偏抽取。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/05/04/top-search-and-fetch-apis-for-building-ai-agents-in-2026-tools-tradeoffs-and-free-tiers/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Tech Stackups 在对比中明确区分了两者定位：Tavily 更偏“搜索优先”，擅长从全网找到并返回相关页面，因此被评价为多数 AI Agent 开发者更合适的默认入口。</p><p><strong>改变：</strong>这会直接改变选型顺序：团队若先要做联网发现与召回，通常先接 Tavily，而不是把 Firecrawl 当作默认搜索层。</p><p><strong>边界：</strong>它强调的是“默认搜索”场景；如果需求转向网页深度抽取与结构化处理，Firecrawl 属于另一类能力，不适合拿搜索指标直接替代比较。</p><p class="source">来源：<a href="https://techstackups.com/comparisons/firecrawl-vs-tavily/" target="_blank" rel="noopener noreferrer">Tech Stackups</a></p></div><div class="opinion"><p><strong>观察：</strong>Skiln 的上手评测把 Firecrawl 定义为“LLM-native web scraping API”，指出它能把单个 URL 甚至整个站点直接转成模型可读的干净 Markdown，并带有 schema extraction、browser actions 和官方 MCP Server。</p><p><strong>改变：</strong>这会显著减少团队自建清洗管线的工作量，让 Agent 抓网页后更快进入可读文本、结构化抽取和工具调用流程。</p><p class="source">来源：<a href="https://skiln.co/blog/firecrawl-review-2026" target="_blank" rel="noopener noreferrer">Skiln</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">DeepSeek识图灰测外部观察</span>
-                    <span class="source-label">智源社区用户实测</span>
+                    <span class="badge badge-blue">滴滴 MCP 打车 Skill 外部测评</span>
+                    <span class="source-label">知乎《滴滴推出打车Agent和MCP，懒人叫车原来可以这么爽。》</span>
                   </div>
-                  <h3>DeepSeek识图灰测实测翻车复盘</h3>
-                  <p class="synthesis">现有片段更多证实灰测开放，真正能力结论仍不足。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116511641442205" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测者发现，DeepSeek灰测中的“识图模式”在回答中自述其知识范围与DeepSeek V4 flash/pro一致，知识截止到2025年5月。</p><p><strong>改变：</strong>这意味着拿到灰测资格的用户，在图片问答场景里可大致按V4级别的知识新鲜度来预期结果，而不是把它当成一个知识库独立更新的视觉模型。</p><p><strong>边界：</strong>这一结论来自模型自述而非外部基准验证，不能直接证明识图准确率、稳定性或复杂场景可用性。</p><p class="source">来源：<a href="https://hub.baai.ac.cn/view/54388" target="_blank" rel="noopener noreferrer">智源社区用户实测</a></p></div></div>
+                  <h3>滴滴 MCP 打车 Skill 自动下单实测</h3>
+                  <p class="synthesis">共识是下单更省步骤，但全流程自动化仍未闭环。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116516406304261" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者实测在 Cherry Studio 接入滴滴 MCP 后，已经能让 AI 代为完成叫车，并且还能直接询问当前更便宜的打车价位。</p><p><strong>改变：</strong>对用户来说，原本要在 App 里逐步选择车型、比价、下单的流程，被压缩成一次自然语言指令，适合临时出行时快速决策。</p><p><strong>边界：</strong>作者同时提到 Pro 版本仍在内测阶段，需要邀请码，说明这类自动下单体验目前还不是所有用户都能稳定获得。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1955575010434462360" target="_blank" rel="noopener noreferrer">知乎《滴滴推出打车Agent和MCP，懒人叫车原来可以这么爽。》</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">ZenML 外部测评摘录</span>
+                    <span class="source-label">CSDN《6大开源MLOps平台深度对比报告 --Zenml、Kubeflow、Metaflow...》 / 爱代码爱编程《zenml项目快速提升指南：5分钟实现mlops效率飞跃》</span>
+                  </div>
+                  <h3>ZenML端到端生产级机器学习流水线实践教程</h3>
+                  <p class="synthesis">共识是ZenML能降低生产流水线接入与实验追踪门槛，但前提是底层MLOps环境已具备。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/05/04/how-to-build-an-end-to-end-production-grade-machine-learning-pipeline-with-zenml-including-custom-materializers-metadata-tracking-and-hyperparameter-optimization/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方对比文章提到，ZenML允许团队先写普通 Python 流水线，再由配置好的 Stack 在运行时自动转换成 Kubeflow 所需的 DAG 定义，数据科学家不必直接处理 Kubernetes 或 Kubeflow 细节。</p><p><strong>改变：</strong>这会把“搭建生产级流水线”的门槛从平台编排细节转回到 Python 工作流本身，让算法团队更容易把实验代码迁移到可落地的生产流水线。</p><p><strong>边界：</strong>该能力依赖团队预先配置好对应 Stack 和底层编排环境，因此更适合已有 Kubeflow/MLOps 基础设施的团队，不能替代底层平台建设。</p><p class="source">来源：<a href="https://blog.csdn.net/piekill/article/details/149815966" target="_blank" rel="noopener noreferrer">CSDN《6大开源MLOps平台深度对比报告 --Zenml、Kubeflow、Metaflow...》</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方上手指南展示了 ZenML 可通过 CLI 安装 MLflow 集成并注册 experiment recorder，把实验记录接入现有跟踪体系。</p><p><strong>改变：</strong>这意味着团队在做端到端流水线时，可以较快补上实验元数据记录环节，减少手工拼接训练脚本与实验追踪工具的工作。</p><p><strong>边界：</strong>片段只体现了接入步骤较直接，未说明大规模团队协作、复杂 HPO 或多环境部署下的维护成本。</p><p class="source">来源：<a href="https://icode.best/i/431041405310246" target="_blank" rel="noopener noreferrer">爱代码爱编程《zenml项目快速提升指南：5分钟实现mlops效率飞跃》</a></p></div></div>
                 </section>
                 </div>
             </section>
             
             <section class="role-block">
-              <h2>产品经理视角测评</h2>
+              <h2>美术视角测评</h2>
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-purple">DeepSeek V4 Pro暴血版外部测评摘录</span>
-                    <span class="source-label">知乎《DeepSeek V4 逻辑测评》 / PC修复电脑医生《DeepSeek V4 Pro测评：2026最新国产开源旗舰大模型深度解析与竞品对比》</span>
+                    <span class="badge badge-pink">gptimage2提示词省钱技巧短测</span>
+                    <span class="source-label">ChatGPT Chinese 博客评测 / 掘金开发者文章 / GitCode/CSDN 测评总结</span>
                   </div>
-                  <h3>DeepSeek V4 Pro暴血版多模型平台实测</h3>
-                  <p class="synthesis">共识是文本推理强，但成本、多模态和部署门槛仍需权衡。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116515131293939" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎测评认为，DeepSeek V4 Pro在逻辑能力上已进入第一梯队头部，并以显著优势拿到国产模型第一。</p><p><strong>改变：</strong>对主要做推理、问答、复杂分析的用户和团队来说，多模型平台里选用V4 Pro更可能减少二次追问和人工校对，适合把高难度逻辑任务集中给它处理。</p><p><strong>边界：</strong>该文同时指出V4 Pro在max档位下推理开销明显高于同梯队模型，最终成本更高，预算敏感或高并发场景要谨慎。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2031159463193920999" target="_blank" rel="noopener noreferrer">知乎《DeepSeek V4 逻辑测评》</a></p></div><div class="opinion"><p><strong>观察：</strong>企业博客测评提到，DeepSeek V4 Pro的强项仍是文本推理，但图像理解、生成等多模态能力不是主战场，相关表现弱于GPT-5.5和Gemini 3.1 Pro。</p><p><strong>改变：</strong>这意味着在多模型平台里，如果工作流以文档分析、代码、逻辑推理为主，V4 Pro有优势；但若是图文混合、视频理解等任务，团队往往仍需切换到别的模型协同完成。</p><p><strong>边界：</strong>不适合把它当成统一多模态入口，尤其是依赖图像/视频能力的内容生产和理解场景。</p><p class="source">来源：<a href="https://www.cnblogs.com/pcdoctor/p/19946087" target="_blank" rel="noopener noreferrer">PC修复电脑医生《DeepSeek V4 Pro测评：2026最新国产开源旗舰大模型深度解析与竞品对比》</a></p></div></div>
+                  <h3>gptimage2提示词省钱技巧短测</h3>
+                  <p class="synthesis">共识是省钱关键在结构化用法，不是单买提示词。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116516137795815" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>横评文章认为，GPTImage2在文字渲染和结构化理解上明显强于对比模型，而另一款模型的优势主要是更快、更便宜。</p><p><strong>改变：</strong>如果用户买提示词主要是为了解决海报文案、版式指令和复杂结构描述，GPTImage2本身更强的理解能力会降低对“现成咒语包”的依赖。</p><p><strong>边界：</strong>但在追求低成本批量出图、快速试风格的场景里，模型单价和速度仍是硬约束，买提示词并不能弥补这类差距。</p><p class="source">来源：<a href="https://www.chatgpt-chinese.com/blog/guides/chatgpt/gpt-image-2-vs-nano-banana-2-comparison-2026.html" target="_blank" rel="noopener noreferrer">ChatGPT Chinese 博客评测</a></p></div><div class="opinion"><p><strong>观察：</strong>掘金这篇上手文把 GPTImage2 的提示词工程总结为“把 prompt 从文本升级成控制面板”，强调通过分层和结构化写法让生成结果更准、更可控。</p><p><strong>改变：</strong>这意味着个人或团队可以把需求拆成固定字段和模板来复用，减少反复试错，也降低为“爆款提示词”单独付费的必要性。</p><p><strong>边界：</strong>代价是使用者要先学会把画面需求参数化、结构化，它更像方法论而不是一条买来即用的万能提示词。</p><p class="source">来源：<a href="https://juejin.cn/post/7634430480519266354" target="_blank" rel="noopener noreferrer">掘金开发者文章</a></p></div></div>
                 </section>
                 </div>
             </section>
