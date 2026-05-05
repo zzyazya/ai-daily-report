@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-05-05 08:38</title>
+  <title>独立测评 · 2026-05-05 17:54</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,62 +43,51 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">DeepSeek v4接入Claude Code外部测评</span>
-                    <span class="source-label">SegmentFault 思否 / Jdon / 鏈新聞 ABMedia</span>
+                    <span class="badge badge-blue">Biomedical RAG检索基准v1对比研究</span>
+                    <span class="source-label">Toloka / ML Journey / Hybrid Retrieval and Reranking in RAG: A Dual-Stage ...</span>
                   </div>
-                  <h3>DeepSeek v4接入Claude Code省token实测</h3>
-                  <p class="synthesis">共识是省钱明显，但需兼容接入且速度稳定性有代价。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116515735078545" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>SegmentFault作者连续一周高频实测后称，Claude Code接入DeepSeekV4-Pro后，写代码、改Bug、跑Skills、生成BI大屏和自动化部署等日常开发任务都能顺畅完成，基本可替代原生Claude。</p><p><strong>改变：</strong>对高token消耗的个人开发者和团队来说，意味着可以继续沿用Claude Code工作流，但把月度AI编码成本从高额美元账单压到更低的人民币级别。</p><p><strong>边界：</strong>该结论主要基于“日常开发”与特定任务链路的作者自测，材料没有给出复杂推理、极端长任务或稳定性波动下的系统对比。</p><p class="source">来源：<a href="https://segmentfault.com/a/1190000047739845" target="_blank" rel="noopener noreferrer">SegmentFault 思否</a></p></div><div class="opinion"><p><strong>观察：</strong>Jdon转述的实测重点是，Claude Code本身默认绑死Anthropic接口，接入DeepSeekV4-Pro要靠兼容层替换调用链，而替换后单价可降到输入约0.27美元/百万token、输出约0.87美元/百万token。</p><p><strong>改变：</strong>这让原本因Claude Code原生API成本过高而不敢长时间开启Agent式编码的用户，有机会把高频试错、长会话重构和批量生成任务转成可承受成本。</p><p><strong>边界：</strong>代价是不能原生直连DeepSeek，必须额外做接口兼容或中转配置；对不愿折腾环境变量、代理层或兼容服务的用户并不友好。</p><p class="source">来源：<a href="https://www.jdon.com/91777-deepclaude-claude-code-deepseek-v4-pro.html" target="_blank" rel="noopener noreferrer">Jdon</a></p></div></div>
+                  <h3>Biomedical RAG检索基准v1对比研究</h3>
+                  <p class="synthesis">共识是生物医疗RAG应优先优化检索器、混合检索与重排链路。</p>
+                  <a class="article-link" href="https://arxiv.org/abs/2605.02520" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Toloka 的 RAG 评测技术指南指出，在医疗/科研检索场景里，像 PubMedBERT 这类生物医学专用 embedding 往往比通用 embedding 更能抓住医学术语语义，因此密集检索质量会明显更好。</p><p><strong>改变：</strong>这意味着做 biomedical RAG 的团队，若基准里比较的是不同检索器，优先换成领域专用向量模型往往比只调生成端更直接地提升召回与答案相关性。</p><p class="source">来源：<a href="https://toloka.ai/blog/rag-evaluation-a-technical-guide-to-measuring-retrieval-augmented-generation/" target="_blank" rel="noopener noreferrer">Toloka</a></p></div><div class="opinion"><p><strong>观察：</strong>ML Journey 的检索对比文章给出的实战结论是：语料以长文本为主且缺少标注数据时可先用 dense-only；一旦在关键词或实体查询上频繁失手，就应补上 BM25 做 hybrid；若问题集中在前 5 条结果不够准，再加 reranker。</p><p><strong>改变：</strong>这给 biomedical RAG 基准结果的落地提供了明确调参顺序：先看语义召回，再补术语/实体命中，最后用重排修正前排结果，避免团队一开始就把系统堆得过重。</p><p><strong>边界：</strong>如果当前失败并不来自术语检索或 top-k 精度瓶颈，这套 hybrid+r reranker 组合未必带来明显收益，反而会增加系统复杂度。</p><p class="source">来源：<a href="https://mljourney.com/sparse-vs-dense-retrieval-for-rag-bm25-embeddings-and-hybrid-search/" target="_blank" rel="noopener noreferrer">ML Journey</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">AI Agent检索API外部测评</span>
-                    <span class="source-label">Tech Stackups / Skiln / OpenClaw Launch</span>
+                    <span class="badge badge-blue">外部测评</span>
+                    <span class="source-label">N/A</span>
                   </div>
-                  <h3>AI Agent搜索抓取API选型对比含TinyFish与Tavily</h3>
-                  <p class="synthesis">共识是 Tavily 偏发现，Firecrawl 偏抽取。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/05/04/top-search-and-fetch-apis-for-building-ai-agents-in-2026-tools-tradeoffs-and-free-tiers/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Tech Stackups 在对比中明确区分了两者定位：Tavily 更偏“搜索优先”，擅长从全网找到并返回相关页面，因此被评价为多数 AI Agent 开发者更合适的默认入口。</p><p><strong>改变：</strong>这会直接改变选型顺序：团队若先要做联网发现与召回，通常先接 Tavily，而不是把 Firecrawl 当作默认搜索层。</p><p><strong>边界：</strong>它强调的是“默认搜索”场景；如果需求转向网页深度抽取与结构化处理，Firecrawl 属于另一类能力，不适合拿搜索指标直接替代比较。</p><p class="source">来源：<a href="https://techstackups.com/comparisons/firecrawl-vs-tavily/" target="_blank" rel="noopener noreferrer">Tech Stackups</a></p></div><div class="opinion"><p><strong>观察：</strong>Skiln 的上手评测把 Firecrawl 定义为“LLM-native web scraping API”，指出它能把单个 URL 甚至整个站点直接转成模型可读的干净 Markdown，并带有 schema extraction、browser actions 和官方 MCP Server。</p><p><strong>改变：</strong>这会显著减少团队自建清洗管线的工作量，让 Agent 抓网页后更快进入可读文本、结构化抽取和工具调用流程。</p><p class="source">来源：<a href="https://skiln.co/blog/firecrawl-review-2026" target="_blank" rel="noopener noreferrer">Skiln</a></p></div></div>
+                  <h3>Agentic Research复现实验与arXiv:2605.02620v1</h3>
+                  <p class="synthesis">null</p>
+                  <a class="article-link" href="https://arxiv.org/abs/2605.02620" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>未找到与“arXiv:2605.02620v1 三小时复现NLP研究”直接对应的第三方测评或上手观察；现有片段主要是相关概念论文、官方仓库或站点聚合。</p><p><strong>改变：</strong>无法从这些材料中可靠提炼出对用户、团队或工作流的真实影响。</p><p><strong>边界：</strong>材料缺少独立复现记录、具体基准对比和实际使用反馈，且多为官方/聚合性质，不符合筛选要求。</p><p class="source">来源：<a href="N/A" target="_blank" rel="noopener noreferrer">N/A</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">滴滴 MCP 打车 Skill 外部测评</span>
-                    <span class="source-label">知乎《滴滴推出打车Agent和MCP，懒人叫车原来可以这么爽。》</span>
+                    <span class="badge badge-blue">Unity AI外部体验</span>
+                    <span class="source-label">Reddit / r/Unity3D</span>
                   </div>
-                  <h3>滴滴 MCP 打车 Skill 自动下单实测</h3>
-                  <p class="synthesis">共识是下单更省步骤，但全流程自动化仍未闭环。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116516406304261" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者实测在 Cherry Studio 接入滴滴 MCP 后，已经能让 AI 代为完成叫车，并且还能直接询问当前更便宜的打车价位。</p><p><strong>改变：</strong>对用户来说，原本要在 App 里逐步选择车型、比价、下单的流程，被压缩成一次自然语言指令，适合临时出行时快速决策。</p><p><strong>边界：</strong>作者同时提到 Pro 版本仍在内测阶段，需要邀请码，说明这类自动下单体验目前还不是所有用户都能稳定获得。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1955575010434462360" target="_blank" rel="noopener noreferrer">知乎《滴滴推出打车Agent和MCP，懒人叫车原来可以这么爽。》</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">ZenML 外部测评摘录</span>
-                    <span class="source-label">CSDN《6大开源MLOps平台深度对比报告 --Zenml、Kubeflow、Metaflow...》 / 爱代码爱编程《zenml项目快速提升指南：5分钟实现mlops效率飞跃》</span>
-                  </div>
-                  <h3>ZenML端到端生产级机器学习流水线实践教程</h3>
-                  <p class="synthesis">共识是ZenML能降低生产流水线接入与实验追踪门槛，但前提是底层MLOps环境已具备。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/05/04/how-to-build-an-end-to-end-production-grade-machine-learning-pipeline-with-zenml-including-custom-materializers-metadata-tracking-and-hyperparameter-optimization/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方对比文章提到，ZenML允许团队先写普通 Python 流水线，再由配置好的 Stack 在运行时自动转换成 Kubeflow 所需的 DAG 定义，数据科学家不必直接处理 Kubernetes 或 Kubeflow 细节。</p><p><strong>改变：</strong>这会把“搭建生产级流水线”的门槛从平台编排细节转回到 Python 工作流本身，让算法团队更容易把实验代码迁移到可落地的生产流水线。</p><p><strong>边界：</strong>该能力依赖团队预先配置好对应 Stack 和底层编排环境，因此更适合已有 Kubeflow/MLOps 基础设施的团队，不能替代底层平台建设。</p><p class="source">来源：<a href="https://blog.csdn.net/piekill/article/details/149815966" target="_blank" rel="noopener noreferrer">CSDN《6大开源MLOps平台深度对比报告 --Zenml、Kubeflow、Metaflow...》</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方上手指南展示了 ZenML 可通过 CLI 安装 MLflow 集成并注册 experiment recorder，把实验记录接入现有跟踪体系。</p><p><strong>改变：</strong>这意味着团队在做端到端流水线时，可以较快补上实验元数据记录环节，减少手工拼接训练脚本与实验追踪工具的工作。</p><p><strong>边界：</strong>片段只体现了接入步骤较直接，未说明大规模团队协作、复杂 HPO 或多环境部署下的维护成本。</p><p class="source">来源：<a href="https://icode.best/i/431041405310246" target="_blank" rel="noopener noreferrer">爱代码爱编程《zenml项目快速提升指南：5分钟实现mlops效率飞跃》</a></p></div></div>
+                  <h3>Unity AI把AI agents嵌入Unity工作流</h3>
+                  <p class="synthesis">现有第三方反馈更认可其嵌入式原型工作流价值，但生产级能力证据不足。</p>
+                  <a class="article-link" href="https://www.producthunt.com/products/unity" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有Unity开发者提到，Unity Muse 的行为树功能可以直接用 AI 生成可运行的 Unity GameObject，并且还能继续修改其功能，实际体验上比单纯靠文本提示生成代码更顺手。</p><p><strong>改变：</strong>这意味着团队在 Unity 编辑器内就能把 AI 用到原型搭建和对象行为迭代上，减少在外部聊天工具与编辑器之间来回切换的成本。</p><p><strong>边界：</strong>这条反馈主要覆盖行为树/对象行为这类工作流，没有证明它在复杂系统开发、整项目代码理解或生产级质量上同样有效。</p><p class="source">来源：<a href="https://www.reddit.com/r/Unity3D/comments/1l75wri/is_there_an_ai_assisted_workflow_for_unity/" target="_blank" rel="noopener noreferrer">Reddit / r/Unity3D</a></p></div></div>
                 </section>
                 </div>
             </section>
             
             <section class="role-block">
-              <h2>美术视角测评</h2>
+              <h2>产品经理视角测评</h2>
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">gptimage2提示词省钱技巧短测</span>
-                    <span class="source-label">ChatGPT Chinese 博客评测 / 掘金开发者文章 / GitCode/CSDN 测评总结</span>
+                    <span class="badge badge-purple">Vibe Coding外部测评</span>
+                    <span class="source-label">yinming.me / Tony Bai</span>
                   </div>
-                  <h3>gptimage2提示词省钱技巧短测</h3>
-                  <p class="synthesis">共识是省钱关键在结构化用法，不是单买提示词。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116516137795815" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>横评文章认为，GPTImage2在文字渲染和结构化理解上明显强于对比模型，而另一款模型的优势主要是更快、更便宜。</p><p><strong>改变：</strong>如果用户买提示词主要是为了解决海报文案、版式指令和复杂结构描述，GPTImage2本身更强的理解能力会降低对“现成咒语包”的依赖。</p><p><strong>边界：</strong>但在追求低成本批量出图、快速试风格的场景里，模型单价和速度仍是硬约束，买提示词并不能弥补这类差距。</p><p class="source">来源：<a href="https://www.chatgpt-chinese.com/blog/guides/chatgpt/gpt-image-2-vs-nano-banana-2-comparison-2026.html" target="_blank" rel="noopener noreferrer">ChatGPT Chinese 博客评测</a></p></div><div class="opinion"><p><strong>观察：</strong>掘金这篇上手文把 GPTImage2 的提示词工程总结为“把 prompt 从文本升级成控制面板”，强调通过分层和结构化写法让生成结果更准、更可控。</p><p><strong>改变：</strong>这意味着个人或团队可以把需求拆成固定字段和模板来复用，减少反复试错，也降低为“爆款提示词”单独付费的必要性。</p><p><strong>边界：</strong>代价是使用者要先学会把画面需求参数化、结构化，它更像方法论而不是一条买来即用的万能提示词。</p><p class="source">来源：<a href="https://juejin.cn/post/7634430480519266354" target="_blank" rel="noopener noreferrer">掘金开发者文章</a></p></div></div>
+                  <h3>Vibe Coding启蒙课助力AI产品原型落地</h3>
+                  <p class="synthesis">共识是原型落地更快，但需求判断与人工校验更关键。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116488354727002" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>《2025年的VibeCoding思考》认为，VibeCoding已经把“把一个想法做出来”这件事变得非常容易，真正变难的是前置的需求判断与问题选择。</p><p><strong>改变：</strong>对团队的实际改变不是单纯提速开发，而是把核心竞争点从“能不能做”转向“该不该做、做给谁”，需求定义的重要性明显上升。</p><p><strong>边界：</strong>如果团队把VibeCoding当成“先做再说”的理由，容易产出大量看似完成度高但需求不准的原型。</p><p class="source">来源：<a href="https://yinming.me/posts/reflections-on-vibe-coding-2025" target="_blank" rel="noopener noreferrer">yinming.me</a></p></div><div class="opinion"><p><strong>观察：</strong>Tony Bai对Karpathy相关观点的解读指出，Vibe-Coding的价值在于抬高了普通人的开发下限，但AI能力并不稳定，存在“参差不齐的智能”。</p><p><strong>改变：</strong>这对用户的真实影响是，原型阶段可以更大胆交给AI生成，但团队必须保留人工校验、拆解任务和纠错环节，不能把它当成全自动交付。</p><p><strong>边界：</strong>它不适合对正确性、稳定性要求极高却又缺少复核机制的场景，因为对AI“无所不能”的幻想会直接放大返工成本。</p><p class="source">来源：<a href="https://tonybai.com/2026/05/02/from-vibe-coding-to-agentic-engineering-karpathy-survival-guide/" target="_blank" rel="noopener noreferrer">Tony Bai</a></p></div></div>
                 </section>
                 </div>
             </section>
