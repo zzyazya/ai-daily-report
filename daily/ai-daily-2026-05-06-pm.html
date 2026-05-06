@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 日报 · 2026-05-06</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; }
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .chevron { transform: rotate(90deg); }
+    .chevron { transition: transform 0.15s ease; }
+    .tab-btn { transition: all 0.15s ease; }
+    .tab-btn.active { border-bottom-width: 3px; }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <nav class="bg-gray-900 text-white text-sm">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2 hover:text-blue-300 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+        日报中心 · 周历 / 月历
+      </a>
+      <span class="text-gray-400">2026-05-06</span>
+    </div>
+  </nav>
+
+  <header class="bg-white border-b shadow-sm sticky top-0 z-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4">
+      <div class="flex items-center justify-between mb-3">
+        <div>
+          <div class="flex items-center gap-3">
+            <h1 class="text-2xl font-bold text-gray-900">AI 日报</h1>
+            <span class="px-2 py-0.5 text-xs font-semibold rounded-full bg-indigo-100 text-indigo-700">晚报</span>
+          </div>
+          <div class="flex items-center gap-3 text-xs text-gray-500 mt-1">
+            <span class="flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              预计阅读 5 分钟
+            </span>
+            <span class="text-gray-400">采集 52+ 源 · 原始 1400 篇 · 精选 133 篇</span>
+          </div>
+        </div>
+        <span class="text-sm text-gray-600">2026-05-06</span>
+      </div>
+
+      
+      <div class="flex gap-0 border-b border-gray-200 -mb-px" id="tab-nav">
+        
+        <button
+          class="tab-btn px-5 py-2.5 text-sm font-semibold border-b-3 active border-blue-600 text-blue-700"
+          data-tab="dev"
+          onclick="switchTab('dev')"
+        >
+          
+          <svg class="w-4 h-4 inline-block mr-1 -mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          
+          开发者
+        </button>
+        
+        <button
+          class="tab-btn px-5 py-2.5 text-sm font-semibold border-b-3 border-transparent text-gray-500 hover:text-gray-700"
+          data-tab="pm"
+          onclick="switchTab('pm')"
+        >
+          
+          <svg class="w-4 h-4 inline-block mr-1 -mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          
+          产品经理
+        </button>
+        
+        <button
+          class="tab-btn px-5 py-2.5 text-sm font-semibold border-b-3 border-transparent text-gray-500 hover:text-gray-700"
+          data-tab="art"
+          onclick="switchTab('art')"
+        >
+          
+          <svg class="w-4 h-4 inline-block mr-1 -mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+          
+          美术
+        </button>
+        
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+
+    
+    
+
+    <div class="tab-pane active" id="pane-dev">
+
+      
+      
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-xl mb-6">
+        <div class="p-6">
+            <div class="flex items-start gap-3 mb-4">
+              <div class="p-2 bg-amber-500 rounded-lg flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-2">
+                  <h2 class="text-sm font-bold text-amber-900 uppercase tracking-wide">今日最重要</h2>
+                  <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium">开发者视角</span>
+                  
+                  <span class="text-xs bg-white/80 text-amber-800 border border-amber-200 px-2 py-0.5 rounded-full font-medium">Memory</span>
+                  
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">Developer Memory v1记忆架构发布</h3>
+              </div>
+            </div>
+
+            
+            <div class="bg-white/70 border border-amber-200 rounded-lg p-3 mb-4">
+              <div class="text-xs font-semibold text-amber-900 mb-1">为什么和我们相关</div>
+              
+              <p class="text-sm text-gray-700">它直接对应我们当前在看的Memory、Coding Agent与编排链路，可帮助判断是否纳入下一轮记忆架构评测。</p>
+              
+              
+              <p class="text-sm text-gray-600 mt-1">它命中当前的Memory、MCP和Coding Agent方向，影响记忆链路设计、评测池和接入优先级判断。</p>
+              
+            </div>
+            
+
+            <div class="space-y-2 text-sm mb-4">
+              
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — Developer Memory v1提出安全门控MCP记忆架构。</p>
+              
+              
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 可提升Agent记忆安全性与工程可用性。</p>
+              
+            </div>
+
+            
+            <div class="grid md:grid-cols-2 gap-3 mb-4">
+              
+              <div class="bg-white/70 border border-slate-200 rounded-lg p-3">
+                <div class="text-xs font-semibold text-slate-900 mb-1">版本信息</div>
+                <p class="text-sm text-gray-700">该论文为 arXiv:2605.01567v1 首发版本，聚焦仓库、终端、测试与执行轨迹的长周期开发任务。</p>
+              </div>
+              
+              
+            </div>
+            
+
+            
+            <div class="bg-white/60 border border-blue-200 rounded-lg p-3 mb-4">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="text-xs font-semibold text-blue-900">对开发者的影响</span>
+              </div>
+              <p class="text-sm text-gray-700">开发者可参考Developer Memory v1设计更安全的Agent长期记忆系统。对基于MCP构建工具链和多轮协作应用尤其有借鉴价值。</p>
+            </div>
+            
+
+            <div class="grid md:grid-cols-2 gap-3 mb-4">
+              <div class="bg-white/70 border border-amber-200 rounded-lg p-3">
+                <div class="text-xs font-semibold text-amber-900 mb-1">建议怎么验证</div>
+                <p class="text-sm text-gray-700">评估接入方案</p>
+              </div>
+              <div class="bg-white/70 border border-amber-200 rounded-lg p-3">
+                <div class="text-xs font-semibold text-amber-900 mb-1">建议关注点</div>
+                <p class="text-sm text-gray-700">重点盯反馈归一化记忆是否真的优于静态向量库，以及安全门控MCP带来的延迟与误拦截成本。</p>
+              </div>
+            </div>
+
+            
+            <div class="flex items-center gap-2 bg-green-600 text-white rounded-lg px-4 py-2.5">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <span class="text-sm font-medium">建议动作：评估接入方案</span>
+            </div>
+            
+
+            
+            <div class="flex flex-wrap items-center gap-4 mt-3">
+              
+              <a href="https://arxiv.org/abs/2605.01567" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-900">
+                查看原文 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              
+            </div>
+            
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="mb-6">
+        <h2 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+          <span class="w-6 h-6 bg-gray-800 text-white rounded flex items-center justify-center text-xs font-bold">📡</span>
+          高价值更新
+        </h2>
+        <div class="space-y-4">
+          
+          <div class="bg-white border border-gray-200 rounded-xl hover:shadow-md transition-shadow">
+            <div class="p-5">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">模型能力</span>
+                  <span class="text-xs text-gray-400">arXiv cs.AI</span>
+                  
+                  <span class="text-xs text-blue-700 bg-white border border-blue-200 px-2 py-0.5 rounded-full">Agent评测</span>
+                  
+                  
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">Claw-Eval v2自治Agent可信评测框架</h3>
+                
+                <div class="bg-amber-50 border border-amber-100 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-amber-900">为什么和我们相关</span>
+                  
+                  <p class="text-xs text-gray-700 mt-0.5">它命中我们正在看的Agent评测与工作流可靠性方向，可帮助更新自治Agent的评测维度设计。</p>
+                  
+                  
+                  <p class="text-xs text-gray-600 mt-0.5">它贴近当前的Agent评测和工作流研究，影响我们对自治Agent安全性与鲁棒性评测方案的选型。</p>
+                  
+                </div>
+                
+                <p class="text-xs text-gray-600 mb-2">Claw-Eval v2提出自治Agent可信评测方法。</p>
+                
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>可改进多步Agent安全性与鲁棒性评估。</p>
+                
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  
+                  <div class="bg-slate-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-slate-900">版本信息</span>
+                    <p class="text-xs text-gray-700 mt-0.5">该论文为 arXiv:2604.06132v2 替换版本，说明作者已对初版方法与表述继续迭代修订。</p>
+                  </div>
+                  
+                  
+                </div>
+                
+                
+                <div class="bg-blue-50 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-blue-900">对开发者的影响</span>
+                  <p class="text-xs text-gray-700 mt-0.5">适合补充Agent评测维度，尤其是多步流程中的安全与鲁棒性检查。</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议怎么验证</span>
+                    <p class="text-xs text-gray-700 mt-0.5">补进评测框架</p>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议关注点</span>
+                    <p class="text-xs text-gray-700 mt-0.5">重点盯其评分是否摆脱轨迹不透明问题，以及安全、鲁棒性指标能否稳定映射真实工程故障。</p>
+                  </div>
+                </div>
+                
+                <a href="https://arxiv.org/abs/2604.06132" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+            </div>
+          </div>
+          
+          <div class="bg-white border border-gray-200 rounded-xl hover:shadow-md transition-shadow">
+            <div class="p-5">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">模型能力</span>
+                  <span class="text-xs text-gray-400">arXiv cs.AI</span>
+                  
+                  <span class="text-xs text-blue-700 bg-white border border-blue-200 px-2 py-0.5 rounded-full">Memory</span>
+                  
+                  
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">MEMAUDIT长时记忆评测协议论文解析</h3>
+                
+                <div class="bg-amber-50 border border-amber-100 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-amber-900">为什么和我们相关</span>
+                  
+                  <p class="text-xs text-gray-700 mt-0.5">它命中我们当前重点看的Memory方向，可帮助判断下一轮Agent记忆评测该如何拆分写入与检索环节。</p>
+                  
+                  
+                  <p class="text-xs text-gray-600 mt-0.5">它直接对应当前Memory与Agent评测方向，核心价值是帮助我们优化记忆写入评测口径与实验链路设计。</p>
+                  
+                </div>
+                
+                <p class="text-xs text-gray-600 mb-2">arXiv发布MEMAUDIT长期LLM记忆写入评测协议。</p>
+                
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>可更独立评估Memory写入而非混合检索效果。</p>
+                
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  
+                  <div class="bg-slate-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-slate-900">来源补充</span>
+                    <p class="text-xs text-gray-700 mt-0.5">论文聚焦预算受限的长期记忆写入，强调现有评测常把记忆写入与检索、提示等因素混在一起。</p>
+                  </div>
+                  
+                  
+                </div>
+                
+                
+                <div class="bg-blue-50 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-blue-900">对开发者的影响</span>
+                  <p class="text-xs text-gray-700 mt-0.5">这直接命中长期Memory评测方法问题，有助于改进Agent记忆链路的实验设计。适合纳入记忆能力评测框架参考。</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议怎么验证</span>
+                    <p class="text-xs text-gray-700 mt-0.5">评估协议</p>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议关注点</span>
+                    <p class="text-xs text-gray-700 mt-0.5">真正采用时要重点盯该协议是否能脱离具体检索策略，稳定衡量写入预算、压缩率与后续可用性。</p>
+                  </div>
+                </div>
+                
+                <a href="https://arxiv.org/abs/2605.02199" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+            </div>
+          </div>
+          
+          <div class="bg-white border border-gray-200 rounded-xl hover:shadow-md transition-shadow">
+            <div class="p-5">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">开发工具</span>
+                  <span class="text-xs text-gray-400">arXiv cs.AI</span>
+                  
+                  <span class="text-xs text-blue-700 bg-white border border-blue-200 px-2 py-0.5 rounded-full">Agent评测</span>
+                  
+                  
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">PhysicianBench真实EHR环境Agent评测基准</h3>
+                
+                <div class="bg-amber-50 border border-amber-100 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-amber-900">为什么和我们相关</span>
+                  
+                  <p class="text-xs text-gray-700 mt-0.5">它直接命中我们当前关注的Agent评测方向，可能影响下一轮评测池任务设计与真实环境基准选型。</p>
+                  
+                  
+                  <p class="text-xs text-gray-600 mt-0.5">它贴近当前Agent评测与工作流研究，具体判断点是是否借用其任务结构和指标进入自家评测链路。</p>
+                  
+                </div>
+                
+                <p class="text-xs text-gray-600 mb-2">PhysicianBench发布真实EHR场景Agent基准。</p>
+                
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>补足真实环境Agent评测缺口。</p>
+                
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  
+                  <div class="bg-slate-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-slate-900">论文状态</span>
+                    <p class="text-xs text-gray-700 mt-0.5">arXiv:2605.02240v1 为首版论文，强调真实EHR任务，而非静态医学知识问答评测。</p>
+                  </div>
+                  
+                  
+                </div>
+                
+                
+                <div class="bg-blue-50 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-blue-900">对开发者的影响</span>
+                  <p class="text-xs text-gray-700 mt-0.5">这是高相关Agent评测信号，可借鉴真实环境任务设计与指标框架。对构建更贴近生产的评测池有参考价值。</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议怎么验证</span>
+                    <p class="text-xs text-gray-700 mt-0.5">纳入评测池</p>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议关注点</span>
+                    <p class="text-xs text-gray-700 mt-0.5">真正评估时要重点盯是否覆盖多步工具调用、长上下文和安全约束，否则对通用Agent外推有限。</p>
+                  </div>
+                </div>
+                
+                <a href="https://arxiv.org/abs/2605.02240" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="mb-6">
+        <h2 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+          <span class="w-6 h-6 bg-indigo-600 text-white rounded flex items-center justify-center text-xs font-bold">🧪</span>
+          测评
+        </h2>
+        <div class="space-y-4">
+          
+          <div class="bg-white border border-indigo-100 rounded-xl p-5 hover:shadow-md transition-shadow">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-semibold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">Claude Design对比Google Stitch实测</span>
+              <span class="text-xs text-gray-400">AI 工具及教學</span>
+            </div>
+            <h3 class="text-sm font-bold text-gray-900 mb-2">Claude Design对比Google Stitch实测</h3>
+            <p class="text-xs text-gray-500 mb-3">
+              
+              共识是 Stitch 更像 UI 前置层，Claude Design 更偏内容物料。
+              
+            </p>
+            
+            <a href="http://www.bilibili.com/video/av116524677401750" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 hover:text-indigo-800 mb-3">
+              查看原始测评 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+            
+            <div class="space-y-2.5">
+              
+              <div class="text-xs bg-slate-50 rounded-lg p-3">
+                
+                <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：第三方对比指出，两者都不需要设计背景，但如果目标是网页或 App UI，Google Stitch 的流程更直接：打开网页、输入需求、立即生成设计；Claude Design 更偏向简报、摘要和营销素材，而不是纯 UI 生产。</p>
+                
+                
+                <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：这会直接改变选型：做产品界面原型或前端页面时，团队更可能把 Stitch 放在需求到设计的第一步；需要内容型视觉物料时才更适合用 Claude Design。</p>
+                
+                
+                <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：Stitch 当时仍处于 Google Labs Beta 且免费，作者也提醒正式商用后可能转向付费或缩减免费额度，不适合把“永久免费”当成长期前提。</p>
+                
+                <div class="flex items-center gap-1 mt-1.5">
+                  <span class="text-gray-400">—</span>
+                  
+                  <a href="https://futureweb.pro/tools/ai-web3-blog/claude-design-vs-google-stitch/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium">AI 工具及教學</a>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+          <div class="bg-white border border-indigo-100 rounded-xl p-5 hover:shadow-md transition-shadow">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-xs font-semibold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded-full">external_review</span>
+              <span class="text-xs text-gray-400">ACM / Springer / PMC 学术页面</span>
+            </div>
+            <h3 class="text-sm font-bold text-gray-900 mb-2">Beyond Sentiment多Agent评论洞察流程v2</h3>
+            <p class="text-xs text-gray-500 mb-3">
+              
+              材料偏学术摘要，缺少外部实测。
+              
+            </p>
+            
+            <a href="https://arxiv.org/abs/2601.12024" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-600 hover:text-indigo-800 mb-3">
+              查看原始测评 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+            
+            <div class="space-y-2.5">
+              
+              <div class="text-xs bg-slate-50 rounded-lg p-3">
+                
+                <p class="text-gray-700 leading-relaxed"><span class="font-semibold text-gray-900">观察</span>：未找到足够具体的第三方测评、上手体验或工作流复盘；现有材料基本都是论文摘要或学术页面，只说明“超越情感分析”的方法方向，没有外部作者对该多Agent流程实际效果的独立观察。</p>
+                
+                
+                <p class="text-gray-700 leading-relaxed mt-1"><span class="font-semibold text-gray-900">改变</span>：因此无法可靠提炼出对用户团队在评论分析、缺陷归因或建议生成环节的真实改变。</p>
+                
+                
+                <p class="text-gray-500 leading-relaxed mt-1"><span class="font-semibold text-gray-700">边界</span>：这些材料缺少基准对比、部署反馈、失败案例和使用代价，不满足“外部测评/真实影响”要求。</p>
+                
+                <div class="flex items-center gap-1 mt-1.5">
+                  <span class="text-gray-400">—</span>
+                  
+                  <a href="https://dl.acm.org/doi/10.1145/3703323.3703729" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-medium">ACM / Springer / PMC 学术页面</a>
+                  
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-5 mb-6">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-blue-600 rounded-lg">
+            
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            
+          </div>
+          <h3 class="text-base font-bold text-gray-900">开发者速览</h3>
+        </div>
+        <ul class="space-y-2">
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">与Memory、Coding Agent、MCP直接相关，值得进入近期技术评审与实验清单。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">适合补充Agent评测维度，尤其是多步流程中的安全与鲁棒性检查。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">这直接命中长期Memory评测方法问题，有助于改进Agent记忆链路的实验设计。适合纳入记忆能力评测框架参考。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-blue-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">这是高相关Agent评测信号，可借鉴真实环境任务设计与指标框架。对构建更贴近生产的评测池有参考价值。</span>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+      
+      
+
+      
+      
+      <div class="bg-red-50 border border-red-200 rounded-xl p-5 mb-6">
+        <div class="flex items-start gap-3">
+          <div class="p-1.5 bg-red-500 rounded-lg flex-shrink-0">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-sm font-bold text-red-900 mb-2">风险提醒</h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">容易把 Developer Memory v1、Claw-Eval v2、MEMAUDIT、Reward Hacking Benchmark、MCP-Atlas、ZenBrain 等论文/基准结果直接理解为“可立即迁移到生产、且已证明 Agent 可靠性与安全性”的结论。</span></div>
+              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">这些内容大多是 arXiv 论文、评测协议或实验基准，首先证明的是研究设定下的相对效果，而不是你所在代码库、MCP工具链或真实业务环境中的稳定收益。尤其像 ZenBrain 的“1/106成本逼近长上下文oracle表现”这类数字，只能按其特定任务、数据集和对照条件解读，不能直接外推为通用ROI。</span></div>
+              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">建议先把这批工作当作评测与架构灵感来源，在自家仓库、真实工具调用链和失败场景上做小规模复现后，再决定是否纳入开发流程。</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-indigo-50 to-blue-50 border border-indigo-200 rounded-xl p-5">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-indigo-600 rounded-lg">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3 class="text-base font-bold text-gray-900">今天该做什么</h3>
+        </div>
+        <div class="bg-white/60 rounded-lg p-4">
+          <p class="text-sm text-gray-700 font-medium">评估接入方案</p>
+          
+          <ul class="mt-2 space-y-1">
+            
+            <li class="text-xs text-gray-500 flex items-start gap-1.5">
+              <span class="text-blue-500 mt-0.5">→</span>与Memory、Coding Agent、MCP直接相关，值得进入近期技术评审与实验清单。
+            </li>
+            
+            <li class="text-xs text-gray-500 flex items-start gap-1.5">
+              <span class="text-blue-500 mt-0.5">→</span>适合补充Agent评测维度，尤其是多步流程中的安全与鲁棒性检查。
+            </li>
+            
+          </ul>
+          
+        </div>
+      </div>
+      
+
+    </div>
+    
+    
+
+    <div class="tab-pane " id="pane-pm">
+
+      
+      
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-xl mb-6">
+        <div class="p-6">
+            <div class="flex items-start gap-3 mb-4">
+              <div class="p-2 bg-amber-500 rounded-lg flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-2">
+                  <h2 class="text-sm font-bold text-amber-900 uppercase tracking-wide">今日最重要</h2>
+                  <span class="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full font-medium">产品经理视角</span>
+                  
+                  <span class="text-xs bg-white/80 text-amber-800 border border-amber-200 px-2 py-0.5 rounded-full font-medium">社交产品</span>
+                  
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">Flipped 1.9.4加码视频生成</h3>
+              </div>
+            </div>
+
+            
+            <div class="bg-white/70 border border-amber-200 rounded-lg p-3 mb-4">
+              <div class="text-xs font-semibold text-amber-900 mb-1">为什么和我们相关</div>
+              
+              <p class="text-sm text-gray-700">它同时命中我们在看的社交产品格局与内容化玩法方向，可用于判断AI角色产品是否向创作入口扩张。</p>
+              
+              
+              <p class="text-sm text-gray-600 mt-1">它直接对应社交产品与产品更新方向，尤其值得观察角色聊天叠加视频生成是否形成新的消费级增长入口。</p>
+              
+            </div>
+            
+
+            <div class="space-y-2 text-sm mb-4">
+              
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — Flipped 1.9.4主打AI角色聊天与视频生成。</p>
+              
+              
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 陪伴产品开始从聊天走向多模态互动。</p>
+              
+            </div>
+
+            
+            <div class="grid md:grid-cols-2 gap-3 mb-4">
+              
+              <div class="bg-white/70 border border-slate-200 rounded-lg p-3">
+                <div class="text-xs font-semibold text-slate-900 mb-1">平台热度</div>
+                <p class="text-sm text-gray-700">该应用免费，评分4.69583，累计10195条评价，说明已有较明显用户规模与反馈沉淀。</p>
+              </div>
+              
+              
+            </div>
+            
+
+            
+            <div class="bg-white/60 border border-purple-200 rounded-lg p-3 mb-4">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="text-xs font-semibold text-purple-900">对产品经理的影响</span>
+              </div>
+              <p class="text-sm text-gray-700">这说明AI陪伴赛道正从纯对话体验升级为内容共创体验。产品经理需重新评估角色设定、生成链路和留存玩法设计。</p>
+            </div>
+            
+
+            <div class="grid md:grid-cols-2 gap-3 mb-4">
+              <div class="bg-white/70 border border-amber-200 rounded-lg p-3">
+                <div class="text-xs font-semibold text-amber-900 mb-1">建议怎么验证</div>
+                <p class="text-sm text-gray-700">评估多模态陪伴路线</p>
+              </div>
+              <div class="bg-white/70 border border-amber-200 rounded-lg p-3">
+                <div class="text-xs font-semibold text-amber-900 mb-1">建议关注点</div>
+                <p class="text-sm text-gray-700">真正跟进时要重点盯角色创建与视频生成哪个才是核心留存点，以及免费策略后的变现路径。</p>
+              </div>
+            </div>
+
+            
+            <div class="flex items-center gap-2 bg-green-600 text-white rounded-lg px-4 py-2.5">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <span class="text-sm font-medium">建议动作：评估多模态陪伴路线</span>
+            </div>
+            
+
+            
+            <div class="flex flex-wrap items-center gap-4 mt-3">
+              
+              <a href="https://apps.apple.com/us/app/flipped-chat-with-ai-character/id6445969623?uo=4" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-900">
+                查看原文 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              
+            </div>
+            
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="mb-6">
+        <h2 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+          <span class="w-6 h-6 bg-gray-800 text-white rounded flex items-center justify-center text-xs font-bold">📡</span>
+          高价值更新
+        </h2>
+        <div class="space-y-4">
+          
+          <div class="bg-white border border-gray-200 rounded-xl hover:shadow-md transition-shadow">
+            <div class="p-5">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">产品动态</span>
+                  <span class="text-xs text-gray-400">App Store</span>
+                  
+                  <span class="text-xs text-purple-700 bg-white border border-purple-200 px-2 py-0.5 rounded-full">社交产品</span>
+                  
+                  
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">AI Boyfriend Chat: iBoy 2.61.1版本观察</h3>
+                
+                <div class="bg-amber-50 border border-amber-100 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-amber-900">为什么和我们相关</span>
+                  
+                  <p class="text-xs text-gray-700 mt-0.5">它与我们关注的社交陪伴赛道相关，可用于判断垂直情感角色产品是否在持续细分人群定位。</p>
+                  
+                  
+                  <p class="text-xs text-gray-600 mt-0.5">它命中社交产品格局和产品更新观察，适合用于评估细分人群陪伴产品的定位、口碑和潜在商业化路径。</p>
+                  
+                </div>
+                
+                <p class="text-xs text-gray-600 mb-2">AI Boyfriend Chat: iBoy更新至2.61.1。</p>
+                
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>情感陪伴细分品类仍有稳定供给。</p>
+                
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  
+                  <div class="bg-slate-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-slate-900">平台热度</span>
+                    <p class="text-xs text-gray-700 mt-0.5">App Store评分4.50082、评价数4834且免费，当前更像细分陪伴产品，验证样本仍有限。</p>
+                  </div>
+                  
+                  
+                </div>
+                
+                
+                <div class="bg-purple-50 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-purple-900">对产品经理的影响</span>
+                  <p class="text-xs text-gray-700 mt-0.5">AI Boyfriend Chat: iBoy 2.61.1体现垂直情感陪伴赛道仍在细分运营，适合观察人群切片策略。</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议怎么验证</span>
+                    <p class="text-xs text-gray-700 mt-0.5">关注细分人群</p>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议关注点</span>
+                    <p class="text-xs text-gray-700 mt-0.5">重点盯男性伴侣设定是否带来明确用户分层，以及心理支持叙事是否伴随合规风险。</p>
+                  </div>
+                </div>
+                
+                <a href="https://apps.apple.com/us/app/ai-boyfriend-chat-iboy/id1565524138?uo=4" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+            </div>
+          </div>
+          
+          <div class="bg-white border border-gray-200 rounded-xl hover:shadow-md transition-shadow">
+            <div class="p-5">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">产品动态</span>
+                  <span class="text-xs text-gray-400">App Store</span>
+                  
+                  <span class="text-xs text-purple-700 bg-white border border-purple-200 px-2 py-0.5 rounded-full">社交产品</span>
+                  
+                  
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">ChaChat 3.10.144主打会记忆的AI陪伴</h3>
+                
+                <div class="bg-amber-50 border border-amber-100 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-amber-900">为什么和我们相关</span>
+                  
+                  <p class="text-xs text-gray-700 mt-0.5">它命中我们正在跟的AI陪伴赛道，也能帮助判断记忆能力在消费产品里是否已成为主流卖点。</p>
+                  
+                  
+                  <p class="text-xs text-gray-600 mt-0.5">它同时覆盖社交产品与用户反馈关注域，适合观察“记忆型陪伴”是否成为新的竞品叙事和留存抓手。</p>
+                  
+                </div>
+                
+                <p class="text-xs text-gray-600 mb-2">ChaChat 3.10.144强调AI角色会倾听、记忆并随关系成长。</p>
+                
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>反映AI陪伴产品把记忆能力前置成卖点。</p>
+                
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  
+                  <div class="bg-slate-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-slate-900">平台热度</span>
+                    <p class="text-xs text-gray-700 mt-0.5">该应用在App Store免费提供，评分4.38366，已有8239条评价，说明已有一定用户验证但规模仍中等。</p>
+                  </div>
+                  
+                  
+                </div>
+                
+                
+                <div class="bg-purple-50 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-purple-900">对产品经理的影响</span>
+                  <p class="text-xs text-gray-700 mt-0.5">它把“会记忆、会成长”包装成核心体验，适合观察情感陪伴产品如何讲述长期关系价值。可用于对比记忆能力的产品化表达。</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议怎么验证</span>
+                    <p class="text-xs text-gray-700 mt-0.5">拆解卖点话术</p>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议关注点</span>
+                    <p class="text-xs text-gray-700 mt-0.5">重点盯所谓记忆与成长是否真能形成持续留存，而不是商店文案层面的概念包装。</p>
+                  </div>
+                </div>
+                
+                <a href="https://apps.apple.com/us/app/chachat-talking-ai-characters/id6444773124?uo=4" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+            </div>
+          </div>
+          
+          <div class="bg-white border border-gray-200 rounded-xl hover:shadow-md transition-shadow">
+            <div class="p-5">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-2 py-0.5 rounded-full">产品动态</span>
+                  <span class="text-xs text-gray-400">App Store</span>
+                  
+                  <span class="text-xs text-purple-700 bg-white border border-purple-200 px-2 py-0.5 rounded-full">社交产品</span>
+                  
+                  
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">Jupi 1.8.4主打AI好友与聊天游戏</h3>
+                
+                <div class="bg-amber-50 border border-amber-100 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-amber-900">为什么和我们相关</span>
+                  
+                  <p class="text-xs text-gray-700 mt-0.5">它命中我们当前关注的社交产品格局，可用于持续跟踪AI陪伴产品的功能组合与用户反馈强度。</p>
+                  
+                  
+                  <p class="text-xs text-gray-600 mt-0.5">它直指社交产品格局与用户声音关注域，适合用于判断AI陪伴赛道的竞品功能和增长信号。</p>
+                  
+                </div>
+                
+                <p class="text-xs text-gray-600 mb-2">Jupi 1.8.4继续主打自定义AI角色陪伴与互动玩法。</p>
+                
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>是AI陪伴型消费产品的活跃竞品样本。</p>
+                
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  
+                  <div class="bg-slate-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-slate-900">平台热度</span>
+                    <p class="text-xs text-gray-700 mt-0.5">该应用在App Store免费提供，评分4.5476，已有32976条评价，说明用户基数已不算小。</p>
+                  </div>
+                  
+                  
+                </div>
+                
+                
+                <div class="bg-purple-50 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-purple-900">对产品经理的影响</span>
+                  <p class="text-xs text-gray-700 mt-0.5">这是典型社交向AI陪伴产品，适合纳入竞品池观察角色创建、聊天和游戏化组合。高评价量也能反映一定用户接受度。</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议怎么验证</span>
+                    <p class="text-xs text-gray-700 mt-0.5">纳入竞品池</p>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议关注点</span>
+                    <p class="text-xs text-gray-700 mt-0.5">重点盯高评分是否由陪伴体验驱动，还是靠角色定制与游戏化包装拉动留存和付费。</p>
+                  </div>
+                </div>
+                
+                <a href="https://apps.apple.com/us/app/jupi-ai-chat-friend-game/id1668337467?uo=4" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+
+      
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200 rounded-xl p-5 mb-6">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-purple-600 rounded-lg">
+            
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            
+          </div>
+          <h3 class="text-base font-bold text-gray-900">产品经理速览</h3>
+        </div>
+        <ul class="space-y-2">
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">AI Boyfriend Chat: iBoy 2.61.1体现垂直情感陪伴赛道仍在细分运营，适合观察人群切片策略。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">它把“会记忆、会成长”包装成核心体验，适合观察情感陪伴产品如何讲述长期关系价值。可用于对比记忆能力的产品化表达。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">这是典型社交向AI陪伴产品，适合纳入竞品池观察角色创建、聊天和游戏化组合。高评价量也能反映一定用户接受度。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">这是AI恋爱陪伴赛道的持续更新样本，适合跟踪细分题材的产品包装与市场接受度。也可补足竞品分层观察。</span>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-5 mb-6">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-green-600 rounded-lg">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          </div>
+          <h3 class="text-base font-bold text-gray-900">今天值得试的工具</h3>
+        </div>
+        <h4 class="text-lg font-bold text-gray-900 mb-1">CHAI: Social AI Platform- Chat 2.169</h4>
+        <p class="text-sm text-gray-700 mb-3">可观察AI社交产品的角色互动机制</p>
+        <div class="flex flex-wrap gap-4 text-xs mb-3">
+          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">研究AI陪伴产品设计与留存玩法</span></div>
+          <div><span class="font-semibold text-red-700">不适合</span><span class="text-gray-600 ml-1">企业级效率工具需求</span></div>
+        </div>
+        
+        <a href="https://chai-research.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-800">
+          立即体验 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+        
+      </div>
+      
+
+      
+      
+      <div class="bg-red-50 border border-red-200 rounded-xl p-5 mb-6">
+        <div class="flex items-start gap-3">
+          <div class="p-1.5 bg-red-500 rounded-lg flex-shrink-0">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-sm font-bold text-red-900 mb-2">风险提醒</h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">看到 Replika - AI Friend 12.2.2、CHAI: Social AI Platform- Chat 2.169、Linky AI 3.19.1、BALA AI 4.5.0 等一批产品集中更新，容易误读为“AI陪伴赛道正在靠功能创新快速增长，应该马上跟进立项或加功能”。</span></div>
+              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">这批信息大多只是 App Store 版本更新观察，只有少数文案提到如 ChaChat 3.10.144 的“记忆”、Flipped 1.9.4 的“视频生成”等卖点，不能直接代表新增能力、用户增长或商业化验证。对产品经理来说，更应把它视为赛道活跃度信号，而不是需求已经被验证的证据。</span></div>
+              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">先把这些产品按“仅版本更新/明确功能变化/定位变化”分层追踪，再决定是否投入竞品复刻或路线调整。</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-indigo-50 to-blue-50 border border-indigo-200 rounded-xl p-5">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-indigo-600 rounded-lg">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3 class="text-base font-bold text-gray-900">今天该做什么</h3>
+        </div>
+        <div class="bg-white/60 rounded-lg p-4">
+          <p class="text-sm text-gray-700 font-medium">评估多模态陪伴路线</p>
+          
+          <ul class="mt-2 space-y-1">
+            
+            <li class="text-xs text-gray-500 flex items-start gap-1.5">
+              <span class="text-purple-500 mt-0.5">→</span>AI Boyfriend Chat: iBoy 2.61.1体现垂直情感陪伴赛道仍在细分运营，适合观察人群切片策略。
+            </li>
+            
+            <li class="text-xs text-gray-500 flex items-start gap-1.5">
+              <span class="text-purple-500 mt-0.5">→</span>它把“会记忆、会成长”包装成核心体验，适合观察情感陪伴产品如何讲述长期关系价值。可用于对比记忆能力的产品化表达。
+            </li>
+            
+          </ul>
+          
+        </div>
+      </div>
+      
+
+    </div>
+    
+    
+
+    <div class="tab-pane " id="pane-art">
+
+      
+      
+      <div class="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-xl mb-6">
+        <div class="p-6">
+            <div class="flex items-start gap-3 mb-4">
+              <div class="p-2 bg-amber-500 rounded-lg flex-shrink-0">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              </div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2 mb-2">
+                  <h2 class="text-sm font-bold text-amber-900 uppercase tracking-wide">今日最重要</h2>
+                  <span class="text-xs bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full font-medium">美术视角</span>
+                  
+                  <span class="text-xs bg-white/80 text-amber-800 border border-amber-200 px-2 py-0.5 rounded-full font-medium">视频工作流</span>
+                  
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">VideoGPA提升3D视频一致性</h3>
+              </div>
+            </div>
+
+            
+            <div class="bg-white/70 border border-amber-200 rounded-lg p-3 mb-4">
+              <div class="text-xs font-semibold text-amber-900 mb-1">为什么和我们相关</div>
+              
+              <p class="text-sm text-gray-700">它命中我们在看的视频工作流与视觉生成质量判断，会影响后续工具选型和工作流替换优先级。</p>
+              
+              
+              <p class="text-sm text-gray-600 mt-1">它直接对应视频工作流中的3D一致性痛点，可用于判断哪些模型更适合进入稳定生产链路。</p>
+              
+            </div>
+            
+
+            <div class="space-y-2 text-sm mb-4">
+              
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">发生了什么</span> — VideoGPA用几何先验蒸馏提升3D一致性视频生成。</p>
+              
+              
+              <p class="text-gray-700"><span class="font-semibold text-gray-900">为什么重要</span> — 可减少镜头切换和运动中的形体崩坏。</p>
+              
+            </div>
+
+            
+            <div class="grid md:grid-cols-2 gap-3 mb-4">
+              
+              <div class="bg-white/70 border border-slate-200 rounded-lg p-3">
+                <div class="text-xs font-semibold text-slate-900 mb-1">来源补充</div>
+                <p class="text-sm text-gray-700">论文为 arXiv:2601.23286v2 修订版，核心聚焦视频扩散模型常见的形变与空间漂移问题。</p>
+              </div>
+              
+              
+            </div>
+            
+
+            
+            <div class="bg-white/60 border border-pink-200 rounded-lg p-3 mb-4">
+              <div class="flex items-center gap-2 mb-1.5">
+                <span class="text-xs font-semibold text-pink-900">对美术的影响</span>
+              </div>
+              <p class="text-sm text-gray-700">对美术来说，更稳定的3D一致性能提升角色、场景和运镜的可控性。也更适合前期概念视频和动画分镜探索。</p>
+            </div>
+            
+
+            <div class="grid md:grid-cols-2 gap-3 mb-4">
+              <div class="bg-white/70 border border-amber-200 rounded-lg p-3">
+                <div class="text-xs font-semibold text-amber-900 mb-1">建议怎么验证</div>
+                <p class="text-sm text-gray-700">关注论文与样例</p>
+              </div>
+              <div class="bg-white/70 border border-amber-200 rounded-lg p-3">
+                <div class="text-xs font-semibold text-amber-900 mb-1">建议关注点</div>
+                <p class="text-sm text-gray-700">重点盯长镜头下角色形体、视角切换和物体位置是否持续稳定，而非只看单段演示。</p>
+              </div>
+            </div>
+
+            
+            <div class="flex items-center gap-2 bg-green-600 text-white rounded-lg px-4 py-2.5">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <span class="text-sm font-medium">建议动作：关注论文与样例</span>
+            </div>
+            
+
+            
+            <div class="flex flex-wrap items-center gap-4 mt-3">
+              
+              <a href="https://arxiv.org/abs/2601.23286" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 hover:text-amber-900">
+                查看原文 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              
+            </div>
+            
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="mb-6">
+        <h2 class="text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+          <span class="w-6 h-6 bg-gray-800 text-white rounded flex items-center justify-center text-xs font-bold">📡</span>
+          高价值更新
+        </h2>
+        <div class="space-y-4">
+          
+          <div class="bg-white border border-gray-200 rounded-xl hover:shadow-md transition-shadow">
+            <div class="p-5">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">设计工具</span>
+                  <span class="text-xs text-gray-400">B站·软核狼哥</span>
+                  
+                  <span class="text-xs text-pink-700 bg-white border border-pink-200 px-2 py-0.5 rounded-full">工作流</span>
+                  
+                  
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">Claude Design对比Google Stitch实测</h3>
+                
+                <div class="bg-amber-50 border border-amber-100 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-amber-900">为什么和我们相关</span>
+                  
+                  <p class="text-xs text-gray-700 mt-0.5">它同时命中我们在看的工作流自动化与产品更新方向，适合进入设计到开发衔接的验证清单。</p>
+                  
+                  
+                  <p class="text-xs text-gray-600 mt-0.5">它贴近2D工具与生产工作流关注域，判断点是能否替换部分界面草图和初版视觉搭建。</p>
+                  
+                </div>
+                
+                <p class="text-xs text-gray-600 mb-2">实测比较Claude Design与Google Stitch出图到上线能力。</p>
+                
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>可直接影响AI界面生成工具选型与工作流替换。</p>
+                
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  
+                  <div class="bg-slate-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-slate-900">平台热度</span>
+                    <p class="text-xs text-gray-700 mt-0.5">该视频时长12分24秒，当前播放397、收藏11，讨论量仍处于早期验证阶段。</p>
+                  </div>
+                  
+                  
+                  <div class="bg-indigo-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-indigo-900">测评补充结论</span>
+                    <p class="text-xs text-gray-700 mt-0.5">共识是 Stitch 更像 UI 前置层，Claude Design 更偏内容物料。</p>
+                  </div>
+                  
+                </div>
+                
+                
+                <div class="bg-pink-50 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-pink-900">对美术的影响</span>
+                  <p class="text-xs text-gray-700 mt-0.5">会影响设计稿到界面的产出链路。适合评估是否替代部分低保真界面搭建工作。</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议怎么验证</span>
+                    <p class="text-xs text-gray-700 mt-0.5">试跑真实稿件</p>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议关注点</span>
+                    <p class="text-xs text-gray-700 mt-0.5">重点盯版式一致性、组件复用和多轮修改可控性，别只看首屏视觉完成度。</p>
+                  </div>
+                </div>
+                
+                <a href="http://www.bilibili.com/video/av116524677401750" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+            </div>
+          </div>
+          
+          <div class="bg-white border border-gray-200 rounded-xl hover:shadow-md transition-shadow">
+            <div class="p-5">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">产品动态</span>
+                  <span class="text-xs text-gray-400">Product Hunt</span>
+                  
+                  <span class="text-xs text-pink-700 bg-white border border-pink-200 px-2 py-0.5 rounded-full">3D工具</span>
+                  
+                  
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">Unity AI嵌入式代理工作流正式亮相</h3>
+                
+                <div class="bg-amber-50 border border-amber-100 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-amber-900">为什么和我们相关</span>
+                  
+                  <p class="text-xs text-gray-700 mt-0.5">它同时命中我们关注的工作流自动化和3D生产流程，关系到是否值得纳入创作工具替换观察名单。</p>
+                  
+                  
+                  <p class="text-xs text-gray-600 mt-0.5">它直接命中当前在看的3D生产工作流，关键判断点是是否能替换部分场景搭建和资产处理流程。</p>
+                  
+                </div>
+                
+                <p class="text-xs text-gray-600 mb-2">Unity AI把AI agents直接嵌入Unity工作流。</p>
+                
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>可能改变游戏与3D内容生产流程入口。</p>
+                
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  
+                  <div class="bg-slate-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-slate-900">平台热度</span>
+                    <p class="text-xs text-gray-700 mt-0.5">该信息来自Product Hunt上架页，说明它已进入公开产品曝光阶段，但暂无明确用户量与定价细节。</p>
+                  </div>
+                  
+                  
+                </div>
+                
+                
+                <div class="bg-pink-50 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-pink-900">对美术的影响</span>
+                  <p class="text-xs text-gray-700 mt-0.5">对美术与技术美术更直接，可能影响3D资产制作与场景搭建工作流。</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议怎么验证</span>
+                    <p class="text-xs text-gray-700 mt-0.5">试跑制作流程</p>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议关注点</span>
+                    <p class="text-xs text-gray-700 mt-0.5">真正上手时要重点盯它对3D资产、场景编辑和反复修改的稳定性，而不是一次性生成效果。</p>
+                  </div>
+                </div>
+                
+                <a href="https://www.producthunt.com/products/unity" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+            </div>
+          </div>
+          
+          <div class="bg-white border border-gray-200 rounded-xl hover:shadow-md transition-shadow">
+            <div class="p-5">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2 py-0.5 rounded-full">视觉生成</span>
+                  <span class="text-xs text-gray-400">arXiv cs.AI</span>
+                  
+                  <span class="text-xs text-pink-700 bg-white border border-pink-200 px-2 py-0.5 rounded-full">2D工具</span>
+                  
+                  
+                </div>
+                <h3 class="text-sm font-bold text-gray-900 mb-2">高保真人脸替换全面综述与新基准</h3>
+                
+                <div class="bg-amber-50 border border-amber-100 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-amber-900">为什么和我们相关</span>
+                  
+                  <p class="text-xs text-gray-700 mt-0.5">它关联我们在看的人像生成工作流，可帮助安排换脸类工具的质量评测顺序。</p>
+                  
+                  
+                  <p class="text-xs text-gray-600 mt-0.5">它落在2D工具与视觉工作流评测，可用于判断换脸方案是否值得纳入生产工具池。</p>
+                  
+                </div>
+                
+                <p class="text-xs text-gray-600 mb-2">论文系统梳理人脸替换方法并提出新基准。</p>
+                
+                <p class="text-xs text-gray-500 mb-3"><span class="font-semibold text-gray-700">为什么重要：</span>可帮助判断换脸工具的真实质量上限。</p>
+                
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  
+                  <div class="bg-slate-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-slate-900">来源补充</span>
+                    <p class="text-xs text-gray-700 mt-0.5">这是一篇 arXiv 综述加基准论文，当前摘要未体现开源代码或可直接试用入口。</p>
+                  </div>
+                  
+                  
+                </div>
+                
+                
+                <div class="bg-pink-50 rounded-lg p-2.5 mb-3">
+                  <span class="text-xs font-semibold text-pink-900">对美术的影响</span>
+                  <p class="text-xs text-gray-700 mt-0.5">可作为人像换脸质量与一致性评测参考，影响工具筛选顺序。</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-3 mb-3">
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议怎么验证</span>
+                    <p class="text-xs text-gray-700 mt-0.5">拉入工具评测</p>
+                  </div>
+                  <div class="bg-gray-50 rounded-lg p-2.5">
+                    <span class="text-xs font-semibold text-gray-900">建议关注点</span>
+                    <p class="text-xs text-gray-700 mt-0.5">重点盯身份一致性、表情保真和遮挡边缘场景下的伪影控制表现。</p>
+                  </div>
+                </div>
+                
+                <a href="https://arxiv.org/abs/2605.00883" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-800">
+                  查看原文 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+                
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+
+      
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-pink-50 to-pink-100 border border-pink-200 rounded-xl p-5 mb-6">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-pink-600 rounded-lg">
+            
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path></svg>
+            
+          </div>
+          <h3 class="text-base font-bold text-gray-900">美术速览</h3>
+        </div>
+        <ul class="space-y-2">
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">对视频工作流很关键，3D一致性提升会直接影响镜头连续性与返工率。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">会影响设计稿到界面的产出链路。适合评估是否替代部分低保真界面搭建工作。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">对美术与技术美术更直接，可能影响3D资产制作与场景搭建工作流。</span>
+          </li>
+          
+          <li class="flex items-start gap-2 text-sm">
+            <span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">•</span>
+            <span class="text-gray-700">可作为人像换脸质量与一致性评测参考，影响工具筛选顺序。</span>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-5 mb-6">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-green-600 rounded-lg">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          </div>
+          <h3 class="text-base font-bold text-gray-900">今天值得试的工具</h3>
+        </div>
+        <h4 class="text-lg font-bold text-gray-900 mb-1">Flipped 1.9.4</h4>
+        <p class="text-sm text-gray-700 mb-3">AI角色聊天与视频生成一体化工具</p>
+        <div class="flex flex-wrap gap-4 text-xs mb-3">
+          <div><span class="font-semibold text-green-800">适合</span><span class="text-gray-600 ml-1">角色设定演绎与短视频灵感产出</span></div>
+          <div><span class="font-semibold text-red-700">不适合</span><span class="text-gray-600 ml-1">专业级三维动画制作</span></div>
+        </div>
+        
+        <a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-800">
+          立即体验 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
+        
+      </div>
+      
+
+      
+      
+      <div class="bg-red-50 border border-red-200 rounded-xl p-5 mb-6">
+        <div class="flex items-start gap-3">
+          <div class="p-1.5 bg-red-500 rounded-lg flex-shrink-0">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-sm font-bold text-red-900 mb-2">风险提醒</h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex gap-2"><span class="text-red-600 font-semibold whitespace-nowrap">容易误读</span><span class="text-gray-700">看到“高保真人脸替换全面综述与新基准”这类进展，容易误以为高保真人脸替换已经足够成熟，可以直接用于商业美术项目的人物资产制作或宣传内容。</span></div>
+              <div class="flex gap-2"><span class="text-green-700 font-semibold whitespace-nowrap">正确理解</span><span class="text-gray-700">这类论文主要说明研究与评测能力在提升，不等于真实项目里的人脸替换在版权授权、肖像权、身份误导和细节稳定性上已经没有风险。对美术来说，越“高保真”反而越需要把它当成高敏感能力看待，而不是普通修图或角色生成工具。</span></div>
+              <div class="flex gap-2"><span class="text-gray-900 font-semibold whitespace-nowrap">建议</span><span class="text-gray-700">涉及真人脸替换时，先加一道内部审核，明确授权来源、使用边界和是否需要改为非真人化表达。</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      
+      
+      <div class="bg-gradient-to-br from-indigo-50 to-blue-50 border border-indigo-200 rounded-xl p-5">
+        <div class="flex items-center gap-2 mb-3">
+          <div class="p-1.5 bg-indigo-600 rounded-lg">
+            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3 class="text-base font-bold text-gray-900">今天该做什么</h3>
+        </div>
+        <div class="bg-white/60 rounded-lg p-4">
+          <p class="text-sm text-gray-700 font-medium">关注论文与样例</p>
+          
+          <ul class="mt-2 space-y-1">
+            
+            <li class="text-xs text-gray-500 flex items-start gap-1.5">
+              <span class="text-pink-500 mt-0.5">→</span>对视频工作流很关键，3D一致性提升会直接影响镜头连续性与返工率。
+            </li>
+            
+            <li class="text-xs text-gray-500 flex items-start gap-1.5">
+              <span class="text-pink-500 mt-0.5">→</span>会影响设计稿到界面的产出链路。适合评估是否替代部分低保真界面搭建工作。
+            </li>
+            
+          </ul>
+          
+        </div>
+      </div>
+      
+
+    </div>
+    
+
+    <div class="mt-8 pt-6 border-t border-gray-200">
+      <div class="text-center text-xs text-gray-500 space-y-1">
+        <p>AI 日报 · 2026-05-06 18:01 自动生成</p>
+        <p>开发者 · 产品经理 · 美术 — 三种角色，三份精准日报</p>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function switchTab(role) {
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.classList.remove('active', 'border-blue-600', 'border-purple-600', 'border-pink-600',
+          'text-blue-700', 'text-purple-700', 'text-pink-700');
+        b.classList.add('border-transparent', 'text-gray-500');
+      });
+
+      const pane = document.getElementById('pane-' + role);
+      if (pane) pane.classList.add('active');
+
+      const btn = document.querySelector('[data-tab="' + role + '"]');
+      if (btn) {
+        const colorMap = {dev: 'blue', pm: 'purple', art: 'pink'};
+        const c = colorMap[role];
+        btn.classList.remove('border-transparent', 'text-gray-500');
+        btn.classList.add('active', 'border-' + c + '-600', 'text-' + c + '-700');
+      }
+    }
+  </script>
+</body>
+</html>
