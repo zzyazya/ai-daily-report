@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-05-05 17:54</title>
+  <title>独立测评 · 2026-05-06 08:44</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,51 +43,29 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Biomedical RAG检索基准v1对比研究</span>
-                    <span class="source-label">Toloka / ML Journey / Hybrid Retrieval and Reranking in RAG: A Dual-Stage ...</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验</span>
+                    <span class="source-label">罗西的思考（博客园）</span>
                   </div>
-                  <h3>Biomedical RAG检索基准v1对比研究</h3>
-                  <p class="synthesis">共识是生物医疗RAG应优先优化检索器、混合检索与重排链路。</p>
-                  <a class="article-link" href="https://arxiv.org/abs/2605.02520" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Toloka 的 RAG 评测技术指南指出，在医疗/科研检索场景里，像 PubMedBERT 这类生物医学专用 embedding 往往比通用 embedding 更能抓住医学术语语义，因此密集检索质量会明显更好。</p><p><strong>改变：</strong>这意味着做 biomedical RAG 的团队，若基准里比较的是不同检索器，优先换成领域专用向量模型往往比只调生成端更直接地提升召回与答案相关性。</p><p class="source">来源：<a href="https://toloka.ai/blog/rag-evaluation-a-technical-guide-to-measuring-retrieval-augmented-generation/" target="_blank" rel="noopener noreferrer">Toloka</a></p></div><div class="opinion"><p><strong>观察：</strong>ML Journey 的检索对比文章给出的实战结论是：语料以长文本为主且缺少标注数据时可先用 dense-only；一旦在关键词或实体查询上频繁失手，就应补上 BM25 做 hybrid；若问题集中在前 5 条结果不够准，再加 reranker。</p><p><strong>改变：</strong>这给 biomedical RAG 基准结果的落地提供了明确调参顺序：先看语义召回，再补术语/实体命中，最后用重排修正前排结果，避免团队一开始就把系统堆得过重。</p><p><strong>边界：</strong>如果当前失败并不来自术语检索或 top-k 精度瓶颈，这套 hybrid+r reranker 组合未必带来明显收益，反而会增加系统复杂度。</p><p class="source">来源：<a href="https://mljourney.com/sparse-vs-dense-retrieval-for-rag-bm25-embeddings-and-hybrid-search/" target="_blank" rel="noopener noreferrer">ML Journey</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">外部测评</span>
-                    <span class="source-label">N/A</span>
-                  </div>
-                  <h3>Agentic Research复现实验与arXiv:2605.02620v1</h3>
-                  <p class="synthesis">null</p>
-                  <a class="article-link" href="https://arxiv.org/abs/2605.02620" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>未找到与“arXiv:2605.02620v1 三小时复现NLP研究”直接对应的第三方测评或上手观察；现有片段主要是相关概念论文、官方仓库或站点聚合。</p><p><strong>改变：</strong>无法从这些材料中可靠提炼出对用户、团队或工作流的真实影响。</p><p><strong>边界：</strong>材料缺少独立复现记录、具体基准对比和实际使用反馈，且多为官方/聚合性质，不符合筛选要求。</p><p class="source">来源：<a href="N/A" target="_blank" rel="noopener noreferrer">N/A</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Unity AI外部体验</span>
-                    <span class="source-label">Reddit / r/Unity3D</span>
-                  </div>
-                  <h3>Unity AI把AI agents嵌入Unity工作流</h3>
-                  <p class="synthesis">现有第三方反馈更认可其嵌入式原型工作流价值，但生产级能力证据不足。</p>
-                  <a class="article-link" href="https://www.producthunt.com/products/unity" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有Unity开发者提到，Unity Muse 的行为树功能可以直接用 AI 生成可运行的 Unity GameObject，并且还能继续修改其功能，实际体验上比单纯靠文本提示生成代码更顺手。</p><p><strong>改变：</strong>这意味着团队在 Unity 编辑器内就能把 AI 用到原型搭建和对象行为迭代上，减少在外部聊天工具与编辑器之间来回切换的成本。</p><p><strong>边界：</strong>这条反馈主要覆盖行为树/对象行为这类工作流，没有证明它在复杂系统开发、整项目代码理解或生产级质量上同样有效。</p><p class="source">来源：<a href="https://www.reddit.com/r/Unity3D/comments/1l75wri/is_there_an_ai_assisted_workflow_for_unity/" target="_blank" rel="noopener noreferrer">Reddit / r/Unity3D</a></p></div></div>
+                  <h3>Python实现动态工具路由模块化Agent系统</h3>
+                  <p class="synthesis">共识是模块化加条件路由能提升可维护性，但工程复杂度也会上升。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/05/05/build-a-modular-skill-based-agent-system-for-llms-with-dynamic-tool-routing-in-python/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>博客园作者在拆解 OpenHands / CodeAct 时观察到，基于 Python 运行时的 Agent 可以在工具调用报错后直接读取 stderr 并进入下一轮自修复，也能把多个原子工具封装成函数后按参数组合复用。</p><p><strong>改变：</strong>这意味着团队做动态工具路由时，不必为每个场景重训模型，更多是通过改脚本和重组工具模块来适配新任务，迭代速度会明显快于固定流程 Agent。</p><p><strong>边界：</strong>这种收益更适合代码执行和工具接口清晰的任务；如果工具本身不可观测、异常信息不足，动态路由和自修复能力就难发挥出来。</p><p class="source">来源：<a href="https://www.cnblogs.com/rossiXYZ/p/19497174" target="_blank" rel="noopener noreferrer">罗西的思考（博客园）</a></p></div></div>
                 </section>
                 </div>
             </section>
             
             <section class="role-block">
-              <h2>产品经理视角测评</h2>
+              <h2>美术视角测评</h2>
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-purple">Vibe Coding外部测评</span>
-                    <span class="source-label">yinming.me / Tony Bai</span>
+                    <span class="badge badge-pink">GPT-Image 2.0 vs Nano Banana 第三方实测摘录</span>
+                    <span class="source-label">AtomGit AI 社区 / yfj-unicorn / AtomGit 开源社区 / Jie shao / 知乎 / 五大真实场景横测GPT-image-2和Nano Banana2</span>
                   </div>
-                  <h3>Vibe Coding启蒙课助力AI产品原型落地</h3>
-                  <p class="synthesis">共识是原型落地更快，但需求判断与人工校验更关键。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116488354727002" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>《2025年的VibeCoding思考》认为，VibeCoding已经把“把一个想法做出来”这件事变得非常容易，真正变难的是前置的需求判断与问题选择。</p><p><strong>改变：</strong>对团队的实际改变不是单纯提速开发，而是把核心竞争点从“能不能做”转向“该不该做、做给谁”，需求定义的重要性明显上升。</p><p><strong>边界：</strong>如果团队把VibeCoding当成“先做再说”的理由，容易产出大量看似完成度高但需求不准的原型。</p><p class="source">来源：<a href="https://yinming.me/posts/reflections-on-vibe-coding-2025" target="_blank" rel="noopener noreferrer">yinming.me</a></p></div><div class="opinion"><p><strong>观察：</strong>Tony Bai对Karpathy相关观点的解读指出，Vibe-Coding的价值在于抬高了普通人的开发下限，但AI能力并不稳定，存在“参差不齐的智能”。</p><p><strong>改变：</strong>这对用户的真实影响是，原型阶段可以更大胆交给AI生成，但团队必须保留人工校验、拆解任务和纠错环节，不能把它当成全自动交付。</p><p><strong>边界：</strong>它不适合对正确性、稳定性要求极高却又缺少复核机制的场景，因为对AI“无所不能”的幻想会直接放大返工成本。</p><p class="source">来源：<a href="https://tonybai.com/2026/05/02/from-vibe-coding-to-agentic-engineering-karpathy-survival-guide/" target="_blank" rel="noopener noreferrer">Tony Bai</a></p></div></div>
+                  <h3>GPT-Image 2.0对比Nano Banana全面实测</h3>
+                  <p class="synthesis">共识是 GPT-Image 2 更强首稿与界面表现，但精细修图融合未必稳赢。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116522429253495" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>AtomGit AI 社区作者在多场景实测里指出，GPT-Image 2 用一句仅 14 个字、没有风格和构图限制的提示，也生成了毛发层次清晰、阳光散射自然、背景带焦外模糊的暖调生活化照片，成片明显超出预期。</p><p><strong>改变：</strong>这意味着普通用户或内容团队在低提示词成本下也更容易拿到可用首稿，减少反复补充风格词和摄影参数的时间。</p><p><strong>边界：</strong>该结论主要来自“随手一句话”的出图体验，片段里没有给出复杂指令、批量稳定性或精修可控性的反例。</p><p class="source">来源：<a href="https://tianqi.csdn.net/69ea096f0a2f6a37c5a2f39c.html" target="_blank" rel="noopener noreferrer">AtomGit AI 社区 / yfj-unicorn</a></p></div><div class="opinion"><p><strong>观察：</strong>另一位 AtomGit 开源社区作者实测后认为，在很多模型容易把原图修失真的编辑场景里，Nano Banana 2 会尽量让新增内容融进原图，而不是生硬拼接；同时它在“看起来像真的”照片感上更占优势。</p><p><strong>改变：</strong>这对设计师和修图工作流的直接价值是，做局部修改、补物体或商业修图时，Nano Banana 更可能保住原图质感，降低返工。</p><p><strong>边界：</strong>它的优势更集中在基于原图的融合式编辑，片段没有证明它在纯生成、中文排版或界面设计类任务里同样占优。</p><p class="source">来源：<a href="https://gitcode.csdn.net/69ecb3800a2f6a37c5a60f5d.html" target="_blank" rel="noopener noreferrer">AtomGit 开源社区 / Jie shao</a></p></div></div>
                 </section>
                 </div>
             </section>
