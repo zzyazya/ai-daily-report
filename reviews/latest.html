@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-05-08 18:04</title>
+  <title>独立测评 · 2026-05-09 08:38</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">AI Research（franklineh.com 研究解读） / Architect.pub / Medium 博文《Ditch the Mega-Prompt》</span>
+                    <span class="badge badge-blue">DeepSeek V4 Flash+Pro+OpenCode 外部测评</span>
+                    <span class="source-label">302.AI 基准实验室 / sasasatori（博客园） / zhayujie（博客园）</span>
                   </div>
-                  <h3>程序任务中In-Context Prompting挑战Agent编排</h3>
-                  <p class="synthesis">共识是流程任务可先去编排，但长上下文与生产控制仍是边界。</p>
-                  <a class="article-link" href="https://arxiv.org/abs/2604.27891" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方研究解读指出，LangGraph、CrewAI、Google ADK、OpenAI Agents SDK 这类框架都依赖外部 orchestrator 持续跟踪状态并在每轮注入路由指令，而论文的受控对比认为在程序性任务里，单靠 in-context prompting 就能覆盖这类编排收益。</p><p><strong>改变：</strong>对做流程型代码任务的团队来说，这意味着可以先用单模型长提示替代一层 agent 编排，减少状态管理、路由设计和框架接入成本。</p><p><strong>边界：</strong>这一结论被限定在 procedural tasks，不能直接外推到需要复杂分工、长时状态或强审计控制的多智能体场景。</p><p class="source">来源：<a href="https://franklineh.com/learn/research/zQi5LHLzwSwC0IB0Fqkg" target="_blank" rel="noopener noreferrer">AI Research（franklineh.com 研究解读）</a></p></div><div class="opinion"><p><strong>观察：</strong>开发者框架评测提到，LangGraph 虽然生产级、可定制，但有时比实际需要更复杂，还会带来额外开销。</p><p><strong>改变：</strong>如果论文结论成立，很多原本为了程序任务而上 LangGraph 的团队，可能转向更轻量的提示方案，把精力从编排代码转回任务说明本身。</p><p><strong>边界：</strong>当团队确实需要生产级可观测性、强定制状态机或复杂工作流时，这类框架的复杂度并不一定是“多余”的。</p><p class="source">来源：<a href="https://architect.pub/choosing-right-ai-agent-framework-langgraph-vs-crewai-vs-openai-swarm" target="_blank" rel="noopener noreferrer">Architect.pub</a></p></div></div>
+                  <h3>DeepSeek V4 Flash+Pro+OpenCode实测解析</h3>
+                  <p class="synthesis">共识是 V4 更实用，但真实收益受客户端适配与任务分层影响。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116538485047829" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>302.AI 基准实验室实测认为，DeepSeek-V4-Pro 在逻辑、编程等多维度表现较稳定，Agent 能力已进入国产开源第一梯队，并且 V4-Pro 与 Flash 形成了性能/成本分层。</p><p><strong>改变：</strong>这意味着团队在需要长上下文、编程和 Agent 流程时，可以把 V4 作为更接近生产可用的候选，而不是只停留在演示或单轮问答场景。</p><p><strong>边界：</strong>它更强调“场景适配”而不是单纯参数领先，用户仍需要按任务在 Pro 与 Flash 之间权衡效果和成本。</p><p class="source">来源：<a href="https://302.ai/blog/302-ai-benchmark-lab-review-on-deepseek-v4-pro/" target="_blank" rel="noopener noreferrer">302.AI 基准实验室</a></p></div><div class="opinion"><p><strong>观察：</strong>博客园作者在 OpenCode v1.14.22 中上手 DeepSeek V4 时发现，发布初期客户端 provider 还未完全更新，界面仍只显示 DeepSeek Chat 和 DeepSeek Reasoner，且默认虽已接入 V4-Flash 的非思考/思考模式，但上下文仍限制在 128K。</p><p><strong>改变：</strong>这对开发者的真实影响是：即便模型官方主打 1M 上下文，接入 OpenCode 的早期用户在实际工作流里未必能立刻用满新能力，迁移体验会受客户端适配进度制约。</p><p><strong>边界：</strong>不适合立即依赖百万上下文能力的场景，因为客户端侧限制会先成为瓶颈。</p><p class="source">来源：<a href="https://www.cnblogs.com/sasasatori/p/19925322" target="_blank" rel="noopener noreferrer">sasasatori（博客园）</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">知乎·机器之心 / ofox.ai</span>
+                    <span class="badge badge-blue">Claude Code HTML输出工作流外部观察</span>
+                    <span class="source-label">Towards Data Science</span>
                   </div>
-                  <h3>网易UU远程演示Claude Code与Codex远控编程工作流</h3>
-                  <p class="synthesis">远控CLI可行，但长会话稳定性是硬约束</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116537914563407" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>机器之心在知乎专栏解读中指出，OpenAI 官方 CLI 把过去要在 Playground 或自己写 Python/Node SDK 包装的模型调用，收敛成了可直接在命令行里完成的结构化工作流。</p><p><strong>改变：</strong>这意味着像新闻里演示的那种“手机远控电脑跑 Codex”更接近真实可用场景：用户不必在远端设备上维护一套脚本环境，直接接管终端即可继续编程或调试。</p><p><strong>边界：</strong>这种便利主要成立于本来就习惯终端的开发者流程；如果任务依赖图形界面、复杂本地工程配置或多窗口协作，纯 CLI 远控的收益会下降。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2036131482775839376" target="_blank" rel="noopener noreferrer">知乎·机器之心</a></p></div><div class="opinion"><p><strong>观察：</strong>ofox.ai 的 ClaudeCode 报错指南把“Context window exceeded”和“usage limit reached”列为常见问题，并给出通过 `/compact` 或开启新会话缓解的实际操作。</p><p><strong>改变：</strong>这说明新闻中的远控编程工作流虽然能跑起来，但长时间让 Claude Code 接着写、接着改时，用户需要频繁做上下文清理和会话切换，否则远程接管会被中断。</p><p><strong>边界：</strong>长链路、多文件、上下文持续膨胀的任务更容易触发这类限制，因此并不适合期待“一次挂着一直跑完”的重度连续开发场景。</p><p class="source">来源：<a href="https://ofox.ai/zh/blog/ai-coding-tools-error-guide-2026/" target="_blank" rel="noopener noreferrer">ofox.ai</a></p></div></div>
+                  <h3>Claude Code用HTML输出工作流实践</h3>
+                  <p class="synthesis">共识是HTML更利于人工审阅，但不替代结果校验。</p>
+                  <a class="article-link" href="https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/#atom-everything" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Towards Data Science作者在审查Claude Code分析生产日志后的结果时，实际采用“生成HTML报告并自动在浏览器打开”的做法，认为这比直接看终端文本更容易快速抓住重点并判断哪些内容可跳过。</p><p><strong>改变：</strong>这会把Claude Code的输出从“长文本审阅”变成“可视化快速过稿”，让个人或团队在检查agent结果时更快完成筛选、汇总和人工复核。</p><p><strong>边界：</strong>这类收益主要发生在报告型、审阅型任务中；材料也隐含前提是仍需人工Review，HTML只是提升可读性，不等于结果本身更可靠。</p><p class="source">来源：<a href="https://towardsdatascience.com/how-to-effectively-review-claude-code-output/" target="_blank" rel="noopener noreferrer">Towards Data Science</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Code外部测评/工作流观察</span>
-                    <span class="source-label">AI Free API / 闲散极客</span>
+                    <span class="badge badge-blue">MCP Apps聊天内交互式UI方案详解</span>
+                    <span class="source-label">DEV Community / OpenAI Community 开发者讨论</span>
                   </div>
-                  <h3>Claude Code开发者实战课程与工作流指南</h3>
-                  <p class="synthesis">共识是其价值在于把开发流程模板化、代理化。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116536622713899" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方对比文章认为，Claude Code虽然是命令行形态，但在深度编程思考和复杂任务执行上更灵活，开发者可以直接用自然语言描述问题而不是迁就IDE流程。</p><p><strong>改变：</strong>这会把用户的工作方式从“在IDE里点功能”转成“先描述任务再驱动代理执行”，更适合长链路、跨步骤的开发工作流。</p><p><strong>边界：</strong>这种体验建立在命令行与代理式交互上，和传统IDE助手的使用习惯、适用场景有明显差异。</p><p class="source">来源：<a href="https://www.aifreeapi.com/zh/posts/cursor-vs-claude-code-comparison" target="_blank" rel="noopener noreferrer">AI Free API</a></p></div><div class="opinion"><p><strong>观察：</strong>博主在实测中把自定义 Skill 用于按固定规则生成 PRD，目的是让多轮测试都沿用同一套逻辑。</p><p><strong>改变：</strong>这说明 Claude Code 的 Skills 不只是提示词封装，而是能把文档生成和需求整理固化成可复用工作流，减少多人协作时的输出漂移。</p><p><strong>边界：</strong>要发挥效果需要先自行编写和维护 Skill，前期配置成本更高。</p><p class="source">来源：<a href="https://www.laidbackgeek.com/blog/test-claude-code-late-review" target="_blank" rel="noopener noreferrer">闲散极客</a></p></div></div>
+                  <h3>MCP Apps聊天内交互式UI方案详解</h3>
+                  <p class="synthesis">共识是 UI 可嵌入对话，但桥接稳定性仍是落地门槛。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116533468596047" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>DEV 开发者实测指出，MCP Apps 里前端 UI 不是直连 MCP Server，而是由 ChatGPT 作为宿主先拉取 UI 资源、再代管 UI 与服务器之间的通信。</p><p><strong>改变：</strong>这意味着用户能在 ChatGPT/Claude 对话里直接操作嵌入式界面，团队也必须把产品设计成“宿主中转”的工作流，而不是传统 Web 应用那种前后端直连。</p><p><strong>边界：</strong>代价是交互能力受宿主桥接机制约束，不适合强依赖浏览器原生直连、会话外独立运行或需要完全自定义通信链路的场景。</p><p class="source">来源：<a href="https://dev.to/nyaomaru/running-a-spa-inside-chatgpt-using-mcp-apps-step-by-step-guide-o52" target="_blank" rel="noopener noreferrer">DEV Community</a></p></div><div class="opinion"><p><strong>观察：</strong>OpenAI 社区开发者反馈，按 MCP Apps 标准模式实现的桥接并不稳定，且出现的是“标准用法”下的关键问题，而非边缘案例。</p><p><strong>改变：</strong>这对开发团队的真实影响是，聊天内 UI 虽然能做，但上线前不能把“按标准实现即可跨宿主稳定运行”当成前提，必须预留兼容性验证、降级方案和额外联调成本。</p><p><strong>边界：</strong>边界在于当前方案更适合可容忍宿主差异、可接受临时 workaround 的产品，不适合对稳定性和可移植性要求极高的生产级流程。</p><p class="source">来源：<a href="https://community.openai.com/t/mcp-apps-in-chatgpt-are-fundamentally-broken-2-critical-bugs/1377697" target="_blank" rel="noopener noreferrer">OpenAI Community 开发者讨论</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">同一AI体验差异的外部工作流观察</span>
-                    <span class="source-label">53AI-AI知识库 / 阮一峰的网络日志</span>
+                    <span class="badge badge-blue">外部测评</span>
+                    <span class="source-label">检索结果汇总</span>
                   </div>
-                  <h3>同一AI体验差异工作流观察短评</h3>
-                  <p class="synthesis">同一AI体验差异，更多来自流程编排而非模型本身。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116536337568061" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>53AI 的体验文章提到，不同 Agent/Workflow 编排平台里，基础节点、插件、LLM、条件逻辑都能被模块化并继续嵌套，因此同一模型接入不同流程后，最终表现会明显不同。</p><p><strong>改变：</strong>这意味着团队能通过流程拆分、工具调用和条件控制，把同一 AI 调成更稳定、更贴合业务步骤的“可执行系统”，而不只是单轮对话。</p><p><strong>边界：</strong>文章同时明确指出，工作流提升的是过程可控性，不直接解决模型本身的意图理解和“聪明程度”问题；如果底模能力不足，单靠编排无法补齐。</p><p class="source">来源：<a href="https://www.53ai.com/news/gerentixiao/2173.html" target="_blank" rel="noopener noreferrer">53AI-AI知识库</a></p></div><div class="opinion"><p><strong>观察：</strong>阮一峰在介绍工作流模式时观察到，网上已经出现大量现成工作流模板，甚至可以把同一个模型快速封装成“情感故事爆文专家”这类专用应用。</p><p><strong>改变：</strong>对普通用户和内容团队来说，真实变化不是换了一个更强模型，而是借助模板把同一模型包装成更像“现成工具”的体验，缩短搭建和试错时间。</p><p><strong>边界：</strong>这种提升更适合目标明确、流程固定的任务；一旦任务开放度高或需求频繁变化，模板化工作流的泛化能力就有限。</p><p class="source">来源：<a href="https://www.ruanyifeng.com/blog/2024/10/coze.html" target="_blank" rel="noopener noreferrer">阮一峰的网络日志</a></p></div></div>
+                  <h3>Step Audio 2.5 Realtime官网Demo实测卡死</h3>
+                  <p class="synthesis">null</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116539810387982" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>未找到与“Step Audio 2.5 Realtime官网Demo实测卡死”这一具体现象直接相关的第三方实测、上手记录或问题复现材料。</p><p><strong>改变：</strong>现有片段不足以判断官网Demo卡死是普遍问题、偶发故障，还是仅影响特定网络/设备环境。</p><p><strong>边界：</strong>给出的材料主要是性能宣传、部署教程或功能介绍，不构成对该新闻点的外部测评证据。</p><p class="source">来源：检索结果汇总</p></div></div>
                 </section>
                 </div>
             </section>
@@ -92,13 +92,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">LTX 2.3 / ComfyUI 外部测评</span>
-                    <span class="source-label">500images / LinkedIn Pulse / AI Study Now</span>
+                    <span class="badge badge-pink">外部测评</span>
+                    <span class="source-label">Apiyi.com Blog</span>
                   </div>
-                  <h3>Ltx 2.3与ComfyUi工作流实测视频观察</h3>
-                  <p class="synthesis">共识是：ComfyUI 的价值在于分阶段控制，但代价是流程复杂和调参成本更高。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116537612639863" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>500images 的实测解析提到，LTX 2.3 在 ComfyUI 里采用“三阶段工作流”后，与传统单阶段流程相比，运动更顺滑、画面质量也更稳定。</p><p><strong>改变：</strong>这意味着做一致性和镜头控制的用户，不必只靠单次生成碰运气，而是可以用分阶段流程换取更可控的视频成片质量。</p><p><strong>边界：</strong>代价是流程明显更复杂，节点更多、调参链路更长，不适合只想快速一键出片的场景。</p><p class="source">来源：<a href="https://www.500images.com/blog-comfyui-ltx-23-2026-WKmmopyp" target="_blank" rel="noopener noreferrer">500images</a></p></div><div class="opinion"><p><strong>观察：</strong>LinkedIn 上的第三方工作流分析指出，同样的 LTX-2.3 模型在 ComfyUI 与桌面端会出现可见差异，核心不在模型本身，而在推理管线架构不同。</p><p><strong>改变：</strong>对团队来说，真正影响结果的不只是选哪个模型，还包括是否把工作流拆开、重组和显式控制，这会直接影响复现性与输出稳定度。</p><p><strong>边界：</strong>这也意味着结果更依赖具体工作流设计，不适合期待“同模型=同效果”的用户直接横向照搬参数。</p><p class="source">来源：<a href="https://www.linkedin.com/pulse/comfyui-video-generation-model-workflow-guide-ltx-23-hdope" target="_blank" rel="noopener noreferrer">LinkedIn Pulse</a></p></div></div>
+                  <h3>GPT-Image2对比Nano Banana Pro设计实测</h3>
+                  <p class="synthesis">共识是两者更像分工互补，而非单点碾压。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116538182999314" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Apiyi.com Blog 在对 GPT-Image-2 与 Nano Banana Pro 的 7 维对比中给出的实测结论是：Nano Banana Pro 更适合电商、摄影后期、短剧等偏素材生产场景，而 GPT-Image-2 更适合品牌设计、海报运营、UI 设计等更看重设计表达的场景。</p><p><strong>改变：</strong>这会直接改变团队的模型分工方式：内容生产或后期批量出图可优先走 Nano Banana Pro，品牌与界面设计稿则更适合切到 GPT-Image-2，以减少同一模型包打天下带来的返工。</p><p><strong>边界：</strong>文章同时强调速度会成为 C 端产品、在线编辑器、批量生产场景的体验分水岭，因此即使画面效果更强，若响应速度不占优也不适合高频交互或大批量工作流。</p><p class="source">来源：<a href="https://help.apiyi.com/gpt-image-2-vs-nano-banana-pro-which-ai-image-model-wins.html" target="_blank" rel="noopener noreferrer">Apiyi.com Blog</a></p></div></div>
                 </section>
                 </div>
             </section>
