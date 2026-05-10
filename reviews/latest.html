@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-05-09 17:40</title>
+  <title>独立测评 · 2026-05-10 08:37</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,51 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Code 接入 DeepSeek-V4 外部体验</span>
-                    <span class="source-label">博客园 / JeecgBoot 实战博主 / vibecoderz / Jdon</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验</span>
+                    <span class="source-label">Habr / Дзен</span>
                   </div>
-                  <h3>Claude Code接入DeepSeek-V4上手教程</h3>
-                  <p class="synthesis">共识是保留 Claude Code 工作流的同时，主要收益来自显著降本与多模型分工。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116542427633000" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>JeecgBoot 相关博主把 Claude Code 接入 DeepSeekV4-Pro 后，连续完成了 OA 审批、BI 大屏、钻取报表、自动化部署、文档修改 5 个实战任务，并称“全部通关”。</p><p><strong>改变：</strong>这说明对企业团队来说，接入后不只是能聊天写代码，而是有机会直接沿用 Claude Code 的代理式工作流去覆盖完整业务开发与交付任务。</p><p class="source">来源：<a href="https://www.cnblogs.com/jeecg158/p/19925771" target="_blank" rel="noopener noreferrer">博客园 / JeecgBoot 实战博主</a></p></div><div class="opinion"><p><strong>观察：</strong>vibecoderz 的教程把这套接入方案总结为“显著降低开发成本”，并明确采用“Dual Terminal”分工：Claude 负责设计，DeepSeek 负责重计算和后端任务。</p><p><strong>改变：</strong>对个人开发者或小团队，真实改变不是单纯换模型，而是把不同模型按强项拆工，形成更省钱的多模型协作流。</p><p><strong>边界：</strong>这种收益建立在双终端分工之上，工作流会更复杂，不适合只想维持单模型单界面的用户。</p><p class="source">来源：<a href="https://vibecoderz.ru/notes/claude-code-deepseek-v4-tutorial" target="_blank" rel="noopener noreferrer">vibecoderz</a></p></div></div>
+                  <h3>Qwen3.6-35B在Intel Panther Lake本地实测</h3>
+                  <p class="synthesis">共识是35B-A3B可本地跑，但速度与上下文长度仍是主要约束。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116543971204448" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Habr作者本地实测 `Qwen3.6-35B-A3B-Q4_K_M` 时，生成一个网站大约需要20-30分钟，推理速度约15-20 token/s，且上下文变长后写代码速度会继续下降。</p><p><strong>改变：</strong>这说明35B-A3B并非只能做演示级体验，而是能进入本地编码工作流，但用户需要按“可用的持续产出速度”而不是只看是否能跑起来来安排任务节奏。</p><p><strong>边界：</strong>长上下文代码任务会明显变慢，不适合强依赖超长上下文、要求快速多轮迭代的本地开发场景。</p><p class="source">来源：<a href="https://habr.com/ru/articles/1024932/" target="_blank" rel="noopener noreferrer">Habr</a></p></div><div class="opinion"><p><strong>观察：</strong>Dzen的第三方分析指出，`Qwen3.6-35B-A3B` 虽然总参数为35B，但MoE架构下每个token实际只激活约3B参数，因此可以在相对更克制的本地硬件上运行。</p><p><strong>改变：</strong>这对本地部署用户的实际意义是，35B级模型不再必然等同于高门槛显存需求，团队在选型时可以把它视作“可本地落地的35B能力档”而非纯云端模型。</p><p><strong>边界：</strong>它降低的是运行门槛而不是消除性能代价，真实速度、量化质量和offload配置仍会决定体验，不适合把“能启动”直接等同于“高吞吐生产可用”。</p><p class="source">来源：<a href="https://dzen.ru/a/aeWeuTiGoGguBRGc" target="_blank" rel="noopener noreferrer">Дзен</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Code + HTML 工作流外部观察</span>
-                    <span class="source-label">MindWired AI / Claude Code Guides</span>
+                    <span class="badge badge-blue">Claude Code工作流外部测评</span>
+                    <span class="source-label">Medium / All About Claude / LinkedIn / TokenMaxxing / 腾讯云开发者社区</span>
                   </div>
-                  <h3>用Claude Code工作时HTML异常高效</h3>
-                  <p class="synthesis">共识是：在 HTML 页面与组件搭建上，Claude Code 更像高效生产工具，而非通用前端工程替代品。</p>
-                  <a class="article-link" href="https://twitter.com/trq212/status/2052809885763747935" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实操文章把 Claude Code 做落地页拆成“先描述要做什么、再生成素材、最后把素材直接放进 Claude 产出的 HTML”三步，并明确总结了“真正让这套流程更快”的具体做法，说明它在页面拼装型任务上有明显效率优势。</p><p><strong>改变：</strong>对个人开发者或小团队来说，这会把原本分散在文案、素材、页面搭建之间的流程压缩成一次性协同，尤其适合快速产出营销页、原型页和静态页面首版。</p><p><strong>边界：</strong>这类提效更偏向落地页和静态 HTML 组装，不等于复杂前端工程、状态管理或长期可维护性问题也会同步变简单。</p><p class="source">来源：<a href="https://mindwiredai.com/2026/04/16/claude-code-nano-banana-2-design-workflow/" target="_blank" rel="noopener noreferrer">MindWired AI</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方指南专门讨论用 Claude Code 构建 HTML `dialog` 弹窗，重点放在“可访问、可交互”的组件工作流，说明它不只是快出静态结构，也能在特定 HTML 组件上承担较完整的实现工作。</p><p><strong>改变：</strong>对前端用户而言，这意味着 Claude Code 能直接承担一部分重复性较强的组件脚手架与可访问性细节整理，减少手写基础交互和结构模板的时间。</p><p><strong>边界：</strong>材料显示它更像针对单类组件的高效工作流，不足以证明在大型前端系统、复杂业务逻辑或跨组件架构设计中同样高效。</p><p class="source">来源：<a href="https://claudecodeguides.com/claude-code-for-dialog-element-html-workflow-guide/" target="_blank" rel="noopener noreferrer">Claude Code Guides</a></p></div></div>
+                  <h3>Claude Code工作流实测400倍效率</h3>
+                  <p class="synthesis">外部共识是：高效率主要来自工作流设计与token管理，而非神奇提示词。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116543098716479" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Medium作者在用Claude Code审一个PR时，仅3轮提示上下文就到47%，改成分层工作流后，多数流程的token消耗下降了90%以上。</p><p><strong>改变：</strong>这说明所谓“高效率”更多来自上下文管理和任务分层，用户能把原本很快爆上下文、成本失控的代码审查和开发流程，变成更长会话、更低费用的可持续用法。</p><p><strong>边界：</strong>这类收益依赖事先设计分层流程与上下文隔离，材料没有证明所有复杂任务都能同样幅度节省。</p><p class="source">来源：<a href="https://medium.com/all-about-claude/i-cut-my-claude-code-token-usage-by-90-heres-the-layered-system-that-worked-e3b1fefac009" target="_blank" rel="noopener noreferrer">Medium / All About Claude</a></p></div><div class="opinion"><p><strong>观察：</strong>LinkedIn作者总结“TokenMaxxing”时提到，Sonnet默认已足够覆盖大多数编码任务，而Opus会以约4倍速度消耗套餐额度，因此他长期避免把Opus当默认选择。</p><p><strong>改变：</strong>对真实用户的改变是，工作流优化不只是提速，还包括把“模型路由”纳入日常决策：普通编码优先便宜模型，把高成本模型留给少数高难度步骤，才能把使用时长和预算一起拉长。</p><p><strong>边界：</strong>这种策略更适合额度敏感、追求性价比的个人或团队；如果任务本身极度依赖最强推理，优先省token可能会牺牲一次完成率。</p><p class="source">来源：<a href="https://www.linkedin.com/pulse/tokenmaxxing-mark-liu-nnilc" target="_blank" rel="noopener noreferrer">LinkedIn / TokenMaxxing</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评</span>
-                    <span class="source-label">Medium / Udaykiran Estari / LaoZhang AI</span>
+                    <span class="badge badge-blue">外部测评提炼</span>
+                    <span class="source-label">Norvik Tech</span>
                   </div>
-                  <h3>DeepSeek V4对比GPT-5.5与Claude Opus 4.7</h3>
-                  <p class="synthesis">共识是选型更取决于成本与现有工作流，而非单项跑分。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116542377368834" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Medium 对比文指出，DeepSeek V4 Pro 在 SWE-bench Verified 上报出 80.6%，与 Claude Opus 4.7 的 80.8% 基本持平，但价格约比 GPT-5.5 低 8.6 倍。</p><p><strong>改变：</strong>这意味着以代码修复、工程自动化为主的团队，可能用更低预算拿到接近 Claude 的编程产出，不必默认把高价模型当成唯一选项。</p><p><strong>边界：</strong>文中同时提到 Claude Opus 4.7 的 69.4% 仍比 GPT-5.5 落后约 13 个点，说明如果团队追求某些基准上的绝对领先，低价并不等于全面替代。</p><p class="source">来源：<a href="https://medium.com/@UdaykiranEstari/deepseek-v4-pro-vs-gpt-5-5-vs-claude-4-7-the-ultimate-2026-decision-matrix-8995224510e9" target="_blank" rel="noopener noreferrer">Medium / Udaykiran Estari</a></p></div><div class="opinion"><p><strong>观察：</strong>LaoZhang 的对比分析认为，若工作流本来就建立在 OpenAI 路线之上，尤其是代码与工具调用场景，GPT-5.5 是更适合优先试用的模型。</p><p><strong>改变：</strong>对已经深度接入 OpenAI API、Agent 或工具链的团队，这会直接降低迁移和适配成本，让评估重点从“谁最强”转向“谁接入后最快产生业务结果”。</p><p><strong>边界：</strong>作者也明确说 GPT-5.5 不是通用赢家，因此对非 OpenAI 原生栈或更看重成本效率的团队，不适合只凭生态惯性就定型。</p><p class="source">来源：<a href="https://blog.laozhang.ai/en/posts/deepseek-v4-pro-vs-claude-opus-4-7-vs-gpt-5-5" target="_blank" rel="noopener noreferrer">LaoZhang AI</a></p></div></div>
+                  <h3>实测复现Kimi「Prefill as a Service」双卡推理</h3>
+                  <p class="synthesis">外部分析共识是：价值在资源解耦，代价在链路与系统复杂度。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116543048384987" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方技术分析指出，Prefill-as-a-Service 的核心可行性在于把 prefill 与 decode 拆开，让 KV Cache 可以跨节点甚至跨数据中心传递，而不是强绑定在同一台推理机上。</p><p><strong>改变：</strong>这意味着团队可以把长上下文预填充和逐 token 解码分配到不同硬件上，复现双卡拆分推理时更关注链路与 KV 传输，而不只是堆单机显存。</p><p><strong>边界：</strong>代价是系统复杂度和链路开销会上升，这类方案更适合长上下文、高并发或资源异构场景，不一定适合低延迟、单机即可跑通的小规模部署。</p><p class="source">来源：<a href="https://norvik.tech/dynamic/prefill-as-a-service-kvcache-cross-datacenter" target="_blank" rel="noopener noreferrer">Norvik Tech</a></p></div></div>
                 </section>
-                </div>
-            </section>
-            
-            <section class="role-block">
-              <h2>美术视角测评</h2>
-              <div class="role-cards">
+                
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">LTX2.3 分镜时间线外部观察</span>
-                    <span class="source-label">AI Study Now / Stable Diffusion Tutorials / ltx-23.org 教程文章</span>
+                    <span class="badge badge-blue">安卓Termux跑Ollama+Claude Code外部观察</span>
+                    <span class="source-label">Johndevils / claude-code-termux / dev.to / Running Llama3.2 on Android: A Step-by-Step Guide Using Ollama / Habr / Claude Code with Ollama: No Cloud, No Limits</span>
                   </div>
-                  <h3>LTX2.3整合包V3.0分镜时间线工作流实测</h3>
-                  <p class="synthesis">外部观察一致认为，LTX2.3 的核心增益是把视频生成改成可分段编排的时间线工作流，但代价是节点配置更复杂。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116531824428549" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方教程指出，LTX2.3 配合 PromptRelay 后，可以把一条视频拆成多个按时间线分段控制的 prompt chunk，而不是把所有事件塞进一段长提示词里。</p><p><strong>改变：</strong>这会把“分镜描述”变成可逐段编排的工作流，用户或团队能更明确地安排每一段画面事件出现的时机，降低长视频提示词互相干扰的概率。</p><p><strong>边界：</strong>代价是需要额外安装 ComfyUI-PromptRelay 等自定义节点，并依赖特定工作流节点链路，初学者搭建和排错成本更高。</p><p class="source">来源：<a href="https://aistudynow.com/how-to-control-time-in-ltx-2-3-prompt-relay-vbvr-workflow/" target="_blank" rel="noopener noreferrer">AI Study Now</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇独立文章把 PromptRelay 的核心价值概括为“精确控制事件发生时间”，认为它解决了多事件视频在单段 prompt 下难以稳定排布时序的问题，而且不需要把模型本体做得更重。</p><p><strong>改变：</strong>对实际制作来说，这意味着分镜时间线不再只是后期剪辑概念，而是前置到生成阶段，适合先定义镜头顺序和节奏，再批量生成可衔接片段。</p><p><strong>边界：</strong>这类方法主要改善的是事件时序可控性，不等于自动解决所有画面质量、一致性或复杂镜头调度问题。</p><p class="source">来源：<a href="https://www.stablediffusiontutorials.com/2026/04/ltx2.3-prompt-relay.html" target="_blank" rel="noopener noreferrer">Stable Diffusion Tutorials</a></p></div></div>
+                  <h3>安卓Termux跑Ollama+Claude Code+Blender实测</h3>
+                  <p class="synthesis">共识是可跑通且门槛下降，但更像开发者实验环境，不是大众化生产力方案。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116543165827755" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>开发者在社区仓库中给出可复现方案，明确把Claude Code接到Termux里的Ollama来跑，并特别注明安卓端建议至少4GB内存且需要稳定网络。</p><p><strong>改变：</strong>这意味着用户可以把安卓手机临时变成一套可用的本地AI编码环境，而不是只能在PC或云主机上接Claude Code类工作流。</p><p><strong>边界：</strong>门槛并不低，低内存设备和网络不稳的场景容易卡在安装、模型运行或连接阶段，不适合把它当成即装即用的普通手机应用。</p><p class="source">来源：<a href="https://github.com/Johndevils/claude-code-termux" target="_blank" rel="noopener noreferrer">Johndevils / claude-code-termux</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方上手文章指出，Android上通过Termux运行Ollama已经简化到可直接用`pkg install ollama`安装，作者把这件事定义为“比以前更容易上手”的本地LLM入口。</p><p><strong>改变：</strong>对开发者和折腾型用户来说，手机侧部署本地模型的试验成本明显下降，更适合快速验证移动端离线AI、便携演示和轻量开发流程。</p><p><strong>边界：</strong>它仍被作者定位为面向开发者和爱好者的方案，说明这套流程更适合实验和探索，不适合期待图形化、低维护成本体验的普通用户。</p><p class="source">来源：<a href="https://dev.to/koolkamalkishor/running-llama-32-on-android-a-step-by-step-guide-using-ollama-54ig" target="_blank" rel="noopener noreferrer">dev.to / Running Llama3.2 on Android: A Step-by-Step Guide Using Ollama</a></p></div></div>
                 </section>
                 </div>
             </section>
