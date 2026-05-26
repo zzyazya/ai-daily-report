@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-05-25 18:17</title>
+  <title>独立测评 · 2026-05-26 08:43</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,84 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Kubernetes Agent外部测评</span>
-                    <span class="source-label">Cast AI / InfoQ</span>
+                    <span class="badge badge-blue">Cursor Composer 2.5 外部测评</span>
+                    <span class="source-label">SijiGPT</span>
                   </div>
-                  <h3>Kubernetes Agent测量基底案例研究</h3>
-                  <p class="synthesis">共识是 K8s Agent 能改流程，但安全与治理成本不可忽视。</p>
-                  <a class="article-link" href="https://arxiv.org/abs/2605.23058" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Cast AI 观察到，在 Kubernetes 的 agentic operations 模式里，工程师的工作从手动排障与修复，转为审核智能体已执行的调查过程并批准其建议变更。</p><p><strong>改变：</strong>这意味着团队的运维流程会从“人肉执行”改成“人类把关”，潜在地缩短常见 K8s 故障定位与处置链路。</p><p><strong>边界：</strong>其前提是团队愿意把部分诊断与处置权交给智能体，因此更适合可审计、可审批的运维场景，不适合完全无监督地直接改生产。</p><p class="source">来源：<a href="https://cast.ai/blog/agentic-operations/" target="_blank" rel="noopener noreferrer">Cast AI</a></p></div><div class="opinion"><p><strong>观察：</strong>InfoQ 在总结其 Kubernetes 上自治诊断 agent 的实操经验时指出，这类 agent 的依赖关系、凭证范围和执行路径都是动态的，已经突破了传统微服务或批处理任务的安全假设。</p><p><strong>改变：</strong>对用户团队的真实影响是，若要把 Kubernetes Agent 用进生产，必须额外建设隔离、密钥收敛、分级信任和可观测性，而不是把它当普通工作负载直接上线。</p><p><strong>边界：</strong>代价是基础设施与安全治理复杂度显著上升，因此对安全边界严格或集群治理薄弱的团队，落地门槛更高。</p><p class="source">来源：<a href="https://www.infoq.com/articles/securing-autonomous-ai-agents-kubernetes/" target="_blank" rel="noopener noreferrer">InfoQ</a></p></div></div>
+                  <h3>Cursor Composer2.5代码模型成本评测</h3>
+                  <p class="synthesis">外部信息更偏向“低成本高分”，但真实项目体验证据仍偏少。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116633477580404" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析文章提到，Composer 2.5 在 Terminal-Bench 2.0 上达到 61.7%，并被描述为以更低成本超过 Claude Opus 4.6 的代码基准表现。</p><p><strong>改变：</strong>如果这一对比成立，团队在做代理式编码和终端任务时，可能用更低模型成本拿到接近或超过高价闭源模型的效果，适合先从成本敏感型开发流程试用。</p><p><strong>边界：</strong>这条结论主要来自基准与成本对比，不等于真实项目里的稳定性、代码一致性和长上下文协作都同样占优，落地前仍需做项目级验证。</p><p class="source">来源：<a href="https://sijigpt.com/posts/cursor-used-kimi-k25-a-chinese-ai-model-without-disclosure-why-every-developer-should-care" target="_blank" rel="noopener noreferrer">SijiGPT</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Coze工作流外部测评</span>
+                    <span class="source-label">知乎专栏《Coze AI 智能体工作流配置与实战全指南》 / 百度智能云文章《Coze AI智能体工作流全流程指南：从配置到实战》 / CSDN博客《AI智能体| 扣子Coze...》</span>
+                  </div>
+                  <h3>Coze工作流接入智能体与应用开发解析</h3>
+                  <p class="synthesis">共识是 Coze 工作流真正价值在多步执行与应用落地，而非单纯对话。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116634182224510" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有开发者在客户项目中实操发现，Coze 工作流能把数据收集、趋势分析、可视化报告等离散 AI 能力串成一个可执行闭环，而不只是单点对话。</p><p><strong>改变：</strong>这会把智能体从“能回答”提升为“能交付任务结果”，团队可以直接把多步骤业务流程接入智能体或应用里自动跑完。</p><p><strong>边界：</strong>这类价值主要出现在多步骤、跨节点任务中；如果只是简单问答或单步生成，工作流设计成本未必划算。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1986744061760119994" target="_blank" rel="noopener noreferrer">知乎专栏《Coze AI 智能体工作流配置与实战全指南》</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方教程总结 Coze 工作流的实际优势在于可根据实时数据动态调整流程，并支持多智能体串并行协作，而不是固定脚本式编排。</p><p><strong>改变：</strong>对团队来说，这意味着同一套流程可以同时承担判断、分工和执行，更适合接入需要条件分支、并行处理的智能体应用。</p><p><strong>边界：</strong>边界是流程复杂度会上升，只有在任务确实存在动态决策或多角色协作时，这些能力才明显有收益。</p><p class="source">来源：<a href="https://cloud.baidu.com/article/3591673" target="_blank" rel="noopener noreferrer">百度智能云文章《Coze AI智能体工作流全流程指南：从配置到实战》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
                     <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">CSDN 博主《LangSmith是否可替代？LangfuseVS Langsmith》</span>
+                    <span class="source-label">The New Stack</span>
                   </div>
-                  <h3>Langfuse可观测评测工作流完整搭建教程</h3>
-                  <p class="synthesis">外部观察集中认可其可覆盖评测与观测主链路</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/05/24/build-a-complete-langfuse-observability-and-evaluation-pipeline-for-tracing-prompt-management-scoring-and-experiments/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有开发者对比认为，Langfuse 与 LangSmith 在 LLM 可观测、分析、评估、测试和标注这些核心能力上大体相似，属于可互相替代的一类工具。</p><p><strong>改变：</strong>这意味着团队在搭建评测与观测工作流时，可以把 Langfuse 视为一套覆盖 tracing 到 evaluation 的完整方案，而不必额外拼接多套工具。</p><p class="source">来源：<a href="https://blog.csdn.net/longxiaotian718/article/details/143213202" target="_blank" rel="noopener noreferrer">CSDN 博主《LangSmith是否可替代？LangfuseVS Langsmith》</a></p></div></div>
+                  <h3>ClickHouse实战评测Agentic Coding利弊</h3>
+                  <p class="synthesis">共识是它更擅长吞掉高重复工程杂活。</p>
+                  <a class="article-link" href="https://www.infoq.cn/article/OLEDsNifw48YdleTAZDg?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>《The New Stack》引用 ClickHouse 一线实践称，其 CI 每天要覆盖约 600 次提交和 300 个 PR、运行 2000 万到 8000 万次测试，过去团队长期跟不上排障节奏，而在 2026 年初借助 AI agents 后，相关负责人两个月内提交了约 700 个修复测试与 CI 基础设施的 PR。</p><p><strong>改变：</strong>这说明 Agentic Coding 在 ClickHouse 这类大型工程里的真实价值，不是抽象地“提升写码效率”，而是把团队从积压的测试故障和 CI 维护工作中解放出来，让高频、重复、可拆分的工程修复能被持续推进。</p><p class="source">来源：<a href="https://thenewstack.io/clickhouse-ai-coding-agents/" target="_blank" rel="noopener noreferrer">The New Stack</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">MiniMax Mavis Agent Team测评信号</span>
-                    <span class="source-label">AITNT《一手实测：MiniMax 全新发布 Mavis，是什么？》 / 腾讯新闻/APPSO《MiniMax 推出了 Mavis，活脱脱的 Agent「三省六部」》</span>
+                    <span class="badge badge-blue">Gemini额度外部测评</span>
+                    <span class="source-label">至顶网 / Google AI Developers Forum</span>
                   </div>
-                  <h3>MiniMax Mavis Agent Team测评信号</h3>
-                  <p class="synthesis">共识是长任务更稳更透明，但要付出额外调度与核验成本。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116633209144041" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测称，Mavis把“每轮执行后强制核验、未通过就重跑”写进了流程，虽然增加了步骤，但长程任务的稳定性明显提升，且运行中用户可随时插话追加需求，由Leader再分发给对应Worker。</p><p><strong>改变：</strong>这意味着用户做长链路任务时，不必完全依赖单Agent一次跑通，能在执行过程中随时纠偏和补需求，团队式协作感更强，返工率有机会下降。</p><p><strong>边界：</strong>代价是每轮都要核验，会带来额外计算与流程开销，更适合长任务和复杂任务，不一定适合追求极简、低成本的短流程场景。</p><p class="source">来源：<a href="https://m.aitntnews.com/newDetail.html?newId=25085" target="_blank" rel="noopener noreferrer">AITNT《一手实测：MiniMax 全新发布 Mavis，是什么？》</a></p></div><div class="opinion"><p><strong>观察：</strong>评测媒体在实际任务中观察到，Mavis会把任务拆给5个Worker，并可视化展示Worker与Leader之间的状态流转；当某个Worker 12分钟未返回时，Leader还会主动发bash命令检查其工作状态。</p><p><strong>改变：</strong>对用户来说，这种多Agent分工和状态可视化让长任务不再是黑箱，遇到卡顿时也更容易判断瓶颈是在某个子任务，而不是只能被动等待最终结果。</p><p><strong>边界：</strong>这也说明多Agent并不总是更快，某些子任务仍可能长时间阻塞；更适合需要过程透明和拆解协作的复杂任务，而非只求最快出结果的简单请求。</p><p class="source">来源：<a href="https://news.qq.com/rain/a/20260513A098U200" target="_blank" rel="noopener noreferrer">腾讯新闻/APPSO《MiniMax 推出了 Mavis，活脱脱的 Agent「三省六部」》</a></p></div></div>
+                  <h3>Gemini Flash/Pro/Ultra额度消耗实测解析</h3>
+                  <p class="synthesis">外部实测共识是：新额度更紧，重度工作流最受影响。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116633376986737" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>至顶网援引早期用户数据称，Gemini 3.5 Flash 相比上一代 Flash 明显更耗计算额度，甚至单条提示词就可能吃掉一个 5 小时额度块的数个百分点。</p><p><strong>改变：</strong>这意味着原本依赖 Flash 做高频试错、连续追问或批量小任务的用户，会比过去更快撞到上限，日常使用节奏和任务拆分方式都得跟着调整。</p><p><strong>边界：</strong>这种影响主要出现在高频和重度使用场景；如果还按上一代 Flash 的消耗预期来安排工作流，最容易出现中途被限流。</p><p class="source">来源：<a href="https://ai.zhiding.cn/2026/0522/3187955.shtml" target="_blank" rel="noopener noreferrer">至顶网</a></p></div><div class="opinion"><p><strong>观察：</strong>Google 开发者论坛用户实测反馈，Gemini 3.1 Pro（High）基础配额衰减极快，多代理协作、代码生成、仪表盘迭代等连续重负载场景下，往往 20 到 40 分钟就能耗完，而刷新周期仍是一整周。</p><p><strong>改变：</strong>对把 Pro 当成长时间主力生产模型的开发者团队来说，这会直接打断持续开发链路，迫使他们改用更轻模型、拆散任务批次，或把高强度时段让给别的模型。</p><p><strong>边界：</strong>这一结论集中于多代理、长链路、持续高负载工作流；轻度问答或零散使用未必会遇到同等强度的额度压力。</p><p class="source">来源：<a href="https://discuss.ai.google.dev/t/gemini-3-1-pro-quota-refresh-still-1-week-cycle-baseline-depletes-too-fast/131688" target="_blank" rel="noopener noreferrer">Google AI Developers Forum</a></p></div></div>
+                </section>
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>美术视角测评</h2>
+              <div class="role-cards">
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">external_review</span>
+                    <span class="source-label">N/A</span>
+                  </div>
+                  <h3>SD-Anima-Prompt-Studio开源提示词工具</h3>
+                  <p class="synthesis">现有外部材料不足以支持该工具的有效测评结论</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116636044498576" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>未找到直接针对 SD-Anima-Prompt-Studio 的第三方实测、上手体验或工作流分析；现有材料主要讨论 Stable Diffusion Prompt 编写经验、SDXL 提示词简化或其他无关插件/项目。</p><p><strong>改变：</strong>因此无法据此判断这个开源提示词工具本身是否真的提升提示词生成效率、可控性或团队协作效果。</p><p><strong>边界：</strong>这些材料与目标新闻不是同一工具，若强行引用会把通用 Prompt 经验误当成该项目的实际表现。</p><p class="source">来源：<a href="N/A" target="_blank" rel="noopener noreferrer">N/A</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Code官方skill-creator上手指南</span>
-                    <span class="source-label">Zenn / yamato_snow</span>
+                    <span class="badge badge-pink">外部测评 / 上手体验 / 真实影响</span>
+                    <span class="source-label">CSDN 博客 / 知乎问答 / V2EX</span>
                   </div>
-                  <h3>Claude Code官方skill-creator上手指南</h3>
-                  <p class="synthesis">外部体验强调：先做一个可评估的专用Skill，价值高于堆数量。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116634299664365" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>日本开发者在连续运营21个 Claude Code Skill 的实践中，明确建议先用 `/skill-creator` 做出 1 个贴合自己工作的 Skill，再进入 Eval 模式评估，说明这个工具的核心价值不在“装很多技能”，而在快速做出可验证的定制化原型。</p><p><strong>改变：</strong>对个人开发者或小团队而言，这会把 Claude Code 的使用方式从“每次重写提示词”改成“沉淀为可复用工作流”，只要先做出一个高频场景 Skill，就能明显改变日常协作方式。</p><p><strong>边界：</strong>这类收益建立在“工作足够稳定、能进入评估迭代”之上；如果场景临时、多变，或者团队不会做 Eval 验证，Skill 很容易停留在一次性脚本层面。</p><p class="source">来源：<a href="https://zenn.dev/yamato_snow/articles/3cd6ed9ac340a2" target="_blank" rel="noopener noreferrer">Zenn / yamato_snow</a></p></div></div>
+                  <h3>SD WebUI与ComfyUI外的免费AIGC工具</h3>
+                  <p class="synthesis">共识是：易用、速度、复杂流程维护三者难兼得。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116633175594789" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析指出，SD WebUI 的优势是界面直观、一键生成更省事，而 ComfyUI 采用节点式工作流，可做更细的参数控制与流程复现。</p><p><strong>改变：</strong>这意味着新手或临时出图更容易先上手 WebUI，而需要稳定复现、沉淀复杂流程的个人创作者或团队更可能转向 ComfyUI。</p><p><strong>边界：</strong>ComfyUI 的代价是学习和配置成本更高，不适合只想快速出图、没有时间维护工作流的人。</p><p class="source">来源：<a href="https://blog.csdn.net/hero272285642/article/details/144480434" target="_blank" rel="noopener noreferrer">CSDN 博客</a></p></div><div class="opinion"><p><strong>观察：</strong>有用户对比到在生成 1000×1500 图像时，ComfyUI 约 7.8 秒、WebUI 约 9.8 秒，前者快约 20%。</p><p><strong>改变：</strong>对高频迭代、批量试提示词或多轮返工的用户来说，ComfyUI 能直接缩短单次等待时间，累计下来提升试错效率。</p><p><strong>边界：</strong>这类速度优势并不等于更易用；WebUI 的固定流程对新手更友好，而 ComfyUI 仍要付出更多工作流搭建成本。</p><p class="source">来源：<a href="https://www.zhihu.com/question/12484423796" target="_blank" rel="noopener noreferrer">知乎问答</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">外部测评 / 上手体验</span>
+                    <span class="source-label">知乎《comfyUI + animateDiff video2video AI视频生成工作流介绍及实例》</span>
+                  </div>
+                  <h3>14个影视游戏概念原画AI视频风格实测教程</h3>
+                  <p class="synthesis">外部体验普遍指向：风格测试能做，但受工作流门槛、显存和时长限制明显。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116637453786008" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者在实际工作流更新中把 AnimateDiff 模型切到 v3，并同步替换了对应工作流与生成视频，说明同一套 ComfyUI/Stable Diffusion 视频流程会随模型版本迭代而明显变化。</p><p><strong>改变：</strong>对想复现“概念原画转AI视频”教程的用户来说，重点不只是套提示词，而是要跟着模型版本与节点工作流一起更新，否则很难复现示例效果。</p><p><strong>边界：</strong>这类方案对普通用户的门槛主要在本地部署、节点配置和模型兼容性，适合愿意折腾工作流的人，不适合只想一键出片的场景。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/670122789" target="_blank" rel="noopener noreferrer">知乎《comfyUI + animateDiff video2video AI视频生成工作流介绍及实例》</a></p></div></div>
                 </section>
                 </div>
             </section>
