@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-05-31 08:36</title>
+  <title>独立测评 · 2026-05-31 17:34</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,35 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Opus 4.8 外部测评</span>
-                    <span class="source-label">Claude API 中文博客 / AIMadeTools</span>
+                    <span class="badge badge-blue">MAF、CrewAI、DeepAgents、LangGraph框架对比</span>
+                    <span class="source-label">比邻（DeepAgents架构解析） / Zilliz 向量数据库 / Geoz（DeepAgents深度解析）</span>
                   </div>
-                  <h3>Claude Opus 4.8编码与多Agent成本实测</h3>
-                  <p class="synthesis">共识是编码更稳更可控，但多Agent和提速模式会明显抬高总成本。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116661948519838" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方上手认为 Opus 4.8 在编码任务里明显更“按指令办事”，错误率和幻觉率都下降，专业开发场景的稳定性比以往更好。</p><p><strong>改变：</strong>对工程团队来说，这会减少反复纠偏和返工，更适合把它放进要求明确的编码、修复和审查流程里。</p><p><strong>边界：</strong>对依赖模糊提示词的“vibe coding”用户反而不一定更顺手，因为它更少主动脑补和顺手扩展需求。</p><p class="source">来源：<a href="https://claudeapi.com/zh/blog/news/claude-opus-4-8-hands-on-review/" target="_blank" rel="noopener noreferrer">Claude API 中文博客</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方基准汇总称，Opus 4.8 在 SWE-bench Pro 上达到 69.2%，并支持包含数百并行子代理的动态工作流。</p><p><strong>改变：</strong>这说明它不仅在单次编码求解上更强，也更适合被放进多 Agent 编排里处理大型拆解任务和并行开发流程。</p><p><strong>边界：</strong>多子代理并行会把 token 消耗快速放大，能力提升更像是“用更多推理与编排换结果”，不适合预算紧的团队。</p><p class="source">来源：<a href="https://www.aimadetools.com/blog/claude-opus-4-8-complete-guide/" target="_blank" rel="noopener noreferrer">AIMadeTools</a></p></div></div>
+                  <h3>MAF、CrewAi、DeepAgents、LangGraph框架对比</h3>
+                  <p class="synthesis">外部观察普遍认为DeepAgents更省搭建成本，但更偏复杂长流程自动化。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116668357417798" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方开发者分析认为，DeepAgents本质上是构建在LangGraph之上的上层封装，把规划工具、文件系统后端和子代理管理预先打包，强调“开箱即用”。</p><p><strong>改变：</strong>这会直接减少团队从零搭多Agent工作流的胶水代码和编排成本，更适合想先快速跑通复杂自动化任务的用户。</p><p><strong>边界：</strong>它更聚焦于DeepAgent这类预设模式；如果团队需要自己精细控制底层状态流转和运行时，材料暗示LangGraph这类更底层框架仍更合适。</p><p class="source">来源：<a href="https://eastondev.com/blog/zh/posts/ai/deepagents-architecture/" target="_blank" rel="noopener noreferrer">比邻（DeepAgents架构解析）</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方评测文章提到，DeepAgents内置了`ls`、`read_file`、`write_file`、`edit_file`、`glob`、`grep`等文件系统访问工具，并结合记忆/检查点能力面向长任务场景。</p><p><strong>改变：</strong>这意味着用户在代码库操作、文档整理、跨文件自动化这类工作流里，不必先自己拼接文件工具链，代理可以更直接地执行“读-改-查”闭环。</p><p><strong>边界：</strong>这类优势主要体现在需要真实文件读写和长链路执行的任务；材料没有显示它在纯对话或轻量单步任务里有同等明显收益。</p><p class="source">来源：<a href="https://zilliz.com.cn/blog/LangChain-deepagents-review-for-long-tasks" target="_blank" rel="noopener noreferrer">Zilliz 向量数据库</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Gemma 4 本地替代 Claude Code 外部体验</span>
-                    <span class="source-label">KodeLab / 腾讯云开发者社区</span>
+                    <span class="badge badge-blue">SkillNet 外部测评</span>
+                    <span class="source-label">知乎｜【Agent Skills洞察与实践】07- Agent Skill分析，如何实现技能的召回和评估</span>
                   </div>
-                  <h3>RTX3080本地部署Gemma4实测Claude Code兼容性</h3>
-                  <p class="synthesis">共识是能接入，但离稳定替代官方体验还有明显落差。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116664414768124" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>KodeLab 的实战记录确认：先按官方方式装好 Claude Code 后，可直接用 `ollama launch claude --model gemma4` 把 Claude Code 的底层模型切到本地 Gemma 4，说明这条兼容链路在个人 GPU 环境里是能跑通的。</p><p><strong>改变：</strong>对个人开发者或小团队来说，这意味着可以把 Claude Code 的一部分代码助手工作流迁到本地执行，减少对云端模型和持续订阅的依赖。</p><p><strong>边界：</strong>作者同时把内容定位为“使用心得与踩坑笔记”，且前提是先完成官方 Claude Code 安装，因此它更像是给愿意折腾本地推理栈的用户准备，不适合追求开箱即用的人。</p><p class="source">来源：<a href="https://klab.tw/2026/04/claude-code-ollama-gemma4-local/" target="_blank" rel="noopener noreferrer">KodeLab</a></p></div><div class="opinion"><p><strong>观察：</strong>腾讯云开发者社区转载的实测文章直接给出结论：在 M4 Max 上用本地 Gemma 4 替代 Claude Code“行不通”，并伴随完整踩坑与性能分析，说明“能接上”不等于“能顺畅替代”。</p><p><strong>改变：</strong>这会直接影响选型预期：用户不能把“本地接入 Claude Code”理解成对官方云端体验的等价替换，尤其在代码代理类工作流里要预留更多调试和性能验证时间。</p><p><strong>边界：</strong>该结论来自 M4 Max 本地替代场景，反映的是特定硬件与工作流下的可用性边界；如果目标是稳定生产使用，而不是实验性接入，这类方案风险更高。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2651403" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div></div>
+                  <h3>SkillNet 教程展示技能增强型 AI Agents 框架</h3>
+                  <p class="synthesis">外部观察聚焦：SkillNet更像可量化评测工作流。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/05/30/build-skill-augmented-ai-agents-with-skillnet-for-search-evaluation-graph-analysis-and-task-planning/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析指出，SkillNet 与常见技能方案的差异在于它把技能评估做成了可量化框架，至少按安全性、完备性等五个维度给技能打分，而不只是看技能能否跑通。</p><p><strong>改变：</strong>这会把团队的技能开发从“写完即用”改成“召回-评测-迭代”的流程，用户在选技能或上线前能更早发现危险操作、流程缺失这类实际问题。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2014393687812110022" target="_blank" rel="noopener noreferrer">知乎｜【Agent Skills洞察与实践】07- Agent Skill分析，如何实现技能的召回和评估</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Code vs Codex vs Cursor 外部测评</span>
-                    <span class="source-label">Built In / The New Stack / Builder.io</span>
+                    <span class="badge badge-blue">Claude Opus 4.8外部测评与工作流影响</span>
+                    <span class="source-label">虎嗅 / 网易科技</span>
                   </div>
-                  <h3>Claude Code vs Codex vs Cursor三款编程AI工具横评</h3>
-                  <p class="synthesis">共识是三者更像分工互补，不是单一替代关系。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116659046057576" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Built In 的横评认为，Claude Code 更擅长复杂、多文件规划和重度终端流程，Codex 更适合“交给它就跑”的大型沙箱式重构。</p><p><strong>改变：</strong>这意味着个人开发者或小团队可按任务形态分工：复杂改造先用 Claude Code 做规划，批量重构交给 Codex 降低盯执行过程的时间成本。</p><p><strong>边界：</strong>这类分工更适合代码库改造和终端驱动任务，不等于它们在编辑器内即时协作体验上都同样占优。</p><p class="source">来源：<a href="https://builtin.com/articles/claude-code-codex-cursor-github-copilot-comparison" target="_blank" rel="noopener noreferrer">Built In</a></p></div><div class="opinion"><p><strong>观察：</strong>The New Stack 观察到，把 Claude Code 用于生成、Codex 用于复审时，由于两者不共享同一套内部假设，往往能抓到单模型流程遗漏的错误，尤其是认证、数据丢失、回滚和竞态问题。</p><p><strong>改变：</strong>对团队来说，跨模型串联不只是“多一个意见”，而是把代码生成和风险审查拆开，提升上线前发现高风险缺陷的概率。</p><p><strong>边界：</strong>代价是流程更长、工具更多，价值主要体现在需要严肃审查的代码路径，而不是所有小改动都值得这样做。</p><p class="source">来源：<a href="https://thenewstack.io/ai-coding-tool-stack/" target="_blank" rel="noopener noreferrer">The New Stack</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Opus-4.8外部测评</span>
-                    <span class="source-label">Artificial Analysis / Codersera</span>
-                  </div>
-                  <h3>Opus-4.8免费AI编程工具实测评测</h3>
-                  <p class="synthesis">外部观点共识是 4.8 更强，但编程收益依赖具体入口、任务类型和成本容忍度。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116663257144209" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Artificial Analysis 的基准分析称，Opus 4.8 在其综合指数中得分 61.4，比 Opus 4.7 高 4.1 分，也比 GPT-5.5（xhigh）高 1.2 分，并且在 agentic tasks 上略微更省 token。</p><p><strong>改变：</strong>对把模型当作 AI 编程代理来用的开发者和团队，这意味着在多步改代码、跑任务、回收结果的流程里，4.8 更可能带来更稳的完成率，而且部分任务的成本效率也更好。</p><p><strong>边界：</strong>这篇分析同时指出 token 效率会随任务类型波动，因此它不是在所有编程场景里都稳定更省。</p><p class="source">来源：<a href="https://artificialanalysis.ai/articles/claude-opus-4-8-analysis-and-benchmarks" target="_blank" rel="noopener noreferrer">Artificial Analysis</a></p></div><div class="opinion"><p><strong>观察：</strong>Codersera 的上手指南提到，Opus 4.8 在 claude.ai 和 Cowork 默认是 High 推理档位，更高档位会换来更深推理，但代价是更高成本和更长延迟，而 xHigh、Max 仅在 Claude Code 可用。</p><p><strong>改变：</strong>这会直接改变用户的使用方式：同一个模型在日常写代码、深度排错和长链路任务里的体验，不只是模型能力问题，还取决于你是否在 Claude Code 里以及是否愿意承担更慢更贵的推理档位。</p><p><strong>边界：</strong>不适合对响应速度和预算敏感的场景，因为更高推理档位的收益是用延迟和成本换来的，而且部分档位并不在所有入口开放。</p><p class="source">来源：<a href="https://codersera.com/blog/claude-opus-4-8-launch-guide-2026/" target="_blank" rel="noopener noreferrer">Codersera</a></p></div></div>
+                  <h3>Claude Opus 4.8测评与工作流价值观察</h3>
+                  <p class="synthesis">4.8更偏可控执行，但复杂场景仍需人盯。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116667300448789" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>虎嗅援引上手者体验称，Opus 4.8执行指令更收敛，用户让它做A就只做A，不再像4.6/4.7那样常常主动补做B，甚至在排障时两次都没有主动去看线上数据，只基于本地代码给方案。</p><p><strong>改变：</strong>这会让团队在用它做开发/排障时得到更可控、少擅作主张的执行结果，但也要求提示词、文档和记忆配置写得更明确，不能再默认它会主动补全关键上下文。</p><p><strong>边界：</strong>不适合依赖模型自主探索环境、主动连生产数据或顺手补全隐含任务的工作流，否则反而会增加返工和提示调整成本。</p><p class="source">来源：<a href="https://m.huxiu.com/article/4862537.html" target="_blank" rel="noopener noreferrer">虎嗅</a></p></div><div class="opinion"><p><strong>观察：</strong>网易科技的初步上手提到，Opus 4.8的升级幅度不算大，问题仍集中在“最后10%”：现有代码库边界情况、数据密集型任务和复杂路线图判断里仍会暴露短板，不能在所有场景无脑替代4.7。</p><p><strong>改变：</strong>这意味着它更像是提高常规开发与知识工作效率的增量工具，而不是让团队直接放手替代旧模型或跳过人工复核的通用升级。</p><p><strong>边界：</strong>在复杂遗留工程、重数据处理和高层产品/技术路线判断场景中，人工校验与模型切换仍然必要。</p><p class="source">来源：<a href="https://www.163.com/tech/article/KU47J8MQ00097U7T.html" target="_blank" rel="noopener noreferrer">网易科技</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -92,13 +81,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">外部测评</span>
-                    <span class="source-label">php中文网教程</span>
+                    <span class="badge badge-pink">GPT Image 2外部测评与工作流影响</span>
+                    <span class="source-label">知乎｜做了十年设计，这次真觉得自己多余了｜GPT-Image-2 上手实测 / PixVerse AI｜GPT Image 2 评测：2026 提示词指南与实际用例 / 木瓜AI｜GPT Image 2 上手指南：提示词、工作流、避坑清单</span>
                   </div>
-                  <h3>即梦AI免费版AI漫剧生成教程分享</h3>
-                  <p class="synthesis">即梦可用于漫剧制作，但成片质量依赖手动调参与后处理。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116663693345847" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方教程指出，即梦AI出图发糊时，开启HD超清修复、使用1024×1024分辨率，并把采样步数调到40-50、降噪强度控制在0.5-0.7，能明显改善画面清晰度。</p><p><strong>改变：</strong>这意味着用即梦AI免费版做AI漫剧时，用户不能只靠默认参数一键出片，而是需要在清晰度修复、分辨率和后处理上做额外调参，才能得到更适合连贯分镜使用的素材。</p><p><strong>边界：</strong>代价是生成和处理步骤变多，且还可能要配合画布2倍导出或Remini类工具二次修复，不适合追求极速批量出图的场景。</p><p class="source">来源：<a href="https://m.php.cn/faq/2129021.html" target="_blank" rel="noopener noreferrer">php中文网教程</a></p></div></div>
+                  <h3>GPT Image 2开源绘图工具入门工作流</h3>
+                  <p class="synthesis">共识是：价值在可控出图，但需更规范的提示词与流程。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116667250118566" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎测评作者实测后认为，GPT-Image-2 的一个突出特点是不用写很复杂的提示词，也能较快生成可用结果。</p><p><strong>改变：</strong>这会直接降低小白入门门槛，让非设计或非提示词熟练用户也能更快进入出图流程。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2030101776137966120" target="_blank" rel="noopener noreferrer">知乎｜做了十年设计，这次真觉得自己多余了｜GPT-Image-2 上手实测</a></p></div><div class="opinion"><p><strong>观察：</strong>PixVerse 的评测指出，它在“需要被阅读、修改并正式投入生产”的图像任务里最有价值，且最佳效果来自明确任务、锁定文字内容、描述构图并写清不可变项的提示词。</p><p><strong>改变：</strong>这意味着用户若要把它用于海报、物料、可编辑视觉稿，就不能只靠灵感式一句话提示，而要转向更结构化的工作流。</p><p><strong>边界：</strong>对文字、版式要求高的场景，松散提示词会明显拉低稳定性和可复用性。</p><p class="source">来源：<a href="https://pixverse.ai/en/blog/gpt-image-2-review-and-prompt-guide" target="_blank" rel="noopener noreferrer">PixVerse AI｜GPT Image 2 评测：2026 提示词指南与实际用例</a></p></div></div>
                 </section>
                 </div>
             </section>
