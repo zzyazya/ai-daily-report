@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-05-30 17:34</title>
+  <title>独立测评 · 2026-05-31 08:36</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,35 +43,62 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Opus 4.8 并行 SubAgents 外部观察</span>
-                    <span class="source-label">All Things How / Groundy</span>
+                    <span class="badge badge-blue">Claude Opus 4.8 外部测评</span>
+                    <span class="source-label">Claude API 中文博客 / AIMadeTools</span>
                   </div>
-                  <h3>Claude Opus 4.8并行SubAgents工作流实测</h3>
-                  <p class="synthesis">共识是并行编排显著提效，但成本和任务适配性限制很强。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116661008996470" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方拆解指出，Claude Opus 4.8 在 Claude Code 里的核心变化不是简单多轮对话，而是会先把自然语言需求改写成一个 JavaScript 编排脚本，再交给独立运行时去调度后续任务。</p><p><strong>改变：</strong>这意味着用户从“逐步盯着 AI 干活”转向“先描述目标、再让系统自动拆分和串并行执行”，更适合一次性交付 Harness、脚手架或多模块开发流。</p><p><strong>边界：</strong>这类工作流依赖额外编排层，适合可拆解任务；对临时小改、一步一验的简单编码场景，额外 orchestration 开销未必划算。</p><p class="source">来源：<a href="https://allthings.how/claude-opus-4-8-dynamic-workflows-in-claude-code-explained/" target="_blank" rel="noopener noreferrer">All Things How</a></p></div><div class="opinion"><p><strong>观察：</strong>开发者向文章展示的实测方向是，Dynamic Workflows 能在单个 Claude Code 会话里拉起大规模并行 subagents，甚至以“100 个并行子代理”为卖点来处理拆分任务。</p><p><strong>改变：</strong>对团队和重度用户来说，真实改变是大任务可以按文件、模块、检查项并发推进，减少串行等待，特别适合多文件生成、批量重构、并行检查这类工作。</p><p><strong>边界：</strong>并行度高不等于所有任务都更好，强依赖共享上下文、需要频繁同步决策的工作，可能会被拆分成本和合并成本抵消收益。</p><p class="source">来源：<a href="https://groundy.com/articles/claude-code-dynamic-workflows-spawning-100-parallel-subagents-on-opus/" target="_blank" rel="noopener noreferrer">Groundy</a></p></div></div>
+                  <h3>Claude Opus 4.8编码与多Agent成本实测</h3>
+                  <p class="synthesis">共识是编码更稳更可控，但多Agent和提速模式会明显抬高总成本。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116661948519838" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方上手认为 Opus 4.8 在编码任务里明显更“按指令办事”，错误率和幻觉率都下降，专业开发场景的稳定性比以往更好。</p><p><strong>改变：</strong>对工程团队来说，这会减少反复纠偏和返工，更适合把它放进要求明确的编码、修复和审查流程里。</p><p><strong>边界：</strong>对依赖模糊提示词的“vibe coding”用户反而不一定更顺手，因为它更少主动脑补和顺手扩展需求。</p><p class="source">来源：<a href="https://claudeapi.com/zh/blog/news/claude-opus-4-8-hands-on-review/" target="_blank" rel="noopener noreferrer">Claude API 中文博客</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方基准汇总称，Opus 4.8 在 SWE-bench Pro 上达到 69.2%，并支持包含数百并行子代理的动态工作流。</p><p><strong>改变：</strong>这说明它不仅在单次编码求解上更强，也更适合被放进多 Agent 编排里处理大型拆解任务和并行开发流程。</p><p><strong>边界：</strong>多子代理并行会把 token 消耗快速放大，能力提升更像是“用更多推理与编排换结果”，不适合预算紧的团队。</p><p class="source">来源：<a href="https://www.aimadetools.com/blog/claude-opus-4-8-complete-guide/" target="_blank" rel="noopener noreferrer">AIMadeTools</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">OpenClaw Builtin Memory Engine外部观察</span>
-                    <span class="source-label">OpenClawPlaybook</span>
+                    <span class="badge badge-blue">Gemma 4 本地替代 Claude Code 外部体验</span>
+                    <span class="source-label">KodeLab / 腾讯云开发者社区</span>
                   </div>
-                  <h3>OpenClaw Builtin Memory Engine持久记忆解析</h3>
-                  <p class="synthesis">共识偏向先用内建引擎，但要接受检索状态排障成本。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116661411644093" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>OpenClawPlaybook在对 Builtin Memory Engine 的工作流拆解中明确建议“默认先用 builtin engine”，并特别提醒当向量检索看起来缺失时要先用 `memorystatus` 排查是否被意外禁用。</p><p><strong>改变：</strong>这意味着用户和团队在部署持久记忆时可以先以默认内建引擎为基线，减少一开始就切换到 QMD 或 Honcho 的集成成本，同时把 `memorystatus` 纳入排障流程。</p><p><strong>边界：</strong>如果团队一开始就明确需要 QMD 或 Honcho 的特定能力，或依赖稳定的向量检索链路，builtin engine 不是无条件最优，且存在“功能已开但检索未生效”的排查成本。</p><p class="source">来源：<a href="https://www.openclawplaybook.ai/guides/openclaw-builtin-memory-engine-explained/" target="_blank" rel="noopener noreferrer">OpenClawPlaybook</a></p></div></div>
+                  <h3>RTX3080本地部署Gemma4实测Claude Code兼容性</h3>
+                  <p class="synthesis">共识是能接入，但离稳定替代官方体验还有明显落差。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116664414768124" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>KodeLab 的实战记录确认：先按官方方式装好 Claude Code 后，可直接用 `ollama launch claude --model gemma4` 把 Claude Code 的底层模型切到本地 Gemma 4，说明这条兼容链路在个人 GPU 环境里是能跑通的。</p><p><strong>改变：</strong>对个人开发者或小团队来说，这意味着可以把 Claude Code 的一部分代码助手工作流迁到本地执行，减少对云端模型和持续订阅的依赖。</p><p><strong>边界：</strong>作者同时把内容定位为“使用心得与踩坑笔记”，且前提是先完成官方 Claude Code 安装，因此它更像是给愿意折腾本地推理栈的用户准备，不适合追求开箱即用的人。</p><p class="source">来源：<a href="https://klab.tw/2026/04/claude-code-ollama-gemma4-local/" target="_blank" rel="noopener noreferrer">KodeLab</a></p></div><div class="opinion"><p><strong>观察：</strong>腾讯云开发者社区转载的实测文章直接给出结论：在 M4 Max 上用本地 Gemma 4 替代 Claude Code“行不通”，并伴随完整踩坑与性能分析，说明“能接上”不等于“能顺畅替代”。</p><p><strong>改变：</strong>这会直接影响选型预期：用户不能把“本地接入 Claude Code”理解成对官方云端体验的等价替换，尤其在代码代理类工作流里要预留更多调试和性能验证时间。</p><p><strong>边界：</strong>该结论来自 M4 Max 本地替代场景，反映的是特定硬件与工作流下的可用性边界；如果目标是稳定生产使用，而不是实验性接入，这类方案风险更高。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2651403" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">LaoZhang AI Blog / Build Fast With AI</span>
+                    <span class="badge badge-blue">Claude Code vs Codex vs Cursor 外部测评</span>
+                    <span class="source-label">Built In / The New Stack / Builder.io</span>
                   </div>
-                  <h3>GPT 5.5Pro与Gemini 3.1pro聚合平台实测</h3>
-                  <p class="synthesis">共识是聚合平台的价值在按任务分流，而非默认某一模型全面胜出。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116661109725053" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>LaoZhang AI Blog 的对比文认为，Gemini 3.1 Pro 在抽象推理基准上更强，且标准层价格更低；相对地，GPT-5.4 Pro 在桌面计算机操控任务上表现突出。</p><p><strong>改变：</strong>这意味着在聚合平台里，用户若做高强度推理且在意成本，更适合优先试 Gemini 3.1 Pro；若要做桌面代理、自动化操作类工作流，则更应优先试 GPT 系模型。</p><p><strong>边界：</strong>这条结论主要来自基准与价格对比，而且文章比较对象是 GPT-5.4 而非新闻中的 GPT-5.5 Pro，不能直接等同为 5.5 实测结果。</p><p class="source">来源：<a href="https://blog.laozhang.ai/zh/posts/gpt-5-4-vs-gemini-3-1" target="_blank" rel="noopener noreferrer">LaoZhang AI Blog</a></p></div><div class="opinion"><p><strong>观察：</strong>Build Fast With AI 的第三方比较提到，在 2026 年 Q1 的盲测人类偏好中，Claude Sonnet 4.6 生成内容被偏好的比例高于 GPT-5.5 系列和 Gemini 3.1 Pro。</p><p><strong>改变：</strong>对使用聚合平台写作、营销文案或通用内容生成的用户来说，这说明即便平台免费提供 GPT-5.5 Pro 和 Gemini 3.1 Pro，也未必能直接替代多模型并排试跑与人工筛选。</p><p><strong>边界：</strong>这条观察只说明通用内容偏好，不足以外推到代码、Agent、工具调用或复杂推理场景。</p><p class="source">来源：<a href="https://www.buildfastwithai.com/blogs/claude-sonnet-4-6-vs-gpt-5-5-vs-gemini-3-1-pro" target="_blank" rel="noopener noreferrer">Build Fast With AI</a></p></div></div>
+                  <h3>Claude Code vs Codex vs Cursor三款编程AI工具横评</h3>
+                  <p class="synthesis">共识是三者更像分工互补，不是单一替代关系。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116659046057576" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Built In 的横评认为，Claude Code 更擅长复杂、多文件规划和重度终端流程，Codex 更适合“交给它就跑”的大型沙箱式重构。</p><p><strong>改变：</strong>这意味着个人开发者或小团队可按任务形态分工：复杂改造先用 Claude Code 做规划，批量重构交给 Codex 降低盯执行过程的时间成本。</p><p><strong>边界：</strong>这类分工更适合代码库改造和终端驱动任务，不等于它们在编辑器内即时协作体验上都同样占优。</p><p class="source">来源：<a href="https://builtin.com/articles/claude-code-codex-cursor-github-copilot-comparison" target="_blank" rel="noopener noreferrer">Built In</a></p></div><div class="opinion"><p><strong>观察：</strong>The New Stack 观察到，把 Claude Code 用于生成、Codex 用于复审时，由于两者不共享同一套内部假设，往往能抓到单模型流程遗漏的错误，尤其是认证、数据丢失、回滚和竞态问题。</p><p><strong>改变：</strong>对团队来说，跨模型串联不只是“多一个意见”，而是把代码生成和风险审查拆开，提升上线前发现高风险缺陷的概率。</p><p><strong>边界：</strong>代价是流程更长、工具更多，价值主要体现在需要严肃审查的代码路径，而不是所有小改动都值得这样做。</p><p class="source">来源：<a href="https://thenewstack.io/ai-coding-tool-stack/" target="_blank" rel="noopener noreferrer">The New Stack</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Opus-4.8外部测评</span>
+                    <span class="source-label">Artificial Analysis / Codersera</span>
+                  </div>
+                  <h3>Opus-4.8免费AI编程工具实测评测</h3>
+                  <p class="synthesis">外部观点共识是 4.8 更强，但编程收益依赖具体入口、任务类型和成本容忍度。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116663257144209" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Artificial Analysis 的基准分析称，Opus 4.8 在其综合指数中得分 61.4，比 Opus 4.7 高 4.1 分，也比 GPT-5.5（xhigh）高 1.2 分，并且在 agentic tasks 上略微更省 token。</p><p><strong>改变：</strong>对把模型当作 AI 编程代理来用的开发者和团队，这意味着在多步改代码、跑任务、回收结果的流程里，4.8 更可能带来更稳的完成率，而且部分任务的成本效率也更好。</p><p><strong>边界：</strong>这篇分析同时指出 token 效率会随任务类型波动，因此它不是在所有编程场景里都稳定更省。</p><p class="source">来源：<a href="https://artificialanalysis.ai/articles/claude-opus-4-8-analysis-and-benchmarks" target="_blank" rel="noopener noreferrer">Artificial Analysis</a></p></div><div class="opinion"><p><strong>观察：</strong>Codersera 的上手指南提到，Opus 4.8 在 claude.ai 和 Cowork 默认是 High 推理档位，更高档位会换来更深推理，但代价是更高成本和更长延迟，而 xHigh、Max 仅在 Claude Code 可用。</p><p><strong>改变：</strong>这会直接改变用户的使用方式：同一个模型在日常写代码、深度排错和长链路任务里的体验，不只是模型能力问题，还取决于你是否在 Claude Code 里以及是否愿意承担更慢更贵的推理档位。</p><p><strong>边界：</strong>不适合对响应速度和预算敏感的场景，因为更高推理档位的收益是用延迟和成本换来的，而且部分档位并不在所有入口开放。</p><p class="source">来源：<a href="https://codersera.com/blog/claude-opus-4-8-launch-guide-2026/" target="_blank" rel="noopener noreferrer">Codersera</a></p></div></div>
+                </section>
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>美术视角测评</h2>
+              <div class="role-cards">
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">外部测评</span>
+                    <span class="source-label">php中文网教程</span>
+                  </div>
+                  <h3>即梦AI免费版AI漫剧生成教程分享</h3>
+                  <p class="synthesis">即梦可用于漫剧制作，但成片质量依赖手动调参与后处理。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116663693345847" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方教程指出，即梦AI出图发糊时，开启HD超清修复、使用1024×1024分辨率，并把采样步数调到40-50、降噪强度控制在0.5-0.7，能明显改善画面清晰度。</p><p><strong>改变：</strong>这意味着用即梦AI免费版做AI漫剧时，用户不能只靠默认参数一键出片，而是需要在清晰度修复、分辨率和后处理上做额外调参，才能得到更适合连贯分镜使用的素材。</p><p><strong>边界：</strong>代价是生成和处理步骤变多，且还可能要配合画布2倍导出或Remini类工具二次修复，不适合追求极速批量出图的场景。</p><p class="source">来源：<a href="https://m.php.cn/faq/2129021.html" target="_blank" rel="noopener noreferrer">php中文网教程</a></p></div></div>
                 </section>
                 </div>
             </section>
