@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-06-04 09:01</title>
+  <title>独立测评 · 2026-06-04 17:52</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,62 +43,24 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Qwen3.6-27B本地替代Claude多代理外部观察</span>
-                    <span class="source-label">gyznsw / OpenYabby × Qwen3.6-27B 分析文 / AiManual / CSDN 博主文章</span>
+                    <span class="badge badge-blue">Hermes Agent Desktop App 外部测评</span>
+                    <span class="source-label">搜狐网《亲测好用！Hermes的原生桌面应用来了》 / YouTube 博主评测《Hermes Agent Desktop + FREE APIs: This is ACTUALLY ONE OF THE BEST AGENT APPS!》 / YouTube 博主评测《The New Hermes Agent Desktop App Is Insane》</span>
                   </div>
-                  <h3>本地Qwen3.6-27B替代Claude多代理实测</h3>
-                  <p class="synthesis">共识是可本地承接代理“思考层”，但复杂执行仍需 Claude 兜底。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116686946567783" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>OpenYabby 的第三方对比文章提到，作者把原先依赖 Claude 的推理层换成单张 RTX 3090 上本地运行的 Qwen3.6-27B，并用 47 个多步骤编码工作流跑了两周，结论是本地模型已经能承担规划、记忆和部分审查。</p><p><strong>改变：</strong>这意味着团队可把多代理系统里最耗 token 的“思考层”迁回本地，降低外部 API 依赖，并把 Claude 留给更难或更高风险的环节。</p><p><strong>边界：</strong>文章同时指出工具调用、长上下文稳定性和执行安全仍不足，若没有系统级闸门与兜底，不适合完全无人值守地替代 Claude。</p><p class="source">来源：<a href="https://gyznsw.cn/2026/06/03/2026-06-03-local-model-openyabby-qwen36-agent-brain/" target="_blank" rel="noopener noreferrer">gyznsw / OpenYabby × Qwen3.6-27B 分析文</a></p></div><div class="opinion"><p><strong>观察：</strong>AiManual 的实测称，Qwen3.6-27B 是单张 3090 上少数还能兼顾可运行性与较高事实准确率的方案，配合 agentic search 可做到 95.7% SimpleQA，而量化后的 Mixtral 8x22B 不仅更吃显存，事实题表现也更低。</p><p><strong>改变：</strong>对想在单卡工作站上部署代理检索或问答链路的用户，这说明 Qwen3.6-27B 更接近“能落地”的本地大脑，而不是只能做展示的高配方案。</p><p><strong>边界：</strong>它的前提是把场景收敛到单卡可承载的检索/问答型代理任务，不适合依赖超大上下文或更复杂工具编排的工作流。</p><p class="source">来源：<a href="https://ai-manual.ru/article/zapusk-qwen36-27b-s-agentic-search-na-odnoj-3090-dostizhenie-957-simpleqa-lokalno/" target="_blank" rel="noopener noreferrer">AiManual</a></p></div></div>
+                  <h3>Hermes Agent Desktop App桌面工作流演示</h3>
+                  <p class="synthesis">外部体验共识是入口更友好，但核心能力基本仍沿用原有工作流。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116690822105910" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>搜狐上手文指出，这个桌面版本质上是把 Python、Hermes Agent 和 Hermes Web UI 打包进 Electron 应用里，因此形态变了，但功能层面并没有新增能力。</p><p><strong>改变：</strong>对没用过 Web UI 的用户，桌面壳降低了安装和进入门槛，更适合直接在本地按应用方式打开、配置和试跑现有工作流。</p><p><strong>边界：</strong>它不是能力升级版；如果团队期待桌面端带来新功能、性能跃迁或新的 Agent 能力，这篇体验明确认为不应有这种预期。</p><p class="source">来源：<a href="https://m.sohu.com/a/1029478066_115978?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334" target="_blank" rel="noopener noreferrer">搜狐网《亲测好用！Hermes的原生桌面应用来了》</a></p></div><div class="opinion"><p><strong>观察：</strong>YouTube 评测认为 Hermes Agent Desktop 把原本较难理解的 Hermes Agent 变得更容易上手，并强调桌面端把配置与使用流程集中到一个可视化入口。</p><p><strong>改变：</strong>这会减少用户在 CLI、Web UI 和零散会话之间切换的成本，更利于个人用户持续复用会话、记忆和桌面工作流。</p><p><strong>边界：</strong>从片段看，这条评价主要落在“更易理解和使用”而非能力实测；是否适合复杂生产环境，还缺少更细的稳定性和性能验证。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=iXsfPPKvtk0" target="_blank" rel="noopener noreferrer">YouTube 博主评测《Hermes Agent Desktop + FREE APIs: This is ACTUALLY ONE OF THE BEST AGENT APPS!》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Codex接入DeepSeek与MIMO双模型实测</span>
-                    <span class="source-label">txtmix / CSDN 博客 / 腾讯云开发者社区</span>
+                    <span class="badge badge-blue">Codex与Higgsfield MCP视频工作流外部测评</span>
+                    <span class="source-label">Pasquale Pillitteri（YouTube）</span>
                   </div>
-                  <h3>Codex接入DeepSeek与MIMO双模型实测</h3>
-                  <p class="synthesis">共识是能接入，但真正成本在协议适配而非模型切换。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116686007043668" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方开发者实测发现，最新版 CodexCLI 不能直接平替接入 MiMo/DeepSeek，而是要通过本地代理把 Responses API 与 Chat Completions 做双向转换，才能稳定跑通多轮对话与 `reasoning_content` 透传。</p><p><strong>改变：</strong>这让团队可以继续用 Codex 原有工作流，同时把底层模型切到 MiMo 或 DeepSeek，减少迁移成本并保留推理链相关能力。</p><p><strong>边界：</strong>代价是必须额外维护一层本地网关与 Provider 路由，适合愿意折腾接入层的开发者，不适合想开箱即用的普通用户。</p><p class="source">来源：<a href="https://txtmix.com/posts/tech/mimo2codex-codex-local-proxy/" target="_blank" rel="noopener noreferrer">txtmix</a></p></div><div class="opinion"><p><strong>观察：</strong>上手教程作者记录到，MiMo 的 TokenPlan 套餐在 Codex 中直接填 API 容易报错，实际需要把 `config.toml` 的 `base_url` 改成指定网关地址后才能正常调用。</p><p><strong>改变：</strong>这说明用户真实接入时的关键工作不是单纯换 Key，而是按不同供应商改请求入口，能否跑通往往取决于这些兼容性细节。</p><p><strong>边界：</strong>边界在于第三方模型供应商与 Codex 的请求格式并不完全一致，同一套配置不能通吃所有上游。</p><p class="source">来源：<a href="https://blog.csdn.net/2402_82832066/article/details/161592227" target="_blank" rel="noopener noreferrer">CSDN 博客</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Claude Code省80% token：Headroom对比RTK</span>
-                    <span class="source-label">Andrew Patterson / 探索云原生</span>
-                  </div>
-                  <h3>Claude Code省80% token：Headroom对比RTK</h3>
-                  <p class="synthesis">共识是先降噪再压缩，能显著减少Claude Code的无效token消耗。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116687181453110" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Andrew Patterson实测发现，RTK先过滤CLI命令输出、Headroom再压缩API上下文，在一套生产代码库里一个月合计省掉了15亿个原本会进入Claude Code上下文的噪音token。</p><p><strong>改变：</strong>对团队来说，这意味着长时间编码会话里大量由`git status`、测试日志等带来的上下文成本被削掉，Claude Code可持续运行更久、账单和上下文挤占都明显下降。</p><p><strong>边界：</strong>从描述看两者分别作用于命令输出和API上下文压缩，收益高度依赖团队日常是否存在大量CLI输出噪音；材料未给出对低噪音工作流的收益。</p><p class="source">来源：<a href="https://andrewpatterson.dev/posts/token-savings-rtk-headroom/" target="_blank" rel="noopener noreferrer">Andrew Patterson</a></p></div><div class="opinion"><p><strong>观察：</strong>探索云原生的上手文指出，RTK作为CLI代理会在命令输出进入AI前先做过滤压缩，平均可节省60%-90% token，尤其针对`git status`、`cargo test`这类高噪音输出。</p><p><strong>改变：</strong>对个人开发者而言，它直接改变的是Claude Code会话里“命令回显也按原文计费”的低效问题，让常见终端操作不再大面积吞掉上下文和费用。</p><p><strong>边界：</strong>它的优化点集中在命令输出降噪，适合终端输出很多的编程代理场景；如果本身CLI输出不多，节省空间相对有限。</p><p class="source">来源：<a href="https://www.lixueduan.com/posts/ai/20-rtk/" target="_blank" rel="noopener noreferrer">探索云原生</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Pie AI Agent浏览器自动化外部观察</span>
-                    <span class="source-label">53AI</span>
-                  </div>
-                  <h3>Pie AI Agent浏览器自动化实测观察</h3>
-                  <p class="synthesis">浏览器 Agent 已能做简单操作，但稳定处理复杂网页流程仍受限。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116688607516372" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>53AI 在对同类浏览器 Agent「Browser Use」的自测中观察到，它能按自然语言完成打开多个网页等简单浏览器操作，但整体成熟度仍偏低，复杂流程容易受阻。</p><p><strong>改变：</strong>这说明对想实测 Pie AI Agent 的用户而言，浏览器自动化已能替代一部分低复杂度点击与检索动作，但更适合作为轻量辅助而不是稳定接管完整网页工作流。</p><p><strong>边界：</strong>人机验证是明显难点，且能力更适合简单任务，不适合依赖登录、验证码或长链路交互的场景。</p><p class="source">来源：<a href="https://www.53ai.com/news/neirongchuangzuo/2025012263549.html" target="_blank" rel="noopener noreferrer">53AI</a></p></div></div>
-                </section>
-                </div>
-            </section>
-            
-            <section class="role-block">
-              <h2>美术视角测评</h2>
-              <div class="role-cards">
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">Higgsfield MCP 外部上手与工作流观察</span>
-                    <span class="source-label">AI Native / Admetrics / MindStudio</span>
-                  </div>
-                  <h3>Higgsfield MCP实测指向AI视频自动化</h3>
-                  <p class="synthesis">外部观察普遍指向：Higgsfield MCP的核心价值在于把高规格视频生成接入自动化生产流。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116687483443102" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>AI Native在解读Higgsfield MCP时提到，它更适合广告、落地页和SNS竖版视频这类必须输出高分辨率成品的场景，并明确点出通过Higgsfield通道可获得约65%折扣。</p><p><strong>改变：</strong>这意味着对做投放素材和短视频量产的团队，Higgsfield MCP的价值不只是“能生成”，而是把高规格视频直接纳入可批量生产、可控预算的工作流。</p><p><strong>边界：</strong>它的成本优势主要建立在通过Higgsfield使用这一前提上，更偏向对高分辨率商用素材敏感的团队，普通低规格内容场景收益没那么明显。</p><p class="source">来源：<a href="https://www.ai-native.jp/blog/higgsfield-mcp-agentic-video-generation-2026" target="_blank" rel="noopener noreferrer">AI Native</a></p></div><div class="opinion"><p><strong>观察：</strong>Admetrics在自动化Meta广告素材SOP里把Higgsfield MCP放进了实际生产链路，强调它可在同一协议下调用多种模型生成高保真图像和视频资产，并用标准OAuth完成鉴权。</p><p><strong>改变：</strong>对营销和增长团队来说，真实改变是视频素材生产开始从“手动切模型、手动搬运素材”转向可编排的自动化流水线，更适合持续迭代广告创意。</p><p><strong>边界：</strong>这类收益更适合本来就有多模型投放生产需求的团队；接入MCP与OAuth也意味着前期仍有一定配置和流程搭建成本。</p><p class="source">来源：<a href="https://www.admetrics.io/en/post/how-to-create-automated-meta-ads-creative-pipeline-higgsfield-meta-mcp" target="_blank" rel="noopener noreferrer">Admetrics</a></p></div></div>
+                  <h3>Codex与Higgsfield MCP视频工作流实测</h3>
+                  <p class="synthesis">共识是它真正压缩了视频制作切换与执行成本。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116688523627166" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方作者实测用 OpenAI Codex 控制 Higgsfield MCP，能把“写脚本、生成画面、自动生产素材、输出完整视频内容”串成一条连续流程，且过程中基本不需要来回切换工具。</p><p><strong>改变：</strong>这意味着内容团队或个人创作者可以把原本分散在脚本、视觉生成、素材整理和成片导出上的多步操作，压缩成由代理统一执行的一句话式视频生产流程。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=VkKY1viPwo0" target="_blank" rel="noopener noreferrer">Pasquale Pillitteri（YouTube）</a></p></div></div>
                 </section>
                 </div>
             </section>
