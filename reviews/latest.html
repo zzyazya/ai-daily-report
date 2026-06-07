@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-06-07 08:38</title>
+  <title>独立测评 · 2026-06-07 17:36</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">DS4本地部署外部测评</span>
-                    <span class="source-label">watermelonwater.tech / linux.do 社区作者实战帖 / devpress 第三方分析文章</span>
+                    <span class="badge badge-blue">Claude Code、Cursor、Codex六工具横评-外部测评摘录</span>
+                    <span class="source-label">dgtsell 文章《2026 AI 编程工具横评：OpenClaw/Codex/Claude Code/Cursor 真实对比》 / 知乎专栏《Cursor vs Claude Code vs Codex：三款 AI 编程工具深度对比》 / SegmentFault 文章《后端 - AI 编程工具横评：Claude Code / Cursor / Copilot / Codex》</span>
                   </div>
-                  <h3>DS4引擎让DeepSeek V4-Flash本地部署降门槛</h3>
-                  <p class="synthesis">共识是门槛确实下降，但仍属于高配 Mac 的本地工程化方案。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116702482271606" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>watermelonwater.tech 的实战文提到，antirez 的 `ds4.c` 不是简单封装，而是从 Metal 计算内核到 HTTP 接口自研的原生推理栈；在 2-bit 量化后，DeepSeek V4-Flash 可在 128GB MacBook 上运行，并在 M3 Ultra 上实测达到约 36 token/s。</p><p><strong>改变：</strong>这意味着高配 Mac 用户第一次能把该级别模型放到本地直接推理，减少对云端高端 GPU 的依赖，适合对隐私、本地调试和离线可用性有要求的个人开发者与小团队。</p><p><strong>边界：</strong>门槛并未降到大众消费级设备，仍需要 128GB 级内存和 Apple Silicon/macOS 环境，平台适用性较窄。</p><p class="source">来源：<a href="https://watermelonwater.tech/insights/deepseekv4flash-mac%E7%89%88%E8%BF%90%E8%A1%8C%E6%8C%87%E5%8D%97-antirez%E7%9A%84ds4c%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener noreferrer">watermelonwater.tech</a></p></div><div class="opinion"><p><strong>观察：</strong>linux.do 的上手记录显示，作者在 M5 Max 128G 上实际部署 `ds4.c + DeepSeek V4-Flash`，并确认其可提供 OpenAI / Anthropic 兼容 API，可直接接入 Claude Code 等 coding agent 工作流。</p><p><strong>改变：</strong>对开发团队来说，这不只是“本地能跑”，而是可以把本地模型接进现有 Agent、代码助手和 API 调用链路中，降低切换到本地推理的工程改造成本。</p><p><strong>边界：</strong>要实现这种接入仍依赖高配 128G Mac 和 Apple Metal 环境，且材料明确提到需要调优，不是开箱即用的普适方案。</p><p class="source">来源：<a href="https://linux.do/t/topic/2150351?tl=zh_CN" target="_blank" rel="noopener noreferrer">linux.do 社区作者实战帖</a></p></div></div>
+                  <h3>Claude Code、Cursor、Codex六工具横评</h3>
+                  <p class="synthesis">外部测评共识是：差异核心在工作流形态与真实任务成本，而不只是模型强弱。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116706961856449" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>一篇真实工程对比测试用同一个 Bug 分别交给 OpenClaw、Codex、Claude Code、Cursor 处理，并记录了解决过程、耗时、Token 消耗和代码质量，强调结论来自实际项目跑测而不是参数表对比。</p><p><strong>改变：</strong>这类横评能让团队按修 Bug 成本、产出质量和时间开销来选型，而不是只看模型名气或宣传能力。</p><p><strong>边界：</strong>该观察主要覆盖真实 Bug 修复场景，不能直接外推到架构设计、长周期重构或日常补全等全部开发任务。</p><p class="source">来源：<a href="https://dgtsell.com/articles/ai-coding-tools-comparison-test-2026" target="_blank" rel="noopener noreferrer">dgtsell 文章《2026 AI 编程工具横评：OpenClaw/Codex/Claude Code/Cursor 真实对比》</a></p></div><div class="opinion"><p><strong>观察：</strong>有开发者将 Cursor、Claude Code、Codex总结为三种不同产品路径：Cursor 是 AI 原生 IDE，Claude Code 是终端 Agent，Codex/GitHub Copilot 更像嵌入现有工作流的助手。</p><p><strong>改变：</strong>用户选工具时实际是在选工作流改造方式：是把 AI 放进编辑器心流、交给终端代理跑任务，还是只做嵌入式辅助。</p><p><strong>边界：</strong>这种差异首先影响的是使用方式而非绝对能力，团队若不愿改变现有编辑器或终端习惯，迁移成本会先出现。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2022231909632090648" target="_blank" rel="noopener noreferrer">知乎专栏《Cursor vs Claude Code vs Codex：三款 AI 编程工具深度对比》</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">CodeGraph外部测评</span>
+                    <span class="source-label">腾讯云开发者社区 / AtomGit开源社区 / 小橙讲程序</span>
+                  </div>
+                  <h3>CodeGraph实测称中大型仓库更省Token</h3>
+                  <p class="synthesis">共识是：越大的仓库，省Token和提速越明显。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116688808841062" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>博客园转载评测提到，在包含两万多文件的 Swift Compiler 这类超大仓库里，传统方式为一次关联逻辑查询要花两分多钟、接近10万 Token，而 CodeGraph 用约35秒、3次查询就拿到更精准结果。</p><p><strong>改变：</strong>这意味着团队在中大型仓库里做跨文件追踪、定位调用链和让 AI 助手理解上下文时，等待时间与 Token 开销都明显下降，更适合高频迭代和多人协作。</p><p><strong>边界：</strong>这类优势主要建立在超大仓库和复杂依赖关系上，小项目里原生搜索已经够快，收益会明显收窄。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2671263" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div><div class="opinion"><p><strong>观察：</strong>AtomGit 社区的深度评测给出更细的分场景数据：小型仓库如 Gin（约150文件）也有约22%成本下降，但 Token 降幅在大型项目最明显，例如 Tokio 从340万降到65万。</p><p><strong>改变：</strong>对真实用户而言，CodeGraph 的核心价值不是所有仓库都“同幅度省钱”，而是在中大型代码库里把 AI 探索上下文的成本压缩到更可持续的水平，让长链路问答和改动分析更敢用。</p><p><strong>边界：</strong>小仓库的绝对节省有限，因为原生文件搜索本来就快，额外引入知识图谱后的边际收益较低。</p><p class="source">来源：<a href="https://gitcode.csdn.net/6a0ed27510ee7a33f27426fc.html" target="_blank" rel="noopener noreferrer">AtomGit开源社区 / 小橙讲程序</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">NVIDIA garak 外部测评摘录</span>
+                    <span class="source-label">NVIDIA Developer Forums</span>
+                  </div>
+                  <h3>NVIDIA garak防御式红队工作流教程</h3>
+                  <p class="synthesis">外部反馈显示，Garak流程实用，但硬件门槛会直接影响落地。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/06/06/nvidia-garak-tutorial-build-a-complete-defensive-llm-red-teaming-workflow-with-custom-probes-and-detectors/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有开发者在 NVIDIA Developer Forums 反馈，使用单张 L4 GPU 跑 Garak 扫描 GPT-OSS-20B 时直接遇到显存问题，说明这套红队流程在较大模型上并非“开箱即用”。</p><p><strong>改变：</strong>这意味着安全团队在把 Garak 纳入日常 LLM 红队流程前，需要先评估模型规模、显存预算和扫描参数，否则完整评测流程可能卡在资源配置阶段，影响扫描频率与落地效率。</p><p><strong>边界：</strong>单卡或资源受限环境不适合直接套用大模型扫描；如果团队主要依赖单 GPU 部署，Garak 的完整工作流可能需要降模型规模、调参或改用更高配硬件。</p><p class="source">来源：<a href="https://forums.developer.nvidia.com/t/garak/355856" target="_blank" rel="noopener noreferrer">NVIDIA Developer Forums</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
                     <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">Zenn / tkada / Reddit / r/Unity3D</span>
+                    <span class="source-label">Medium / The 2026 Agentic AI Stack / THINKING•OS</span>
                   </div>
-                  <h3>Unity MCP实测踩坑与工作流评估</h3>
-                  <p class="synthesis">共识是它真正改变点在于让AI直接操作Unity编辑器，而非只写代码。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116702129949520" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Zenn博主在实际搭建UnityMCP时确认，这套方案不只可接Cursor，也可复用于Claude Desktop，说明Unity编辑器侧的代理接入具有一定前端通用性。</p><p><strong>改变：</strong>对个人开发者或小团队来说，这意味着可以在不重做Unity侧集成的前提下切换不同AI客户端，把工作流重心放在编辑器联动本身而不是单一IDE。</p><p><strong>边界：</strong>材料只明确提到“环境构筑”，未给出性能、稳定性或复杂项目中的适配结论，能否顺畅落地仍取决于具体配置过程。</p><p class="source">来源：<a href="https://zenn.dev/tkada/articles/3cc10bf3733ae6" target="_blank" rel="noopener noreferrer">Zenn / tkada</a></p></div><div class="opinion"><p><strong>观察：</strong>Reddit上的Unity开发者实测后认为，Unity Code MCP Server配合VSCode AI Agent时，代理已能直接深入控制Unity Editor中的Scenes、GameObjects、Prefabs等对象，而不只是生成代码。</p><p><strong>改变：</strong>这会把AI辅助从“写脚本建议”推进到“直接改编辑器内容”，用户能把部分场景搭建和对象操作交给代理执行，减少编辑器与代码工具之间来回切换。</p><p><strong>边界：</strong>该贴同时标注为preview版本，说明这种高权限代理工作流仍偏试验性，更适合愿意接受新工具波动的使用者。</p><p class="source">来源：<a href="https://www.reddit.com/r/Unity3D/comments/1qogs0l/im_using_new_powerful_unity_code_mcp_server_with/" target="_blank" rel="noopener noreferrer">Reddit / r/Unity3D</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">OpenClaw实测Claude Opus 4.6与GPT-5.3-Codex</span>
-                    <span class="source-label">AI超元域 / 爱范儿</span>
-                  </div>
-                  <h3>OpenClaw实测Claude Opus 4.6与GPT-5.3-Codex</h3>
-                  <p class="synthesis">外部测评共识是：Opus偏超长材料整合，Codex偏工程执行与代码实战。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116702834663215" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>AI超元域在OpenClaw对比中认为，Claude Opus 4.6的优势不只是回答更长，而是处理超长原始材料时更能维持结构化输出与前后稳定性，表现出“读得多、写得长、推理稳”的特征。</p><p><strong>改变：</strong>这会直接改变长文档分析、知识整理、需求归纳等工作流：用户更可能把整批材料一次性喂给Opus 4.6，减少分段喂料和人工拼接结论的时间。</p><p><strong>边界：</strong>这类优势主要集中在长上下文知识工作流，不等于它在所有编程基准或终端式工程任务上都占优。</p><p class="source">来源：<a href="https://www.aivi.fyi/llms/Opus46-vs-GPT53" target="_blank" rel="noopener noreferrer">AI超元域</a></p></div><div class="opinion"><p><strong>观察：</strong>爱范儿援引实测与基准信息指出，GPT-5.3-Codex在Terminal-Bench 2.0等偏工程执行的测试上强于Opus 4.6，而Opus 4.6虽然基准略弱，但把上下文窗口拉到100万token，且整体差距并未被拉开。</p><p><strong>改变：</strong>对真实团队而言，这意味着模型选择会更按任务分流：需要终端操作、代码修复、工程代理执行时更偏向GPT-5.3-Codex，需要一次读入海量仓库说明、日志或文档时则更可能选Opus 4.6。</p><p><strong>边界：</strong>代价是两者并非单模型通吃：选Codex可能要接受上下文不如Opus长，选Opus则要接受在部分工程基准上不如Codex激进。</p><p class="source">来源：<a href="https://www.ifanr.com/1654448" target="_blank" rel="noopener noreferrer">爱范儿</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Qwen3.6 vs Gemma4 外部测评</span>
-                    <span class="source-label">Habr / Rutube</span>
-                  </div>
-                  <h3>Qwen3.6对比Gemma4生成HTML射击游戏</h3>
-                  <p class="synthesis">共识是实测更看重本地可跑性与代码任务稳定性，而非纸面参数。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116702364832163" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Habr 作者在本地实测中提到，Gemma4 在编程任务里胜过 QwenCoder，同时开启“思考模式”后两类模型都会更容易偏离指令。</p><p><strong>改变：</strong>对想让模型直接生成 HTML 游戏、脚本或一次成型前端页面的用户来说，选择模型时不能只看参数量，还要警惕推理模式把原本明确的生成任务做得更不稳定。</p><p><strong>边界：</strong>这类结论来自作者自己的真实工作流测试，重点偏编程与指令跟随，不等于在所有视觉或通用问答场景都同样成立。</p><p class="source">来源：<a href="https://habr.com/ru/articles/1033808/" target="_blank" rel="noopener noreferrer">Habr</a></p></div><div class="opinion"><p><strong>观察：</strong>另一个 Habr 上手文明确把 Qwen3.6 与 Gemma4 放到同一台 Asus TUF Gaming 笔记本加 RTX 4070 8GB 上做本地对比，说明这轮比较不仅是榜单结论，而是面向消费级硬件可落地部署的实测。</p><p><strong>改变：</strong>这对普通开发者和小团队的真实意义是，可以把“谁更会写 HTML/小游戏代码、谁更适合本地跑”放到现有显卡条件下评估，而不是默认需要云端或高端卡。</p><p><strong>边界：</strong>作者使用的是 8GB 显存笔记本环境，结论更接近受限本地部署体验，不代表在 RTX 5090 或服务器级配置上的速度与稳定性表现。</p><p class="source">来源：<a href="https://habr.com/ru/articles/1024932/" target="_blank" rel="noopener noreferrer">Habr</a></p></div></div>
+                  <h3>Tokenomics 解析 Agentic Software Engineering 用量</h3>
+                  <p class="synthesis">共识是：代理编码的真实门槛在长流程 token 成本与上下文治理。</p>
+                  <a class="article-link" href="https://arxiv.org/abs/2601.14470" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Medium 作者把 agentic AI stack 的核心问题直接归结为“token burn”，并用价格对比指出同样的代理式编码流程若换成更低单价模型，输入 token 成本可从 GPT-4o 的每百万 2.50 美元降到 DeepSeek-V3 的 0.14-0.27 美元量级。</p><p><strong>改变：</strong>这意味着团队在评估 Agentic Software Engineering 时，不能只看任务是否能跑通，而要把模型单价、缓存命中率和上下文复用一起纳入预算，否则同样工作流会出现数量级不同的成本。</p><p><strong>边界：</strong>这类结论主要解决成本侧问题，不等于低价模型在复杂代码理解、稳定性或工具调用质量上一定可直接替代高价模型。</p><p class="source">来源：<a href="https://medium.com/@ap3617180/the-2026-agentic-ai-stack-stop-your-token-burn-with-deepseek-modal-and-plan-caching-7cc973de0a95" target="_blank" rel="noopener noreferrer">Medium / The 2026 Agentic AI Stack</a></p></div><div class="opinion"><p><strong>观察：</strong>Thinking•OS 明确指出，编码代理进入 agentic software engineering 阶段后，主要风险已不再是自动补全质量，而是长期运行经济性和运营可控性。</p><p><strong>改变：</strong>这会改变团队的选型标准：从比“谁写得快”转向比“谁在长任务里更省 token、更可审计、更容易控预算”，尤其影响要把代理接入正式研发流程的团队。</p><p><strong>边界：</strong>这套判断更偏向持续运行和团队治理场景，不太适合只做个人临时试用或短链路原型开发的用户。</p><p class="source">来源：<a href="https://thinkingos.tech/blog/next-gen-coding-agents-economics" target="_blank" rel="noopener noreferrer">THINKING•OS</a></p></div></div>
                 </section>
                 </div>
             </section>
