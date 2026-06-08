@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-06-07 17:36</title>
+  <title>独立测评 · 2026-06-08 08:39</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,62 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Code、Cursor、Codex六工具横评-外部测评摘录</span>
-                    <span class="source-label">dgtsell 文章《2026 AI 编程工具横评：OpenClaw/Codex/Claude Code/Cursor 真实对比》 / 知乎专栏《Cursor vs Claude Code vs Codex：三款 AI 编程工具深度对比》 / SegmentFault 文章《后端 - AI 编程工具横评：Claude Code / Cursor / Copilot / Codex》</span>
+                    <span class="badge badge-blue">Evals实战评测AI Agent幻觉与回归</span>
+                    <span class="source-label">知乎专栏《揭秘 AI Agent 的评估测试（Evals）》 / 技术栈文章《LLM 应用的Evals 工程实践：从手动测试到自动化回归测试体系》 / ZingNex《aoa-evals：为AI Agent构建可复现、有界且防回归的评估体系》</span>
                   </div>
-                  <h3>Claude Code、Cursor、Codex六工具横评</h3>
-                  <p class="synthesis">外部测评共识是：差异核心在工作流形态与真实任务成本，而不只是模型强弱。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116706961856449" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>一篇真实工程对比测试用同一个 Bug 分别交给 OpenClaw、Codex、Claude Code、Cursor 处理，并记录了解决过程、耗时、Token 消耗和代码质量，强调结论来自实际项目跑测而不是参数表对比。</p><p><strong>改变：</strong>这类横评能让团队按修 Bug 成本、产出质量和时间开销来选型，而不是只看模型名气或宣传能力。</p><p><strong>边界：</strong>该观察主要覆盖真实 Bug 修复场景，不能直接外推到架构设计、长周期重构或日常补全等全部开发任务。</p><p class="source">来源：<a href="https://dgtsell.com/articles/ai-coding-tools-comparison-test-2026" target="_blank" rel="noopener noreferrer">dgtsell 文章《2026 AI 编程工具横评：OpenClaw/Codex/Claude Code/Cursor 真实对比》</a></p></div><div class="opinion"><p><strong>观察：</strong>有开发者将 Cursor、Claude Code、Codex总结为三种不同产品路径：Cursor 是 AI 原生 IDE，Claude Code 是终端 Agent，Codex/GitHub Copilot 更像嵌入现有工作流的助手。</p><p><strong>改变：</strong>用户选工具时实际是在选工作流改造方式：是把 AI 放进编辑器心流、交给终端代理跑任务，还是只做嵌入式辅助。</p><p><strong>边界：</strong>这种差异首先影响的是使用方式而非绝对能力，团队若不愿改变现有编辑器或终端习惯，迁移成本会先出现。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2022231909632090648" target="_blank" rel="noopener noreferrer">知乎专栏《Cursor vs Claude Code vs Codex：三款 AI 编程工具深度对比》</a></p></div></div>
+                  <h3>Evals实战评测AI Agent幻觉与回归</h3>
+                  <p class="synthesis">共识是Evals的核心价值在于提前暴露幻觉并稳定回归。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116708488580914" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者指出，缺少Evals时，Agent开发常陷入“线上出问题才修、修一个又带出新错”的被动循环，而评测的直接作用是把幻觉和行为漂移提前暴露出来。</p><p><strong>改变：</strong>这会把团队的质量控制从事后救火改成上线前拦截，尤其适合用来做Agent版本迭代时的回归检查。</p><p><strong>边界：</strong>这类收益依赖持续维护测试集与评判标准，材料没有显示它能一次性解决所有非确定性错误。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1995188699126842025" target="_blank" rel="noopener noreferrer">知乎专栏《揭秘 AI Agent 的评估测试（Evals）》</a></p></div><div class="opinion"><p><strong>观察：</strong>《LLM 应用的Evals 工程实践》给出的实操结论是，现成框架已经把RAG评估、幻觉检测、Agent工具调用准确性等做成50+内置指标，可直接搭自动化回归。</p><p><strong>改变：</strong>对团队的真实改变是，不必从零手写判分逻辑，就能把“幻觉检测+工具调用正确率”纳入日常CI/回归流程，缩短评测落地时间。</p><p><strong>边界：</strong>文章同时强调其价值更偏向工程化团队；如果业务场景高度定制，内置指标仍可能不够，需要补充自定义数据集和规则。</p><p class="source">来源：<a href="https://jishuzhan.net/article/2058922769967529985" target="_blank" rel="noopener noreferrer">技术栈文章《LLM 应用的Evals 工程实践：从手动测试到自动化回归测试体系》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">CodeGraph外部测评</span>
-                    <span class="source-label">腾讯云开发者社区 / AtomGit开源社区 / 小橙讲程序</span>
+                    <span class="badge badge-blue">GEPA外部测评与工作流影响</span>
+                    <span class="source-label">Decagon / Liner Quick Review / Arize AI</span>
                   </div>
-                  <h3>CodeGraph实测称中大型仓库更省Token</h3>
-                  <p class="synthesis">共识是：越大的仓库，省Token和提速越明显。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116688808841062" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>博客园转载评测提到，在包含两万多文件的 Swift Compiler 这类超大仓库里，传统方式为一次关联逻辑查询要花两分多钟、接近10万 Token，而 CodeGraph 用约35秒、3次查询就拿到更精准结果。</p><p><strong>改变：</strong>这意味着团队在中大型仓库里做跨文件追踪、定位调用链和让 AI 助手理解上下文时，等待时间与 Token 开销都明显下降，更适合高频迭代和多人协作。</p><p><strong>边界：</strong>这类优势主要建立在超大仓库和复杂依赖关系上，小项目里原生搜索已经够快，收益会明显收窄。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2671263" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div><div class="opinion"><p><strong>观察：</strong>AtomGit 社区的深度评测给出更细的分场景数据：小型仓库如 Gin（约150文件）也有约22%成本下降，但 Token 降幅在大型项目最明显，例如 Tokio 从340万降到65万。</p><p><strong>改变：</strong>对真实用户而言，CodeGraph 的核心价值不是所有仓库都“同幅度省钱”，而是在中大型代码库里把 AI 探索上下文的成本压缩到更可持续的水平，让长链路问答和改动分析更敢用。</p><p><strong>边界：</strong>小仓库的绝对节省有限，因为原生文件搜索本来就快，额外引入知识图谱后的边际收益较低。</p><p class="source">来源：<a href="https://gitcode.csdn.net/6a0ed27510ee7a33f27426fc.html" target="_blank" rel="noopener noreferrer">AtomGit开源社区 / 小橙讲程序</a></p></div></div>
+                  <h3>GEPA反思式Prompt优化教程覆盖评测与验证流程</h3>
+                  <p class="synthesis">外部观点一致认为，GEPA真正价值在于把Prompt优化变成可验证、低样本、可迭代的工程流程。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/06/07/building-reflective-prompt-optimization-with-gepa-multi-component-prompts-structured-feedback-and-held-out-validation/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Decagon在生产化测试驱动实践中指出，GEPA用自然语言反思替代纯分数奖励后，只需20-100个样本就能迭代提示词，并通过验证集指标决定是否保留新版本。</p><p><strong>改变：</strong>这会把团队的Prompt优化从“凭感觉改词”变成“先收集失败原因、再小样本迭代、最后留出验证”的可复现流程，尤其适合多组件Prompt做局部修正。</p><p><strong>边界：</strong>前提是团队先有可用的验证集和评测指标；如果没有代表性样本或无法稳定量化效果，这套流程就难以判断优化是否真实有效。</p><p class="source">来源：<a href="https://decagon.ai/blog/optimizing-gepa-for-production" target="_blank" rel="noopener noreferrer">Decagon</a></p></div><div class="opinion"><p><strong>观察：</strong>Liner的第三方快评提到，GEPA在四个任务上平均比GRPO高10%、最高高20%，同时最多减少35倍rollouts，并且相对MIPROv2也有超过10%的优势。</p><p><strong>改变：</strong>对用户和平台团队来说，这意味着在要反复试验复杂Prompt时，可能用更少推理预算拿到更高质量结果，降低大规模RL式调参的计算门槛。</p><p><strong>边界：</strong>这些优势主要来自特定基准任务与对比设置，落地到真实业务前仍需要用自家任务做留出验证，不能直接把论文/评测增益等同于线上收益。</p><p class="source">来源：<a href="https://liner.com/review/gepa-reflective-prompt-evolution-can-outperform-reinforcement-learning" target="_blank" rel="noopener noreferrer">Liner Quick Review</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">NVIDIA garak 外部测评摘录</span>
-                    <span class="source-label">NVIDIA Developer Forums</span>
+                    <span class="badge badge-blue">AI编程工具横评外部测评提炼</span>
+                    <span class="source-label">曦远Code（博客园） / 腾讯云开发者社区 / AtomGit开源社区</span>
                   </div>
-                  <h3>NVIDIA garak防御式红队工作流教程</h3>
-                  <p class="synthesis">外部反馈显示，Garak流程实用，但硬件门槛会直接影响落地。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/06/06/nvidia-garak-tutorial-build-a-complete-defensive-llm-red-teaming-workflow-with-custom-probes-and-detectors/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有开发者在 NVIDIA Developer Forums 反馈，使用单张 L4 GPU 跑 Garak 扫描 GPT-OSS-20B 时直接遇到显存问题，说明这套红队流程在较大模型上并非“开箱即用”。</p><p><strong>改变：</strong>这意味着安全团队在把 Garak 纳入日常 LLM 红队流程前，需要先评估模型规模、显存预算和扫描参数，否则完整评测流程可能卡在资源配置阶段，影响扫描频率与落地效率。</p><p><strong>边界：</strong>单卡或资源受限环境不适合直接套用大模型扫描；如果团队主要依赖单 GPU 部署，Garak 的完整工作流可能需要降模型规模、调参或改用更高配硬件。</p><p class="source">来源：<a href="https://forums.developer.nvidia.com/t/garak/355856" target="_blank" rel="noopener noreferrer">NVIDIA Developer Forums</a></p></div></div>
+                  <h3>Claude Code、Codex等AI编程工具横评</h3>
+                  <p class="synthesis">共识是：Cursor更强在日常编码，Claude Code/Codex更偏Agent分工。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116707767094044" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>曦远Code在多工具实测后认为，Zed在终端型开发者场景里性能优势明显，而更成熟的组合是“AI代码编辑器+AI Agent”，其中`Cursor + Codex`已成为不少专业开发者的首选搭配。</p><p><strong>改变：</strong>对团队选型的真实影响是，不必强求单工具包打天下，很多开发者会把日常编辑体验和重任务Agent能力拆开采购与使用。</p><p><strong>边界：</strong>这种组合式工作流的代价是要同时订阅两类工具，且更适合重度开发者，不适合只想要单一入口、低管理成本的用户。</p><p class="source">来源：<a href="https://www.cnblogs.com/deali/p/19864809" target="_blank" rel="noopener noreferrer">曦远Code（博客园）</a></p></div><div class="opinion"><p><strong>观察：</strong>腾讯云开发者社区的对比文给出极端鲜明结论：在实时补全这一战场，Cursor远胜Claude Code和Codex，作者称其Tab补全能基于整个项目上下文预测函数体和分支逻辑。</p><p><strong>改变：</strong>这直接改变的是日常写业务代码的节奏——高频补全更容易维持“不断流”的编码心流，减少频繁切到对话式Agent下指令。</p><p><strong>边界：</strong>这类优势主要集中在“边写边补全”的编辑器场景，不代表在复杂改造、跨文件重构或自主执行任务上同样占优。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2657589" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">Medium / The 2026 Agentic AI Stack / THINKING•OS</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验 / 对用户真实影响</span>
+                    <span class="source-label">掘金｜重新测试所有AI代码生成器（2025年更新）</span>
                   </div>
-                  <h3>Tokenomics 解析 Agentic Software Engineering 用量</h3>
-                  <p class="synthesis">共识是：代理编码的真实门槛在长流程 token 成本与上下文治理。</p>
-                  <a class="article-link" href="https://arxiv.org/abs/2601.14470" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Medium 作者把 agentic AI stack 的核心问题直接归结为“token burn”，并用价格对比指出同样的代理式编码流程若换成更低单价模型，输入 token 成本可从 GPT-4o 的每百万 2.50 美元降到 DeepSeek-V3 的 0.14-0.27 美元量级。</p><p><strong>改变：</strong>这意味着团队在评估 Agentic Software Engineering 时，不能只看任务是否能跑通，而要把模型单价、缓存命中率和上下文复用一起纳入预算，否则同样工作流会出现数量级不同的成本。</p><p><strong>边界：</strong>这类结论主要解决成本侧问题，不等于低价模型在复杂代码理解、稳定性或工具调用质量上一定可直接替代高价模型。</p><p class="source">来源：<a href="https://medium.com/@ap3617180/the-2026-agentic-ai-stack-stop-your-token-burn-with-deepseek-modal-and-plan-caching-7cc973de0a95" target="_blank" rel="noopener noreferrer">Medium / The 2026 Agentic AI Stack</a></p></div><div class="opinion"><p><strong>观察：</strong>Thinking•OS 明确指出，编码代理进入 agentic software engineering 阶段后，主要风险已不再是自动补全质量，而是长期运行经济性和运营可控性。</p><p><strong>改变：</strong>这会改变团队的选型标准：从比“谁写得快”转向比“谁在长任务里更省 token、更可审计、更容易控预算”，尤其影响要把代理接入正式研发流程的团队。</p><p><strong>边界：</strong>这套判断更偏向持续运行和团队治理场景，不太适合只做个人临时试用或短链路原型开发的用户。</p><p class="source">来源：<a href="https://thinkingos.tech/blog/next-gen-coding-agents-economics" target="_blank" rel="noopener noreferrer">THINKING•OS</a></p></div></div>
+                  <h3>DeepSeek与GPT-5协同平台实测教程</h3>
+                  <p class="synthesis">多模型协同的核心价值，在于按任务分配模型而非盲目并联。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116708824127571" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方代码生成器复测认为，GPT-5更适合攻克高难度工程任务，而Claude 4.1在大型代码库里的精准改动更强，Gemini 2.5 Pro在谷歌生态协同效率上更占优，作者因此明确建议按任务做模型分流。</p><p><strong>改变：</strong>这意味着团队若采用含GPT-5在内的多模型协同平台，价值不在“多接几个模型”，而在把疑难开发、精修补丁、生态内协作分别交给最擅长的模型，以提高整体解决率和交付效率。</p><p><strong>边界：</strong>边界是不存在一个模型通吃所有开发场景；如果平台没有清晰的任务路由和模型切换策略，多模型并行只会增加选择成本，未必比单模型工作流更高效。</p><p class="source">来源：<a href="https://juejin.cn/post/7545697455015329838" target="_blank" rel="noopener noreferrer">掘金｜重新测试所有AI代码生成器（2025年更新）</a></p></div></div>
+                </section>
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>美术视角测评</h2>
+              <div class="role-cards">
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">ChatArt接入Seedance 2.0与Image 2视频实测</span>
+                    <span class="source-label">巴哈姆特创作大厅博文《低成本也能做1080P AI 影片？ 最近測試了Seedance...》</span>
+                  </div>
+                  <h3>ChatArt接入Seedance 2.0与Image 2视频实测</h3>
+                  <p class="synthesis">现有第三方实测主要确认了ChatArt在输出分辨率上的直接工作流优势。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116697449171490" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方体验文实测指出，很多支持Seedance 2.0的工具最高只给到720P输出，但ChatArt内置的Seedance 2.0可直接生成1080P高清视频。</p><p><strong>改变：</strong>这意味着用户若在ChatArt里做短片样片、成片预览或社媒视频，可少走一次外部放大/补帧流程，直接得到更接近可交付规格的画面。</p><p class="source">来源：<a href="https://home.gamer.com.tw/artwork.php?sn=6309953" target="_blank" rel="noopener noreferrer">巴哈姆特创作大厅博文《低成本也能做1080P AI 影片？ 最近測試了Seedance...》</a></p></div></div>
                 </section>
                 </div>
             </section>
