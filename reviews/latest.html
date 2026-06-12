@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-06-12 08:47</title>
+  <title>独立测评 · 2026-06-12 17:55</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,73 +43,35 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Figma MCP免费版读写限制实测解读</span>
-                    <span class="source-label">Figma Forum / 知乎作者《Figma官方出手！告别野生Figma MCP和UI幻觉（附案例演示）》 / 知乎作者《专门为MCP订阅Figma性价比太低？试试Pixso MCP，设计稿还原度还不错》</span>
+                    <span class="badge badge-blue">外部测评 / 工作流分析</span>
+                    <span class="source-label">Moonlight（文献综述）</span>
                   </div>
-                  <h3>Figma MCP免费版读写限制实测解读</h3>
-                  <p class="synthesis">外部体验更偏向“可试、能用”，但付费价值与写入边界仍需分场景判断。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116703304353464" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Figma Forum 用户实测用 Codex 连续调用 Figma MCP 的 read 工具超过 6 次，教育版场景下没有触发调用上限。</p><p><strong>改变：</strong>这说明至少在轻到中度读取场景里，用户不必把“几次就被限流”当成默认前提，做设计检索、组件查询、页面理解类流程时可先直接试用。</p><p><strong>边界：</strong>这条观察只覆盖 read 工具和教育版个案，不能外推到 Starter 免费版写入能力、复杂批量操作或官方长期配额策略。</p><p class="source">来源：<a href="https://forum.figma.com/report-a-problem-6/does-education-plan-have-mcp-call-limit-51874" target="_blank" rel="noopener noreferrer">Figma Forum</a></p></div><div class="opinion"><p><strong>观察：</strong>知乎作者在案例演示中认为官方 Figma MCP 相比此前“野生 MCP”安装配置更简单，并且明显降低了 UI 幻觉。</p><p><strong>改变：</strong>对个人开发者和设计协作团队来说，这意味着接入门槛更低，AI 读设计稿到产出前端代码的链路更稳定，返工和人工纠偏会减少。</p><p><strong>边界：</strong>作者同时指出产品仍处于 beta，说明稳定性和能力边界还在变化，不适合把高风险生产流程完全押注在自动化结果上。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1917001398605833974" target="_blank" rel="noopener noreferrer">知乎作者《Figma官方出手！告别野生Figma MCP和UI幻觉（附案例演示）》</a></p></div></div>
+                  <h3>AIDev数据集揭示Agentic Pull Requests修复拒收原因</h3>
+                  <p class="synthesis">拒收不只看修复对错，更取决于PR形态与评审过程。</p>
+                  <a class="article-link" href="https://arxiv.org/abs/2606.13468" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方文献综述指出，AIDev相关实证研究里，GitHub Copilot 生成PR的合并结果主要受改动规模和提交特征影响，且每增加一个关联提交，合并概率可提升2.11倍；Devin类PR则更受评审与讨论特征左右。</p><p><strong>改变：</strong>这说明团队要想降低代理修复PR被拒收，不能只关注修复结果本身，还要控制改动粒度、补全提交上下文，并把评审互动纳入agent工作流设计。</p><p><strong>边界：</strong>这一规律明显依赖具体代理工具，Copilot与Devin的拒收/合并驱动因素不同，不适合用单一规范管理所有agent PR。</p><p class="source">来源：<a href="https://www.themoonlight.io/en/review/lets-make-every-pull-request-meaningful-an-empirical-analysis-of-developer-and-agentic-pull-requests" target="_blank" rel="noopener noreferrer">Moonlight（文献综述）</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Fable 5外部测评</span>
-                    <span class="source-label">Simon Willison</span>
+                    <span class="badge badge-blue">Nex-N2 Pro对比GPT 5.5开源Agent模型实测</span>
+                    <span class="source-label">Fello AI / Nerd Level Tech / 知乎专栏</span>
                   </div>
-                  <h3>Claude Fable 5编程实测与完整App演示</h3>
-                  <p class="synthesis">外部体验强调其编程流程里更强的主动执行能力。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116727312554710" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Simon Willison在连续两天实测Claude Fable 5后，认为它在编程任务中表现出“极度主动”的Agent式工作方式，会调动多种技巧自行推进到目标，甚至用于处理Datasette Agent里的实际界面缺陷。</p><p><strong>改变：</strong>这意味着用户在做个人效率App或小型产品原型时，可能不只是在“问答式写代码”，而是把更多排错、修补和推进步骤交给模型连续完成，从而减少人工拆解任务的次数。</p><p class="source">来源：<a href="https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/#atom-everything" target="_blank" rel="noopener noreferrer">Simon Willison</a></p></div></div>
+                  <h3>Nex-N2 Pro对比GPT 5.5开源Agent模型实测</h3>
+                  <p class="synthesis">共识是它更像高性价比Agent替代，不是GPT-5.5全场景平替。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116734811964023" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Fello AI的对比文章提到，Nex-N2-Pro在编码与终端代理相关基准上略胜GPT-5.5，例如SWE-Bench Pro领先、Terminal-Bench 2.1也超过Claude Opus 4.7，但网页浏览能力仍略落后GPT-5.5。</p><p><strong>改变：</strong>这意味着对以代码修复、终端执行为主的Agent工作流，团队有机会用免费开源模型替代一部分闭源高价模型，优先降低研发和自动化脚本成本。</p><p><strong>边界：</strong>如果任务高度依赖网页检索和浏览式代理，Nex-N2-Pro并不是全面替代，用户仍可能需要GPT-5.5补齐这类场景。</p><p class="source">来源：<a href="https://felloai.com/nex-n2-pro/" target="_blank" rel="noopener noreferrer">Fello AI</a></p></div><div class="opinion"><p><strong>观察：</strong>Nerd Level Tech在播客评测中指出，Nex-N2-Pro虽然是开源coder并在部分指标有竞争力，但在更难的代理式编程任务上明显落后，例如DeepSWE仅33.6，而GPT-5.5达到70。</p><p><strong>改变：</strong>这对用户的真实影响是，Nex-N2-Pro更适合中等复杂度的代码Agent和可控试验环境，不适合作为高难度、长链路软件工程任务的唯一主力模型。</p><p><strong>边界：</strong>在SWE-Bench Verified、DeepSWE这类高复杂任务上，稳定性和完成度仍是短板，团队若直接替换GPT-5.5，可能会增加人工接管和失败重试成本。</p><p class="source">来源：<a href="https://nerdleveltech.com/podcast/episode-nex-n2-pro-open-weight-coder-vs-gpt-5-5-2026" target="_blank" rel="noopener noreferrer">Nerd Level Tech</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">A. Lucas（Substack）</span>
+                    <span class="badge badge-blue">多模态AI审稿攻防与工作流风险：外部观察</span>
+                    <span class="source-label">ResearchGate - AI-Driven Scholarly Peer Review via Persistent Workflow Prompting, Meta-Prompting and Meta-Reasoning / Springer - Large language models in peer review: challenges and ... / PMC - Artificial Intelligence in Peer Review: Enhancing Efficiency While Preserving Integrity</span>
                   </div>
-                  <h3>ChatGPT、Claude、Gemini《我的世界》实测</h3>
-                  <p class="synthesis">共识是工作流设计往往比模型名次更影响实战可用性。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116731238483500" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>开发者在给《我的世界》机器人任务先做结构化拆解后，实测发现 ChatGPT、Claude 3、Gemini 都能为新增 bot skill 写出可运行代码，且连原本能力较弱的 Gemini 也能在该框架下成功完成。</p><p><strong>改变：</strong>这说明对开发者和团队来说，决定成败的不只是模型强弱，更是先把 Minecraft agent 任务拆成清晰接口与模块；这样能把更多模型纳入可用工作流，降低单一模型依赖。</p><p><strong>边界：</strong>前提是任务被预先简化并封装成更易扩展的结构，这并不等于模型能直接端到端稳定完成复杂 Minecraft 自动化；未经整理的开放任务下效果可能明显下降。</p><p class="source">来源：<a href="https://alucas.substack.com/p/coding-minecraft-bots-with-chatgpt" target="_blank" rel="noopener noreferrer">A. Lucas（Substack）</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Claude Fable 5 外部测评</span>
-                    <span class="source-label">投资界</span>
-                  </div>
-                  <h3>Claude Fable 5一句话生成完整游戏实测</h3>
-                  <p class="synthesis">能快速产出可玩原型，但仍依赖迭代且成本受限</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116731490142783" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测中，Claude Fable 5 能把小游戏直接做成可持续运行的版本，例如小球掉落后会自动重生继续游戏，虽然视觉表现不如 CodeX 炫酷，但基本功能没有做错。</p><p><strong>改变：</strong>这意味着个人开发者或产品团队可以先用一句话快速拿到“能玩”的游戏原型，把验证重点从搭脚手架转到玩法和交互迭代上。</p><p><strong>边界：</strong>代价是使用额度消耗很快，实测里提到问了几个问题就用完 5 小时额度，说明更复杂或更长链路的游戏生成会受成本和配额限制。</p><p class="source">来源：<a href="https://news.pedaily.cn/202606/565067.shtml" target="_blank" rel="noopener noreferrer">投资界</a></p></div></div>
-                </section>
-                </div>
-            </section>
-            
-            <section class="role-block">
-              <h2>美术视角测评</h2>
-              <div class="role-cards">
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">SCAIL-2外部测评</span>
-                    <span class="source-label">NextDiffusion</span>
-                  </div>
-                  <h3>SCAIL-2角色动画704P长视频工作流实测</h3>
-                  <p class="synthesis">共识是长时段与多人一致性更实用，但流程成本仍在。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116731758516016" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>NextDiffusion在SCAIL-2的ComfyUI上手文章中明确指出，它把角色动画从“先出骨架/pose图再驱动”的中间流程，简化成直接用驱动视频做动作迁移，工作流更干净也更高效。</p><p><strong>改变：</strong>这会直接减少角色长视频制作里的中间资产处理和节点拼装成本，尤其适合想快速把参考角色稳定套上整段动作的视频创作者。</p><p><strong>边界：</strong>文段只强调了流程简化，没有给出704P长视频下的耗时、显存或失败案例，因此不适合据此判断高分辨率长片生产成本。</p><p class="source">来源：<a href="https://www.nextdiffusion.ai/tutorials/scail-2-comfyui-video-to-character-motion-transfer" target="_blank" rel="noopener noreferrer">NextDiffusion</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">Flux2 Klein 9B外部测评与上手影响</span>
-                    <span class="source-label">Civitai《简易flux2 klein工作流（生图与编辑）（4b+9b）》</span>
-                  </div>
-                  <h3>Flux2 Klein 9B节点图生图工作流测评</h3>
-                  <p class="synthesis">共识是9B更像高效本地改图引擎，强在速度与流程整合，弱在最终质感。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116731104205631" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>另一位第三方工作流作者在简化版 Flux2 Klein 4B/9B 工作流中，重点把二次采样放大、扩图、颜色匹配、模型放大、ControlNet 控制和角度控制整合进单一流程，同时强调尽量减少操作量。</p><p><strong>改变：</strong>这对实际使用的意义是，9B 节点工作流不只是“能跑”，而是开始朝少步骤、多功能的一体化编辑台演进，更适合电商修图、社媒素材和快速改稿。</p><p><strong>边界：</strong>代价是工作流设计本身会变复杂，作者也直言把这些功能全部综合后再压缩操作量并不轻松。</p><p class="source">来源：<a href="https://civitai.com/models/2314359/flux2-klein4b9bor-flux2-klein-simple-workflow-generation-and-editing-4b9b" target="_blank" rel="noopener noreferrer">Civitai《简易flux2 klein工作流（生图与编辑）（4b+9b）》</a></p></div></div>
+                  <h3>多模态AI审稿攻防与工作流风险研究</h3>
+                  <p class="synthesis">外部共识是AI能提效，但审稿风险主要落在验证、公平与责任链上。</p>
+                  <a class="article-link" href="https://arxiv.org/abs/2606.12716" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>ResearchGate收录的工作流研究指出，LLM用于学术同行评审时，核心难点不只是生成文字，而是受限于评审数据稀缺和专家推理复杂度，导致持续、可靠地完成高质量审稿本身就很难。</p><p><strong>改变：</strong>这意味着团队若把AI接入审稿流程，更适合把它当作辅助分拣、提示和流程编排工具，而不是可独立替代专家判断的审稿员。</p><p><strong>边界：</strong>对需要深领域知识、证据核验和复杂因果判断的稿件，纯AI审稿容易失真，必须保留人工复核。</p><p class="source">来源：<a href="https://www.researchgate.net/publication/391427568_AI-Driven_Scholarly_Peer_Review_via_Persistent_Workflow_Prompting_Meta-Prompting_and_Meta-Reasoning" target="_blank" rel="noopener noreferrer">ResearchGate - AI-Driven Scholarly Peer Review via Persistent Workflow Prompting, Meta-Prompting and Meta-Reasoning</a></p></div><div class="opinion"><p><strong>观察：</strong>Springer文章总结LLM审稿的主要风险在于科学内容验证不足、领域知识不够、数据分析与结果解释能力有限，以及伴随的伦理问题。</p><p><strong>改变：</strong>对编辑部、研究团队或审稿平台来说，AI能带来流程提速，但真正改变是必须补上验证、责任划分和风险控制环节，否则会把低质量或有偏结论更快推入正式评审流程。</p><p><strong>边界：</strong>在依赖严谨实验解读、统计判断或高专业门槛的审稿场景里，AI提效收益会被误判与合规风险抵消。</p><p class="source">来源：<a href="https://link.springer.com/article/10.1007/s11192-025-05440-w" target="_blank" rel="noopener noreferrer">Springer - Large language models in peer review: challenges and ...</a></p></div></div>
                 </section>
                 </div>
             </section>
