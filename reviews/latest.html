@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-06-13 08:41</title>
+  <title>独立测评 · 2026-06-13 17:35</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,73 +43,35 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Mythos 5外部测评摘录</span>
-                    <span class="source-label">Kingy AI / Finout</span>
+                    <span class="badge badge-blue">Hermes + Kimi 外部测评</span>
+                    <span class="source-label">知乎博主实测 / Lushbinary</span>
                   </div>
-                  <h3>Mythos 5编程实测与成本争议解析</h3>
-                  <p class="synthesis">外部观点一致：代码强，但企业接入与成本门槛都更高。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116735499900240" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Kingy AI 的基准解读认为，Fable 5 作为公开版 Mythos 级模型，在编程能力上看起来明显强于 Anthropic 此前公开提供的代码模型，但公开版本额外包裹了分类器、回退行为，并对部分商业与零数据保留配置引入了新的数据保留要求。</p><p><strong>改变：</strong>对开发者来说，这意味着它更适合直接承担高难度编码与代理式开发任务，但接入到企业工作流时，除了看能力，还要重新评估合规配置、失败回退和输出稳定性。</p><p><strong>边界：</strong>如果团队依赖严格的零数据保留或希望完全复现内部 Mythos 级能力，公开版的附加限制和回退机制会成为边界。</p><p class="source">来源：<a href="https://kingy.ai/ai/claude-fable-5-benchmarks-explained-coding-context-window-pricing-and-mythos-class-performance/" target="_blank" rel="noopener noreferrer">Kingy AI</a></p></div><div class="opinion"><p><strong>观察：</strong>Finout 的成本分析指出，Claude Fable 5 / Mythos 5 API 定价为输入 10 美元/百万 tokens、输出 50 美元/百万 tokens，标价上约为 Claude Opus 4.8 的两倍，也高于 GPT-5.5 的输入价格，因此是否划算高度取决于具体任务类型。</p><p><strong>改变：</strong>这会直接改变团队的模型分工：高价值、一次做对比反复返工更重要的编码任务可以考虑用 Mythos 5，而长输出、长会话、批量生成类工作则需要更严格地做预算和路由。</p><p><strong>边界：</strong>其代价是输出侧费用很高，不适合高 token 消耗、长时间代理运行或对成本极敏感的日常流水线。</p><p class="source">来源：<a href="https://www.finout.io/blog/claude-fable-5-mythos-5-pricing-benchmarks" target="_blank" rel="noopener noreferrer">Finout</a></p></div></div>
+                  <h3>Kimi k2.7接入Hermes Agent工作流实测</h3>
+                  <p class="synthesis">共识是接入门槛低、代码能力强，但多步工作流速度可能拖后腿。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116741791287449" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎实测认为，把 Kimi K2.6 接进 Hermes 后，代码任务里的思考与执行稳定性、成品质量都强于同场对比的 GLM 5.1，但首 token 返回和多步 Agent 串行执行明显更慢。</p><p><strong>改变：</strong>对用 Hermes 跑生成 App、代码编排这类多步骤工作流的用户来说，产出质量更稳，但整条流水线会出现肉眼可感知的停顿，团队要在“少返工”与“更长等待时间”之间取舍。</p><p><strong>边界：</strong>不适合强时延敏感场景；作者明确提到同样任务下，Hermes 流水线接 Kimi K2.6 的单步执行时间偏长，整体节奏不如 GLM 5.1 紧凑。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2027522051460605577" target="_blank" rel="noopener noreferrer">知乎博主实测</a></p></div><div class="opinion"><p><strong>观察：</strong>Lushbinary 的 K2.7 指南认为，Hermes 本身是 provider-agnostic，接入 Kimi K2.7 Code 只需指向 Moonshot 的 OpenAI 兼容接口或 OpenRouter，对现有 Agent 工作流的模型替换门槛较低。</p><p><strong>改变：</strong>这意味着已经在用 Hermes 的开发者，不必重写整套 Agent 编排，就能把 K2.7 接进现有工作流做生成 App 或代码任务验证，迁移成本主要落在模型配置而不是流程重构。</p><p><strong>边界：</strong>这条结论更多说明“接入容易”，不直接证明 K2.7 在真实 App 生成中的速度、成功率或成本一定更优，实际收益仍取决于具体工作流设计。</p><p class="source">来源：<a href="https://lushbinary.com/blog/kimi-k2-7-code-developer-guide-benchmarks-api-hermes-agent/" target="_blank" rel="noopener noreferrer">Lushbinary</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Cursor Review技能外部测评</span>
-                    <span class="source-label">HTMLPAGE / 稀土掘金作者实践分享 / 80AI 开发者实测</span>
+                    <span class="badge badge-blue">Trae对比蓝印RPA工作流替代实测</span>
+                    <span class="source-label">知乎作者《告别5000位排队！亲测有效的TRAE替代工具清单》</span>
                   </div>
-                  <h3>Cursor Review技能实测：硬核代码审查工作流观察</h3>
-                  <p class="synthesis">共识是它更像流程化审查工具，而非单次问答插件。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116736791681966" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有团队实践指出，使用 Cursor 做代码审查时，真正决定效果的不是个人提问技巧，而是规则文件、任务边界、代码审查步骤和回归检查是否被统一下来。</p><p><strong>改变：</strong>这意味着团队若想把 Review 技能用稳，重点要从“会不会问”转向“有没有统一审查流程”，把 AI 审查纳入可复用的团队工作流。</p><p><strong>边界：</strong>前提是团队愿意先投入规则配置和流程约束，否则审查结果容易因人而异。</p><p class="source">来源：<a href="https://htmlpage.cn/topics/ai/cursor-team-rules-code-review-workflow" target="_blank" rel="noopener noreferrer">HTMLPAGE</a></p></div><div class="opinion"><p><strong>观察：</strong>有开发者在本地 PR Code Review 实践中，把 Cursor 作为重写项目阶段的日常审查工具来使用，说明它已能承接较具体的本地审查场景，而不只是演示型问答。</p><p><strong>改变：</strong>对用户的直接改变是，代码问题可以在提交 PR 前于本地先筛一遍，把审查前置，减少正式评审阶段的低级问题往返。</p><p><strong>边界：</strong>更适合本来就有本地 PR 检查习惯、且愿意把审查流程前移的开发团队。</p><p class="source">来源：<a href="https://juejin.cn/post/7526765653114994729" target="_blank" rel="noopener noreferrer">稀土掘金作者实践分享</a></p></div></div>
+                  <h3>Trae对比蓝印RPA工作流替代实测</h3>
+                  <p class="synthesis">现有外部体验更集中指向Trae稳定性短板，而非可替代RPA。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116740382005269" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方用户实测反馈，Trae在改代码场景中经常出现长时间排队，且从指定GLM5模型排队严重，发展到“不指定模型也要排队”，排队人数甚至超过5000。</p><p><strong>改变：</strong>这会直接打断连续编程节奏，把原本应即时响应的辅助改代码流程变成等待流程，用户很难把它当成可稳定承接重复任务的工作流工具，更别说替代强调确定性与时效性的RPA流程。</p><p><strong>边界：</strong>这条观察主要反映的是高峰期可用性与响应稳定性问题，不足以单独证明Trae在所有编码任务上都低效，也不能直接代表其代码质量或自动化能力上限。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2030944051713790709" target="_blank" rel="noopener noreferrer">知乎作者《告别5000位排队！亲测有效的TRAE替代工具清单》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Fable 5外部测评</span>
-                    <span class="source-label">知乎博主实测文章 / 爱范儿</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验</span>
+                    <span class="source-label">Stack Overflow</span>
                   </div>
-                  <h3>Claude Fable 5三方代码实测结果</h3>
-                  <p class="synthesis">共识是首轮交付更强，但长任务成本和复核压力也更高。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116737446190371" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎测评者把 Fable 5、Opus 4.8 和 GPT-5.5 放到同一项目里实测，发现只有 Fable 5 做到前后端项目“零修改跑通”：TypeScript 一次编译通过、后端一次启动成功、API 测试一次过，并额外用 CDP 在浏览器里验证了拖拽持久化。</p><p><strong>改变：</strong>这意味着开发者在脚手架搭建、补依赖、修小 Bug 上花的来回迭代时间更少，更适合要快速交付 demo、管理后台或全栈原型的工作流。</p><p><strong>边界：</strong>这条结论来自单次项目型实测，说明的是“首轮可运行性”优势，不等于所有复杂生产项目都能免审查、免返工。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2048024883783847965" target="_blank" rel="noopener noreferrer">知乎博主实测文章</a></p></div><div class="opinion"><p><strong>观察：</strong>爱范儿援引 Ethan Mollick 的连续任务测试称，Fable 5 能自己调多 Agent 收集数据、写代码、做测试，并在一个研究工具项目上连续工作 9 个半小时完成开发，但过程中仍会出现错误和遗漏。</p><p><strong>改变：</strong>这对团队的真实改变是，Fable 5 更像能长时间推进复杂任务的“高自主副驾驶”，可把资料收集、设计文档、编码和修正串成一条链，减少人工频繁接力。</p><p><strong>边界：</strong>长任务 token 消耗很高，且价格明显高于 Opus 4.8，因此高频生产使用时成本和人工复核仍是主要约束。</p><p class="source">来源：<a href="https://www.ifanr.com/1668542" target="_blank" rel="noopener noreferrer">爱范儿</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">DeepSeek 接入 Cursor 外部测评</span>
-                    <span class="source-label">Yasking Blog / Apiyi.com Blog</span>
-                  </div>
-                  <h3>DeepSeek接入Cursor代码工作流实测视频</h3>
-                  <p class="synthesis">共识是能降本提效，但完整体验仍受会员和登录限制。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116736523305355" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有开发者实测发现，Cursor 自带免费额度很少，但可接入 DeepSeek 平台 Key 继续使用，且 TAB 代码补全仍要求登录 Cursor 账号。</p><p><strong>改变：</strong>这意味着个人开发者和小团队可以把 Cursor 的 AI 编程成本压低到自备 Key 模式，先保住对话和辅助生成能力，再决定是否为完整补全体验付费或登录。</p><p><strong>边界：</strong>它并不是“零门槛免费替代”，因为免费额度有限，且 TAB 补全这类高频工作流仍受 Cursor 登录机制约束。</p><p class="source">来源：<a href="https://blog.yasking.org/a/cursor-with-deepseek" target="_blank" rel="noopener noreferrer">Yasking Blog</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方教程将 Cursor 使用 DeepSeek 分成“内置模式”和“自定义 API”两种路径，其中内置模式可直接调用 deepseek-r1，并提供高级推理与可视化思考过程。</p><p><strong>改变：</strong>对用户来说，接入 DeepSeek 不只是换模型，而是把 Cursor 工作流分成“开箱即用的会员方案”和“自行配置 API 的低成本方案”，选型会直接影响上手速度与可见推理体验。</p><p><strong>边界：</strong>内置模式明确是会员专享，非会员若想用 DeepSeek，只能接受自行配置 API 的额外折腾。</p><p class="source">来源：<a href="https://help.apiyi.com/cursor-deepseek-usage-guide.html" target="_blank" rel="noopener noreferrer">Apiyi.com Blog</a></p></div></div>
-                </section>
-                </div>
-            </section>
-            
-            <section class="role-block">
-              <h2>产品经理视角测评</h2>
-              <div class="role-cards">
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-purple">Siri新版外部测评</span>
-                    <span class="source-label">MacRumors</span>
-                  </div>
-                  <h3>苹果Siri新版体验终于明显变好</h3>
-                  <p class="synthesis">共识是Siri对“眼前内容”的实用性确实更强了。</p>
-                  <a class="article-link" href="https://www.theverge.com/podcast/949079/siri-ai-good-vergecast" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>MacRumors上手指出，苹果重建了Siri AI的搜索索引后，Siri检索更全面，并且能直接理解当前屏幕内容、回答图片地点等与眼前内容强相关的问题。</p><p><strong>改变：</strong>这让用户在刷Instagram、看网页或拍照时，可以直接用自然语言追问当前所见信息，少了手动切App、复制内容或再发起搜索的步骤。</p><p><strong>边界：</strong>从现有上手片段看，提升主要集中在屏幕感知、图片问答和搜索理解，尚不能说明它在所有复杂对话或跨应用长链任务里都同样明显变强。</p><p class="source">来源：<a href="https://www.macrumors.com/2026/06/10/ios-27-siri-ai-hands-on/" target="_blank" rel="noopener noreferrer">MacRumors</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-purple">DeepSeek相关外部测评</span>
-                    <span class="source-label">知乎专栏《DeepSeek 三大类型模型全面评测》 / 久曲健（博客园） / PC修复电脑医生（企业博客）</span>
-                  </div>
-                  <h3>DeepSeek解锁教程与多模型平台上线</h3>
-                  <p class="synthesis">共识是DeepSeek强在代码与通用文本，多模型平台价值在于补齐其多模态短板。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116737127357271" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方评测认为，DeepSeek-V3-Chat整体处于第一梯队、代码能力突出，但在数学难题、英文和多轮对话上与头部模型仍有差距。</p><p><strong>改变：</strong>这意味着用户把DeepSeek接入多模型平台后，日常通用问答和代码任务可以优先用它控成本，但遇到高难推理或复杂英文协作时仍可能切到其他模型。</p><p><strong>边界：</strong>不适合把它单独当作最强数学推理或最稳英文协作模型使用。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/29456844843" target="_blank" rel="noopener noreferrer">知乎专栏《DeepSeek 三大类型模型全面评测》</a></p></div><div class="opinion"><p><strong>观察：</strong>实测文章指出，DeepSeek-V3-0324在前端场景代码生成上相较Doubao-1.5-pro有明显跃升，非推理模型中已非常接近Claude-3.7-Sonnet。</p><p><strong>改变：</strong>这对想靠“解锁教程”快速上手AI编程的个人开发者更直接，能更快生成可用前端代码，降低入门和原型开发成本。</p><p><strong>边界：</strong>作者同时提到其多模态能力仍待增强，若任务依赖图片识别或图文混合理解，体验提升有限。</p><p class="source">来源：<a href="https://www.cnblogs.com/longronglang/p/18792452" target="_blank" rel="noopener noreferrer">久曲健（博客园）</a></p></div></div>
+                  <h3>city2graph与PyTorch Geometric空间图学习实作</h3>
+                  <p class="synthesis">真实门槛不在建图，而在 GIS 属性向 GNN 特征的清洗转换。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/06/12/a-coding-implementation-on-spatial-graph-neural-networks-for-urban-function-inference-using-city2graph-osmnx-and-pytorch-geometric/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方开发者在把 OSMnx 生成的 NetworkX 图转成 PyTorch Geometric 时，实际遇到 `Could not infer dtype of Point` 错误，说明图里直接携带的几何对象（如 `Point`）不能原样喂给 PyG。</p><p><strong>改变：</strong>这意味着用 city2graph、OSMnx 和 PyG 搭空间图学习流程时，团队不能只做“图格式转换”，还必须先清洗或数值化节点/边属性，否则训练前的数据接入环节就会卡住。</p><p><strong>边界：</strong>这类流程对含有 shapely/geometry 字段的城市路网尤其不友好；如果用户希望直接复用 GIS 几何属性而不做特征工程，这条工作流并不省事。</p><p class="source">来源：<a href="https://stackoverflow.com/questions/73991516/osmnx-graph-to-torch-geometry-error-could-not-infer-dtype-of-point" target="_blank" rel="noopener noreferrer">Stack Overflow</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -119,24 +81,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">MYhuman-Z-image开源工作流外部测评</span>
-                    <span class="source-label">当以读书通世事 / 知乎作者《Z-Image 老少皆宜新知识，AIO模型和工作流！》 / CSDN博客《ComfyUI遇上Z-Image(2)：ComfyUI工作流》</span>
+                    <span class="badge badge-pink">gonzalomoZpop_v40 / ComfyUI 外部测评提炼</span>
+                    <span class="source-label">YouTube博主视频实测《又一个微调的模型！gonzalomoZpop_v40配合ComfyUI工作流》</span>
                   </div>
-                  <h3>MYhuman-Z-image开源工作流实测与ComfyUI教程解析</h3>
-                  <p class="synthesis">共识是它更像“能本地跑且可调”的高效率工作流模型。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116736741409322" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方教程作者实测认为，Z-Image-Turbo 仅用 8 次函数评估即可完成生成，在 H800 上可做到次秒级推理，并且在 16GB 显存的消费级设备上也能流畅运行，同时对逼真图像、中英双语文字渲染和指令遵循表现较强。</p><p><strong>改变：</strong>这意味着普通用户和小团队不用高端服务器，也能在本地 ComfyUI 工作流里获得更快的出图速度和更可用的中英文控词体验。</p><p><strong>边界：</strong>文中给出的极限速度建立在 H800 企业级 GPU 条件下，消费级显卡更多解决的是“能跑”和“较流畅”，并不等于都能达到次秒级延迟。</p><p class="source">来源：<a href="https://sakaay.com/steam/AI/ComfyUI-Zimage" target="_blank" rel="noopener noreferrer">当以读书通世事</a></p></div><div class="opinion"><p><strong>观察：</strong>知乎作者在 AIO 工作流上手中观察到，同分辨率下通常约 15 秒可出图，把 step 降到 4 步时约 7 秒一张，同时 BF16 与 FP8 版本显存差约 10GB，但两者画面风格差异不大，前者更精致、后者更自然。</p><p><strong>改变：</strong>这直接给了用户在 ComfyUI 里做硬件适配的依据：显存紧张时可优先选 FP8 换取可运行性和速度，追求细节时再切回 BF16。</p><p><strong>边界：</strong>代价是不同精度版本存在画风与精细度取舍，低 step 虽然更快，但更适合追求迭代效率的场景，不一定适合对细节稳定性要求高的成片输出。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1982593213257761934" target="_blank" rel="noopener noreferrer">知乎作者《Z-Image 老少皆宜新知识，AIO模型和工作流！》</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">MONAI实现UNet端到端3D脾脏分割流程</span>
-                    <span class="source-label">知乎专栏：3DUnet医学分割速成-MONAI</span>
-                  </div>
-                  <h3>MONAI实现UNet端到端3D脾脏分割流程</h3>
-                  <p class="synthesis">外部经验表明，这类流程的用户价值主要取决于器官定制化前处理，而非直接套用UNet模板。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/06/12/a-coding-implementation-on-monai-for-end-to-end-3d-spleen-segmentation-using-unet-on-medical-ct-volumes/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者在复现MONAI 3D UNet脾脏分割时，特别指出 `ScaleIntensityRanged` 会把CT的HU值裁剪到 `(-57,164)` 并归一化到 `(0,1)`，因为脾脏主要落在约 `50,70` HU，超出范围的信息会被主动舍弃。</p><p><strong>改变：</strong>这意味着用户若照着新闻里的端到端流程落地，真正影响效果的关键不只是UNet本身，而是前处理是否按器官特性做HU窗口裁剪；做对后可减少无关组织干扰、让训练数据更聚焦。</p><p><strong>边界：</strong>代价是该设置明显依赖器官和任务，作者也提到做liver分割时要改成 `(-100,200)`，因此这套参数不适合直接无差别迁移到其他腹部器官或不同数据分布。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/166706664" target="_blank" rel="noopener noreferrer">知乎专栏：3DUnet医学分割速成-MONAI</a></p></div></div>
+                  <h3>gonzalomoZpop_v40与ComfyUI电影皮肤流</h3>
+                  <p class="synthesis">共识是电影感更多来自完整工作流，而非模型单体。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116737311834530" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>YouTube博主在实测中认为，`gonzalomoZpop_v40`这类微调后的Z模型配合现成ComfyUI工作流，能直接打出较逼真的“电影感”效果，而不是只靠模型裸跑出图。</p><p><strong>改变：</strong>对普通用户和内容团队来说，价值不在于单换模型，而在于复用成熟工作流就能更快逼近成片质感，减少反复调参和后期修图。</p><p><strong>边界：</strong>代价是工作流本身有较高上手门槛，评论区用户直接反馈“ComfyUI很难跑起来”，说明这套方案更适合愿意折腾节点和依赖文件的人。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=rHY7mijr8g0" target="_blank" rel="noopener noreferrer">YouTube博主视频实测《又一个微调的模型！gonzalomoZpop_v40配合ComfyUI工作流》</a></p></div></div>
                 </section>
                 </div>
             </section>
