@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-06-13 17:35</title>
+  <title>独立测评 · 2026-06-14 08:38</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,35 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Hermes + Kimi 外部测评</span>
-                    <span class="source-label">知乎博主实测 / Lushbinary</span>
+                    <span class="badge badge-blue">Headroom上下文压缩层外部实测</span>
+                    <span class="source-label">技术栈 / 知乎博主评测《AI 开发者的钱袋子救星来了！最高省 95%Token，上下文压缩神器 Headroom 了解一下》</span>
                   </div>
-                  <h3>Kimi k2.7接入Hermes Agent工作流实测</h3>
-                  <p class="synthesis">共识是接入门槛低、代码能力强，但多步工作流速度可能拖后腿。</p>
+                  <h3>Headroom上下文压缩层接入实测判断</h3>
+                  <p class="synthesis">共识是省Token明显，且中小任务下精度未见明显下降。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116719175599339" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>技术栈的实测显示，把 Claude Code 在中型项目代码搜索里产生的 100 条结果交给 Headroom 压缩后，上下文从 17765 token 降到 1408 token，同时仍然找到了目标函数并给出正确修改建议。</p><p><strong>改变：</strong>这意味着开发者在代码搜索、批量读结果、再让 Agent 继续推理的链路里，可以把大段检索结果直接喂给模型而不必手工删减，API 成本和上下文爆掉的概率都会明显下降。</p><p class="source">来源：<a href="https://jishuzhan.net/article/2062414228094529538" target="_blank" rel="noopener noreferrer">技术栈</a></p></div><div class="opinion"><p><strong>观察：</strong>知乎博主的上手案例里，Headroom 将一段 10144 token 的上下文压到 1260 token，作者强调在压缩后“该找到的错误一个没漏”。</p><p><strong>改变：</strong>对经常让 Agent 读日志、排查线上问题或做 Issue 分类的团队来说，真实改变是同一轮任务可容纳更多上下文，月度 token 账单有机会从高频消耗降到可控区间。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2045881899445384301" target="_blank" rel="noopener noreferrer">知乎博主评测《AI 开发者的钱袋子救星来了！最高省 95%Token，上下文压缩神器 Headroom 了解一下》</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Kimi k2.7 接入 Hermes Agent 外部测评</span>
+                    <span class="source-label">Lushbinary / VentureBeat</span>
+                  </div>
+                  <h3>Kimi k2.7接入Hermes Agent实测一句话生成App</h3>
+                  <p class="synthesis">共识是更适合快速原型，复杂工程稳定性仍待验证。</p>
                   <a class="article-link" href="http://www.bilibili.com/video/av116741791287449" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎实测认为，把 Kimi K2.6 接进 Hermes 后，代码任务里的思考与执行稳定性、成品质量都强于同场对比的 GLM 5.1，但首 token 返回和多步 Agent 串行执行明显更慢。</p><p><strong>改变：</strong>对用 Hermes 跑生成 App、代码编排这类多步骤工作流的用户来说，产出质量更稳，但整条流水线会出现肉眼可感知的停顿，团队要在“少返工”与“更长等待时间”之间取舍。</p><p><strong>边界：</strong>不适合强时延敏感场景；作者明确提到同样任务下，Hermes 流水线接 Kimi K2.6 的单步执行时间偏长，整体节奏不如 GLM 5.1 紧凑。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2027522051460605577" target="_blank" rel="noopener noreferrer">知乎博主实测</a></p></div><div class="opinion"><p><strong>观察：</strong>Lushbinary 的 K2.7 指南认为，Hermes 本身是 provider-agnostic，接入 Kimi K2.7 Code 只需指向 Moonshot 的 OpenAI 兼容接口或 OpenRouter，对现有 Agent 工作流的模型替换门槛较低。</p><p><strong>改变：</strong>这意味着已经在用 Hermes 的开发者，不必重写整套 Agent 编排，就能把 K2.7 接进现有工作流做生成 App 或代码任务验证，迁移成本主要落在模型配置而不是流程重构。</p><p><strong>边界：</strong>这条结论更多说明“接入容易”，不直接证明 K2.7 在真实 App 生成中的速度、成功率或成本一定更优，实际收益仍取决于具体工作流设计。</p><p class="source">来源：<a href="https://lushbinary.com/blog/kimi-k2-7-code-developer-guide-benchmarks-api-hermes-agent/" target="_blank" rel="noopener noreferrer">Lushbinary</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Lushbinary 的开发者指南把 Kimi K2.7 Code 作为可接入 Hermes Agent 的编码模型来实操，强调其 256K 上下文、较低 API 成本和适合长流程代码任务的基准提升。</p><p><strong>改变：</strong>对想用一句话生成 App 的个人或团队，这意味着需求、上下文和工具调用更容易塞进同一条 Agent 工作流里，减少手工拆任务和多轮补提示。</p><p><strong>边界：</strong>这篇材料更像接入与工作流指南，缺少对复杂 App 端到端成功率的独立实测，因此更能说明上手门槛和成本结构，不能直接证明复杂项目生成足够稳定。</p><p class="source">来源：<a href="https://lushbinary.com/blog/kimi-k2-7-code-developer-guide-benchmarks-api-hermes-agent/" target="_blank" rel="noopener noreferrer">Lushbinary</a></p></div><div class="opinion"><p><strong>观察：</strong>VentureBeat 援引独立基准称，Kimi K2.7-Code 虽然主打思维 token 降低约 30% 且可直接替换现有 API，但在部分 kernel 类任务上出现回退，并且缺少 DeepSWE 提交这类更完整的工程验证。</p><p><strong>改变：</strong>这对用 Hermes Agent 做一句话生成 App 的用户意味着，简单原型和常规业务代码可能更快更省，但不能把“能生成”直接当成“能稳定交付复杂工程”，上线前仍要补人工验收。</p><p><strong>边界：</strong>边界主要在底层复杂代码和高可靠工程场景：如果任务涉及系统级实现、严格 benchmark 或持续集成验证，当前外部证据还不足以证明它比成熟方案更稳。</p><p class="source">来源：<a href="https://venturebeat.com/technology/kimi-k2-7-code-cuts-thinking-tokens-30-practitioners-say-benchmarks-dont-check-out" target="_blank" rel="noopener noreferrer">VentureBeat</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Trae对比蓝印RPA工作流替代实测</span>
-                    <span class="source-label">知乎作者《告别5000位排队！亲测有效的TRAE替代工具清单》</span>
+                    <span class="badge badge-blue">GLM-5.2 外部测评</span>
+                    <span class="source-label">知乎博主《实测GLM-5.2，国产Coding模型的又一座新高峰》</span>
                   </div>
-                  <h3>Trae对比蓝印RPA工作流替代实测</h3>
-                  <p class="synthesis">现有外部体验更集中指向Trae稳定性短板，而非可替代RPA。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116740382005269" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方用户实测反馈，Trae在改代码场景中经常出现长时间排队，且从指定GLM5模型排队严重，发展到“不指定模型也要排队”，排队人数甚至超过5000。</p><p><strong>改变：</strong>这会直接打断连续编程节奏，把原本应即时响应的辅助改代码流程变成等待流程，用户很难把它当成可稳定承接重复任务的工作流工具，更别说替代强调确定性与时效性的RPA流程。</p><p><strong>边界：</strong>这条观察主要反映的是高峰期可用性与响应稳定性问题，不足以单独证明Trae在所有编码任务上都低效，也不能直接代表其代码质量或自动化能力上限。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2030944051713790709" target="_blank" rel="noopener noreferrer">知乎作者《告别5000位排队！亲测有效的TRAE替代工具清单》</a></p></div></div>
+                  <h3>GLM-5.2百万Token与开源权重实测</h3>
+                  <p class="synthesis">外部体验更认可其编码可用性，但百万上下文细节仍待实测验证。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116743334790798" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者在提前实测后，将GLM-5.2评价为国产 Coding 模型的又一轮跃升，并特别点出其继续提供开源权重。</p><p><strong>改变：</strong>对不能稳定使用海外模型的开发者和团队，这意味着在代码生成与 Agent 工作流里，多了一个可本地部署或国产替代的高可用选项。</p><p><strong>边界：</strong>片段里没有给出具体任务、错误率、长上下文稳定性或成本数据，因此暂时不适合据此判断其在百万 Token 场景下的真实上限。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2049246340262138572" target="_blank" rel="noopener noreferrer">知乎博主《实测GLM-5.2，国产Coding模型的又一座新高峰》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">Stack Overflow</span>
+                    <span class="badge badge-blue">QwenPaw Agent Workspace外部测评</span>
+                    <span class="source-label">知乎作者《QwenPaw Agent 设计解析》 / 掘金作者《QwenPaw Agent 实现原理深度剖析》 / CSDN博客《QwenPaw：开源本地AI智能体工作站部署与实战指南》；简书《“国产龙虾”QwenPaw使用笔记》</span>
                   </div>
-                  <h3>city2graph与PyTorch Geometric空间图学习实作</h3>
-                  <p class="synthesis">真实门槛不在建图，而在 GIS 属性向 GNN 特征的清洗转换。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/06/12/a-coding-implementation-on-spatial-graph-neural-networks-for-urban-function-inference-using-city2graph-osmnx-and-pytorch-geometric/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方开发者在把 OSMnx 生成的 NetworkX 图转成 PyTorch Geometric 时，实际遇到 `Could not infer dtype of Point` 错误，说明图里直接携带的几何对象（如 `Point`）不能原样喂给 PyG。</p><p><strong>改变：</strong>这意味着用 city2graph、OSMnx 和 PyG 搭空间图学习流程时，团队不能只做“图格式转换”，还必须先清洗或数值化节点/边属性，否则训练前的数据接入环节就会卡住。</p><p><strong>边界：</strong>这类流程对含有 shapely/geometry 字段的城市路网尤其不友好；如果用户希望直接复用 GIS 几何属性而不做特征工程，这条工作流并不省事。</p><p class="source">来源：<a href="https://stackoverflow.com/questions/73991516/osmnx-graph-to-torch-geometry-error-could-not-infer-dtype-of-point" target="_blank" rel="noopener noreferrer">Stack Overflow</a></p></div></div>
+                  <h3>QwenPaw Agent Workspace工作流搭建教程</h3>
+                  <p class="synthesis">共识是它更像可扩展Agent工作台，而非轻量聊天工具。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/06/13/how-to-build-a-qwenpaw-agent-workspace-with-custom-skills-model-providers-console-access-and-streaming-api-testing/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者将QwenPaw拆解为基于Python、构建在AgentScope之上的多Agent框架，并指出其通过FastAPI暴露Web服务接口，核心是面向开发者做可扩展的工作流编排。</p><p><strong>改变：</strong>这意味着教程里搭建Agent Workspace不只是装一个聊天界面，而是更接近给团队落一套可继续扩展、可接服务接口的Agent工作台。</p><p><strong>边界：</strong>这类能力更偏开发者和工程化使用，非技术用户上手成本会高于单纯对话式产品。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2031700316975009820" target="_blank" rel="noopener noreferrer">知乎作者《QwenPaw Agent 设计解析》</a></p></div><div class="opinion"><p><strong>观察：</strong>掘金文章明确把QwenPaw定义为基于AgentScope Runtime的“多智能体操作系统”，而不是简单聊天机器人，且可从代码路径看到其Agent组织方式。</p><p><strong>改变：</strong>对用户和团队的真实改变在于，Workspace教程搭出的流程更适合拆分多角色协作、把任务做成可组合Agent，而不是只做单轮问答演示。</p><p><strong>边界：</strong>如果场景只是轻量问答或一次性调用模型，这种多Agent形态可能显得更重，维护复杂度也更高。</p><p class="source">来源：<a href="https://juejin.cn/post/7645147490087403530" target="_blank" rel="noopener noreferrer">掘金作者《QwenPaw Agent 实现原理深度剖析》</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -81,13 +92,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">gonzalomoZpop_v40 / ComfyUI 外部测评提炼</span>
-                    <span class="source-label">YouTube博主视频实测《又一个微调的模型！gonzalomoZpop_v40配合ComfyUI工作流》</span>
+                    <span class="badge badge-pink">Fable 5与Blender MCP外部测评</span>
+                    <span class="source-label">I Tested Claude Fable 5 in Blender - YouTube / Blender-MCP + Claude Code：用自然语言驱动AI自动化建模，零基础也能...</span>
                   </div>
-                  <h3>gonzalomoZpop_v40与ComfyUI电影皮肤流</h3>
-                  <p class="synthesis">共识是电影感更多来自完整工作流，而非模型单体。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116737311834530" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>YouTube博主在实测中认为，`gonzalomoZpop_v40`这类微调后的Z模型配合现成ComfyUI工作流，能直接打出较逼真的“电影感”效果，而不是只靠模型裸跑出图。</p><p><strong>改变：</strong>对普通用户和内容团队来说，价值不在于单换模型，而在于复用成熟工作流就能更快逼近成片质感，减少反复调参和后期修图。</p><p><strong>边界：</strong>代价是工作流本身有较高上手门槛，评论区用户直接反馈“ComfyUI很难跑起来”，说明这套方案更适合愿意折腾节点和依赖文件的人。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=rHY7mijr8g0" target="_blank" rel="noopener noreferrer">YouTube博主视频实测《又一个微调的模型！gonzalomoZpop_v40配合ComfyUI工作流》</a></p></div></div>
+                  <h3>Fable 5与Blender MCP全流程实测</h3>
+                  <p class="synthesis">共识是显著提速原型制作，但离稳定自动出成片还有人工修正成本。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116741808201077" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>YouTube博主实测把Fable 5通过Claude Code接入官方Blender MCP后，能从空白场景连续生成静物棚拍、写实科幻小巷到完整动画，说明它不只是在单步建模，而是能串起场景搭建、材质氛围和动画流程。</p><p><strong>改变：</strong>对个人创作者和小团队来说，这把“从想法到可演示3D样片”的首轮产出门槛明显拉低了，尤其适合快速做概念验证、风格草图和演示级素材。</p><p><strong>边界：</strong>材料没有证明它能稳定替代专业美术精修；更像是先把长流程跑通，后续仍可能需要人工细化和审美修正。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=hgl2zHnWwMg" target="_blank" rel="noopener noreferrer">I Tested Claude Fable 5 in Blender - YouTube</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方上手文章提到，Blender-MCP会把自然语言需求转成Blender操作指令，但当AI生成结果不理想时，作者仍需手动改Blender参数，甚至直接改Python脚本。</p><p><strong>改变：</strong>这意味着它最真实的价值不是“零人工出片”，而是把重复建模操作和首版搭建自动化，让会调参或会脚本的人把时间集中在修正和迭代上。</p><p><strong>边界：</strong>不适合把它当成完全黑盒的一键建模器；如果用户不会Blender基础操作或不愿处理脚本/插件维护，收益会打折。</p><p class="source">来源：<a href="https://www.cnblogs.com/wgwyanfs/p/20314788" target="_blank" rel="noopener noreferrer">Blender-MCP + Claude Code：用自然语言驱动AI自动化建模，零基础也能...</a></p></div></div>
                 </section>
                 </div>
             </section>
