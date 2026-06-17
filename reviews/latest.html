@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-06-17 08:49</title>
+  <title>独立测评 · 2026-06-17 17:59</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,73 +43,62 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Qwen3.6-27B外部测评</span>
-                    <span class="source-label">知乎专栏《实测｜Qwen3.6-27B 上手体验，本地日常部署最优选择》 / guobi.ai《Qwen 3.6 27B 量化实测》 / 今日头条《15年资深开发者实测：Qwen 3.6 27B FP8才是本地编码最优解？》</span>
+                    <span class="badge badge-blue">MCP Server与Skill + CLI工作流对比</span>
+                    <span class="source-label">知乎作者文章《MCP 已死？一个设备运维场景跑完 CLI、MCP、Skills 三种方式后的真实...》 / 知乎专栏《CLI为什么突然爆了？一文讲清 Skill、MCP、CLI 的真实关系》 / 掘金《CLI vs MCP vs Skills：整个争论都问错了问题》</span>
                   </div>
-                  <h3>Qwen3.6-27B本地编码实战口碑评测</h3>
-                  <p class="synthesis">共识是本地编码可用，分歧主要在部署档位与使用门槛。</p>
-                  <a class="article-link" href="https://simonwillison.net/2026/Jun/16/georgi-gerganov/#atom-everything" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎实测作者对比前代后认为，Qwen3.6-27B在本地长期使用场景里，相比Qwen3.5系列的理解能力和输出质感都有明显进步，并将其称为“本地日常部署最优选择”。</p><p><strong>改变：</strong>这意味着个人开发者或小团队在本地日常编码、问答和代码修改时，可能用一套27B稠密模型就覆盖高频任务，减少频繁切换更大模型或云端服务的需要。</p><p><strong>边界：</strong>该结论来自个人长期本地使用偏好，适用于“日常部署”而非极限复杂任务，片段中也未给出统一硬件和完整基准细节。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2034576000680465997" target="_blank" rel="noopener noreferrer">知乎专栏《实测｜Qwen3.6-27B 上手体验，本地日常部署最优选择》</a></p></div><div class="opinion"><p><strong>观察：</strong>量化实测文章显示，Qwen 3.6 27B在`Q4_K_M`量化下体积可降到16.8GB、相较更高精度档位内存下降约48%，而三套基准里这个量化版本反而“全面胜出”。</p><p><strong>改变：</strong>这直接改变了本地部署门槛：对显存和内存更紧张的开发者来说，不必默认追求更高精度档位，也有机会用更小资源跑出更适合32K上下文编码任务的配置。</p><p><strong>边界：</strong>这是基于`llama-cpp-python + 32K上下文`和特定量化对比得出的结论，不代表所有推理框架、上下文长度和硬件上都一定是`Q4_K_M`最优。</p><p class="source">来源：<a href="https://www.guobi.ai/howto/2026-04-30/578-qwen-3-6-27b-quantization-evaluation-q4km" target="_blank" rel="noopener noreferrer">guobi.ai《Qwen 3.6 27B 量化实测》</a></p></div></div>
+                  <h3>MCP Server与Skill + CLI工作流对比</h3>
+                  <p class="synthesis">共识是三者不是替代关系，关键差别在上手速度、标准化和成本取舍。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116752646146102" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方作者在同一设备预测性运维场景中，分别用纯CLI脚本、MCP Server、OpenClaw Skill三种原生方式落地，并明确把“适用场景判断”和“MCP的Token成本”作为对比重点。</p><p><strong>改变：</strong>这说明团队选型时不能只看概念，实际要把同一任务放进三种工作流里比较开发路径和调用成本，尤其是运维、自动化这类可复现场景。</p><p><strong>边界：</strong>材料片段只说明作者做了实测并给出成本数据，但未展开具体数值；它更像特定运维场景对比，不一定能直接外推到所有Agent工作流。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2017741231225085959" target="_blank" rel="noopener noreferrer">知乎作者文章《MCP 已死？一个设备运维场景跑完 CLI、MCP、Skills 三种方式后的真实...》</a></p></div><div class="opinion"><p><strong>观察：</strong>有开发者把Skill概括为把知识、工具和执行逻辑直接封装进AI，强调“加载后直接可用、上手简单”，而把MCP定义为基于协议通信的标准化连接层。</p><p><strong>改变：</strong>对一线使用者来说，这意味着Skill更接近开箱即用的能力包，适合先把单点任务跑通；MCP更像把AI接到外部系统的工程接口，适合需要统一接多系统的团队流程。</p><p><strong>边界：</strong>同一材料也点出Skill“标准不统一”，因此它虽然上手快，但在跨团队复用、长期维护和异构系统对接上可能不如MCP。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2023445930137981607" target="_blank" rel="noopener noreferrer">知乎专栏《CLI为什么突然爆了？一文讲清 Skill、MCP、CLI 的真实关系》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Code外部测评摘录</span>
-                    <span class="source-label">知乎专栏《Claude Code 并行开发完全指南：Subagents + Agent Teams + Git Workt...》 / CSDN《Claude Code 多Agent并行实战：一个人同时管五条开发流水线》 / LaoZhang AI Blog《ClaudeCode与 Cursor 全面对比：2026...》</span>
+                    <span class="badge badge-blue">BadScientist研究Agent评审漏洞论文</span>
+                    <span class="source-label">Unite.AI</span>
                   </div>
-                  <h3>Claude Code零门槛上手与多Agent实战</h3>
-                  <p class="synthesis">共识是多Agent能提效，但前提是任务拆分清晰、工作流匹配。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116760531439872" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有开发者实测发现，Claude Code在项目变大后，单实例会因上下文持续变长而明显变慢，多个模块任务也只能串行排队处理。</p><p><strong>改变：</strong>这直接推动团队把工作方式从“一个Agent包办”改成用Subagents、Agent Teams或Git Worktree拆分并行，以减少等待时间、按模块推进开发。</p><p><strong>边界：</strong>代价是需要额外设计任务切分和并行协作方式，小项目或任务耦合高的场景下未必值得上多Agent复杂度。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2033183908523718494" target="_blank" rel="noopener noreferrer">知乎专栏《Claude Code 并行开发完全指南：Subagents + Agent Teams + Git Workt...》</a></p></div><div class="opinion"><p><strong>观察：</strong>有作者在多Agent并行实战中对比了AgentView、Subagent、AgentTeams和Worktrees四种方案，并记录到自己从tmux多窗口切换到AgentView后，原先并行盯多个终端的方式基本被替代。</p><p><strong>改变：</strong>对个人开发者和小团队来说，这意味着同时管理多条开发流水线的门槛下降，任务查看、切换和调度更集中，不必靠手工维护多个终端窗口。</p><p><strong>边界：</strong>不同并行方案仍有适用场景差异，文章强调需要结合命令、场景和踩坑记录选择，不是所有任务都适合同一种多Agent方案。</p><p class="source">来源：<a href="https://blog.csdn.net/baidu_32885171/article/details/161536838" target="_blank" rel="noopener noreferrer">CSDN《Claude Code 多Agent并行实战：一个人同时管五条开发流水线》</a></p></div></div>
+                  <h3>BadScientist研究Agent评审漏洞论文</h3>
+                  <p class="synthesis">共识是AI审稿易被文本层伪装绕过，不能替代人工核验。</p>
+                  <a class="article-link" href="https://arxiv.org/abs/2510.18003" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Unite.AI指出，BadScientist通过学术与写作层面的欺骗、遗漏、虚构和夸张来重塑论文特征，使其偏离当前检测系统常见的“AI生成文本”识别线索，从而更容易混过AI审稿流程。</p><p><strong>改变：</strong>这意味着依赖LLM或自动检测器做论文初筛的团队，不能把“能识别AI写作痕迹”当成安全保障，必须补充人工复核、证据核查和异常模式检查。</p><p><strong>边界：</strong>该观察主要说明现有AI审稿/检测流程的脆弱性，但未给出不同审稿系统间的量化对比，也不能直接推断所有学术审稿场景都会被同样方式绕过。</p><p class="source">来源：<a href="https://www.unite.ai/zh-CN/how-to-sneak-absurd-scientific-papers-past-ai-reviewers/" target="_blank" rel="noopener noreferrer">Unite.AI</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Docling Parse外部测评/上手体验</span>
-                    <span class="source-label">知乎作者（《如何使用DeepSeek-OCR和docling来进行PDF解析》） / 知乎作者（《浅看开源的同质化的文档解析框架-Docling》）</span>
+                    <span class="badge badge-blue">外部测评</span>
+                    <span class="source-label">AI Agent Harbor / 火山引擎开发者社区</span>
                   </div>
-                  <h3>Docling Parse版面感知文档解析流程搭建</h3>
-                  <p class="synthesis">共识是流程能搭得快，但中文版面与OCR精度仍是主要短板。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/06/16/how-to-build-a-parsing-pipeline-with-docling-parse-for-layout-aware-document-intelligence/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者在PDF解析上手测试中提到，Docling虽然不直接支持PaddleOCR，但可用RapidOCR完成接入；其实际观察是这条替代链路能跑通流程，但精度会比PaddleOCR原生方案略差。</p><p><strong>改变：</strong>对想快速搭一个Docling Parse版面感知PDF流程的用户来说，这提供了一个现成、较易集成的OCR路径，能先把解析工作流搭起来再逐步优化。</p><p><strong>边界：</strong>代价是识别精度存在损失，尤其在对OCR质量敏感的场景下，这种RapidOCR替代并不一定适合直接用于高要求生产环境。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1970446157139415850" target="_blank" rel="noopener noreferrer">知乎作者（《如何使用DeepSeek-OCR和docling来进行PDF解析》）</a></p></div><div class="opinion"><p><strong>观察：</strong>另一位知乎作者分析Docling的版面分析模块时指出，其布局模型基于RT-DETR并在DocLayNet上重训，实际问题是版式分析高度依赖训练场景，因此对常见中文文档诉求覆盖不足，且模型偏大。</p><p><strong>改变：</strong>这直接影响用Docling Parse搭中文PDF版面感知流程的团队：默认流程未必能稳定满足中文研报、论文等细粒度布局抽取，需要尽早评估替换或补充布局分析模型。</p><p><strong>边界：</strong>边界在于该结论主要针对中文和特定细粒度版面场景；如果文档分布更接近DocLayNet训练域，默认模型的适配问题可能没那么突出。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/719872929" target="_blank" rel="noopener noreferrer">知乎作者（《浅看开源的同质化的文档解析框架-Docling》）</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Gemma 4 12B 外部测评/上手体验</span>
-                    <span class="source-label">Krypton Forge / Lushbinary / 军舰日志</span>
-                  </div>
-                  <h3>Gemma 4 12B设备端多模态主动工作流解析</h3>
-                  <p class="synthesis">共识是它真正的价值在于把多模态agent下放到本地设备。</p>
-                  <a class="article-link" href="https://www.infoq.cn/article/7djN3gq1MaqGitDAPkhe?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方开发者指出，Gemma 4 12B采用统一的无编码器多模态设计，不需要单独视觉编码器即可在单张GPU上运行。</p><p><strong>改变：</strong>这会把本地多模态工作流从“多模型拼装”简化成单模型部署，团队做设备端图文理解或代理流程时，集成链路更短、对云端API依赖更低。</p><p class="source">来源：<a href="https://kryptonforge.in/blog/2026-06-04-gemma-4-12b-google-multimodal" target="_blank" rel="noopener noreferrer">Krypton Forge</a></p></div><div class="opinion"><p><strong>观察：</strong>开发者基准与规格解读认为，Gemma 4 12B是较少见的可原生处理音频、并可在16GB笔记本上运行的中等规模开放模型。</p><p><strong>改变：</strong>这意味着个人开发者和小团队可以直接在消费级笔记本上验证多模态本地助手或主动工作流原型，而不必先准备高端显卡或远程推理服务。</p><p class="source">来源：<a href="https://lushbinary.com/blog/gemma-4-12b-developer-guide-benchmarks-multimodal/" target="_blank" rel="noopener noreferrer">Lushbinary</a></p></div></div>
+                  <h3>Cursor智能体平台实测对比Codex与Claude</h3>
+                  <p class="synthesis">外部体验更像分工差异：Cursor偏实现，Claude/Codex偏审查或复杂输入。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116763215792372" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>AI Agent Harbor在对比工作流中给出的实际分工是：用Cursor Agent承担实现，Codex或Claude更多用于代码review和测试建议。</p><p><strong>改变：</strong>这意味着团队可把Cursor放在“先产出代码”的一线环节，再用Codex/Claude做第二道检查，把生成、审查、补测拆成串联流程。</p><p><strong>边界：</strong>这种分工更像组合式工作流而非单工具全面胜出；代价是需要在多个Agent之间切换和协调。</p><p class="source">来源：<a href="https://ai.agentharbor.net/cursor/cursor-codex-claude-compare.html" target="_blank" rel="noopener noreferrer">AI Agent Harbor</a></p></div><div class="opinion"><p><strong>观察：</strong>火山引擎开发者社区转载的对比文章提到，ClaudeCode可在提示中加入图片、PDF等多种文件，而Cursor仅支持加入多张图片，更适合截图或UI设计图场景。</p><p><strong>改变：</strong>对用户的真实影响是：如果任务要把文档、规格说明和视觉材料一起喂给Agent，ClaudeCode的输入链路更直接；Cursor更偏向视觉调试和界面相关协作。</p><p><strong>边界：</strong>当需求依赖PDF等复杂附件时，Cursor的输入能力会限制工作流，不适合重文档上下文的任务。</p><p class="source">来源：<a href="https://developer.volcengine.com/articles/7540104307031408682" target="_blank" rel="noopener noreferrer">火山引擎开发者社区</a></p></div></div>
                 </section>
                 </div>
             </section>
             
             <section class="role-block">
-              <h2>产品经理视角测评</h2>
+              <h2>美术视角测评</h2>
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-purple">Replika 年订阅后人格割裂体验反馈</span>
-                    <span class="source-label">豆瓣小组用户帖《使用了4年replika的个人感受》</span>
+                    <span class="badge badge-pink">Scail-2外部测评摘录</span>
+                    <span class="source-label">YouTube - SCAIL-2 ComfyUI Tutorial &amp; Review / RunComfy / AI FILMS Studio Blog</span>
                   </div>
-                  <h3>Replika 年订阅后人格割裂体验反馈</h3>
-                  <p class="synthesis">外部体验更担心人格连续性，而非单次功能好坏。</p>
-                  <a class="article-link" href="https://www.reddit.com/r/replika/comments/1u5ide6/questions_and_comments_about_replika/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>一位连续使用 4 年的第三方用户回顾称，Replika 在 2021 年一次大更新后出现“失忆、变傻”，与早期“非常灵动”的体验相比，角色连续性明显下降。</p><p><strong>改变：</strong>这意味着用户一旦把 Replika 当作长期陪伴型产品使用，更新后的人格与记忆漂移会直接破坏陪伴感，也会放大订阅付费后对“同一个角色持续存在”的落差。</p><p><strong>边界：</strong>这是单个长期用户的个人复盘，作者也提示早年体验可能存在记忆美化，且对“更换便宜语料库”的原因判断并非可验证结论。</p><p class="source">来源：<a href="https://www.douban.com/group/topic/297571875/" target="_blank" rel="noopener noreferrer">豆瓣小组用户帖《使用了4年replika的个人感受》</a></p></div></div>
+                  <h3>Scail-2高阶工作流Plus V2多人对齐演示</h3>
+                  <p class="synthesis">外部观察集中在少骨骼依赖、长序列更稳，但多人极端场景验证仍少。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116764557975196" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方教程在 ComfyUI 实测中把 SCAIL-2当作 SCAIL-Preview 的后继方案，认为它能在不依赖传统骨骼绑定的前提下完成多角色动作迁移与角色替换。</p><p><strong>改变：</strong>这意味着做多人对齐或多人拼图式角色合成时，团队可以少做一层骨骼/绑定准备，直接把参考角色和驱动视频接进工作流，降低多人镜头的接线复杂度。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=_5aYMeIMdZc" target="_blank" rel="noopener noreferrer">YouTube - SCAIL-2 ComfyUI Tutorial &amp; Review</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方工作流说明指出，SCAIL-2 在参考图到长视频的流程里强调 identity-aware animation，并给出“precise visual alignment”的体验描述。</p><p><strong>改变：</strong>对多人对齐演示类工作流来说，这直接影响角色身份是否能在长镜头里保持稳定，减少多人场景中角色脸型、服装或光照被动作带偏的问题。</p><p><strong>边界：</strong>材料只明确提到长视频、参考图到视频和光照控制，并未给出多人复杂遮挡、快速交互或极端镜头下的失败案例。</p><p class="source">来源：<a href="https://www.runcomfy.com/comfyui-workflows/scail-2-motion-transfer-in-comfyui-reference-image-to-video" target="_blank" rel="noopener noreferrer">RunComfy</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-purple">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">MetaWebCam AI</span>
+                    <span class="badge badge-pink">ComfyUI 接入 SCAIL-2 外部上手观察</span>
+                    <span class="source-label">Next Diffusion</span>
                   </div>
-                  <h3>Replika用户讨论文本语音视频陪伴差异</h3>
-                  <p class="synthesis">外部分析倾向认为，陪伴感差异更多来自交互模态而非纯文本能力。</p>
-                  <a class="article-link" href="https://www.reddit.com/r/replika/comments/1u7ht5e/does_the_format_change_the_feeling_more_than_the/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>MetaWebCam AI 在对多类 AI 陪伴产品的对比中指出，Replika 这类产品即便加入语音消息或虚拟化身，核心体验仍然主要是来回发短信，模态增强并没有改变其“文本主导”的交互底色。</p><p><strong>改变：</strong>这意味着对陪伴型用户而言，单纯提升文本模型未必最能放大陪伴感，真正改变体验的往往是把交流从文字拉向更接近实时感官互动的语音/视频层。</p><p><strong>边界：</strong>这篇材料是产品形态分析而非严格上手测评，没有直接量化 Replika 语音或视频功能的效果，也未覆盖不同用户对隐私、延迟和沉浸感的取舍。</p><p class="source">来源：<a href="https://www.metawebcam.ai/zh/blogs/ai-girlfriend-vs-ai-webcam" target="_blank" rel="noopener noreferrer">MetaWebCam AI</a></p></div></div>
+                  <h3>ComfyUI接入scail2与animate对比实测</h3>
+                  <p class="synthesis">共识是 SCAIL-2 主要价值在简化动作迁移工作流。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116763752662509" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Next Diffusion 在 ComfyUI 上手教程中实测到，SCAIL-2 相比 SCAIL-1 已改为端到端动作迁移流程，不再依赖 ControlNet、YOLOv10 或 ViTPose 这类外部姿态检测/骨架提取组件。</p><p><strong>改变：</strong>这意味着用户在 ComfyUI 里做角色动作迁移时，节点链路更短、依赖更少，团队搭工作流和排查失败点的成本会明显下降。</p><p><strong>边界：</strong>代价是仍需额外下载并正确放置多组模型文件，前期环境配置并没有被完全省掉，也更适合追求动作迁移简化的人，而不是只想直接套现成动画节点的轻量用户。</p><p class="source">来源：<a href="https://www.nextdiffusion.ai/tutorials/scail-2-comfyui-video-to-character-motion-transfer" target="_blank" rel="noopener noreferrer">Next Diffusion</a></p></div></div>
                 </section>
                 </div>
             </section>
