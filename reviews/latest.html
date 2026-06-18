@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-06-17 17:59</title>
+  <title>独立测评 · 2026-06-18 08:51</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,35 +43,35 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">MCP Server与Skill + CLI工作流对比</span>
-                    <span class="source-label">知乎作者文章《MCP 已死？一个设备运维场景跑完 CLI、MCP、Skills 三种方式后的真实...》 / 知乎专栏《CLI为什么突然爆了？一文讲清 Skill、MCP、CLI 的真实关系》 / 掘金《CLI vs MCP vs Skills：整个争论都问错了问题》</span>
+                    <span class="badge badge-blue">Kimi K2.7 配合 Codex/Claude Code 的外部测评</span>
+                    <span class="source-label">OfoxAI（博客园） / xdmao（博客园） / YouTube / Best LLM Pair for Coding? Kimi K2.7 + Codex/Claude Code</span>
                   </div>
-                  <h3>MCP Server与Skill + CLI工作流对比</h3>
-                  <p class="synthesis">共识是三者不是替代关系，关键差别在上手速度、标准化和成本取舍。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116752646146102" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方作者在同一设备预测性运维场景中，分别用纯CLI脚本、MCP Server、OpenClaw Skill三种原生方式落地，并明确把“适用场景判断”和“MCP的Token成本”作为对比重点。</p><p><strong>改变：</strong>这说明团队选型时不能只看概念，实际要把同一任务放进三种工作流里比较开发路径和调用成本，尤其是运维、自动化这类可复现场景。</p><p><strong>边界：</strong>材料片段只说明作者做了实测并给出成本数据，但未展开具体数值；它更像特定运维场景对比，不一定能直接外推到所有Agent工作流。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2017741231225085959" target="_blank" rel="noopener noreferrer">知乎作者文章《MCP 已死？一个设备运维场景跑完 CLI、MCP、Skills 三种方式后的真实...》</a></p></div><div class="opinion"><p><strong>观察：</strong>有开发者把Skill概括为把知识、工具和执行逻辑直接封装进AI，强调“加载后直接可用、上手简单”，而把MCP定义为基于协议通信的标准化连接层。</p><p><strong>改变：</strong>对一线使用者来说，这意味着Skill更接近开箱即用的能力包，适合先把单点任务跑通；MCP更像把AI接到外部系统的工程接口，适合需要统一接多系统的团队流程。</p><p><strong>边界：</strong>同一材料也点出Skill“标准不统一”，因此它虽然上手快，但在跨团队复用、长期维护和异构系统对接上可能不如MCP。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2023445930137981607" target="_blank" rel="noopener noreferrer">知乎专栏《CLI为什么突然爆了？一文讲清 Skill、MCP、CLI 的真实关系》</a></p></div></div>
+                  <h3>Kimi K2.7配合Codex与Claude Code编程实测</h3>
+                  <p class="synthesis">共识是：Kimi 更适合降本分流，Claude 仍守住高难任务。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116758669302768" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有实测对比认为，Kimi K2.7-Code 在长上下文和 token 效率上明显进步，价格也比 Claude 更低，但复杂重构和多文件理解仍是 Claude Opus 4.7 更强。</p><p><strong>改变：</strong>这意味着团队在 Codex/Claude Code 工作流里，可以把大上下文喂料、常规改写和高频试错先交给 Kimi，真正困难的重构与跨文件收敛再留给 Claude，从而压低整体成本。</p><p><strong>边界：</strong>如果任务核心是复杂重构、深层代码理解或多文件联动，Kimi 仍不适合作为单一主力模型。</p><p class="source">来源：<a href="https://www.cnblogs.com/OfoxAI/p/20506569" target="_blank" rel="noopener noreferrer">OfoxAI（博客园）</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方拆解指出，Kimi K2.7-Code 在 MCP Mark Verified 上拿到 81.1，首次超过 Claude Opus 4.8，同时推理 token 削减约 30%，且定价低于闭源模型。</p><p><strong>改变：</strong>对依赖 Agent 循环和工具调用的编程流程来说，Kimi 更适合承担高频调用、长链路执行这类“烧 token”的环节，能直接改善 Codex/Claude Code 混合使用时的成本结构。</p><p><strong>边界：</strong>这类优势主要体现在工具调用和 Agent 循环效率，不等于它在所有代码理解与生成任务上都全面强于 Claude。</p><p class="source">来源：<a href="https://www.cnblogs.com/xdmao/articles/20524660" target="_blank" rel="noopener noreferrer">xdmao（博客园）</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">BadScientist研究Agent评审漏洞论文</span>
-                    <span class="source-label">Unite.AI</span>
+                    <span class="badge badge-blue">VibeThinker-3B外部测评</span>
+                    <span class="source-label">Sebastian Raschka / 机器之心（知乎专栏转载）</span>
                   </div>
-                  <h3>BadScientist研究Agent评审漏洞论文</h3>
-                  <p class="synthesis">共识是AI审稿易被文本层伪装绕过，不能替代人工核验。</p>
-                  <a class="article-link" href="https://arxiv.org/abs/2510.18003" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Unite.AI指出，BadScientist通过学术与写作层面的欺骗、遗漏、虚构和夸张来重塑论文特征，使其偏离当前检测系统常见的“AI生成文本”识别线索，从而更容易混过AI审稿流程。</p><p><strong>改变：</strong>这意味着依赖LLM或自动检测器做论文初筛的团队，不能把“能识别AI写作痕迹”当成安全保障，必须补充人工复核、证据核查和异常模式检查。</p><p><strong>边界：</strong>该观察主要说明现有AI审稿/检测流程的脆弱性，但未给出不同审稿系统间的量化对比，也不能直接推断所有学术审稿场景都会被同样方式绕过。</p><p class="source">来源：<a href="https://www.unite.ai/zh-CN/how-to-sneak-absurd-scientific-papers-past-ai-reviewers/" target="_blank" rel="noopener noreferrer">Unite.AI</a></p></div></div>
+                  <h3>VibeThinker-3B开源小模型本地实测表现</h3>
+                  <p class="synthesis">共识是本地小模型上限被抬高，但实战泛化仍待验证。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116765598224457" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Sebastian Raschka 的首轮分析认为，VibeThinker-3B 作为 3B 级小模型给出了“很强的小模型结果”，尤其说明其后训练方案在可验证推理/编程方向上做出了明显效果。</p><p><strong>改变：</strong>这意味着想在本地部署的小团队或个人开发者，可以把它当作“低参数、偏推理/代码”的候选模型做试点，而不必一开始就依赖更大、更贵的云端模型。</p><p><strong>边界：</strong>他同时明确提醒，是否真能在实际使用中站得住，还需要接下来几天的真实任务验证，现阶段更像是强势首印象，不适合直接当成已被长期实战证明的生产基座。</p><p class="source">来源：<a href="https://sebastianraschka.com/blog/2026/vibethinker-3b-post-training.html" target="_blank" rel="noopener noreferrer">Sebastian Raschka</a></p></div><div class="opinion"><p><strong>观察：</strong>机器之心的外部解读指出，VibeThinker-3B 在一些“难度可验证”的推理任务，尤其编程类评测中，已经进入 Gemini 3 Pro、GPT-5 high、Claude Opus 4.5 等前沿模型所在的性能区间，但模型体积远小于这些对手。</p><p><strong>改变：</strong>对用户的直接意义是，本地可运行的小模型不再只适合轻量补全，也可能承担一部分可校验的代码与推理任务，从而降低显存、部署和调用成本。</p><p><strong>边界：</strong>这类优势目前主要落在“可验证任务”与编程评测上，材料没有证明它在开放式对话、长期稳定性或更广泛通用任务上也同样接近大模型。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2050713575539397300" target="_blank" rel="noopener noreferrer">机器之心（知乎专栏转载）</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评</span>
-                    <span class="source-label">AI Agent Harbor / 火山引擎开发者社区</span>
+                    <span class="badge badge-blue">Kimi K2.7外部测评</span>
+                    <span class="source-label">YouTube 博主评测《KimiK2.7Code Rivals Opus4.8 And It&#x27;s 5× Cheaper!》 / Build Fast With AI</span>
                   </div>
-                  <h3>Cursor智能体平台实测对比Codex与Claude</h3>
-                  <p class="synthesis">外部体验更像分工差异：Cursor偏实现，Claude/Codex偏审查或复杂输入。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116763215792372" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>AI Agent Harbor在对比工作流中给出的实际分工是：用Cursor Agent承担实现，Codex或Claude更多用于代码review和测试建议。</p><p><strong>改变：</strong>这意味着团队可把Cursor放在“先产出代码”的一线环节，再用Codex/Claude做第二道检查，把生成、审查、补测拆成串联流程。</p><p><strong>边界：</strong>这种分工更像组合式工作流而非单工具全面胜出；代价是需要在多个Agent之间切换和协调。</p><p class="source">来源：<a href="https://ai.agentharbor.net/cursor/cursor-codex-claude-compare.html" target="_blank" rel="noopener noreferrer">AI Agent Harbor</a></p></div><div class="opinion"><p><strong>观察：</strong>火山引擎开发者社区转载的对比文章提到，ClaudeCode可在提示中加入图片、PDF等多种文件，而Cursor仅支持加入多张图片，更适合截图或UI设计图场景。</p><p><strong>改变：</strong>对用户的真实影响是：如果任务要把文档、规格说明和视觉材料一起喂给Agent，ClaudeCode的输入链路更直接；Cursor更偏向视觉调试和界面相关协作。</p><p><strong>边界：</strong>当需求依赖PDF等复杂附件时，Cursor的输入能力会限制工作流，不适合重文档上下文的任务。</p><p class="source">来源：<a href="https://developer.volcengine.com/articles/7540104307031408682" target="_blank" rel="noopener noreferrer">火山引擎开发者社区</a></p></div></div>
+                  <h3>Kimi K2.7开源评测对比Opus 4.8与GPT 5.5</h3>
+                  <p class="synthesis">外部观点集中在：编程能力逼近高端闭源，但真正价值在更低成本接入现有工作流。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116765564608471" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方视频评测认为，Kimi K2.7 Code在 agentic coding 任务上已经能与 Opus 4.8 对打，同时运行成本约低 5 倍。</p><p><strong>改变：</strong>对需要大量自动改码、跑代理式编程流程的团队来说，这意味着在接近高端闭源模型表现的前提下，能更低成本地扩大调用量和实验频次。</p><p><strong>边界：</strong>该结论主要限定在 coding/agentic 任务，不等于它在通用问答或所有复杂场景都全面优于 Opus 4.8 或 GPT 5.5。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=qBur-FQ2Qf8" target="_blank" rel="noopener noreferrer">YouTube 博主评测《KimiK2.7Code Rivals Opus4.8 And It&#x27;s 5× Cheaper!》</a></p></div><div class="opinion"><p><strong>观察：</strong>有开发者评测提到，Kimi K2.7 Code可以直接接入 Claude Code 工作流，只需把 Sonnet/Opus 的模型位指向 Kimi API，并建议在编码任务里开启 `max` effort。</p><p><strong>改变：</strong>这对已在用 Claude Code 的个人和团队意味着迁移门槛较低，可以不重做整套工具链，就把 Kimi K2.7 当作替代模型接入现有开发流程。</p><p><strong>边界：</strong>代价是需要按其推荐配置使用高思考强度模式，说明它更适合重编码/重推理任务，轻量或低延迟场景未必划算。</p><p class="source">来源：<a href="https://www.buildfastwithai.com/blogs/kimi-k2-7-code-review-2026" target="_blank" rel="noopener noreferrer">Build Fast With AI</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -81,24 +81,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">Scail-2外部测评摘录</span>
-                    <span class="source-label">YouTube - SCAIL-2 ComfyUI Tutorial &amp; Review / RunComfy / AI FILMS Studio Blog</span>
+                    <span class="badge badge-pink">Scail-2高阶工作流Plus V2多人对齐演示</span>
+                    <span class="source-label">jieg9341-lab / ComfyUI-SCAIL2-Easy / Next Diffusion / NomadOor</span>
                   </div>
                   <h3>Scail-2高阶工作流Plus V2多人对齐演示</h3>
-                  <p class="synthesis">外部观察集中在少骨骼依赖、长序列更稳，但多人极端场景验证仍少。</p>
+                  <p class="synthesis">外部材料共识是：SCAIL-2 价值更偏复杂流程可用性，但部署与调参门槛不低。</p>
                   <a class="article-link" href="http://www.bilibili.com/video/av116764557975196" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方教程在 ComfyUI 实测中把 SCAIL-2当作 SCAIL-Preview 的后继方案，认为它能在不依赖传统骨骼绑定的前提下完成多角色动作迁移与角色替换。</p><p><strong>改变：</strong>这意味着做多人对齐或多人拼图式角色合成时，团队可以少做一层骨骼/绑定准备，直接把参考角色和驱动视频接进工作流，降低多人镜头的接线复杂度。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=_5aYMeIMdZc" target="_blank" rel="noopener noreferrer">YouTube - SCAIL-2 ComfyUI Tutorial &amp; Review</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方工作流说明指出，SCAIL-2 在参考图到长视频的流程里强调 identity-aware animation，并给出“precise visual alignment”的体验描述。</p><p><strong>改变：</strong>对多人对齐演示类工作流来说，这直接影响角色身份是否能在长镜头里保持稳定，减少多人场景中角色脸型、服装或光照被动作带偏的问题。</p><p><strong>边界：</strong>材料只明确提到长视频、参考图到视频和光照控制，并未给出多人复杂遮挡、快速交互或极端镜头下的失败案例。</p><p class="source">来源：<a href="https://www.runcomfy.com/comfyui-workflows/scail-2-motion-transfer-in-comfyui-reference-image-to-video" target="_blank" rel="noopener noreferrer">RunComfy</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">ComfyUI 接入 SCAIL-2 外部上手观察</span>
-                    <span class="source-label">Next Diffusion</span>
-                  </div>
-                  <h3>ComfyUI接入scail2与animate对比实测</h3>
-                  <p class="synthesis">共识是 SCAIL-2 主要价值在简化动作迁移工作流。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116763752662509" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Next Diffusion 在 ComfyUI 上手教程中实测到，SCAIL-2 相比 SCAIL-1 已改为端到端动作迁移流程，不再依赖 ControlNet、YOLOv10 或 ViTPose 这类外部姿态检测/骨架提取组件。</p><p><strong>改变：</strong>这意味着用户在 ComfyUI 里做角色动作迁移时，节点链路更短、依赖更少，团队搭工作流和排查失败点的成本会明显下降。</p><p><strong>边界：</strong>代价是仍需额外下载并正确放置多组模型文件，前期环境配置并没有被完全省掉，也更适合追求动作迁移简化的人，而不是只想直接套现成动画节点的轻量用户。</p><p class="source">来源：<a href="https://www.nextdiffusion.ai/tutorials/scail-2-comfyui-video-to-character-motion-transfer" target="_blank" rel="noopener noreferrer">Next Diffusion</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>`ComfyUI-SCAIL2-Easy` 的开发者指出，它不改写 SCAIL-2 推理逻辑，而是把 ComfyUI 原生节点里“容易接错、重复、理解成本高”的部分封装起来，说明复杂 SCAIL-2 工作流在实际搭建时确实存在较高连线和理解门槛。</p><p><strong>改变：</strong>对做多人对齐、拼图式组合这类复杂流程的用户来说，真实收益是更少接线错误和更低的工作流维护成本，团队复用同一套流程也更容易。</p><p><strong>边界：</strong>它只是在工作流层做封装，不会直接提升模型画质、多人一致性或推理速度；如果用户要验证 V2 多人对齐本身的效果，这个插件不能替代模型能力测试。</p><p class="source">来源：<a href="https://github.com/jieg9341-lab/ComfyUI-SCAIL2-Easy" target="_blank" rel="noopener noreferrer">jieg9341-lab / ComfyUI-SCAIL2-Easy</a></p></div><div class="opinion"><p><strong>观察：</strong>Next Diffusion 的教程把 SCAIL-2 放在 ComfyUI 的实操场景里，重点写的是安装、依赖和生成高质量动作迁移动画，侧面说明它不是“开箱即用”的单按钮方案，而是对环境和流程配置有要求的工作流型工具。</p><p><strong>改变：</strong>这对用户的实际影响是，想复现多人对齐演示的人需要把预期从“直接出片”改成“先搭环境、再调流程”，更适合已有 ComfyUI 经验的创作者或团队。</p><p><strong>边界：</strong>门槛主要在部署和流程理解上，不适合只想快速试用、没有 ComfyUI 基础、也不愿处理依赖配置的轻量用户。</p><p class="source">来源：<a href="https://www.nextdiffusion.ai/tutorials/scail-2-comfyui-video-to-character-motion-transfer" target="_blank" rel="noopener noreferrer">Next Diffusion</a></p></div></div>
                 </section>
                 </div>
             </section>
