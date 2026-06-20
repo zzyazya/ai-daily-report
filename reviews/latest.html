@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-06-20 08:38</title>
+  <title>独立测评 · 2026-06-20 17:53</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">GLM 5.2 对比 Opus 4.8 外部测评</span>
-                    <span class="source-label">Eden AI / BenchLM.ai / 网易号文章《GLM5.2：给国产模型追赶Anthropic 又提了一口气｜附实测》</span>
+                    <span class="badge badge-blue">TimeCopilot外部测评/工作流观察</span>
+                    <span class="source-label">Towards AI / Medium（Shouke Wei）</span>
                   </div>
-                  <h3>GLM 5.2对比Opus 4.8与Claude Code实测</h3>
-                  <p class="synthesis">共识是GLM更便宜更开放，但代码稳定性仍落后Opus 4.8。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116776939559470" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Eden AI 的对比结论是，GLM-5.2在编码表现、开源权重和成本上更占优，但与 Claude Opus 4.8 正面对比时，本质上是在“更低成本与开放控制”换“更高的代码可靠性”。</p><p><strong>改变：</strong>对需要自己部署、压低推理成本或做深度定制的团队，GLM-5.2更容易进入生产试用；但如果工作流更看重一次生成就尽量少返工，Opus 4.8仍更省人工校验时间。</p><p><strong>边界：</strong>这类优势主要成立于成本、可控性优先的场景；若追求托管式闭源 API 的稳定体验和峰值代码成功率，GLM-5.2并不占优。</p><p class="source">来源：<a href="https://www.edenai.co/post/glm-5-2-benchmark-vs-gpt-5-5-claude-opus-4-8-and-gemini-3-1-pro" target="_blank" rel="noopener noreferrer">Eden AI</a></p></div><div class="opinion"><p><strong>观察：</strong>BenchLM 的对比里，Claude Opus 4.8 在编码项平均分约为 76.4，对 GLM-5.2 的 62.1 有明显领先，最大差距出现在 SWE-bench Pro（69.2% 对 62.1%）；但 GLM-5.2 在 agentic 能力上能追回一部分。</p><p><strong>改变：</strong>这意味着在修 bug、改仓库、做代码代理这类高可靠编码任务里，用户更可能从 Opus 4.8 获得更少失败尝试；而如果工作流更偏多步骤代理执行，GLM-5.2未必处于绝对下风。</p><p><strong>边界：</strong>结论高度依赖任务类型：它更能说明“代码正确率”差距，不等于所有代理式、多轮工具调用场景都由 Opus 4.8稳赢。</p><p class="source">来源：<a href="https://benchlm.ai/compare/claude-opus-4-8-vs-glm-5-2" target="_blank" rel="noopener noreferrer">BenchLM.ai</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Unreal Engine 5.8 MCP插件联动Claude Code实测</span>
-                    <span class="source-label">How To Use Claude Code Inside Unreal Engine 5.8 - YouTube / explainx.ai Blog</span>
-                  </div>
-                  <h3>Unreal Engine 5.8 MCP插件联动Claude Code实测</h3>
-                  <p class="synthesis">共识是AI开始直接“动编辑器”，价值高于单纯聊天建议。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116778214626951" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>YouTube博主在UE 5.8上手时观察到，官方MCP接入后可以把Claude Code这类LLM直接带进编辑器内操作，而不只是停留在聊天或外部脚本层。</p><p><strong>改变：</strong>对个人开发者和小团队来说，这把“提需求-生成操作-回到编辑器执行”的流程压缩成同一工作界面，减少了在IDE、文档和UE编辑器之间反复切换。</p><p><strong>边界：</strong>这类收益建立在UE 5.8与MCP正确配置完成的前提上，材料片段里未体现复杂项目、多人协作或长流程任务下的稳定性。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=A3PbbbjzB1c" target="_blank" rel="noopener noreferrer">How To Use Claude Code Inside Unreal Engine 5.8 - YouTube</a></p></div><div class="opinion"><p><strong>观察：</strong>explainx.ai的第三方分析提到，UE 5.8 MCP插件实测价值在于让Claude/Codex直接控制编辑器做具体工作，如摆放道具、生成PCG城市和调整灯光，而不是只给文字建议。</p><p><strong>改变：</strong>这意味着AI开始从“辅助问答”变成“可执行编辑器操作”的工作流工具，适合把重复性场景搭建和基础关卡布置前移给模型处理。</p><p><strong>边界：</strong>它更像编辑器自动化入口，片段中展示的能力集中在场景与内容生产侧；对完整游戏逻辑、质量把关和结果披露仍有工具链与规范成本。</p><p class="source">来源：<a href="https://www.explainx.ai/blog/unreal-engine-5-8-claude-codex-mcp-ai-integration-2026" target="_blank" rel="noopener noreferrer">explainx.ai Blog</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">GLM 5.2 对比 GPT 5.5 外部测评</span>
-                    <span class="source-label">王若风的技术博客 / CSDN 博客 / Eden AI</span>
-                  </div>
-                  <h3>GLM 5.2对比GPT 5.5三级编程实测</h3>
-                  <p class="synthesis">共识是能打工程任务，分歧在极致体验与落地成本。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116775748372509" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>王若风在 10 万行代码项目调试、微信小程序开发和 Three.js 场景构建的实测里，把 GLM-5.2 视为国产 Coding 模型的新高点，说明它已能覆盖大仓库修复与复杂前端生成这类非玩具任务。</p><p><strong>改变：</strong>这意味着开发者把 GLM-5.2 接入日常编码时，能更现实地用于大型代码库排错、前端页面/交互搭建，而不只是补全简单函数。</p><p class="source">来源：<a href="https://wangruofeng007.com/blog/2026-06/glm-52-coding/" target="_blank" rel="noopener noreferrer">王若风的技术博客</a></p></div><div class="opinion"><p><strong>观察：</strong>CSDN 的第三方分析认为，如果目标是日常 AI 辅助编码，GLM-5.2 值得认真评估，核心原因是 Coding Plan 的性价比和 ZCode 额度加成降低了实际使用成本。</p><p><strong>改变：</strong>对个人开发者和小团队来说，这会直接影响模型选型：在保证可用编码能力的前提下，GLM-5.2 更适合高频调用、长时间挂在工作流里使用。</p><p><strong>边界：</strong>同一分析也明确指出，若追求极致编程体验，Claude Opus 4.8 和 GPT 5.5 仍是综合首选。</p><p class="source">来源：<a href="https://blog.csdn.net/weixin_45871766/article/details/161998767" target="_blank" rel="noopener noreferrer">CSDN 博客</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">GLM 5.2外部测评/上手体验</span>
-                    <span class="source-label">AITNT News（转载开发者实测） / NodeSeek 用户测评 / 人人都是产品经理</span>
-                  </div>
-                  <h3>GLM 5.2实测对比GPT-5.5与Opus 4.8</h3>
-                  <p class="synthesis">外部体验更偏向“能做复杂活，但速度和成品精修仍是短板”。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116778147585581" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有开发者把GLM-5.2接入Claude Code后，实测它能把商业级App拆解到React状态管理、CSS变量、动画、输入框事件和鼠标位置计算等细粒度层面，代码组织“每一层都做得很顺”。</p><p><strong>改变：</strong>这意味着对用Agent搭前端原型的团队，GLM-5.2更像是能连续推进多层实现细节的执行型模型，减少从页面骨架到交互补全的人工来回拼接。</p><p class="source">来源：<a href="https://m.aitntnews.com/newDetail.html?newId=26319" target="_blank" rel="noopener noreferrer">AITNT News（转载开发者实测）</a></p></div><div class="opinion"><p><strong>观察：</strong>社区测评者的直接结论是“GLM5.2确实还可以，就是慢的要死”，即能力表现可用，但响应速度明显拖后腿。</p><p><strong>改变：</strong>这对真实工作流的影响是，单次输出质量可能够用，但多轮追问、结对编程和快速试错的节奏会被明显拉慢。</p><p><strong>边界：</strong>不适合强依赖低延迟反馈的场景，例如高频交互式开发、现场演示或需要快速迭代的Agent链路。</p><p class="source">来源：<a href="https://www.nodeseek.com/post-778558-1" target="_blank" rel="noopener noreferrer">NodeSeek 用户测评</a></p></div></div>
+                  <h3>TimeCopilot预测流水线实战教程</h3>
+                  <p class="synthesis">共识是它主要提升预测流水线自动化与可解释性。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/06/20/how-to-build-a-forecasting-pipeline-with-timecopilot-using-foundation-models-and-automated-anomaly-detection/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Towards AI 的文章指出，TimeCopilot 可以用单次提示词串起特征分析、模型选择、交叉验证和预测生成这一整条时序分析流程。</p><p><strong>改变：</strong>这会把原本需要数据分析师和建模工程师分步完成的预测流水线压缩成一次代理式编排，明显减少手工切换工具和重复试模的时间。</p><p class="source">来源：<a href="https://pub.towardsai.net/timecopilot-automatic-time-series-analysis-pipeline-0cd5d5f2325d" target="_blank" rel="noopener noreferrer">Towards AI</a></p></div><div class="opinion"><p><strong>观察：</strong>Medium 博文认为，TimeCopilot 不只自动做数据模式分析、模型选择和交叉验证，还会用自然语言解释自己的决策过程。</p><p><strong>改变：</strong>对业务团队来说，这意味着预测结果不再只是黑箱输出，复核模型选择逻辑和向非技术同事汇报都会更直接。</p><p class="source">来源：<a href="https://medium.com/@shouke.wei/timecopilot-revolutionizing-time-series-forecasting-with-ai-ecf5ddd8adaa" target="_blank" rel="noopener noreferrer">Medium（Shouke Wei）</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -92,35 +59,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">外部测评 / 上手体验</span>
-                    <span class="source-label">知乎专栏《AI视频生成器哪个好？国内可用工具实测对比》 / 知乎专栏《2026年AI视频生成工具排行榜：10款工具横评（附TVC实测效果）》</span>
+                    <span class="badge badge-pink">外部测评</span>
+                    <span class="source-label">综合现有搜索片段判断</span>
                   </div>
-                  <h3>海外千条实测揭晓2026最强AI视频生成器</h3>
-                  <p class="synthesis">外部测评共识是：真正影响选型的不是炫技，而是可用性与稳定产出。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116776033585052" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎实测文明确把“国内能不能直接用”列为AI视频生成器的第一道门槛，评测时才进一步比较生成效果、免费额度和功能完整度。</p><p><strong>改变：</strong>这意味着普通用户或内容团队选型时，实际流程会先筛掉访问受限工具，再在可用候选里比较画质和成本，而不是只看海外榜单排名。</p><p><strong>边界：</strong>这类结论更适用于中国大陆用户的落地使用，不直接等同于模型绝对能力高低。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2025683796930905312" target="_blank" rel="noopener noreferrer">知乎专栏《AI视频生成器哪个好？国内可用工具实测对比》</a></p></div><div class="opinion"><p><strong>观察：</strong>知乎横评TVC场景时指出，AI视频已经从“能动就行”转向“能用才好”，企业更在意画质稳定性、角色/品牌一致性和调性控制，而不只是单条视频是否惊艳。</p><p><strong>改变：</strong>对广告、品牌和商业内容团队来说，工具选择会从单次出片效果转向整套生产可控性，直接影响能否进入正式商业工作流。</p><p><strong>边界：</strong>这一判断偏企业级TVC场景，高一致性要求不一定适用于娱乐向、试玩向或低成本短视频创作。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2036030539526829309" target="_blank" rel="noopener noreferrer">知乎专栏《2026年AI视频生成工具排行榜：10款工具横评（附TVC实测效果）》</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">外部测评/上手体验</span>
-                    <span class="source-label">Boogu-Image: Base+Turbo | LOW VRAM Workflow - YouTube / Open Source ERNIE-Image Turbo: Beats Z-Image-Turbo in Benchmarks?! - YouTube / Ernie Image Turbo + Z-Image-Turbo | LOW VRAM Workflow - YouTube</span>
-                  </div>
-                  <h3>Boogu Turbo对比Z-Image Turbo与ERNIE Image Turbo</h3>
-                  <p class="synthesis">外部实测共识是：三者价值更体现在本地低显存可跑与工作流取舍，而非单一绝对胜负。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116777107330684" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>YouTube博主演示了`Boogu-Image Base+Turbo`的`LOW VRAM Workflow`，说明Boogu Turbo并不是只能在高显存机器上跑，而是已有人按低显存本地工作流实际打通。</p><p><strong>改变：</strong>这直接把Boogu Turbo的可用人群扩到消费级本地设备用户，适合想在ComfyUI里自己跑图、而不是只看线上榜单的人。</p><p><strong>边界：</strong>片段明确提示要先更新到最新ComfyUI，且前提仍是本地部署；对不想折腾环境、只想开箱即用的人不友好。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=jqoexdlRBxE" target="_blank" rel="noopener noreferrer">Boogu-Image: Base+Turbo | LOW VRAM Workflow - YouTube</a></p></div><div class="opinion"><p><strong>观察：</strong>另一位YouTube博主把`ERNIE-Image Turbo`放进ComfyUI本地试玩，并在标题里直接提出其基准成绩可能压过`Z-Image-Turbo`，至少说明社区已把两者当作同级竞品做实测比较。</p><p><strong>改变：</strong>对用户来说，这意味着ERNIE Image Turbo不只是“可本地运行”的备选，而是可能在速度型模型里成为替代Z-Image Turbo的候选，需要亲自按题材复测。</p><p><strong>边界：</strong>现有片段只显示其“可在家里自己的电脑上跑”与“基准对比”结论方向，不能外推为所有画风、提示词和工作流都稳定优于Z-Image Turbo。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=W09xam6Ly4k" target="_blank" rel="noopener noreferrer">Open Source ERNIE-Image Turbo: Beats Z-Image-Turbo in Benchmarks?! - YouTube</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">Boogu对比Z-image Turbo与Ideogram 4测评</span>
-                    <span class="source-label">PXZ.AI / 知乎专栏 / RunComfy</span>
-                  </div>
-                  <h3>Boogu对比Z-image Turbo与Ideogram 4测评</h3>
-                  <p class="synthesis">外部体验更强调提速与流程顺滑，而非绝对画质定论。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116777644202711" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方深测认为，Z-Image Turbo与Flux的速度差异并非偶然，而是源于其S3-DiT单流架构把文本与图像统一到同一序列中，实际生成链路更短。</p><p><strong>改变：</strong>对需要频繁试错的用户和团队，这意味着草图、海报初版和批量出图阶段能更快迭代，等待成本更低。</p><p class="source">来源：<a href="https://pxz.ai/zh/blog/z-image-turbo-vs-flux" target="_blank" rel="noopener noreferrer">PXZ.AI</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方评测指出，Z-Image Turbo更像设计师的“灵感来源工具”，核心体验是能快速生成多个变体，再从中挑方向继续细调。</p><p><strong>改变：</strong>这会直接改变设计工作流：它更适合前期概念发散和方案筛选，而不是一开始就追求单张成品定稿。</p><p><strong>边界：</strong>更适合前期灵感发散，材料片段没有证明它能直接替代后期精修或最终成稿环节。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1985047578631481243" target="_blank" rel="noopener noreferrer">知乎专栏</a></p></div></div>
+                  <h3>ComfyUI实测Boogu-Image对比Ernie Image与Z-Image-Turbo</h3>
+                  <p class="synthesis">现有外部片段不足以支持有效测评提炼</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116780999644301" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>未找到足够具体且可归因的第三方实测结论；现有片段多为官方教程、站点博客导览或视频标题，缺少对 Boogu-Image、ERNIE-Image 与 Z-Image-Turbo 的实际画质、速度、可控性或工作流对比观察。</p><p><strong>改变：</strong>这意味着无法从现有材料中可靠提炼出对用户选型、团队接入或 ComfyUI 工作流调整有直接指导价值的外部经验。</p><p><strong>边界：</strong>材料主要是教程入口和宣传式描述，不满足“第三方上手体验/基准对比/真实影响”的筛选条件。</p><p class="source">来源：综合现有搜索片段判断</p></div></div>
                 </section>
                 </div>
             </section>
