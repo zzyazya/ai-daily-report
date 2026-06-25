@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-06-24 17:52</title>
+  <title>独立测评 · 2026-06-25 08:55</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Opus/Sonnet志愿Agent工作流外部观点</span>
-                    <span class="source-label">知乎博主《最强编程和agent模型Claude Sonnet 4.5来了！》 / YingTu / CSDN 博客</span>
+                    <span class="badge badge-blue">OpenHarness风格Agent Runtime设计教程</span>
+                    <span class="source-label">OpenHarness Study / repo-explainer.com / dev.to / wonderlab</span>
                   </div>
-                  <h3>Claude Opus/Sonnet志愿Agent工作流实测</h3>
-                  <p class="synthesis">共识是Sonnet适合铺量，Opus适合复杂决策与长链路。</p>
+                  <h3>OpenHarness风格Agent Runtime设计教程</h3>
+                  <p class="synthesis">共识是它更偏开发者底座，核心价值在执行、记忆与协作控制。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/06/24/how-to-design-an-openharness-style-agent-runtime-with-tools-memory-permissions-skills-and-multi-agent-coordination/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方作者把 OpenHarness 运行时拆成一条决策链：模型负责决定，harness 负责执行，安全、记忆和多 Agent 协调夹在中间。</p><p><strong>改变：</strong>这会把开发重心从“调一个更聪明的模型”转到“设计执行边界、记忆流转和协作流程”。</p><p><strong>边界：</strong>更适合做代理基础设施，不是直接面向最终用户的聊天界面。</p><p class="source">来源：<a href="https://learn-openharness.vercel.app/" target="_blank" rel="noopener noreferrer">OpenHarness Study</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇深度解读明确指出，OpenHarness 把权限、工具、memory 和续跑逻辑当作产品边界，而不是把模型本身当边界。</p><p><strong>改变：</strong>团队在接入 LLM 时能更系统地控制工具调用、权限和会话延续，减少把这些能力散落在业务代码里的问题。</p><p><strong>边界：</strong>这类设计会增加运行时编排复杂度，没必要给只做单轮问答的场景上这一层。</p><p class="source">来源：<a href="https://repo-explainer.com/HKUDS/OpenHarness" target="_blank" rel="noopener noreferrer">repo-explainer.com</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Claude Opus/Sonnet高考志愿Agent工作流实测</span>
+                    <span class="source-label">翔宇工作流 / CSDN博客 / 七牛云行业应用（博客园）</span>
+                  </div>
+                  <h3>Claude Opus/Sonnet高考志愿Agent工作流实测</h3>
+                  <p class="synthesis">共识是 Sonnet 适合分工执行，Opus 更适合长链路总控。</p>
                   <a class="article-link" href="http://www.bilibili.com/video/av116803363673156" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者引用 OSWorld 真实计算机任务基准称，Claude Sonnet 4.5 在“计算机使用”能力上拿到 61.4% 并居首，说明它在多步骤界面操作和工具调用场景里较前代有明显跃升。</p><p><strong>改变：</strong>这意味着用 Sonnet 搭建志愿填报这类 Agent 工作流时，更有机会把网页检索、表单操作、信息整理等串行步骤交给模型自动完成，而不只是停留在问答层。</p><p><strong>边界：</strong>这条结论主要来自基准成绩，能说明通用代理执行力提升，但不能直接等同于志愿填报场景里的稳定准确率或低幻觉。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1956260951088169232" target="_blank" rel="noopener noreferrer">知乎博主《最强编程和agent模型Claude Sonnet 4.5来了！》</a></p></div><div class="opinion"><p><strong>观察：</strong>YingTu 的对比文章认为，Claude Sonnet 4.6 应作为多数任务的默认模型，而 Opus 4.7 更适合高风险推理、模糊架构设计、长时运行 Agent、重文档综合和反复验收失败的任务。</p><p><strong>改变：</strong>对团队搭建志愿填报 Agent 的直接意义是：可以先用 Sonnet 跑大部分高频、成本敏感流程，把复杂政策理解、疑难案例复核、长链路失败重试再升级给 Opus，形成分层调度。</p><p><strong>边界：</strong>边界是 Opus 的高成本只有在任务确实复杂、失败代价高时才值得，否则默认上 Opus 会拉高运行成本并降低规模化效率。</p><p class="source">来源：<a href="https://yingtu.ai/en/blog/opus-sonnet" target="_blank" rel="noopener noreferrer">YingTu</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>翔宇工作流的 Claude Code 实操指南提到，日常任务约 80% 用 Sonnet 即可，只有需要更深推理时才切到 Opus。</p><p><strong>改变：</strong>这意味着做高考志愿 Agent 这类多步骤流程时，可以把资料整理、信息检索、表格生成等常规环节交给 Sonnet，把院校策略判断或复杂冲突决策留给 Opus，从而明显压低整体调用成本。</p><p><strong>边界：</strong>边界是 Sonnet 更偏性价比路线，遇到高复杂度推理仍需要手动切到 Opus，否则结果深度可能不够。</p><p class="source">来源：<a href="https://xiangyugongzuoliu.com/claude-code-complete-guide/" target="_blank" rel="noopener noreferrer">翔宇工作流</a></p></div><div class="opinion"><p><strong>观察：</strong>CSDN 的对比解读指出，Sonnet 4 在多 Agent 系统里很适合作为子 Agent，尤其擅长搜索、检索、定向审查这类专项任务，但长时间保持逻辑连贯和上下文一致仍有挑战。</p><p><strong>改变：</strong>对志愿填报工作流来说，更合理的做法是把 Sonnet 放在信息收集、规则核对、分任务执行层，而不是让它单独承担全链路决策，这能提升流程稳定性。</p><p><strong>边界：</strong>边界是如果工作流链路很长、上下文很多，Sonnet 可能出现一致性下降，需要靠 token 上限、任务拆分或更强主模型兜底。</p><p class="source">来源：<a href="https://blog.csdn.net/i042416/article/details/149978431" target="_blank" rel="noopener noreferrer">CSDN博客</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">GLM 5.2外部测评与上手影响</span>
-                    <span class="source-label">自游人（GLM-5.2 开源全解析：评测数据、部署成本、竞争格局） / ProgramNotes（实测GLM-5.2，国产Coding模型的又一座新高峰） / Matt Farmer（GLM 5.2 Guide: Benchmarks, OpenRouter &amp; Codex Setup）</span>
+                    <span class="badge badge-blue">GLM 5.2接入Cursor/Codex外部观察</span>
+                    <span class="source-label">Apidog 博客 / 掘金作者评测 / AIHubPlus 博客</span>
                   </div>
-                  <h3>GLM 5.2本地模型接入Cursor/Codex教程</h3>
-                  <p class="synthesis">共识是它已能进入真实编码代理工作流，但成本、部署和场景适配仍决定是否值得接入。</p>
+                  <h3>GLM 5.2本地模型接入Cursor与Codex</h3>
+                  <p class="synthesis">共识是能顺利接入现有 IDE 工作流，但能力上更像可用备选，尚非顶配替代品。</p>
                   <a class="article-link" href="http://www.bilibili.com/video/av116803783106082" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析文章把GLM-5.2放到Terminal-Bench、部署方案和API定价里一起看，给出的核心判断是它的编程能力已可对标Claude Opus 4.8这一档开源外替代方案。</p><p><strong>改变：</strong>这对想把GLM 5.2接入Cursor、Codex或经OpenRouter调用的开发者来说，意义是可以把它当成一条更偏“能用且可算成本”的编码工作流选项，而不只是跟风尝鲜。</p><p><strong>边界：</strong>文章同时强调部署方案和API定价，说明它的价值成立前提仍取决于你的部署能力与成本预算，并不等于所有团队都能零门槛替换闭源模型。</p><p class="source">来源：<a href="https://www.17you.com/ai/glm-5.2-opensource/" target="_blank" rel="noopener noreferrer">自游人（GLM-5.2 开源全解析：评测数据、部署成本、竞争格局）</a></p></div><div class="opinion"><p><strong>观察：</strong>实测文章把GLM-5.2放进代码执行和Agent任务中测试，并明确拿它与Claude Fable 5、Opus 4.8做性能差异对比，结论是其Coding与代理式任务能力都很强。</p><p><strong>改变：</strong>这意味着用户在Codex这类代理式开发环境里接入GLM 5.2时，预期不应只停留在补全代码，而可以把它用于执行、拆解和推进多步开发任务。</p><p><strong>边界：</strong>但该结论来自特定实测任务与竞品对比，能说明它适合Agent工作流，不等于在所有编程场景里都稳定优于Claude系模型。</p><p class="source">来源：<a href="https://ai.programnotes.cn/p/%E5%AE%9E%E6%B5%8Bglm-5.2%E5%9B%BD%E4%BA%A7coding%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%8F%88%E4%B8%80%E5%BA%A7%E6%96%B0%E9%AB%98%E5%B3%B0/" target="_blank" rel="noopener noreferrer">ProgramNotes（实测GLM-5.2，国产Coding模型的又一座新高峰）</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方接入教程实测把 GLM-5.2 作为 OpenAI 兼容后端接入 Cursor/Claude Code/Cline 时，真正决定能否跑通的是 base URL、model id、上下文窗口和超时参数这些细节配置。</p><p><strong>改变：</strong>对已经在用 Cursor 一类 IDE Agent 的个人和团队来说，这意味着不用重建工作流，只改接口参数就能把 GLM-5.2 接进现有编码助手链路里试跑。</p><p><strong>边界：</strong>代价是配置容错很低，model id、超时或上下文参数写错就可能直接不可用，接入门槛主要不在功能而在细节对齐。</p><p class="source">来源：<a href="https://apidog.com/blog/glm-5-2-claude-code-cline-cursor/" target="_blank" rel="noopener noreferrer">Apidog 博客</a></p></div><div class="opinion"><p><strong>观察：</strong>开发者评测认为 GLM-5.2 是其用过最强的国产模型之一，和 GPT、Claude 顶级模型的差距已经缩小，但还没到可以直接替代的程度。</p><p><strong>改变：</strong>这对想把 GLM-5.2 接入 Cursor 或 Codex 类工具的用户意味着，它更适合作为日常编码与问答的国产备选后端，而不是无脑替换原有最强模型。</p><p><strong>边界：</strong>在需要顶级稳定性、复杂推理或高难代码任务时，作者明确认为它仍不适合完全替代 GPT/Claude。</p><p class="source">来源：<a href="https://juejin.cn/post/7653847759125987368" target="_blank" rel="noopener noreferrer">掘金作者评测</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">DeepSeek V4 外部测评</span>
-                    <span class="source-label">HolySheep AI / 腾讯云开发者</span>
+                    <span class="badge badge-blue">Hermes Agent /learn 外部测评</span>
+                    <span class="source-label">Medium - I Tried Hermes Agent — It&#x27;s So Good / macgpu</span>
                   </div>
-                  <h3>DeepSeek V4百万token降本80%实测解析</h3>
-                  <p class="synthesis">外部实测共识是：V4在RAG里更吃工程链路优化，而非只看模型参数。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116791871344913" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>HolySheep AI 的实战文章称，在把 DeepSeek V4 的整套 RAG 链路切到国内中转通道后，单条请求平均延迟从 1.8 秒降到 47 毫秒，整条 RAG pipeline 跑完只用了 1 小时 22 分钟。</p><p><strong>改变：</strong>这说明对做知识库问答的团队来说，真正影响体验的不只是模型本身，接入链路和调用路径优化后，RAG 可从“能用”变成更接近实时交互。</p><p><strong>边界：</strong>这类提速建立在特定中转通道和整套链路重构之上，不等于直接调用官方 API 就能得到同样时延表现。</p><p class="source">来源：<a href="https://www.holysheep.ai/articles/zh-deepseek-v4-ragjiansuozengqiangshengchengapijierux-2026-06-15-0001.html" target="_blank" rel="noopener noreferrer">HolySheep AI</a></p></div><div class="opinion"><p><strong>观察：</strong>腾讯云开发者文章给出的企业级 RAG 实测结果是，在 10 万+ 文档场景下，基于 DeepSeek V4、LangChain 和 ChromaDB 的系统检索准确率达到 89%，响应时间控制在 2 秒以内。</p><p><strong>改变：</strong>这对企业用户的真实意义是，DeepSeek V4 在私有知识库问答里已能支撑较大文档规模，团队可以把它用于内部技术文档检索，而不只是做演示级 Demo。</p><p><strong>边界：</strong>这组结果依赖文档切片、向量嵌入和 ChromaDB 检索链路配合，表现反映的是完整 RAG 工程效果，不等同于模型裸能力，也未说明对弱结构化资料或更高并发场景是否同样成立。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2676486" target="_blank" rel="noopener noreferrer">腾讯云开发者</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">什么值得买 / GitHub 调研文档《蛙蛙写作与星月写作AI工具工作流调研》</span>
-                  </div>
-                  <h3>AI小说提示词工作流教程下篇</h3>
-                  <p class="synthesis">第三方观察普遍认为，价值在于把小说写作拆成可复用流程，而非一次性生成。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116803732769767" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>什么值得买的上手文提到，蛙蛙写作这类“AI写网文”工作流允许用户自己搭表单、设计提示词、调试单个AI工具，再把多个工具编排成一个可重复调用的工具组。</p><p><strong>改变：</strong>这意味着创作者不必每次从零重写提示词，而是能把拆书、设定、生成、润色等步骤固化成流程，降低新手上手门槛并提升批量写作效率。</p><p><strong>边界：</strong>代价是前期需要自己理解并配置提示词与工具链，适合愿意折腾流程的人，不适合只想即开即写的用户。</p><p class="source">来源：<a href="https://post.m.smzdm.com/zz/p/a3rd9m4d/" target="_blank" rel="noopener noreferrer">什么值得买</a></p></div><div class="opinion"><p><strong>观察：</strong>GitHub上的第三方调研认为，蛙蛙写作更像“网文创作生产线+AI工具箱+工作流广场”，其交互核心不是单次生成，而是把大纲、角色、章节续写、润色、扩写、灵感和工作流能力嵌进同一个编辑过程。</p><p><strong>改变：</strong>对用户和小团队来说，真正的改变是长篇小说创作从“单轮问答”转向“持续编辑+分环节调用工具”，更适合管理长文本的一致性与多步骤协作。</p><p><strong>边界：</strong>这种设计更偏长篇网文生产流程，对只需要短内容、一次性文案或极简聊天式创作的人来说可能显得重。</p><p class="source">来源：<a href="https://github.com/youxing-cmd/moyanxiezuo/blob/main/%E8%9B%99%E8%9B%99%E5%86%99%E4%BD%9C%E4%B8%8E%E6%98%9F%E6%9C%88%E5%86%99%E4%BD%9CAI%E5%B7%A5%E5%85%B7%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%B0%83%E7%A0%94.md" target="_blank" rel="noopener noreferrer">GitHub 调研文档《蛙蛙写作与星月写作AI工具工作流调研》</a></p></div></div>
+                  <h3>Nous Research 的 Hermes Agent /learn 技能系统</h3>
+                  <p class="synthesis">共识是 /learn 的核心价值在于把重复流程沉淀成可复用技能。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/06/24/nous-research-adds-learn-to-hermes-agents-skills-system-capturing-workflows-as-slash-commands-without-hand-writing-skill-md/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Medium 体验文作者实测到，Hermes 完成一次多步骤复杂任务后，可以把这套流程沉淀成可重复调用的 skill，而不是每次都重新提示一遍。</p><p><strong>改变：</strong>这会把个人临时提示词变成可复用流程，用户或团队做重复任务时能明显减少二次编排和操作成本。</p><p><strong>边界：</strong>更适合步骤相对稳定、会反复发生的任务；一次性问题或经常变化的需求，沉淀成 skill 的收益会下降。</p><p class="source">来源：<a href="https://medium.com/ai-software-engineer/i-tried-hermes-agent-its-so-good-i-gave-up-on-other-ai-agents-like-openclaw-211076ce4934" target="_blank" rel="noopener noreferrer">Medium - I Tried Hermes Agent — It&#x27;s So Good</a></p></div><div class="opinion"><p><strong>观察：</strong>macgpu 的工作流文章把 SKILL.md 定义为可移植的“how-to”文件，并强调可通过 Bundles 一次加载流程、再交给 GEPA 持续改进 skill，而不必改模型权重。</p><p><strong>改变：</strong>这意味着团队可以把流程经验以文件形式共享、装配和迭代，工作流优化从“调模型”转成“维护技能文件”。</p><p><strong>边界：</strong>前提是流程本身能被清晰写成步骤化说明；对高度依赖即时判断、难以文档化的工作，SKILL.md 的可移植性价值有限。</p><p class="source">来源：<a href="https://macgpu.com/en/blog/2026-0618-hermes-agent-skills-advanced-gepa-guide.html" target="_blank" rel="noopener noreferrer">macgpu</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -92,13 +92,35 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">Seedance 2.0 外部测评</span>
-                    <span class="source-label">知乎作者《免费薅字节最强AI视频生成器！Seedance 2.0 全攻略，每天十几条随便造》</span>
+                    <span class="badge badge-pink">Adobe Illustrator Beta 草图转矢量外部上手</span>
+                    <span class="source-label">uLearn.tech</span>
                   </div>
-                  <h3>Seedance 2.0发布4K视频实测评测</h3>
-                  <p class="synthesis">外部上手更先指向使用成本，而非单纯4K画质。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116802977794677" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎实操作者上手发现，Seedance 2.0 并非注册即用，而是要先购买 1 元试用会员才会解锁，且生成按秒计费，1 秒视频约消耗 6 积分。</p><p><strong>改变：</strong>这意味着普通用户做 4K/短视频实测前，真正要先评估的不是画质而是准入门槛与积分消耗，工作流上更适合先压缩脚本、镜头长度和试错次数再开生成。</p><p><strong>边界：</strong>它的低门槛体验建立在会员解锁和积分体系上，不适合需要大量反复迭代、长时长连续出片的团队。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2004138628176168008" target="_blank" rel="noopener noreferrer">知乎作者《免费薅字节最强AI视频生成器！Seedance 2.0 全攻略，每天十几条随便造》</a></p></div></div>
+                  <h3>Adobe Illustrator Beta草图转矢量实测</h3>
+                  <p class="synthesis">外部上手共识是它能提速草图成稿，但仍偏向初稿生成而非终稿替代。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116798129245857" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方作者在一次完整实测里，直接拿“原始手绘草图”测试 Illustrator Beta 的 Sketch to Vector，观察重点是它能否把粗糙草稿转成可用于成品设计的清晰矢量贴纸画面。</p><p><strong>改变：</strong>这意味着对插画师、贴纸/周边设计者和内容团队来说，手绘草稿到可交付矢量稿之间的首轮描线与整理工作有机会明显缩短，不必一开始就手工重绘全部轮廓。</p><p><strong>边界：</strong>片段里只说明作者在做“极限测试”和成品化验证，没有提供复杂场景、失败案例或精修成本，因此更能说明它适合草图转初稿，不足以证明可直接替代后续人工细修。</p><p class="source">来源：<a href="https://ulearn.tech/how-to-convert-sketches-to-vector/" target="_blank" rel="noopener noreferrer">uLearn.tech</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">Flux2-Klein 本地显卡外部实测</span>
+                    <span class="source-label">知乎作者《7900XTX 本地 AI 全栈指南》 / GitHub Issue · leejet/stable-diffusion.cpp</span>
+                  </div>
+                  <h3>Flux2-Klein 4B与9B本地显卡实测选型</h3>
+                  <p class="synthesis">共识是Klein更像本地高效率方案，优势在显存门槛与速度，短板在稳定性和高要求画质。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116805846699352" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有7900 XTX实测者给出显存峰值：Flux2-Klein 4B约16.9GB，24GB显存才能在本地多任务链路里留出较稳妥余量。</p><p><strong>改变：</strong>这直接影响选卡与工作流设计：如果团队想把文生图、LLM上下文和视频生成放在同一台机器上，24GB级显存更接近“够用线”，而不是单看模型能否启动。</p><p><strong>边界：</strong>这类结论更偏向整机工作流峰值而非单次纯出图，低显存卡并非完全不能跑，但并发、上下文长度和工作流复杂度会明显受限。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2045588771924660351" target="_blank" rel="noopener noreferrer">知乎作者《7900XTX 本地 AI 全栈指南》</a></p></div><div class="opinion"><p><strong>观察：</strong>在stable-diffusion.cpp的公开问题中，用户报告FLUX.2-klein-9B在RX 7900 XTX + ROCm 6.3环境下生成时触发GGML_ASSERT并崩溃，说明9B本地链路并非只看显存够不够。</p><p><strong>改变：</strong>这对本地部署者的真实影响是：选型不能只比较4B/9B画质与速度，还要把推理后端、ROCm版本和GGUF实现兼容性纳入评估，否则会出现“配置达标但无法稳定出图”的情况。</p><p><strong>边界：</strong>该问题指向特定后端与版本组合，不能直接等同于所有平台都会崩，但AMD本地用户需要预留排障和版本回退成本。</p><p class="source">来源：<a href="https://github.com/leejet/stable-diffusion.cpp/issues/1213" target="_blank" rel="noopener noreferrer">GitHub Issue · leejet/stable-diffusion.cpp</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">LTX2.3导演台2.0外部测评</span>
+                    <span class="source-label">青橙Lab（抖音） / YouTube 第三方教程 / 分析视频</span>
+                  </div>
+                  <h3>LTX2.3导演台2.0视频工作流测评</h3>
+                  <p class="synthesis">共识是可编辑性明显增强，但版本稳定性与上手门槛仍是主要代价。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116804521300227" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>青橙Lab实操中把LTX2.3导演台升级版的核心变化落在“更实用”和“宫格图演示”上，说明它不只是单次出片，而是能用多画面参考去组织镜头与视频段落。</p><p><strong>改变：</strong>对创作者和小团队来说，这会把AI视频从一次性生成，推进到先看参考布局再延长、拼接和调整的工作流，减少反复整段重生的次数。</p><p><strong>边界：</strong>片段只体现了上手演示和功能可用性，没有给出画质、速度、算力成本或长时一致性的硬指标，不适合作为全面性能结论。</p><p class="source">来源：<a href="https://www.douyin.com/video/7648572321577372954" target="_blank" rel="noopener noreferrer">青橙Lab（抖音）</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方教程将LTX Director的价值概括为“时间线控制”和“可编辑的独立工作流”，并强调它能把不同提示词路由到视频的不同片段，同时LTX-2.3在细节、竖屏、人像、音频、图生视频、提示理解和文字呈现上都有明显改进。</p><p><strong>改变：</strong>对需要改段落、改镜头意图、做分镜式生成的用户，真正变化是可以按片段修而不是整条视频重做，AI视频开始接近可迭代的剪辑流程。</p><p><strong>边界：</strong>教程也明确说LTX Director“还早期”，更适合愿意折腾节点和流程的人；对追求即开即用、稳定批量生产的团队，学习和调参门槛仍然偏高。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=9j789l9Bejg" target="_blank" rel="noopener noreferrer">YouTube 第三方教程 / 分析视频</a></p></div></div>
                 </section>
                 </div>
             </section>
