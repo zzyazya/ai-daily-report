@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-06-25 08:55</title>
+  <title>独立测评 · 2026-06-25 17:53</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,40 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">OpenHarness风格Agent Runtime设计教程</span>
-                    <span class="source-label">OpenHarness Study / repo-explainer.com / dev.to / wonderlab</span>
+                    <span class="badge badge-blue">GraphRAG论文比较基础RAG与Agentic方案</span>
+                    <span class="source-label">Medium / QuarkAndCode / Cubed.run / Memgraph Blog</span>
                   </div>
-                  <h3>OpenHarness风格Agent Runtime设计教程</h3>
-                  <p class="synthesis">共识是它更偏开发者底座，核心价值在执行、记忆与协作控制。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/06/24/how-to-design-an-openharness-style-agent-runtime-with-tools-memory-permissions-skills-and-multi-agent-coordination/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方作者把 OpenHarness 运行时拆成一条决策链：模型负责决定，harness 负责执行，安全、记忆和多 Agent 协调夹在中间。</p><p><strong>改变：</strong>这会把开发重心从“调一个更聪明的模型”转到“设计执行边界、记忆流转和协作流程”。</p><p><strong>边界：</strong>更适合做代理基础设施，不是直接面向最终用户的聊天界面。</p><p class="source">来源：<a href="https://learn-openharness.vercel.app/" target="_blank" rel="noopener noreferrer">OpenHarness Study</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇深度解读明确指出，OpenHarness 把权限、工具、memory 和续跑逻辑当作产品边界，而不是把模型本身当边界。</p><p><strong>改变：</strong>团队在接入 LLM 时能更系统地控制工具调用、权限和会话延续，减少把这些能力散落在业务代码里的问题。</p><p><strong>边界：</strong>这类设计会增加运行时编排复杂度，没必要给只做单轮问答的场景上这一层。</p><p class="source">来源：<a href="https://repo-explainer.com/HKUDS/OpenHarness" target="_blank" rel="noopener noreferrer">repo-explainer.com</a></p></div></div>
+                  <h3>GraphRAG论文比较基础RAG与Agentic方案</h3>
+                  <p class="synthesis">外部观察普遍认为，Agentic方案提升多跳推理，但显著增加编排复杂度。</p>
+                  <a class="article-link" href="https://arxiv.org/abs/2606.25656" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Medium作者指出，加入规划（planning）和多跳流程后，GraphRAG不再只是“更好的检索”，而是变成能循环推理的工作流。</p><p><strong>改变：</strong>这意味着用户遇到跨文档、跨实体的复杂问题时，团队不能只堆检索质量，而要把任务拆成规划、检索、反馈回路等步骤来设计系统。</p><p><strong>边界：</strong>代价是流程更长、编排更复杂，更适合需要多跳推理的任务，不适合只求简单问答延迟和实现成本的场景。</p><p class="source">来源：<a href="https://medium.com/@QuarkAndCode/agentic-graphrag-tool-use-planning-and-multi-hop-rag-workflows-0aabc7bdb836" target="_blank" rel="noopener noreferrer">Medium / QuarkAndCode</a></p></div><div class="opinion"><p><strong>观察：</strong>Cubed.run的上手文章把Agentic GraphRAG实现成明确的工作流节点，第一步先做查询分析与路由，再把请求送往不同处理分支。</p><p><strong>改变：</strong>对团队的真实改变是，系统从“统一检索入口”变成“按问题类型分流”的架构，能更稳地处理不同任务，但需要维护路由规则和节点协作。</p><p><strong>边界：</strong>这种方案更依赖工作流设计质量；如果问题类型单一、知识关系不复杂，额外的路由与节点拆分可能得不偿失。</p><p class="source">来源：<a href="https://cubed.run/blog/building-an-agentic-graphrag-system-with-langgraph-and-neo4j" target="_blank" rel="noopener noreferrer">Cubed.run</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Opus/Sonnet高考志愿Agent工作流实测</span>
-                    <span class="source-label">翔宇工作流 / CSDN博客 / 七牛云行业应用（博客园）</span>
+                    <span class="badge badge-blue">ChatGPT游戏代码生成外部测评</span>
+                    <span class="source-label">GameLook 游戏大观</span>
                   </div>
-                  <h3>Claude Opus/Sonnet高考志愿Agent工作流实测</h3>
-                  <p class="synthesis">共识是 Sonnet 适合分工执行，Opus 更适合长链路总控。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116803363673156" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>翔宇工作流的 Claude Code 实操指南提到，日常任务约 80% 用 Sonnet 即可，只有需要更深推理时才切到 Opus。</p><p><strong>改变：</strong>这意味着做高考志愿 Agent 这类多步骤流程时，可以把资料整理、信息检索、表格生成等常规环节交给 Sonnet，把院校策略判断或复杂冲突决策留给 Opus，从而明显压低整体调用成本。</p><p><strong>边界：</strong>边界是 Sonnet 更偏性价比路线，遇到高复杂度推理仍需要手动切到 Opus，否则结果深度可能不够。</p><p class="source">来源：<a href="https://xiangyugongzuoliu.com/claude-code-complete-guide/" target="_blank" rel="noopener noreferrer">翔宇工作流</a></p></div><div class="opinion"><p><strong>观察：</strong>CSDN 的对比解读指出，Sonnet 4 在多 Agent 系统里很适合作为子 Agent，尤其擅长搜索、检索、定向审查这类专项任务，但长时间保持逻辑连贯和上下文一致仍有挑战。</p><p><strong>改变：</strong>对志愿填报工作流来说，更合理的做法是把 Sonnet 放在信息收集、规则核对、分任务执行层，而不是让它单独承担全链路决策，这能提升流程稳定性。</p><p><strong>边界：</strong>边界是如果工作流链路很长、上下文很多，Sonnet 可能出现一致性下降，需要靠 token 上限、任务拆分或更强主模型兜底。</p><p class="source">来源：<a href="https://blog.csdn.net/i042416/article/details/149978431" target="_blank" rel="noopener noreferrer">CSDN博客</a></p></div></div>
+                  <h3>ChatGPT游戏代码生成实测视频观察</h3>
+                  <p class="synthesis">共识是原型提速明显，但成品质量仍受调试能力限制。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116809504131430" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>GameLook转述主播实测称，非程序员在数小时内用ChatGPT配合Midjourney拼出了一个可玩的平台跳跃原型，连金币、计分、结束/重开按钮和简单角色动画都能生成，但实际试玩时跳跃手感不顺，角色容易在平台间卡顿后直接掉落。</p><p><strong>改变：</strong>这说明ChatGPT确实能把“从零到可玩原型”的时间大幅压缩，适合个人或小团队快速验证玩法、补齐基础功能脚手架，但要把Demo变成真正能玩的游戏，仍需要会编程的人持续调试、整合和修手感。</p><p><strong>边界：</strong>边界在于它更像原型生成器而不是成品开发者：对操作流畅度、物理反馈和细节体验要求高的动作游戏场景，单靠自然语言生成很难直接交付可上线质量。</p><p class="source">来源：<a href="http://www.gamelook.com.cn/2023/04/515543/" target="_blank" rel="noopener noreferrer">GameLook 游戏大观</a></p></div></div>
                 </section>
-                
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>产品经理视角测评</h2>
+              <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">GLM 5.2接入Cursor/Codex外部观察</span>
-                    <span class="source-label">Apidog 博客 / 掘金作者评测 / AIHubPlus 博客</span>
+                    <span class="badge badge-purple">外部测评</span>
+                    <span class="source-label">SuperGok</span>
                   </div>
-                  <h3>GLM 5.2本地模型接入Cursor与Codex</h3>
-                  <p class="synthesis">共识是能顺利接入现有 IDE 工作流，但能力上更像可用备选，尚非顶配替代品。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116803783106082" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方接入教程实测把 GLM-5.2 作为 OpenAI 兼容后端接入 Cursor/Claude Code/Cline 时，真正决定能否跑通的是 base URL、model id、上下文窗口和超时参数这些细节配置。</p><p><strong>改变：</strong>对已经在用 Cursor 一类 IDE Agent 的个人和团队来说，这意味着不用重建工作流，只改接口参数就能把 GLM-5.2 接进现有编码助手链路里试跑。</p><p><strong>边界：</strong>代价是配置容错很低，model id、超时或上下文参数写错就可能直接不可用，接入门槛主要不在功能而在细节对齐。</p><p class="source">来源：<a href="https://apidog.com/blog/glm-5-2-claude-code-cline-cursor/" target="_blank" rel="noopener noreferrer">Apidog 博客</a></p></div><div class="opinion"><p><strong>观察：</strong>开发者评测认为 GLM-5.2 是其用过最强的国产模型之一，和 GPT、Claude 顶级模型的差距已经缩小，但还没到可以直接替代的程度。</p><p><strong>改变：</strong>这对想把 GLM-5.2 接入 Cursor 或 Codex 类工具的用户意味着，它更适合作为日常编码与问答的国产备选后端，而不是无脑替换原有最强模型。</p><p><strong>边界：</strong>在需要顶级稳定性、复杂推理或高难代码任务时，作者明确认为它仍不适合完全替代 GPT/Claude。</p><p class="source">来源：<a href="https://juejin.cn/post/7653847759125987368" target="_blank" rel="noopener noreferrer">掘金作者评测</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Hermes Agent /learn 外部测评</span>
-                    <span class="source-label">Medium - I Tried Hermes Agent — It&#x27;s So Good / macgpu</span>
-                  </div>
-                  <h3>Nous Research 的 Hermes Agent /learn 技能系统</h3>
-                  <p class="synthesis">共识是 /learn 的核心价值在于把重复流程沉淀成可复用技能。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/06/24/nous-research-adds-learn-to-hermes-agents-skills-system-capturing-workflows-as-slash-commands-without-hand-writing-skill-md/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Medium 体验文作者实测到，Hermes 完成一次多步骤复杂任务后，可以把这套流程沉淀成可重复调用的 skill，而不是每次都重新提示一遍。</p><p><strong>改变：</strong>这会把个人临时提示词变成可复用流程，用户或团队做重复任务时能明显减少二次编排和操作成本。</p><p><strong>边界：</strong>更适合步骤相对稳定、会反复发生的任务；一次性问题或经常变化的需求，沉淀成 skill 的收益会下降。</p><p class="source">来源：<a href="https://medium.com/ai-software-engineer/i-tried-hermes-agent-its-so-good-i-gave-up-on-other-ai-agents-like-openclaw-211076ce4934" target="_blank" rel="noopener noreferrer">Medium - I Tried Hermes Agent — It&#x27;s So Good</a></p></div><div class="opinion"><p><strong>观察：</strong>macgpu 的工作流文章把 SKILL.md 定义为可移植的“how-to”文件，并强调可通过 Bundles 一次加载流程、再交给 GEPA 持续改进 skill，而不必改模型权重。</p><p><strong>改变：</strong>这意味着团队可以把流程经验以文件形式共享、装配和迭代，工作流优化从“调模型”转成“维护技能文件”。</p><p><strong>边界：</strong>前提是流程本身能被清晰写成步骤化说明；对高度依赖即时判断、难以文档化的工作，SKILL.md 的可移植性价值有限。</p><p class="source">来源：<a href="https://macgpu.com/en/blog/2026-0618-hermes-agent-skills-advanced-gepa-guide.html" target="_blank" rel="noopener noreferrer">macgpu</a></p></div></div>
+                  <h3>Buy by Agentcard让Claude里直接订DoorDash</h3>
+                  <p class="synthesis">现有外部材料不足以形成有效测评结论。</p>
+                  <a class="article-link" href="https://www.producthunt.com/r/OYV6A53YD3NOX7" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>外部材料只泛述 AgentCard 可让 AI 代理完成 API、服务和线上订单支付，没有提供 Claude 内订 DoorDash 的具体上手过程、成功率、限制或对比观察。</p><p><strong>改变：</strong>无法据此判断普通用户在 Claude 里点 DoorDash 后，流程到底缩短了多少、是否稳定可用，或是否真能替代手动下单。</p><p><strong>边界：</strong>材料更像功能介绍而非第三方测评，缺少直接相关的真实体验与工作流分析，不足以支持保留为有效外部观点。</p><p class="source">来源：<a href="https://supergok.com/agentcard-ai-agent-payments/" target="_blank" rel="noopener noreferrer">SuperGok</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -92,35 +86,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">Adobe Illustrator Beta 草图转矢量外部上手</span>
-                    <span class="source-label">uLearn.tech</span>
+                    <span class="badge badge-pink">外部测评 / 上手体验 / 对用户真实影响</span>
+                    <span class="source-label">aat.ee / Steven Video</span>
                   </div>
-                  <h3>Adobe Illustrator Beta草图转矢量实测</h3>
-                  <p class="synthesis">外部上手共识是它能提速草图成稿，但仍偏向初稿生成而非终稿替代。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116798129245857" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方作者在一次完整实测里，直接拿“原始手绘草图”测试 Illustrator Beta 的 Sketch to Vector，观察重点是它能否把粗糙草稿转成可用于成品设计的清晰矢量贴纸画面。</p><p><strong>改变：</strong>这意味着对插画师、贴纸/周边设计者和内容团队来说，手绘草稿到可交付矢量稿之间的首轮描线与整理工作有机会明显缩短，不必一开始就手工重绘全部轮廓。</p><p><strong>边界：</strong>片段里只说明作者在做“极限测试”和成品化验证，没有提供复杂场景、失败案例或精修成本，因此更能说明它适合草图转初稿，不足以证明可直接替代后续人工细修。</p><p class="source">来源：<a href="https://ulearn.tech/how-to-convert-sketches-to-vector/" target="_blank" rel="noopener noreferrer">uLearn.tech</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">Flux2-Klein 本地显卡外部实测</span>
-                    <span class="source-label">知乎作者《7900XTX 本地 AI 全栈指南》 / GitHub Issue · leejet/stable-diffusion.cpp</span>
-                  </div>
-                  <h3>Flux2-Klein 4B与9B本地显卡实测选型</h3>
-                  <p class="synthesis">共识是Klein更像本地高效率方案，优势在显存门槛与速度，短板在稳定性和高要求画质。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116805846699352" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有7900 XTX实测者给出显存峰值：Flux2-Klein 4B约16.9GB，24GB显存才能在本地多任务链路里留出较稳妥余量。</p><p><strong>改变：</strong>这直接影响选卡与工作流设计：如果团队想把文生图、LLM上下文和视频生成放在同一台机器上，24GB级显存更接近“够用线”，而不是单看模型能否启动。</p><p><strong>边界：</strong>这类结论更偏向整机工作流峰值而非单次纯出图，低显存卡并非完全不能跑，但并发、上下文长度和工作流复杂度会明显受限。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2045588771924660351" target="_blank" rel="noopener noreferrer">知乎作者《7900XTX 本地 AI 全栈指南》</a></p></div><div class="opinion"><p><strong>观察：</strong>在stable-diffusion.cpp的公开问题中，用户报告FLUX.2-klein-9B在RX 7900 XTX + ROCm 6.3环境下生成时触发GGML_ASSERT并崩溃，说明9B本地链路并非只看显存够不够。</p><p><strong>改变：</strong>这对本地部署者的真实影响是：选型不能只比较4B/9B画质与速度，还要把推理后端、ROCm版本和GGUF实现兼容性纳入评估，否则会出现“配置达标但无法稳定出图”的情况。</p><p><strong>边界：</strong>该问题指向特定后端与版本组合，不能直接等同于所有平台都会崩，但AMD本地用户需要预留排障和版本回退成本。</p><p class="source">来源：<a href="https://github.com/leejet/stable-diffusion.cpp/issues/1213" target="_blank" rel="noopener noreferrer">GitHub Issue · leejet/stable-diffusion.cpp</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">LTX2.3导演台2.0外部测评</span>
-                    <span class="source-label">青橙Lab（抖音） / YouTube 第三方教程 / 分析视频</span>
-                  </div>
-                  <h3>LTX2.3导演台2.0视频工作流测评</h3>
-                  <p class="synthesis">共识是可编辑性明显增强，但版本稳定性与上手门槛仍是主要代价。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116804521300227" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>青橙Lab实操中把LTX2.3导演台升级版的核心变化落在“更实用”和“宫格图演示”上，说明它不只是单次出片，而是能用多画面参考去组织镜头与视频段落。</p><p><strong>改变：</strong>对创作者和小团队来说，这会把AI视频从一次性生成，推进到先看参考布局再延长、拼接和调整的工作流，减少反复整段重生的次数。</p><p><strong>边界：</strong>片段只体现了上手演示和功能可用性，没有给出画质、速度、算力成本或长时一致性的硬指标，不适合作为全面性能结论。</p><p class="source">来源：<a href="https://www.douyin.com/video/7648572321577372954" target="_blank" rel="noopener noreferrer">青橙Lab（抖音）</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方教程将LTX Director的价值概括为“时间线控制”和“可编辑的独立工作流”，并强调它能把不同提示词路由到视频的不同片段，同时LTX-2.3在细节、竖屏、人像、音频、图生视频、提示理解和文字呈现上都有明显改进。</p><p><strong>改变：</strong>对需要改段落、改镜头意图、做分镜式生成的用户，真正变化是可以按片段修而不是整条视频重做，AI视频开始接近可迭代的剪辑流程。</p><p><strong>边界：</strong>教程也明确说LTX Director“还早期”，更适合愿意折腾节点和流程的人；对追求即开即用、稳定批量生产的团队，学习和调参门槛仍然偏高。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=9j789l9Bejg" target="_blank" rel="noopener noreferrer">YouTube 第三方教程 / 分析视频</a></p></div></div>
+                  <h3>Krea 2艺术表现力实测评测解析</h3>
+                  <p class="synthesis">共识是：Krea 2 强在快出图与风格探索，不强在长提示精控。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116809403602523" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>aat.ee 的实测写到，Krea 2 不太依赖冗长提示词，而是更擅长理解视觉品味和风格，且可在 15 秒甚至更短时间内生成有表现力的高质量图像，并支持风格参考和情绪板。</p><p><strong>改变：</strong>这意味着团队做概念探索、风格定稿时，可以更快迭代视觉方向，把“试风格”从慢速生成改成接近实时的创作流程。</p><p><strong>边界：</strong>更适合风格探索和审美对齐，不适合只靠长 prompt 精细驱动、追求逐字控制的工作流。</p><p class="source">来源：<a href="https://www.aat.ee/zh/projects/krea-2" target="_blank" rel="noopener noreferrer">aat.ee</a></p></div><div class="opinion"><p><strong>观察：</strong>Steven Video 的教程把 Krea 2 Turbo 直接用于 2 秒出图工作流，重点验证了风格参考、情绪板和 LoRA 组合能把 prompt 测试变成快速联调过程。</p><p><strong>改变：</strong>对视频团队和小商家来说，这会明显缩短前期筹备时间，能更快做出可用的营销素材和风格样稿。</p><p><strong>边界：</strong>这种用法更依赖预先整理好的参考图、情绪板和 LoRA 资产，临时从零起稿的收益没那么高。</p><p class="source">来源：<a href="https://www.stevenvideo.com/blog/krea-2-turbo-ai-image-tutorial-2026-zh" target="_blank" rel="noopener noreferrer">Steven Video</a></p></div></div>
                 </section>
                 </div>
             </section>
