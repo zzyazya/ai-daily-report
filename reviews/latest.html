@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-06-27 08:41</title>
+  <title>独立测评 · 2026-06-27 17:36</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,35 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">豆包 2.1 Pro 外部测评</span>
-                    <span class="source-label">51CTO 博客 / ChengRang AI 工具评测 / 知乎博主《豆包王朝了？豆包Seed 2.1 Pro Preview实测表现》</span>
+                    <span class="badge badge-blue">Claude Code Harness 外部测评</span>
+                    <span class="source-label">TheAIEra Blog / ClaudeCodeLab</span>
                   </div>
-                  <h3>豆包 2.1 Pro 实测对比 GPT-5.5看点</h3>
-                  <p class="synthesis">外部共识是能力已逼近一线，但正式版表现与单项优势仍需按场景复测。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116817104279065" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>51CTO 的基准+实测文章认为，Doubao-Seed-2.1 Pro 首次把国产模型放到与 GPT-5.5 同一张 Coding、Agent、多模态对标表里，且在 SciCode、NL2Repo、MobileWorld、MCP-Atlas、GDPVal 等部分分项出现反超。</p><p><strong>改变：</strong>这意味着对代码生成、仓库理解、Agent 调度这类混合工作流，团队不必再默认海外旗舰是唯一可用解，可以把豆包 2.1 Pro 纳入同级候选做 A/B 测试和成本替换。</p><p><strong>边界：</strong>结论更接近“部分能力追平或单项超出”而非全面领先，用户仍需按具体任务复测，不能直接推断所有场景都优于 GPT-5.5。</p><p class="source">来源：<a href="https://blog.51cto.com/u_17459294/14714345" target="_blank" rel="noopener noreferrer">51CTO 博客</a></p></div><div class="opinion"><p><strong>观察：</strong>ChengRang 的工具评测把豆包 2.1 Pro 描述为可连续 10+ 小时自主推进完整工程、可处理 2 小时视频并端到端剪辑，同时给出 Pro 输入 6 元/输出 30 元每百万 Tokens、缓存命中 1.2 元的价格信息，综合成本较 Opus 低近 80%。</p><p><strong>改变：</strong>对需要长时 Agent、长上下文处理或视频内容生产的用户，这类能力组合的直接价值是把“能不能跑完整流程”与“跑不跑得起”放到一起解决，降低持续调用成本。</p><p><strong>边界：</strong>这类收益主要成立于长流程、重上下文、可批量化的任务；材料没有说明其在短任务、强实时或高精度人工审校场景下是否同样占优。</p><p class="source">来源：<a href="https://www.chengrang.com/tools/doubao-2-1-pro.html" target="_blank" rel="noopener noreferrer">ChengRang AI 工具评测</a></p></div></div>
+                  <h3>Claude Code与claude-code-harness自主循环框架</h3>
+                  <p class="synthesis">外部共识是：Harness 真正价值在把代理循环变成可控、可约束的工程流程。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116820006800215" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>TheAIEra 对 Claude Code 源码做逆向分析后指出，Claude Code 团队把系统提示词当成“控制面”，Harness 的核心价值不是单次补全，而是持续约束模型按既定流程工作。</p><p><strong>改变：</strong>这意味着团队可以把 Plan→Work→Review 这类循环固化进代理工作流，用提示与框架规则持续约束执行方式，而不必完全依赖人工逐步盯控。</p><p><strong>边界：</strong>这种能力高度依赖 Harness 和提示设计质量；如果规则写得不清楚，循环可能只是机械重复而非稳定产出。</p><p class="source">来源：<a href="https://www.theaiera.cn/blogs/why-claude-code-harness-so-popular" target="_blank" rel="noopener noreferrer">TheAIEra Blog</a></p></div><div class="opinion"><p><strong>观察：</strong>ClaudeCodeLab 在与 Gemini CLI 的对比中把“成熟的 Harness（权限）设计”列为 Claude Code 的明确优势，说明第三方观察到它更强调代理执行过程中的权限边界与控制。</p><p><strong>改变：</strong>对想让 AI 在真实仓库里自主循环执行任务的用户/团队来说，更成熟的权限设计会直接影响是否敢把更多步骤交给代理连续完成。</p><p><strong>边界：</strong>这类优势主要体现在需要工具调用和多步执行的场景；如果只是把它当普通聊天补全器，Harness 设计的收益不会那么明显。</p><p class="source">来源：<a href="https://claudecode-lab.com/zh/blog/claude-code-vs-gemini-cli/" target="_blank" rel="noopener noreferrer">ClaudeCodeLab</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Mistral OCR 4多语种实测观察</span>
-                    <span class="source-label">新浪科技 / 汇智网</span>
+                    <span class="badge badge-blue">华硕DGX GB10 / GX10 跑 ComfyUI 外部体验</span>
+                    <span class="source-label">404note / CSDN 博客 / Mobile01</span>
                   </div>
-                  <h3>Mistral OCR 4多语种实测观察</h3>
-                  <p class="synthesis">共识是多语种与复杂文档效率高，但精度仍需人工抽检。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116817724970328" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方评测指出，Mistral OCR 在多语言文档对比中整体表现优于 Azure OCR 和 Google Doc AI，尤其适合带复杂版式的幻灯片与 PDF 这类多模态文档。</p><p><strong>改变：</strong>对需要做跨语言资料入库、检索增强生成（RAG）或批量扫描解析的团队来说，这意味着同一套 OCR 流水线更可能覆盖复杂文档与多语种输入，减少换引擎和人工补结构的次数。</p><p><strong>边界：</strong>同一篇实测也明确提到“仍有缺陷”，说明它并非无错替代人工复核，尤其在高风险归档或精度要求极高的场景里仍需要抽检。</p><p class="source">来源：<a href="https://finance.sina.com.cn/tech/roll/2025-03-07/doc-inenuzhm5927298.shtml" target="_blank" rel="noopener noreferrer">新浪科技</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方分析提到，Mistral OCR 在表格识别上达到 98.12% 准确率，并给出实际体感：季度报告这类材料可从“几小时处理”缩短到“几分钟处理”。</p><p><strong>改变：</strong>对财务、运营、研究团队来说，价值不只是识别文字，而是能把表格数据更快转成可分析结构，显著压缩人工录入和清洗时间。</p><p><strong>边界：</strong>这条观察主要证明其表格抽取效率，对手写稿、低质扫描件或强视觉噪声文档的表现，材料里没有给出验证。</p><p class="source">来源：<a href="https://www.hubwiz.com/blog/mistral-ocr-document-understanding-ai/" target="_blank" rel="noopener noreferrer">汇智网</a></p></div></div>
+                  <h3>华硕DGX GB10 SPARK GX10跑ComfyUI视频实测</h3>
+                  <p class="synthesis">共识是大内存显著放宽 ComfyUI 工作流，但软件栈成熟度仍是主要代价。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116820526827641" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>404note 在 DGX Spark（GB10）部署 Flux AI + ComfyUI 时实测到，GB10 的统一内存架构可以直接承载 120GB 以上模型，适合把大模型工作流放进 ComfyUI 本地跑通。</p><p><strong>改变：</strong>对做视频/图像生成的个人与小团队来说，原本容易因显存不足拆模型、降分辨率或频繁换机的流程，可以更直接地在一台小型设备上完成。</p><p><strong>边界：</strong>作者同时指出当前最大瓶颈是 PyTorch 对 CUDA 13.0 支持还不完整，仍偏 nightly 环境，部署过程坑多、速度也还有提升空间，不适合追求开箱即用的人。</p><p class="source">来源：<a href="https://404note.com/在-nvidia-dgx-spark（gb10）上部署-flux-ai-comfyui-完整踩坑記錄/" target="_blank" rel="noopener noreferrer">404note</a></p></div><div class="opinion"><p><strong>观察：</strong>CSDN 的 DGX Spark ComfyUI 实践文中，作者实际跑到 128GB 同存带来的直接效果是“各种 AI 生图模型基本无压力”，明显缓解了 OOM 问题。</p><p><strong>改变：</strong>这意味着在 ComfyUI 里叠加更重的节点、加载更大的模型或切换更高精度格式时，工作流中断概率更低，调流程比传统小显存卡更顺。</p><p><strong>边界：</strong>这篇材料更偏生图与格式体验，未给出视频流程的完整速度基准，因此能说明“能跑更大工作流”，但不足以证明所有视频链路都高效。</p><p class="source">来源：<a href="https://blog.csdn.net/Xsuperzone/article/details/154351209" target="_blank" rel="noopener noreferrer">CSDN 博客</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
                     <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">YouTube 博主：My New AI Coding Workflow To Build Apps Fast (Goodbye Cursor...) / Bind Blog</span>
+                    <span class="source-label">OfoxAI Docs / 腾讯云开发者社区</span>
                   </div>
-                  <h3>Claude、Codex、Cursor直连智能路由</h3>
-                  <p class="synthesis">共识是路由降低切换成本，但客户端体验与模型能力仍决定实际生产效率。</p>
-                  <a class="article-link" href="https://github.com/workweave/router" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>一位开发者在实际 AI 编程流程中明确表示，自己正从 Cursor 切换到 Claude Code 来更快构建应用，说明同类客户端在真实开发中的使用体验已足以触发迁移。</p><p><strong>改变：</strong>对用户和团队来说，这意味着一旦 Claude、Codex、Cursor 都能直连同一套路由层，选择重点会从“接哪家模型”转向“哪种交互和工作流更顺手”，迁移成本也会下降。</p><p><strong>边界：</strong>片段未给出量化测试或失败场景，更多是个人工作流选择，不足以代表所有项目类型。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=wsIb_EdhcY8" target="_blank" rel="noopener noreferrer">YouTube 博主：My New AI Coding Workflow To Build Apps Fast (Goodbye Cursor...)</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方对比文章认为 GPT-5 Codex、Claude Code、Cursor 能力有重叠但定位不同；若只选一个，作者倾向 GPT-5 Codex，理由是推理、正确性和自主性更强。</p><p><strong>改变：</strong>这对用户的真实意义是：如果三者都能接入智能路由，团队可以继续保留熟悉的客户端，但在复杂编码任务上优先把流量导向更强的模型组合，以减少返工和人工校对。</p><p><strong>边界：</strong>作者判断明确建立在“假设能获得访问权限”的前提下，因此不适用于账号、额度或地区受限的团队。</p><p class="source">来源：<a href="https://blog.getbind.co/2025/09/16/gpt-5-codex-vs-claude-code-vs-cursor-which-is-best-for-coding/" target="_blank" rel="noopener noreferrer">Bind Blog</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Google Colab 搭建 Nanobot 式 AI Agent 与 MCP</span>
-                    <span class="source-label">DEV Community</span>
-                  </div>
-                  <h3>Google Colab搭建Nanobot式AI Agent与MCP</h3>
-                  <p class="synthesis">外部体验的共识是：Colab MCP 真正提升的是 Agent 对 Notebook 内核的可接入性与自动化执行能力。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/06/26/build-a-nanobot-style-ai-agent-in-google-colab-with-tool-calling-session-memory-skills-and-mcp-servers/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>DEV 社区作者在一个真实量子计算工作流里，实际用 Google 的 Colab MCP Server 让 AI Agent 连续完成构建、运行、调试和提交任务，说明它不只是“读笔记本”，而是能把 Colab 变成可执行的代理后端。</p><p><strong>改变：</strong>对用户和团队来说，这把原本需要人手点网页、跑单元步骤的 Colab 流程，改成了 Agent 可接管的自动化执行链，更适合做实验迭代和任务编排。</p><p><strong>边界：</strong>片段没有给出稳定性、失败恢复或长时任务成本等细节，因此更能证明“能跑通真实流程”，但还不足以证明它适合高可靠生产场景。</p><p class="source">来源：<a href="https://dev.to/axrisi/i-stress-tested-googles-colab-mcp-server-with-a-real-quantum-workflow-2oih" target="_blank" rel="noopener noreferrer">DEV Community</a></p></div></div>
+                  <h3>cursor免费方案实测与自定义大模型配置</h3>
+                  <p class="synthesis">共识是配置门槛不高，但免费版自定义能力受限明显。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116820476430237" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>OfoxAI 在兼容性说明中明确观察到，Cursor 的 Auto 模式会优先走官方模型选择逻辑，从而绕过用户填写的自定义 Base URL；同时免费版无法使用自定义模型。</p><p><strong>改变：</strong>这意味着想把 Cursor 接到自建或第三方模型网关的用户，不能只填好接口就默认生效，实际工作流里需要避开 Auto 模式并评估是否必须升级付费方案。</p><p><strong>边界：</strong>该结论直接限制了免费用户的自定义模型玩法，也不适合依赖统一私有网关、成本管控或合规路由的团队场景。</p><p class="source">来源：<a href="https://ofox.ai/zh/docs/integrations/cursor" target="_blank" rel="noopener noreferrer">OfoxAI Docs</a></p></div><div class="opinion"><p><strong>观察：</strong>腾讯云开发者社区的上手教程显示，Cursor 的模型与 Key 配置集中在设置里的 Models 面板，用户可以直接选择模型并手动填入密钥完成接入。</p><p><strong>改变：</strong>对普通开发者来说，这把“切换模型/接入外部 Key”变成了可视化配置流程，降低了试用免费方案和按需更换模型的门槛。</p><p><strong>边界：</strong>这类方式更适合个人或小团队快速接入，不等于不同模型在 Cursor 内都能无差别工作，仍受版本权限和具体模型兼容性影响。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2451756" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div></div>
                 </section>
                 </div>
             </section>
