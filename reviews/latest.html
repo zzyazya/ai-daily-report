@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-06-27 17:36</title>
+  <title>独立测评 · 2026-06-28 08:35</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,35 +43,78 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Code Harness 外部测评</span>
-                    <span class="source-label">TheAIEra Blog / ClaudeCodeLab</span>
+                    <span class="badge badge-blue">本地 Coding Agent 替代订阅的外部测评</span>
+                    <span class="source-label">80aj 对比评测文章 / LocalLLMs</span>
                   </div>
-                  <h3>Claude Code与claude-code-harness自主循环框架</h3>
-                  <p class="synthesis">外部共识是：Harness 真正价值在把代理循环变成可控、可约束的工程流程。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116820006800215" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>TheAIEra 对 Claude Code 源码做逆向分析后指出，Claude Code 团队把系统提示词当成“控制面”，Harness 的核心价值不是单次补全，而是持续约束模型按既定流程工作。</p><p><strong>改变：</strong>这意味着团队可以把 Plan→Work→Review 这类循环固化进代理工作流，用提示与框架规则持续约束执行方式，而不必完全依赖人工逐步盯控。</p><p><strong>边界：</strong>这种能力高度依赖 Harness 和提示设计质量；如果规则写得不清楚，循环可能只是机械重复而非稳定产出。</p><p class="source">来源：<a href="https://www.theaiera.cn/blogs/why-claude-code-harness-so-popular" target="_blank" rel="noopener noreferrer">TheAIEra Blog</a></p></div><div class="opinion"><p><strong>观察：</strong>ClaudeCodeLab 在与 Gemini CLI 的对比中把“成熟的 Harness（权限）设计”列为 Claude Code 的明确优势，说明第三方观察到它更强调代理执行过程中的权限边界与控制。</p><p><strong>改变：</strong>对想让 AI 在真实仓库里自主循环执行任务的用户/团队来说，更成熟的权限设计会直接影响是否敢把更多步骤交给代理连续完成。</p><p><strong>边界：</strong>这类优势主要体现在需要工具调用和多步执行的场景；如果只是把它当普通聊天补全器，Harness 设计的收益不会那么明显。</p><p class="source">来源：<a href="https://claudecode-lab.com/zh/blog/claude-code-vs-gemini-cli/" target="_blank" rel="noopener noreferrer">ClaudeCodeLab</a></p></div></div>
+                  <h3>本地 Coding Agent 替代 Claude Code 与 Codex 订阅</h3>
+                  <p class="synthesis">共识是可替代订阅，但前提是补齐 Agent 工作流与运维成本。</p>
+                  <a class="article-link" href="https://magazine.sebastianraschka.com/p/using-local-coding-agents" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方对比文章提到，部分本地/可自定义 Agent 的实际路线不是直接复刻 Claude Code 或 Codex，而是通过“自定义模型后端 + 多步规划”接入 OpenRouter、国产中转或本地 vLLM，以工作流能力弥补模型差异。</p><p><strong>改变：</strong>这意味着用户和团队可以把订阅制 Agent 替换成自选模型栈，按预算、隐私和算力条件自由切换后端，而不是被单一订阅绑定。</p><p><strong>边界：</strong>代价是可用性更依赖自己排障和配置；同文还指出 Codex 一类工具存在 MCP 登出吞 session 等工程坑，适合愿意折腾工具链的人，不适合想开箱即用的团队。</p><p class="source">来源：<a href="https://www.80aj.com/2026/06/25/ai-programming-agents-comparison-2/" target="_blank" rel="noopener noreferrer">80aj 对比评测文章</a></p></div><div class="opinion"><p><strong>观察：</strong>LocalLLMs 的工作流分析指出，Claude Code、Codex 这类产品真正带来的不是单个模型能力本身，而是把模型包进工具调用、权限控制、项目上下文和验证循环后的 Agent 执行框架。</p><p><strong>改变：</strong>这对想用本地模型替代订阅的用户很关键：真正需要复刻的是整套 Agent 工作流，而不只是把云模型换成本地模型。</p><p><strong>边界：</strong>只部署本地 LLM runtime 并不能自然得到 Claude Code/Codex 的体验；如果缺少权限、上下文和校验环节，本地替代方案在复杂工程任务里会明显掉档。</p><p class="source">来源：<a href="https://m-movahedi.com/scratchpad/local-llms/local-llms-206-coding-agents-claude-code-codex-antigravity/" target="_blank" rel="noopener noreferrer">LocalLLMs</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">华硕DGX GB10 / GX10 跑 ComfyUI 外部体验</span>
-                    <span class="source-label">404note / CSDN 博客 / Mobile01</span>
+                    <span class="badge badge-blue">Qwen3.6-27B 16GB本地实测外部观点</span>
+                    <span class="source-label">知乎专栏 / CSDN</span>
                   </div>
-                  <h3>华硕DGX GB10 SPARK GX10跑ComfyUI视频实测</h3>
-                  <p class="synthesis">共识是大内存显著放宽 ComfyUI 工作流，但软件栈成熟度仍是主要代价。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116820526827641" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>404note 在 DGX Spark（GB10）部署 Flux AI + ComfyUI 时实测到，GB10 的统一内存架构可以直接承载 120GB 以上模型，适合把大模型工作流放进 ComfyUI 本地跑通。</p><p><strong>改变：</strong>对做视频/图像生成的个人与小团队来说，原本容易因显存不足拆模型、降分辨率或频繁换机的流程，可以更直接地在一台小型设备上完成。</p><p><strong>边界：</strong>作者同时指出当前最大瓶颈是 PyTorch 对 CUDA 13.0 支持还不完整，仍偏 nightly 环境，部署过程坑多、速度也还有提升空间，不适合追求开箱即用的人。</p><p class="source">来源：<a href="https://404note.com/在-nvidia-dgx-spark（gb10）上部署-flux-ai-comfyui-完整踩坑記錄/" target="_blank" rel="noopener noreferrer">404note</a></p></div><div class="opinion"><p><strong>观察：</strong>CSDN 的 DGX Spark ComfyUI 实践文中，作者实际跑到 128GB 同存带来的直接效果是“各种 AI 生图模型基本无压力”，明显缓解了 OOM 问题。</p><p><strong>改变：</strong>这意味着在 ComfyUI 里叠加更重的节点、加载更大的模型或切换更高精度格式时，工作流中断概率更低，调流程比传统小显存卡更顺。</p><p><strong>边界：</strong>这篇材料更偏生图与格式体验，未给出视频流程的完整速度基准，因此能说明“能跑更大工作流”，但不足以证明所有视频链路都高效。</p><p class="source">来源：<a href="https://blog.csdn.net/Xsuperzone/article/details/154351209" target="_blank" rel="noopener noreferrer">CSDN 博客</a></p></div></div>
+                  <h3>Qwable 3.6 27B本地AI编程16GB显存实测</h3>
+                  <p class="synthesis">16GB可本地跑，但编程体验更取决于量化稳定性和首字延迟。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116823110524318" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者实测认为，Qwen3.6-27B 作为稠密模型，相比 35B-A3B 这类稀疏架构更适合个人长期本地使用；在 UD-Q8_K_XL 量化下配合 AMD W7900 运行稳定，诗词、代码编写和日常问答的整体表现较上一代 3.5 更顺滑、细节理解更好。</p><p><strong>改变：</strong>对想把模型长期放在本地做写代码和日常助手的人来说，这意味着它更像一台可持续使用的通用本地模型，而不是只适合短时尝鲜的跑分玩具。</p><p><strong>边界：</strong>这条结论建立在高质量量化和特定显卡环境上，16GB 显存卡能否复现同等稳定性与质量，不能直接照搬。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2034576000680465997" target="_blank" rel="noopener noreferrer">知乎专栏</a></p></div><div class="opinion"><p><strong>观察：</strong>CSDN 的部署体验文章指出，部署 Qwen3.6-27B 时，单看生成速度不够，真正更影响日常使用感受的是提示词提交后到开始出字的处理速度，也就是首 token 延迟（TTFT）。</p><p><strong>改变：</strong>这会直接改变本地 AI 编程的调优重点：用户不该只盯着 tokens/s，而要同时优化首响时间，否则代码问答、补全和多轮交互都会显得“能跑但不跟手”。</p><p><strong>边界：</strong>如果场景是离线批处理、长文本一次性生成，TTFT 的痛感会弱一些；但交互式编程助手场景里，这个代价会被明显放大。</p><p class="source">来源：<a href="https://blog.csdn.net/qq_30089667/article/details/161603295" target="_blank" rel="noopener noreferrer">CSDN</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">OfoxAI Docs / 腾讯云开发者社区</span>
+                    <span class="badge badge-blue">外部测评</span>
+                    <span class="source-label">Medium / xhinker</span>
                   </div>
-                  <h3>cursor免费方案实测与自定义大模型配置</h3>
-                  <p class="synthesis">共识是配置门槛不高，但免费版自定义能力受限明显。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116820476430237" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>OfoxAI 在兼容性说明中明确观察到，Cursor 的 Auto 模式会优先走官方模型选择逻辑，从而绕过用户填写的自定义 Base URL；同时免费版无法使用自定义模型。</p><p><strong>改变：</strong>这意味着想把 Cursor 接到自建或第三方模型网关的用户，不能只填好接口就默认生效，实际工作流里需要避开 Auto 模式并评估是否必须升级付费方案。</p><p><strong>边界：</strong>该结论直接限制了免费用户的自定义模型玩法，也不适合依赖统一私有网关、成本管控或合规路由的团队场景。</p><p class="source">来源：<a href="https://ofox.ai/zh/docs/integrations/cursor" target="_blank" rel="noopener noreferrer">OfoxAI Docs</a></p></div><div class="opinion"><p><strong>观察：</strong>腾讯云开发者社区的上手教程显示，Cursor 的模型与 Key 配置集中在设置里的 Models 面板，用户可以直接选择模型并手动填入密钥完成接入。</p><p><strong>改变：</strong>对普通开发者来说，这把“切换模型/接入外部 Key”变成了可视化配置流程，降低了试用免费方案和按需更换模型的门槛。</p><p><strong>边界：</strong>这类方式更适合个人或小团队快速接入，不等于不同模型在 Cursor 内都能无差别工作，仍受版本权限和具体模型兼容性影响。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2451756" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div></div>
+                  <h3>Ornith-1.0-35B对比Qwen3.6-27B-DSV4Pro实测</h3>
+                  <p class="synthesis">现有外部样本偏向Ornith，但与新闻对比对象并不完全一致。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116823345333079" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Medium作者在其基准对比中称，Ornith-1.0-35B相较Qwen3.6-35B-A3B在编码、工具调用和推理上分别高出2.8、5.3和1.7分，给出的结论是“整体胜出”。</p><p><strong>改变：</strong>这意味着对本地部署35B级MoE、且任务偏代码生成或Agent工具链的用户，Ornith可能在相近激活参数规模下带来更少的调用失误和更稳定的复杂任务完成率。</p><p><strong>边界：</strong>这篇文章对比对象是Qwen3.6-35B-A3B，而不是新闻里的Qwen3.6-27B-DSV4Pro，因此只能说明Ornith在Qwen3.6同系另一模型上的外部正向样本，不能直接否定B站对27B-DSV4Pro的实测结论。</p><p class="source">来源：<a href="https://xhinker.medium.com/ornith-1-0-35b-the-moe-model-that-runs-like-3b-thinks-like-27b-1e7a0fe5a64e" target="_blank" rel="noopener noreferrer">Medium / xhinker</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Adrafinil：仅在Agent运行时防Mac休眠</span>
+                    <span class="source-label">Macworld / Lifewire</span>
+                  </div>
+                  <h3>Adrafinil：仅在Agent运行时防Mac休眠</h3>
+                  <p class="synthesis">共识是其价值在按任务保活，减少合盖运行的设置摩擦与常醒代价。</p>
+                  <a class="article-link" href="https://github.com/kageroumado/adrafinil" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Macworld 实测与指南指出，MacBook 合盖后默认会进入睡眠，若想持续下载、备份或把机器当桌面主机使用，通常要依赖外接电源/显示器的 clamshell 模式，或额外借助第三方工具阻止休眠。</p><p><strong>改变：</strong>这说明像 Adrafinil 这类“只在任务运行时保持唤醒”的工具，能把原本需要长期维持合盖常醒的做法，收敛成仅在 Agent 执行期间保持机器在线，更适合自动化任务、长作业和远程代理工作流。</p><p><strong>边界：</strong>这类需求本质上仍是对系统默认休眠策略的绕过，不适合希望严格省电或不想让合盖设备持续运行的场景。</p><p class="source">来源：<a href="https://www.macworld.com/article/673295/how-to-use-macbook-with-lid-closed-stop-closed-mac-sleeping.html" target="_blank" rel="noopener noreferrer">Macworld</a></p></div><div class="opinion"><p><strong>观察：</strong>Lifewire 的操作说明强调，MacBook 合盖不睡通常需要满足特定硬件条件（如外接显示器、键鼠和电源）或改用额外软件方案，系统默认并不会为后台任务自动维持唤醒。</p><p><strong>改变：</strong>对用户而言，这意味着 Adrafinil 的实际价值不在“让 Mac 永不休眠”，而在减少为跑 Agent 去搭整套 clamshell 条件或手动改电源设置的摩擦，把持续运行变成任务级控制。</p><p><strong>边界：</strong>如果用户本来就在标准 clamshell 桌面模式下工作，或任务不需要合盖持续运行，那么这类工具带来的增益会明显下降。</p><p class="source">来源：<a href="https://www.lifewire.com/prevent-macbook-from-sleeping-when-lid-is-closed-5203069" target="_blank" rel="noopener noreferrer">Lifewire</a></p></div></div>
+                </section>
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>产品经理视角测评</h2>
+              <div class="role-cards">
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-purple">豆包/微信/千问AI语音输入法外部测评</span>
+                    <span class="source-label">腾讯新闻《四大AI语音输入法横评：豆包/千问/搜狗/Typeless争夺语音AI新入口》 / 知乎《AI 语音输入法爆火：豆包输入法全面上线，Typeless 日榜第一，Wispr 融资 8100 万美金》</span>
+                  </div>
+                  <h3>豆包微信千问AI语音输入法横评观察</h3>
+                  <p class="synthesis">共识是语音识别明显进步，但是否替代主力输入法仍取决于稳定性与综合功能。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116822321988736" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>腾讯新闻横评指出，过去桌面端语音输入常因口音、专有名词和长句识别差，逼得用户在“开口输入”和“手动重改”之间反复切换；而近两个月豆包、千问等接入大模型后，桌面语音输入终于开始摆脱“错字连篇”的老问题。</p><p><strong>改变：</strong>这直接改变了需要连续写作、聊天或记录的人机输入流程：语音输入不再只是无障碍备选，而开始变成可用于日常生产的主输入方式。</p><p class="source">来源：<a href="https://news.qq.com/rain/a/20260605A06X4600" target="_blank" rel="noopener noreferrer">腾讯新闻《四大AI语音输入法横评：豆包/千问/搜狗/Typeless争夺语音AI新入口》</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇知乎上手反馈给出的结论很直接：豆包的语音输入“挺好”，但除语音外的其它能力“真的拉”，最终作者又切回了搜狗，因为后者更全面也更稳定。</p><p><strong>改变：</strong>这说明对重度输入用户而言，AI语音识别再强，也还不足以单独决定长期留存，候选词、稳定性和综合功能仍会影响是否把它当主力输入法。</p><p><strong>边界：</strong>如果用户需要更完整的输入法生态和更稳定的全场景体验，豆包这类语音优先产品现阶段可能更适合作为补充工具，而非唯一选择。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1977487670344189009" target="_blank" rel="noopener noreferrer">知乎《AI 语音输入法爆火：豆包输入法全面上线，Typeless 日榜第一，Wispr 融资 8100 万美金》</a></p></div></div>
+                </section>
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>美术视角测评</h2>
+              <div class="role-cards">
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">ComfyUI高清放大工作流外部测评</span>
+                    <span class="source-label">知乎｜《4种方法，ComfyUI最强图片高清放大工作流，无损放大，细节补全》</span>
+                  </div>
+                  <h3>ComfyUI高清放大工作流实战拆解</h3>
+                  <p class="synthesis">外部体验共识是：放大工作流的核心价值在于“补细节”，而不只是提像素。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116822372259320" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者在对比节点中直观看到，放大后的图像清晰度明显提升，连头发丝这类细节都比原图更清楚。</p><p><strong>改变：</strong>这说明这类ComfyUI高清放大工作流不只是把分辨率拉高，还能在出图阶段补回部分可见细节，适合做旧图修复、壁纸化和成品图二次增强。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1906284977055855329" target="_blank" rel="noopener noreferrer">知乎｜《4种方法，ComfyUI最强图片高清放大工作流，无损放大，细节补全》</a></p></div></div>
                 </section>
                 </div>
             </section>
