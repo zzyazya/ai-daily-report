@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-06-29 08:42</title>
+  <title>独立测评 · 2026-06-29 17:52</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,24 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评</span>
-                    <span class="source-label">CSDN / MCP技术社区相关博文片段汇总</span>
+                    <span class="badge badge-blue">MiniMax Code与M3外部测评</span>
+                    <span class="source-label">FaxAI / VibeCoderz / 302.AI 基准实验室</span>
                   </div>
-                  <h3>AI操控NX12工作流实测：无代码接入演示</h3>
-                  <p class="synthesis">材料与NX12实测不直接相关，证据不足</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116825492816833" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>外部材料主要在演示 n8n 与 MCP 的通用接入、双向调用和本地工作流搭建，并未实际测评 NX12 直连、NX12 脚本自动生成，或该新闻所述离线知识库控制 NX12 的具体表现。</p><p><strong>改变：</strong>用户无法从这些第三方片段判断 NX12 接入是否真的降低门槛、脚本是否可用、对 CAD/CAE 团队流程是否有实质提效。</p><p><strong>边界：</strong>现有材料缺少针对 NX12 的上手记录、成功率、稳定性、适配成本与失败场景，因此不能外推到该新闻结论。</p><p class="source">来源：<a href="https://mcp.csdn.net/686f1e46080e555a88ce7dd3.html" target="_blank" rel="noopener noreferrer">CSDN / MCP技术社区相关博文片段汇总</a></p></div></div>
+                  <h3>MiniMax Code与M3实测CAD到CAE链路</h3>
+                  <p class="synthesis">外部观点更认可其长链路代理潜力，但CAD/CAE实操边界仍待更多案例验证。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116831197071822" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测认为MiniMaxCode是围绕M3做过专门适配的，实际更适合多Agent协作和长程、偏复杂任务的连续执行。</p><p><strong>改变：</strong>这意味着在CAD到CAE这类跨建模、求解、结果整理的长链路里，团队更可能把多步任务串起来交给同一套模型/代理流程，而不是频繁人工接力。</p><p class="source">来源：<a href="https://www.faxai.cn/archives/9428" target="_blank" rel="noopener noreferrer">FaxAI</a></p></div><div class="opinion"><p><strong>观察：</strong>外部分析提到MiniMaxCode支持类似Claude的Computer Use，可直接操控桌面应用，并把这项能力与M3的代理场景结合来看。</p><p><strong>改变：</strong>对依赖桌面CAD/CAE软件的用户，价值在于流程不必完全建立在API上，代理有机会直接进入GUI软件执行操作、补齐传统工程软件自动化断点。</p><p class="source">来源：<a href="https://vibecoderz.ru/blog/minimax-m3" target="_blank" rel="noopener noreferrer">VibeCoderz</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Fable 5 Traces工作流Colab搭建指南</span>
-                    <span class="source-label">The Daily Pac</span>
+                    <span class="badge badge-blue">GLM 5.2 vs Claude Opus 4.8 第三方观察</span>
+                    <span class="source-label">El Ecosistema Startup</span>
                   </div>
-                  <h3>Fable 5 Traces工作流Colab搭建指南</h3>
-                  <p class="synthesis">外部体验共识是：这类教程的核心价值在于先把 Colab 稳定跑通。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/06/28/building-a-stable-fable-5-traces-workflow-in-colab-parsing-tool-calls-auditing-data-and-training-baselines/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方教程作者实测用 Hugging Face 上的 Fable5Traces 搭了一套可运行的 Colab 工作流，重点是用更轻量的环境解析真实 coding-agent trace，并刻意避开 `datasets`、`scikit-learn`、`scipy` 这类容易引发依赖问题的组件。</p><p><strong>改变：</strong>对实际用户而言，这意味着团队在 Colab 里复现实验、清洗轨迹数据和搭建基础分析流程时，能更少卡在环境报错上，更快把精力放到 trace 本身而不是依赖修复。</p><p><strong>边界：</strong>它强调的是“稳定跑通”的轻量流程，不等于覆盖依赖 `datasets`/科学计算栈的完整训练或大规模评测场景；如果你的流程需要更重的数据管线，这套方法可能不够用。</p><p class="source">来源：<a href="https://thedailypac.blogspot.com/2026/06/building-stable-fable-5-traces-workflow.html" target="_blank" rel="noopener noreferrer">The Daily Pac</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">OCRmyPDF外部测评</span>
-                    <span class="source-label">SK8-j - 博客园</span>
-                  </div>
-                  <h3>OCRmyPDF教程构建可搜索PDF/A批处理流程</h3>
-                  <p class="synthesis">外部经验集中在批处理可恢复性，而非识别精度对比。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/06/28/ocrmypdf-tutorial-convert-scanned-documents-into-searchable-pdf-a-files-with-sidecar-text-extraction-and-batch-processing/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>博客园作者在自用教程里明确提到，OCRmyPDF做批量处理时会遇到任务中断，因此实际采用`parallel --resume --joblog ocr.log`做断点续传，而不是每次从头重跑。</p><p><strong>改变：</strong>这意味着用Python或命令行搭建OCRmyPDF批处理流水线时，团队可以把长时间OCR任务做成可恢复作业，减少大批扫描件处理中断后的重复计算和人工重提交流程。</p><p><strong>边界：</strong>这类收益依赖GNU Parallel与作业日志配套使用，属于外围批处理调度能力，不是OCRmyPDF单独就能解决；小批量、一次性文档场景价值有限。</p><p class="source">来源：<a href="https://www.cnblogs.com/sk8-j/p/18762677" target="_blank" rel="noopener noreferrer">SK8-j - 博客园</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">外部测评</span>
-                    <span class="source-label">什么值得买作者文章《铭凡N5Max和S7怎么选？》</span>
-                  </div>
-                  <h3>铭凡AI Agent NAS N5 MAX本地AI助理体验</h3>
-                  <p class="synthesis">外部观点聚焦一点：本地AI体验更吃持续性能而非峰值参数。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116826298125728" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>什么值得买作者在对比铭凡N5 Max和S7时明确提到，NAS场景不能只看高睿频，N5 Max更强调120W持续性能释放、16核32线程，以及本地AI Agent和本地视频生成这类长时间负载能力。</p><p><strong>改变：</strong>这意味着用户如果真要把它当本地AI助理或本地视频生成节点来用，选型重点应从“瞬时跑分/睿频”转向“持续算力能否稳定顶住连续任务”，直接影响多轮推理、转码和生成类工作流的稳定性。</p><p><strong>边界：</strong>这条判断的前提是你确实有本地AI Agent或本地视频生成等持续负载需求；如果只是轻量文件存储或短时突发任务，单看高睿频被误导的风险才是作者重点提醒的代价。</p><p class="source">来源：<a href="https://post.smzdm.com/p/arzogvvx/" target="_blank" rel="noopener noreferrer">什么值得买作者文章《铭凡N5Max和S7怎么选？》</a></p></div></div>
+                  <h3>GLM 5.2实测对比Claude Opus 4.8 max effort</h3>
+                  <p class="synthesis">共识是 GLM 5.2 更像低成本替代，而非全面超越。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116831365045021" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析指出，GLM-5.2 在对比中与 Claude Opus 4.8 仅有约 90 Elo 差距，但输入价格低到其不到四分之一（约 1.40 美元 vs 10 美元 / 百万 tokens）。</p><p><strong>改变：</strong>这意味着对代码生成、Agent 执行或高频调用团队来说，若能接受小幅能力差距，可以把大模型试错、批量生成和日常开发成本明显压低。</p><p><strong>边界：</strong>代价是它在综合能力上仍落后于 Opus 4.8，追求最强结果稳定性或极限任务成功率的场景未必适合直接替换。</p><p class="source">来源：<a href="https://ecosistemastartup.com/glm-5-2-vs-opus-4-8-90-elo-menos-75-mas-barato/" target="_blank" rel="noopener noreferrer">El Ecosistema Startup</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -92,24 +70,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">Rodin AI 2.5外部测评</span>
-                    <span class="source-label">80.lv</span>
+                    <span class="badge badge-pink">虚幻引擎5.8 MCP联动PCG自动场景外部观察</span>
+                    <span class="source-label">Top 3D AI</span>
                   </div>
-                  <h3>Rodin AI 2.5自动拓扑与12K纹理实测</h3>
-                  <p class="synthesis">共识是它更像减返工工具而非纯玩具生成器</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116821650901947" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>80.lv在采访梳理中指出，Rodin Gen-2.5把可控工作流、Smart Low-Poly自动拓扑、3D-native纹理和批量生成放到同一条生产链里，重点不是单次出图而是生成结果能继续进游戏和VFX流程。</p><p><strong>改变：</strong>这对用户的真实改变是，图转3D后不必马上进入大量返工，自动拓扑和原生纹理让资产更接近“可接管、可批量、可进引擎”的中间成品。</p><p class="source">来源：<a href="https://80.lv/articles/how-hyper3d-rodin-gen-2-5-is-bringing-production-level-control-to-ai-3d-generation" target="_blank" rel="noopener noreferrer">80.lv</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">外部测评 / 上手体验</span>
-                    <span class="source-label">火星人教育</span>
-                  </div>
-                  <h3>AI全案设计工作流30分钟生成漫游视频实测</h3>
-                  <p class="synthesis">共识是AI显著压缩出图时间，核心价值在提案提速。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116815476824054" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>火星人教育的实战文章给出明确对比：传统酷家乐从户型导入到最终渲染平均需4-6小时，其中至少60%时间耗在素材筛选、参数调节和反复渲染，而“AIGC+酷家乐”流程可把“从概念到成图”压缩到约30分钟。</p><p><strong>改变：</strong>这意味着家装/室内设计团队若采用AI前置生成与酷家乐联动，最直接的变化是把大量试错和出图等待前移并压缩，能更快完成提案轮次和客户沟通。</p><p class="source">来源：<a href="https://www.2ds.cn/aigc-酷家乐：家装设计效率提升10倍的实战方法-5/" target="_blank" rel="noopener noreferrer">火星人教育</a></p></div></div>
+                  <h3>虚幻引擎5.8 MCP联动PCG自动场景实测</h3>
+                  <p class="synthesis">现阶段更像可提效的半自动链路，仍强依赖工具编排。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116826583337351" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Top 3D AI的第三方文章把UE5.8原生MCP与VibeUE插件并用，结论是原生MCP负责“干净的原生能力”，VibeUE则补足原生MCP触达不到的编辑器操作空缺。</p><p><strong>改变：</strong>对想做自动搭景的用户来说，实际可落地的工作流更像“原生MCP+补充插件”的组合方案，而不是只靠UE5.8自带能力就覆盖完整场景生产链。</p><p><strong>边界：</strong>边界是方案复杂度会上升，团队要额外维护插件兼容性与双工具协同，纯原生栈或追求最简部署的项目不一定适合。</p><p class="source">来源：<a href="https://www.top3d.ai/learn/unreal-engine-5-8-mcp" target="_blank" rel="noopener noreferrer">Top 3D AI</a></p></div></div>
                 </section>
                 </div>
             </section>
