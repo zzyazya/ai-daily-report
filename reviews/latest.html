@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-06-29 17:52</title>
+  <title>独立测评 · 2026-06-30 08:44</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,24 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">MiniMax Code与M3外部测评</span>
-                    <span class="source-label">FaxAI / VibeCoderz / 302.AI 基准实验室</span>
+                    <span class="badge badge-blue">Ornith 1.0 外部测评</span>
+                    <span class="source-label">Simon Willison / Medium</span>
                   </div>
-                  <h3>MiniMax Code与M3实测CAD到CAE链路</h3>
-                  <p class="synthesis">外部观点更认可其长链路代理潜力，但CAD/CAE实操边界仍待更多案例验证。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116831197071822" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测认为MiniMaxCode是围绕M3做过专门适配的，实际更适合多Agent协作和长程、偏复杂任务的连续执行。</p><p><strong>改变：</strong>这意味着在CAD到CAE这类跨建模、求解、结果整理的长链路里，团队更可能把多步任务串起来交给同一套模型/代理流程，而不是频繁人工接力。</p><p class="source">来源：<a href="https://www.faxai.cn/archives/9428" target="_blank" rel="noopener noreferrer">FaxAI</a></p></div><div class="opinion"><p><strong>观察：</strong>外部分析提到MiniMaxCode支持类似Claude的Computer Use，可直接操控桌面应用，并把这项能力与M3的代理场景结合来看。</p><p><strong>改变：</strong>对依赖桌面CAD/CAE软件的用户，价值在于流程不必完全建立在API上，代理有机会直接进入GUI软件执行操作、补齐传统工程软件自动化断点。</p><p class="source">来源：<a href="https://vibecoderz.ru/blog/minimax-m3" target="_blank" rel="noopener noreferrer">VibeCoderz</a></p></div></div>
+                  <h3>Ornith 1.0开源9B编程模型本地实测</h3>
+                  <p class="synthesis">外部体验共识是：Ornith 更像重视多步工具工作流的本地编码代理。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116833982090621" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Simon Willison 实测在 LM Studio 中运行 `ornith-1.0-35b-Q4_K_M.gguf` 并接入 Pi 后，模型能较熟练地连续调用多次工具、把 agent harness 跑下去，初步上手印象“很不错”。</p><p><strong>改变：</strong>这说明 Ornith 系列的价值不只在单轮补全，而是在本地环境里更像一个能持续执行编码工作流的代理，适合需要多步排错、查文件、调用工具的开发场景。</p><p><strong>边界：</strong>他的样本是 35B 的 20GB GGUF，本地可跑不等于轻量，资源门槛仍明显高于 9B 级模型，也不能直接等同于低配设备体验。</p><p class="source">来源：<a href="https://simonwillison.net/2026/Jun/29/ornith/" target="_blank" rel="noopener noreferrer">Simon Willison</a></p></div><div class="opinion"><p><strong>观察：</strong>Medium 作者认为，如果主要任务是 coding、tool use 和 agentic workflows，Ornith-1.0-35B 能以更低算力成本给出接近高一级模型的效果，核心卖点是“成本/质量比”而非纯参数规模。</p><p><strong>改变：</strong>对本地部署团队来说，这意味着在代码代理场景里，可能不用追更大参数模型，也能先获得较可用的自动化工作流能力，从而降低推理成本和硬件压力。</p><p><strong>边界：</strong>这条判断聚焦编码与工具调用场景，不适合外推到通用创作或所有任务；而且材料没有给出严格基准和失败案例，更多是经验性结论。</p><p class="source">来源：<a href="https://xhinker.medium.com/ornith-1-0-35b-the-moe-model-that-runs-like-3b-thinks-like-27b-1e7a0fe5a64e" target="_blank" rel="noopener noreferrer">Medium</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">GLM 5.2 vs Claude Opus 4.8 第三方观察</span>
-                    <span class="source-label">El Ecosistema Startup</span>
+                    <span class="badge badge-blue">Claude Code图形化软件体验评测</span>
+                    <span class="source-label">知乎 / 腾讯云开发者社区</span>
                   </div>
-                  <h3>GLM 5.2实测对比Claude Opus 4.8 max effort</h3>
-                  <p class="synthesis">共识是 GLM 5.2 更像低成本替代，而非全面超越。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116831365045021" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析指出，GLM-5.2 在对比中与 Claude Opus 4.8 仅有约 90 Elo 差距，但输入价格低到其不到四分之一（约 1.40 美元 vs 10 美元 / 百万 tokens）。</p><p><strong>改变：</strong>这意味着对代码生成、Agent 执行或高频调用团队来说，若能接受小幅能力差距，可以把大模型试错、批量生成和日常开发成本明显压低。</p><p><strong>边界：</strong>代价是它在综合能力上仍落后于 Opus 4.8，追求最强结果稳定性或极限任务成功率的场景未必适合直接替换。</p><p class="source">来源：<a href="https://ecosistemastartup.com/glm-5-2-vs-opus-4-8-90-elo-menos-75-mas-barato/" target="_blank" rel="noopener noreferrer">El Ecosistema Startup</a></p></div></div>
+                  <h3>Claude Code图形化软件体验评测</h3>
+                  <p class="synthesis">外部体验共识是：GUI主要提升可达性与跨设备调度，而非改变模型本身能力。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116834065976655" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者实测认为，若不想用功能较重的图形壳，`claude-ui` 提供了更干净的对话界面；同时手机端也能查看项目、发送指令并与 AI 对话，且状态可实时同步。</p><p><strong>改变：</strong>这让用户不必守在电脑前，外出时也能做进度确认、补发 Agent 指令，把 Claude Code 从固定工位工具变成可跨设备衔接的工作流。</p><p><strong>边界：</strong>作者也明确说手机端并不是拿来写代码的，更适合轻量跟进和调度，不适合复杂开发操作。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2015216204009197970" target="_blank" rel="noopener noreferrer">知乎</a></p></div><div class="opinion"><p><strong>观察：</strong>腾讯云开发者社区转载的第三方文章指出，Claude Code 本体虽然好用，但以命令行为主、配置麻烦、对接第三方 API 不够顺手，对小白用户很不友好。</p><p><strong>改变：</strong>这说明图形化界面的核心价值不只是“好看”，而是降低安装配置和模型接入门槛，让原本难以上手的 CLI 工作流更容易被普通开发者或团队采纳。</p><p><strong>边界：</strong>这类改进主要解决的是上手和操作成本，不等于底层编码能力本身提升；对熟悉终端的重度用户，GUI 价值可能没有那么大。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2639543" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Ponytail外部测评/上手体验</span>
+                    <span class="source-label">段燚的学习笔记</span>
+                  </div>
+                  <h3>Ponytail插件实测：62K Star与54%代码降幅</h3>
+                  <p class="synthesis">外部观点共识是：Ponytail的真实价值在于前置约束AI代理，减少冗余代码与成本。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116833411667922" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方文章指出，Ponytail最值得关注的不只是“少写代码”，而是它用提示词层面的硬约束去抑制Claude Code一类代理的过度工程化。</p><p><strong>改变：</strong>这会把团队优化AI编程的重点从事后删冗余代码，前移到事前约束代理行为，减少来回返工和无意义生成。</p><p><strong>边界：</strong>它更像一套行为约束方法而不是万能提效按钮，适合解决AI过度展开的问题，不等于所有开发场景都会直接获得同等代码降幅。</p><p class="source">来源：<a href="https://www.aiec.fun/让ai少写90代码：ponytail如何教会claude-code偷懒/" target="_blank" rel="noopener noreferrer">段燚的学习笔记</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">外部测评</span>
+                    <span class="source-label">DataCamp / The Applied</span>
+                  </div>
+                  <h3>gemma-4-12B-agentic-fable5-composer2.5-v2观察</h3>
+                  <p class="synthesis">共识是本地可部署且偏技术代理强，但通用能力有取舍。</p>
+                  <a class="article-link" href="https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>DataCamp 实机加载 `gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2` 时，在 RTX 5070 Ti 上开到 256K 上下文约占用 11.8GB VRAM，仍剩余 4GB 以上显存。</p><p><strong>改变：</strong>这意味着有中高端消费级显卡的用户可以把超长上下文版本放到本地跑，做离线代码/文档处理而不必直接上云。</p><p><strong>边界：</strong>显存占用本身已接近 12GB 门槛，更低配显卡或多模型并行场景的余量会比较紧。</p><p class="source">来源：<a href="https://www.datacamp.com/tutorial/how-to-run-fable-5-enhanced-gemma-4-locally" target="_blank" rel="noopener noreferrer">DataCamp</a></p></div><div class="opinion"><p><strong>观察：</strong>The Applied 给出的第三方对比显示，该模型在 technical-agentic 任务上约 55%，而 Gemma 4 12B v2 基座约 15%，相当于这一类任务提升约 3.5 倍。</p><p><strong>改变：</strong>如果团队的核心需求是技术型代理任务而不是泛聊天，这种提升会直接改变模型选型，使 12B 本地模型开始具备可用性。</p><p><strong>边界：</strong>该文同时提示存在 trade-off，尤其是 general knowledge 方面并非全面占优，不适合把它当成通用问答模型一把梭。</p><p class="source">来源：<a href="https://theapplied.co/models/yuxinlu1-gemma-4-12b-agentic-fable5-composer2-5-v2-3-5x-tau2-gguf" target="_blank" rel="noopener noreferrer">The Applied</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -70,13 +92,24 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">虚幻引擎5.8 MCP联动PCG自动场景外部观察</span>
-                    <span class="source-label">Top 3D AI</span>
+                    <span class="badge badge-pink">Seedance/Shotlab外部测评提炼</span>
+                    <span class="source-label">YouTube博主《Shotlab深度测评：Seedance 2.0/Fast/Mini三模型横评》 / SoraVideo教程《Seedance 2.0 完整教程：零基础到电影级 AI 视频实战指南（2026）》</span>
                   </div>
-                  <h3>虚幻引擎5.8 MCP联动PCG自动场景实测</h3>
-                  <p class="synthesis">现阶段更像可提效的半自动链路，仍强依赖工具编排。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116826583337351" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Top 3D AI的第三方文章把UE5.8原生MCP与VibeUE插件并用，结论是原生MCP负责“干净的原生能力”，VibeUE则补足原生MCP触达不到的编辑器操作空缺。</p><p><strong>改变：</strong>对想做自动搭景的用户来说，实际可落地的工作流更像“原生MCP+补充插件”的组合方案，而不是只靠UE5.8自带能力就覆盖完整场景生产链。</p><p><strong>边界：</strong>边界是方案复杂度会上升，团队要额外维护插件兼容性与双工具协同，纯原生栈或追求最简部署的项目不一定适合。</p><p class="source">来源：<a href="https://www.top3d.ai/learn/unreal-engine-5-8-mcp" target="_blank" rel="noopener noreferrer">Top 3D AI</a></p></div></div>
+                  <h3>Seedance 2.0、Fast、Mini与Shotlab画布横评</h3>
+                  <p class="synthesis">外部体验更强调选型成本与模板化工作流，而非只看模型名气。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116833126520665" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方博主在Shotlab里用同一组提示词分别跑了Seedance 2.0、Fast、Mini，并明确做了生成效果与价格对比，而不是只看官方参数。</p><p><strong>改变：</strong>这让用户或小团队选型时可以直接按“画面效果/出片速度/单次成本”三项取舍，决定是追求成片质量还是先压低试错成本。</p><p><strong>边界：</strong>片段只说明做了横评与价格对比，未给出各模型在具体镜头类型或一致性上的细分胜负，因此不适合据此直接替代完整采购测试。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=GfbVRvkPo3s" target="_blank" rel="noopener noreferrer">YouTube博主《Shotlab深度测评：Seedance 2.0/Fast/Mini三模型横评》</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇第三方教程称其经过300多次Seedance 2.0生成测试，最后沉淀出15个可复用Prompt模板、@引用系统用法，以及从单次生成到多镜头叙事的完整流程。</p><p><strong>改变：</strong>这说明Seedance 2.0的真实可用性不只在单条视频质量，而在于用户能否把Prompt模板化、把素材通过@引用纳入工作流，从而提高复现率并减少反复试词。</p><p><strong>边界：</strong>这类方法更适合愿意先整理模板和素材资产的创作者；如果只是偶发性快速试玩，搭建这套流程的前置成本会偏高。</p><p class="source">来源：<a href="https://soravideo.art/zh/blog/seedance-2-tutorial" target="_blank" rel="noopener noreferrer">SoraVideo教程《Seedance 2.0 完整教程：零基础到电影级 AI 视频实战指南（2026）》</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">外部测评 / 上手体验</span>
+                    <span class="source-label">腾讯云开发者社区 / Elser.ai</span>
+                  </div>
+                  <h3>Flux2Klein、NanoBanana与GPTimage2生图横评</h3>
+                  <p class="synthesis">外部测评共识是三者各有强项，选型要按任务分工。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116833009014615" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>腾讯云开发者社区的对比认为，GPT Image 2在写实摄影和商业摄影里更强，细节精度与物理模拟更突出；Nano Banana 2则在动漫插画和创意合成上更有艺术表现力，颜色更大胆自由。</p><p><strong>改变：</strong>这意味着做商品图、广告图、写实棚拍的团队更容易把GPT Image 2作为主力，而做二次元视觉、概念海报和风格化拼贴的用户更可能优先选Nano Banana 2。</p><p><strong>边界：</strong>两者擅长方向分化明显：如果需求是写实可交付，Nano Banana 2未必占优；如果追求夸张风格和创意合成，GPT Image 2也不一定是最好选择。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2663547" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div><div class="opinion"><p><strong>观察：</strong>Elser.ai 的三模型横评把GPT Image 2概括为更偏推理、指令跟随和文字生成准确，Flux 2 Pro更强在人体结构、照片颗粒感和艺术质感，Nano Banana 2则突出生成速度快、适合大规模使用。</p><p><strong>改变：</strong>对真实工作流来说，带复杂文案的海报、电商详情图更适合先试GPT Image 2；重人物质感和摄影风格的创作更适合Flux；要批量出图、追求吞吐的产品化场景更容易偏向Nano Banana。</p><p><strong>边界：</strong>这组结论强调的是各自强项而不是全能胜出，因此同一团队若同时做文字排版、人像质感和批量生产，往往仍需按任务拆分模型。</p><p class="source">来源：<a href="https://www.elser.ai/blog/gpt-image-2-vs-flux-vs-nano-banana" target="_blank" rel="noopener noreferrer">Elser.ai</a></p></div></div>
                 </section>
                 </div>
             </section>
