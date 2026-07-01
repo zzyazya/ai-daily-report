@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-07-01 08:52</title>
+  <title>独立测评 · 2026-07-01 17:54</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,35 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">OpenSpec外部测评</span>
-                    <span class="source-label">bswen Docs / KD05</span>
+                    <span class="badge badge-blue">外部测评</span>
+                    <span class="source-label">BenchLM.ai</span>
                   </div>
-                  <h3>OpenSpec轻量化SDD搭建实战解析</h3>
-                  <p class="synthesis">共识是它更适合重视规格留痕的AI开发流程。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116838159615697" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>一篇实测对比将 OpenSpec 概括为更偏“决策可追溯性”的 SDD 框架，而把 Superpowers 归为更强调执行质量的方案。</p><p><strong>改变：</strong>对团队而言，这意味着如果更看重需求、方案和实现之间的可审计链路，OpenSpec 会改变工作流重心，让规格与决策记录成为核心产物。</p><p><strong>边界：</strong>如果团队当前最优先的是生成质量和执行效率，而不是过程留痕与决策追踪，文中暗示 OpenSpec 未必是更合适的选择。</p><p class="source">来源：<a href="https://docs.bswen.com/blog/2026-03-27-openspec-vs-superpowers/" target="_blank" rel="noopener noreferrer">bswen Docs</a></p></div><div class="opinion"><p><strong>观察：</strong>有开发者在 OpenCode 中试用后认为 OpenSpec 能与“vibe coding”式开发配合使用，并最终在实际选择上偏向 OpenSpec 而非 GitHub Spec Kit。</p><p><strong>改变：</strong>这对个人开发者或小团队的真实影响是，OpenSpec 不只是文档模板，而是可以嵌进 AI 辅助编码流程，把随手试作转成有规格约束的实现。</p><p class="source">来源：<a href="https://kd05.com/p/openspec-opencode-experience/" target="_blank" rel="noopener noreferrer">KD05</a></p></div></div>
+                  <h3>Claude Sonnet 5实测：性能升且Token成本上行</h3>
+                  <p class="synthesis">外部信号偏向代码能力更强，但成本收益比仍需按场景核算。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116842605582414" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>BenchLM 的对比页显示，Claude Sonnet 5 在其临时榜单上以 94 比 92 领先 Claude Opus 4.8，差距主要来自 SWE-bench Pro 上 69.2% 对 63.2% 的代码任务成绩。</p><p><strong>改变：</strong>这意味着对以代码修复、工程问答和开发辅助为主的团队，Sonnet 5 相比 Opus 4.8 更可能在真实软件任务里少走弯路、减少返工。</p><p><strong>边界：</strong>这项领先幅度不大，且主要由编码基准拉开，暂时不能直接外推到非编程场景，也不能单独说明它是否值得承担更高 Token 成本。</p><p class="source">来源：<a href="https://benchlm.ai/compare/claude-opus-4-8-vs-claude-sonnet-5" target="_blank" rel="noopener noreferrer">BenchLM.ai</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">GLM-5.2 vs Claude Opus 4.8 外部测评</span>
-                    <span class="source-label">爱范儿 / 302.AI 基准实验室 / EvoLink</span>
+                    <span class="badge badge-blue">Claude Sonnet 5与Opus 4.8外部测评摘录</span>
+                    <span class="source-label">llm-stats / Apidog</span>
                   </div>
-                  <h3>GLM-5.2对比Claude Opus 4.8实测差距</h3>
-                  <p class="synthesis">共识是GLM已逼近Opus，但最难长程工程仍多偏向Opus。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116838310676824" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>爱范儿实测中，GLM-5.2 在相关任务里的表现与 Claude Opus 4.8“几乎一样”，作者一度怀疑自己是否误用了 Opus 4.8。</p><p><strong>改变：</strong>这意味着对 Claude 工作流已熟悉的用户，切到 GLM-5.2 后在部分实战任务里不一定会立刻感到明显能力落差。</p><p><strong>边界：</strong>该结论来自单次上手体验片段，材料没有给出更细的任务拆解、稳定性或成本数据。</p><p class="source">来源：<a href="https://www.ifanr.com/1669127" target="_blank" rel="noopener noreferrer">爱范儿</a></p></div><div class="opinion"><p><strong>观察：</strong>302.AI 基准实验室称，GLM-5.2 在社区实测里到 500K Token 位置仍保持较好的检索和回溯能力，代码综合排名全球第三，仅次于 GPT-5.5 与 Claude Opus 4.8。</p><p><strong>改变：</strong>对要处理大型代码仓库、长项目文档和连续多步工程任务的团队来说，GLM-5.2 更像是能直接进入长上下文开发流程的备选，而不只是纸面参数。</p><p><strong>边界：</strong>材料同时说明它在代码综合排名上仍落后于 Claude Opus 4.8，说明高难工程任务的上限未必已经反超。</p><p class="source">来源：<a href="https://302.ai/blog/302-ai-benchmark-lab-review-on-glm-5-2/" target="_blank" rel="noopener noreferrer">302.AI 基准实验室</a></p></div></div>
+                  <h3>Claude Sonnet 5与Opus 4.8编码性价比对比</h3>
+                  <p class="synthesis">共识是 Sonnet 5 更适合做默认编码模型，但长输出代理成本未必更低。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/06/30/anthropic-claude-sonnet-5-vs-sonnet-4-6-vs-opus-4-8-agentic-coding-benchmarks-api-pricing-and-cost-performance-tradeoffs-compared/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>llm-stats 的对比认为，Claude Sonnet 5 在 Terminal-Bench 上胜过 Opus 4.8，在知识类任务上基本打平，但价格低 40%到60%。</p><p><strong>改变：</strong>这意味着以编码和通用知识工作为主的团队，可以把 Sonnet 5 作为默认模型，在不明显牺牲效果的前提下降低大部分 API 成本。</p><p><strong>边界：</strong>它的结论主要建立在基准、价格和典型用例对比上，不等于在所有高难度推理或长链路任务里都能完全替代 Opus 4.8。</p><p class="source">来源：<a href="https://llm-stats.com/blog/research/claude-sonnet-5-vs-claude-opus-4-8" target="_blank" rel="noopener noreferrer">llm-stats</a></p></div><div class="opinion"><p><strong>观察：</strong>Apidog 在 Claude Code 上手文章里给出的实际建议是：多数 agentic coding 场景里，Sonnet 5 已经足够好，可以直接作为 Claude Code 的默认选择，只有在会话里再按需切到 Opus 4.8。</p><p><strong>改变：</strong>对开发者来说，这把模型选择从“先上最强模型”变成“默认 Sonnet 5、难题再升级”，能减少日常编码代理的试错成本和调用开销。</p><p><strong>边界：</strong>这条经验明确限定在 Claude Code 内的多数代理式编码场景，不代表极难问题、复杂架构决策或少数高风险任务也应放弃 Opus 4.8。</p><p class="source">来源：<a href="https://apidog.com/blog/claude-sonnet-5-claude-code/" target="_blank" rel="noopener noreferrer">Apidog</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">知乎博主（[python+playwright]运行脚本过程，录制视频）</span>
+                    <span class="badge badge-blue">Ornith 397B外部测评摘录</span>
+                    <span class="source-label">CNBlogs 博主上手记录 / 钛媒体</span>
                   </div>
-                  <h3>shot-scraper 1.10新增视频录制演示</h3>
-                  <p class="synthesis">外部信息只证明底层录屏有实用价值，尚缺 shot-scraper 1.10 直接测评。</p>
-                  <a class="article-link" href="https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方 Playwright 实操文章观察到，浏览器操作过程的视频录制可以完整保留页面交互步骤，且约 40 秒录像体积仅约 400KB，主要用于复盘与排错。</p><p><strong>改变：</strong>这意味着如果 shot-scraper 1.10 的 `video` 命令沿用 Playwright 的录制能力，用户做网页流程演示、问题复现和自动化回归留痕时，不必再额外接入独立录屏工具。</p><p><strong>边界：</strong>现有材料讨论的是 Playwright 原生录屏，不是对 shot-scraper 1.10 `video` 命令的直接上手测评，因此无法确认其命令封装、参数易用性和输出质量。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/714081014" target="_blank" rel="noopener noreferrer">知乎博主（[python+playwright]运行脚本过程，录制视频）</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">Medium / glasier067 / DevGENT / Artificial Analysis</span>
-                  </div>
-                  <h3>自研大模型对战Cursor与Claude Code</h3>
-                  <p class="synthesis">竞争焦点已从单模型强弱转向整条编码工作流体验。</p>
-                  <a class="article-link" href="https://www.infoq.cn/article/lgKWA0PHN4zsOkB4C4Pv?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Medium 实测者在同一应用复现中提到，Cursor 往往是开发者最先上手的工具，因为它直接嵌在熟悉的 VS Code 式编辑器里，学习成本更低。</p><p><strong>改变：</strong>这意味着团队若要替换或挑战 Cursor，不能只比模型能力，还要把迁移成本、编辑器内工作流连续性和新手上手速度一起算进去。</p><p><strong>边界：</strong>这类优势主要来自编辑器形态与习惯延续，并不等于它在复杂代理执行、长链任务或代码质量上天然更强。</p><p class="source">来源：<a href="https://medium.com/@glasier067/cursor-vs-claude-code-vs-lovable-i-built-the-same-app-3-times-here-is-what-happened-7dcec1342cae" target="_blank" rel="noopener noreferrer">Medium / glasier067</a></p></div><div class="opinion"><p><strong>观察：</strong>DevGENT 的工作流分析把 Claude Code 的 80.8% SWE-bench 表现与 Cursor 的可视化 diff 优势并列，结论是两者开始对应不同环节，而不是简单二选一。</p><p><strong>改变：</strong>对用户和团队的真实改变是，AI 编程工具开始拆分为“生成/修复”和“审阅/确认”两段式流程，采购和使用标准也从单点提效转向整条工作流配合。</p><p><strong>边界：</strong>文章讨论的是混合代码审查而非完全自动化，说明这类工具仍需要人类把关，尤其在评审、合规和高风险改动场景下不能直接放手。</p><p class="source">来源：<a href="https://devgent.org/en/the-last-illusion-why-humans-must-do-code-reviews-is-crumbling-in-2026-en/" target="_blank" rel="noopener noreferrer">DevGENT</a></p></div></div>
+                  <h3>Ornith 397B实测对比GLM 5.2与Claude</h3>
+                  <p class="synthesis">共识是基准已逼近Claude，但真实IDE替代仍需自测。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116843226340342" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>CNBlogs 的上手记录指出，Ornith 的对比主要集中在 `Terminal-Bench`、`SWE-bench`、`OpenClaw` 等公开基准，暂时没有在真实 IDE 场景里与 Claude Code、Cursor 内置 agent 做大型 monorepo 改造、重构或调试的头对头实测。</p><p><strong>改变：</strong>这意味着开发者目前更适合把 Ornith 397B 当作“公开 coding benchmark 很强”的候选模型，而不是直接据此替换团队里依赖 Claude/IDE agent 的日常开发流程。</p><p><strong>边界：</strong>边界在于公开榜单成绩还不能等价于真实工程工作流表现，尤其是复杂仓库修改、长链路调试和 IDE 协作场景仍需团队自行验证。</p><p class="source">来源：<a href="https://www.cnblogs.com/ninghg/p/20977557" target="_blank" rel="noopener noreferrer">CNBlogs 博主上手记录</a></p></div><div class="opinion"><p><strong>观察：</strong>钛媒体的第三方分析称，Ornith-1.0-397B 在 `SWE-Bench Verified` 和 `Terminal-Bench` 上已超过 Claude Opus 4.7，但与更新的 Claude Opus 4.8 实测仍有约 6.2 分差距。</p><p><strong>改变：</strong>对想自托管代码模型的团队来说，这说明开源方案已经进入可认真评估的区间，在标准代码修复/终端任务上有机会替代部分闭源模型调用。</p><p><strong>边界：</strong>代价是它仍未达到最新 Claude 的完全同级水平，追求最稳妥结果的高要求研发流程里，闭源前沿模型仍有优势。</p><p class="source">来源：<a href="https://www.tmtpost.com/agent/ai-article/18628" target="_blank" rel="noopener noreferrer">钛媒体</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -92,46 +81,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">外部测评 / 上手体验 / 真实影响</span>
-                    <span class="source-label">GoEnhance.ai / flyne.ai / Multic</span>
+                    <span class="badge badge-pink">Claude Design 2.0 外部测评摘录</span>
+                    <span class="source-label">matveev.tech</span>
                   </div>
-                  <h3>Oxen.ai与Higgsfield创作计费对比</h3>
-                  <p class="synthesis">外部评测共识是：Higgsfield 强在可控工作流，但真实成本不只看月费。</p>
-                  <a class="article-link" href="https://ghost.oxen.ai/oxen-ai-vs-higgsfield-pay-as-you-go-ai-video-and-image-models/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方评测者把 Higgsfield 用户明显分成两类：一类看重“导演式”控制，另一类则对积分计费和学习曲线反感，并指出它更像工作流中枢而不是单次提示词玩具。</p><p><strong>改变：</strong>这意味着团队若重视镜头控制和流程编排，Higgsfield 可能提升复杂视频项目的组织效率，但个人用户会更直接感知到计费与上手门槛。</p><p><strong>边界：</strong>不适合只想低门槛、低决策成本地快速生成成片的用户，积分机制和学习成本会放大使用摩擦。</p><p class="source">来源：<a href="https://www.goenhance.ai/zh/blog/higgsfield-ai-review" target="_blank" rel="noopener noreferrer">GoEnhance.ai</a></p></div><div class="opinion"><p><strong>观察：</strong>对 Kling 3.0 集成的评测认为，Higgsfield 不再把视频生成做成一次“prompt→成片”的随机尝试，而是强调按场景规划镜头、节奏和连续性的结构化流程。</p><p><strong>改变：</strong>这会把创作者的工作方式从“多次碰运气重抽”转成“先设计镜头再生成”，更利于多人协作、长镜头衔接和可复用流程。</p><p><strong>边界：</strong>这种流程更依赖前期规划，若用户只想快速出一个短视频创意，结构化步骤反而可能比轻量工具更慢。</p><p class="source">来源：<a href="https://flyne.ai/cn/blog/detail/Higgsfield-Kling-Review-Higgsfield-Now-Officially-Features-Kling-3-0-1982dcf8a041/" target="_blank" rel="noopener noreferrer">flyne.ai</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">Oxen.ai对比Magnific（Freepik）外部测评摘录</span>
-                    <span class="source-label">Reddit / r/StableDiffusion / Reddit / r/ArtificialInteligence</span>
-                  </div>
-                  <h3>Oxen.ai对比Magnific (FreePik)创意平台</h3>
-                  <p class="synthesis">外部体验分歧集中在“成片效率”与“手工可控性”的取舍。</p>
-                  <a class="article-link" href="https://ghost.oxen.ai/oxen-ai-vs-magnific-freepik-which-ai-creative-platform-should-you-use/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Reddit 用户实测认为，Magnific AI 在放大分辨率之外，还能明显补出画面“深度感”和细节层次，这一点是 ControlNet、Krea enhancer 和 Topaz 在其体验里没有做到的。</p><p><strong>改变：</strong>对需要把普通图快速做成更有质感的高细节成片的用户来说，Magnific 更像是一种单工具直出方案，能减少在多款增强工具之间反复试错。</p><p class="source">来源：<a href="https://www.reddit.com/r/StableDiffusion/comments/18k6sj6/is_there_any_tool_that_is_better_than_the/" target="_blank" rel="noopener noreferrer">Reddit / r/StableDiffusion</a></p></div><div class="opinion"><p><strong>观察：</strong>另一位 Reddit 用户在比较订阅价值时提到，自己更偏好用 DreamStudio 保留 50-60% 原图、再用 Photoshop Firefly 局部修补、最后交给 Gigapixel 放大的组合流程，而不是直接订阅 Magnific。</p><p><strong>改变：</strong>这说明对已经有 Adobe 和放大工具链的创作者，Magnific 不一定是性价比最高的选择，替代方案虽然更繁琐，但能换来更细的局部控制。</p><p><strong>边界：</strong>这种替代工作流依赖多工具串联和人工微调，不适合追求一步出图或低操作成本的团队。</p><p class="source">来源：<a href="https://www.reddit.com/r/ArtificialInteligence/comments/18fpor5/is_magnific_ai_worth_its_subscription_price_is/" target="_blank" rel="noopener noreferrer">Reddit / r/ArtificialInteligence</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">OpenMontage外部测评</span>
-                    <span class="source-label">Knight Li / openEuler 社区 / wenxin77wx</span>
-                  </div>
-                  <h3>OpenMontage本地免费视频工作流实测</h3>
-                  <p class="synthesis">共识是省API成本，但要接受工程化部署门槛。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116837790522097" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方上手指南把OpenMontage描述为一套可实际部署的本地视频生产流水线，作者重点验证了安装流程、FFmpeg依赖、API Key配置和本地GPU可选方案，而不是单个模型的一键出片。</p><p><strong>改变：</strong>这意味着用户拿到的不是一个现成剪辑器，而是一条能把脚本、生成和合成串起来的本地工作流，适合想降低SaaS依赖、自己掌控生产环境的个人或团队。</p><p><strong>边界：</strong>代价是部署门槛并不低，依赖项、密钥和算力环境都要自己处理，更适合愿意折腾配置的用户，不适合只想即开即用的人。</p><p class="source">来源：<a href="https://knightli.com/en/2026/06/22/openmontage-ai-video-production-guide/" target="_blank" rel="noopener noreferrer">Knight Li</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方架构分析指出，OpenMontage默认用Remotion做引擎，核心特点是“Video as Code”——用React组件描述镜头，同时作者提到它可以在不买付费API Key的情况下跑通完整流程。</p><p><strong>改变：</strong>对团队的真实影响是，视频制作可以像代码一样做版本控制、协作编辑和自动化迭代，尤其适合要批量改模板、反复调镜头或接入工程化流程的内容生产。</p><p><strong>边界：</strong>这种优势建立在代码化工作流之上，更偏向有前端/工程背景的团队；如果用户主要依赖可视化拖拽剪辑，学习和维护成本会更高。</p><p class="source">来源：<a href="https://openeuler.csdn.net/6a37166b662f9a54cb823ce3.html" target="_blank" rel="noopener noreferrer">openEuler 社区 / wenxin77wx</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">外部测评 / 上手体验</span>
-                    <span class="source-label">李钟意讲前端 / Codex+FigmaMCPServer配置教程：AI自动生成前端代码实战指南</span>
-                  </div>
-                  <h3>codex生成Figma设计稿与MCP报错解决教程</h3>
-                  <p class="synthesis">共识是能提效，但真正门槛在 MCP 接入与本地配置。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116838042175630" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>李钟意的实操教程显示，Codex 想稳定读取 Figma 设计上下文并生成 UI，不是直接对话就能完成，而是需要在 VSCode 中指定 `gpt-5.1-codex-max`、提高推理档位，并在 `config.toml` 里显式绑定 Figma MCP。</p><p><strong>改变：</strong>这意味着对开发者和设计协作来说，设计稿到代码的关键变化不是“自动生成”本身，而是把 Figma 上下文正式接入编辑器工作流，减少手工描述视觉细节和来回确认。</p><p><strong>边界：</strong>代价是前置配置明显偏工程化，依赖 VSCode、模型选择和 MCP 配置，不适合只想零配置快速体验的普通用户。</p><p class="source">来源：<a href="https://docs.ffffee.com/ai/vscode-codex-figma-mcp.html" target="_blank" rel="noopener noreferrer">李钟意讲前端</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方配置文档指出，很多 Codex + Figma 的实战方案实际走的是本地 MCP Server 路线，使用前需要先安装本地 FigmaMCP，而不是开箱即用。</p><p><strong>改变：</strong>对团队而言，这带来的真实改变是可以把设计稿读取、前端代码生成放进本地可控环境里执行，更适合接入现有研发链路。</p><p><strong>边界：</strong>边界也很明确：本地部署提高了环境安装、调试和报错处理成本，尤其容易卡在 MCP 连接失败等配置问题上，不适合没有本地环境权限或缺少工程支持的场景。</p><p class="source">来源：<a href="https://1991421.cn/2025/11/09/codex-figma-mcp/" target="_blank" rel="noopener noreferrer">Codex+FigmaMCPServer配置教程：AI自动生成前端代码实战指南</a></p></div></div>
+                  <h3>Claude Design 2.0设计工作流实测边界</h3>
+                  <p class="synthesis">外部观察聚焦于缩短从提示到原型再到开发交付的链路。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116842102329852" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析文章将 Claude Design 的核心上手体验概括为“用聊天提示直接生成原型”，并强调设计结果可以继续通过 Claude Code 做交付衔接。</p><p><strong>改变：</strong>这意味着用户从写提示、出原型到交给开发的链路被压缩到同一套 AI 工作流里，减少了设计稿与代码交接时的工具切换。</p><p class="source">来源：<a href="https://matveev.tech/claude-design-obzor/" target="_blank" rel="noopener noreferrer">matveev.tech</a></p></div></div>
                 </section>
                 </div>
             </section>
