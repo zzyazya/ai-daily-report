@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-07-01 17:54</title>
+  <title>独立测评 · 2026-07-02 08:46</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,51 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评</span>
-                    <span class="source-label">BenchLM.ai</span>
+                    <span class="badge badge-blue">open-tag外部测评</span>
+                    <span class="source-label">V2EX 发帖者《我做了个开源版的 Claude Tag》 / 云栈社区《如何用开源MFS引擎打造你自己的Claude Tag？》</span>
                   </div>
-                  <h3>Claude Sonnet 5实测：性能升且Token成本上行</h3>
-                  <p class="synthesis">外部信号偏向代码能力更强，但成本收益比仍需按场景核算。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116842605582414" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>BenchLM 的对比页显示，Claude Sonnet 5 在其临时榜单上以 94 比 92 领先 Claude Opus 4.8，差距主要来自 SWE-bench Pro 上 69.2% 对 63.2% 的代码任务成绩。</p><p><strong>改变：</strong>这意味着对以代码修复、工程问答和开发辅助为主的团队，Sonnet 5 相比 Opus 4.8 更可能在真实软件任务里少走弯路、减少返工。</p><p><strong>边界：</strong>这项领先幅度不大，且主要由编码基准拉开，暂时不能直接外推到非编程场景，也不能单独说明它是否值得承担更高 Token 成本。</p><p class="source">来源：<a href="https://benchlm.ai/compare/claude-opus-4-8-vs-claude-sonnet-5" target="_blank" rel="noopener noreferrer">BenchLM.ai</a></p></div></div>
+                  <h3>open-tag开源工作区串联Claude Code等五款Agent</h3>
+                  <p class="synthesis">外部观察普遍认为它改进的是多Agent协作编排，不是Agent能力本身。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116844669246726" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>V2EX发帖者实际把OpenTag定位为多Agent协作层而非执行器本身，观察到真正读代码、写代码、调工具的仍是Claude Code、Codex等Agent，OpenTag负责决定由谁被@触发、拿到哪些上下文与权限、以及结果回写到哪个线程。</p><p><strong>改变：</strong>这意味着团队可以把多个代码Agent挂进同一GitHub/Slack工作区，用统一的提及和线程流转方式分派任务、追踪结果，而不用为每个Agent单独维护一套协作入口。</p><p><strong>边界：</strong>它不直接提升Agent本身的编码能力，价值主要在任务路由、上下文编排和审计回写；如果团队只用单一Agent或不依赖线程化协作，收益会有限。</p><p class="source">来源：<a href="https://www.v2ex.com/t/1222692" target="_blank" rel="noopener noreferrer">V2EX 发帖者《我做了个开源版的 Claude Tag》</a></p></div><div class="opinion"><p><strong>观察：</strong>云栈社区的工作流拆解认为，OpenTag复现Claude Tag并不需要重建完整“大脑”，只要挂接ClaudeCode或Codex等执行器，再监听Slack的`app_mention`事件、读取线程上下文并做收发适配，几百行代码即可跑通。</p><p><strong>改变：</strong>对开发团队来说，这把“把多个Agent接入同一协作工作区”的门槛降到了可自行改造的工程问题，能够更快把现有Slack/GitHub流程接上本地或自选Agent。</p><p><strong>边界：</strong>前提是团队本身有能力处理事件监听、线程上下文和适配器开发；它更适合已有协作基础设施的技术团队，不是开箱即用的零配置方案。</p><p class="source">来源：<a href="https://yunpan.plus/t/27021-1-1" target="_blank" rel="noopener noreferrer">云栈社区《如何用开源MFS引擎打造你自己的Claude Tag？》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Sonnet 5与Opus 4.8外部测评摘录</span>
-                    <span class="source-label">llm-stats / Apidog</span>
+                    <span class="badge badge-blue">Cursor多模型编程外部体验</span>
+                    <span class="source-label">知乎《Cursor 一年深度开发实践：前端开发的效率革命》 / 知乎《Cursor 深度评测：革命性提效工具还是过誉的玩具？》 / 知乎《Cursor自带大模型深度解析：用对能让你效率翻倍！》</span>
                   </div>
-                  <h3>Claude Sonnet 5与Opus 4.8编码性价比对比</h3>
-                  <p class="synthesis">共识是 Sonnet 5 更适合做默认编码模型，但长输出代理成本未必更低。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/06/30/anthropic-claude-sonnet-5-vs-sonnet-4-6-vs-opus-4-8-agentic-coding-benchmarks-api-pricing-and-cost-performance-tradeoffs-compared/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>llm-stats 的对比认为，Claude Sonnet 5 在 Terminal-Bench 上胜过 Opus 4.8，在知识类任务上基本打平，但价格低 40%到60%。</p><p><strong>改变：</strong>这意味着以编码和通用知识工作为主的团队，可以把 Sonnet 5 作为默认模型，在不明显牺牲效果的前提下降低大部分 API 成本。</p><p><strong>边界：</strong>它的结论主要建立在基准、价格和典型用例对比上，不等于在所有高难度推理或长链路任务里都能完全替代 Opus 4.8。</p><p class="source">来源：<a href="https://llm-stats.com/blog/research/claude-sonnet-5-vs-claude-opus-4-8" target="_blank" rel="noopener noreferrer">llm-stats</a></p></div><div class="opinion"><p><strong>观察：</strong>Apidog 在 Claude Code 上手文章里给出的实际建议是：多数 agentic coding 场景里，Sonnet 5 已经足够好，可以直接作为 Claude Code 的默认选择，只有在会话里再按需切到 Opus 4.8。</p><p><strong>改变：</strong>对开发者来说，这把模型选择从“先上最强模型”变成“默认 Sonnet 5、难题再升级”，能减少日常编码代理的试错成本和调用开销。</p><p><strong>边界：</strong>这条经验明确限定在 Claude Code 内的多数代理式编码场景，不代表极难问题、复杂架构决策或少数高风险任务也应放弃 Opus 4.8。</p><p class="source">来源：<a href="https://apidog.com/blog/claude-sonnet-5-claude-code/" target="_blank" rel="noopener noreferrer">Apidog</a></p></div></div>
+                  <h3>6款大模型在Cursor开发马里奥赛车实测对比</h3>
+                  <p class="synthesis">外部体验共识是：强模型更稳更全，但速度与成本要靠模式切换权衡。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116844266526008" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎开发者在一年深度使用Cursor后指出，Claude 3.5 Sonnet在代码生成、逻辑理解和上下文关联上持续领先，同期模型里实际编程体验明显更稳。</p><p><strong>改变：</strong>这意味着团队在Cursor里做多文件联动、需求转代码和连续迭代时，更可能一次拿到可继续修改的结果，减少反复补提示和返工。</p><p><strong>边界：</strong>这一结论主要基于前端开发者个人长期实践，偏重工程编码体验，不等于所有任务或所有语言场景都同样领先。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1971286996128371286" target="_blank" rel="noopener noreferrer">知乎《Cursor 一年深度开发实践：前端开发的效率革命》</a></p></div><div class="opinion"><p><strong>观察：</strong>知乎评测认为，Cursor的执行方式虽然会放大LLM随机性，但已经能把复杂问题拆成若干小问题逐步求解，处理中等复杂度任务表现足够实用。</p><p><strong>改变：</strong>对用户来说，像做页面、写CLI、搭脚手架这类任务，可以从“单次补全”升级为“让模型分步完成一整段开发流程”，明显改变日常写代码的工作流。</p><p><strong>边界：</strong>它的能力边界也很清楚：随机性仍会带来不确定输出，更适合中等复杂度任务，不代表高复杂系统设计就能稳定自动完成。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/15063515283" target="_blank" rel="noopener noreferrer">知乎《Cursor 深度评测：革命性提效工具还是过誉的玩具？》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Ornith 397B外部测评摘录</span>
-                    <span class="source-label">CNBlogs 博主上手记录 / 钛媒体</span>
+                    <span class="badge badge-blue">PDF转JSON外部测评</span>
+                    <span class="source-label">知乎｜十大PDF解析工具在不同文档类别中的比较研究 / CSDN博客｜几款PDF解析工具试用体验 / CSDN博客｜最新开源的解析效果非常好的PDF解析工具MinerU（pdf2md pdf2json）</span>
                   </div>
-                  <h3>Ornith 397B实测对比GLM 5.2与Claude</h3>
-                  <p class="synthesis">共识是基准已逼近Claude，但真实IDE替代仍需自测。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116843226340342" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>CNBlogs 的上手记录指出，Ornith 的对比主要集中在 `Terminal-Bench`、`SWE-bench`、`OpenClaw` 等公开基准，暂时没有在真实 IDE 场景里与 Claude Code、Cursor 内置 agent 做大型 monorepo 改造、重构或调试的头对头实测。</p><p><strong>改变：</strong>这意味着开发者目前更适合把 Ornith 397B 当作“公开 coding benchmark 很强”的候选模型，而不是直接据此替换团队里依赖 Claude/IDE agent 的日常开发流程。</p><p><strong>边界：</strong>边界在于公开榜单成绩还不能等价于真实工程工作流表现，尤其是复杂仓库修改、长链路调试和 IDE 协作场景仍需团队自行验证。</p><p class="source">来源：<a href="https://www.cnblogs.com/ninghg/p/20977557" target="_blank" rel="noopener noreferrer">CNBlogs 博主上手记录</a></p></div><div class="opinion"><p><strong>观察：</strong>钛媒体的第三方分析称，Ornith-1.0-397B 在 `SWE-Bench Verified` 和 `Terminal-Bench` 上已超过 Claude Opus 4.7，但与更新的 Claude Opus 4.8 实测仍有约 6.2 分差距。</p><p><strong>改变：</strong>对想自托管代码模型的团队来说，这说明开源方案已经进入可认真评估的区间，在标准代码修复/终端任务上有机会替代部分闭源模型调用。</p><p><strong>边界：</strong>代价是它仍未达到最新 Claude 的完全同级水平，追求最稳妥结果的高要求研发流程里，闭源前沿模型仍有优势。</p><p class="source">来源：<a href="https://www.tmtpost.com/agent/ai-article/18628" target="_blank" rel="noopener noreferrer">钛媒体</a></p></div></div>
+                  <h3>Lift研究PDF转结构化JSON评测工作流</h3>
+                  <p class="synthesis">共识是PDF转JSON应按文档类型和结构保真度做细粒度评测，不能只看纯文本抽取。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/07/01/using-lift-to-turn-research-pdfs-into-structured-json-with-controlled-schema-guided-field-level-evaluation/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方比较研究指出，PyMuPDF和pypdfium在财务、招标、法律法规、手册等常见文档类别的文本提取表现更稳，但在科学文档上整体都会明显掉点，只有Nougat这类视觉模型在科学类文本提取上更占优。</p><p><strong>改变：</strong>这意味着团队用Lift搭字段级PDF转JSON评测时，不能只看单一总分，而要按文档类型分桶评估，否则容易把适合合同/招标的解析器误用到论文或专利流里。</p><p><strong>边界：</strong>边界是科学和专利类PDF本身更难，通用规则型工具在这类场景下精度下滑明显，评测工作流需要单独设集而不能直接复用业务文档基准。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1894392204136531214" target="_blank" rel="noopener noreferrer">知乎｜十大PDF解析工具在不同文档类别中的比较研究</a></p></div><div class="opinion"><p><strong>观察：</strong>开发者试用总结提到，部分解析工具对含图片、复杂公式、双栏版式以及中文PDF的解析没有明显问题，说明高质量解析已不只是抽文本，而是能较完整地恢复版面和结构元素。</p><p><strong>改变：</strong>对做PDF转结构化JSON的人来说，这会直接改变验收方式：不仅要核对字段值，还要在Lift里把标题层级、表格、图表和阅读顺序纳入评测，否则JSON看似齐全但结构可用性不足。</p><p><strong>边界：</strong>这类体验更偏上手观察，未给出统一量化基准，也提示不同工具往往各有专长，需要按论文、表格、手写体或多语言等具体任务分别选型。</p><p class="source">来源：<a href="https://blog.csdn.net/the_seventh_dog/article/details/142495565" target="_blank" rel="noopener noreferrer">CSDN博客｜几款PDF解析工具试用体验</a></p></div></div>
                 </section>
-                </div>
-            </section>
-            
-            <section class="role-block">
-              <h2>美术视角测评</h2>
-              <div class="role-cards">
+                
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">Claude Design 2.0 外部测评摘录</span>
-                    <span class="source-label">matveev.tech</span>
+                    <span class="badge badge-blue">Cursor搭建网站/社区类项目外部体验</span>
+                    <span class="source-label">知乎《仅花7天，利用AI编程神器Cursor 从0到1开发上线个人网站，保姆级教程！》 / 知乎《Cursor实战：个人博客网站》 / 知乎《知乎社区生态 B 端 Cursor 实战 | 从踩坑到稳定提效经验全公开》</span>
                   </div>
-                  <h3>Claude Design 2.0设计工作流实测边界</h3>
-                  <p class="synthesis">外部观察聚焦于缩短从提示到原型再到开发交付的链路。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116842102329852" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析文章将 Claude Design 的核心上手体验概括为“用聊天提示直接生成原型”，并强调设计结果可以继续通过 Claude Code 做交付衔接。</p><p><strong>改变：</strong>这意味着用户从写提示、出原型到交给开发的链路被压缩到同一套 AI 工作流里，减少了设计稿与代码交接时的工具切换。</p><p class="source">来源：<a href="https://matveev.tech/claude-design-obzor/" target="_blank" rel="noopener noreferrer">matveev.tech</a></p></div></div>
+                  <h3>用Cursor搭建社区网站实操体验</h3>
+                  <p class="synthesis">共识是能明显提速，但前提是参考清晰、流程明确、协作成熟。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116845306708994" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有开发者复盘用 Cursor 从 0 到 1 做个人网站时，实际流程不是直接让 AI 开写，而是先人工写需求草稿、再让 Cursor 整理需求文档，并额外体验同类网站提炼可参考设计。</p><p><strong>改变：</strong>这说明用 Cursor 搭社区网站，真正被加速的是需求梳理和首版实现，但用户前置工作会转向“先想清楚要什么、先找好参考”。</p><p><strong>边界：</strong>它并不适合完全没想法就一步生成成品的场景，前期需求定义和竞品拆解仍要人来做。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1911705031016682531" target="_blank" rel="noopener noreferrer">知乎《仅花7天，利用AI编程神器Cursor 从0到1开发上线个人网站，保姆级教程！》</a></p></div><div class="opinion"><p><strong>观察：</strong>有博主在用 Cursor 做个人博客时发现，先给一张参考博客截图，比纯文字提示更容易让 Cursor 生成接近目标风格的页面，核心原因是它对图片的理解更直接。</p><p><strong>改变：</strong>对想快速搭社区网站前端的人来说，这会把 UI 沟通方式从“写很多提示词”变成“找一个接近的参考图”，明显降低页面还原成本。</p><p><strong>边界：</strong>前提是你手里已经有清晰的风格参照；如果没有参考图，AI 生成的视觉结果仍容易偏。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/9222090644" target="_blank" rel="noopener noreferrer">知乎《Cursor实战：个人博客网站》</a></p></div></div>
                 </section>
                 </div>
             </section>
