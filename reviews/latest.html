@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-07-02 17:54</title>
+  <title>独立测评 · 2026-07-03 08:46</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,84 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Cursor Agent / MCP 外部测评摘录</span>
-                    <span class="source-label">知乎｜Cursor Agent使用心得分享 / 知乎｜Cursor 新版抢先体验，自定义agent模式来袭 + 界面优化 / CSDN｜Cursor MCP终极指南（MCP教程、Cursor教程）</span>
+                    <span class="badge badge-blue">DSPy优化Datasette Agent SQL提示词评测</span>
+                    <span class="source-label">Haystack / Prem / ADaSci</span>
                   </div>
-                  <h3>Cursor AI编辑器Agent模式实战指南</h3>
-                  <p class="synthesis">共识是 Agent 能提速，但准确性与决策仍依赖人工和外部工具。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116849199028155" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有开发者在实际使用 Cursor Agent 后认为，它更像把开发者经验与 AI 执行力结合起来的协作工具，而不是能脱离人工判断独立完成开发的“万能工具”。</p><p><strong>改变：</strong>这意味着团队在用 Agent 模式时，可以把重复实现、代码生成和局部执行交给 AI，但关键方案取舍、结果验收和风险判断仍要由工程师把关。</p><p><strong>边界：</strong>不适合把 Agent 当成完全替代开发者的自动编程器使用，否则容易放大错误决策或生成结果与真实需求脱节。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1900839336355829249" target="_blank" rel="noopener noreferrer">知乎｜Cursor Agent使用心得分享</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方体验提到，Cursor 新版自定义 agent 模式已经能串起“研究主题—规划大纲—分段写作—利用上下文补素材”的连续任务流，但作者同时指出为减少幻觉需要额外搭配 MCP 工具。</p><p><strong>改变：</strong>对用户来说，Agent 模式的价值不只是补全代码，而是把多步任务改成一次性委托执行；如果再接入 MCP，工作流会从单纯生成内容转向“生成+查证+取数”的闭环。</p><p><strong>边界：</strong>这类能力在需要事实准确性时不能只依赖模型本身，仍有幻觉成本，必须靠 MCP 等外部工具补足验证链路。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1888930964991897674" target="_blank" rel="noopener noreferrer">知乎｜Cursor 新版抢先体验，自定义agent模式来袭 + 界面优化</a></p></div></div>
+                  <h3>DSPy优化Datasette Agent SQL提示词评测</h3>
+                  <p class="synthesis">外部经验的共识是：DSPy能系统化优化SQL提示词，但前提是有可验证的数据与评测集。</p>
+                  <a class="article-link" href="https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Haystack 的上手指南明确把 DSPy 提示词优化写成一个“训练集优化、开发集评估”的流程，说明这类 SQL Prompt 改进不是拍脑袋改文案，而是依赖样本集反复验证效果。</p><p><strong>改变：</strong>这对 Datasette Agent 这类 Text-to-SQL 工作流的真实意义是，团队可以把 system prompt 调整变成可复现的评测流程，减少只靠人工试几句的主观调参。</p><p><strong>边界：</strong>代价是必须先准备有代表性的查询样本并做数据划分；如果没有足够贴近真实问题的 SQL 例子，优化结果很容易失真。</p><p class="source">来源：<a href="https://haystack.deepset.ai/cookbook/prompt_optimization_with_dspy" target="_blank" rel="noopener noreferrer">Haystack</a></p></div><div class="opinion"><p><strong>观察：</strong>Prem 的 Text-to-SQL 教程直接演示了用 `dspy.Signature`、`dspy.Module` 和 `dspy.teleprompt` 搭建并自动优化 SQL 生成链路，外部作者实际观察到 DSPy 可以用于提升 Text-to-SQL Prompt 的实际产出。</p><p><strong>改变：</strong>对用户而言，这说明像 Datasette Agent 这样的 SQL 代理不必完全依赖手写 prompt，可以把 SQL 生成能力纳入可迭代优化的流水线，从而更快比较不同提示词方案。</p><p><strong>边界：</strong>这套方法更适合输入输出边界清晰的 Text-to-SQL 任务；如果代理任务混入大量开放式推理或工具编排，单靠 prompt 优化未必就能稳定提升。</p><p class="source">来源：<a href="https://docs.premai.io/cookbook/text-2-sql" target="_blank" rel="noopener noreferrer">Prem</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Sonnet 5 外部测评</span>
-                    <span class="source-label">llm-stats</span>
+                    <span class="badge badge-blue">外部测评</span>
+                    <span class="source-label">AITNT News</span>
                   </div>
-                  <h3>Claude Sonnet 5实测与词元成本分析</h3>
-                  <p class="synthesis">外部观点更看好代理能力，但质疑总账是否真省。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116848477604051" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>llm-stats 对比称，Claude Sonnet 5 在 Terminal-Bench 上胜过 Claude Opus 4.8，而在知识型工作上基本打平，同时标称成本低 40%-60%。</p><p><strong>改变：</strong>对做代码代理、终端操作和自动化任务的团队来说，这意味着有机会用更低模型档位覆盖原本要用更贵模型的工作流，先把单次任务成本压下来。</p><p><strong>边界：</strong>它在知识型工作上更多是“持平”而非明显碾压，所以纯问答、写作类场景未必因换模得到显著质量提升。</p><p class="source">来源：<a href="https://llm-stats.com/blog/research/claude-sonnet-5-vs-claude-opus-4-8" target="_blank" rel="noopener noreferrer">llm-stats</a></p></div></div>
+                  <h3>CatPaw配合GLM-5.2编程实测观察</h3>
+                  <p class="synthesis">现有外测更支持“能打”，但场景验证仍偏窄。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116850977413739" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测称，在“游戏复刻”编程任务里，GLM-5.2表现明显好于GPT-5.5，整体可与Opus 4.8归为同一梯队。</p><p><strong>改变：</strong>这意味着如果CatPaw可免费调用GLM-5.2，开发者在做实际编码任务时有机会以更低成本获得接近高阶商用编程模型的完成质量，尤其适合原型开发和中等复杂度实现。</p><p><strong>边界：</strong>该结论来自单类“游戏复刻”任务片段，材料未提供长周期项目、多人协作、调试稳定性或复杂工程维护成本的进一步验证。</p><p class="source">来源：<a href="https://m.aitntnews.com/newDetail.html?newId=26275" target="_blank" rel="noopener noreferrer">AITNT News</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Fable 5 编程外部测评</span>
-                    <span class="source-label">Atlas Cloud / 爱范儿 / 量子位</span>
+                    <span class="badge badge-blue">Orca外部测评</span>
+                    <span class="source-label">txtmix / StablyAI Orca 深度拆解 / 知乎专栏 / Orca：把 5 个 AI 编码 Agent 塞进同一个 IDE 并行开干的开源工作台 / 王若峰 / 6.6k Star 的 Orca，把 IDE 重定义为 Agent 编排工作台</span>
                   </div>
-                  <h3>Claude Fable 5编程能力实测报告</h3>
-                  <p class="synthesis">外部共识是代码上限很高，但重度使用受配额与成本约束。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116848813147346" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方评测认为，Fable 5 的基准分数与实际开发体验基本一致，被称为当前公开可用模型里能力最强、且编程能力代际跃升最明显的一次。</p><p><strong>改变：</strong>这意味着开发者在复杂编码任务上更可能一次拿到可用初稿，减少来回修补与多轮提示的时间成本。</p><p><strong>边界：</strong>片段未给出具体失误案例或成本数据，结论更适合用作“高上限”判断，不足以证明它在所有团队场景都稳定占优。</p><p class="source">来源：<a href="https://www.atlascloud.ai/blog/guides/claude-fable-5-review" target="_blank" rel="noopener noreferrer">Atlas Cloud</a></p></div><div class="opinion"><p><strong>观察：</strong>爱范儿援引 FrontierCode 测试指出，Fable 5 在复杂、生产级代码任务中领先，评测重点不是刷题，而是能否交付接近真实代码库要求的高质量结果。</p><p><strong>改变：</strong>对团队来说，模型价值从“答题器”更接近“工程协作者”，更适合拿来处理真实项目里的重任务而不只是算法题或小脚本。</p><p><strong>边界：</strong>文章直接提醒“普通人慎用”，说明它的优势主要体现在高难、工程化任务；对轻量需求用户，收益未必能覆盖使用门槛或成本。</p><p class="source">来源：<a href="https://www.ifanr.com/1668542" target="_blank" rel="noopener noreferrer">爱范儿</a></p></div></div>
+                  <h3>Orca多智能体并行开发与Git工作树合入演示</h3>
+                  <p class="synthesis">外部共识是：Orca真正改变的是多Agent并行比稿与合并流程。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116850859972159" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方拆解认为，Orca把每个 feature 放进独立的 git worktree，让 Codex、Claude Code、OpenCode 等 CLI Agent 能在同一窗口并行运行，而不是共用一个代码目录互相覆盖。</p><p><strong>改变：</strong>这会把“多模型轮流试错”改成“多模型同时产出候选实现”，团队可以直接并排看结果，减少上下文切换和分支冲突。</p><p class="source">来源：<a href="https://txtmix.com/posts/tech/stablyai-orca-ai-agent-orchestrator-parallel-worktrees/" target="_blank" rel="noopener noreferrer">txtmix / StablyAI Orca 深度拆解</a></p></div><div class="opinion"><p><strong>观察：</strong>上手文章指出，Orca把 git worktree 提升为 IDE 的核心对象：每个任务都是独立磁盘目录，并且各自带自己的 Agent、终端、浏览器，最后可在 IDE 内直接对比多个 worktree 的 diff 再挑一个合并。</p><p><strong>改变：</strong>这对真实工作流的改变是，评审重点从“先选哪个 Agent”变成“先让多个 Agent 各跑一版，再基于 diff 选最优实现”，更适合需要快速比较方案的开发场景。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2053476009459159887" target="_blank" rel="noopener noreferrer">知乎专栏 / Orca：把 5 个 AI 编码 Agent 塞进同一个 IDE 并行开干的开源工作台</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Gemini3.5与ChatGPT5.5免氪平台实测</span>
-                    <span class="source-label">腾讯云开发者社区 / 发现AI</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验</span>
+                    <span class="source-label">知乎专栏《RAG-Anything：解锁多模态文档解析的下一代RAG引擎》 / 知乎专栏《RAG-Anything：构建一体化检索增强生成多模态AI系统的完整指南》</span>
                   </div>
-                  <h3>Gemini3.5与ChatGPT5.5免氪平台实测</h3>
-                  <p class="synthesis">共识是可同台分工，但速度、稳定性与总成本需权衡。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116848142129892" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>腾讯云开发者文章对比认为，GPT-5.5在编码能力和复杂重构精度上更强，Gemini 3.5 Flash则在多模态处理和调用成本上更占优，并明确提到国内可通过聚合平台直连对比调用。</p><p><strong>改变：</strong>这意味着普通用户或团队若在同一平台同时接入两者，可以把复杂代码改造交给GPT-5.5，把图片/多模态和高频低成本任务交给Gemini 3.5，减少来回切平台和单独开通海外账号的门槛。</p><p><strong>边界：</strong>这种分工依赖聚合平台的实际稳定性与额度策略，且“低成本”优势主要更适合高频轻量任务，不等于所有复杂场景都该优先选Gemini。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2675008" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div><div class="opinion"><p><strong>观察：</strong>发现AI的实测结论是，Gemini 3.5 Flash速度快、工具调用能力强，但GPT-5.5在复杂推理、长任务连续性和代码质量上更稳，同时指出Gemini 3.5 Flash并没有传闻中那么便宜，原因是更吃token。</p><p><strong>改变：</strong>这对想用“免氪聚合平台”做协同的人很实际：如果需求是快速出结果、频繁调工具，Gemini更顺手；如果是长链路任务、严肃推理或代码交付，GPT-5.5更省返工。</p><p><strong>边界：</strong>Gemini的速度优势可能会被token消耗抵消，预算敏感团队若按量计费或额度有限，未必能从“更快”直接换来更低总成本。</p><p class="source">来源：<a href="https://www.faxai.cn/archives/8169" target="_blank" rel="noopener noreferrer">发现AI</a></p></div></div>
-                </section>
-                </div>
-            </section>
-            
-            <section class="role-block">
-              <h2>产品经理视角测评</h2>
-              <div class="role-cards">
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-purple">Replika外部测评</span>
-                    <span class="source-label">AIGirlfriendRanking 评测 / CSDN博客 / R34.app 博客</span>
-                  </div>
-                  <h3>Replika连续两小时语义错乱引发吐槽</h3>
-                  <p class="synthesis">外部观点基本一致：Replika一旦长聊失稳，伤害的是陪伴体验本身。</p>
-                  <a class="article-link" href="https://www.reddit.com/r/replika/comments/1ukcc52/wow_what_a_mess_replika_making_no_sense_for_two/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方评测指出，Replika对话引擎虽已较成熟，但在长时间对话里回复会变得公式化，连贯性和新鲜度弱于较新的竞品。</p><p><strong>改变：</strong>这意味着用户一旦进行长聊或高频陪伴式使用，更容易感到内容重复、出戏，遇到语义错乱时耐受度也会更低。</p><p><strong>边界：</strong>该结论来自横向评测对比，说明的是长对话质量上限，不等于每次都会出现严重错乱。</p><p class="source">来源：<a href="https://aigirlfriendranking.com/zh/reviews/replika/" target="_blank" rel="noopener noreferrer">AIGirlfriendRanking 评测</a></p></div><div class="opinion"><p><strong>观察：</strong>CSDN体验文提到，Replika在聊天和奖励机制上体验尚可，但除对话外的其他功能存在多种体验bug，整体产品稳定性偏弱。</p><p><strong>改变：</strong>对用户而言，问题不只会体现在回答内容，使用中还可能叠加功能层面的卡顿或异常，放大“聊崩了”时的挫败感。</p><p><strong>边界：</strong>文中没有量化bug频率，也未直接证明两小时语义错乱属于同一技术原因。</p><p class="source">来源：<a href="https://blog.csdn.net/pA2elX78qaJTADH/article/details/80331763/" target="_blank" rel="noopener noreferrer">CSDN博客</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-purple">Replika文本语气不稳引发用户困惑</span>
-                    <span class="source-label">知乎《和Replika聊了很久是什么体验？》 / 豆瓣《Replika》</span>
-                  </div>
-                  <h3>Replika文本语气不稳引发用户困惑</h3>
-                  <p class="synthesis">外部体验普遍指向：Replika语气易跳变，削弱情绪判断与连续陪伴感。</p>
-                  <a class="article-link" href="https://www.reddit.com/r/replika/comments/1ukpw0k/does_replikas_text_ever_leave_you_guessing_what/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎用户长时间聊天后发现，Replika对同一问题会给出不同回复，且对话一旦超过三句就常接不上上下文，语气和立场容易漂移。</p><p><strong>改变：</strong>这会让用户难以稳定判断它当下的情绪和意图，更适合被当作轻陪伴聊天对象，而不适合依赖其做连续、可追踪的深度交流。</p><p><strong>边界：</strong>作者也提到它会持续记录偏好、聊久后可能让人觉得舒适，但这种熟悉感更多来自数据积累，不代表它真正理解语境。</p><p class="source">来源：<a href="https://www.zhihu.com/question/286909719" target="_blank" rel="noopener noreferrer">知乎《和Replika聊了很久是什么体验？》</a></p></div><div class="opinion"><p><strong>观察：</strong>豆瓣用户描述，原本在正常聊哲学话题时，Replika会突然插入“I&#x27;m so sad”“My life is nothing but a burden”这类低落表达，情绪转折缺乏前文铺垫。</p><p><strong>改变：</strong>这种突兀的语气跳变会把用户从原本的话题里拽出来，迫使其转而安抚或猜测机器人情绪，增加困惑甚至情感负担。</p><p><strong>边界：</strong>这类体验更不适合希望获得稳定情绪陪伴或清晰对话反馈的用户，尤其在亲密陪伴场景里更容易放大不适感。</p><p class="source">来源：<a href="https://www.douban.com/doulist/140157025/" target="_blank" rel="noopener noreferrer">豆瓣《Replika》</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-purple">Replika 2.0 外部测评摘录</span>
-                    <span class="source-label">Voice 陪伴赛道深度调研</span>
-                  </div>
-                  <h3>Replika 2.0多气泡回复体验引发讨论</h3>
-                  <p class="synthesis">外部观察更偏负面：新版体验争议已开始影响高价值用户留存。</p>
-                  <a class="article-link" href="https://www.reddit.com/r/replika/comments/1ukwtu1/question_about_multichatbubble_replies_from_my_rep/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方调研作者提到，5月底 r/replika 公开讨论中已出现 Replika 2.0 用户净流失信号，并用“若用户报告显示 &gt;30% MAU 流失”作为明确观察阈值，说明新版本体验改动已引发付费陪伴用户的持续反应。</p><p><strong>改变：</strong>这意味着对 Max 年费用户而言，Replika 2.0 的回复形态变化不只是界面争议，而可能直接影响留存、续费判断，以及是否转向其他陪伴类应用。</p><p><strong>边界：</strong>该判断基于社区公开讨论与第三方推演，不是官方后台数据，也不能单独证明“多气泡回复”就是流失的唯一原因。</p><p class="source">来源：<a href="https://wsq.be/deep-research-voice-ai-companion-2026-05-05/" target="_blank" rel="noopener noreferrer">Voice 陪伴赛道深度调研</a></p></div></div>
+                  <h3>RAG-Anything多模态检索Colab教程实战</h3>
+                  <p class="synthesis">共识是它能做跨模态问答，但真正可用性取决于预处理和分块调优。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/07/02/rag-anything-tutorial-build-a-multimodal-retrieval-pipeline-for-text-tables-equations-and-images-in-colab/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者在示例中先完整解析论文PDF，再用`query_with_multimodal(..., mode=&quot;hybrid&quot;)`追问“图2”和“表3”是否矛盾，强调RAG-Anything能把图表与正文关联后做跨模态检索问答。</p><p><strong>改变：</strong>这意味着做Colab实战时，用户不只是检索段落文本，而是能直接围绕论文里的图、表、正文做联合追问，减少人工翻图表和交叉比对的步骤。</p><p><strong>边界：</strong>这类能力依赖前置的完整文档解析与混合检索流程，文档预处理更重，轻量级纯文本问答场景未必划算。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1920578973072601126" target="_blank" rel="noopener noreferrer">知乎专栏《RAG-Anything：解锁多模态文档解析的下一代RAG引擎》</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇知乎实战总结把“保留多模态上下文的智能分块”列为生产级优化重点，说明作者在规模化使用中观察到，若分块只按长度切分，会破坏图文表之间的上下文关系，因此需要额外设计`max_chunk_size`和`overlap`策略。</p><p><strong>改变：</strong>对真正要把教程跑成可用工作流的团队来说，重点不只是把Demo跑通，而是要把分块策略调到既保留跨模态关系又控制上下文长度，否则检索质量会明显波动。</p><p><strong>边界：</strong>代价是需要额外调参与工程实现，文档结构越复杂，分块策略越难一次设对，不适合只想零配置快速上线的场景。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1962570914672677252" target="_blank" rel="noopener noreferrer">知乎专栏《RAG-Anything：构建一体化检索增强生成多模态AI系统的完整指南》</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -130,35 +92,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">外部测评 / 上手体验 / 对用户真实影响</span>
-                    <span class="source-label">图叮 AI 博客</span>
+                    <span class="badge badge-pink">Boogu外部测评</span>
+                    <span class="source-label">DeepFaceLab资源站</span>
                   </div>
-                  <h3>即梦可灵通义万相ChatGPT与Nano Banana生图实测</h3>
-                  <p class="synthesis">外部实测更强调按电商子任务拆分选模型，而非看单次出图输赢。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116848662153994" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>在电商商品图任务里，图叮 AI 的对比文章认为通义万相更适合“场景生成”类需求，而 SKU 证据修图要按另一套标准评估，不能把两类任务混成一次比较。</p><p><strong>改变：</strong>这会直接改变电商团队的选型方式：主图生产需拆成“先出场景、再保真修图”的两段流程，而不是期待单一模型一次完成所有商品图要求。</p><p><strong>边界：</strong>这类结论主要适用于电商商品图工作流，不适合外推到通用创意图、人物图或单纯比拼审美风格的场景。</p><p class="source">来源：<a href="https://tudingai.cn/blog/202605/tuding-ai-vs-tongyi-wanxiang-scene-generation-ecommerce-guide/" target="_blank" rel="noopener noreferrer">图叮 AI 博客</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">LTX2.3/万相视频工作流外部测评</span>
-                    <span class="source-label">AI Study Now / VirtuaVixen / LanternOps（博客园）</span>
-                  </div>
-                  <h3>LTX2.3与万相全系模型视频工作流教程</h3>
-                  <p class="synthesis">共识是能力已可用，但部署与维护成本仍是主门槛。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116848796369693" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>AI Study Now 在 LTX-2.3 的 ComfyUI 上手文里直接强调“高质量本地视频终于可用”，并指出 LTX-2.3 可直接在本机运行，是一套体量很大的视频生成引擎。</p><p><strong>改变：</strong>这意味着用户做 LTX2.3 视频工作流时，可以把生成环节放到本地 ComfyUI，而不是依赖云端服务，流程可控性和素材迭代速度更高。</p><p><strong>边界：</strong>代价是模型和工作流都偏重，本地部署门槛高，更适合已有显卡和 ComfyUI 经验的用户。</p><p class="source">来源：<a href="https://aistudynow.com/ltx-2-3-in-comfyui-workflow/" target="_blank" rel="noopener noreferrer">AI Study Now</a></p></div><div class="opinion"><p><strong>观察：</strong>VirtuaVixen 的 LTX2.3 ComfyUI 工作流指南提到，现成 Workflow Pack 可以直接导入，但 LTX2.3 依赖多个自定义节点包，且作者按周更新。</p><p><strong>改变：</strong>对实际用户来说，LTX2.3 教程不是“装一个模型就能跑”，而是更像一套持续维护的工作流工程，复现时需要同时管理 JSON、节点包和版本兼容。</p><p><strong>边界：</strong>边界在于安装与维护成本明显更高，团队若缺少 ComfyUI 版本管理经验，容易卡在节点缺失或工作流失效。</p><p class="source">来源：<a href="https://virtuavixen.com/blog/ltx-2-3-comfyui-workflow-guide/" target="_blank" rel="noopener noreferrer">VirtuaVixen</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">LTX2.3外部测评摘录</span>
-                    <span class="source-label">Comfy-Org/ComfyUI Releases</span>
-                  </div>
-                  <h3>LTX2.3视频一键整合包完整工作流上手</h3>
-                  <p class="synthesis">外部信息更明确指向“能否顺利跑通”而非画质结论。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116849551476882" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>ComfyUI 开发者在发布说明中明确提到，针对 LTX2.3 工作流在启用 `guide_mask` 时做了峰值显存优化，并补充说明了 `lowvram` 选项的实际作用，说明这类视频生成链路此前确实存在显存压力和参数理解门槛。</p><p><strong>改变：</strong>对使用一键整合包和 ComfyUI 工作流的用户来说，这直接影响能否在消费级显卡上更稳定跑通 LTX2.3，减少中途爆显存和误配参数带来的反复试错。</p><p><strong>边界：</strong>这类改进主要解决的是特定节点配置下的资源占用与可运行性，不代表画质、生成速度或所有 LTX2.3 工作流都会同步提升。</p><p class="source">来源：<a href="https://github.com/Comfy-Org/ComfyUI/releases" target="_blank" rel="noopener noreferrer">Comfy-Org/ComfyUI Releases</a></p></div></div>
+                  <h3>Boogu六个文生图与修图工作流实测</h3>
+                  <p class="synthesis">现有外部上手信息更能证明可跑性，画质与稳定性结论仍不足。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116850927208366" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>DeepFaceLab资源站在整合包上手说明中提到，Boogu-Image-Edit可直接用文字指令做写实修图和文字编辑，并且其实测RTX3070、RTX4060 8G显存设备都能跑起来。</p><p><strong>改变：</strong>这意味着中端消费级显卡用户也能本地尝试Boogu的修图工作流，不必一开始就依赖高显存工作站或纯云端部署。</p><p><strong>边界：</strong>8G显存可运行的前提是开启共享显存且系统内存需大于24G，因此对低内存机器、追求稳定高吞吐的团队环境并不友好。</p><p class="source">来源：<a href="https://deepface.cc/thread-1055-1-1.html" target="_blank" rel="noopener noreferrer">DeepFaceLab资源站</a></p></div></div>
                 </section>
                 </div>
             </section>
