@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-07-03 08:46</title>
+  <title>独立测评 · 2026-07-03 17:51</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,62 +43,24 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">DSPy优化Datasette Agent SQL提示词评测</span>
-                    <span class="source-label">Haystack / Prem / ADaSci</span>
+                    <span class="badge badge-blue">RAG-Anything外部测评</span>
+                    <span class="source-label">Milvus Blog</span>
                   </div>
-                  <h3>DSPy优化Datasette Agent SQL提示词评测</h3>
-                  <p class="synthesis">外部经验的共识是：DSPy能系统化优化SQL提示词，但前提是有可验证的数据与评测集。</p>
-                  <a class="article-link" href="https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Haystack 的上手指南明确把 DSPy 提示词优化写成一个“训练集优化、开发集评估”的流程，说明这类 SQL Prompt 改进不是拍脑袋改文案，而是依赖样本集反复验证效果。</p><p><strong>改变：</strong>这对 Datasette Agent 这类 Text-to-SQL 工作流的真实意义是，团队可以把 system prompt 调整变成可复现的评测流程，减少只靠人工试几句的主观调参。</p><p><strong>边界：</strong>代价是必须先准备有代表性的查询样本并做数据划分；如果没有足够贴近真实问题的 SQL 例子，优化结果很容易失真。</p><p class="source">来源：<a href="https://haystack.deepset.ai/cookbook/prompt_optimization_with_dspy" target="_blank" rel="noopener noreferrer">Haystack</a></p></div><div class="opinion"><p><strong>观察：</strong>Prem 的 Text-to-SQL 教程直接演示了用 `dspy.Signature`、`dspy.Module` 和 `dspy.teleprompt` 搭建并自动优化 SQL 生成链路，外部作者实际观察到 DSPy 可以用于提升 Text-to-SQL Prompt 的实际产出。</p><p><strong>改变：</strong>对用户而言，这说明像 Datasette Agent 这样的 SQL 代理不必完全依赖手写 prompt，可以把 SQL 生成能力纳入可迭代优化的流水线，从而更快比较不同提示词方案。</p><p><strong>边界：</strong>这套方法更适合输入输出边界清晰的 Text-to-SQL 任务；如果代理任务混入大量开放式推理或工具编排，单靠 prompt 优化未必就能稳定提升。</p><p class="source">来源：<a href="https://docs.premai.io/cookbook/text-2-sql" target="_blank" rel="noopener noreferrer">Prem</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">外部测评</span>
-                    <span class="source-label">AITNT News</span>
-                  </div>
-                  <h3>CatPaw配合GLM-5.2编程实测观察</h3>
-                  <p class="synthesis">现有外测更支持“能打”，但场景验证仍偏窄。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116850977413739" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测称，在“游戏复刻”编程任务里，GLM-5.2表现明显好于GPT-5.5，整体可与Opus 4.8归为同一梯队。</p><p><strong>改变：</strong>这意味着如果CatPaw可免费调用GLM-5.2，开发者在做实际编码任务时有机会以更低成本获得接近高阶商用编程模型的完成质量，尤其适合原型开发和中等复杂度实现。</p><p><strong>边界：</strong>该结论来自单类“游戏复刻”任务片段，材料未提供长周期项目、多人协作、调试稳定性或复杂工程维护成本的进一步验证。</p><p class="source">来源：<a href="https://m.aitntnews.com/newDetail.html?newId=26275" target="_blank" rel="noopener noreferrer">AITNT News</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Orca外部测评</span>
-                    <span class="source-label">txtmix / StablyAI Orca 深度拆解 / 知乎专栏 / Orca：把 5 个 AI 编码 Agent 塞进同一个 IDE 并行开干的开源工作台 / 王若峰 / 6.6k Star 的 Orca，把 IDE 重定义为 Agent 编排工作台</span>
-                  </div>
-                  <h3>Orca多智能体并行开发与Git工作树合入演示</h3>
-                  <p class="synthesis">外部共识是：Orca真正改变的是多Agent并行比稿与合并流程。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116850859972159" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方拆解认为，Orca把每个 feature 放进独立的 git worktree，让 Codex、Claude Code、OpenCode 等 CLI Agent 能在同一窗口并行运行，而不是共用一个代码目录互相覆盖。</p><p><strong>改变：</strong>这会把“多模型轮流试错”改成“多模型同时产出候选实现”，团队可以直接并排看结果，减少上下文切换和分支冲突。</p><p class="source">来源：<a href="https://txtmix.com/posts/tech/stablyai-orca-ai-agent-orchestrator-parallel-worktrees/" target="_blank" rel="noopener noreferrer">txtmix / StablyAI Orca 深度拆解</a></p></div><div class="opinion"><p><strong>观察：</strong>上手文章指出，Orca把 git worktree 提升为 IDE 的核心对象：每个任务都是独立磁盘目录，并且各自带自己的 Agent、终端、浏览器，最后可在 IDE 内直接对比多个 worktree 的 diff 再挑一个合并。</p><p><strong>改变：</strong>这对真实工作流的改变是，评审重点从“先选哪个 Agent”变成“先让多个 Agent 各跑一版，再基于 diff 选最优实现”，更适合需要快速比较方案的开发场景。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2053476009459159887" target="_blank" rel="noopener noreferrer">知乎专栏 / Orca：把 5 个 AI 编码 Agent 塞进同一个 IDE 并行开干的开源工作台</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">知乎专栏《RAG-Anything：解锁多模态文档解析的下一代RAG引擎》 / 知乎专栏《RAG-Anything：构建一体化检索增强生成多模态AI系统的完整指南》</span>
-                  </div>
-                  <h3>RAG-Anything多模态检索Colab教程实战</h3>
-                  <p class="synthesis">共识是它能做跨模态问答，但真正可用性取决于预处理和分块调优。</p>
+                  <h3>RAG-Anything多模态检索流程教程</h3>
+                  <p class="synthesis">外部观察更看重“能否扩展”，不只是在 Colab 跑通流程。</p>
                   <a class="article-link" href="https://www.marktechpost.com/2026/07/02/rag-anything-tutorial-build-a-multimodal-retrieval-pipeline-for-text-tables-equations-and-images-in-colab/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者在示例中先完整解析论文PDF，再用`query_with_multimodal(..., mode=&quot;hybrid&quot;)`追问“图2”和“表3”是否矛盾，强调RAG-Anything能把图表与正文关联后做跨模态检索问答。</p><p><strong>改变：</strong>这意味着做Colab实战时，用户不只是检索段落文本，而是能直接围绕论文里的图、表、正文做联合追问，减少人工翻图表和交叉比对的步骤。</p><p><strong>边界：</strong>这类能力依赖前置的完整文档解析与混合检索流程，文档预处理更重，轻量级纯文本问答场景未必划算。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1920578973072601126" target="_blank" rel="noopener noreferrer">知乎专栏《RAG-Anything：解锁多模态文档解析的下一代RAG引擎》</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇知乎实战总结把“保留多模态上下文的智能分块”列为生产级优化重点，说明作者在规模化使用中观察到，若分块只按长度切分，会破坏图文表之间的上下文关系，因此需要额外设计`max_chunk_size`和`overlap`策略。</p><p><strong>改变：</strong>对真正要把教程跑成可用工作流的团队来说，重点不只是把Demo跑通，而是要把分块策略调到既保留跨模态关系又控制上下文长度，否则检索质量会明显波动。</p><p><strong>边界：</strong>代价是需要额外调参与工程实现，文档结构越复杂，分块策略越难一次设对，不适合只想零配置快速上线的场景。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1962570914672677252" target="_blank" rel="noopener noreferrer">知乎专栏《RAG-Anything：构建一体化检索增强生成多模态AI系统的完整指南》</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Milvus 博客在多模态 RAG 工作流分析中指出，RAG-Anything 的强项是把多种模态统一进检索流程，但真正落地时瓶颈会转移到“不同类型 embeddings 的快速、可扩展向量搜索”上。</p><p><strong>改变：</strong>这意味着用户在 Colab 跑通教程后，如果要给团队或生产环境使用，重点不只是会不会搭流程，而是要同步补齐向量数据库与检索扩展能力，否则多模态检索很难稳定放大到真实数据规模。</p><p><strong>边界：</strong>边界是它更适合有向量检索基础设施配合的场景；若只有轻量演示环境或缺少可扩展索引层，教程能跑通但不代表系统已具备生产可用性。</p><p class="source">来源：<a href="https://milvus.io/zh/blog/multimodal-rag-made-simple-rag-anything-milvus-instead-of-20-separate-tools.md" target="_blank" rel="noopener noreferrer">Milvus Blog</a></p></div></div>
                 </section>
-                </div>
-            </section>
-            
-            <section class="role-block">
-              <h2>美术视角测评</h2>
-              <div class="role-cards">
+                
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">Boogu外部测评</span>
-                    <span class="source-label">DeepFaceLab资源站</span>
+                    <span class="badge badge-blue">Fable5外部测评</span>
+                    <span class="source-label">Knightli / yhai3596/fable5-task-router / berryxia 转述 Matthew Berman 测评</span>
                   </div>
-                  <h3>Boogu六个文生图与修图工作流实测</h3>
-                  <p class="synthesis">现有外部上手信息更能证明可跑性，画质与稳定性结论仍不足。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116850927208366" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>DeepFaceLab资源站在整合包上手说明中提到，Boogu-Image-Edit可直接用文字指令做写实修图和文字编辑，并且其实测RTX3070、RTX4060 8G显存设备都能跑起来。</p><p><strong>改变：</strong>这意味着中端消费级显卡用户也能本地尝试Boogu的修图工作流，不必一开始就依赖高显存工作站或纯云端部署。</p><p><strong>边界：</strong>8G显存可运行的前提是开启共享显存且系统内存需大于24G，因此对低内存机器、追求稳定高吞吐的团队环境并不友好。</p><p class="source">来源：<a href="https://deepface.cc/thread-1055-1-1.html" target="_blank" rel="noopener noreferrer">DeepFaceLab资源站</a></p></div></div>
+                  <h3>Fable5解禁实测展示Agent搭建效果</h3>
+                  <p class="synthesis">共识是Fable 5更适合高难Agent，但要付出编排与成本代价。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116852470581406" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实操总结认为，Fable 5在长任务和Agent场景里，不是靠一次性提示词取胜，而是更依赖“高 effort + 进度校验 + 子代理分工 + 记忆系统”这类编排后才能稳定发挥。</p><p><strong>改变：</strong>这意味着把Fable 5接进科研知识库Agent时，团队要把工作流改成分阶段检索、验证、回写记忆的链路，而不是把它当普通对话模型直接接入。</p><p><strong>边界：</strong>代价是编排复杂度、推理时长和调用成本都会上升；如果只是简单问答或短任务，这套Agent化设计未必划算。</p><p class="source">来源：<a href="https://knightli.com/en/2026/06/10/claude-fable-5-prompting-guide/" target="_blank" rel="noopener noreferrer">Knightli</a></p></div><div class="opinion"><p><strong>观察：</strong>开发者做的任务路由器给出的实务判断是：Fable 5比Opus贵一倍，更适合高难、长程、容易失败的任务；过于琐碎的任务会被直接判为“不值得用”。</p><p><strong>改变：</strong>对准备搭科研知识库Agent的团队来说，真实变化不是“统一升级模型”，而是先做任务分流：把复杂检索与多步推理交给Fable 5，常规问答继续留给更便宜模型。</p><p><strong>边界：</strong>作者也提示其护栏和价格事实会过期，且网安/生化等敏感领域可能触发能力降级；涉及相关科研主题时，Agent效果和可用性不一定稳定。</p><p class="source">来源：<a href="https://github.com/yhai3596/fable5-task-router" target="_blank" rel="noopener noreferrer">yhai3596/fable5-task-router</a></p></div></div>
                 </section>
                 </div>
             </section>
