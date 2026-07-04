@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-07-03 17:51</title>
+  <title>独立测评 · 2026-07-04 08:41</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,24 +43,73 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">RAG-Anything外部测评</span>
-                    <span class="source-label">Milvus Blog</span>
+                    <span class="badge badge-blue">OpenClaw对比Hermes Agent实测评测</span>
+                    <span class="source-label">知乎专栏《Hermes Agent vs OpenClaw：我花了一周对比，说说真实感受》 / 腾讯云开发者《Hermes Agent vs OpenClaw 2026终极对比：架构、记忆、生态全面PK》 / 一介布衣《深度解析 OpenClaw 与 Hermes Agent：从架构设计到工程实践的完整对比》</span>
                   </div>
-                  <h3>RAG-Anything多模态检索流程教程</h3>
-                  <p class="synthesis">外部观察更看重“能否扩展”，不只是在 Colab 跑通流程。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/07/02/rag-anything-tutorial-build-a-multimodal-retrieval-pipeline-for-text-tables-equations-and-images-in-colab/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Milvus 博客在多模态 RAG 工作流分析中指出，RAG-Anything 的强项是把多种模态统一进检索流程，但真正落地时瓶颈会转移到“不同类型 embeddings 的快速、可扩展向量搜索”上。</p><p><strong>改变：</strong>这意味着用户在 Colab 跑通教程后，如果要给团队或生产环境使用，重点不只是会不会搭流程，而是要同步补齐向量数据库与检索扩展能力，否则多模态检索很难稳定放大到真实数据规模。</p><p><strong>边界：</strong>边界是它更适合有向量检索基础设施配合的场景；若只有轻量演示环境或缺少可扩展索引层，教程能跑通但不代表系统已具备生产可用性。</p><p class="source">来源：<a href="https://milvus.io/zh/blog/multimodal-rag-made-simple-rag-anything-milvus-instead-of-20-separate-tools.md" target="_blank" rel="noopener noreferrer">Milvus Blog</a></p></div></div>
+                  <h3>OpenClaw对比Hermes Agent实测评测</h3>
+                  <p class="synthesis">共识是两者强项不同：Hermes偏持续进化，OpenClaw偏即用与集成。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116856765548706" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎专栏作者在一周对比后认为，Hermes Agent更突出“任务后自动提炼技能、积累记忆、越用越好用”，而OpenClaw更突出“50+平台接入、13000+社区技能、开箱即用”。</p><p><strong>改变：</strong>这意味着个人或小团队如果希望代理在持续使用中贴合自身习惯，更可能从Hermes Agent获益；如果更看重立即接入现成工具链和减少冷启动配置，OpenClaw更省时间。</p><p><strong>边界：</strong>该结论本身也指出了取舍：Hermes Agent偏“长期进化”，OpenClaw偏“眼下能用”，不适合把两者当成同一类零成本替代品。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2026434353928971670" target="_blank" rel="noopener noreferrer">知乎专栏《Hermes Agent vs OpenClaw：我花了一周对比，说说真实感受》</a></p></div><div class="opinion"><p><strong>观察：</strong>腾讯云开发者文章将两者差异概括为：Hermes Agent主打“自进化+持久记忆+多平台触达”，OpenClaw主打“IDE深度集成+成熟生态+稳定性”。</p><p><strong>改变：</strong>这会直接改变选型逻辑：需要长期陪伴式开发/运维协作的用户，更可能把Hermes Agent当成持续积累上下文的助手；重度IDE编码用户则更容易从OpenClaw的稳定集成中获得效率收益。</p><p><strong>边界：</strong>文章同时给出适配边界：Hermes Agent更偏全栈开发者和运维，OpenClaw更偏专注编程的IDE重度用户，跨场景使用未必都占优。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2655392" target="_blank" rel="noopener noreferrer">腾讯云开发者《Hermes Agent vs OpenClaw 2026终极对比：架构、记忆、生态全面PK》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Fable5外部测评</span>
-                    <span class="source-label">Knightli / yhai3596/fable5-task-router / berryxia 转述 Matthew Berman 测评</span>
+                    <span class="badge badge-blue">Loop Engineering外部测评摘录</span>
+                    <span class="source-label">AI Builder Club / Lushbinary</span>
                   </div>
-                  <h3>Fable5解禁实测展示Agent搭建效果</h3>
-                  <p class="synthesis">共识是Fable 5更适合高难Agent，但要付出编排与成本代价。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116852470581406" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实操总结认为，Fable 5在长任务和Agent场景里，不是靠一次性提示词取胜，而是更依赖“高 effort + 进度校验 + 子代理分工 + 记忆系统”这类编排后才能稳定发挥。</p><p><strong>改变：</strong>这意味着把Fable 5接进科研知识库Agent时，团队要把工作流改成分阶段检索、验证、回写记忆的链路，而不是把它当普通对话模型直接接入。</p><p><strong>边界：</strong>代价是编排复杂度、推理时长和调用成本都会上升；如果只是简单问答或短任务，这套Agent化设计未必划算。</p><p class="source">来源：<a href="https://knightli.com/en/2026/06/10/claude-fable-5-prompting-guide/" target="_blank" rel="noopener noreferrer">Knightli</a></p></div><div class="opinion"><p><strong>观察：</strong>开发者做的任务路由器给出的实务判断是：Fable 5比Opus贵一倍，更适合高难、长程、容易失败的任务；过于琐碎的任务会被直接判为“不值得用”。</p><p><strong>改变：</strong>对准备搭科研知识库Agent的团队来说，真实变化不是“统一升级模型”，而是先做任务分流：把复杂检索与多步推理交给Fable 5，常规问答继续留给更便宜模型。</p><p><strong>边界：</strong>作者也提示其护栏和价格事实会过期，且网安/生化等敏感领域可能触发能力降级；涉及相关科研主题时，Agent效果和可用性不一定稳定。</p><p class="source">来源：<a href="https://github.com/yhai3596/fable5-task-router" target="_blank" rel="noopener noreferrer">yhai3596/fable5-task-router</a></p></div></div>
+                  <h3>Loop Engineering框架一行命令上手教程</h3>
+                  <p class="synthesis">共识是上手门槛低，但效果取决于校验与流程设计。</p>
+                  <a class="article-link" href="https://zhuanlan.zhihu.com/p/2056632775587976896" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>AI Builder Club 将 Loop Engineering 概括为“从手动 prompting 转向设计 agent 运行循环”，并特别指出 verifier（校验环节）会成为整条 loop 的瓶颈。</p><p><strong>改变：</strong>这意味着用户按“一行命令”跑起来后，真正决定效果的不是首个 prompt，而是后续校验、重试和反馈回路怎么搭，团队工作重点会从写提示词转向设计可重复执行的流程。</p><p><strong>边界：</strong>如果校验器能力不足，loop 只会更快地产生和放大错误，因此不适合缺少验收标准或无法自动检查结果的任务。</p><p class="source">来源：<a href="https://www.aibuilderclub.com/blog/loop-engineering-guide-2026" target="_blank" rel="noopener noreferrer">AI Builder Club</a></p></div><div class="opinion"><p><strong>观察：</strong>Lushbinary 认为 Loop Engineering 的关键不是“人手动提示 agent”，而是把 agent 放进一套可执行系统里，并把 Claude Code、Codex 命令行工作流列为落地方式。</p><p><strong>改变：</strong>对开发者来说，这类框架的真实价值是把 agent 使用方式从一次性对话变成可复用的命令化流程，更适合接入日常编码、迭代和自动执行链路。</p><p><strong>边界：</strong>文章同时强调存在风险，说明它更适合流程清晰、步骤可拆解的工程任务，不适合高不确定性且难以约束的开放式工作。</p><p class="source">来源：<a href="https://lushbinary.com/blog/loop-engineering-ai-coding-agents-guide/" target="_blank" rel="noopener noreferrer">Lushbinary</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">external_review</span>
+                    <span class="source-label">检索结果汇总判断</span>
+                  </div>
+                  <h3>Hermes0.17实测揭露AI中转假模型</h3>
+                  <p class="synthesis">现有材料不足以支撑有效外部测评结论</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116856178350747" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>提供的外部材料里，没有第三方作者对“Hermes0.17 实测揭露中转商伪装 GPT5.5 与 Claude Sonnet5”给出可验证的上手观察、对比测试或工作流复盘。</p><p><strong>改变：</strong>因此无法从现有片段中提炼出对用户真实可操作的判断，比如如何识别假模型、切换后效果差异或团队采购风险变化。</p><p><strong>边界：</strong>现有结果大多是安装教程、功能介绍或版本安全更新，和目标新闻指向的“假模型识别实测”不直接相关。</p><p class="source">来源：检索结果汇总判断</p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Claude Code团队谈Fable自主判断策略</span>
+                    <span class="source-label">腾讯云开发者社区｜《我把 Claude Code 切到 Fable 5，先别急着兴奋》 / 知乎｜《刚刚 Claude Fable 5 炸裂发布！真是太烧了。。附一手实测，夯还是拉？》</span>
+                  </div>
+                  <h3>Claude Code团队谈Fable自主判断策略</h3>
+                  <p class="synthesis">外部体验普遍认为，自主判断测试方式提升了真实验证能力，但更依赖清晰验收边界。</p>
+                  <a class="article-link" href="https://simonwillison.net/2026/Jul/3/judgement/#atom-everything" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>实测作者观察到，Fable 5 在处理长任务时会自己调查问题、自己验证结果，不再只等人逐步指定每一步测试或检查动作。</p><p><strong>改变：</strong>这会把使用者从盯执行细节的“监工”变成先定义目标、验收标准和止损条件的“发包方”，更适合把大重构、依赖升级、补测试这类长链路工作整包交出去。</p><p><strong>边界：</strong>前提是用户要先把约束、验收口径和风险边界写清楚，否则自主执行越强，偏航成本也越高。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2687617" target="_blank" rel="noopener noreferrer">腾讯云开发者社区｜《我把 Claude Code 切到 Fable 5，先别急着兴奋》</a></p></div><div class="opinion"><p><strong>观察：</strong>一手上手文章提到，Fable 5 没有停留在写 mock 测试，而是主动用 PTY 在真实终端里反复调试交互流程，连回车符转换和 API 协议 bug 都通过多轮实测排查出来。</p><p><strong>改变：</strong>这意味着当团队允许它自主决定验证方式时，它更可能选择贴近真实使用环境的端到端检查，而不是只交一套看起来完整但未必覆盖真实问题的测试脚本。</p><p><strong>边界：</strong>这种真实环境反复试错会消耗更多轮次和时间，也更适合 CLI 交互、集成链路这类问题；对只求低成本快速产出的场景未必划算。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2048024883783847965" target="_blank" rel="noopener noreferrer">知乎｜《刚刚 Claude Fable 5 炸裂发布！真是太烧了。。附一手实测，夯还是拉？》</a></p></div></div>
+                </section>
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>美术视角测评</h2>
+              <div class="role-cards">
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">Nano Banana 2 Lite对比GPT Image 2实测</span>
+                    <span class="source-label">gemini-cnblog 横评文章 / UIED学习社区</span>
+                  </div>
+                  <h3>Nano Banana 2 Lite对比GPT Image 2实测</h3>
+                  <p class="synthesis">外部观点分化明显：GPT Image 2偏成片与复杂编辑，Nano Banana 2 Lite偏低价高速打样。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116856664888879" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方横评援引 Arena 的 Multi-ImageEdit 分数称，GPT Image 2 相比 Nano Banana 2 拉开了 1464 分，且被评价为榜单历史上第一与第二之间最大的分差之一，指向其在多图编辑一致性与复杂编辑任务上明显更稳。</p><p><strong>改变：</strong>对需要参考多张素材做统一改图、角色延续或复杂局部编辑的团队，这意味着用 GPT Image 2 更可能减少反复重试和人工补救，直接提升可交付效率。</p><p><strong>边界：</strong>这条结论主要覆盖多图编辑榜单表现，不能直接外推到生成速度、调用成本或轻量级快速出草图场景。</p><p class="source">来源：<a href="https://www.gemini-cnblog.com/chatgpt/guides/gpt-image-2-vs-nano-banana-2-comparison-2026.html" target="_blank" rel="noopener noreferrer">gemini-cnblog 横评文章</a></p></div><div class="opinion"><p><strong>观察：</strong>UIED 学习社区对 NanoBanana2 Lite 的上手描述是“4 秒生成、像快速打草稿而不是等模型慢慢输出最终图”，并给出约每 1000 张 0.034 美元的低成本量级。</p><p><strong>改变：</strong>这说明在与 GPT Image 2 同场比较时，Nano Banana 2 Lite 更像高频试错和批量出概念稿的工具，适合先用极低成本快速铺方案，再把少量候选交给更强模型精修。</p><p><strong>边界：</strong>它更偏“草稿流”而非最终成片流，若任务目标是一次出高完成度成图或高要求编辑稳定性，Lite 方案未必合适。</p><p class="source">来源：<a href="https://www.uied.cn/posts/921219" target="_blank" rel="noopener noreferrer">UIED学习社区</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">豆包生成质量外部观察</span>
+                    <span class="source-label">人人都是产品经理</span>
+                  </div>
+                  <h3>豆包14.0.0对比13.2.0生成质量争议</h3>
+                  <p class="synthesis">外部体验偏向“底子不错，但稳定性与理解力有波动”。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116856816016797" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>产品经理社区作者实测多款国内文生图聊天产品后认为，豆包在图像生成质量和指令准确性上整体表现相对不错，视觉生成能力属于国产同类里较强的一档。</p><p><strong>改变：</strong>这意味着普通用户把豆包用于日常配图、概念图和初步创意探索时，通常能较快拿到可用结果，减少在多款工具之间来回试错。</p><p><strong>边界：</strong>该结论只说明豆包整体文生图底子不差，未涉及14.0.0与13.2.0的版本对比，不能直接证明此次“新版本退步”争议是真是假。</p><p class="source">来源：<a href="https://www.woshipm.com/evaluating/6073724.html" target="_blank" rel="noopener noreferrer">人人都是产品经理</a></p></div></div>
                 </section>
                 </div>
             </section>
