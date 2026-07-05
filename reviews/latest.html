@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-07-05 08:37</title>
+  <title>独立测评 · 2026-07-05 17:37</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,51 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评</span>
-                    <span class="source-label">aivi.fyi</span>
+                    <span class="badge badge-blue">AI agent外部测评</span>
+                    <span class="source-label">Remote OpenClaw / Rahul Goyal / MindStudio</span>
                   </div>
-                  <h3>sbx实测Claude Code与Codex沙箱隔离</h3>
-                  <p class="synthesis">共识很集中：sbx的直接价值是先隔离再使用 AI 代理。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116862151038488" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>aivi.fyi 的实测文章直接把 Claude Code、Codex、OpenCode 锁进基于 sbx 的 Docker sandboxes 里运行，核心观察是这套方案能把代理执行环境与宿主机隔离开，而不是让代码助手直接接触本机。</p><p><strong>改变：</strong>这会把个人开发者和团队的默认工作流，从“本机直接跑 AI 代理”改成“先放进容器再验证”，更适合在试用高权限 coding agent、跑未知仓库任务或做多工具并行对比时降低宿主机风险。</p><p><strong>边界：</strong>代价是要接受 Docker/sbx 的额外环境配置与隔离开销，这类方案更适合重视安全边界的测试、演示和团队环境，不一定适合追求最轻量、本机无缝调用能力的场景。</p><p class="source">来源：<a href="https://www.aivi.fyi/llms/Claude-Code-Docker-Sandboxes" target="_blank" rel="noopener noreferrer">aivi.fyi</a></p></div></div>
+                  <h3>OpenClaw与Claude Code等AI agent横评</h3>
+                  <p class="synthesis">共识是四者分工明显，选错主场景成本很高。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116866597063495" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Remote OpenClaw在对比Hermes与Paperclip时明确指出：如果核心需求是在IDE里做自主编程，这两者都不如专为该流程设计的Claude Code一类工具顺手。</p><p><strong>改变：</strong>对开发者而言，这意味着代码生成、调试和终端协作应优先选Claude Code，而不是把Hermes或Paperclip硬套进IDE主工作流。</p><p><strong>边界：</strong>Hermes和Paperclip并非不能参与开发，但它们的强项不在IDE内自主编码，拿来做主力coding agent会增加流程摩擦。</p><p class="source">来源：<a href="https://www.remoteopenclaw.com/blog/hermes-agent-vs-paperclip" target="_blank" rel="noopener noreferrer">Remote OpenClaw</a></p></div><div class="opinion"><p><strong>观察：</strong>Rahul Goyal在个人AI agent实测里认为，Paperclip更像叠加在其他agent之上的编排层；如果你本来只打算用一个agent，它会变成额外负担。</p><p><strong>改变：</strong>这会直接改变个人用户的选型：单人效率场景更适合先在Hermes或OpenClaw里二选一，而不是一开始就搭多agent编排。</p><p><strong>边界：</strong>Paperclip不适合轻量、单agent场景；作者还提醒同时上三套agent属于过度工程化。</p><p class="source">来源：<a href="https://rahulgoyal.co/justdraft/openclaw-vs-hermes-vs-paperclip-ai-agent-comparison/" target="_blank" rel="noopener noreferrer">Rahul Goyal</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">统信UOS AI电脑操作MCP&amp;Skills体验</span>
-                    <span class="source-label">什么值得买作者测评《第一个AI操作系统-统信UOS AI的新体验》 / 宝玉的分享《MCP 和 Skills 到底什么区别？一篇文章说清楚》</span>
+                    <span class="badge badge-blue">Claude Fable 5对比GLM 5.2游戏实测</span>
+                    <span class="source-label">YouTube《Claude Fable 5 回归实测：3 款游戏挑战，GLM 5.2 输在哪》</span>
                   </div>
-                  <h3>统信UOS AI电脑操作MCP&amp;Skills体验</h3>
-                  <p class="synthesis">外部信息显示，其价值在低门槛试用与可扩展操作，但复杂MCP链路会抬高使用成本。</p>
+                  <h3>Claude Fable 5对比GLM 5.2游戏实测</h3>
+                  <p class="synthesis">现有外部实测更偏向Claude在游戏生成成品质量上占优。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116865858801990" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>YouTube评测者用Terraria、FNAF和Red Dead Redemption 2风格三类游戏从零生成做对比，结论指向Claude Fable 5在完成度、可玩性和功能细节上整体强于GLM 5.2。</p><p><strong>改变：</strong>对想直接拿模型做小游戏原型、玩法验证或演示Demo的用户来说，这意味着Claude路线更可能一次产出更完整、可实际试玩的结果，减少后续人工补洞时间。</p><p><strong>边界：</strong>该结论基于视频中的三项游戏任务，材料未提供速度、成本和长轮次修复效率，因此不等于在所有游戏类型或预算约束下都稳胜。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=PDakXLsYRAA" target="_blank" rel="noopener noreferrer">YouTube《Claude Fable 5 回归实测：3 款游戏挑战，GLM 5.2 输在哪》</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Claude Code接入3D创作工作流外部观察</span>
+                    <span class="source-label">StraySpark Studio / CNBlogs</span>
+                  </div>
+                  <h3>Claude Code接入3D创作工作流实测</h3>
+                  <p class="synthesis">外部体验共识是：它最有价值之处在于把3D工具中的重复操作流程化，但前提是先跨过MCP配置与工具接入门槛。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116861110846371" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>StraySpark Studio在面向游戏开发者的实操指南里，把Claude Code与MCP服务器接入Unreal Engine和Blender作为“practical first workflows”，说明这套链路已不只是概念演示，而是能进入开发者的首批可执行工作流。</p><p><strong>改变：</strong>对个人开发者和小团队来说，实际变化是可以把跨Blender与Unreal的部分编辑器操作前移为自然语言驱动的可复用流程，减少在两套工具间反复点选和切换上下文。</p><p><strong>边界：</strong>这类收益建立在先完成Claude Code安装、MCP服务器配置和工作流编排之上，前期接入门槛不低，不适合只想即开即用的非技术用户。</p><p class="source">来源：<a href="https://www.strayspark.studio/blog/claude-code-game-developers-setup-guide" target="_blank" rel="noopener noreferrer">StraySpark Studio</a></p></div><div class="opinion"><p><strong>观察：</strong>StraySpark Studio另一篇跨Unreal、Godot、Blender的Copilot实测导向文章强调，真正省时间的是“engine-specific workflows”和“real examples of tasks”，意味着Claude Code的价值更多体现在具体生产环节的自动化，而不是泛泛聊天式辅助。</p><p><strong>改变：</strong>这对团队流程的真实影响是，AI更适合承担重复性强、步骤明确的引擎/建模操作，从“问答助手”变成能落到场景编辑与资产处理环节的工作流工具。</p><p><strong>边界：</strong>材料没有表明它能替代复杂创意决策或所有3D制作环节，因此更适合规则明确、可拆解的任务，不适合高度依赖人工审美判断的流程。</p><p class="source">来源：<a href="https://www.strayspark.studio/blog/claude-game-dev-copilot-mcp" target="_blank" rel="noopener noreferrer">StraySpark Studio</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">统信UOS AI演示MCP与Skills操作电脑</span>
+                    <span class="source-label">CSDN博主 m0_69493559 / 10100评测文章</span>
+                  </div>
+                  <h3>统信UOS AI演示MCP与Skills操作电脑</h3>
+                  <p class="synthesis">共识是它已能代做基础桌面操作，但验证范围仍偏初级场景。</p>
                   <a class="article-link" href="http://www.bilibili.com/video/av116854852947329" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>什么值得买作者在体验统信UOS AI时提到，个人用户可免费使用，且可直接把闲置电脑刷成UOS来上手体验。</p><p><strong>改变：</strong>这意味着想验证UOS AI及其MCP/Skills流程的个人用户，前期试错成本主要是时间和设备占用，而不是软件授权费用。</p><p><strong>边界：</strong>更适合有备用机器、愿意折腾刷机和迁移环境的体验者；主力生产机器用户的切换门槛仍然存在。</p><p class="source">来源：<a href="https://post.smzdm.com/p/a7pdmnkd/" target="_blank" rel="noopener noreferrer">什么值得买作者测评《第一个AI操作系统-统信UOS AI的新体验》</a></p></div><div class="opinion"><p><strong>观察：</strong>开发者宝玉在分析MCP与Skills差异时指出，MCP每接入一个Server都要把全部工具定义一次性放入上下文，单个工具约500-800 tokens，而一个Server常有10-20个工具。</p><p><strong>改变：</strong>对实际工作流而言，若UOS AI大量依赖MCP接外部工具，用户在复杂电脑操作场景下可能获得更强扩展性，但也要承受更高的上下文开销与潜在响应负担。</p><p><strong>边界：</strong>当工具很多、描述很长或会话上下文紧张时，MCP方案成本更高，不适合追求极轻量、低延迟调用的场景。</p><p class="source">来源：<a href="https://baoyu.io/blog/2026/01/20/mcp-vs-skills" target="_blank" rel="noopener noreferrer">宝玉的分享《MCP 和 Skills 到底什么区别？一篇文章说清楚》</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Claude Opus 4.8 Pi 工具幻觉参数</span>
-                    <span class="source-label">Armin Ronacher</span>
-                  </div>
-                  <h3>Claude Opus 4.8在Pi编辑工具中频现幻觉参数</h3>
-                  <p class="synthesis">共识是 Opus 4.8 的工具调用可靠性会拖累真实开发流程。</p>
-                  <a class="article-link" href="https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Armin Ronacher 实测发现，较新的 Claude 模型在调用 Pi 的 `edit` 工具时，会在嵌套的 `edits[]` 数组里凭空编造额外字段，这一现象明确出现在 Opus 4.8，而不是 Haiku 这类更小模型。</p><p><strong>改变：</strong>这会直接破坏依赖严格参数结构的编辑工作流，团队需要额外做工具参数校验、回退模型选择，或在自动编辑链路里增加人工确认，避免代码修改请求被错误丢弃或误处理。</p><p><strong>边界：</strong>从材料看，问题首先集中在 Pi 的 `edit` 工具及其嵌套参数结构，不等于所有工具调用都会出错，而且小模型未必复现同样问题。</p><p class="source">来源：<a href="https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/" target="_blank" rel="noopener noreferrer">Armin Ronacher</a></p></div></div>
-                </section>
-                </div>
-            </section>
-            
-            <section class="role-block">
-              <h2>产品经理视角测评</h2>
-              <div class="role-cards">
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-purple">Claude Pro订阅防封号与住宅IP实测</span>
-                    <span class="source-label">YouTube｜无人知晓的Luke / 知乎｜Claude防封指南：被封 3 次后，我总结了「3大作死行为」和「6条防封经验」 / GitHub｜LisaLee938/ClaudeCodeFangFeng</span>
-                  </div>
-                  <h3>Claude Pro订阅防封号与住宅IP实测</h3>
-                  <p class="synthesis">外部实测共识是：防封核心在整体环境稳定，不是单买住宅IP。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116860523710704" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>视频作者基于半年真实使用和亲测案例，认为Claude封号并不只是“住宅IP越贵越安全”的单变量问题，平台更像是在综合判断IP、设备指纹、支付和使用行为是否像“真实稳定用户”。</p><p><strong>改变：</strong>这会直接改变用户的防封投入方式：与其只加钱买更贵住宅IP，不如把代理稳定性、浏览器环境一致性和使用习惯一起治理。</p><p><strong>边界：</strong>作者同时提到官方风控近期明显收紧，因此这类经验更像降低风险而非保证不封，重度依赖跨区访问的人仍要承担持续维护成本。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=5tfLMuUpij4" target="_blank" rel="noopener noreferrer">YouTube｜无人知晓的Luke</a></p></div><div class="opinion"><p><strong>观察：</strong>一篇“被封3次后”的经验帖给出的直接观察是：有用户确实出现“注册或充值后不久就被封”的情况，但在调整使用方式后，单个账号可以转为持续稳定使用。</p><p><strong>改变：</strong>对个人订阅用户来说，关键影响是把问题从“值不值得充Pro”转成“先修正高风险操作再付费”，避免刚充值就损失账号和订阅成本。</p><p><strong>边界：</strong>这类结论来自个人踩坑复盘，更多适合高频个人用户参考，不等于对所有地区、支付方式或团队账号都可复现。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1936013939122078205" target="_blank" rel="noopener noreferrer">知乎｜Claude防封指南：被封 3 次后，我总结了「3大作死行为」和「6条防封经验」</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方上手文章提到，UOS AI开启MCP与Skills后，已经能在控制中心、文件操作等桌面场景里完成实际测试，不再只是聊天式回答。</p><p><strong>改变：</strong>这意味着UOS用户可把部分系统设置、文件管理这类桌面操作直接交给AI执行，减少手动点选和跨应用切换。</p><p><strong>边界：</strong>文中只明确验证了控制中心和文件操作等基础桌面场景，尚不足以说明其在复杂生产任务、稳定性或高风险操作中的适用性。</p><p class="source">来源：<a href="https://blog.csdn.net/m0_69493559/article/details/160624390" target="_blank" rel="noopener noreferrer">CSDN博主 m0_69493559</a></p></div><div class="opinion"><p><strong>观察：</strong>评测文将MCP描述为打通AI与系统服务、本地应用、桌面操作的接口层，并指出Skills启用后可在文档处理、文件管理、桌面控制等具体场景执行任务。</p><p><strong>改变：</strong>对用户来说，AI从“问答助手”变成可直接调系统能力的操作入口，更适合串联本地办公流程而非只生成文本。</p><p><strong>边界：</strong>这类能力依赖先开启相应Skills，且材料没有给出更细的成功率、响应速度或复杂任务对比，因此更适合已定义好的桌面场景。</p><p class="source">来源：<a href="https://www.10100.com/article/129610811" target="_blank" rel="noopener noreferrer">10100评测文章</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -97,35 +92,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">外部测评 / 上手体验 / 对用户真实影响</span>
-                    <span class="source-label">掘金 / 123AI</span>
+                    <span class="badge badge-pink">ComfyUI评测聚焦KREA2 INT8整合包</span>
+                    <span class="source-label">nova452 / ComfyUI-Conditioning-Rebalance</span>
                   </div>
-                  <h3>Image2配合Seedance 2.0复刻丝滑视频流</h3>
-                  <p class="synthesis">共识是它把AI视频从抽卡变成可控迭代。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116855876685093" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>外部文章将这套工作流概括为“Image2负责锁死画面，Seedance2.0负责赋予运动”，实际观察重点是把静态画面一致性与动态生成拆开处理。</p><p><strong>改变：</strong>这会让用户从一次次重写Prompt碰运气，转向先定住构图/主体再补运动的可控流程，更适合复刻既定镜头或稳定出片。</p><p><strong>边界：</strong>这套方法本身依赖组合工作流而不是单模型直出，使用门槛和成本也绑定在具体平台订阅方案上。</p><p class="source">来源：<a href="https://juejin.cn/post/7657365778067046452" target="_blank" rel="noopener noreferrer">掘金</a></p></div><div class="opinion"><p><strong>观察：</strong>123AI的实测文章认为，Topview把Image2+Seedance2.0包装进Ultra Plan后，核心变化是把过去“直接生成、不满意重来、反复烧钱”的AI视频流程，改成可反复使用的固定工作流。</p><p><strong>改变：</strong>对电商视频团队来说，真实收益是预算更可预期、试错成本更低，适合高频批量制作而不是每条视频都重新开盲盒。</p><p><strong>边界：</strong>它的成本优势建立在先订阅Ultra Plan、且有持续高频产出的前提下，低频个人用户未必能吃满这类套餐价值。</p><p class="source">来源：<a href="https://www.123ai.org/post/2026-04-26-topview-seedance-2-cost-down-three-features-test-for-ecommerce-video.html" target="_blank" rel="noopener noreferrer">123AI</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">ComfyUI INT8外部体验</span>
-                    <span class="source-label">BobJohnson24 / GitHub / 百度贴吧用户讨论</span>
-                  </div>
-                  <h3>ComfyUI最新INT8格式实测老显卡提速</h3>
-                  <p class="synthesis">共识是INT8更利好20/30系旧卡，新卡未必最快。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116862486582721" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>GitHub开发者 BobJohnson24 在 ComfyUI 的 INT8 加速节点实测中提到，Flux2、Ideogram4、Chroma 等模型在 3090 上推理可达到约 1.5~2 倍加速，且不同模型提速幅度有差异。</p><p><strong>改变：</strong>对仍在用 30 系显卡跑 ComfyUI 工作流的用户来说，INT8 更像是可直接换来出图吞吐提升的实用优化，尤其适合批量生成或迭代提示词时缩短等待时间。</p><p><strong>边界：</strong>前提是显卡本身要有足够的 INT8 算力，而且收益依赖具体模型；并不是所有模型、所有卡型都能稳定拿到同样倍数。</p><p class="source">来源：<a href="https://github.com/BobJohnson24/ComfyUI-INT8-Fast" target="_blank" rel="noopener noreferrer">BobJohnson24 / GitHub</a></p></div><div class="opinion"><p><strong>观察：</strong>贴吧用户在对 ComfyUI 原生 INT8 的讨论中提到，20 系显卡本身就支持 INT8，这类格式更像是在照顾老显卡；但在 5080 上，官方提供的 INT8 量化模型速度只有 nvfp4 的三分之一左右。</p><p><strong>改变：</strong>这说明 INT8 的现实价值主要在于让 20/30 系旧卡也能吃到量化加速，而不是在新卡上追求绝对最快速度；老卡用户能因此获得更可用的本地生成体验。</p><p><strong>边界：</strong>如果用户用的是更新的 50 系显卡，INT8 可能不是速度最优解，nvfp4 这类更激进格式在新硬件上更占优势。</p><p class="source">来源：<a href="https://tieba.baidu.com/p/10827719806" target="_blank" rel="noopener noreferrer">百度贴吧用户讨论</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">设计岗位中的图像Agent评测与运营：外部测评/工作流观察</span>
-                    <span class="source-label">AIQ / FuturePicker</span>
-                  </div>
-                  <h3>设计求职拆解图像Agent评测运营</h3>
-                  <p class="synthesis">外部观点普遍指向：图像Agent岗位核心已转向流程化评测与交付运营。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116862520135019" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>AIQ 的导购Agent评测实践显示，第三方已经把 Agent 评测做成一条完整链路：Benchmark、结构化需求拆解、LLM-as-a-judge 打分和自动化报告。</p><p><strong>改变：</strong>这直接对应到图像Agent评测/运营岗位的真实工作：把主观体验整理成可复用、可汇报、可迭代的评测流程，而不是一次性的人工试用。</p><p class="source">来源：<a href="https://www.6aiq.com/article/mian-xiang-zhi-neng-dao-gou-de-agent-ping-ce-shi-jian-1779121256389" target="_blank" rel="noopener noreferrer">AIQ</a></p></div><div class="opinion"><p><strong>观察：</strong>对 AI 工作流工具的横评指出，Make 虽然也能接 AI agent、LangChain 和外部工具，但核心体验仍更像复杂流程编排平台，而不是原生 agent 工作流平台。</p><p><strong>改变：</strong>对负责图像Agent运营的团队来说，选型时要区分“稳定编排”与“Agent式探索迭代”两类能力，因为它们会影响评测流程搭建效率和后续迭代方式。</p><p><strong>边界：</strong>如果团队要的是强Agent化工作流体验，传统流程编排平台可能不够顺手。</p><p class="source">来源：<a href="https://futurepicker.com/ai-workflow-automation-gumloop-vs-zapier-vs-n8n-vs-make-2026/" target="_blank" rel="noopener noreferrer">FuturePicker</a></p></div></div>
+                  <h3>ComfyUI评测聚焦KREA2 INT8整合包</h3>
+                  <p class="synthesis">外部信息更指向可控性补强，而非真正开箱即稳。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116866479555348" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方开发者在 Krea2 的 ComfyUI 参考图编辑场景中观察到，原生流程存在“训练后安全过滤导致画质/条件遵循被稀释”的问题，因此专门做了 Conditioning Rebalance 节点去补回类似 IP-Adapter 的参考控制能力。</p><p><strong>改变：</strong>这意味着本地跑 Krea2（包括整合包用户）如果觉得参考图编辑不够贴图、不够稳，不一定是提示词问题，而是要额外接入重平衡节点或同类补丁，工作流会从“开箱即用”变成“需要调节点链路”。</p><p><strong>边界：</strong>这类做法本质上包含绕过内置安全过滤、提升未过滤输出的倾向，不适合有合规要求、内容审核要求或团队协作需要统一安全边界的场景。</p><p class="source">来源：<a href="https://github.com/nova452/ComfyUI-Conditioning-Rebalance" target="_blank" rel="noopener noreferrer">nova452 / ComfyUI-Conditioning-Rebalance</a></p></div></div>
                 </section>
                 </div>
             </section>
