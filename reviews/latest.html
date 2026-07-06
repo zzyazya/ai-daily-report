@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-07-06 08:36</title>
+  <title>独立测评 · 2026-07-06 17:41</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,35 +43,56 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Gemma4 12B QAT外部测评</span>
-                    <span class="source-label">YouTube 博主测评：Gemma 4 12B QAT vs non-QAT - 16GB VRAM Local LLM / note.com / kazu_t</span>
+                    <span class="badge badge-blue">OpenSquilla 0.5.0 Preview多模型登顶</span>
+                    <span class="source-label">小马博客</span>
                   </div>
-                  <h3>Gemma4 12B QAT本地16GB vRAM编程实测</h3>
-                  <p class="synthesis">共识是QAT显著降低本地部署门槛，但仍需按具体编码任务复测。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116862620796089" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>YouTube博主实际在16GB VRAM本地环境下，对Gemma 4 12B QAT与普通版进行了编程质量对比测试，核心关注点就是QAT量化后在代码任务里是否还能维持可用输出。</p><p><strong>改变：</strong>这对只有16GB显存的本地开发者很直接：是否值得换成QAT版，不再只是看参数说明，而是可以参考真实编码场景下的本地可用性对比。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=NeVLMl632OE" target="_blank" rel="noopener noreferrer">YouTube 博主测评：Gemma 4 12B QAT vs non-QAT - 16GB VRAM Local LLM</a></p></div><div class="opinion"><p><strong>观察：</strong>日本作者在Mac上把Gemma 4 12B原版与QAT版放到同条件下做A/B测试后认为，至少在内存、速度和回答质量的综合体验上，QAT版对日常实务几乎是“上位互换”。</p><p><strong>改变：</strong>对本地工作流的真实改变是，团队或个人在不升级硬件的前提下，更有理由优先部署QAT版，把“能不能跑”推进到“能不能长期拿来干活”。</p><p><strong>边界：</strong>作者同时提到仍发现了一个“会让人笑出来的坑”，说明QAT版虽然整体更实用，但并不适合直接无脑替换原版，正式接入前仍需要按自己的任务做回归测试。</p><p class="source">来源：<a href="https://note.com/kazu_t/n/nbd7999e9a9e2" target="_blank" rel="noopener noreferrer">note.com / kazu_t</a></p></div></div>
+                  <h3>OpenSquilla 0.5.0 Preview多模型登顶</h3>
+                  <p class="synthesis">外部观察的核心共识是：多模型路由真正带来的价值是降本，而非单纯榜单表现。</p>
+                  <a class="article-link" href="https://www.qbitai.com/2026/07/443559.html" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>小马博客的上手解读提到，OpenSquilla会先用本地小模型对请求做极速分析，再判断任务是简单还是复杂，并决定是否交给更强的大模型处理。</p><p><strong>改变：</strong>这意味着团队在多步骤 Agent 工作流里，不必把所有请求都丢给高价模型，简单环节可被本地/低成本模型分流，实际能明显压低 token 开销。</p><p><strong>边界：</strong>它更适合任务难度分层明显的流程；一旦工作流本身大多是复杂推理或长链路执行，最终仍要频繁调用 Claude/GPT 这类大模型，成本优势会收窄。</p><p class="source">来源：<a href="https://www.xiaomaw.cn/5688.html" target="_blank" rel="noopener noreferrer">小马博客</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Skills外部测评与工作流影响</span>
-                    <span class="source-label">53AI / 汇智网 | Software 2.0</span>
+                    <span class="badge badge-blue">AnySearch 外部测评</span>
+                    <span class="source-label">CSDN博客《AnySearch Skill 实测：让 Agent 从“会搜索”变成“会调研”》 / 知乎专栏《讲真，22 个垂直领域的 AnySearch 就是 Agent 搜索的答案！》</span>
                   </div>
-                  <h3>Claude技能库开发模式测评与工作流提炼</h3>
-                  <p class="synthesis">共识是Skills的核心价值在于把高频流程沉淀为可复用工作流。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116867804956995" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>53AI的测试场景文章把Claude Skills拆成覆盖“用例设计—缺陷复盘”的8个可复用环节，实际观察是Skills更像把测试流程中的提示词、规范和步骤固化成可重复执行的工作单元。</p><p><strong>改变：</strong>对测试团队的真实改变是，不再每次临时拼Prompt，而是把常见测试任务沉淀成统一入口和标准流程，便于复用、交接与规模化执行。</p><p><strong>边界：</strong>文章同时强调先搞清楚skill是什么、解决哪类痛点非常关键，这意味着如果团队自身流程和规范还没梳理清楚，直接堆Skills未必能提升效率。</p><p class="source">来源：<a href="https://www.53ai.com/news/tishicijiqiao/2026062374869.html" target="_blank" rel="noopener noreferrer">53AI</a></p></div><div class="opinion"><p><strong>观察：</strong>汇智网的开发实作文章展示了把多步骤开发工作流封装成一个Claude技能后，能够连续产出FastAPI后端、React+Vite前端、Tailwind与shadcn UI组件以及相关集成配置，说明Skills已能承载完整脚手架式开发流程。</p><p><strong>改变：</strong>这对开发者的直接价值是，把重复性的项目初始化和技术栈搭建沉淀为可复用技能，减少从零搭环境、补依赖和手写样板代码的时间。</p><p class="source">来源：<a href="https://www.hubwiz.com/blog/create-your-own-claude-skills/" target="_blank" rel="noopener noreferrer">汇智网 | Software 2.0</a></p></div></div>
+                  <h3>AnySearch主打实时结构化搜索服务代理与开发者</h3>
+                  <p class="synthesis">共识是它更像把 Agent 搜索流程产品化。</p>
+                  <a class="article-link" href="https://www.producthunt.com/r/XAHTE3V55ECFBX" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>CSDN 实测作者认为，AnySearch Skill 通过 `SKILL.md` 明确约束了 Agent 的检索流程：结构化问题先 `list_domains`、多子问题用 `batch_search`、摘要不够再 `extract`，比只暴露一个裸搜索工具更容易让 Agent 稳定执行调研任务。</p><p><strong>改变：</strong>这让开发者不必自己从零设计搜索编排，能更低试用成本地把通用搜索、垂直搜索和网页抽取接进 Agent 工作流，直接提升调研型任务的可落地性。</p><p><strong>边界：</strong>作者也指出它并不替代搜索 MCP；如果团队已经重度采用 MCP 作为长期基础设施，AnySearch 更像快速接入方案，而不是唯一底座。</p><p class="source">来源：<a href="https://blog.csdn.net/m0_74191152/article/details/161414910" target="_blank" rel="noopener noreferrer">CSDN博客《AnySearch Skill 实测：让 Agent 从“会搜索”变成“会调研”》</a></p></div><div class="opinion"><p><strong>观察：</strong>知乎作者在把同一问题交给接入 AnySearch 的 Agent 后，观察到系统能在几十秒内完成检索、清洗和整理，并输出带融资金额、API 定价时间线、Reddit 盲测胜率表格的结构化 Markdown 报告。</p><p><strong>改变：</strong>这意味着用户拿到的不再是零散链接，而是可直接进入汇报、竞品分析或研究记录的结构化结果，减少人工汇总和二次整理时间。</p><p><strong>边界：</strong>从片段看，这种优势主要体现在多来源信息整合和结构化输出；若任务只需要一次简单网页搜索，AnySearch 的编排能力未必能体现明显收益。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2046531669839156980" target="_blank" rel="noopener noreferrer">知乎专栏《讲真，22 个垂直领域的 AnySearch 就是 Agent 搜索的答案！》</a></p></div></div>
                 </section>
-                
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>产品经理视角测评</h2>
+              <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Code本地离线替代工作流实测观察</span>
-                    <span class="source-label">MofCloud / 博客园 iTech / 翔宇工作流</span>
+                    <span class="badge badge-purple">Microsoft 365 Copilot转PPT外部体验</span>
+                    <span class="source-label">YouTube博主《用Microsoft365Copilot从零做一份PPT到底有多强？》 / 知乎《Copilot for Microsoft 365手把手使用指南》</span>
                   </div>
-                  <h3>Claude Code本地离线替代工作流实测观察</h3>
-                  <p class="synthesis">共识是本地替代能省钱保密，但稳定性、并发和工作流成熟度仍是硬门槛。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116866429224582" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>MofCloud 的实测判断是：本地 LLM 替代 Claude Code 时，单次回答速度在局域网低并发编码场景下通常还能接受，真正容易出问题的是并发处理、上下文缓存、显存分配和整体稳定性，而不是“能不能生成答案”。</p><p><strong>改变：</strong>这意味着个人开发者或小团队确实可以把“离线本地编码助手”跑起来，用于日常写改代码，但要把它当成长期主力工作流，选型重点应从模型效果转向显卡资源、缓存策略和多任务稳定性。</p><p><strong>边界：</strong>边界是本地方案通常仍比云 API 慢，高并发、多上下文切换和资源紧张时体验更容易塌陷；另外 Claude Code 的优势不只在模型，还在成熟 agent 工作流，本地替代未必能复现同等顺滑度。</p><p class="source">来源：<a href="https://mofcloud.cn/blog/blog/2026-03-12-local-llm-replace-claude-code/" target="_blank" rel="noopener noreferrer">MofCloud</a></p></div><div class="opinion"><p><strong>观察：</strong>博客园对 OpenCode 的上手对比指出：它相较 Claude Code 的直接收益不是“更强”，而是可自由切换 75+ 模型/提供商、本地模型可让代码不出机器，并能按任务选择便宜或昂贵模型，文中给出的经验值是 API 成本可降 60%-70%。</p><p><strong>改变：</strong>对用户和团队的真实改变是，离线或半离线替代工作流更适合把敏感仓库留在本地，同时把简单任务下放给低成本模型，形成“隐私优先+分级用模”的日常编码流程。</p><p><strong>边界：</strong>代价是开箱即用体验、官方技能生态和复杂编码任务表现仍不如 Claude Code 原生组合，适合愿意自己配置路由和模型的人，不适合追求最省心默认体验的团队。</p><p class="source">来源：<a href="https://www.cnblogs.com/itech/p/19918589" target="_blank" rel="noopener noreferrer">博客园 iTech</a></p></div></div>
+                  <h3>Microsoft 365 Copilot转PPT实测</h3>
+                  <p class="synthesis">价值在于把Word快速转成PPT初稿，但输入格式和源文档质量仍是硬约束。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116871680497277" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>YouTube博主实测把一份Word文档交给 Microsoft 365 Copilot 后，系统能用一句提示词直接生成一套完整PPT，并且还能继续按指令补充演讲备注、改版式和迭代内容。</p><p><strong>改变：</strong>这意味着已有Word初稿的用户，不必再从零搭PPT结构，汇报材料可以先由Copilot出首版，再把时间集中在校对和细修上。</p><p><strong>边界：</strong>它更像是把现成文稿快速转成可展示的初版，最终成片质量仍取决于源Word材料是否完整、结构是否清晰。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=uyCakVr4rDs" target="_blank" rel="noopener noreferrer">YouTube博主《用Microsoft365Copilot从零做一份PPT到底有多强？》</a></p></div><div class="opinion"><p><strong>观察：</strong>知乎作者在上手指南中确认，Copilot 已支持把Word文档作为输入继续加工生成新文档/PPT，但当前还不能直接读取PDF来完成同类转换。</p><p><strong>改变：</strong>对团队来说，现有Word材料能直接进入PPT生成流程，减少手工搬运内容；但如果知识库主要沉淀在PDF里，前置整理步骤并不会被省掉。</p><p><strong>边界：</strong>不适合以PDF为核心资料源的工作流，用户仍需先把内容转成Word或PPT等Copilot可读格式。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/684033413" target="_blank" rel="noopener noreferrer">知乎《Copilot for Microsoft 365手把手使用指南》</a></p></div></div>
+                </section>
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>美术视角测评</h2>
+              <div class="role-cards">
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">Tripo AI 3.0外部测评</span>
+                    <span class="source-label">EverAI（抖音实测视频） / Top 3DAI</span>
+                  </div>
+                  <h3>Tripo AI 3.0三维生成工作流更新实测</h3>
+                  <p class="synthesis">外部观点更认可细节和材质进步，但离完整生产级仍需逐项验证。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116823596996322" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测者在上手Tripo 3.0时，重点观察到其生成结果开始强调更细的模型网格与更真实的PBR材质表现，说明新版输出已不只是“能成模”，而是在往可直接使用的细节化结果靠近。</p><p><strong>改变：</strong>这对创作者的真实改变是，做概念验证、素材预览和中低复杂度资产时，可更快得到带材质观感的3D初稿，减少从白模再补基础质感的往返时间。</p><p><strong>边界：</strong>从片段看，这类提升主要体现在“细节更高清、材质更真实”的方向，但没有给出复杂结构、严格生产资产或长链路协作下的稳定性结论。</p><p class="source">来源：<a href="https://www.douyin.com/video/7541006987371318574" target="_blank" rel="noopener noreferrer">EverAI（抖音实测视频）</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇针对Tripo AI v3.0更新的第三方评测，直接用法线贴图视图检查Timothee Chalamet模型的网格细节和表面质量，说明评测重点已从“是否能生成”转向“Ultra与贴图更新后的表面质量是否经得起检查”。</p><p><strong>改变：</strong>这对用户的实际意义是，使用Ultra和AI纹理相关更新时，可以更早通过法线和表面细节判断模型是否值得继续进入贴图、绑定或导出环节，从而减少把明显粗糙资产送入后续流程的成本。</p><p><strong>边界：</strong>但片段没有给出自动绑骨、动画稳定性或不同品类模型的一致性数据，因此更适合视为材质/表面质量层面的参考，而非完整生产就绪证明。</p><p class="source">来源：<a href="https://www.top3d.ai/zh/learn/tripo-december-update" target="_blank" rel="noopener noreferrer">Top 3DAI</a></p></div></div>
                 </section>
                 </div>
             </section>
