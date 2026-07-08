@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-07-06 17:41</title>
+  <title>独立测评 · 2026-07-08 08:47</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,40 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">OpenSquilla 0.5.0 Preview多模型登顶</span>
-                    <span class="source-label">小马博客</span>
+                    <span class="badge badge-blue">Hermes Agent自主网页自动化外部测评</span>
+                    <span class="source-label">知乎专栏《基于Browser Use的Hermes Agent浏览器自动化系统设计与实践》 / CSDN《如何用Hermes Agent实现零代码浏览器自动化：从网页抓取到智能交互》 / 知乎专栏《我花 3 天实测 Hermes Agent：这波热度值不值得跟？》</span>
                   </div>
-                  <h3>OpenSquilla 0.5.0 Preview多模型登顶</h3>
-                  <p class="synthesis">外部观察的核心共识是：多模型路由真正带来的价值是降本，而非单纯榜单表现。</p>
-                  <a class="article-link" href="https://www.qbitai.com/2026/07/443559.html" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>小马博客的上手解读提到，OpenSquilla会先用本地小模型对请求做极速分析，再判断任务是简单还是复杂，并决定是否交给更强的大模型处理。</p><p><strong>改变：</strong>这意味着团队在多步骤 Agent 工作流里，不必把所有请求都丢给高价模型，简单环节可被本地/低成本模型分流，实际能明显压低 token 开销。</p><p><strong>边界：</strong>它更适合任务难度分层明显的流程；一旦工作流本身大多是复杂推理或长链路执行，最终仍要频繁调用 Claude/GPT 这类大模型，成本优势会收窄。</p><p class="source">来源：<a href="https://www.xiaomaw.cn/5688.html" target="_blank" rel="noopener noreferrer">小马博客</a></p></div></div>
+                  <h3>Hermes Agent自主网页自动化功能实测</h3>
+                  <p class="synthesis">共识是能做真网页自动化，但仍偏半自动、且受模型与延迟约束。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116873358283044" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实操用携程订票案例跑通了从用户指令到Agent操作网页、再到人工登录与确认付款的完整流程，说明Hermes Agent确实能承担浏览器自动化中的执行层工作。</p><p><strong>改变：</strong>这让个人开发者或小团队可以把原本需要手写脚本的网页操作改成“指令+Agent执行”的半自动流程，更快验证真实业务自动化。</p><p><strong>边界：</strong>登录、确认付款等高风险环节仍需人工介入，说明它并不适合完全无人值守的交易型流程。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2048140555146760893" target="_blank" rel="noopener noreferrer">知乎专栏《基于Browser Use的Hermes Agent浏览器自动化系统设计与实践》</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方上手文章把Hermes Agent的浏览器自动化描述为可通过简单API完成网页导航、表单填写、数据提取和视觉分析，重点是“无需编写复杂代码”也能完成复杂交互。</p><p><strong>改变：</strong>这实际降低了网页自动化门槛，让不擅长前端脚本或测试框架的用户也能更快搭建抓取、填表和网页交互流程。</p><p class="source">来源：<a href="https://blog.csdn.net/gitblog_00686/article/details/162126283" target="_blank" rel="noopener noreferrer">CSDN《如何用Hermes Agent实现零代码浏览器自动化：从网页抓取到智能交互》</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">AnySearch 外部测评</span>
-                    <span class="source-label">CSDN博客《AnySearch Skill 实测：让 Agent 从“会搜索”变成“会调研”》 / 知乎专栏《讲真，22 个垂直领域的 AnySearch 就是 Agent 搜索的答案！》</span>
+                    <span class="badge badge-blue">GLM-5.2外部测评/上手体验</span>
+                    <span class="source-label">非线智能测评 / Watermelonwater / AIvsly</span>
                   </div>
-                  <h3>AnySearch主打实时结构化搜索服务代理与开发者</h3>
-                  <p class="synthesis">共识是它更像把 Agent 搜索流程产品化。</p>
-                  <a class="article-link" href="https://www.producthunt.com/r/XAHTE3V55ECFBX" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>CSDN 实测作者认为，AnySearch Skill 通过 `SKILL.md` 明确约束了 Agent 的检索流程：结构化问题先 `list_domains`、多子问题用 `batch_search`、摘要不够再 `extract`，比只暴露一个裸搜索工具更容易让 Agent 稳定执行调研任务。</p><p><strong>改变：</strong>这让开发者不必自己从零设计搜索编排，能更低试用成本地把通用搜索、垂直搜索和网页抽取接进 Agent 工作流，直接提升调研型任务的可落地性。</p><p><strong>边界：</strong>作者也指出它并不替代搜索 MCP；如果团队已经重度采用 MCP 作为长期基础设施，AnySearch 更像快速接入方案，而不是唯一底座。</p><p class="source">来源：<a href="https://blog.csdn.net/m0_74191152/article/details/161414910" target="_blank" rel="noopener noreferrer">CSDN博客《AnySearch Skill 实测：让 Agent 从“会搜索”变成“会调研”》</a></p></div><div class="opinion"><p><strong>观察：</strong>知乎作者在把同一问题交给接入 AnySearch 的 Agent 后，观察到系统能在几十秒内完成检索、清洗和整理，并输出带融资金额、API 定价时间线、Reddit 盲测胜率表格的结构化 Markdown 报告。</p><p><strong>改变：</strong>这意味着用户拿到的不再是零散链接，而是可直接进入汇报、竞品分析或研究记录的结构化结果，减少人工汇总和二次整理时间。</p><p><strong>边界：</strong>从片段看，这种优势主要体现在多来源信息整合和结构化输出；若任务只需要一次简单网页搜索，AnySearch 的编排能力未必能体现明显收益。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2046531669839156980" target="_blank" rel="noopener noreferrer">知乎专栏《讲真，22 个垂直领域的 AnySearch 就是 Agent 搜索的答案！》</a></p></div></div>
+                  <h3>GLM-5.2长程任务实测与GPT-5.5复审</h3>
+                  <p class="synthesis">共识是长程任务更稳，分歧主要在延迟与场景适配。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116877669958882" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>非线智能测评在中文场景的八个板块实测中，认为GLM-5.2的长程编码表现更突出，并同时跟踪了准确率、响应时间、token消耗和调用花费。</p><p><strong>改变：</strong>对以中文需求、工具调用和代码任务为主的团队，这意味着选型时不只看榜单分数，还能把质量、速度和成本一起纳入工作流评估。</p><p><strong>边界：</strong>这组评测明显偏重中文综合场景，结论更适合中文业务，不足以直接外推到其他语言或纯英文开发流程。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2051688144400126945" target="_blank" rel="noopener noreferrer">非线智能测评</a></p></div><div class="opinion"><p><strong>观察：</strong>Watermelonwater的深度评测认为，GLM-5.2用1M上下文补齐了长上下文短板，但“思考过久”是最明显槽点。</p><p><strong>改变：</strong>对需要一次塞入大量代码、文档或任务历史的用户，拆分上下文和反复补喂的次数会减少，但交互节奏会被较长等待时间拖慢。</p><p><strong>边界：</strong>不适合追求高频来回修改、低延迟响应的即时协作场景，长思考时间会直接增加使用摩擦。</p><p class="source">来源：<a href="https://watermelonwater.tech/insights/智谱glm52评测长上下文慢热/" target="_blank" rel="noopener noreferrer">Watermelonwater</a></p></div></div>
                 </section>
-                </div>
-            </section>
-            
-            <section class="role-block">
-              <h2>产品经理视角测评</h2>
-              <div class="role-cards">
+                
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-purple">Microsoft 365 Copilot转PPT外部体验</span>
-                    <span class="source-label">YouTube博主《用Microsoft365Copilot从零做一份PPT到底有多强？》 / 知乎《Copilot for Microsoft 365手把手使用指南》</span>
+                    <span class="badge badge-blue">腾讯WorkBuddy接入混元3：外部测评与真实影响</span>
+                    <span class="source-label">腾讯云开发者社区</span>
                   </div>
-                  <h3>Microsoft 365 Copilot转PPT实测</h3>
-                  <p class="synthesis">价值在于把Word快速转成PPT初稿，但输入格式和源文档质量仍是硬约束。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116871680497277" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>YouTube博主实测把一份Word文档交给 Microsoft 365 Copilot 后，系统能用一句提示词直接生成一套完整PPT，并且还能继续按指令补充演讲备注、改版式和迭代内容。</p><p><strong>改变：</strong>这意味着已有Word初稿的用户，不必再从零搭PPT结构，汇报材料可以先由Copilot出首版，再把时间集中在校对和细修上。</p><p><strong>边界：</strong>它更像是把现成文稿快速转成可展示的初版，最终成片质量仍取决于源Word材料是否完整、结构是否清晰。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=uyCakVr4rDs" target="_blank" rel="noopener noreferrer">YouTube博主《用Microsoft365Copilot从零做一份PPT到底有多强？》</a></p></div><div class="opinion"><p><strong>观察：</strong>知乎作者在上手指南中确认，Copilot 已支持把Word文档作为输入继续加工生成新文档/PPT，但当前还不能直接读取PDF来完成同类转换。</p><p><strong>改变：</strong>对团队来说，现有Word材料能直接进入PPT生成流程，减少手工搬运内容；但如果知识库主要沉淀在PDF里，前置整理步骤并不会被省掉。</p><p><strong>边界：</strong>不适合以PDF为核心资料源的工作流，用户仍需先把内容转成Word或PPT等Copilot可读格式。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/684033413" target="_blank" rel="noopener noreferrer">知乎《Copilot for Microsoft 365手把手使用指南》</a></p></div></div>
+                  <h3>腾讯WorkBuddy接入混元 3实测三类办公任务</h3>
+                  <p class="synthesis">共识是降低办公门槛，强项集中在文档与流程自动化。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116879045694939" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>腾讯云开发者社区的实测认为，WorkBuddy接入混元3（Hy3）后，在文章写作精确性、知识库调用、知识图谱/架构图生成和办公文档处理上表现稳定，能覆盖PPT生成、写作和知识整理等办公任务。</p><p><strong>改变：</strong>对知识管理、内容创作和文档处理型用户来说，WorkBuddy+Hy3把多步AI办公任务压缩到一个技能库工作流里，能在活动期内以更低成本完成可交付产物。</p><p><strong>边界：</strong>其“成本更低”的前提依赖Hy3限时免费两周，且材料显示优势主要集中在写作、知识库和文档类场景，不等于所有办公任务都有同样收益。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2704574" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">外部测评 / 上手体验</span>
+                    <span class="source-label">Simon Willison</span>
+                  </div>
+                  <h3>GPT-5.5生成github-code Web Component实验</h3>
+                  <p class="synthesis">现阶段用户价值主要在“抢先试验”，不在稳定落地。</p>
+                  <a class="article-link" href="https://simonwillison.net/2026/Jul/7/github-code-component/#atom-everything" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Simon Willison 实测发现，GPT-5.5 虽然不在官方 OpenAI API 中公开提供，但可以通过被其称为“apparently approved-of Codex API backdoor”的途径调用，并已被他直接用于生成实验性产出。</p><p><strong>改变：</strong>这意味着开发者团队在正式 API 上线前，就可能先把 GPT-5.5 接入到代码生成或前端组件原型流程里，提前验证新模型是否值得纳入工作流。</p><p><strong>边界：</strong>边界是接入路径并非标准公开能力，稳定性、可持续性和团队合规性都存在不确定性，不适合依赖正式支持与长期可维护性的生产场景。</p><p class="source">来源：<a href="https://x.com/simonw/status/2047406457302524397" target="_blank" rel="noopener noreferrer">Simon Willison</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -86,13 +92,24 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">Tripo AI 3.0外部测评</span>
-                    <span class="source-label">EverAI（抖音实测视频） / Top 3DAI</span>
+                    <span class="badge badge-pink">WF47-krea2外部测评</span>
+                    <span class="source-label">ComfyUI 中文社区（Comfyit） / Stable Diffusion Tutorials</span>
                   </div>
-                  <h3>Tripo AI 3.0三维生成工作流更新实测</h3>
-                  <p class="synthesis">外部观点更认可细节和材质进步，但离完整生产级仍需逐项验证。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116823596996322" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测者在上手Tripo 3.0时，重点观察到其生成结果开始强调更细的模型网格与更真实的PBR材质表现，说明新版输出已不只是“能成模”，而是在往可直接使用的细节化结果靠近。</p><p><strong>改变：</strong>这对创作者的真实改变是，做概念验证、素材预览和中低复杂度资产时，可更快得到带材质观感的3D初稿，减少从白模再补基础质感的往返时间。</p><p><strong>边界：</strong>从片段看，这类提升主要体现在“细节更高清、材质更真实”的方向，但没有给出复杂结构、严格生产资产或长链路协作下的稳定性结论。</p><p class="source">来源：<a href="https://www.douyin.com/video/7541006987371318574" target="_blank" rel="noopener noreferrer">EverAI（抖音实测视频）</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇针对Tripo AI v3.0更新的第三方评测，直接用法线贴图视图检查Timothee Chalamet模型的网格细节和表面质量，说明评测重点已从“是否能生成”转向“Ultra与贴图更新后的表面质量是否经得起检查”。</p><p><strong>改变：</strong>这对用户的实际意义是，使用Ultra和AI纹理相关更新时，可以更早通过法线和表面细节判断模型是否值得继续进入贴图、绑定或导出环节，从而减少把明显粗糙资产送入后续流程的成本。</p><p><strong>边界：</strong>但片段没有给出自动绑骨、动画稳定性或不同品类模型的一致性数据，因此更适合视为材质/表面质量层面的参考，而非完整生产就绪证明。</p><p class="source">来源：<a href="https://www.top3d.ai/zh/learn/tripo-december-update" target="_blank" rel="noopener noreferrer">Top 3DAI</a></p></div></div>
+                  <h3>WF47-krea2技术测评聚焦Krea 2工作流</h3>
+                  <p class="synthesis">共识是 Krea 2 更像分阶段工作流，而非单一模型升级。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116879532230700" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>ComfyUI 向测评文把 Krea 2 拆成 Turbo、Raw 和 9 个 LoRA 三部分，明确观察到 Turbo 更适合快速出图，Raw 更适合做细节控制和后续调整。</p><p><strong>改变：</strong>这让用户在同一套 Krea 2 工作流里可以先用 Turbo 提速打样，再切到 Raw 精修，并按题材挂接不同 LoRA，减少反复换模型的成本。</p><p class="source">来源：<a href="https://comfyit.cn/blog/311" target="_blank" rel="noopener noreferrer">ComfyUI 中文社区（Comfyit）</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇上手文给出的实际搭建路径很具体：下载 Krea 2 模型和工作流覆盖本地 models 文件夹、把 ComfyUI 升级到最新、再直接拖入工作流即可使用；人物 LoRA 训练则被简化为“收集素材+自动打标训练”两步。</p><p><strong>改变：</strong>对已经在用 ComfyUI 的个人创作者或小团队来说，Krea 2 不只是能看测评，还是一套可较快落地的安装、出图和角色微调流程。</p><p><strong>边界：</strong>前提是本地 ComfyUI 版本要跟上，并且需要按它的目录和工作流结构配置环境，不适合完全不熟悉 ComfyUI 的纯新手。</p><p class="source">来源：<a href="https://comfyit.cn/blog/314" target="_blank" rel="noopener noreferrer">ComfyUI 中文社区（Comfyit）</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">Gemini3.0+Seedance2.0工作流实测</span>
+                    <span class="source-label">综合搜索片段</span>
+                  </div>
+                  <h3>Gemini3.0+Seedance2.0工作流实测</h3>
+                  <p class="synthesis">null</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116877485476084" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>未找到足够具体的第三方实测结论；现有片段大多只说明比较维度，如画质、工作流、API成本、角色一致性或生产可用性，但没有给出明确观察结果。</p><p><strong>改变：</strong>因此无法可靠判断Gemini3.0+Seedance2.0联动在真实项目里究竟提升了什么，或是否优于单模型方案。</p><p><strong>边界：</strong>这些材料目前更像文章导语或选题摘要，不足以支撑“外部测评/上手体验/真实影响”的信息提炼。</p><p class="source">来源：综合搜索片段</p></div></div>
                 </section>
                 </div>
             </section>
