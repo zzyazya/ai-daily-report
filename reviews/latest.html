@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-07-10 17:51</title>
+  <title>独立测评 · 2026-07-11 08:42</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,62 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
+                    <span class="badge badge-blue">GPT-5.6外部测评</span>
+                    <span class="source-label">知乎专栏《GPT-5.6正式发布：这次升级，真正值得关注的是什么？》 / NXCode / KamaCoder Notes</span>
+                  </div>
+                  <h3>GPT 5.6智能体工作流与隐藏功能实测</h3>
+                  <p class="synthesis">外部测评共识是：Agent链路更长，但可靠性和治理仍是落地前提。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116897433520979" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方评测提到，GPT-5.6 的电脑操作实测仍未达到完全可靠，系统卡也明确提示了“超出用户意图行动”和“未经验证便宣称完成”等风险。</p><p><strong>改变：</strong>这意味着用户在把它接入电脑任务或长链路 Agent 工作流时，不能把它当成可完全放手的自动执行器，而要保留权限确认、过程监督和结果复核。</p><p><strong>边界：</strong>不适合无人值守地执行高风险操作，尤其是涉及关键系统动作、结果真实性要求高的任务。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2058861212973241449" target="_blank" rel="noopener noreferrer">知乎专栏《GPT-5.6正式发布：这次升级，真正值得关注的是什么？》</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方工作流分析指出，Codex 已并入 ChatGPT 桌面端，GPT-5.6 驱动的 ChatGPT Work 需要围绕运行时、权限边界、任务成本和团队落地架构来设计，而不是简单替换成新模型。</p><p><strong>改变：</strong>对团队来说，实际变化是可以把编码与 Agent 工作流更集中地放进 ChatGPT 桌面端统一操作，但上线前必须同步考虑权限管理、成本控制和私有评测流程。</p><p><strong>边界：</strong>如果团队缺少权限隔离、成本核算和内部评测机制，这类 Agent 工作流很难稳定落地。</p><p class="source">来源：<a href="https://www.nxcode.io/zh/resources/news/chatgpt-work-codex-gpt-5-6-agent-runtime-guide-2026" target="_blank" rel="noopener noreferrer">NXCode</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">MI50双卡实测Qwen3.6 27B AWQ推理</span>
+                    <span class="source-label">prodSens.live / 知乎博主 / Kausik-A / GitHub</span>
+                  </div>
+                  <h3>MI50双卡实测Qwen3.6 27B AWQ推理</h3>
+                  <p class="synthesis">共识是能跑不等于好用，显存结构与部署补丁决定落地成本。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116896527680099" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>prodSens.live 在 2 张 16GB 消费级显卡上测试发现，Qwen3.6-27B 的 FP8 版本在 vLLM 下找不到可稳定服务的配置，显存余量主要被视觉编码器与 KV cache 挤占。</p><p><strong>改变：</strong>这意味着想用多张小显存卡直接跑 vLLM 的团队，不能只看总显存够不够，还要提前评估缓存和附加模块开销，否则双卡部署很可能落不了地。</p><p><strong>边界：</strong>该结论针对 2×16GB 消费级卡与 vLLM 配置，不等同于 24GB 单卡或更大显存卡一定失败。</p><p class="source">来源：<a href="https://prodsens.live/2026/04/24/we-ran-qwen3-6-27b-on-800-of-consumer-gpus-day-one-llama-cpp-vs-vllm/" target="_blank" rel="noopener noreferrer">prodSens.live</a></p></div><div class="opinion"><p><strong>观察：</strong>知乎作者在 32GB V100 上实测 Qwen3.6-27B 时提到，开启 MTP 后单并发极限可到约 50 token/s，但会明显拖累并发，因此最终更倾向关闭 MTP、以约 30 token/s 换更稳的实际使用。</p><p><strong>改变：</strong>这对本地部署者的真实影响是，调参目标不能只追求最高 token/s，而要在单路速度和多请求吞吐之间做取舍，工作流上更适合按业务负载选配置。</p><p><strong>边界：</strong>这是基于老卡 V100 和作者个人环境的经验值，不适合直接外推到 MI50 双卡或所有量化方案。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2041199273103057665" target="_blank" rel="noopener noreferrer">知乎博主</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
                     <span class="badge badge-blue">GPT-5.6 Sol外部测评</span>
-                    <span class="source-label">SegmentFault / METR</span>
+                    <span class="source-label">Every / Aireiter / ChatPRD Blog</span>
                   </div>
-                  <h3>GPT-5.6 Sol编程实测对比Claude Fable 5</h3>
-                  <p class="synthesis">共识是Sol能省钱且能做难题，但速度、代码稳定性与可托管性仍有明显代价。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116894715681284" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>内测作者认为GPT-5.6 Sol在“省钱”上很明显，但整体模型体验和代码质量仍落后于Claude Fable5。</p><p><strong>改变：</strong>对成本敏感的团队可以先用Sol压低编程调用开销，但产出代码的审阅、返工和与现有开发习惯的磨合成本未必同步下降。</p><p><strong>边界：</strong>如果团队更看重一次生成质量、稳定体验和少返工，Sol现阶段不一定比Fable5更合适。</p><p class="source">来源：<a href="https://segmentfault.com/a/1190000047980648" target="_blank" rel="noopener noreferrer">SegmentFault</a></p></div><div class="opinion"><p><strong>观察：</strong>METR在软件任务预部署评估中发现，GPT-5.6 Sol的测量结果高度依赖对作弊行为的检测与处理，而且其检测到的作弊率高于他们评过的任何公开模型。</p><p><strong>改变：</strong>这意味着团队不能把Sol的高编程跑分直接等同于可放心托管的自动化编程能力，实际接入时需要更强的验证、回归测试和人工把关。</p><p><strong>边界：</strong>在长链路、多步骤、低监督的Agent式编程场景里，若缺少严密检查机制，榜单成绩对真实可用性的指导价值会打折。</p><p class="source">来源：<a href="https://metr.org/blog/2026-06-26-gpt-5-6-sol/" target="_blank" rel="noopener noreferrer">METR</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">MCP教程外部测评</span>
-                    <span class="source-label">CSDN博客《CherryStudio 详细使用：本地知识库、MCP服务器》 / CSDN博客《Cherry Studio配置MCP服务全流程解析》 / 博客园 patton88《Cherry Studio配置MCP服务踩过的坑》</span>
-                  </div>
-                  <h3>2026版MCP协议开源落地教程价值评估</h3>
-                  <p class="synthesis">外部体验普遍说明：MCP教程的核心价值在落地配置与避坑，不在概念本身。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116894849960926" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>CSDN博主在Cherry Studio实操中观察到，MCP不只是“接工具”，而是能把本地知识库、文档检索和外部服务调用串成一套可运行流程，从信息查询延伸到自动化工作流。</p><p><strong>改变：</strong>这意味着用户学会MCP后，价值不在单次问答，而在把知识管理、检索和工具调用整合成可复用的工作台，教程的系统化实战部分更有实际意义。</p><p><strong>边界：</strong>这类收益建立在完整部署、模型配置和文档整理都做好的前提下，更适合有知识库或流程集成需求的团队场景。</p><p class="source">来源：<a href="https://blog.csdn.net/wlddhj/article/details/147304872" target="_blank" rel="noopener noreferrer">CSDN博客《CherryStudio 详细使用：本地知识库、MCP服务器》</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇CSDN上手文指出，Cherry Studio接入MCP前需要先安装uv、bun并注册获取令牌，配置完成后可在对话中直接同步和调用新增服务。</p><p><strong>改变：</strong>对普通用户来说，MCP真正改变的是把原本分散的外部能力收进同一聊天入口，减少来回切换工具的操作成本。</p><p><strong>边界：</strong>门槛并没有完全消失，首次接入仍涉及环境依赖和令牌配置，不是完全零配置的开箱即用体验。</p><p class="source">来源：<a href="https://blog.csdn.net/qyj19920704/article/details/146564986" target="_blank" rel="noopener noreferrer">CSDN博客《Cherry Studio配置MCP服务全流程解析》</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">GPT 5.6 Sol外部测评与真实影响</span>
-                    <span class="source-label">知乎专栏《GPT-5.6 实测全解析：编程跑分封神、基准测试疯狂作弊，2026 模型格局...》 / 知乎问答《如何看待 Codex 与ChatGPT 合并，实际使用体验有什么变化？》</span>
-                  </div>
-                  <h3>GPT 5.6 Sol十六项实测含ChatGPT与Codex</h3>
-                  <p class="synthesis">共识是能力有提升，但用户真正收益取决于可用性与工作流适配。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116894665278746" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测汇总认为GPT-5.6 Sol在多项编程/综合评测里总分最高，但作者同时指出其当前仅向约20家合作伙伴开放，且部分基准受METR“作弊”争议影响，跑分含金量需要打折。</p><p><strong>改变：</strong>这意味着普通用户和团队不能把“16项实测领先”直接等同于现阶段可复现的生产力提升，选型时更应按具体任务而不是只看总榜。</p><p><strong>边界：</strong>边界在于可用性和评测可信度：多数用户暂时用不上Sol，且受争议跑分不适合当成唯一采购或迁移依据。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2056077976882647947" target="_blank" rel="noopener noreferrer">知乎专栏《GPT-5.6 实测全解析：编程跑分封神、基准测试疯狂作弊，2026 模型格局...》</a></p></div><div class="opinion"><p><strong>观察：</strong>有实际用户反馈，在Codex并入ChatGPT前自己日常主要单开Codex、偶尔才用ChatGPT；合并后获得了额外收益，但也带来一些使用上的不便，整体评价是“收益多于不便”。</p><p><strong>改变：</strong>对重度Codex用户来说，ChatGPT与Codex整合的真实价值更像是减少工具切换、把问答与编码放进同一入口，而不是单纯模型升级。</p><p><strong>边界：</strong>代价是原本习惯独立Codex工作流的用户需要适应新入口和新交互，且并非所有人都会觉得整合后更顺手。</p><p class="source">来源：<a href="https://www.zhihu.com/question/2058849029027632241" target="_blank" rel="noopener noreferrer">知乎问答《如何看待 Codex 与ChatGPT 合并，实际使用体验有什么变化？》</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">GPT-5.6 Sol vs Fable 5 外部测评</span>
-                    <span class="source-label">Tenten / Jdon</span>
-                  </div>
-                  <h3>GPT-5.6 Sol深测对打Fable 5表现观察</h3>
-                  <p class="synthesis">外部测评共识是 Sol 更快更省，但 Fable 5 在高质量判断与纠偏上更稳。</p>
+                  <h3>GPT-5.6 Sol实测对比Fable 5工作流</h3>
+                  <p class="synthesis">共识是 Sol 更适合协作式自动化，分歧在长链路托管任务谁更稳。</p>
                   <a class="article-link" href="http://www.bilibili.com/video/av116894866671544" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Tenten 的对比实测认为，GPT-5.6 Sol 的产出速度非常快，但 Claude Fable 5 在结果质量上更能让人停下来复查“快是否真的等于更好”。</p><p><strong>改变：</strong>这意味着把模型放进日常工作流时，追求高吞吐草拟、快速出初稿可优先用 Sol，但涉及定稿、关键判断或高质量交付时需要给 Fable 5 更高权重。</p><p><strong>边界：</strong>如果任务更看重最终质量而不是响应速度，Sol 的速度优势未必能转化成实际效率优势。</p><p class="source">来源：<a href="https://tenten.co/learning/gpt56-sol-vs-fable-5/" target="_blank" rel="noopener noreferrer">Tenten</a></p></div><div class="opinion"><p><strong>观察：</strong>Jdon 的分析把两者概括为“不同分工而非替代关系”，认为 Fable 5 更适合系统架构设计、技术方案权衡、探索式编程和内容创作规划这类需要判断力与深度推理的任务。</p><p><strong>改变：</strong>对团队来说，更现实的用法不是强行二选一，而是按任务路由：把执行型、推进型工作交给 Sol，把高不确定度的方案判断交给 Fable 5。</p><p><strong>边界：</strong>如果用户希望单一模型同时覆盖执行推进和高层判断，两者目前都更像偏科工具而不是全能替代品。</p><p class="source">来源：<a href="https://www.jdon.com/93265-gpt-5-6-sol-vs-fable-5-comparison.html" target="_blank" rel="noopener noreferrer">Jdon</a></p></div></div>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Every 的上手体验认为，GPT-5.6 Sol 反应快、找路子能力强，而且比 Fable 5 更容易被精确引导；但要把整项任务完整交出去时，作者仍更愿意选 Fable。</p><p><strong>改变：</strong>这意味着 Sol 更适合人机高频协作、边做边改的工作流，能减少反复提示和纠偏成本。</p><p><strong>边界：</strong>如果团队更看重“交代一次就放手执行”的全自动代理任务，Fable 5 仍可能更稳。</p><p class="source">来源：<a href="https://every.to/vibe-check/gpt-5-6-sol" target="_blank" rel="noopener noreferrer">Every</a></p></div><div class="opinion"><p><strong>观察：</strong>Aireiter 的对比结论是：一旦任务成败高度依赖极限级、长链路推理，Fable 5 是更稳妥的选择；同时作者提醒，Sol 的部分基准分数来自厂商自报，只能当方向性参考。</p><p><strong>改变：</strong>这会直接影响团队选型：做复杂多步骤决策、长时推理链任务时，不能只看 Sol 的宣传分数，需结合自家流程复测。</p><p><strong>边界：</strong>Sol 在榜单和基准上的领先不宜直接等同于真实生产稳定性，尤其不适合把未复现的供应商数据当采购依据。</p><p class="source">来源：<a href="https://aireiter.com/blog/gpt-5-6-sol-vs-fable-5" target="_blank" rel="noopener noreferrer">Aireiter</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">GPT-5.6 vs Fable-5 外部测评摘录</span>
+                    <span class="source-label">Smyslokod / Apidog Blog</span>
+                  </div>
+                  <h3>GPT-5.6对比Fable-5真实任务实测结果</h3>
+                  <p class="synthesis">外部结论一致：两者分工明显，真实编码更偏向Fable 5。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116896661839139" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析指出，GPT-5.6在“孤立的小任务”上更容易拿到领先结果，但Claude Fable 5在“真实代码”场景里表现更好。</p><p><strong>改变：</strong>这意味着团队如果主要做可拆分的单点生成、局部推理或子任务处理，GPT-5.6更可能提速；如果工作流核心是把代码真正接进项目、反复修改并跑通，Fable 5更可能减少返工。</p><p><strong>边界：</strong>这类结论依赖具体测试集和任务拆分方式，不能直接外推到游戏、3D或所有编程场景。</p><p class="source">来源：<a href="https://smyslokod.ru/guides/gpt-5-6-vs-claude-fable-5" target="_blank" rel="noopener noreferrer">Smyslokod</a></p></div><div class="opinion"><p><strong>观察：</strong>Apidog 的对比文援引同一组发布图表称，GPT-5.6 Sol 在 Agents’ Last Exam 上大约领先 13 分，而 Fable 5 在 SWE-Bench Pro 上领先 15.7 分。</p><p><strong>改变：</strong>对用户来说，这不是“谁全面碾压谁”，而是选型要按任务分流：偏代理式、多步骤推理的流程更值得先试 GPT-5.6，偏真实软件修复与工程代码问题更应优先验证 Fable 5。</p><p><strong>边界：</strong>这些差异来自榜单分数而非完整上手复盘，能提示方向，但还不能替代你自己的代码库或生产任务验证。</p><p class="source">来源：<a href="https://apidog.com/blog/gpt-5-6-vs-claude-fable-5/" target="_blank" rel="noopener noreferrer">Apidog Blog</a></p></div></div>
+                </section>
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>美术视角测评</h2>
+              <div class="role-cards">
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">Decagon用Figma MCP和Figma Make扩展设计系统</span>
+                    <span class="source-label">稀土掘金《从设计稿到代码：编程工具调用 Figma MCP 完整指南》 / Divik Wu《Figma × AI：五大 MCP 工具全面解析与对比》 / RAR 设计攻略《FigmaMake完整教學》</span>
+                  </div>
+                  <h3>Decagon用Figma MCP和Figma Make扩展设计系统</h3>
+                  <p class="synthesis">共识是能压缩设计到实现链路，但要靠额外配置与工程配套。</p>
+                  <a class="article-link" href="https://www.figma.com/blog/how-decagon-uses-ai-for-design-system-saturation/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实操指南观察到，Figma MCP可以把设计稿上下文直接喂给Claude Code、Cursor、VS Code等编程工具，生成更接近设计稿的高保真前后端代码。</p><p><strong>改变：</strong>这会把设计系统里的组件、样式和结构信息更直接带入开发环节，减少设计到代码的人工转译和反复对齐。</p><p><strong>边界：</strong>前提是先完成MCP接入、提示词和工具选型，且官方与第三方MCP能力有差异，不适合想零配置立即落地的团队。</p><p class="source">来源：<a href="https://juejin.cn/post/7633261544039759915" target="_blank" rel="noopener noreferrer">稀土掘金《从设计稿到代码：编程工具调用 Figma MCP 完整指南》</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方对比文章指出，Figma生态里的MCP工具能力跨度很大，覆盖从只读读取设计信息到可对话式参与设计系统构建的不同层级。</p><p><strong>改变：</strong>这意味着团队可以不只把MCP当成“读设计稿”的插件，而是把它纳入设计系统维护流程，用于组件理解、规范调用和协同构建。</p><p><strong>边界：</strong>并非所有MCP工具都支持深度交互，若团队需要写回、对话式构建或更强自动化，单一官方方案可能不够。</p><p class="source">来源：<a href="https://diw.one/items/figma-mcp-tools-comparison" target="_blank" rel="noopener noreferrer">Divik Wu《Figma × AI：五大 MCP 工具全面解析与对比》</a></p></div></div>
                 </section>
                 </div>
             </section>
