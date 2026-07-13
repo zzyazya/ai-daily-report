@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-07-13 08:37</title>
+  <title>独立测评 · 2026-07-13 17:51</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验 / 对用户真实影响</span>
-                    <span class="source-label">Vellum</span>
+                    <span class="badge badge-blue">OpenAI Codex Plugin CC代码审查实测</span>
+                    <span class="source-label">Jimo Studio / CSDN博主 yetingyun</span>
                   </div>
-                  <h3>生产级AI Agent迁移至GPT-5.6提速降本</h3>
-                  <p class="synthesis">外部观点偏向认可其 agent 能力增强，但收益主要取决于具体工作流类型。</p>
-                  <a class="article-link" href="https://ploy.ai/blog/migrating-a-production-ai-agent-to-gpt-5-6" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Vellum 的第三方基准解读指出，GPT-5.6 的高配版本 Sol 在 Terminal-Bench、BrowseComp、OSWorld、Agents&#x27; Last Exam 和网络安全等多项 agent 相关测试中领先，说明它在多步执行、工具调用和复杂任务完成率上更强。</p><p><strong>改变：</strong>这意味着把生产级 AI Agent 迁到 GPT-5.6 时，团队更可能在真实工作流里获得更高的任务成功率，并有机会把原本需要多轮修正或人工兜底的步骤压缩掉，从而对应到更快的完成速度和更低的总体调用成本。</p><p><strong>边界：</strong>该文同时强调“frontier is split”，即不同子型号和不同对手各有强项，因此收益更可能集中在复杂 agent 工作流，不代表所有低复杂度或纯问答场景都会同样提速降本。</p><p class="source">来源：<a href="https://www.vellum.ai/blog/gpt-5-6-benchmarks-explained" target="_blank" rel="noopener noreferrer">Vellum</a></p></div></div>
+                  <h3>OpenAI Codex Plugin CC代码审查实测</h3>
+                  <p class="synthesis">共识是更省切换成本，但离自动化审查闭环还有距离。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116910586994619" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方作者实测认为，`codex-plugin-cc`把原先“Claude Code 规划→切到别的 IDE/工具生成或审查→再粘回”的来回切换，压缩成在 Claude Code 单窗口内完成。</p><p><strong>改变：</strong>对个人开发者和小团队来说，代码审查/修 Bug 的上下文不中断，减少了复制粘贴和工具切换带来的操作损耗。</p><p><strong>边界：</strong>材料片段没有给出审查准确率、复杂项目稳定性或多人协作场景下的效果数据。</p><p class="source">来源：<a href="https://jimo.studio/blog/openai-codex-plugin-integrated-into-claude-code-practical-benefits-and-considerations/" target="_blank" rel="noopener noreferrer">Jimo Studio</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方作者指出，`codex-plugin-cc` 当前审查流程是一次性的：Claude Code 写代码后执行 `/codex:review` 拿到结果，但后续仍需用户手动修复，且没有自动进入下一步闭环。</p><p><strong>改变：</strong>这意味着它更像“补充一个审查意见层”，能帮助发现问题，但还不能替代可连续流转的自动化 review gate 或自愈式修复流程。</p><p><strong>边界：</strong>作者还提到其 gate 质量和成熟方案相比存在已知缺陷，因此在高要求审查门禁、稳定 CI 审核场景下不一定合适。</p><p class="source">来源：<a href="https://yetingyun.blog.csdn.net/article/details/161168128" target="_blank" rel="noopener noreferrer">CSDN博主 yetingyun</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Code代码检索取舍解析</span>
-                    <span class="source-label">火山引擎开发者社区 / 人人都是产品经理</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验</span>
+                    <span class="source-label">AiCC</span>
                   </div>
-                  <h3>Claude Code代码检索取舍解析</h3>
-                  <p class="synthesis">共识是全仓理解更强，但前提是代码库上下文足够清晰。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116906291955196" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>火山引擎转载的六周深度体验提到，Claude Code在Puzzmo这类单一代码库、主流技术栈项目里表现特别好，能基于较清晰的仓库上下文推进任务，甚至把游戏原型开发从数周压到几小时。</p><p><strong>改变：</strong>这意味着对代码检索来说，若采用更像智能体式的全仓搜索与分步理解，团队在中小型、结构清晰的代码库里会更快完成跨文件定位、方案探索和原型实现，而不只是命中若干相似片段。</p><p><strong>边界：</strong>它的效果明显依赖代码库上下文是否清晰、技术栈是否常见、任务是否偏CRUD；实验代码变多时，还要额外控制生产代码质量。</p><p class="source">来源：<a href="https://developer.volcengine.com/articles/7540134328853135401" target="_blank" rel="noopener noreferrer">火山引擎开发者社区</a></p></div><div class="opinion"><p><strong>观察：</strong>《人人都是产品经理》的第三方测评认为，Claude Code的核心差异不是补全几行代码，而是能理解整个代码库并自主规划多步骤任务。</p><p><strong>改变：</strong>对用户的真实影响是，代码检索不再只是RAG式“找相关片段”，而更像先搜索、再判断、再继续追踪依赖关系的工作流，适合处理跨文件修改和复杂排查。</p><p><strong>边界：</strong>这类能力更适合认真开发和多步骤任务场景；如果只需要轻量补全或单文件改动，智能体式搜索的额外开销未必划算。</p><p class="source">来源：<a href="https://www.woshipm.com/ai/6364108.html" target="_blank" rel="noopener noreferrer">人人都是产品经理</a></p></div></div>
+                  <h3>Agent长记忆方案与上下文存储原理拆解</h3>
+                  <p class="synthesis">共识是长记忆靠外化存储与压缩，不靠单纯加长窗口。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116911643821178" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析指出，单纯把上下文窗口拉长并不能解决Agent长记忆问题，信息一旦塞得过多过杂，推理质量反而会下降；HermesAgent因此用固定的12段压缩模板保留目标、约束、已完成操作、当前状态和待办等关键信息。</p><p><strong>改变：</strong>这意味着团队做长流程Agent时，重点要从“堆更多上下文”转向“结构化摘要与状态压缩”，否则长对话越跑越容易偏题、忘事或决策变形。</p><p><strong>边界：</strong>这种压缩方案依赖稳定的摘要结构，适合长期任务续航，但不等于保留全部细节；在需要完整原始上下文的场景里仍有信息损失风险。</p><p class="source">来源：<a href="https://aicc.pro/news/ai-the-innate-abnormality-of-pit-recognition-window" target="_blank" rel="noopener noreferrer">AiCC</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Code与OpenCode提示前开销对比</span>
-                    <span class="source-label">Logicity / Daniele Blog</span>
+                    <span class="badge badge-blue">Osaurus外部测评</span>
+                    <span class="source-label">IC Workshop / WeFound / AI What Happen</span>
                   </div>
-                  <h3>Claude Code与OpenCode提示前开销对比</h3>
-                  <p class="synthesis">分歧不在有无开销，而在高开销是否换来可接受的护栏与工具能力。</p>
-                  <a class="article-link" href="https://systima.ai/blog/claude-code-vs-opencode-token-overhead" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Logicity的对比文章称，在同样的一行任务发给模型前，Claude Code会先注入约33000 tokens的系统提示、工具定义和脚手架，而OpenCode约7000 tokens，前置开销接近5倍。</p><p><strong>改变：</strong>这会直接抬高短请求和高频交互的单次成本，并更快吞掉上下文窗口，让个人开发者或团队在做小任务、快速试错和批量调用时更容易感到“还没开始干活就先付了很多token”。</p><p><strong>边界：</strong>这类对比主要衡量提示前开销，不等于最终任务质量差异；如果团队更看重更强的护栏、工具编排或稳定性，较高开销未必就是坏事。</p><p class="source">来源：<a href="https://logicity.in/en/blog/claude-code-vs-opencode-33k-tokens-of-overhead-vs-7k" target="_blank" rel="noopener noreferrer">Logicity</a></p></div><div class="opinion"><p><strong>观察：</strong>Daniele对一次“极小请求”的拆解指出，Claude Code和OpenCode的长提示里，真正占大头的并不只是system prompt，工具定义体积大约是system prompt的3倍，所谓“overhead”很大部分来自可调用工具与护栏设计。</p><p><strong>改变：</strong>这意味着用户体感到的额外token消耗，本质上和代理能做多少事、带多少工具强相关；对团队来说，若想降成本，精简工具目录往往比单纯缩短提示词更有效。</p><p><strong>边界：</strong>该分析基于trivial request的解剖，不能直接外推到复杂编码任务；在需要丰富工具链、严格约束或更强自动化的场景里，这些额外tokens可能换来更稳的执行流程。</p><p class="source">来源：<a href="https://c-daniele.github.io/en/posts/2026-05-18-coding-harness-comparison/" target="_blank" rel="noopener noreferrer">Daniele Blog</a></p></div></div>
+                  <h3>Osaurus开源代理100%本地运行Mac</h3>
+                  <p class="synthesis">共识是它提升了Mac端本地与云端AI协同效率，但明显偏向Apple生态与折腾型用户。</p>
+                  <a class="article-link" href="https://www.producthunt.com/r/QOYR327FKDOKAZ" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析认为，Osaurus最特别的不是接入更多模型，而是把本地模型、云端模型、文件、工具和工作流统一收进一个 macOS 入口，定位更像 AI 控制层而非单一模型客户端。</p><p><strong>改变：</strong>对 Mac 用户而言，原本分散在不同 App 和 API 间的调用被收敛到一个入口里，切换模型与调用本地资源的路径更短，适合把 AI 直接嵌入日常桌面工作流。</p><p><strong>边界：</strong>它明显只服务 Apple 生态，价值建立在你本来就主要在 Mac 上工作；跨平台团队或非 macOS 用户基本吃不到这层整合红利。</p><p class="source">来源：<a href="https://www.ic.work/article/osaurus-local-cloud-ai-control-layer-for-mac" target="_blank" rel="noopener noreferrer">IC Workshop</a></p></div><div class="opinion"><p><strong>观察：</strong>WeFound 的上手信息显示，Osaurus作为 MIT 开源项目，主体用 Swift 构建，安装方式已简化到可直接下载 DMG 或通过 Homebrew 安装，门槛更接近普通 Mac 应用而非手搓本地 AI 环境。</p><p><strong>改变：</strong>这意味着愿意尝试本地 AI 的 Mac 用户，不必先搭复杂运行环境就能开始用，更适合个人开发者和小团队先低成本试跑本地 Agent 工作台。</p><p><strong>边界：</strong>文章也明确点出它更适合“愿意折腾本地AI”的 Mac 用户，说明它并非面向零配置、零调试诉求的大众场景。</p><p class="source">来源：<a href="https://wefound.cc/p/2876.html" target="_blank" rel="noopener noreferrer">WeFound</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Claude Code桌面版内置浏览器外部观察</span>
-                    <span class="source-label">ip.net.coffee</span>
+                    <span class="badge badge-blue">Cursor续杯外部体验</span>
+                    <span class="source-label">知乎专栏</span>
                   </div>
-                  <h3>Claude Code桌面版内置浏览器实测</h3>
-                  <p class="synthesis">共识是减少切窗，但替代完整浏览器仍证据不足。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116909597006509" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方文章指出，Claude Code桌面版已接入内置浏览器，AI可在应用内直接读取网页内容并执行点击按钮等基础网页交互。</p><p><strong>改变：</strong>对开发者的直接变化是把“看文档/开网页/点操作”并回到Claude协作的流程收拢到同一桌面界面里，减少频繁切到独立Chrome窗口。</p><p><strong>边界：</strong>片段只证明了基础网页读取与点击能力，未给出复杂登录、跨站调试、稳定性或性能对比，因此更适合轻量查阅和简单操作，不足以替代完整浏览器工作流。</p><p class="source">来源：<a href="https://ip.net.coffee/claude/news/20260712a.html" target="_blank" rel="noopener noreferrer">ip.net.coffee</a></p></div></div>
+                  <h3>实测靠谱的Cursor续杯工作流分享</h3>
+                  <p class="synthesis">外部体验共识是：价值在省去手工续杯，但代价是依赖付费第三方工具。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116911392232652" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎文章实测把“Cursor续杯”做成按时长付费的客户端工具，核心体验是自动轮换账号，并明确提到可在Windows/macOS上长期使用。</p><p><strong>改变：</strong>对高频依赖Cursor的个人开发者来说，真实改变是把手动换号、反复处理试用到期的动作收敛成可自动化的续杯流程，减少中断。</p><p><strong>边界：</strong>它本质上是付费的第三方方案，还需要安装客户端并依赖其售后/教程支持，更适合愿意为省事付费的人，不适合只想用官方订阅或不想引入外部工具的团队。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2055590588926399632" target="_blank" rel="noopener noreferrer">知乎专栏</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -92,46 +92,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">Seedream 5.0 Pro外部测评</span>
-                    <span class="source-label">JXPT / WeShop AI Blog / AI GPT Image</span>
+                    <span class="badge badge-pink">外部测评提炼</span>
+                    <span class="source-label">综合给定材料判断</span>
                   </div>
-                  <h3>Seedream 5.0 Pro全场景可用性对比实测</h3>
-                  <p class="synthesis">外部测评共识是：它最实用的提升在可控编辑、版面含字能力与更接近商用成片。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116906208010126" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>JXP 的评测将 Seedream 5.0 Pro 的核心体验概括为 grounded editing、图层分离和多语言文字生成，说明它不只是出图模型，而是在编辑可控性和版面内容生成上有明显提升。</p><p><strong>改变：</strong>这会直接改变设计与内容团队的工作流：从“反复重抽整张图”转向“先生成、再局部改、再按图层落地”，更适合海报、广告图和带文字素材的生产。</p><p class="source">来源：<a href="https://www.jxp.com/blog/seedream-5-0-pro-review" target="_blank" rel="noopener noreferrer">JXPT</a></p></div><div class="opinion"><p><strong>观察：</strong>WeShop AI 的早期测试认为，相比更早期模型常见的平、淡人像观感，Seedream 5.0 Pro 往往能给画面带来更明确的视觉情绪和氛围。</p><p><strong>改变：</strong>对用户来说，这意味着在人像、电商氛围图和品牌视觉草图中，达到“可用审美水位”的概率更高，后期再做风格补救的时间可能减少。</p><p class="source">来源：<a href="https://www.weshop.ai/blog/seedream-5-0-pro-review-what-early-tests-reveal/" target="_blank" rel="noopener noreferrer">WeShop AI Blog</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">RTX 4060本地图片/视频生成外部测评</span>
-                    <span class="source-label">タンス / Knight Li / 火山引擎 ADG 社区</span>
-                  </div>
-                  <h3>RTX 4060本地图片视频生成工作流演示</h3>
-                  <p class="synthesis">共识是 4060 能跑通本地生成，但强依赖模型规模与显存约束。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116908439379301" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>日本博主实测认为，RTX 4060 的 8GB 显存在本地用 PyTorch + Stable Diffusion 跑通图片生成是可行的，说明这张相对容易入手的显卡能完成基础本地出图。</p><p><strong>改变：</strong>对个人用户和小团队来说，这意味着不必上更高端显卡，也能先把本地文生图/图生图工作流搭起来，用较低硬件门槛验证需求和流程。</p><p><strong>边界：</strong>作者明确把结果当作“参考值”，且场景限定在 8GB 显存的本地图片生成，可行不等于适合更大模型或更重负载。</p><p class="source">来源：<a href="https://tansunohazama.sakura.ne.jp/wordpress/ローカルllmで画像生成（rtx4060使用）/" target="_blank" rel="noopener noreferrer">タンス</a></p></div><div class="opinion"><p><strong>观察：</strong>一篇面向本地 AI 的第三方指南指出，Laptop RTX 4060 8GB 确实能用于本地图像生成，但是否好用高度取决于模型选择。</p><p><strong>改变：</strong>这会直接改变用户的选型和工作流：4060 用户不能默认“什么都能跑”，而要优先选更适合 8GB 显存的模型、分辨率和参数配置。</p><p><strong>边界：</strong>8GB 显存就是主要边界，不适合对大模型、长流程或高显存占用任务没有约束的使用场景。</p><p class="source">来源：<a href="https://knightli.com/en/2026/05/08/laptop-rtx-4060-8gb-local-ai-models/" target="_blank" rel="noopener noreferrer">Knight Li</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">LTX2.3-10Eros 外部测评摘录</span>
-                    <span class="source-label">aiaicreate</span>
-                  </div>
-                  <h3>LTX2.3-10Eros v1.4 FP8三流程实测</h3>
-                  <p class="synthesis">现有第三方体验更认可其稳定性，但横评证据仍偏少。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116905469812040" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>aiaicreate 在 ComfyUI 实操中提到，虽然样本量还不够做严格横评，但就现有结果看，LTX2.3-10Eros 的生成一致性和复现性比 Sulphur 更好，且更容易产出干净的 2D 视频效果。</p><p><strong>改变：</strong>这意味着用户在图生视频和带音频视频工作流里，重复尝试和参数回滚的成本可能更低，更适合需要稳定出片的个人创作者或小团队。</p><p><strong>边界：</strong>作者明确指出目前只有单一样本，和 Sulphur 的优势判断还不能视为严格结论，因此不适合拿来当全面基准或复杂场景下的定量对比。</p><p class="source">来源：<a href="https://aiaicreate.com/comfyui-ltx23-10eros/" target="_blank" rel="noopener noreferrer">aiaicreate</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">外部测评</span>
-                    <span class="source-label">EvoLink</span>
-                  </div>
-                  <h3>Seedream 5.0 Pro对比GPT-image 2实测</h3>
-                  <p class="synthesis">现有片段缺少可用实测细节，无法支持有效外部结论。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116907080423996" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>EvoLink的对比文章标题明确将Seedream 5系列与GPTImage放在同一评测框架中，但给出的片段只显示其统一API接入与模型聚合信息，没有呈现任何关于5组同提示词下画质、一致性、速度或可控性的具体实测观察。</p><p><strong>改变：</strong>这意味着用户当前无法仅凭该片段判断Seedream 5.0 Pro相对GPT-image 2在真实出图工作流里会带来什么提升或退步。</p><p><strong>边界：</strong>该来源片段更像平台导流与模型聚合介绍，不足以作为第三方上手体验或基准结论。</p><p class="source">来源：<a href="https://evolink.ai/zh/blog/seedream-5-vs-nano-banana-pro-vs-gpt-image" target="_blank" rel="noopener noreferrer">EvoLink</a></p></div></div>
+                  <h3>新版zit模型与Stable_Yogi对比实测解析</h3>
+                  <p class="synthesis">给定材料不足以形成可信外部测评结论</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116906358998906" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>未找到足够具体且直接围绕新版zit模型、Stable_Yogi与Zimage Turbo写实表现对比的第三方实测观察；现有材料多为模型页归档、部署教程或泛化工作流说明。</p><p><strong>改变：</strong>这意味着无法从现有外部片段中可靠提炼出对用户选型、团队工作流或真实画质差异有证据支撑的结论。</p><p><strong>边界：</strong>模型卡/聚合页/泛化教程不满足第三方上手测评要求，继续输出会混入宣传性信息或主观推断。</p><p class="source">来源：综合给定材料判断</p></div></div>
                 </section>
                 </div>
             </section>
