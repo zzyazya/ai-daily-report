@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-07-13 17:51</title>
+  <title>独立测评 · 2026-07-14 08:45</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">OpenAI Codex Plugin CC代码审查实测</span>
-                    <span class="source-label">Jimo Studio / CSDN博主 yetingyun</span>
+                    <span class="badge badge-blue">Grok 4.5 外部测评</span>
+                    <span class="source-label">Writingmate</span>
                   </div>
-                  <h3>OpenAI Codex Plugin CC代码审查实测</h3>
-                  <p class="synthesis">共识是更省切换成本，但离自动化审查闭环还有距离。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116910586994619" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方作者实测认为，`codex-plugin-cc`把原先“Claude Code 规划→切到别的 IDE/工具生成或审查→再粘回”的来回切换，压缩成在 Claude Code 单窗口内完成。</p><p><strong>改变：</strong>对个人开发者和小团队来说，代码审查/修 Bug 的上下文不中断，减少了复制粘贴和工具切换带来的操作损耗。</p><p><strong>边界：</strong>材料片段没有给出审查准确率、复杂项目稳定性或多人协作场景下的效果数据。</p><p class="source">来源：<a href="https://jimo.studio/blog/openai-codex-plugin-integrated-into-claude-code-practical-benefits-and-considerations/" target="_blank" rel="noopener noreferrer">Jimo Studio</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方作者指出，`codex-plugin-cc` 当前审查流程是一次性的：Claude Code 写代码后执行 `/codex:review` 拿到结果，但后续仍需用户手动修复，且没有自动进入下一步闭环。</p><p><strong>改变：</strong>这意味着它更像“补充一个审查意见层”，能帮助发现问题，但还不能替代可连续流转的自动化 review gate 或自愈式修复流程。</p><p><strong>边界：</strong>作者还提到其 gate 质量和成熟方案相比存在已知缺陷，因此在高要求审查门禁、稳定 CI 审核场景下不一定合适。</p><p class="source">来源：<a href="https://yetingyun.blog.csdn.net/article/details/161168128" target="_blank" rel="noopener noreferrer">CSDN博主 yetingyun</a></p></div></div>
+                  <h3>Grok 4.5低价编程与代理能力深度实测</h3>
+                  <p class="synthesis">外部观察更认可其低成本代理编码价值，而非全面通用领先。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116911929170594" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Writingmate 的测试文章认为，Grok 4.5 更适合多轮保持一致性的编程代理任务，尤其是需要连续完成“规划、改补丁、再测试”的多步编码流程。</p><p><strong>改变：</strong>这意味着对做自动修复、代码代理串联和长回合工具调用的团队来说，它更像是一个可压低 token 成本的执行模型，适合放进持续跑任务的 agent 工作流里。</p><p><strong>边界：</strong>文章同时把适用面收得很窄，重点放在显式参数 schema 的工具调用和成本敏感型 agent loop，说明它并不是面向通用场景的全面升级，也不适合据此推断其在泛聊天或非代理任务上的优势。</p><p class="source">来源：<a href="https://writingmate.ai/blog/grok-45-writingmate-release-2026" target="_blank" rel="noopener noreferrer">Writingmate</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">外部测评/上手体验</span>
+                    <span class="source-label">wolf-ll&#x27;s blog / lieyouren.cn</span>
+                  </div>
+                  <h3>VideoAgent风格多智能体视频编辑系统实战</h3>
+                  <p class="synthesis">外部观点共识是：VideoAgent式流程先提升理解与找片效率，而非直接替代剪辑决策。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/07/13/building-a-videoagent-style-multi-agent-system-intent-parsing-graph-planning-and-tool-routing-for-video-editing-tasks/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>博主 wolf-ll 汇总论文结果称，VideoAgent 在长视频理解基准上明显优于基线：NExT-QA 平均提升 6.6%，EgoSchema 平均提升 26.0%，并缩小了开源方案与 Gemini 1.5 Pro 等私有模型的差距。</p><p><strong>改变：</strong>这意味着把 VideoAgent 式多智能体链路接入视频编辑前处理时，团队更有机会用开源方案完成长视频内容定位、问答检索和片段筛选，减少对闭源大模型的依赖。</p><p><strong>边界：</strong>这篇材料给出的证据主要是长视频理解榜单成绩，未展示真实剪辑项目中的速度、成本和最终成片质量。</p><p class="source">来源：<a href="https://wolf-ll.github.io/2025/11/01/videoagent/" target="_blank" rel="noopener noreferrer">wolf-ll&#x27;s blog</a></p></div><div class="opinion"><p><strong>观察：</strong>lieyouren 的第三方解读指出，VideoAgent 能按片段分析视频、记住对象和人物，并根据问题反查相关片段，说明其强项是跨长视频的内容记忆与检索。</p><p><strong>改变：</strong>对做教程复现或多智能体视频编辑流水线的用户来说，这会直接改善“先理解内容、再找素材、再下编辑指令”的工作流，减少人工通看和手动打点。</p><p><strong>边界：</strong>材料描述的能力集中在视频理解与片段检索，没有证明它已能独立完成审美导向的镜头取舍或复杂剪辑决策。</p><p class="source">来源：<a href="https://www.lieyouren.cn/75128.html" target="_blank" rel="noopener noreferrer">lieyouren.cn</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
                     <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">AiCC</span>
+                    <span class="source-label">掘金｜ClaudeCode如何配置本地Ollama模型或别的模型</span>
                   </div>
-                  <h3>Agent长记忆方案与上下文存储原理拆解</h3>
-                  <p class="synthesis">共识是长记忆靠外化存储与压缩，不靠单纯加长窗口。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116911643821178" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析指出，单纯把上下文窗口拉长并不能解决Agent长记忆问题，信息一旦塞得过多过杂，推理质量反而会下降；HermesAgent因此用固定的12段压缩模板保留目标、约束、已完成操作、当前状态和待办等关键信息。</p><p><strong>改变：</strong>这意味着团队做长流程Agent时，重点要从“堆更多上下文”转向“结构化摘要与状态压缩”，否则长对话越跑越容易偏题、忘事或决策变形。</p><p><strong>边界：</strong>这种压缩方案依赖稳定的摘要结构，适合长期任务续航，但不等于保留全部细节；在需要完整原始上下文的场景里仍有信息损失风险。</p><p class="source">来源：<a href="https://aicc.pro/news/ai-the-innate-abnormality-of-pit-recognition-window" target="_blank" rel="noopener noreferrer">AiCC</a></p></div></div>
+                  <h3>Claude Code与Codex接入LLM Gateway降本实测</h3>
+                  <p class="synthesis">外部上手共识是：网关改接能省钱，但会增加配置复杂度。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116913623534931" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方上手文章确认，ClaudeCode 可通过 ClaudeCodeRouter 接到 Ollama 本地模型或 DeepSeek 云端模型运行，说明把 CLI 经由 Gateway 改接非原生模型是可落地的实际配置方案。</p><p><strong>改变：</strong>对个人开发者和团队来说，这意味着 Claude Code 这类 Coding Agent 不必被单一模型供应商绑定，可以把部分编码任务切到本地或更便宜的后端，以直接压低日常调用成本。</p><p><strong>边界：</strong>代价是要额外维护 Router/Gateway 链路，并确保服务端状态正常运行，适合愿意折腾代理配置的人，不适合追求开箱即用的场景。</p><p class="source">来源：<a href="https://juejin.cn/post/7655279037151051785" target="_blank" rel="noopener noreferrer">掘金｜ClaudeCode如何配置本地Ollama模型或别的模型</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Osaurus外部测评</span>
-                    <span class="source-label">IC Workshop / WeFound / AI What Happen</span>
+                    <span class="badge badge-blue">Opus 4.5外部测评</span>
+                    <span class="source-label">SonarSource / GitHub - Claude_Code_skills</span>
                   </div>
-                  <h3>Osaurus开源代理100%本地运行Mac</h3>
-                  <p class="synthesis">共识是它提升了Mac端本地与云端AI协同效率，但明显偏向Apple生态与折腾型用户。</p>
-                  <a class="article-link" href="https://www.producthunt.com/r/QOYR327FKDOKAZ" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析认为，Osaurus最特别的不是接入更多模型，而是把本地模型、云端模型、文件、工具和工作流统一收进一个 macOS 入口，定位更像 AI 控制层而非单一模型客户端。</p><p><strong>改变：</strong>对 Mac 用户而言，原本分散在不同 App 和 API 间的调用被收敛到一个入口里，切换模型与调用本地资源的路径更短，适合把 AI 直接嵌入日常桌面工作流。</p><p><strong>边界：</strong>它明显只服务 Apple 生态，价值建立在你本来就主要在 Mac 上工作；跨平台团队或非 macOS 用户基本吃不到这层整合红利。</p><p class="source">来源：<a href="https://www.ic.work/article/osaurus-local-cloud-ai-control-layer-for-mac" target="_blank" rel="noopener noreferrer">IC Workshop</a></p></div><div class="opinion"><p><strong>观察：</strong>WeFound 的上手信息显示，Osaurus作为 MIT 开源项目，主体用 Swift 构建，安装方式已简化到可直接下载 DMG 或通过 Homebrew 安装，门槛更接近普通 Mac 应用而非手搓本地 AI 环境。</p><p><strong>改变：</strong>这意味着愿意尝试本地 AI 的 Mac 用户，不必先搭复杂运行环境就能开始用，更适合个人开发者和小团队先低成本试跑本地 Agent 工作台。</p><p><strong>边界：</strong>文章也明确点出它更适合“愿意折腾本地AI”的 Mac 用户，说明它并非面向零配置、零调试诉求的大众场景。</p><p class="source">来源：<a href="https://wefound.cc/p/2876.html" target="_blank" rel="noopener noreferrer">WeFound</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">Cursor续杯外部体验</span>
-                    <span class="source-label">知乎专栏</span>
-                  </div>
-                  <h3>实测靠谱的Cursor续杯工作流分享</h3>
-                  <p class="synthesis">外部体验共识是：价值在省去手工续杯，但代价是依赖付费第三方工具。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116911392232652" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎文章实测把“Cursor续杯”做成按时长付费的客户端工具，核心体验是自动轮换账号，并明确提到可在Windows/macOS上长期使用。</p><p><strong>改变：</strong>对高频依赖Cursor的个人开发者来说，真实改变是把手动换号、反复处理试用到期的动作收敛成可自动化的续杯流程，减少中断。</p><p><strong>边界：</strong>它本质上是付费的第三方方案，还需要安装客户端并依赖其售后/教程支持，更适合愿意为省事付费的人，不适合只想用官方订阅或不想引入外部工具的团队。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2055590588926399632" target="_blank" rel="noopener noreferrer">知乎专栏</a></p></div></div>
+                  <h3>Datasette代码频率图观察Opus 4.5影响</h3>
+                  <p class="synthesis">共识是能力强，但产出冗长且仍需人类强约束。</p>
+                  <a class="article-link" href="https://simonwillison.net/2026/Jul/13/datasette-code-frequency/#atom-everything" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>SonarSource 的基准分析提到，Opus 4.5 Thinking 在功能通过率上领先，达到 83.62%，但同时为完成测试生成了 639,465 行代码，输出明显偏冗长。</p><p><strong>改变：</strong>这意味着用户或团队在用它处理复杂开发任务时，可能更容易拿到能跑通的结果，但随之而来的是更高的审查、清理和维护成本，代码产出未必等于有效产能。</p><p><strong>边界：</strong>它的代价是代码体量巨大、可读性和后续治理压力上升，因此不适合对简洁实现、审阅效率或仓库噪音敏感的工作流。</p><p class="source">来源：<a href="https://www.sonarsource.com/blog/new-data-on-code-quality-gpt-5-2-high-opus-4-5-gemini-3-and-more/" target="_blank" rel="noopener noreferrer">SonarSource</a></p></div><div class="opinion"><p><strong>观察：</strong>一份第三方 Claude Code 迁移经验文档指出，Opus 4.5 在代码任务中可能过于保守，存在还没充分读取相关文件就先给出修复方案的倾向。</p><p><strong>改变：</strong>对真实开发流程的影响是，团队如果直接采纳它的首轮建议，容易增加来回补充上下文和返工次数，因此更适合放进“先强制读代码、再提方案”的约束式工作流中。</p><p><strong>边界：</strong>这种行为边界在于，它不适合缺少明确上下文约束的代码库修复场景，尤其不适合需要先全面理解多文件依赖关系的问题。</p><p class="source">来源：<a href="https://github.com/bagherhosseini/Claude_Code_skills/blob/main/skills/claude-opus-4-5-migration/skills/claude-opus-4-5-migration/SKILL.md" target="_blank" rel="noopener noreferrer">GitHub - Claude_Code_skills</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -92,13 +92,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">外部测评提炼</span>
-                    <span class="source-label">综合给定材料判断</span>
+                    <span class="badge badge-pink">外部测评</span>
+                    <span class="source-label">QQ新闻转载测评</span>
                   </div>
-                  <h3>新版zit模型与Stable_Yogi对比实测解析</h3>
-                  <p class="synthesis">给定材料不足以形成可信外部测评结论</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116906358998906" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>未找到足够具体且直接围绕新版zit模型、Stable_Yogi与Zimage Turbo写实表现对比的第三方实测观察；现有材料多为模型页归档、部署教程或泛化工作流说明。</p><p><strong>改变：</strong>这意味着无法从现有外部片段中可靠提炼出对用户选型、团队工作流或真实画质差异有证据支撑的结论。</p><p><strong>边界：</strong>模型卡/聚合页/泛化教程不满足第三方上手测评要求，继续输出会混入宣传性信息或主观推断。</p><p class="source">来源：综合给定材料判断</p></div></div>
+                  <h3>即梦Seedream5.0对比NanoBanana Pro编辑实测</h3>
+                  <p class="synthesis">外部体验更强调一体化工作流提效，全面胜负仍缺量化实测。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116912029699565" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测作者提到，Seedream 5.0 让原本需要切去别的平台处理的首尾帧/多人换位类生成与编辑，能够在同一平台内完成，说明它在复杂视频配图衔接场景里的一体化能力更强。</p><p><strong>改变：</strong>这会直接减少创作者在多平台来回导图、改词和对齐画面的步骤，尤其对要快速做多人换位图、镜头衔接图和短视频素材的人，工作流更短、试错成本更低。</p><p><strong>边界：</strong>片段没有给出它相对 Nano Banana Pro 在画质稳定性、速度或成本上的量化胜负，因此更适合作为流程效率参考，不足以下结论说它全面更强。</p><p class="source">来源：<a href="https://news.qq.com/rain/a/20260210A04T3200" target="_blank" rel="noopener noreferrer">QQ新闻转载测评</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">Topaz Proteus 4K HDR外部测评提炼</span>
+                    <span class="source-label">搜索结果片段集合</span>
+                  </div>
+                  <h3>Topaz视频模型Proteus等4K HDR工作流指南</h3>
+                  <p class="synthesis">现有外部片段不足以形成可信测评结论。</p>
+                  <a class="article-link" href="https://ghost.oxen.ai/the-ultimate-guide-to-topaz-upscaling-video-models-proteus-starlight-wonder-and-hyperion/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>未找到足够具体、可验证的第三方实测观察；现有片段多为视频标题、目录式摘要或故障修复指引，缺少对Proteus等模型在4K HDR流程中的实际画质、一致性、速度或参数取舍结论。</p><p><strong>改变：</strong>这意味着无法可靠提炼出对剪辑、修复或HDR后期团队有直接参考价值的外部上手经验。</p><p><strong>边界：</strong>材料不足，且部分结果更接近聚合介绍或问题排查，不满足“直接相关外部测评/工作流分析”的筛选标准。</p><p class="source">来源：搜索结果片段集合</p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">外部测评</span>
+                    <span class="source-label">Mr.Iancu（X）</span>
+                  </div>
+                  <h3>Seedream 5 Pro对比GPT-Image 2图片生成实测</h3>
+                  <p class="synthesis">共识是两者强项不在同一类构图取向。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116912902116620" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>X 博主 Mr.Iancu 在相同提示词、三种题材对比中观察到：GPT-Image 2 更容易给出主体突出的“干净英雄照”，而 Seedream 5 Pro 更倾向于生成元素更满、带群像与光束氛围的戏剧化画面。</p><p><strong>改变：</strong>这意味着用户在做封面图、角色主视觉或需要主体清晰的商用图时，GPT-Image 2 可能更省二次挑图时间；而做概念海报、氛围图或需要场面感的创作时，Seedream 5 Pro 可能更容易一步到位。</p><p><strong>边界：</strong>这类差异更像两者默认构图取向不同，不代表某一方全面更强；如果你的任务要求“既要主体干净又要场景丰富”，仍可能需要反复改提示词或后期筛选。</p><p class="source">来源：<a href="https://x.com/Iancu_ai/status/2074903826050564294" target="_blank" rel="noopener noreferrer">Mr.Iancu（X）</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">GPT-Image-2角色一致性外部观察</span>
+                    <span class="source-label">图叮AI</span>
+                  </div>
+                  <h3>GPT-Image-2角色一致性实测与工作流判断</h3>
+                  <p class="synthesis">用户价值在可复用流程，而非一次性神图。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116864566954136" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>图叮AI在服装鞋包电商实测中提到，GPTImage2把多张参考图组合后能做到“相对稳定”，并且可拆成模特上身、SKU等4类常见场景分别配置参考图与提示词。</p><p><strong>改变：</strong>这意味着电商团队可以把角色/模特一致性从一次性碰运气，改成按场景复用的出图流程，并能预估单张生成所需时间。</p><p><strong>边界：</strong>它的稳定性建立在“参考图怎么搭、prompt怎么写”这些前置流程上，更适合有固定素材和标准化需求的商业出图，不是随意喂图就能稳定复现。</p><p class="source">来源：<a href="https://tudingai.cn/blog/202604/gpt-image-2-fashion-model-tryon-workflow/" target="_blank" rel="noopener noreferrer">图叮AI</a></p></div></div>
                 </section>
                 </div>
             </section>
