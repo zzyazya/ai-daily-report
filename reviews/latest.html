@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-07-17 08:49</title>
+  <title>独立测评 · 2026-07-18 08:41</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,78 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Patter SDK餐厅订位语音Agent指南</span>
-                    <span class="source-label">Remio</span>
+                    <span class="badge badge-blue">Kimi K3 外部测评提炼</span>
+                    <span class="source-label">Artificial Analysis / 知乎专栏 / LINUX DO</span>
                   </div>
-                  <h3>Patter SDK餐厅订位语音Agent指南</h3>
-                  <p class="synthesis">共识是其价值在运营可控性，不只在对话效果。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/07/16/patter-sdk-guide-to-building-a-restaurant-booking-phone-agent-with-dynamic-variables-guardrails-latency-dashboards-and-eval-checks/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Remio观察到，Patter SDK这套“餐厅订位电话智能体”演示的重点不在对话像不像真人，而在于把动态变量、工具调用、输出护栏、脚本化模拟、延迟监控和回归检查六个运营层做成可复用工作流。</p><p><strong>改变：</strong>这对团队的真实改变是，做语音订位Agent时可以更早按“可上线运营”而不是“单次Demo”来搭系统，把测试、监控和异常约束直接纳入开发流程。</p><p><strong>边界：</strong>这类方案的代价是流程和控制面更复杂，适合需要稳定运营、回归验证的电话场景，不适合只想快速验证一句话语音能力的轻量原型。</p><p class="source">来源：<a href="https://www.remio.ai/zh/post/patter-sdk-餐厅预订电话智能体：真正的考验是运营控制" target="_blank" rel="noopener noreferrer">Remio</a></p></div></div>
+                  <h3>Kimi K3实测对比Fable 5与GPT 5.6</h3>
+                  <p class="synthesis">外部观点较一致：K3 已逼近一线，但接入方式与成本会决定它是否真能替代现有主力模型。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116935199039461" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Artificial Analysis 的第三方基准给 Kimi K3 打出 57 分，认为其智能水平已接近 Opus 4.8 和 GPT-5.5，但整体仍落后于 Fable 5 与 GPT-5.6 Sol。</p><p><strong>改变：</strong>对要做模型选型的团队来说，这意味着 K3 已进入一线候选，但如果目标是追求顶格推理上限或直接替代 Fable 5 / GPT-5.6，预期仍要保守。</p><p><strong>边界：</strong>这类结论主要反映综合能力上限，不直接回答具体长上下文、Agent 编程或浏览器任务里的稳定性与成本表现。</p><p class="source">来源：<a href="https://artificialanalysis.ai/articles/kimi-k3-achieves-3-in-the-artificial-analysis-intelligence-index-comparable-to-opus-4-8-and-gpt-5-5" target="_blank" rel="noopener noreferrer">Artificial Analysis</a></p></div><div class="opinion"><p><strong>观察：</strong>知乎评测作者指出，把 Kimi K3 直接切进一个已由 Claude Code 或 Codex 跑了很久的 Agent 会话里，很容易“测错”，因为 K3 依赖完整历史思考，而很多 Agent 框架不会原样回传这些上下文。</p><p><strong>改变：</strong>这会直接改变团队的评测和接入方式：不能把 K3 当成可无缝热切换的补位模型，做仓库级编程或长流程任务时需要重建上下文或重新设计会话管理。</p><p><strong>边界：</strong>如果现有 Agent 框架会裁剪、摘要化或隐藏历史推理，K3 的实际表现可能明显低于它在干净新会话里的能力上限。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2061553448546460137" target="_blank" rel="noopener noreferrer">知乎专栏</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Kimi K3外部测评提炼</span>
+                    <span class="source-label">llm-token.cn / 知乎专栏</span>
+                  </div>
+                  <h3>Kimi K3在Claude Code编程实测引热议</h3>
+                  <p class="synthesis">共识是K3可接入Claude Code提效，但实测结论强依赖评测工作流设计。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116934511239163" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>一位K3内测开发者公开复盘称，自己把Kimi K3接入Claude Code后，在约12小时内把一个商用收银ERP推进到阶段性里程碑，覆盖库存、菜单、员工鉴权、支付、退款、优惠券、会员卡和微信收银等模块，且项目代码规模据称已超过50万行。</p><p><strong>改变：</strong>这说明对已有Claude Code工作流的团队来说，Kimi K3至少能在大体量业务系统里承担较强的功能推进与多模块联动开发，缩短从需求到可运行原型的时间。</p><p><strong>边界：</strong>材料同时强调这只是“阶段性里程碑”复盘，不等于系统已完整交付或证明模型能稳定替代资深工程师完成长期维护。</p><p class="source">来源：<a href="https://llm-token.cn/blog/kimi-k3-12-hour-erp-case-study-zh" target="_blank" rel="noopener noreferrer">llm-token.cn</a></p></div><div class="opinion"><p><strong>观察：</strong>有第三方分析文章指出，若Claude Code或Codex已经连续工作两小时、读过仓库并跑过测试，再在原会话中直接切到Kimi K3，得到的结果很容易把K3“测错”，因为它继承了前序模型整理过的上下文与约束。</p><p><strong>改变：</strong>这直接影响用户和团队的选型方法：评估Kimi K3在Claude Code里的真实水平时，必须控制会话起点与上下文继承，否则实测成绩会被现成工作记忆抬高。</p><p><strong>边界：</strong>这种观察更多说明工作流设计会显著干扰结论，而不是单独证明Kimi K3在冷启动、陌生仓库或全流程独立完成任务时同样表现。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2061553448546460137" target="_blank" rel="noopener noreferrer">知乎专栏</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">Kimi K3 / CLI外部体验</span>
+                    <span class="source-label">Digital Applied</span>
+                  </div>
+                  <h3>Kimi K3与Kimi CLI goals系统实战拆解</h3>
+                  <p class="synthesis">外部体验重点落在部署门槛低，而非能力上限。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116935182262000" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方上手文指出，KimiCode CLI 以单一二进制分发、无需依赖 Node.js，并同时提供 curl、Homebrew、PowerShell 和 npm 多种安装方式。</p><p><strong>改变：</strong>这直接降低了团队接入 Kimi K3 编码工作流的环境配置成本，尤其适合需要快速在 macOS、Linux、Windows 间统一部署 CLI 的开发场景。</p><p class="source">来源：<a href="https://www.digitalapplied.com/blog/kimi-code-k3-hands-on-setup-plans-cache-2026" target="_blank" rel="noopener noreferrer">Digital Applied</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
                     <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">数位时代 BusinessNext / 中华网财经</span>
+                    <span class="source-label">CSDN《【万字长文】LangGraph Agent记忆持久化完全指南：4种方案对比与实战》</span>
                   </div>
-                  <h3>GPT-5.6驱动ChatGPT桌面版四入口实测</h3>
-                  <p class="synthesis">共识是桌面版更像一体化工作台，但入口分工也提高了学习成本。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116929226409896" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>《数位时代》观察到，ChatGPT 桌面版里同一项 Sites 能从 Work 或 Codex 两个入口发起，而网页端则主要经由 Work 使用，说明桌面端把原本分散的生成与代理能力收拢到一个应用内。</p><p><strong>改变：</strong>对重度用户和团队来说，桌面端可直接在 Chat、Work、Codex 间切换并启动同类任务，减少在网页、独立代理工具之间来回跳转的成本，工作流更偏向“一个客户端内完成”。</p><p><strong>边界：</strong>这种整合更适合持续使用桌面端的知识工作流程；若团队本来以浏览器协作为主，桌面端双入口带来的效率提升有限。</p><p class="source">来源：<a href="https://www.bnext.com.tw/article/91491/chatgpt-work-chat-codex-guide" target="_blank" rel="noopener noreferrer">数位时代 BusinessNext</a></p></div><div class="opinion"><p><strong>观察：</strong>中华网援引第三方拆解指出，Work 与 Codex 的区别主要落在任务场景、工具环境和交付方式，而不是简单对应不同模型版本；新版桌面端把 Codex 放回 ChatGPT 后，入口分工比过去更明确。</p><p><strong>改变：</strong>这意味着用户在桌面版里选入口时，核心不再是“挑哪个模型”，而是按任务类型选“对话/知识工作/代码代理”，团队培训和分工也更容易围绕具体场景建立。</p><p><strong>边界：</strong>代价是入口变多后，轻度用户需要先理解 Work 与 Codex 的职责边界；如果只是一次性提问或轻量写作，新增分工反而增加选择成本。</p><p class="source">来源：<a href="https://finance.china.com/TMT/13004688/20260713/49605345.html" target="_blank" rel="noopener noreferrer">中华网财经</a></p></div></div>
+                  <h3>MongoDB Atlas、Voyage与LangGraph场馆Agent实战</h3>
+                  <p class="synthesis">共识是MongoDB能让Agent记忆真正可持续，但复杂度高于轻量方案。</p>
+                  <a class="article-link" href="https://www.marktechpost.com/2026/07/17/build-an-agentic-event-venue-operator-with-mongodb-atlas-voyage-and-langgraph/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>CSDN作者在对比LangGraph四种记忆持久化方案后认为，MongoDB持久化的核心优势不只是“能存下来”，而是能提供比内存方案更强的查询能力，适合把Agent记忆做成可检索、可扩展的长期状态。</p><p><strong>改变：</strong>这意味着团队如果按新闻里的MongoDB Atlas+LangGraph路线落地，Agent可以从一次性会话玩具升级为可跨会话延续上下文、支撑业务查询与后续工作流编排的工具。</p><p><strong>边界：</strong>作者同时给出场景边界：MemorySaver更适合开发测试，Redis更偏生产环境首选，因此MongoDB方案并非所有场景的最低成本选择，若只需要轻量缓存或极简部署会显得偏重。</p><p class="source">来源：<a href="https://blog.csdn.net/m0_59162248/article/details/153966474" target="_blank" rel="noopener noreferrer">CSDN《【万字长文】LangGraph Agent记忆持久化完全指南：4种方案对比与实战》</a></p></div></div>
                 </section>
-                
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>产品经理视角测评</h2>
+              <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Hermes Agent外部测评</span>
-                    <span class="source-label">知乎《Hermes Agent 记忆架构：一座“记忆工厂”》 / 知乎《万字保姆级教程：Hermes+Kimi K2.6 打造7x24h Agent军团》 / openEuler 社区《Hermes Agent 上手体验：多 Agent、多 Gateway、多账号 OAuth，确实有点不一样》</span>
+                    <span class="badge badge-purple">外部测评 / 上手体验</span>
+                    <span class="source-label">AIEII / CSDN博客 / DigiCrusader</span>
                   </div>
-                  <h3>Hermes Agent实战讲解Memory与多Agent</h3>
-                  <p class="synthesis">共识是 Hermes 真正提升的是长会话稳定性与多角色协作复用。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116930954463034" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方作者拆解 Hermes 的记忆机制后发现，system prompt 会作为 session 级缓存优先复用，哪怕 memory 文件更新了，运行中也可能先读 session DB 里的旧前缀而不是实时重拼。</p><p><strong>改变：</strong>这意味着用户在一次会话里能获得更稳定、更省 token 的连续体验，尤其适合依赖长上下文和 prefix cache 的持续任务。</p><p><strong>边界：</strong>代价是记忆更新不会立刻体现在当前 session，中途修改 memory 后的即时性较差，不适合要求“改完立刻生效”的调试场景。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2030343735909816031" target="_blank" rel="noopener noreferrer">知乎《Hermes Agent 记忆架构：一座“记忆工厂”》</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方上手文章提到，Hermes 在修复问题后会主动把经验沉淀成 skill，并在多 Agent 流程里通过共享上下文、workspace 和 gateway 让下游 Agent 直接接续上一环结果。</p><p><strong>改变：</strong>对团队工作流的真实改变是，重复故障和重复步骤可以逐步被固化复用，多 Agent 交接不再完全靠人工复制粘贴上下文。</p><p><strong>边界：</strong>这种协同依赖每个 Agent 都能正确理解并输出结构化结果，一旦上游上下文传递不清或格式不稳，后续链路就容易出错。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2030032217070637725" target="_blank" rel="noopener noreferrer">知乎《万字保姆级教程：Hermes+Kimi K2.6 打造7x24h Agent军团》</a></p></div></div>
+                  <h3>实测ChatGPT Work等三大AI工作助手</h3>
+                  <p class="synthesis">共识是AI助手开始接流程活，但稳定性和人工兜底仍是门槛。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116937967274524" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>AIEII 连续三周把 ChatGPT Work 放进真实办公流后，记录到它在邮件分诊、季度报告这类连续性知识工作里，确实能独立接住一部分完整任务，但仍有“三个还搞不定的坑”。</p><p><strong>改变：</strong>对个人和团队来说，它不再只是聊天辅助，而是能先替人吃掉一段完整流程，减少从收集材料到初稿产出的手工切换。</p><p><strong>边界：</strong>作者明确强调仍有一些环节必须人工兜底，说明它更适合半自动协作，不适合完全无人值守地交付高要求工作。</p><p class="source">来源：<a href="https://aieii.com/posts/2026-07-06-chatgpt-work-hands-on/" target="_blank" rel="noopener noreferrer">AIEII</a></p></div><div class="opinion"><p><strong>观察：</strong>CSDN 的拆解认为，ChatGPT Work 相比普通 ChatGPT 的核心变化，不是模型答得更强，而是把文件、任务、代码、浏览器操作和多步骤工作流放进同一个工作空间。</p><p><strong>改变：</strong>这意味着用户从“逐轮提问”转向“交付一个任务包”，程序员和办公用户都能少做跨工具搬运与上下文重述。</p><p><strong>边界：</strong>材料里没有给出明确性能上限，但也侧面说明它的价值高度依赖你的工作本身是否需要跨文件、跨应用、多步骤协同。</p><p class="source">来源：<a href="https://blog.csdn.net/iamchb/article/details/162749809" target="_blank" rel="noopener noreferrer">CSDN博客</a></p></div></div>
                 </section>
-                
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>美术视角测评</h2>
+              <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">ChatGPT Work模式外部测评</span>
-                    <span class="source-label">人人都是产品经理 / RAR 设计攻略</span>
+                    <span class="badge badge-pink">Krea2、Boogu、Z-image外部测评摘录</span>
+                    <span class="source-label">知乎《Z-Image真正对手来了！ComfyUI Krea2快测》 / Pixaroma《ComfyUI INT8 Performance Boost! Boogu, Krea2 &amp; Z-Image (Ep25)》</span>
                   </div>
-                  <h3>ChatGPT Work模式本地文件与定时任务教程</h3>
-                  <p class="synthesis">共识是它更像项目执行代理，而非普通聊天机器人。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116928018384617" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>人人都是产品经理的分析提到，ChatGPT Work处理的不是一次性问答，而是会跨应用、跨文件收集资料，再整理成文档、表格、幻灯片或网页应用，并可在复杂项目上持续工作数小时。</p><p><strong>改变：</strong>这意味着用户在处理本地文件和多来源材料时，可以把原本分散在多个工具里的搜集、归纳、成稿流程交给同一个工作代理连续完成，减少手工搬运与反复提示。</p><p><strong>边界：</strong>文中同时强调它聚焦的是通用业务与创意协作场景，因此更适合项目型知识工作，不是所有轻量即时问答场景都需要启用这类长流程模式。</p><p class="source">来源：<a href="https://www.woshipm.com/ai/6428077.html" target="_blank" rel="noopener noreferrer">人人都是产品经理</a></p></div><div class="opinion"><p><strong>观察：</strong>RAR设计攻略将ChatGPT Work概括为“你描述一个结果，它负责研究、分析、规划、产出”，认为它已经从聊天窗口进入完整工作流程。</p><p><strong>改变：</strong>对用户的真实改变是交互重心从“逐步教AI做事”转向“先定义交付结果”，更接近把它当可执行任务的数字协作者，而不只是对话助手。</p><p class="source">来源：<a href="https://rar.design/posts/chatgpt-work-gpt-5-6-guide" target="_blank" rel="noopener noreferrer">RAR 设计攻略</a></p></div></div>
+                  <h3>Krea2与Boogu及Z-image开源生图模型对比</h3>
+                  <p class="synthesis">共识是Krea2画质已接近一线，但中文文本和许可证仍是落地边界。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116936188960420" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方在 ComfyUI 用相同提示词快测后认为，Krea2 的电影感光影和细节表现已经能正面对打 Z-Image，但中文与密集文字渲染仍明显偏弱。</p><p><strong>改变：</strong>这意味着用户如果主要做写实、人像、氛围图，可以把 Krea2 纳入本地生图主力候选；但做海报、包装字样、中文排版时仍要优先考虑别的模型或后期补字。</p><p><strong>边界：</strong>不适合直接承担中文文字和密集排版生成，相关场景仍需要额外修图或换模型。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2052815571356487875" target="_blank" rel="noopener noreferrer">知乎《Z-Image真正对手来了！ComfyUI Krea2快测》</a></p></div><div class="opinion"><p><strong>观察：</strong>Pixaroma 的 ComfyUI 实测把 Boogu、Krea2、Z-Image 放到 INT8 工作流里对比，结论是能在保持较好画质的同时明显提升生成速度并降低显存占用。</p><p><strong>改变：</strong>这直接改变了本地部署门槛：中端显卡用户和小团队更容易同时试跑三款模型，把对比从“能不能跑”变成“哪款更适合文生图、图生图和局部重绘”。</p><p><strong>边界：</strong>许可条件并不一致，Z-Image Turbo 与 Boogu Turbo 是 Apache-2.0，而 Krea 2 Turbo 受社区许可证约束，部署到应用时还要处理署名与内容过滤要求。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=Mjbl-ll-OSo" target="_blank" rel="noopener noreferrer">Pixaroma《ComfyUI INT8 Performance Boost! Boogu, Krea2 &amp; Z-Image (Ep25)》</a></p></div></div>
                 </section>
                 </div>
             </section>
