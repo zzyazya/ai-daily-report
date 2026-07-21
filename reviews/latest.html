@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-07-20 17:55</title>
+  <title>独立测评 · 2026-07-21 08:47</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,73 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">GPT-5.6 Sol外部测评</span>
-                    <span class="source-label">destiny94752130 / GitHub Gist</span>
+                    <span class="badge badge-blue">Cursor代码评审外部测评</span>
+                    <span class="source-label">菠萝 AI</span>
                   </div>
-                  <h3>GPT-5.6 Sol AI Agent连续2.5小时实测</h3>
-                  <p class="synthesis">外部体验聚焦其更适合长流程Agent底座。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116950936059940" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方开发者在实际试用后认为，GPT-5.6 Sol更像是专门给 coding agent 准备的“干活型底座”，强调的是持续执行任务时的可用性而不只是单轮问答效果。</p><p><strong>改变：</strong>这意味着对正在搭建编码代理或长流程自动化的团队来说，Sol更适合作为首轮接入和长时任务实验的基础模型，工作流重点会从“能不能做”转向“能不能稳定连续干活”。</p><p class="source">来源：<a href="https://gist.github.com/destiny94752130/f23b9863abe880c15a3f953d3f401626" target="_blank" rel="noopener noreferrer">destiny94752130 / GitHub Gist</a></p></div></div>
+                  <h3>Cursor代码评审隐患与上线故障复盘</h3>
+                  <p class="synthesis">共识是评审风险主要来自默认接入过快，而非工具本身。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116951254960105" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>菠萝 AI 的实操文章指出，CursorBugbot 在 PR 审查里常见问题不是“完全没用”，而是默认审查范围过宽、未配置忽略规则时会产生大量噪声评论。</p><p><strong>改变：</strong>这意味着团队若直接把 Cursor 接入代码评审，工作流不会自然提效，反而需要先通过拆小 PR、编写 `.cursor/BUGBOT.md` 和 scoped rules 来把评论收敛到真正的 bug 与风险。</p><p><strong>边界：</strong>代价是团队必须额外维护审查范围与忽略规则；对生成文件多、PR 过大、尚未建立评审规范的项目尤其不适合直接开箱即用。</p><p class="source">来源：<a href="https://www.boluoblog.com/coding/cursor-bugbot-pr-review-noise-2026/" target="_blank" rel="noopener noreferrer">菠萝 AI</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Kimi K3外部实测</span>
-                    <span class="source-label">博客园 / zhchoice / 搜狐 / 第三方评测文章 / X / vista8</span>
+                    <span class="badge badge-blue">Qwen3.8-Max-Preview 外部测评提炼</span>
+                    <span class="source-label">知乎专栏</span>
                   </div>
-                  <h3>Kimi K3实测覆盖游戏开发与Mac原生APP</h3>
-                  <p class="synthesis">共识是Kimi K3更像能推进原型到可交付首版的开发搭子，但成本与自治边界仍需人工控住。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116950583740582" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有开发者在本地工程里让Kimi K3从空项目完成手写二维物理引擎、轨道救援小游戏和逻辑求解器，并最终跑通了36个单元测试、5个浏览器测试和生产构建。</p><p><strong>改变：</strong>这意味着对独立开发者或小团队来说，它不只是生成代码片段，而是能把游戏原型推进到“可测试、可构建”的工程阶段，明显压缩从想法到首版验证的时间。</p><p><strong>边界：</strong>材料只证明了在明确任务和测试约束下的原型/工程推进能力，未说明其能稳定替代后续复杂维护与长期迭代。</p><p class="source">来源：<a href="https://www.cnblogs.com/zhchoice/p/21614793/kimi-k3-local-engineering-review" target="_blank" rel="noopener noreferrer">博客园 / zhchoice</a></p></div><div class="opinion"><p><strong>观察：</strong>有第三方实测认为Kimi K3在3D相关生成上表现很强，适合先产出AI小游戏的核心逻辑。</p><p><strong>改变：</strong>对游戏开发工作流的真实改变是，团队可以先用它快速完成玩法骨架和主逻辑，再把美术资源与细节交给更便宜工具或人工补齐，降低早期试错成本。</p><p><strong>边界：</strong>这篇实测同时强调它“很强但也很耗蓝”，也就是成本不低，不适合把所有细节和资源都无脑交给它生成。</p><p class="source">来源：<a href="https://www.sohu.com/a/1052392925_122598898" target="_blank" rel="noopener noreferrer">搜狐 / 第三方评测文章</a></p></div></div>
+                  <h3>Qwen3.8-Max-Preview实测对比K3与Fable 5</h3>
+                  <p class="synthesis">外部实测共识偏向“能用且强”，但稳定性仍未到无脑替代级别。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116952446011186" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方实测用7个“不跑分、只干活”的实际任务检验Qwen3.8-Max-Preview，作者给出“6/7通过”的结论，并认为它的综合能力已接近除Fable 5外的第一梯队。</p><p><strong>改变：</strong>这意味着普通用户和团队可以先把它放进通用型工作流里试跑，如多任务问答、推理和内容生成，而不必只看榜单分数判断是否可用。</p><p><strong>边界：</strong>但它并没有在全部任务里都稳定通过，至少有1项场景失手，说明预览版还不适合要求结果一致性极高、不能容错的关键流程。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2062333565845640706" target="_blank" rel="noopener noreferrer">知乎专栏</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Kimi K3外部测评</span>
-                    <span class="source-label">投研Agent第三方分析文章 / 知乎专栏作者 Loopal 接入评测 / 搜狐科技类博文</span>
+                    <span class="badge badge-blue">Kimi K3 vs Claude Fable 5 外部测评</span>
+                    <span class="source-label">CSDN 博主评测</span>
                   </div>
-                  <h3>Kimi K3实测聚焦百万上下文与工作流表现</h3>
-                  <p class="synthesis">共识是Kimi K3能做复杂任务，但成品质感与长程稳定性仍落后GPT 5.6 Sol。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116951389114612" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方对比投研Agent三类复杂任务时观察到，GPT 5.6 Sol整体交付最完整，Kimi K3虽然分析逻辑基本清楚，但底稿质量和长程执行稳定性弱于GPT 5.6 Sol。</p><p><strong>改变：</strong>这意味着团队可以把Kimi K3用于较复杂的研究初稿和长文分析，但在需要连续多步执行、形成可直接交付底稿的工作流里，仍要增加人工复核和补写环节。</p><p><strong>边界：</strong>它不太适合对长程稳定性和最终成稿质量要求很高的投研交付场景，尤其是希望一次生成成品时。</p><p class="source">来源：<a href="https://www.fxbaogao.com/detail/5541066" target="_blank" rel="noopener noreferrer">投研Agent第三方分析文章</a></p></div><div class="opinion"><p><strong>观察：</strong>开发者接入Loopal后实测发现，在同场景四模型对比里，Kimi K3在游戏设计美感上输给GPT 5.6 Sol，而GLM 5.2也被放入同组对照。</p><p><strong>改变：</strong>对需要模型直接产出视觉创意或设计感较强方案的用户来说，Kimi K3更适合作为可用备选而不是审美最优解，工作流上可能要把高审美定稿交给GPT 5.6 Sol。</p><p><strong>边界：</strong>它在设计表现上的短板意味着不适合把审美质量当作首要指标的创意任务。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2061609245485933861" target="_blank" rel="noopener noreferrer">知乎专栏作者 Loopal 接入评测</a></p></div></div>
+                  <h3>Kimi K3对战Claude Fable 5实测</h3>
+                  <p class="synthesis">共识是选型要看具体任务，代码风格、速度与稳定性比单次答题更重要。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116951640705362" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有前端实战评测提到，Kimi K3 在代码生成时更贴近实际项目写法，较少出现学院派冗余结构，对 Vue、React 的组件化理解也更到位。</p><p><strong>改变：</strong>对前端开发者和小团队来说，这意味着把模型产出接进现有组件工程时，二次整理和重构的工作量可能更小。</p><p><strong>边界：</strong>该观察只明确覆盖前端代码生成场景，不能直接外推到数学、长链推理或通用问答表现。</p><p class="source">来源：<a href="https://blog.csdn.net/weixin_29044713/article/details/163059395" target="_blank" rel="noopener noreferrer">CSDN 博主评测</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Kimi K3真实项目工作流实测观察</span>
-                    <span class="source-label">知乎《Kimi K3 实测，5个优点1个缺点》 / 觉醒AI《Kimi K3 完全使用指南：四个入口、三个坑、一项任务》 / vista8（X/原Twitter）</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验 / 真实影响</span>
+                    <span class="source-label">LinkedIn 文章《Geometric Routing and Continual Learning: Rethinking How...》</span>
                   </div>
-                  <h3>Kimi K3真实项目工作流实测观察</h3>
-                  <p class="synthesis">共识是能推进真实项目，但入口、权限与条件限制很关键。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116947630949847" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者用Kimi K3做了几项真实产品测试，称“半天就跑出了上线的第一版”，说明它在从想法到可用原型的推进速度上有直接体感提升。</p><p><strong>改变：</strong>对个人开发者或小团队来说，这意味着早期调研、搭框架和首版交付可以被明显压缩，更适合先把能上线的版本快速做出来。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2062285722657220001" target="_blank" rel="noopener noreferrer">知乎《Kimi K3 实测，5个优点1个缺点》</a></p></div><div class="opinion"><p><strong>观察：</strong>第三方使用指南认为Kimi K3不是单一聊天工具，而是网页Agent、KimiWork、KimiCode、API四个入口组成的工作入口，并特别指出“开源、1M、免费”都带条件，真实能力有边界。</p><p><strong>改变：</strong>这对团队的真实影响是，使用K3时不能只看模型参数，必须按任务类型选择入口，否则工作流设计、权限配置和成本预期都会出偏差。</p><p><strong>边界：</strong>不适合把“免费、超长上下文、开源能力”直接等同于所有入口都可无条件获得，入口不同能力边界不同。</p><p class="source">来源：<a href="http://www.jxxy.net/ai/articles/kimi-k3-complete-usage-guide/" target="_blank" rel="noopener noreferrer">觉醒AI《Kimi K3 完全使用指南：四个入口、三个坑、一项任务》</a></p></div></div>
+                  <h3>Coincidex持续学习框架探索动态路由</h3>
+                  <p class="synthesis">共识是动态路由更利于增量扩展，但需额外控制路由稳定性与幻觉风险。</p>
+                  <a class="article-link" href="https://www.reddit.com/r/MachineLearning/comments/1v1rmbb/exploring_continual_learning_without_replay/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方分析指出，几何路由式持续学习能把新知识隔离到专门专家中，并基于几何信号决定专家的新增、复用、合并或退役，而不必每次重训整模型。</p><p><strong>改变：</strong>这意味着对做持续学习的团队来说，工作流会从“整模型反复微调”转向“按任务增量管理专家与路由”，更适合连续接入新任务、降低全量重训频率。</p><p><strong>边界：</strong>文中同时点出这类方法仍要面对失控幻觉和错误自信的问题，因此它更适合可接受路由治理与专家管理复杂度的场景，不是零运维方案。</p><p class="source">来源：<a href="https://www.linkedin.com/pulse/geometric-routing-continual-learning-rethinking-how-models-herber-ii-g1s0c" target="_blank" rel="noopener noreferrer">LinkedIn 文章《Geometric Routing and Continual Learning: Rethinking How...》</a></p></div></div>
+                </section>
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>美术视角测评</h2>
+              <div class="role-cards">
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">Seedance 2.5 外部测评摘录</span>
+                    <span class="source-label">Ching3c 评测文章 / 什么值得买博主文章</span>
+                  </div>
+                  <h3>Seedance 2.5实时AI视频生成实测</h3>
+                  <p class="synthesis">外部体验更看重其长视频衔接能力，但成本细节仍不足。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116954559940362" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>第三方评测文章直接把 Seedance 2.5 的测试重点落在“30秒 AI 影片、角色一致性与 4K 生成能力”上，说明其上手关注点已不只是单段炫技，而是长时长输出与画面稳定性。</p><p><strong>改变：</strong>对创作者和内容团队来说，这意味着它更可能进入可交付的视频生产环节，尤其适合需要同一角色连续出镜、并追求较高分辨率成片的项目。</p><p><strong>边界：</strong>片段未给出具体失败样例、耗时或成本数据，因此还不能据此判断其在高频迭代、低预算场景下是否划算。</p><p class="source">来源：<a href="https://ching3c.com/blog/post/seedance-2-5/" target="_blank" rel="noopener noreferrer">Ching3c 评测文章</a></p></div><div class="opinion"><p><strong>观察：</strong>值友博主将“Seedance 2.5 负责生成完整视频”与“Seedream 5.0 Pro 负责高精度交互式图像生成”组合成闭环工作流，并明确称其是做长视频的核心选择。</p><p><strong>改变：</strong>这对用户的真实改变是，工作流会从“单模型包打天下”转向“图像定稿 + 视频生成”分工协作，更适合先锁定视觉设定、再批量扩展成长视频内容。</p><p><strong>边界：</strong>这种方案依赖多模型串联，流程更长、工具切换更多，不一定适合只想快速出一个短片草稿的轻量用户。</p><p class="source">来源：<a href="https://post.smzdm.com/p/al37rzke/" target="_blank" rel="noopener noreferrer">什么值得买博主文章</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">ComfyUI视频工作流外部观察</span>
+                    <span class="source-label">CSDN 博主</span>
+                  </div>
+                  <h3>ComfyUI一键AI短剧视频工作流教程</h3>
+                  <p class="synthesis">外部观点集中在：工作流确实降门槛，但依赖具体模型与显存优化。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116951724656228" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有第三方教程实测，Wan2.2 的 ComfyUI 图生视频工作流在采用双专家 GGUF 量化模型（Q4_K_S）并配合双 KSampler 与显存管理优化后，可在 16GB 显存设备上较流畅运行。</p><p><strong>改变：</strong>这意味着做 AI 短剧/短视频的个人创作者或小团队，不必直接上更高显存显卡，也能本地跑通一套可复用的视频生成工作流，硬件门槛明显下降。</p><p><strong>边界：</strong>前提是使用特定量化模型和针对性的节点/参数配置，适合 Wan2.2 这类已适配流程；若追求更高分辨率、更长时长或通用稳定性，16GB 方案仍有明显限制。</p><p class="source">来源：<a href="https://blog.csdn.net/qq_62859700/article/details/159352883" target="_blank" rel="noopener noreferrer">CSDN 博主</a></p></div></div>
                 </section>
                 </div>
             </section>
