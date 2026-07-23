@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-07-23 08:46</title>
+  <title>独立测评 · 2026-07-23 17:55</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,73 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Kimi K3外部测评与用户影响</span>
-                    <span class="source-label">NxCode / 人人都是产品经理 / 腾讯新闻</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验 / 对用户真实影响</span>
+                    <span class="source-label">李乾坤的博客 / gccbuaa - 博客园 / CSDN博客</span>
                   </div>
-                  <h3>Kimi K3开源模型与本地Agent Harness实测</h3>
-                  <p class="synthesis">能力接近前沿，但复现与成本是主要门槛。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116963116387026" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>NxCode认为，在权重与完整服务制品到位前，开发者只能评测托管版模型并查看开源Kimi Code harness，无法复现权重级部署或完全核验训练声明。</p><p><strong>改变：</strong>团队若要把Kimi K3纳入本地Agent或私有化工作流，需要先把验证重点放在托管模型能力和harness接口适配上，而不是立即做完整自托管复现。</p><p><strong>边界：</strong>不适合依赖可复现权重部署、训练声明审计或严格私有化验收的团队直接下结论。</p><p class="source">来源：<a href="https://www.nxcode.io/resources/news/kimi-k3-benchmarks-coding-agent-evaluation-guide-2026" target="_blank" rel="noopener noreferrer">NxCode</a></p></div><div class="opinion"><p><strong>观察：</strong>人人都是产品经理的体验称，Kimi K3在生成游戏、芯片设计等长程Agent闭环任务上展现了实力，但整体Benchmark仍落后于Claude Fable 5和GPT-5.6 Sol。</p><p><strong>改变：</strong>对需要中文Agent原型、代码生成或复杂任务拆解的团队，它提供了一个接近前沿水平的开源候选项，可用于替代部分闭源模型试验。</p><p><strong>边界：</strong>成本高且容易“炫技”，如果目标是稳定、低成本、少干预的生产流程，仍需谨慎评估。</p><p class="source">来源：<a href="https://www.woshipm.com/ai/6432468.html" target="_blank" rel="noopener noreferrer">人人都是产品经理</a></p></div></div>
+                  <h3>LangGraph长时有状态工作流指南</h3>
+                  <p class="synthesis">共识是 LangGraph 价值在可恢复状态与记忆编排。</p>
+                  <a class="article-link" href="https://arxiv.org/abs/2607.19297" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>李乾坤的博客在梳理 LangGraph 工作流时指出，`graph.invoke` 是数据注入的唯一入口，Interrupt 可暂停工作流并返回中断数据对象。</p><p><strong>改变：</strong>这让团队可以把长流程拆成可恢复、可人工介入的步骤，而不是一次性跑完整个 Agent 调用。</p><p><strong>边界：</strong>流程状态、输入和上下文需要围绕 `input_state`、`context`、`config` 明确建模，否则中断恢复会增加编排复杂度。</p><p class="source">来源：<a href="https://qiankunli.github.io/2024/05/16/langchain_graph.html" target="_blank" rel="noopener noreferrer">李乾坤的博客</a></p></div><div class="opinion"><p><strong>观察：</strong>博客园作者 gccbuaa 观察到，LangGraph 的短期记忆是线程级别的，需要在图编译时指定 checkpointer，并在调用时指定 `thread_id`。</p><p><strong>改变：</strong>对话或业务流程可以在同一线程内共享上下文，用户连续交互时不必每次重新传入全部历史信息。</p><p><strong>边界：</strong>记忆隔离依赖 `thread_id` 和 checkpointer 配置，跨线程、跨会话共享不能直接依赖短期记忆。</p><p class="source">来源：<a href="https://www.cnblogs.com/gccbuaa/p/19513441" target="_blank" rel="noopener noreferrer">gccbuaa - 博客园</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">外部测评 / 上手体验 / 对用户真实影响</span>
+                    <span class="source-label">Akash Gupta / LinkedIn / Pillar Security</span>
+                  </div>
+                  <h3>Agentic CI/CD管线攻击面研究</h3>
+                  <p class="synthesis">共识是代理化 CI/CD 提升自动化，也显著放大权限与指令攻击面。</p>
+                  <a class="article-link" href="https://arxiv.org/abs/2607.19267" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Akash Gupta 的分析指出，Agentic CI/CD 把自然语言变成管线命令接口，打破了传统脚本“作者写什么就执行什么”的确定性模型。</p><p><strong>改变：</strong>团队不能再只审查 YAML/脚本本身，还需要把提示词、上下文输入和代理解释过程纳入 CI/CD 安全评审。</p><p><strong>边界：</strong>自然语言指令的歧义和可被操纵性会增加审计难度，不适合在缺少权限隔离和人工复核的高风险发布链路中直接放权。</p><p class="source">来源：<a href="https://www.linkedin.com/pulse/agentic-cicd-security-akash-gupta-9lemc" target="_blank" rel="noopener noreferrer">Akash Gupta / LinkedIn</a></p></div><div class="opinion"><p><strong>观察：</strong>Pillar Security 将 Agentic CI/CD 的核心风险归纳为：自治 AI 编码代理同时拥有 shell 访问、仓库写权限和运行时凭据。</p><p><strong>改变：</strong>这会把 CI/CD 代理从“自动化工具”变成高权限执行主体，安全团队需要按特权账号和部署身份来管理它。</p><p><strong>边界：</strong>如果仍沿用传统流水线的宽权限、长生命周期凭据和默认网络访问，攻击面会被放大。</p><p class="source">来源：<a href="https://www.pillar.security/blog/agentic-ci-cd-security-risks-attack-vectors-and-controls" target="_blank" rel="noopener noreferrer">Pillar Security</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
                     <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">YouTube：KimiK3突然爆火！实测到底有多强？ / Freedidi</span>
+                    <span class="source-label">知乎专栏 / 腾讯云开发者社区 / CSDN AI Coding</span>
                   </div>
-                  <h3>Kimi K3从0制作修仙游戏实测</h3>
-                  <p class="synthesis">K3适合快速生成游戏原型，但商业化仍待验证。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116960733955404" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有评测视频把 Kimi K3 接入 Claude Code，实测让它从零开发原生 macOS、iOS App 以及 2D、3D 游戏，用同一流程考察代码生成能力。</p><p><strong>改变：</strong>开发者不只是拿它写零散函数，而是可以把它放进 CLI 编程工作流，承担游戏或应用原型的初始搭建。</p><p><strong>边界：</strong>片段只说明测试范围，没有给出最终可玩性、Bug 数量或与竞品胜负结果。</p><p class="source">来源：<a href="https://www.youtube.com/watch?v=8_JZehVSRAI" target="_blank" rel="noopener noreferrer">YouTube：KimiK3突然爆火！实测到底有多强？</a></p></div><div class="opinion"><p><strong>观察：</strong>Freedidi 摘要称 Kimi K3 已能直接生成 HALO 风格多人游戏，且不依赖传统游戏引擎或完整开发团队，项目基本由 AI 自动完成。</p><p><strong>改变：</strong>对个人开发者或小团队来说，游戏 Demo 的起步门槛从组建工程与引擎流程，下降到用提示词快速生成可展示原型。</p><p><strong>边界：</strong>材料没有说明生成结果的联网稳定性、性能优化、资产版权和后续工程维护成本。</p><p class="source">来源：<a href="https://www.freedidi.com/24857.html" target="_blank" rel="noopener noreferrer">Freedidi</a></p></div></div>
+                  <h3>Claude Code编程协作实测教程</h3>
+                  <p class="synthesis">价值在提效，前提是接入稳定且流程受控。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116963216989874" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者实测 Claude Code 桌面端后认为，相比 CLI 和 IDEA 插件，桌面端体验更完整，尤其 Claude Preview 能实时预览前端代码修改效果。</p><p><strong>改变：</strong>前端开发者可以把“让 AI 改代码—查看页面效果”的反馈链路缩短到同一工作流内，减少频繁切换工具和手动刷新验证。</p><p><strong>边界：</strong>该片段主要强调前端预览体验，对后端、复杂工程协作或大型项目稳定性没有给出更多验证。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2045146437449693081" target="_blank" rel="noopener noreferrer">知乎专栏</a></p></div><div class="opinion"><p><strong>观察：</strong>腾讯云开发者文章称，在国内环境实测 Claude Code 接入时，主要障碍集中在账号支付、网络延迟和风控敏感，并通过 API 中转方案获得较高可用性和较低延迟。</p><p><strong>改变：</strong>国内团队若要把 Claude Code 纳入日常开发，需要先解决接入链路和稳定性问题，否则自动化开发流程会被登录、支付或网络问题打断。</p><p><strong>边界：</strong>中转方案会引入额外服务依赖与合规、成本、稳定性风险，且文中数据来自特定方案和环境，不能直接等同于所有团队体验。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2671752" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验 / 用户影响</span>
-                    <span class="source-label">AI Master / TechAIApp</span>
+                    <span class="badge badge-blue">外部测评</span>
+                    <span class="source-label">The Moonlight</span>
                   </div>
-                  <h3>Unsloth、Axolotl、TRL、LLaMA-Factory微调对比</h3>
-                  <p class="synthesis">选型取决于单卡省显存、多卡扩展或上手成本。</p>
-                  <a class="article-link" href="https://www.marktechpost.com/2026/07/22/unsloth-vs-axolotl-vs-trl-vs-llama-factory-a-fine-tuning-framework-comparison-on-speed-vram-and-multi-gpu/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>AI Master 的对比文章认为，Unsloth 以显存优化见长，Axolotl 更适合多卡扩展，TRL 与 HuggingFace 生态结合更深，LLaMA-Factory 的优势在开箱即用和中文支持。</p><p><strong>改变：</strong>用户选型会从“找最快框架”转为按硬件和团队能力分流：单卡小模型优先省显存，多卡大模型优先扩展性，中文/低代码团队优先 LLaMA-Factory。</p><p><strong>边界：</strong>文章明确指出没有绝对最优框架，企业或大规模训练场景不能只看单卡速度和显存。</p><p class="source">来源：<a href="https://www.ai-master.cc/news/news-6700" target="_blank" rel="noopener noreferrer">AI Master</a></p></div><div class="opinion"><p><strong>观察：</strong>TechAIApp 的对比称，Unsloth 在单 GPU 速度和上下文长度上占优，但多 GPU 是其文档中承认的弱项；Axolotl 则提供 FSDP2、DeepSpeed、TP、CP、EP 等更完整的并行组合。</p><p><strong>改变：</strong>个人开发者或小团队可用 Unsloth 降低单卡试验成本，而需要集群训练的团队更可能把 Axolotl 作为可扩展训练底座。</p><p><strong>边界：</strong>Unsloth 的优势主要集中在单卡场景，多卡扩展需求强时不适合作为首选。</p><p class="source">来源：<a href="https://www.techaiapp.com/tech/unsloth-vs-axolotl-vs-trl-vs-llama-factory-a-fine-tuning-framework-comparison-on-speed-vram-and-multi-gpu/" target="_blank" rel="noopener noreferrer">TechAIApp</a></p></div></div>
+                  <h3>Agentic Case Investigation反欺诈流程</h3>
+                  <p class="synthesis">价值在可审计调查，边界在合成数据。</p>
+                  <a class="article-link" href="https://arxiv.org/abs/2607.19266" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>The Moonlight 的文献评述指出，该方案不是单一反欺诈模型，而是在 PaySim 数据上把监督式表格模型、图结构特征、自编码器异常信号、TreeSHAP 解释和受限 LLM 调查 Agent 组合成分层检测流程。</p><p><strong>改变：</strong>对风控团队的实际改变是，案件不只得到欺诈分数，还能生成带图关系、异常线索和特征解释的调查依据，更接近可审计的人工复核流程。</p><p><strong>边界：</strong>评述同时强调作者需要移除 PaySim 模拟器特有的“余额捷径”，说明该效果强依赖合成数据清洗；若真实业务数据存在泄漏特征或分布差异，不能直接照搬结论。</p><p class="source">来源：<a href="https://www.themoonlight.io/en/review/toward-auditable-fraud-detection-combining-graph-features-model-explanations-and-agentic-case-investigation" target="_blank" rel="noopener noreferrer">The Moonlight</a></p></div></div>
+                </section>
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>美术视角测评</h2>
+              <div class="role-cards">
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">seedance2.0高速FPV一镜到底演示</span>
+                    <span class="source-label">php.cn</span>
+                  </div>
+                  <h3>seedance2.0高速FPV一镜到底演示</h3>
+                  <p class="synthesis">外部材料只支持首帧控图价值，FPV稳定性证据不足。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116966908040737" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>php.cn 的上手教程观察到，Seedance2.0 可把 Midjourney 图、手机照片、PNG 截图等 720p 以上静态图作为视频首帧，再用文本控制后续运动逻辑。</p><p><strong>改变：</strong>这让用户可以把已有视觉资产直接接入图生视频流程，用一张确定的首帧去生成类似 15 秒 FPV 长镜头，而不必先重新生成整套素材。</p><p><strong>边界：</strong>材料只明确提到首帧导入和文本引导运动，对高速 FPV 一镜到底的稳定性、畸变控制和长时一致性没有给出实测结论。</p><p class="source">来源：<a href="https://www.php.cn/faq/2396790.html" target="_blank" rel="noopener noreferrer">php.cn</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">Gemini 3.6 Flash（Extended Thinking）外部测评提炼</span>
-                    <span class="source-label">TechGoGo / 知乎·机器之心专栏解读 / DataLearnerAI</span>
+                    <span class="badge badge-pink">外部测评 / 上手体验</span>
+                    <span class="source-label">APIMart</span>
                   </div>
-                  <h3>Gemini 3.6 Flash（Extended Thinking）测评揭示能力分化</h3>
-                  <p class="synthesis">推理增强明确，但通用与代码价值仍存分歧。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116963032434879" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>TechGoGo 实测开启 Extended Thinking 后，Gemini 3.6 Flash 的逻辑推理明显增强，约束文本生成、24 点运算和此前答错的密码推理题都能完成或答对。</p><p><strong>改变：</strong>需要处理规则约束、算术推理、谜题式推断的用户，可以把深度思考模式作为提高一次性正确率的选项。</p><p><strong>边界：</strong>片段未提供代码任务改善证据，因此不能据此判断其适合编程或工程自动化场景。</p><p class="source">来源：<a href="https://www.techgogogo.com/2026/07/22/gemini-3.6-flash-extended-thinking/" target="_blank" rel="noopener noreferrer">TechGoGo</a></p></div><div class="opinion"><p><strong>观察：</strong>机器之心在知乎专栏解读中提到，外部反馈认为 Gemini 3.6 Flash 的智能水平并未超过 Gemini 3.5 Flash，并且因未发布用户期待的 Gemini 3.5 Pro 而遭到吐槽。</p><p><strong>改变：</strong>对用户而言，它更像是轻量 Flash 线的效率型更新，而不是可直接替代高阶 Pro 模型的能力跃迁。</p><p><strong>边界：</strong>不适合抱着“更强通用智能”或“Pro 级复杂任务能力”预期来迁移工作流。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2063334451464102144" target="_blank" rel="noopener noreferrer">知乎·机器之心专栏解读</a></p></div></div>
+                  <h3>Qwen image3.0实测对比GPT表现</h3>
+                  <p class="synthesis">外部材料仅支持文字型图像优势，无法完整佐证对 GPT 表现。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116967595903059" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>APIMart 对比认为 QwenImage2.0 更偏向文字密集型图像生成，并支持原生 2K 分辨率；Midjourney V8.1 则更突出电影级艺术表现。</p><p><strong>改变：</strong>如果团队要做海报、封面、信息图等含大量文字的图片，Qwen 路线更可能减少后期重排文字和反复修图的成本。</p><p><strong>边界：</strong>该片段对比对象是 Midjourney 而非 GPT，且指向 QwenImage2.0，不足以直接证明 Qwen image3.0 相对 GPT 的全面优势。</p><p class="source">来源：<a href="https://apimart.ai/zh/blog/qwen-image-2-0-vs-midjourney-image-ai-comparison" target="_blank" rel="noopener noreferrer">APIMart</a></p></div></div>
                 </section>
                 </div>
             </section>
