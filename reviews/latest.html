@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-07-23 17:55</title>
+  <title>独立测评 · 2026-07-24 08:43</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,46 +43,62 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验 / 对用户真实影响</span>
-                    <span class="source-label">李乾坤的博客 / gccbuaa - 博客园 / CSDN博客</span>
+                    <span class="badge badge-blue">外部测评 / 上手体验 / 用户影响</span>
+                    <span class="source-label">知乎专栏：OpenCode vs Claude Code：开源平替，真的能替吗？ / 墨筝：深入对比 OpenCode 与 Claude Code / 河源技术博客：OpenCode 深度评测</span>
                   </div>
-                  <h3>LangGraph长时有状态工作流指南</h3>
-                  <p class="synthesis">共识是 LangGraph 价值在可恢复状态与记忆编排。</p>
-                  <a class="article-link" href="https://arxiv.org/abs/2607.19297" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>李乾坤的博客在梳理 LangGraph 工作流时指出，`graph.invoke` 是数据注入的唯一入口，Interrupt 可暂停工作流并返回中断数据对象。</p><p><strong>改变：</strong>这让团队可以把长流程拆成可恢复、可人工介入的步骤，而不是一次性跑完整个 Agent 调用。</p><p><strong>边界：</strong>流程状态、输入和上下文需要围绕 `input_state`、`context`、`config` 明确建模，否则中断恢复会增加编排复杂度。</p><p class="source">来源：<a href="https://qiankunli.github.io/2024/05/16/langchain_graph.html" target="_blank" rel="noopener noreferrer">李乾坤的博客</a></p></div><div class="opinion"><p><strong>观察：</strong>博客园作者 gccbuaa 观察到，LangGraph 的短期记忆是线程级别的，需要在图编译时指定 checkpointer，并在调用时指定 `thread_id`。</p><p><strong>改变：</strong>对话或业务流程可以在同一线程内共享上下文，用户连续交互时不必每次重新传入全部历史信息。</p><p><strong>边界：</strong>记忆隔离依赖 `thread_id` 和 checkpointer 配置，跨线程、跨会话共享不能直接依赖短期记忆。</p><p class="source">来源：<a href="https://www.cnblogs.com/gccbuaa/p/19513441" target="_blank" rel="noopener noreferrer">gccbuaa - 博客园</a></p></div></div>
+                  <h3>OpenCode开源编码代理实测替代Claude Code</h3>
+                  <p class="synthesis">OpenCode胜在灵活与成本，短板在稳定和安全。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116968115996399" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎文章将 Claude Code 形容为体验打磨精良但锁定 Anthropic 生态，OpenCode 则把 UI 层和 AI 层解耦，可更换 GPT 或本地模型。</p><p><strong>改变：</strong>对团队来说，OpenCode 的主要改变是把编码代理从单一厂商订阅，变成可按项目、预算或合规要求切换模型的工作流。</p><p><strong>边界：</strong>代价是少了 Claude Code 官方一体化体验；如果团队只想要稳定的 Anthropic 官方 CLI，OpenCode未必更省心。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2012702613930550693" target="_blank" rel="noopener noreferrer">知乎专栏：OpenCode vs Claude Code：开源平替，真的能替吗？</a></p></div><div class="opinion"><p><strong>观察：</strong>墨筝的对比文章认为 OpenCode 试图复刻 Claude Code 的命令行“魔法”，两者都能在 CLI 中对话代码库、执行终端指令并推进功能交付。</p><p><strong>改变：</strong>这意味着习惯 Claude Code 的开发者，迁移到 OpenCode 时核心交互路径仍是终端内完成读代码、改代码、跑命令，切换成本相对可控。</p><p><strong>边界：</strong>片段只说明交互形态接近，未证明复杂任务质量、稳定性或安全机制已经等同 Claude Code。</p><p class="source">来源：<a href="https://nealst.github.io/2026/01/24/opencode-vs-claude/" target="_blank" rel="noopener noreferrer">墨筝：深入对比 OpenCode 与 Claude Code</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">外部测评 / 上手体验 / 用户影响</span>
+                    <span class="source-label">AgentSkill Security Audit / ClawHub Security Audit</span>
+                  </div>
+                  <h3>Figma用agents守护代码安全</h3>
+                  <p class="synthesis">外部评价更关注隔离、验证和回滚是否真实生效。</p>
+                  <a class="article-link" href="https://www.figma.com/blog/how-figma-stays-ahead-of-vulnerabilities-with-agents/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>AgentSkill 对“Migrate a PR into the Monorepo”技能的安全审计发现了 1 个安全问题，涉及 1 个威胁类别。</p><p><strong>改变：</strong>团队在把 PR 迁移进 monorepo 前，不能只看自动化能力，还需要把 agent skill 当作可引入风险的软件供应链组件来审查。</p><p><strong>边界：</strong>该结论只覆盖被审计的具体技能，不能直接代表所有 monorepo agent 或 Figma 内部实现的安全水平。</p><p class="source">来源：<a href="https://agentskill.sh/@propeller-heads/migrate-pr/security" target="_blank" rel="noopener noreferrer">AgentSkill Security Audit</a></p></div><div class="opinion"><p><strong>观察：</strong>ClawHub 对 Figma Agent 的安全审计指出，方法名和文档承诺破坏性写入前会保存版本历史检查点，但实现实际只是普通写入并静默省略保护。</p><p><strong>改变：</strong>用户可能因为相信“可回滚”而允许 agent 执行更高风险的修改，结果在错误或恶意写入时面临不可逆设计变更。</p><p><strong>边界：</strong>这条审计聚焦 Figma Agent 的设计写入安全，不是代码 PR 或 monorepo 审计本身。</p><p class="source">来源：<a href="https://hub.openclaw.ai/rasimme/skills/figma-agent/security-audit" target="_blank" rel="noopener noreferrer">ClawHub Security Audit</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
                     <span class="badge badge-blue">外部测评 / 上手体验 / 对用户真实影响</span>
-                    <span class="source-label">Akash Gupta / LinkedIn / Pillar Security</span>
+                    <span class="source-label">极客日志 / CSDN 博主 weixin_60664734 / Fausto-404 GitHub 项目</span>
                   </div>
-                  <h3>Agentic CI/CD管线攻击面研究</h3>
-                  <p class="synthesis">共识是代理化 CI/CD 提升自动化，也显著放大权限与指令攻击面。</p>
-                  <a class="article-link" href="https://arxiv.org/abs/2607.19267" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Akash Gupta 的分析指出，Agentic CI/CD 把自然语言变成管线命令接口，打破了传统脚本“作者写什么就执行什么”的确定性模型。</p><p><strong>改变：</strong>团队不能再只审查 YAML/脚本本身，还需要把提示词、上下文输入和代理解释过程纳入 CI/CD 安全评审。</p><p><strong>边界：</strong>自然语言指令的歧义和可被操纵性会增加审计难度，不适合在缺少权限隔离和人工复核的高风险发布链路中直接放权。</p><p class="source">来源：<a href="https://www.linkedin.com/pulse/agentic-cicd-security-akash-gupta-9lemc" target="_blank" rel="noopener noreferrer">Akash Gupta / LinkedIn</a></p></div><div class="opinion"><p><strong>观察：</strong>Pillar Security 将 Agentic CI/CD 的核心风险归纳为：自治 AI 编码代理同时拥有 shell 访问、仓库写权限和运行时凭据。</p><p><strong>改变：</strong>这会把 CI/CD 代理从“自动化工具”变成高权限执行主体，安全团队需要按特权账号和部署身份来管理它。</p><p><strong>边界：</strong>如果仍沿用传统流水线的宽权限、长生命周期凭据和默认网络访问，攻击面会被放大。</p><p class="source">来源：<a href="https://www.pillar.security/blog/agentic-ci-cd-security-risks-attack-vectors-and-controls" target="_blank" rel="noopener noreferrer">Pillar Security</a></p></div></div>
+                  <h3>Skill+MCP逆向当当网滑块教程</h3>
+                  <p class="synthesis">共识是减少手工定位与脚本搭建成本。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116968703200051" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>极客日志的方案文观察到，Chrome DevTools MCP 与 Skill 结合后，可让 AI 自动定位前端加密参数入口，并生成 JSRPC 注入与 Flask 代理代码。</p><p><strong>改变：</strong>对做滑块或前端参数逆向的用户来说，原本手动找函数、写注册代码和代理脚本的流程被压缩为更自动化的分析链路。</p><p><strong>边界：</strong>材料只覆盖前端 JS 逆向自动化场景，并提到需面对 AntiDebug 反调试能力；不等于所有验证码或服务端风控都能绕过。</p><p class="source">来源：<a href="https://zeeklog.com/aifu-neng-mcp-skillneng-li-xia-de-qian-duan-jsni-xiang-zi-dong-hua-luo-di-fu-gong-ju-22" target="_blank" rel="noopener noreferrer">极客日志</a></p></div><div class="opinion"><p><strong>观察：</strong>CSDN 作者在上手文章中称，基于 chrome-devtools-mcp 与 Skill 规范实现了 JSRPC+Flask+autoDecoder 的自动化分析流程，用于提升 JS 逆向效率。</p><p><strong>改变：</strong>团队可把常见的远程调用、解码和代理搭建沉淀为可复用工具链，减少每次逆向滑块参数时从零搭环境的成本。</p><p><strong>边界：</strong>该材料没有给出稳定性或成功率基准，更多是工具落地经验，实际效果仍依赖目标站点混淆、反调试和风控强度。</p><p class="source">来源：<a href="https://blog.csdn.net/weixin_60664734/article/details/158571269" target="_blank" rel="noopener noreferrer">CSDN 博主 weixin_60664734</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
                     <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">知乎专栏 / 腾讯云开发者社区 / CSDN AI Coding</span>
+                    <span class="source-label">知乎：告别手动：N8N + Crawl4ai + MCP 自动化网页数据抓取与 RAG 知识库构建实战 / 知乎：实战指南：从零构建 MCP 架构下的 Agentic RAG 系统，无第三方MCP Server</span>
                   </div>
-                  <h3>Claude Code编程协作实测教程</h3>
-                  <p class="synthesis">价值在提效，前提是接入稳定且流程受控。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116963216989874" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者实测 Claude Code 桌面端后认为，相比 CLI 和 IDEA 插件，桌面端体验更完整，尤其 Claude Preview 能实时预览前端代码修改效果。</p><p><strong>改变：</strong>前端开发者可以把“让 AI 改代码—查看页面效果”的反馈链路缩短到同一工作流内，减少频繁切换工具和手动刷新验证。</p><p><strong>边界：</strong>该片段主要强调前端预览体验，对后端、复杂工程协作或大型项目稳定性没有给出更多验证。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2045146437449693081" target="_blank" rel="noopener noreferrer">知乎专栏</a></p></div><div class="opinion"><p><strong>观察：</strong>腾讯云开发者文章称，在国内环境实测 Claude Code 接入时，主要障碍集中在账号支付、网络延迟和风控敏感，并通过 API 中转方案获得较高可用性和较低延迟。</p><p><strong>改变：</strong>国内团队若要把 Claude Code 纳入日常开发，需要先解决接入链路和稳定性问题，否则自动化开发流程会被登录、支付或网络问题打断。</p><p><strong>边界：</strong>中转方案会引入额外服务依赖与合规、成本、稳定性风险，且文中数据来自特定方案和环境，不能直接等同于所有团队体验。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2671752" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div></div>
+                  <h3>RAG、Agent、MCP本地部署实测拆解</h3>
+                  <p class="synthesis">本地部署价值在自动化串联与可观察调用链。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116940785847150" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>知乎作者在本地部署教程中实际把 N8N、crawl4ai 与 MCP 节点串成网页抓取到 RAG 知识库构建的流程，并提到 MCP 节点可直接完成本地文件保存，替换原先的文件转换和写盘节点。</p><p><strong>改变：</strong>对团队来说，原本需要手动抓网页、整理文件、再导入知识库的链路，可以被改造成自动化工作流，为本地 RAG 应用持续补充数据。</p><p><strong>边界：</strong>材料主要展示的是网页数据抓取与知识库构建链路，未体现复杂权限、失败重试、数据清洗质量和大规模运行成本。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1891189680051050343" target="_blank" rel="noopener noreferrer">知乎：告别手动：N8N + Crawl4ai + MCP 自动化网页数据抓取与 RAG 知识库构建实战</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇实战文章在交互式测试中观察到，Agent 会先调用本地向量索引查询北京、上海文档，再主动调用搜索引擎补充并与知识库结果核对，日志显示调用链路较清楚。</p><p><strong>改变：</strong>这意味着本地 RAG 不再只是被动检索文档，而是可以通过 MCP 暴露工具，让 Agent 在回答前组合本地知识库与外部搜索，减少人工切换工具和手动核验。</p><p><strong>边界：</strong>该案例依赖预先准备的城市文档、向量索引和搜索工具，适合可控知识域验证；对开放域、多工具误调用和答案可追溯性的稳定性仍需额外评估。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/1909185749624025459" target="_blank" rel="noopener noreferrer">知乎：实战指南：从零构建 MCP 架构下的 Agentic RAG 系统，无第三方MCP Server</a></p></div></div>
                 </section>
-                
+                </div>
+            </section>
+            
+            <section class="role-block">
+              <h2>产品经理视角测评</h2>
+              <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-blue">外部测评</span>
-                    <span class="source-label">The Moonlight</span>
+                    <span class="badge badge-purple">Alexa Plus复杂指令能力外部体验</span>
+                    <span class="source-label">Nakmo / OpenAI Hub</span>
                   </div>
-                  <h3>Agentic Case Investigation反欺诈流程</h3>
-                  <p class="synthesis">价值在可审计调查，边界在合成数据。</p>
-                  <a class="article-link" href="https://arxiv.org/abs/2607.19266" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>The Moonlight 的文献评述指出，该方案不是单一反欺诈模型，而是在 PaySim 数据上把监督式表格模型、图结构特征、自编码器异常信号、TreeSHAP 解释和受限 LLM 调查 Agent 组合成分层检测流程。</p><p><strong>改变：</strong>对风控团队的实际改变是，案件不只得到欺诈分数，还能生成带图关系、异常线索和特征解释的调查依据，更接近可审计的人工复核流程。</p><p><strong>边界：</strong>评述同时强调作者需要移除 PaySim 模拟器特有的“余额捷径”，说明该效果强依赖合成数据清洗；若真实业务数据存在泄漏特征或分布差异，不能直接照搬结论。</p><p class="source">来源：<a href="https://www.themoonlight.io/en/review/toward-auditable-fraud-detection-combining-graph-features-model-explanations-and-agentic-case-investigation" target="_blank" rel="noopener noreferrer">The Moonlight</a></p></div></div>
+                  <h3>Alexa Plus预览更新复杂指令能力</h3>
+                  <p class="synthesis">价值在少记命令，风险在自动编排边界。</p>
+                  <a class="article-link" href="https://www.theverge.com/tech/970399/amazon-alexa-plus-ai-update-smart-home-devices" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>Nakmo的上手体验称，Alexa Plus能学习日常习惯并相应调整行为，且与常见智能家居服务的整合较顺畅。</p><p><strong>改变：</strong>对家庭用户来说，例行动作不必每次手动拆成多个指令，助手可更像自动化中枢一样按习惯触发或调整设备。</p><p><strong>边界：</strong>片段未给出失败率、误触发控制或复杂家庭成员场景，无法判断在多人、多设备冲突时是否可靠。</p><p class="source">来源：<a href="https://www.nakmo.net/en/news/news/the-future-of-smart-home-assistants-hands-on-with-alexa-plus" target="_blank" rel="noopener noreferrer">Nakmo</a></p></div><div class="opinion"><p><strong>观察：</strong>OpenAI Hub分析称，这次Alexa+智能家居更新可从复杂自然语言中识别目标和限制条件，并自动选择Bosch、iRobot、Yale、Whirlpool、Tapo等品牌设备及功能。</p><p><strong>改变：</strong>用户可以把“想达到什么效果”和“有什么限制”一次说清，由Alexa+负责编排跨品牌设备，减少在多个App里逐项设置的操作。</p><p><strong>边界：</strong>文章同时提到约束求解和安全风险，意味着门锁、家电等高风险设备的自动执行仍需要权限、确认和安全边界。</p><p class="source">来源：<a href="https://www.openai-hub.com/news/1232/" target="_blank" rel="noopener noreferrer">OpenAI Hub</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -92,24 +108,13 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">seedance2.0高速FPV一镜到底演示</span>
-                    <span class="source-label">php.cn</span>
+                    <span class="badge badge-pink">外部测评 / 上手体验 / 对用户真实影响</span>
+                    <span class="source-label">GitHub - darksidewalker/ComfyUI-DaSiWa-Nodes / Stable Diffusion Tutorials / Next Diffusion</span>
                   </div>
-                  <h3>seedance2.0高速FPV一镜到底演示</h3>
-                  <p class="synthesis">外部材料只支持首帧控图价值，FPV稳定性证据不足。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116966908040737" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>php.cn 的上手教程观察到，Seedance2.0 可把 Midjourney 图、手机照片、PNG 截图等 720p 以上静态图作为视频首帧，再用文本控制后续运动逻辑。</p><p><strong>改变：</strong>这让用户可以把已有视觉资产直接接入图生视频流程，用一张确定的首帧去生成类似 15 秒 FPV 长镜头，而不必先重新生成整套素材。</p><p><strong>边界：</strong>材料只明确提到首帧导入和文本引导运动，对高速 FPV 一镜到底的稳定性、畸变控制和长时一致性没有给出实测结论。</p><p class="source">来源：<a href="https://www.php.cn/faq/2396790.html" target="_blank" rel="noopener noreferrer">php.cn</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-pink">外部测评 / 上手体验</span>
-                    <span class="source-label">APIMart</span>
-                  </div>
-                  <h3>Qwen image3.0实测对比GPT表现</h3>
-                  <p class="synthesis">外部材料仅支持文字型图像优势，无法完整佐证对 GPT 表现。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av116967595903059" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>APIMart 对比认为 QwenImage2.0 更偏向文字密集型图像生成，并支持原生 2K 分辨率；Midjourney V8.1 则更突出电影级艺术表现。</p><p><strong>改变：</strong>如果团队要做海报、封面、信息图等含大量文字的图片，Qwen 路线更可能减少后期重排文字和反复修图的成本。</p><p><strong>边界：</strong>该片段对比对象是 Midjourney 而非 GPT，且指向 QwenImage2.0，不足以直接证明 Qwen image3.0 相对 GPT 的全面优势。</p><p class="source">来源：<a href="https://apimart.ai/zh/blog/qwen-image-2-0-vs-midjourney-image-ai-comparison" target="_blank" rel="noopener noreferrer">APIMart</a></p></div></div>
+                  <h3>DaSiWa V4与LTX 2.3导演工作流体验</h3>
+                  <p class="synthesis">价值集中在音画可控与本地工作流。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av116970045379739" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>darksidewalker 的 ComfyUI-DaSiWa-Nodes 提到，DaSiWa LTX-2 LoRA Loader 是面向 LTX-2.3 视频生成的 10 槽 LoRA 堆叠器，并能分别控制 LoRA 对视频分支和音频分支的影响。</p><p><strong>改变：</strong>用户在同一套 ComfyUI 工作流里可以把画面风格和声音效果分开调参，减少音画互相牵连导致的反复试错。</p><p><strong>边界：</strong>它适合已经在 ComfyUI/LTX-2.3 生态里搭建节点工作流的用户，不是面向零基础的一键生成方案。</p><p class="source">来源：<a href="https://github.com/darksidewalker/ComfyUI-DaSiWa-Nodes" target="_blank" rel="noopener noreferrer">GitHub - darksidewalker/ComfyUI-DaSiWa-Nodes</a></p></div><div class="opinion"><p><strong>观察：</strong>Stable Diffusion Tutorials 的上手文章称，LTX 2.3 在 ComfyUI 中支持 GGUF、FP8、NVF4、BF16 等本地生成形态，并相对 LTX-2 提升了音视频质量和提示词遵循。</p><p><strong>改变：</strong>团队可以把带音频的视频生成放到本地 ComfyUI 流程里测试，按显存和画质需求选择不同精度版本，而不必完全依赖云端工具。</p><p><strong>边界：</strong>片段未给出具体速度、显存占用或画质基准，因此无法判断不同量化版本在成本和效果上的实际取舍。</p><p class="source">来源：<a href="https://www.stablediffusiontutorials.com/2026/03/ltx-2.3-video-audio-gen.html" target="_blank" rel="noopener noreferrer">Stable Diffusion Tutorials</a></p></div></div>
                 </section>
                 </div>
             </section>
