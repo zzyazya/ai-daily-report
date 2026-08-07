@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>独立测评 · 2026-08-06 08:48</title>
+  <title>独立测评 · 2026-08-07 08:48</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; margin: 0; background: #f8fafc; color: #111827; }
     .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
@@ -43,73 +43,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
+                    <span class="badge badge-blue">外部测评与用户影响</span>
+                    <span class="source-label">爱范儿 / 雷峰网 / 31du</span>
+                  </div>
+                  <h3>DeepSeek V4 Flash正式版Agent实测</h3>
+                  <p class="synthesis">低成本多步Agent潜力强，但需自测迁移效果。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av117050659837148" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>爱范儿将 DeepSeek V4-Flash 接入 Proma 做 5 个由易到难的 Agent 任务，强调这类任务通常要连续调用模型几十次，单步错误会导致整体返工。</p><p><strong>改变：</strong>对需要跑多步 Agent 流程的团队来说，低成本 API 让他们可以用约“3 块钱干完 5 件事”的方式进行真实任务试跑，而不是只看单次问答效果。</p><p><strong>边界：</strong>材料未给出 5 个任务的完整成功率细节，仍不能证明它在所有长链路 Agent 任务中都稳定可靠。</p><p class="source">来源：<a href="https://www.ifanr.com/1673553" target="_blank" rel="noopener noreferrer">爱范儿</a></p></div><div class="opinion"><p><strong>观察：</strong>雷峰网认为 V4-Flash-0731 在 DeepSeek 公布的 Agent 运行环境中提升明显，但第三方框架里的实际表现仍需更多独立测试。</p><p><strong>改变：</strong>团队在评估 TerminalBench2.1 82.7 分时，应把它视为特定运行环境下的强信号，并在自己的 Agent 框架、工具调用链和错误恢复流程中复测。</p><p><strong>边界：</strong>其优势可能依赖官方 Agent 环境，迁移到第三方框架后效果、稳定性和收益不一定等比例复现。</p><p class="source">来源：<a href="https://www.leiphone.com/category/ai/EBSerg3DFtWmMap4.html" target="_blank" rel="noopener noreferrer">雷峰网</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">OpenCodeReview 外部测评/上手体验</span>
+                    <span class="source-label">knightli 教程 / 腾讯云开发者文章</span>
+                  </div>
+                  <h3>OpenCodeReview开源四种接入实测</h3>
+                  <p class="synthesis">共识是更省 token、也更稳，但接入和调参成本不低</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av117048965337163" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>有作者实测把 OpenCodeReview 接到本地 Windows、GitHub Actions 和 Claude Code 后，能做 Git diff 审查、整库扫描，并专门处理误报、成本和权限问题。</p><p><strong>改变：</strong>这让团队可以把代码审查从单次人工检查扩展到本地 + CI 的自动化流程，覆盖更完整的变更面。</p><p><strong>边界：</strong>需要自己配置模型端点、权限和误报处理，落地门槛比直接用现成审查工具更高。</p><p class="source">来源：<a href="https://knightli.com/2026/07/29/alibaba-open-code-review-tutorial-github-actions-claude-code/" target="_blank" rel="noopener noreferrer">knightli 教程</a></p></div><div class="opinion"><p><strong>观察：</strong>另一篇第三方实测称，在相同模型下 OpenCodeReview 的审查精度高于 Claude Code，token 消耗约为 1/9，并能减少漏文件、行号漂移和输出不稳定。</p><p><strong>改变：</strong>这意味着同等算力预算下可以跑更多次审查，且 review 结果更稳定，更适合嵌入日常提交流程。</p><p><strong>边界：</strong>材料只给出作者对比结论，没有完整基准方法，复杂重构或特殊权限场景下的表现仍不明确。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2715243" target="_blank" rel="noopener noreferrer">腾讯云开发者文章</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-blue">DeepSeek V4 Flash知识库工作流实测</span>
+                    <span class="source-label">鲲鹏AI探索局 / zhayujie - 博客园 / mushroom.cv</span>
+                  </div>
+                  <h3>DeepSeek V4 Flash知识库工作流实测</h3>
+                  <p class="synthesis">共识是长上下文、低成本和Agent稳定性利好文档工作流。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av117051062492086" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>鲲鹏AI探索局提到 deepseek-v4-pro 与 deepseek-v4-flash 都支持 1M context。</p><p><strong>改变：</strong>对把多份 PDF、长文档一次性放进知识库生成流程的用户来说，单轮可承载的材料量明显扩大，减少拆分、摘要中转和上下文丢失。</p><p><strong>边界：</strong>旧 deepseek-chat 与 deepseek-reasoner 计划退役，已有工作流需要迁移到新模型接口。</p><p class="source">来源：<a href="https://kunpeng-ai.com/blog/deepseek-v4-1m-context-practical-workflows/" target="_blank" rel="noopener noreferrer">鲲鹏AI探索局</a></p></div><div class="opinion"><p><strong>观察：</strong>博客园作者 zhayujie 的 Agent 实测称，DeepSeekV4 Flash 在 6 个场景中稳定性已足以作为默认模型，复杂场景中 35 次和 50 次工具调用也能稳定跑完。</p><p><strong>改变：</strong>这意味着做知识库站这类需要读取、整理、调用工具和生成页面的多步流程时，团队可以更放心地让 Flash 承担连续 Agent 执行。</p><p><strong>边界：</strong>该结论来自 6 个场景的实测，不能直接等同于所有文档规模、工具链和生产环境下都稳定。</p><p class="source">来源：<a href="https://www.cnblogs.com/zhayujie/p/19935607/deepseek-v4-eval" target="_blank" rel="noopener noreferrer">zhayujie - 博客园</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
                     <span class="badge badge-blue">外部测评 / 上手体验</span>
-                    <span class="source-label">OrcaRouter / Shaam.blog / Geeky Gadgets</span>
+                    <span class="source-label">TinyAsh / TheAIEra Blog / Eimoon Blog</span>
                   </div>
-                  <h3>Qwen 3.8 Max百万上下文低价实测</h3>
-                  <p class="synthesis">共识是低成本试用百万上下文有吸引力，但实测性能细节仍不足。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av117043512745847" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>OrcaRouter 的对比文章把 Qwen3.8Max 与 MiniMax M3 放在“实测对战、定价与成本分析”框架下，并标注 Qwen3.8Max 可接受 1M token 上下文。</p><p><strong>改变：</strong>对需要长文档、长日志或大代码库处理的团队来说，Qwen3.8Max 不只是参数规格选项，而是可以直接纳入百万上下文成本对比的候选模型。</p><p><strong>边界：</strong>片段未给出具体价格、速度或胜负结果，无法判断低价是否伴随吞吐、延迟或质量折损。</p><p class="source">来源：<a href="https://www.orcarouter.ai/zh-CN/compare/minimax-m3-vs-qwen3.8-max" target="_blank" rel="noopener noreferrer">OrcaRouter</a></p></div><div class="opinion"><p><strong>观察：</strong>Shaam.blog 的实测评价认为 Qwen3.8-Max-Preview 是一个工程里程碑，2.4T 参数的多模态模型目前可以用“远低于最终价格”的成本测试。</p><p><strong>改变：</strong>用户和开发团队可以先以较低试错成本验证长上下文、多模态或复杂任务工作流，而不必等正式高价版本上线后再评估。</p><p><strong>边界：</strong>该评价明确指向 Preview 阶段，价格和能力稳定性可能不是最终形态。</p><p class="source">来源：<a href="https://shaam.blog/articles/qwen-3-8-max-honest-review-2026" target="_blank" rel="noopener noreferrer">Shaam.blog</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验 / 用户影响</span>
-                    <span class="source-label">YOLO LAB / OrcaRouter</span>
-                  </div>
-                  <h3>Ling 3.0 Flash代码实测超400 Tokens/s</h3>
-                  <p class="synthesis">外部观点认可低成本高速潜力，但强调需自测与避开机密代码。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av117043730847839" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>YOLO LAB 认为 Ling-3.0-flash 的关键不只是免费或 124B MoE 规模，而是每次推理仅约 4.1% 参数被激活，意图在低延迟、低 Token 与推理成本下支撑更多 Agent 工具调用。</p><p><strong>改变：</strong>对开发者来说，它更适合作为 OpenCode 或 Agent 工作流中的高频调用模型，用更低成本尝试多轮工具操作与代码任务。</p><p><strong>边界：</strong>免费供应目前属于限时测试，且 OpenCode 免费期间数据可能被保留用于模型改进，不适合直接处理机密代码。</p><p class="source">来源：<a href="https://yololab.net/archives/ling-3-0-flash-opencode-free" target="_blank" rel="noopener noreferrer">YOLO LAB</a></p></div><div class="opinion"><p><strong>观察：</strong>OrcaRouter 指出 Ling-3.0-flash 虽声称可达 1000 tok/s 且价格很低，但目前仍是 API-only、缺少独立基准验证，实际能力尚未被充分证明。</p><p><strong>改变：</strong>团队可以把它列入低成本高速代码模型候选，但需要先用自己的代码库和任务集做延迟、质量、稳定性验证。</p><p><strong>边界：</strong>不适合仅凭官方速度宣称就直接替换生产代码助手或关键 Agent 流程。</p><p class="source">来源：<a href="https://www.orcarouter.ai/blog/ling-3-0-flash" target="_blank" rel="noopener noreferrer">OrcaRouter</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">CC-Switch 让 Codex 接入 DeepSeek-v4-pr</span>
-                    <span class="source-label">腾讯云开发者社区 / farion1231/cc-switch GitHub Issue / 知乎专栏</span>
-                  </div>
-                  <h3>CC-Switch让Codex接入DeepSeek-v4-pr</h3>
-                  <p class="synthesis">价值在降成本与简化接入，风险在接口兼容。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av117037607159648" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>腾讯云开发者社区教程观察到，CC-Switch 可把 DeepSeek-V4-Pro 映射到 Codex 中使用，绕过客户端默认只支持官方接口的限制。</p><p><strong>改变：</strong>用户可以在 Codex 工作流里改用 DeepSeek-V4-Pro，以更低成本获得可用的 AI 编程体验。</p><p><strong>边界：</strong>适用前提是通过 CC-Switch 做本地映射配置，而不是 Codex 原生直接支持。</p><p class="source">来源：<a href="https://cloud.tencent.com/developer/article/2689829" target="_blank" rel="noopener noreferrer">腾讯云开发者社区</a></p></div><div class="opinion"><p><strong>观察：</strong>GitHub issue 中有开发者指出 DeepSeekV4 不支持 responses 模式，并询问 CC-Switch 是否能代理并转换为兼容格式。</p><p><strong>改变：</strong>这说明接入并非只填模型名即可，团队需要关注 Codex 所需接口格式与 DeepSeekV4 能力之间的兼容层。</p><p><strong>边界：</strong>如果依赖 responses 模式或复杂代理转换，可能会遇到兼容性不确定的问题。</p><p class="source">来源：<a href="https://github.com/farion1231/cc-switch/issues/2463" target="_blank" rel="noopener noreferrer">farion1231/cc-switch GitHub Issue</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-blue">外部测评 / 上手体验 / 用户影响</span>
-                    <span class="source-label">vpshalo / 掘金</span>
-                  </div>
-                  <h3>开源模型百倍低价检索击败GPT-5.6 Sol</h3>
-                  <p class="synthesis">外部材料仅支持检索成本需严控，未验证开源胜出。</p>
-                  <a class="article-link" href="https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>vpshalo 的选型对比指出，开发者如果把 GPT-5.6 当作单一模型调用，容易同时遇到延迟、成本和 Alignment 偏移问题；在 RAG 管道中默认拉满 Luna 的 1.5M token 上下文时，单任务开销可达到 Sol 的 8–15 倍。</p><p><strong>改变：</strong>这意味着做检索或 RAG 的团队不能只看模型能力排名，而需要按任务路由 Sol/Terra/Luna，并限制上下文注入，否则检索成本会快速失控。</p><p><strong>边界：</strong>该片段只比较 GPT-5.6 系列内部的路由与成本风险，没有直接验证开源模型是否以百倍低价击败 GPT-5.6 Sol。</p><p class="source">来源：<a href="https://vpshalo.com/zh/blog/articles/2026-gpt-5-6-sol-terra-luna-duibi-jiexi-vpshalo.html" target="_blank" rel="noopener noreferrer">vpshalo</a></p></div><div class="opinion"><p><strong>观察：</strong>掘金的 GPT-5.6 深度解读强调，跑分不等于生产力，AI 实际成本还包括 API token 账单、多轮提示词、工具调用失败后的返工和人工检查时间。</p><p><strong>改变：</strong>对用户来说，检索模型是否“更便宜”不能只按单次调用价格判断，还要看失败率、返工量和人工复核是否真的下降。</p><p><strong>边界：</strong>该材料是生产成本框架分析，并未给出开源检索模型与 GPT-5.6 Sol 的直接基准对比。</p><p class="source">来源：<a href="https://juejin.cn/post/7665897936963698724" target="_blank" rel="noopener noreferrer">掘金</a></p></div></div>
-                </section>
-                </div>
-            </section>
-            
-            <section class="role-block">
-              <h2>产品经理视角测评</h2>
-              <div class="role-cards">
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-purple">外部测评 / 上手体验 / 用户影响</span>
-                    <span class="source-label">ChatIMG 博客</span>
-                  </div>
-                  <h3>ChatGPT Plus与Pro算力及怀旧照片教程</h3>
-                  <p class="synthesis">第三方更关注订阅外的学习与调试成本。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av117041616915157" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>ChatIMG 博客把 ChatGPT Plus 的图片/提示词玩法归为“20 美元/月订阅 + 自学 prompt 工程时间”的 DIY 工作流，而不是即开即用的成片工具。</p><p><strong>改变：</strong>对想按教程制作怀旧照片的用户来说，Plus 更适合愿意反复调提示词的人，实际成本不只是会员费，还包括学习和试错时间。</p><p><strong>边界：</strong>不适合只想快速获得稳定模板化效果、或不愿投入提示词调试成本的用户。</p><p class="source">来源：<a href="https://chatimg.ai/zh/blog/chatgpt-vs-app-color-analysis" target="_blank" rel="noopener noreferrer">ChatIMG 博客</a></p></div></div>
-                </section>
-                
-                <section class="card">
-                  <div class="meta">
-                    <span class="badge badge-purple">腾讯会议AI记录对话生产力实战指南</span>
-                    <span class="source-label">CSDN博客 / Akkadu博客</span>
-                  </div>
-                  <h3>腾讯会议AI记录对话生产力实战指南</h3>
-                  <p class="synthesis">价值集中在跨语言与场景化纪要，通用协作仍需按场景选型。</p>
-                  <a class="article-link" href="https://www.infoq.cn/video/YIVxVxU010vgJ6VON2LE?utm_source=rss&amp;utm_medium=article" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>CSDN博客的5款AI纪要工具对比认为，腾讯会议AI纪要更适合销售、跨语言会议等场景，亮点包括17国语言翻译、销售模板和“学霸笔记”等结构化记录能力。</p><p><strong>改变：</strong>用户不只是获得逐字转写，而是能把会议内容直接整理成销售线索、跨语言沟通记录或学习笔记，减少会后人工归纳和分发成本。</p><p><strong>边界：</strong>该文同时强调选型应匹配日常场景，团队协作更偏向飞书妙记，短会议可考虑钉钉闪记，追求转写准确率则讯飞听见更有优势。</p><p class="source">来源：<a href="https://blog.csdn.net/search_agent/article/details/162192287" target="_blank" rel="noopener noreferrer">CSDN博客</a></p></div><div class="opinion"><p><strong>观察：</strong>Akkadu博客的上手教程提到，腾讯会议的AI实时翻译字幕需要在视频会议开始后才会显示，并建议将实时字幕“pin”在会议页面上方保持可见。</p><p><strong>改变：</strong>跨语言参会者可以在会议进行中持续查看翻译字幕，降低听不懂发言导致的漏记和会后补问成本。</p><p><strong>边界：</strong>字幕能力依赖会议已正式开始，且需要用户手动打开并固定字幕窗口，不是会前即可准备好的离线记录流程。</p><p class="source">来源：<a href="https://akkadu.cn/blog/fanyi-tengxun-huiyi-ai-shishi-zimu/" target="_blank" rel="noopener noreferrer">Akkadu博客</a></p></div></div>
+                  <h3>Claude Code最快但贵近3倍</h3>
+                  <p class="synthesis">Claude Code省心更快，OpenCode省钱可控。</p>
+                  <a class="article-link" href="https://the-decoder.com/claude-code-is-the-fastest-agent-framework-but-costs-nearly-three-times-more-than-the-cheapest-rival/" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>TinyAsh 的对比文章称，通过日志代理捕获请求载荷和 API 用量后，Claude Code 在同类任务中可能比 OpenCode 多消耗约 4.7 倍 Token。</p><p><strong>改变：</strong>对按量计费或多成员高频使用的团队来说，Claude Code 的“更快”会直接转化为更高预算压力，OpenCode 更适合需要控制单任务成本的工作流。</p><p><strong>边界：</strong>该结论依赖作者的代理记录方法、测试任务和模型端点设置，不能直接等同于所有项目场景下的稳定成本差。</p><p class="source">来源：<a href="https://www.tinyash.com/blog/claude-code-vs-opencode-token-comparison/" target="_blank" rel="noopener noreferrer">TinyAsh</a></p></div><div class="opinion"><p><strong>观察：</strong>TheAIEra Blog 的上手对比认为，Claude Code 胜在开箱即用和 Anthropic 模型与工具链的顺滑整合，而 OpenCode 更强调控制权与灵活性。</p><p><strong>改变：</strong>个人开发者或小团队如果更看重少配置、快速进入编码任务，Claude Code 能减少前期折腾；若需要切换模型或自定义流程，OpenCode 更容易嵌入现有工具链。</p><p><strong>边界：</strong>OpenCode 的灵活性通常伴随更多配置和维护成本，不适合只想要即装即用体验的用户。</p><p class="source">来源：<a href="https://www.theaiera.cn/blogs/opencode-opensource-ai-coding-agent" target="_blank" rel="noopener noreferrer">TheAIEra Blog</a></p></div></div>
                 </section>
                 </div>
             </section>
@@ -119,24 +92,46 @@
               <div class="role-cards">
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">外部测评与上手体验</span>
-                    <span class="source-label">什么值得买 / 掘金</span>
+                    <span class="badge badge-pink">seedance2.5对比wan3.0长视频挑战</span>
+                    <span class="source-label">EggStriker.AI Blog / 钛媒体 / 网易订阅</span>
                   </div>
-                  <h3>Minimax H3低显存本地视频生成实测</h3>
-                  <p class="synthesis">H3有降本潜力，但本地低显存门槛仍高。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av117043026200110" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>什么值得买文章实测认为 MiniMax H3 做商业视频的效果较强，成本约 5 毛/秒、比同类便宜约七成，但本地跑起来门槛偏高。</p><p><strong>改变：</strong>对商业视频团队来说，它更像是可用于降本的生成工具，但低显存本地部署用户需要先评估硬件与部署成本。</p><p><strong>边界：</strong>不适合期待“低显存即开即用”的个人用户或缺少本地部署经验的团队。</p><p class="source">来源：<a href="https://post.smzdm.com/p/ad7dpd9p/" target="_blank" rel="noopener noreferrer">什么值得买</a></p></div><div class="opinion"><p><strong>观察：</strong>掘金文章把 MiniMax H3 的多模态参考 Context Package 视为比 2K 分辨率更关键的能力，认为它不只是“更长、更清晰”，还改变了参考素材参与生成的方式。</p><p><strong>改变：</strong>用户在做视频生成时可把重点从单纯追求清晰度，转向用多模态参考来提高角色、风格或画面意图的一致性。</p><p><strong>边界：</strong>材料只明确提到最长 15 秒、最高 2K，并未给出低显存本地运行的性能数据。</p><p class="source">来源：<a href="https://juejin.cn/post/7670111026742788106" target="_blank" rel="noopener noreferrer">掘金</a></p></div></div>
+                  <h3>seedance2.5对比wan3.0长视频挑战</h3>
+                  <p class="synthesis">长镜头更稳，但成本与节奏仍需人工把控</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av117048931778793" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>EggStriker 测评认为 Seedance 2.5 的关键变化是单镜头从15秒提升到30秒，并加入多轮续写以维持人物和场景连续性。</p><p><strong>改变：</strong>用户做长叙事视频时，可以少依赖后期手工拼接，多用连续生成来扩展到数分钟内容。</p><p><strong>边界：</strong>官方 API 定价仍不明确，实际规模化使用成本还难判断。</p><p class="source">来源：<a href="https://www.eggstriker.com/blog/seedance-2-5-review-2026" target="_blank" rel="noopener noreferrer">EggStriker.AI Blog</a></p></div><div class="opinion"><p><strong>观察：</strong>钛媒体上手指出，Seedance 2.5 能延续人物和画风，但视频延长后剧情节奏处理不够好，提示词审核也不稳定。</p><p><strong>改变：</strong>创作团队可以把它用于保持角色和风格一致的延展镜头，但仍需要人工把控叙事节奏和生成失败风险。</p><p><strong>边界：</strong>不适合完全依赖模型直出复杂剧情长片，多模态参考素材理解也仍需提升。</p><p class="source">来源：<a href="https://www.tmtpost.com/8088164.html" target="_blank" rel="noopener noreferrer">钛媒体</a></p></div></div>
                 </section>
                 
                 <section class="card">
                   <div class="meta">
-                    <span class="badge badge-pink">Minimax H3与Topaz 4K超分对比</span>
-                    <span class="source-label">少数派</span>
+                    <span class="badge badge-pink">外部测评 / 上手体验 / 对用户真实影响</span>
+                    <span class="source-label">无矩AI / Remio</span>
                   </div>
-                  <h3>Minimax H3与Topaz 4K超分对比</h3>
-                  <p class="synthesis">H3适合本地2K生成，4K仍需超分衔接。</p>
-                  <a class="article-link" href="http://www.bilibili.com/video/av117045676999595" target="_blank" rel="noopener noreferrer">查看原始测评</a>
-                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>少数派解读认为 MiniMax/Hailuo H3 的最高输出是原生 2K（2560×1440），不能直接输出原生 4K。</p><p><strong>改变：</strong>用户如果要做 4K 成片，需要把 H3 视为前段生成模型，再接入 Topaz 等超分工具或改用支持 4K/8 秒片段的模型。</p><p><strong>边界：</strong>不适合把 H3 单独当作完整 4K 交付方案；4K 需求会额外增加超分环节和时间成本。</p><p class="source">来源：<a href="https://sspai.com/post/112956" target="_blank" rel="noopener noreferrer">少数派</a></p></div></div>
+                  <h3>Qwen Image 3.0多场景视觉生成测评</h3>
+                  <p class="synthesis">更适合复杂版面生产，但稳定性仍待验证</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av117047455385301" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>无矩AI认为 Qwen-Image-3.0 的优势不在单纯拼审美，而在复杂指令理解、文字精确渲染和可商用素材生成，4.5K token 长提示让模型能处理更完整的生产 brief。</p><p><strong>改变：</strong>用户可以把海报、图解、营销物料等需求写成更细的说明，一次性描述布局、文案和元素关系，减少反复补充提示词的沟通成本。</p><p><strong>边界：</strong>在纯艺术风格和审美表现上，文章认为 Midjourney、DALL-E 仍有既有壁垒，Qwen 更适合“好用”型生产任务。</p><p class="source">来源：<a href="https://iaipie.com/qwen-image-3-0深度测评：国产ai图像生成终于能干活了/" target="_blank" rel="noopener noreferrer">无矩AI</a></p></div><div class="opinion"><p><strong>观察：</strong>Remio 在 19 个场景中将 Qwen-Image-3.0 与 GPTImage2 对比，认为竞争重点已转向工作流，新模型看起来减少了一些生成过程中的阻碍。</p><p><strong>改变：</strong>对团队而言，价值不只是单张图效果，而是能否降低多场景视觉生产中的返工和流程摩擦。</p><p><strong>边界：</strong>该评测没有量化背景偏移、身份相似度或重复运行失败率，因此还不能据此判断稳定性和可复现性。</p><p class="source">来源：<a href="https://www.remio.ai/zh/post/qwen-image-3-0-challenges-gpt-image-2-across-19-tests-but-the-verdict-needs-m-zh" target="_blank" rel="noopener noreferrer">Remio</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">外部测评 / 上手体验 / 对用户真实影响</span>
+                    <span class="source-label">搜狐 / 知乎专栏</span>
+                  </div>
+                  <h3>即梦Seedance2.5白模3D特效成片演示</h3>
+                  <p class="synthesis">白模接入让成片更可控，但证据仍偏内测案例。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av117048831122931" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>搜狐文章作者称在内测中用 Blender 搭建“极简美术馆”白模和推轨镜头后，通过插件导入即梦，Seedance 2.5 自动完成材质、光影和细节填充，玻璃反射、坡道消失点和空间关系在成片中保持稳定。</p><p><strong>改变：</strong>这意味着建筑漫游、空间展示类团队可以先用熟悉的 3D 白模锁定结构和镜头，再让模型补齐写实渲染，减少因 AI 镜头运动导致的空间崩塌和返工。</p><p><strong>边界：</strong>该体验来自内测单案例，材料未说明复杂场景、多镜头剪辑或非建筑题材下是否同样稳定。</p><p class="source">来源：<a href="https://www.sohu.com/a/1044441081_122569971" target="_blank" rel="noopener noreferrer">搜狐</a></p></div><div class="opinion"><p><strong>观察：</strong>知乎内测博主在试用 3D 白模控制时，重点观察到 Seedance 2.5 在镜头运动中能维持建筑轮廓、产品轮廓和透视关系，不再完全依赖随机生成结果。</p><p><strong>改变：</strong>对商业视频创作者来说，白模控制把 AI 视频从“抽卡式出片”推进到可按空间和镜头规划交付的流程，更适合需要甲方审核的项目。</p><p><strong>边界：</strong>材料只给出作者的内测判断，缺少失败率、生成耗时、成本或与传统渲染流程的量化对比。</p><p class="source">来源：<a href="https://zhuanlan.zhihu.com/p/2056479504332231493" target="_blank" rel="noopener noreferrer">知乎专栏</a></p></div></div>
+                </section>
+                
+                <section class="card">
+                  <div class="meta">
+                    <span class="badge badge-pink">外部测评 / 上手体验</span>
+                    <span class="source-label">什么值得买用户文章</span>
+                  </div>
+                  <h3>即梦Seedance2.5白膜AI渲染体验</h3>
+                  <p class="synthesis">外部体验只证明其具备3D白膜渲染尝试价值，交付能力仍缺实测。</p>
+                  <a class="article-link" href="http://www.bilibili.com/video/av117048780855871" target="_blank" rel="noopener noreferrer">查看原始测评</a>
+                  <div class="opinions"><div class="opinion"><p><strong>观察：</strong>什么值得买文章作者称自己已提前体验即梦 Seedance2.5，并在标题中强调其可用于 3D/白膜类 AI 渲染，而不只是普通文生视频或图像生成。</p><p><strong>改变：</strong>对做 3D 概念稿、白膜预览或空间镜头验证的用户来说，它可能把部分早期渲染尝试从手工建模与反复出图，前移到 AI 快速生成阶段。</p><p><strong>边界：</strong>现有片段没有给出画质稳定性、几何准确性、可控参数、耗时或失败案例，因此不能判断它是否适合严肃交付级 3D 制作。</p><p class="source">来源：<a href="https://post.smzdm.com/p/apq5k7nw/" target="_blank" rel="noopener noreferrer">什么值得买用户文章</a></p></div></div>
                 </section>
                 </div>
             </section>
